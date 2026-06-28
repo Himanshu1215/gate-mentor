@@ -1,10 +1,31 @@
-fastapi==0.104.1
-uvicorn==0.24.0
-pytest==7.4.3
-langchain==0.0.335
-langchain-groq==0.0.1
-chromadb==0.4.17
-sentence-transformers==2.2.2
-pymupdf==1.23.6
-pydantic==2.4.2
-python-multipart==0.0.6
+# Web Framework
+fastapi==0.115.0
+uvicorn==0.30.0
+python-multipart==0.0.9
+pydantic==2.7.0
+
+# Local LLM - CPU inference via llama-cpp-python
+# Model: Phi-4-mini-instruct GGUF Q4_K_M (~2.5 GB)
+# Install with: pip install llama-cpp-python --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
+llama-cpp-python==0.3.4
+
+# Embeddings - BAAI/bge-base-en-v1.5 (replaces all-mpnet-base-v2)
+sentence-transformers==3.0.1
+torch==2.3.0
+transformers==4.44.0
+
+# Vector Store
+chromadb==0.5.3
+
+# Text Chunking
+langchain==0.2.12
+langchain-community==0.2.10
+
+# PDF Extraction
+pymupdf==1.24.5
+
+# Testing
+pytest==8.2.2
+
+# Model download helper
+huggingface_hub==0.24.0

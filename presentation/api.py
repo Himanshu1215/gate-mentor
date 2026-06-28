@@ -98,15 +98,30 @@ async def curriculum_next_endpoint(authorization: Optional[str] = Header(None)):
     """Gets the next optimal concept from the Curriculum Engine."""
     if not authorization:
         raise HTTPException(status_code=401, detail="Unauthorized")
-        
+
     from curriculum.dependency_graph import CurriculumEngine
+    from infrastructure.database import get_db_connection
+
     next_concept_id = CurriculumEngine.get_next_optimal_concept()
-    
+
     if not next_concept_id:
         return CurriculumNextResponse(concept_id="ALL_DONE", topic="Syllabus Complete", action="REVIEW")
-        
-    # Get topic name safely (mocking fetch for brevity in response)
-    return CurriculumNextResponse(concept_id=next_concept_id, topic="Next Topic via DAG", action="TEACH")
+
+    # Fetch actual topic name from SQLite
+    topic_name = next_concept_id  # fallback
+    try:
+        conn = get_db_connection()
+        row = conn.execute(
+            "SELECT topic FROM concepts WHERE concept_id = ?",
+            (next_concept_id,)
+        ).fetchone()
+        conn.close()
+        if row:
+            topic_name = row["topic"]
+    except Exception as e:
+        logging.warning(f"Could not fetch topic name: {e}")
+
+    return CurriculumNextResponse(concept_id=next_concept_id, topic=topic_name, action="TEACH")
 
 @app.get("/api/mocks/generate", response_model=MockGenerateResponse)
 async def mock_generate_endpoint(authorization: Optional[str] = Header(None)):
@@ -131,21 +146,29 @@ async def coach_alerts_endpoint(authorization: Optional[str] = Header(None)):
 @app.post("/api/chat", response_model=ChatResponse)
 async def chat_endpoint(request: ChatRequest, authorization: Optional[str] = Header(None)):
     """
-    Main endpoint for interacting with the AI Teacher.
-    In Milestone 1, this uses mock retrieval chunks.
+    AI Tutor chat endpoint with real RAG retrieval from ChromaDB.
+    Retrieves top-5 relevant chunks using BAAI/bge-base-en-v1.5 embeddings,
+    then generates a grounded explanation via local Phi-4-mini LLM.
     """
     if not authorization:
         raise HTTPException(status_code=401, detail="Unauthorized")
-        
-    # In a full implementation, the Retrieval Agent would fetch chunks here
-    mock_chunks = [{"content": "Naive Bayes assumes all features are conditionally independent.", "metadata": {"source": "ISLR Ch 4"}}]
-    
-    reply = reasoner.generate_explanation(request.query, mock_chunks)
-    
-    return ChatResponse(
-        reply=reply,
-        citations=["ISLR Ch 4"]
-    )
+
+    # --- Real RAG Retrieval ---
+    from knowledge.ingestor import KnowledgeIngestor
+    retriever = KnowledgeIngestor()
+    context_chunks = retriever.query(request.query, top_k=5)
+
+    # Fallback: if knowledge base is empty, return helpful message
+    if not context_chunks:
+        context_chunks = [{
+            "content": "Knowledge base is empty. Please ingest GATE content first via /api/upload or scripts/ingest_content.py.",
+            "metadata": {"source": "System"}
+        }]
+
+    reply = reasoner.generate_explanation(request.query, context_chunks)
+    citations = list({chunk["metadata"].get("source", "Unknown") for chunk in context_chunks})
+
+    return ChatResponse(reply=reply, citations=citations)
 
 @app.post("/api/quiz/submit", response_model=QuizSubmitResponse)
 async def quiz_submit_endpoint(request: QuizSubmitRequest, authorization: Optional[str] = Header(None)):
