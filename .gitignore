@@ -1,0 +1,61 @@
+# Environment files
+.env
+.env.*
+!.env.example
+..env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+
+# FastAPI / local app data
+*.db
+*.sqlite
+*.sqlite3
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+data/chroma_db/
+chroma_store/
+*.log
+test_log.txt
+
+# Model / embedding caches
+.cache/
+*.bin
+*.pt
+*.onnx
+
+# Frontend
+frontend-react/node_modules/
+frontend-react/dist/
+frontend-react/.vite/
+frontend-react/.env
+frontend-react/.env.*
+!frontend-react/.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Misc
+nul

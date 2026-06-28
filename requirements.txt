@@ -1,0 +1,10 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+pytest==7.4.3
+langchain==0.0.335
+langchain-groq==0.0.1
+chromadb==0.4.17
+sentence-transformers==2.2.2
+pymupdf==1.23.6
+pydantic==2.4.2
+python-multipart==0.0.6

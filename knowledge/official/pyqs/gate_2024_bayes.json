@@ -1,0 +1,18 @@
+{
+    "year": 2024,
+    "exam": "GATE DA",
+    "question_id": "Q45",
+    "question_type": "MCQ",
+    "marks": 2,
+    "difficulty": 8,
+    "concept_id": "PROB_003",
+    "question_text": "In a factory, Machine A produces 60% of the output and Machine B produces 40%. The defect rates are 2% and 5% respectively. If a randomly selected item is defective, what is the probability it was produced by Machine B?",
+    "options": {
+        "A": "0.625",
+        "B": "0.375",
+        "C": "0.500",
+        "D": "0.750"
+    },
+    "answer": "A",
+    "solution": "Using Bayes Theorem: P(B|D) = [P(D|B)P(B)] / [P(D|B)P(B) + P(D|A)P(A)] = (0.05 * 0.40) / ((0.05 * 0.40) + (0.02 * 0.60)) = 0.02 / (0.02 + 0.012) = 0.02 / 0.032 = 0.625."
+}
