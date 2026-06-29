@@ -17,9 +17,10 @@ except ImportError:
     logger.warning("llama-cpp-python not installed. Run: pip install -r requirements.txt")
     HAS_LLAMA_CPP = False
 
-# Model file location (downloaded by scripts/download_models.py)
+# Model file location (downloaded by scripts/download_models.py into models/llm/)
 MODEL_DIR  = os.path.join(os.path.dirname(__file__), "..", "models")
-MODEL_FILE = os.path.join(MODEL_DIR, "phi-4-mini-instruct-q4_k_m.gguf")
+_default   = os.path.join(MODEL_DIR, "llm", "phi-4-mini-instruct-q4_k_m.gguf")
+MODEL_FILE = os.environ.get("LLM_MODEL_PATH", _default)
 
 class AIReasoningEngine:
     """

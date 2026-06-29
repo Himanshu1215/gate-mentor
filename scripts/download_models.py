@@ -28,7 +28,8 @@ ROOT_DIR     = os.path.join(os.path.dirname(__file__), "..")
 MODELS_DIR   = os.path.join(ROOT_DIR, "models")
 LLM_DIR      = os.path.join(MODELS_DIR, "llm")
 EMBED_DIR    = os.path.join(MODELS_DIR, "embeddings")
-LLM_FILENAME = "phi-4-mini-instruct-q4_k_m.gguf"
+LLM_FILENAME     = "phi-4-mini-instruct-q4_k_m.gguf"
+LLM_FILENAME_HF  = "microsoft_Phi-4-mini-instruct-Q4_K_M.gguf"  # bartowski repo filename
 LLM_PATH     = os.path.join(LLM_DIR, LLM_FILENAME)
 
 
@@ -52,10 +53,9 @@ def download_llm():
 
     try:
         path = hf_hub_download(
-            repo_id="microsoft/Phi-4-mini-instruct-gguf",
-            filename="Phi-4-mini-instruct-Q4_K_M.gguf",
+            repo_id="bartowski/microsoft_Phi-4-mini-instruct-GGUF",
+            filename="microsoft_Phi-4-mini-instruct-Q4_K_M.gguf",
             local_dir=LLM_DIR,
-            local_dir_use_symlinks=False,
         )
         # Rename to our expected filename
         if os.path.abspath(path) != os.path.abspath(LLM_PATH):

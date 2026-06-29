@@ -1,0 +1,14 @@
+[
+  {
+    "query": "What is Bayes theorem and how is posterior probability computed?",
+    "expected": "PROB_003"
+  },
+  {
+    "query": "Define a vector space and a subspace.",
+    "expected": "LA_001"
+  },
+  {
+    "query": "How are eigenvalues related to the determinant of a matrix?",
+    "expected": "LA_002"
+  }
+]
