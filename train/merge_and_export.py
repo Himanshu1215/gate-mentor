@@ -43,6 +43,9 @@ def parse_args():
     p.add_argument("--merged-dir", default="/tmp/merged",
                    help="Temp dir for merged HF weights before GGUF (needs ~15 GB; use /tmp on GPU VMs)")
     p.add_argument("--gguf-out", default=os.path.join(ROOT, "models", "llm", GGUF_NAME))
+    p.add_argument("--quant", default="Q4_K_M",
+                   help="GGUF quantization (Q4_K_M ~2.5GB; Q5_K_M ~2.8GB better quality; Q6_K best). "
+                        "Q5_K_M recommended if the CPU VM has headroom.")
     p.add_argument("--llama-cpp", default=os.environ.get("LLAMA_CPP_DIR", ""),
                    help="Path to a built llama.cpp checkout (for GGUF convert+quantize)")
     return p.parse_args()
@@ -87,15 +90,15 @@ def to_gguf(args):
         logger.warning("llama.cpp not found — skipping GGUF conversion. Finish manually:")
         logger.warning(f"  git clone https://github.com/ggerganov/llama.cpp && cd llama.cpp && make")
         logger.warning(f"  python convert_hf_to_gguf.py {args.merged_dir} --outfile {fp16_gguf} --outtype f16")
-        logger.warning(f"  ./llama-quantize {fp16_gguf} {args.gguf_out} Q4_K_M")
+        logger.warning(f"  ./llama-quantize {fp16_gguf} {args.gguf_out} {args.quant}")
         return
 
     logger.info("Converting merged model -> GGUF (f16) ...")
     subprocess.run(["python", convert, args.merged_dir, "--outfile", fp16_gguf,
                     "--outtype", "f16"], check=True)
 
-    logger.info("Quantizing GGUF -> Q4_K_M ...")
-    subprocess.run([quantize, fp16_gguf, args.gguf_out, "Q4_K_M"], check=True)
+    logger.info(f"Quantizing GGUF -> {args.quant} ...")
+    subprocess.run([quantize, fp16_gguf, args.gguf_out, args.quant], check=True)
 
     size_gb = os.path.getsize(args.gguf_out) / (1024 ** 3)
     logger.info(f"✅ GGUF written -> {args.gguf_out} ({size_gb:.2f} GB)")

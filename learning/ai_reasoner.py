@@ -1,4 +1,5 @@
 import os
+import glob
 import logging
 import json
 from typing import List, Dict
@@ -6,9 +7,9 @@ from typing import List, Dict
 logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
-# Local LLM via llama-cpp-python (CPU-only, GGUF quantized model)
-# Model: microsoft/Phi-4-mini-instruct  (Q4_K_M GGUF, ~2.5 GB RAM)
-# Download: scripts/download_models.py
+# Local LLM via llama-cpp-python (CPU-only, GGUF quantized model).
+# Any GGUF dropped into models/llm/ is loaded automatically, so swapping the
+# base model (Phi-4-mini -> Qwen2.5-3B, etc.) needs no code change.
 # ---------------------------------------------------------------------------
 try:
     from llama_cpp import Llama
@@ -17,10 +18,22 @@ except ImportError:
     logger.warning("llama-cpp-python not installed. Run: pip install -r requirements.txt")
     HAS_LLAMA_CPP = False
 
-# Model file location (downloaded by scripts/download_models.py into models/llm/)
-MODEL_DIR  = os.path.join(os.path.dirname(__file__), "..", "models")
-_default   = os.path.join(MODEL_DIR, "llm", "phi-4-mini-instruct-q4_k_m.gguf")
-MODEL_FILE = os.environ.get("LLM_MODEL_PATH", _default)
+LLM_DIR = os.path.join(os.path.dirname(__file__), "..", "models", "llm")
+
+
+def _resolve_model_file():
+    """Pick the model file: explicit env override > preferred name > newest .gguf."""
+    env = os.environ.get("LLM_MODEL_PATH")
+    if env:
+        return env
+    preferred = os.path.join(LLM_DIR, "phi-4-mini-instruct-q4_k_m.gguf")
+    if os.path.exists(preferred):
+        return preferred
+    candidates = sorted(glob.glob(os.path.join(LLM_DIR, "*.gguf")), key=os.path.getmtime, reverse=True)
+    return candidates[0] if candidates else preferred
+
+
+MODEL_FILE = _resolve_model_file()
 
 class AIReasoningEngine:
     """
@@ -57,22 +70,30 @@ class AIReasoningEngine:
     # Internal helper: call the local LLM
     # ------------------------------------------------------------------
     def _call_llm(self, system_prompt: str, user_prompt: str, max_tokens: int = 512) -> str:
-        """Sends a chat-formatted prompt to the local Phi-4-mini model."""
-        # Phi-4 uses ChatML format
-        prompt = (
-            f"<|system|>\n{system_prompt}<|end|>\n"
-            f"<|user|>\n{user_prompt}<|end|>\n"
-            f"<|assistant|>\n"
-        )
-        output = self.llm(
-            prompt,
-            max_tokens=max_tokens,
-            temperature=0.2,
-            top_p=0.95,
-            stop=["<|end|>", "<|user|>"],
-            echo=False,
-        )
-        return output["choices"][0]["text"].strip()
+        """Send a chat prompt using whatever chat template the GGUF declares
+        (works for Phi-4, Qwen2.5, Llama, etc.). Falls back to a raw Phi-style
+        prompt for older llama-cpp builds or GGUFs without template metadata."""
+        try:
+            output = self.llm.create_chat_completion(
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt},
+                ],
+                max_tokens=max_tokens,
+                temperature=0.2,
+                top_p=0.95,
+            )
+            return output["choices"][0]["message"]["content"].strip()
+        except Exception as e:
+            logger.warning(f"create_chat_completion failed ({e}); using raw prompt fallback.")
+            prompt = (
+                f"<|system|>\n{system_prompt}<|end|>\n"
+                f"<|user|>\n{user_prompt}<|end|>\n"
+                f"<|assistant|>\n"
+            )
+            output = self.llm(prompt, max_tokens=max_tokens, temperature=0.2,
+                              top_p=0.95, stop=["<|end|>", "<|user|>"], echo=False)
+            return output["choices"][0]["text"].strip()
 
     # ------------------------------------------------------------------
     # Public API
