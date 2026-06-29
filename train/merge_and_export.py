@@ -40,7 +40,8 @@ def parse_args():
     p = argparse.ArgumentParser(description="Merge LoRA adapter and export to GGUF Q4_K_M.")
     p.add_argument("--base", default="microsoft/Phi-4-mini-instruct")
     p.add_argument("--adapter", default=os.path.join(HERE, "out", "adapter"))
-    p.add_argument("--merged-dir", default=os.path.join(HERE, "out", "merged"))
+    p.add_argument("--merged-dir", default="/tmp/merged",
+                   help="Temp dir for merged HF weights before GGUF (needs ~15 GB; use /tmp on GPU VMs)")
     p.add_argument("--gguf-out", default=os.path.join(ROOT, "models", "llm", GGUF_NAME))
     p.add_argument("--llama-cpp", default=os.environ.get("LLAMA_CPP_DIR", ""),
                    help="Path to a built llama.cpp checkout (for GGUF convert+quantize)")
@@ -98,6 +99,18 @@ def to_gguf(args):
 
     size_gb = os.path.getsize(args.gguf_out) / (1024 ** 3)
     logger.info(f"✅ GGUF written -> {args.gguf_out} ({size_gb:.2f} GB)")
+
+    # Clean up large intermediate files to free disk space
+    for f in [fp16_gguf, args.merged_dir]:
+        try:
+            if os.path.isfile(f):
+                os.remove(f)
+            elif os.path.isdir(f):
+                shutil.rmtree(f)
+            logger.info(f"Cleaned up {f}")
+        except Exception:
+            pass
+
     logger.info("Copy this file to the CPU VM at models/llm/ and restart the backend.")
 
 
