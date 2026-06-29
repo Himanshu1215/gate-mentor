@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q9",
+  "question_seq": 9,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 7:",
+  "options": {
+    "A": "person sold two different items at the same price. He made 10% profit in one item, and 10% loss in the other item. In selling these two items, the person made a total of:",
+    "B": "2 2",
+    "C": "1 1",
+    "D": "2 2"
+  },
+  "answer": "C",
+  "solution": null
+}

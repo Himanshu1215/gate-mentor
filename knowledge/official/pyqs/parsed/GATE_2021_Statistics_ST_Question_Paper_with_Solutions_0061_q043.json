@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q43",
+  "question_seq": 61,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let Y follow N8(0, I8) distribution, where I8 is the 8 × 8 identity matrix. Let Y TΣ1Y",
+  "options": {
+    "A": "nd Y TΣ2Y be independent and follow central chi-square distributions with 3 and 4",
+    "D": "egrees of freedom, respectively, where Σ1 and Σ2 are 8 × 8 matrices and Y T denotes transpose of Y . Then which of the following statements is/are true? P : Σ1 and Σ2 are idempotent. Q : Σ1Σ2 = 0, where 0 is the 8 × 8 zero matrix.",
+    "B": "Q only",
+    "C": "Both P and Q"
+  },
+  "answer": "C",
+  "solution": "We are given a multivariate normal distribution Y with specific conditions on its\ntransformation. We are asked to determine the truth of two statements: P and Q.\nStep 1: Understanding the idempotent property.\nA matrix Σ is idempotent if Σ2 = Σ. Given the structure of the problem, we know that both\nΣ1 and Σ2 are matrices associated with chi-square distributed variables, and they have the\nidempotent property. This means that both P and Q are true.\nStep 2: Analyzing the zero matrix condition.\nThe condition Σ1Σ2 = 0 implies that Σ1 and Σ2 are orthogonal matrices. This condition holds\nin this case, confirming that both P and Q are correct.\nStep 3: Conclusion.\nThe correct answer is (C), as both statements P and Q are true.\nFinal Answer:\n(C) Both P and Q are true.\nQuick Tip\nIn matrix theory, the idempotent property means that a matrix multiplied by itself equals\nthe matrix. For orthogonal matrices, their product is zero, implying that they are inde-\npendent or orthogonal."
+}

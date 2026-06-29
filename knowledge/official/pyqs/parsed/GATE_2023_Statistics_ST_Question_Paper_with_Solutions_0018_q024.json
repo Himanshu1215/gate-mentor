@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q24",
+  "question_seq": 18,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let X1, X2, . . . , Xn be a random sample of size n from a population having uniform",
+  "options": {
+    "D": "istribution over the interval \u00001 3, θ\u0001, where θ > 1 3 is an unknown parameter. If Y = max{X1, X2, . . . , Xn}, then which one of the following statements is true?",
+    "A": "\u0000n+1 (Y −1 3) + 1 3 is an unbiased estimator of θ",
+    "B": "\u0000 n n+1 (Y −1 3) + 1 3 is an unbiased estimator of θ",
+    "C": "\u0000n+1 (Y + 1 3) −1 3 is an unbiased estimator of θ"
+  },
+  "answer": "A",
+  "solution": "1) Understanding the problem:\nThe random variable X1, X2, . . . , Xn follows a uniform distribution over the interval \u00001\n3, θ\u0001.\nThe maximum Y = max{X1, X2, . . . , Xn} is the largest of these random variables. We aim to\nfind an unbiased estimator for θ based on Y .\n2) The expected value of the maximum:\nFor a uniform distribution U(a, b), the expected value of the maximum of n random variables\nis given by:\nE(Y ) = a +\nn + 1(b −a)\nFor our distribution U \u00001\n3, θ\u0001, the expected value of the maximum is:\nE(Y ) = 1\n3 +\nn + 1\nθ −1\n3) Solving for an unbiased estimator:\nAn unbiased estimator ˆθ is one for which the expected value is equal to θ. Setting E(Y ) = θ,\nwe get:\n3 +\nn + 1\nθ −1\n= θ\nSolving for θ, we get:\nθ =\n\u0010n + 1\n\u0011 \u0010\nY −1\n+ 1\nThus, the unbiased estimator for θ is \u0000n+1\n(Y −1\n3) + 1\n3, which corresponds to option (A).\nQuick Tip\n- For a uniform distribution, the expected value of the maximum is given by E(Y ) =\na +\nn+1(b −a).\n- Use the formula for E(Y ) to find the unbiased estimator of the parameter."
+}

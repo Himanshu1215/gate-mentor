@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q11",
+  "question_seq": 7,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The area of the region bounded by the parabola x = −y2 and the line y = x + 2 equals",
+  "options": {
+    "A": "3",
+    "B": "7",
+    "C": "9",
+    "D": "9"
+  },
+  "answer": "C",
+  "solution": "1) Finding the points of intersection:\nWe are given the equations x = −y2 and y = x + 2. First, substitute x = −y2 into the second\nequation to find the points of intersection.\ny = (−y2) + 2\ny2 + y −2 = 0\nFactoring the quadratic equation:\n(y + 2)(y −1) = 0\nThus, the points of intersection are y = −2 and y = 1.\n2) Setting up the integral for the area:\nTo find the area, we need to calculate the integral of the difference between the functions\nover the interval y = −2 to y = 1. Since x = −y2 is the left boundary and x = y −2 (derived\nfrom the second equation) is the right boundary, the area is given by:\nArea =\nZ 1\n(y −2) −(−y2)\u0003\nArea =\nZ 1\n\u0000y −2 + y2\u0001\n3) Computing the integral:\nNow, integrate term by term:\nZ 1\ny dy =\n= 1\n2 −4\n2 = −3\nZ 1\n−2 dy = −2 [y]1\n−2 = −2(1 −(−2)) = −2(3) = −6\nZ 1\ny2 dy =\n= 13\n3 −(−2)3\n= 1\n3 −−8\n3 = 9\n3 = 3\n4) Summing up the results:\nAdding up all the terms, we get the total area:\nArea = −3\n2 −6 + 3 = −3\n2 −3 = −9\nSince we are taking the absolute value of the area, the final answer is 9\nQuick Tip\n- When finding the area between curves, always subtract the left function from the right\none.\n- Set up your integral with correct limits of integration based on the points of intersec-\ntion.\n- The integral gives the signed area; always take the absolute value if the result is\nnegative."
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q2",
+  "question_seq": 1,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "+ q2 p2 =",
+  "options": {
+    "A": "3",
+    "B": "7",
+    "C": "9",
+    "D": "11"
+  },
+  "answer": "B",
+  "solution": "We are given that p\nq + q\np = 3. Let us square both sides of this equation:\nq + q\n= 32\nExpanding the left-hand side:"
+}

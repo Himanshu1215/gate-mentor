@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q22",
+  "question_seq": 25,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let M be any square matrix of arbitrary order n such that M2 = 0 and the nullity of M is 6. Then the maximum possible value of n (in integer) is",
+  "options": null,
+  "answer": null,
+  "solution": "Given that M2 = 0, this implies that M is a nilpotent matrix. For a nilpotent matrix M, the\nrank-nullity theorem states that:\nrank(M) + nullity(M) = n,\nwhere n is the order of the matrix.\nSince the nullity of M is given as 6, we can use this information to find the maximum\npossible rank of M. The rank of a nilpotent matrix is always less than or equal to n −1, and\nsince M2 = 0, the rank must be at most n −1.\nTherefore, the maximum possible value of n occurs when the rank is as large as possible\nwhile still satisfying rank(M) + 6 = n. This gives the maximum value of n as 8.\nThus, the maximum possible value of n is 8 .\nQuick Tip\nFor a nilpotent matrix M with M2 = 0, the rank is strictly less than n and the nullity is\ngiven as n −rank(M)."
+}

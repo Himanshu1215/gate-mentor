@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q51",
+  "question_seq": 68,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {0.90, 0.50, 0.01, 0.95} be a realization of a random sample of size 4 from the probability density function f(x) = (1−θ)x(2θ−1)/(1−θ), 0 < x < 1, otherwise, where 0.5 ≤θ < 1. Then the maximum likelihood estimate of θ based on the observed sample equals (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "The likelihood function is constructed using the given probability density function. Taking\nthe log-likelihood and maximizing it, we find the maximum likelihood estimate of θ:\nˆθ ≈0.50.\nThus, the value is 0.50.\nQuick Tip\nTo estimate parameters using the maximum likelihood method, construct the likelihood\nfunction and maximize it with respect to the parameter of interest."
+}

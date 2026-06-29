@@ -1,0 +1,16 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q43",
+  "question_seq": 43,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let X1, X2, . . . , X7 be a random sample from a normal population with mean 0 and variance θ > 0. Let K = X2 1 + X2 2 + · · · + X2 1 + X2 2 + · · · + X2",
+  "options": {
+    "C": "onsider the following statements:"
+  },
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q53",
+  "question_seq": 46,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable with probability density function f(x) = e−x if x ≥0 otherwise For a < b, if U(a, b) denotes the uniform distribution over the interval (a, b), then which of the following statements is/are true?",
+  "options": {
+    "A": "e−X follows U(−1, 0) distribution",
+    "B": "1 −e−X follows U(0, 2) distribution",
+    "C": "2e−X −1 follows U(−1, 1) distribution",
+    "D": "The probability mass function of Y = [X] is P(Y = k) = (1 −e−1)e−k for k = 0, 1, 2, . . ., where [X] denotes the largest integer not exceeding X"
+  },
+  "answer": "C",
+  "solution": "1) Understanding the problem:\nThe probability density function of X is that of an exponential distribution with rate 1. We\nare tasked with analyzing the transformations of X and determining the resulting\ndistributions.\n2) Analyzing each option:\n- (A) e−X follows U(−1, 0) distribution: This is false. The transformation e−X will result in a\ndistribution bounded between 0 and 1, not between -1 and 0.\n- (B) 1 −e−X follows U(0, 2) distribution: This is false. The transformation 1 −e−X will\nresult in a uniform distribution on (0, 1), not (0, 2).\n- (C) 2e−X −1 follows U(−1, 1) distribution: This is true. The transformation 2e−X −1 maps\nthe exponential distribution to a uniform distribution on the interval (−1, 1).\n- (D) The probability mass function of Y = [X] is\nP(Y = k) = (1 −e−1)e−k for k = 0, 1, 2, . . .: This is true. The floor function [X] gives the\nlargest integer not exceeding X, and the PMF follows the given form.\nThus, the correct answer is (C).\nQuick Tip\n- For transformations of random variables, remember to find the distribution of the trans-\nformed variable by using its cumulative distribution function (CDF) and differentiating\nit.\n- The exponential distribution can be transformed into other distributions by simple al-\ngebraic manipulations, such as scaling and shifting."
+}

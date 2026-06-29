@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q7",
+  "question_seq": 39,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Then a is equal to",
+  "options": {
+    "A": "1",
+    "B": "3",
+    "C": "3",
+    "D": "2"
+  },
+  "answer": "C",
+  "solution": "Step 1: Understanding the Partial Correlation.\nThe partial correlation coefficient between two variables, keeping another variable fixed, can\nbe computed using the formula for partial correlation in terms of the covariance matrix Σ.\nThe formula for the partial correlation between X2 and X3, with X1 held constant, is given\nby:\nρ23·1 =\nΣ23 −Σ21Σ−1\n11 Σ13\n(Σ22 −Σ21Σ−1\n11 Σ12)(Σ33 −Σ13Σ−1\n11 Σ31)\nWhere Σij represents the element in the i-th row and j-th column of the covariance matrix Σ.\nStep 2: Using the covariance matrix.\nGiven the covariance matrix Σ, we can extract the necessary values:\nΣ =\nWe are given that the partial correlation coefficient ρ23·1 = 5"
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q37",
+  "question_seq": 54,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let customers arrive at a departmental store according to a Poisson process with rate 10. Further, suppose that each arriving customer is either a male or a female with probability 1 2 each, independent of all other arrivals. Let N(t) denote the total number of customers who have arrived by time t. Then which one of the following statements is NOT true?",
+  "options": {
+    "A": "If S2 denotes the time of arrival of the second female customer, then P(S2 ≤1) = 25 R 1 0 se−5s ds",
+    "B": "If M(t) denotes the number of male customers who have arrived by time t, then P \u0000M \u00001 = 0 | M(1) = 1\u0001 = 1",
+    "C": "E \u0002 (N(t))2\u0003 = 100t2 + 10t",
+    "D": "E[N(t)N(2t)] = 200t2 + 10t"
+  },
+  "answer": "B",
+  "solution": "- Option (A) is correct. S2 is the time of the second female arrival in a Poisson process, and\nthis follows the exponential distribution with rate 5, which leads to the correct probability\nexpression.\n- Option (B) is incorrect. Given that M(1) = 1, the probability that M \u00001\n= 0 is not 1"
+}

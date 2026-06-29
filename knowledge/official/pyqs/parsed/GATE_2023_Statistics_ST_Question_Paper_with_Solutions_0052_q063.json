@@ -1,0 +1,16 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q63",
+  "question_seq": 52,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {−1, −1 2, 1, 5 2, 3} be a realization of a random sample of size 5 from a population having N \u00001 2, σ2\u0001 distribution, where σ > 0 is an unknown parameter. Let T be an unbiased estimator of σ2 whose variance attains the Cramer-Rao lower bound. Then based on the",
+  "options": {
+    "A": "bove data, the realized value of T (rounded off to two decimal places) equals"
+  },
+  "answer": null,
+  "solution": "We are given a sample from a normal distribution N \u00001\n2, σ2\u0001 with 5 realizations. The\nobjective is to compute the realized value of the unbiased estimator T of σ2, given that it\nattains the Cramer-Rao lower bound.\n1) Sample Mean:\nThe first step is to compute the sample mean:\n¯X = 1\n−1 +\n+ 1 + 5\n2 + 3\n= 1\n5 × 6 = 1.2\n2) Sample Variance:\nThe unbiased estimator of σ2 based on the sample is given by:\nT =\nn −1\ni=1\n(Xi −¯X)2\nWhere n = 5 is the sample size, and Xi are the sample values. We calculate each (Xi −¯X)2\nas follows:\n- For X1 = −1: (−1 −1.2)2 = (−2.2)2 = 4.84\n- For X2 = −1\n2: \u0000−1\n2 −1.2\u00012 = (−1.7)2 = 2.89\n- For X3 = 1: (1 −1.2)2 = (−0.2)2 = 0.04\n- For X4 = 5\n2: \u00005\n2 −1.2\u00012 = (1.3)2 = 1.69\n- For X5 = 3: (3 −1.2)2 = (1.8)2 = 3.24\nSumming these squared deviations:\ni=1\n(Xi −¯X)2 = 4.84 + 2.89 + 0.04 + 1.69 + 3.24 = 12.7\n3) Final Computation:\nNow, we compute T using the formula:\nT =\n5 −1 × 12.7 = 1\n4 × 12.7 = 3.175\nThe realized value of T, rounded to two decimal places, is 2.60 .\nQuick Tip\n- The unbiased estimator for the variance of a normal distribution is\nn−1\nP(Xi −¯X)2.\n- The Cramer-Rao lower bound provides the minimum variance achievable by an unbi-\nased estimator."
+}

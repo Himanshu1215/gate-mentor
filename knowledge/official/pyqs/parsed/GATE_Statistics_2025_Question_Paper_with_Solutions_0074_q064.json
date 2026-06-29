@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q64",
+  "question_seq": 74,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let (X1, X2, X3)T have the following distribution 0.4 0.6 Then the value of the partial correlation coefficient between X1 and X2 given X3 is (rounded off to two decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Recall the formula for the partial correlation coefficient.\nThe partial correlation coefficient between two variables X1 and X2, given a third variable\nX3, is given by:\nρX1,X2|X3 =\nCov(X1, X2) −Cov(X1, X3)Cov(X2, X3)\n(Var(X1) −Cov(X1, X3)2)(Var(X2) −Cov(X2, X3)2)\nStep 2: Identify the covariance matrix.\nFrom the given covariance matrix, we have:\nCov(X1, X2) = 0.4,\nCov(X1, X3) = 0,\nCov(X2, X3) = 0.6.\nThe variances are:\nVar(X1) = 1,\nVar(X2) = 1,\nVar(X3) = 1.\nStep 3: Compute the partial correlation.\nSubstituting the values into the formula for partial correlation:\nρX1,X2|X3 =\n0.4 −0 × 0.6\n(1 −02)(1 −0.62)\n0.4\n(1)(1 −0.36)\n0.4\n0.64\n= 0.4\n0.8 = 0.5.\nThus, the partial correlation coefficient is 0.50 .\nQuick Tip\nPartial correlation coefficients measure the strength of a relationship between two vari-\nables after removing the influence of a third variable. Use the covariance matrix to\ncompute them."
+}

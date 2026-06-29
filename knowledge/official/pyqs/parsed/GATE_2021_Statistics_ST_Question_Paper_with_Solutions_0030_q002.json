@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q2",
+  "question_seq": 30,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "If A and B are independent, then P(A) equals (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Use the formula for the union of events. We know that:\nP(A ∪BC) = P(A) + P(BC) −P(A ∩BC).\nStep 2: Calculate the required probabilities. Since P(BC) = 1 −P(B) = 1 −3\n4 = 1\n4, and A\nand B are independent, we have:\nP(A ∩BC) = P(A) × P(BC) = P(A) × 1\nStep 3: Plug the values into the formula.\n2 = P(A) + 1\n4 −P(A) × 1\nStep 4: Solve for P(A). Rearrange the equation:\n4 = P(A) × 3\nP(A) = 1\nThus, P(A) = 0.33.\nQuick Tip\nFor independent events, use the fact that P(A ∩B) = P(A) × P(B) to simplify calcula-\ntions."
+}

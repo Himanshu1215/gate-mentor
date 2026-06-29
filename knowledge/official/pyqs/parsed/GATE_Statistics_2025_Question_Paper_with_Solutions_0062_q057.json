@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q57",
+  "question_seq": 62,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let P = and Q = . Then the value of trace(P 5 + Q4) equals:",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Trace of a Matrix\nRecall that the trace of a matrix is the sum of its diagonal elements. The trace function is\nlinear, so:\ntrace(P 5 + Q4) = trace(P 5) + trace(Q4).\nStep 2: Calculating trace(P 5)\nFirst, we compute the first few powers of P:\nP 2 =\nP 3 =\n14\nP 4 =\n14\n39\nP 5 =\n39\n119\nThe trace of P 5 is the sum of the diagonal elements:\ntrace(P 5) = 119 + 119 = 238.\nStep 3: Calculating trace(Q4)\nNext, we calculate the powers of Q:"
+}

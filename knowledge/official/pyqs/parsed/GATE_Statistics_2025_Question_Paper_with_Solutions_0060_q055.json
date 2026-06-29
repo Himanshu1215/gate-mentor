@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q55",
+  "question_seq": 60,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let f : R2 →R be defined as f(x, y) = x2y2 + 8x −4y. The number of saddle points of f is (",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Find the first-order partial derivatives of f(x, y).\nTo find the critical points, we first compute the partial derivatives of f(x, y) with respect to x\nand y:\nfx(x, y) = ∂\n∂x(x2y2 + 8x −4y) = 2xy2 + 8,\nfy(x, y) = ∂\n∂y(x2y2 + 8x −4y) = 2x2y −4.\nStep 2: Solve the system of equations fx(x, y) = 0 and fy(x, y) = 0.\nWe need to solve the system of equations:\n2xy2 + 8 = 0\nand\n2x2y −4 = 0.\n- From the second equation, we have:\n2x2y −4 = 0\nx2y = 2.\n- From the first equation, we have:\n2xy2 + 8 = 0\nxy2 = −4.\nWe now solve the system:\nx2y = 2,\nxy2 = −4.\nDividing the second equation by the first equation, we get:\nxy2\nx2y = −4\nx = −2\ny = −2x.\nSubstitute y = −2x into x2y = 2:\nx2(−2x) = 2\n−2x3 = 2\nx3 = −1\nx = −1.\nSubstitute x = −1 into y = −2x:\ny = −2(−1) = 2.\nThus, the only critical point is (x, y) = (−1, 2).\nStep 3: Determine the nature of the critical point. To classify the critical point, we\ncompute the second-order partial derivatives:\nfxx = ∂2f\n∂x2 = 2y2,\nfyy = ∂2f\n∂y2 = 2x2,\nfxy = ∂2f\n∂x∂y = 4xy.\nAt the critical point (x, y) = (−1, 2), we compute the second-order partial derivatives:\nfxx(−1, 2) = 2(2)2 = 8,\nfyy(−1, 2) = 2(−1)2 = 2,\nfxy(−1, 2) = 4(−1)(2) = −8.\nNow, compute the discriminant D = fxxfyy −(fxy)2:\nD = 8 × 2 −(−8)2 = 16 −64 = −48.\nSince D < 0, the critical point is a saddle point.\nThus, the number of saddle points of f is 1 .\nQuick Tip\nA saddle point is a point where the discriminant of the second derivative test is negative.\nThis indicates that the point is neither a local maximum nor a local minimum."
+}

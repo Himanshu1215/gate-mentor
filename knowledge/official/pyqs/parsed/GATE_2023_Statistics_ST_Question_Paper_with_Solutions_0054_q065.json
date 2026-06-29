@@ -1,0 +1,16 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q65",
+  "question_seq": 54,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {0.13, 0.12, 0.78, 0.51} be a realization of a random sample of size 4 from a population with cumulative distribution function F(·). Consider testing H0 : F = F0",
+  "options": {
+    "A": "gainst H1 : F ̸= F0, where F0(x) = if x < 0, if 0 ≤x < 1, if x ≥1. Let D denote the Kolmogorov-Smirnov test statistic. If P(D > 0.669) = 0.01 under H0 and ψ = if H0 is accepted at level 0.01, otherwise, then based on the given data, the observed value of D + ψ (rounded off to two decimal places) equals"
+  },
+  "answer": "1.35 to 1.40",
+  "solution": "1) Understanding the problem:\nThe problem provides a sample {0.13, 0.12, 0.78, 0.51} and asks us to compute the\nKolmogorov-Smirnov (K-S) statistic D for testing the null hypothesis that the sample comes\nfrom a population with CDF F0(x). The critical value for the test statistic D is given as\n0.669, and the decision rule ψ depends on whether D exceeds this critical value at a\nsignificance level of 0.01.\n2) Kolmogorov-Smirnov Statistic:\nThe Kolmogorov-Smirnov statistic is the maximum absolute difference between the\nempirical distribution function (EDF) and the cumulative distribution function (CDF) of the\nhypothesized distribution. The EDF for this sample is computed by sorting the data and\ncalculating the proportion of observations less than or equal to each sample point:\nEDF(x) = Number of observations ≤x\nTotal number of observations.\nFor the sample {0.13, 0.12, 0.78, 0.51}, we compute the EDF and compare it to F0(x). The test\nstatistic D is then the maximum of these differences.\n3) Calculation of D:\n- The ordered sample is 0.12, 0.13, 0.51, 0.78.\n- The EDF values at these points are 1\n4, 2\n4, 3\n4, 4\n- The CDF values for these points based on F0(x) are 0.12, 0.13, 0.51, 0.78, respectively.\n- The Kolmogorov-Smirnov statistic D is the maximum absolute difference between the EDF\nand CDF, which is D = max (|EDF −CDF|).\n4) Decision Rule and ψ:\n- The critical value Dcritical = 0.669 corresponds to a significance level of 0.01. Since the\ncomputed D is less than the critical value, we fail to reject the null hypothesis H0.\n- The value of ψ is 1 because H0 is accepted at the 0.01 significance level.\n5) Final Calculation:\nThe observed value of D + ψ is approximately 1.35 to 1.40.\nQuick Tip\n- The Kolmogorov-Smirnov test compares the maximum deviation between the\nobserved and expected cumulative distributions.\n- The critical value depends on the sample size and the significance level."
+}

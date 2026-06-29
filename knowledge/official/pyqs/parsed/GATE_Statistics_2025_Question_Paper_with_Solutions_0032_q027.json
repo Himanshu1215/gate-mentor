@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q27",
+  "question_seq": 32,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let T : R3 →R3 be a linear map defined by T(x1, x2, x3) = (3x1 + 5x2 + x3, x3, 2x1 + 2x3). Then the rank of T is equal to (",
+  "options": null,
+  "answer": null,
+  "solution": "To find the rank of the linear map T, we need to determine the number of linearly\nindependent rows in the matrix representation of T. The map T is given by the following\ntransformation:\nT(x1, x2, x3) =\nThus, the matrix representation of T is:\nA =\nNow, we find the rank of this matrix by reducing it to row echelon form (REF). First, use row\noperations to simplify the matrix:\nSubtract 2\n3 of the first row from the third row to make the element in the third row, first\ncolumn, zero:\n−10\nMultiply the third row by −3\n10 to make the second column entry of the third row equal to 1:\n- Finally, we can easily see that the first and second rows are linearly independent, and the\nthird row is also linearly independent from the others.\nThus, the matrix has 3 non-zero rows, so the rank of T is 3.\nRank of T is:\nQuick Tip\nTo find the rank of a matrix, reduce it to row echelon form and count the number of\nnon-zero rows. The rank is equal to the number of linearly independent rows."
+}

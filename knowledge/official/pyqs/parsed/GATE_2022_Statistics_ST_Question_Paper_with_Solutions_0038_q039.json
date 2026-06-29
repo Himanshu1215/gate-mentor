@@ -1,0 +1,16 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q39",
+  "question_seq": 38,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let X = follow N3(µ, Σ) with µ = and Σ = , where",
+  "options": {
+    "A": "∈R. Suppose that the partial correlation coefficient between X2 and X3, keeping X1 fixed, is 5"
+  },
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q6",
+  "question_seq": 40,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Then the value of adjusted R2 is (rounded off to two decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "The formula for the adjusted R2 is given by:\nadj = 1 −\n(1 −R2)(n −1)\nn −k −1\nwhere:\nR2 is the coefficient of determination,\nn is the number of observations,\nk is the number of independent variables (excluding the intercept).\nGiven:\nR2 = 5\nn = 25 (since there are 25 observations),\nk = 4 (since there are 4 independent variables, x1, x2, x3, x4).\nSubstitute these values into the formula:\nadj = 1 −\n\u0012(1 −5\n6)(25 −1)\n25 −4 −1\nSimplify the expression:\nadj = 1 −\n\u0012(1\n6)(24)\n= 1 −\n\u0010 4\n= 1 −0.2 = 0.8.\nThus, the adjusted R2 is 0.80 .\nQuick Tip\nThe adjusted R2 accounts for the number of predictors in the model and adjusts the\ncoefficient of determination accordingly. Use the formula:\nadj = 1 −(1 −R2)(n −1)\nn −k −1"
+}

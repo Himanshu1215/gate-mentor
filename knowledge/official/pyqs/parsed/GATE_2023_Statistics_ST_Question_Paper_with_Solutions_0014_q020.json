@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q20",
+  "question_seq": 14,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Suppose that there are 5 boxes, each containing 3 blue pens, 1 red pen and 2 black pens. One pen is drawn at random from each of these 5 boxes. If the random variable X1 denotes the total number of blue pens drawn and the random variable X2 denotes the total number of 2, X2 = 1) equals:",
+  "options": {
+    "A": "5",
+    "B": "5",
+    "C": "5",
+    "D": "5"
+  },
+  "answer": "A",
+  "solution": "1) Understanding the Problem:\nEach of the 5 boxes contains 3 blue pens, 1 red pen, and 2 black pens. A pen is drawn\nrandomly from each box. We need to calculate the probability that exactly 2 blue pens and\nexactly 1 red pen are drawn from these 5 boxes.\n2) Probability of Drawing Blue and Red Pens:\nThe probability of drawing a blue pen from a single box is P(Blue) = 3\n6 = 1\nThe probability of drawing a red pen from a single box is P(Red) = 1\nThe probability of drawing a black pen from a single box is P(Black) = 2\n6 = 1\n3) Applying the Given Conditions:\nWe want to find the probability that exactly 2 blue pens and exactly 1 red pen are drawn. Out\nof the 5 boxes, we need to select 2 boxes to draw blue pens, 1 box to draw a red pen, and the\nremaining 2 boxes will draw black pens. The number of ways to choose 2 boxes for blue\npens from 5 is \u00005\n= 10. Similarly, the number of ways to choose 1 box for the red pen from\nthe remaining 3 boxes is \u00003\n= 3. The remaining 2 boxes will automatically have black pens.\n4) Calculating the Probability:\nThe total probability is given by:\nP(X1 = 2, X2 = 1) =\nSubstituting the values:\nP(X1 = 2, X2 = 1) = 10 × 3 ×\nP(X1 = 2, X2 = 1) = 30 × 1\n4 × 1\n6 × 1\nP(X1 = 2, X2 = 1) = 30\n216 = 5\nThus, the correct answer is (A) 5\n36.\nQuick Tip\n- To solve such problems, calculate the probability for each condition (blue, red, black\npens) and multiply the results by the number of ways each condition can occur.\n- Use the combination formula \u0000n\n\u0001 to calculate the number of ways to choose items\nfrom a group."
+}

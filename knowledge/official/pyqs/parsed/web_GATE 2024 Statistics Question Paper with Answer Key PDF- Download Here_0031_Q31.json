@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q31",
+  "question_seq": 31,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 29:",
+  "options": {
+    "C": "onsider the simple linear regression model y i = β 0 + β 1 x i + ϵ i y i = β 0 + β 1 x i + ϵ i i = 1 , 2 , . . . , n i = 1 , 2 , . . . , n ( n ≥ 3 ) , ( n ≥ 3 ) , where β 0 β 0",
+    "A": "nd β 1 β 1",
+    "B": "T 1 T 1 is an unbiased estimator of σ 2 . σ 2 .",
+    "D": "Neither T 1 T 1 nor T 2 T 2 is an unbiased estimator of σ 2 σ 2"
+  },
+  "answer": "C",
+  "solution": null
+}

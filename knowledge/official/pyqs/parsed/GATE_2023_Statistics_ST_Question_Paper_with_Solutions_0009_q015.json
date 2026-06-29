@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q15",
+  "question_seq": 9,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let Φ(·) denote the cumulative distribution function of a standard normal random variable. If the random variable X has the cumulative distribution function F(x) = Φ(x) if x < −1, Φ(x + 1) if x ≥−1, then which one of the following statements is true?",
+  "options": {
+    "A": "P(X ≤−1) = 1",
+    "B": "P(X = −1) = 1",
+    "C": "P(X < −1) = 1",
+    "D": "P(X ≤0) = 1"
+  },
+  "answer": "A",
+  "solution": "1) Understanding the CDF:\nThe function F(x) is a piecewise function defined as Φ(x) for x < −1 and Φ(x + 1) for\nx ≥−1. The value of the CDF at x = −1 is computed from the second piece of the function,\ni.e., F(−1) = Φ(−1 + 1) = Φ(0). Since Φ(0) = 0.5, we can immediately say that\nP(X ≤−1) = 0.5.\n2) Analysis of the options:\n(A) P(X ≤−1) = 1\n2: This is true because, as mentioned earlier, F(−1) = Φ(0) = 0.5. Hence,\nP(X ≤−1) = 0.5.\n(B) P(X = −1) = 1\n2: This is incorrect because for continuous random variables,\nP(X = x) = 0 for any point x. The probability at a single point is always zero.\n(C) P(X < −1) = 1\n2: This is incorrect because P(X < −1) = F(−1−) = Φ(−1), which is not\nequal to 0.5. Φ(−1) is approximately 0.1587.\n(D) P(X ≤0) = 1\n2: This is incorrect because P(X ≤0) = F(0) = Φ(1), which is\napproximately 0.8413, not 0.5.\nThe correct answer is (A) P(X ≤−1) = 1\nQuick Tip\n- The CDF F(x) is defined in pieces, and at x = −1, it is computed using the function\nΦ(x + 1).\n- For a continuous random variable, P(X = x) = 0 for any point x.\n- The value of Φ(0) is always 0.5, which helps in evaluating probabilities for standard\nnormal variables."
+}

@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q4",
+  "question_seq": 65,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "= −11 −24 −59 −120 The trace of Q4 is the sum of the diagonal elements: trace(Q4) = −59 + 300 = 241. Step 4: Final Calculation Now we can add the traces of P 5 and Q4: trace(P 5 + Q4) = 238 + 241 = 341. Thus, the value of trace(P 5 + Q4) is 341 . Quick Tip To compute the trace of matrix powers, first calculate the matrix powers and then sum the diagonal elements. The trace function is linear, so you can separate the trace of the sum of matrices.",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

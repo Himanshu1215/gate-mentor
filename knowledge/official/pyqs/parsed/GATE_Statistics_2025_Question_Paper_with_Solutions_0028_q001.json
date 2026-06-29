@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q1",
+  "question_seq": 28,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "ML_001",
+  "question_text": "The first condition gives the least-squares estimate ˆβ, which minimizes the sum of squared errors in the linear regression model yi = βxi + ϵi. It is known that the least-squares estimator of β is given by the formula: ˆβ = i=1 xiyi i=1 x2 We are given that ˆβ = 10.",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

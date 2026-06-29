@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q8",
+  "question_seq": 8,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 6: Sequence the following sentences in a coherent passage. P: This fortuitous geological event generated a colossal amount of energy and heat that resulted in the rocks rising to an average height of 4 km across the contact zone. Q: Thus, the geophysicists tend to think of the Himalayas as an active geological event rather than as a static geological feature. R: The natural process of the cooling of this massive edifice absorbed large quantities of atmospheric carbon dioxide, altering the earth’s atmosphere and making it better suited for life. S: Many millennia ago, a breakaway chunk of bedrock from the Antarctic Plate collided with the massive Eurasian Plate.",
+  "options": {
+    "A": "Q P S R Q P S R",
+    "B": "Q S P R Q S P R",
+    "C": "S P R Q S P R Q",
+    "D": "S R P Q S R P Q"
+  },
+  "answer": "C",
+  "solution": null
+}

@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q21",
+  "question_seq": 36,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {0, 2} be a realization of a random sample of size 2 from a binomial distribution with parameters 2 and p, where p ∈(0, 1). To test H0 : p = 1 2, the observed value of the likelihood ratio test statistic equals (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "The likelihood ratio test statistic for a binomial distribution is given by:\nΛ =\nL(p0)\nL(pMLE),\nwhere L(p0) is the likelihood under the null hypothesis and L(pMLE) is the likelihood under\nthe maximum likelihood estimate.\nFor the binomial distribution, if the observed data is 2, then pMLE = 2\n2 = 1, and the likelihood\nratio test statistic evaluates to approximately 0.98.\nThus, the likelihood ratio test statistic is 0.98.\nQuick Tip\nIn hypothesis testing, the likelihood ratio compares the likelihood under the null hy-\npothesis and the maximum likelihood estimate of the parameter."
+}

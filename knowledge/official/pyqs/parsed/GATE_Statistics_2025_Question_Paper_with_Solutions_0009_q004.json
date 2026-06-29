@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q4",
+  "question_seq": 9,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In the context of the given figure, which one of the following options correctly represents the entries in the blocks labelled (i), (ii), (iii), and (iv), respectively?",
+  "options": {
+    "A": "Q, M, 12 and 8",
+    "B": "K, L, 10 and 14",
+    "C": "I, J, 10 and 8",
+    "D": "L, K, 12 and 8"
+  },
+  "answer": "D",
+  "solution": "Step 1: Observing the pattern of the matrix, the sum of the numbers in the first column\nseems to follow a consistent pattern, and the same can be applied to the other columns. Let’s\ninvestigate the patterns to find the values of (i), (ii), (iii), and (iv).\nThe first column values are:\nN = 21, H = 12.\nThe sum of 21 and 12 gives us 33. Hence, (i) should be 6, as 33 minus 27 (the sum of the\nentries in the last row) gives 6.\nThe second column values are:\nU = 14, L = unknown.\nWe find that the sum of 14 and 10 gives 24, so (ii) = 10.\nThe third column values are:\nF = 9, O = 15.\nThe sum of 9 and 15 gives 24, so (iv) = 8.\nStep 2: Based on the pattern above, the answer choices correspond to the following values\nfor the blocks:\n(i) = 6, (ii) = 10, (iii) = 15, (iv) = 8.\nThus, the correct answer is B .\nQuick Tip\nWhen solving letter-number reasoning grids, convert letters to their alphabet positions\n(A=1 to Z=26), then analyze the mathematical pattern row-wise or column-wise."
+}

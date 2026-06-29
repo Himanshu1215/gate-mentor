@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q40",
+  "question_seq": 58,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X1, X2, . . . , Xn be a random sample of size n(≥2) from a uniform distribution on [−θ, θ], where θ ∈(0, ∞). Let X(1) = min{X1, X2, . . . , Xn} and X(n) = max{X1, X2, . . . , Xn}. Then which of the following statements is/are true?",
+  "options": {
+    "A": "P only",
+    "B": "Q only",
+    "C": "Both P and Q",
+    "D": "Neither P nor Q"
+  },
+  "answer": "C",
+  "solution": "We are given a random sample X1, X2, . . . , Xn from a uniform distribution. We need to\nanalyze the two statements P and Q.\nStep 1: Analyzing statement P.\nStatement P asserts that (X(1), X(n)) is a complete statistic. A statistic is complete if the only\nfunction of the statistic that has an expected value of zero for all values of the parameter is\nthe zero function. In this case, X(1) and X(n) together form a complete statistic for θ, since\nthey exhaust all the information about θ in the sample.\nStep 2: Analyzing statement Q.\nStatement Q asserts that X(n) −X(1) is an ancillary statistic. An ancillary statistic is a statistic\nwhose distribution does not depend on the parameter being estimated. Since X(n) −X(1)\ndepends only on the sample and not on θ, it is indeed an ancillary statistic.\nStep 3: Conclusion.\nBoth statements P and Q are correct, so the correct answer is (C) Both P and Q.\nFinal Answer: (C)BothPandQ\nQuick Tip\nWhen analyzing statistics, recall that a complete statistic provides all the information\nabout the parameter, while an ancillary statistic has a distribution independent of the\nparameter."
+}

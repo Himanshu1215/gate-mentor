@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q47",
+  "question_seq": 52,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let {xn}n≥1 be a sequence defined as xn = 1 + 1 + 1 + · · · + 1 √n −2(√n −1). Then which of the following options is/are correct?",
+  "options": {
+    "A": "The sequence {xn}n≥1 is unbounded.",
+    "B": "The sequence {xn}n≥1 is monotonically decreasing.",
+    "C": "The sequence {xn}n≥1 is bounded but does not converge.",
+    "D": "The sequence {xn}n≥1 converges."
+  },
+  "answer": "B",
+  "solution": "Step 1: Analyze the sequence. The sequence is given as:\nxn =\nk=1\n−2(√n −1).\nThe term 2(√n −1) is a term that grows like 2√n as n increases, and the sum Pn\nk=1\ngrows like 2√n for large n.\nStep 2: Behavior of the sequence for large n. We approximate the sequence for large n:\nxn ∼\nk=1\n−2√n.\nUsing the asymptotic approximation for the sum, we have:\nk=1\n∼2√n −1.\nThus, xn behaves like:\nxn ∼2√n −1 −2√n = −1.\nThis suggests that the sequence is bounded and converges to −1.\nStep 3: Monotonicity. Given that xn decreases as n increases, the sequence is\nmonotonically decreasing.\nThus, the correct answer is (B) .\nQuick Tip\nWhen analyzing sequences involving sums, compare the growth rates of the terms in-\nvolved and use asymptotic approximations to predict the sequence’s behavior as n →∞."
+}

@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q36",
+  "question_seq": 36,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 34: Let X be a random sample of size one from a population having N ( 0 , σ 2 ) N ( 0 , σ 2 )",
+  "options": {
+    "D": "istribution, where σ > 0 σ > 0 is an unknown parameter. Let Φ ( ⋅ ) Φ ( ⋅ )",
+    "A": "gainst H 1 : σ 2 = 2 H 1 : σ 2 = 2 using the Neyman-Pearson most powerful test of size 0.05, the critical region is given by λ ( X ) >",
+    "C": "λ ( X ) >"
+  },
+  "answer": "C",
+  "solution": null
+}

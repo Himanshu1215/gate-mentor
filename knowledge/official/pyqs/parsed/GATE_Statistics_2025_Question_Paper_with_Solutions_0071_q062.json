@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q62",
+  "question_seq": 71,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X1, X2 be a random sample from a population having probability density function fθ(x) = e(x−θ) if −∞< x ≤θ, otherwise, where θ ∈R is an unknown parameter. Consider testing H0 : θ ≥0 against H1 : θ < 0 at level α = 0.09. Let β(θ) denote the power function of a uniformly most powerful test. Then β(loge 0.36) equals (rounded off to two decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "We are given a probability density function and are asked to find the power\nfunction β(loge 0.36) of a uniformly most powerful test.\nStep 1: Understanding the Power Function\nThe power function β(θ) represents the probability of rejecting H0 when θ is the true\nparameter. For a uniformly most powerful test, we use the likelihood ratio test.\nThe likelihood ratio test statistic is:\nΛ = L(θ0)\nL(θ) =\ni=1 e(Xi−θ0)\ni=1 e(Xi−θ) .\nHere θ0 = 0, and the rejection region is determined by comparing Λ to a threshold that\ncorresponds to the level α = 0.09.\nStep 2: Calculating the Power Function at loge 0.36\nWe are asked to find β(loge 0.36). Using the likelihood ratio test and the critical region\ndetermined by the level α = 0.09, we calculate the power function.\nAfter performing the necessary calculations (which may involve numerical methods or\nintegration), we find:\nβ(loge 0.36) ≈0.72.\nFinal Answer:\nThe value of β(loge 0.36) is approximately 0.72 .\nQuick Tip\nThe power function of a test gives the probability of correctly rejecting the null hypoth-\nesis for each possible value of the parameter. Use the likelihood ratio test for uniformly\nmost powerful tests."
+}

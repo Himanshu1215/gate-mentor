@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q56",
+  "question_seq": 56,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 54: Let X 1 , X 2 , . . . , X n X 1 , X 2 , . . . , X n",
+  "options": {
+    "B": "e a random sample of size n ( ≥ 2 ) n ( ≥ 2 ) from a population having Poisson distribution with mean λ λ , where λ > 0 λ > 0 is an unknown parameter. If T 1 = ¯ ¯¯¯ ¯ X T 1 = X ¯",
+    "A": "nd T 2 = √ 1 n − 1 Σ n i = 1 ( X i − ¯ ¯¯¯ ¯ X ) 2 T 2 = 1 n − 1 Σ i = 1 n ( X i − X ¯ ) 2 where ¯ ¯¯¯ ¯ X = 1 n ∑ n i = 1 X i X ¯ = 1 n ∑ i = 1 n X i then which of the following statements is/are true?",
+    "C": "T 2 2 T 2 2 is an unbiased estimator of λ λ",
+    "D": "Both T 1 T 1"
+  },
+  "answer": "C",
+  "solution": null
+}

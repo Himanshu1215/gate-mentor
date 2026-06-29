@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q29",
+  "question_seq": 29,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 27: Let X 1 , X 2 , … , X n X 1 , X 2 , … , X n",
+  "options": {
+    "B": "e a random sample of size n n ( n ≥ 11 n ≥ 11 ) from a population with a continuous and strictly increasing cumulative distribution function F ( ⋅ ) F ( ⋅ ) with an unknown median M M . To test H 0 : M = 10 H 0 : M = 10",
+    "A": "gainst H 1 : M > 10 H 1 : M > 10",
+    "D": "enote the number of observations larger than 10. Let t 0 t 0",
+    "C": "T ≥"
+  },
+  "answer": "D",
+  "solution": null
+}

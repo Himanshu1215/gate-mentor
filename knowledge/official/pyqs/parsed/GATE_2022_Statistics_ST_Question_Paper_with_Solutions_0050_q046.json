@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q46",
+  "question_seq": 50,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {Xn}, n ≥1, be a sequence of random variables with the probability mass functions pXn(x) = n+1, x = 0 n+1, x = n elsewhere Let X be a random variable with P(X = 0) = 1. Then which of the following statements is/are true?",
+  "options": {
+    "A": "Xn converges to X in distribution",
+    "B": "Xn converges to X in probability",
+    "C": "E(Xn) →E(X)",
+    "D": "There exists a subsequence {Xnk} of {Xn} such that Xnk converges to X almost surely"
+  },
+  "answer": "A",
+  "solution": "Step 1: Understand the sequence of random variables Xn.\nThe probability mass function of Xn is given by:\nP(Xn = 0) =\nn + 1,\nP(Xn = n) =\nn + 1.\nAs n →∞, we observe the following: - P(Xn = 0) →1, since\nn+1 →1 as n increases. -\nP(Xn = n) →0, since\nn+1 →0 as n →∞.\nThus, the sequence Xn tends to 0 with probability 1 as n →∞, which is the value of the\nrandom variable X (since P(X = 0) = 1).\nStep 2: Analyzing convergence in distribution.\nFor convergence in distribution, we check if the cumulative distribution function (CDF) of\nXn converges to the CDF of X. We know that Xn →0 almost surely as n →∞, and since\nP(X = 0) = 1, the distribution of Xn converges to the distribution of X in distribution.\nTherefore, statement (A) is true: Xn converges to X in distribution.\nStep 3: Analyzing convergence in probability.\nConvergence in probability occurs when for any ϵ > 0, the probability P(|Xn −X| ≥ϵ) →0\nas n →∞. Since Xn converges to 0 almost surely and X = 0, we can conclude that Xn\nconverges to X in probability. Thus, statement (B) is also true.\nStep 4: Analyzing expected values.\nSince Xn →0 almost surely, we would expect that E(Xn) →E(X), where E(X) = 0.\nHowever, the expected values E(Xn) do not converge to E(X) as the variance of Xn does not\ngo to zero. Therefore, statement (C) is false.\nStep 5: Analyzing almost sure convergence for a subsequence.\nBy the Borel-Cantelli Lemma, there exists a subsequence {Xnk} of {Xn} such that Xnk →0\nalmost surely. This is because the probability of Xn being 0 tends to 1, and there are\ninfinitely many terms where Xn = 0. Hence, statement (D) is true.\nStep 6: Conclusion.\nThus, the correct answer is (A), (B), and (D).\nQuick Tip\nConvergence in distribution and convergence in probability are related, but convergence\nin probability is a stronger condition. If a sequence of random variables converges\nalmost surely, it also converges in probability."
+}

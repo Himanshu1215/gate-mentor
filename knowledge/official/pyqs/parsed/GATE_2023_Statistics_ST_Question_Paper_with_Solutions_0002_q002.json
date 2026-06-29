@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q2",
+  "question_seq": 2,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Eject : Insert :: Advance :",
+  "options": {
+    "B": "y word meaning)",
+    "A": "Advent",
+    "C": "Retreat",
+    "D": "Loan"
+  },
+  "answer": "C",
+  "solution": "Step 1: Identify the relationship in the first pair.\n”Eject” means to throw out or expel, while ”Insert” means to put in.\nThese two are antonyms (opposites).\nStep 2: Apply the same relationship to the second pair.\nWe need a word that is the opposite of ”Advance.”\n- Advance = move forward, proceed.\n- The opposite (antonym) ⇒Retreat = moveback, withdraw.\nStep 3: Eliminate the options.\n(A) Advent = arrival/beginning (not opposite of advance).\n(B) Progress = move forward (synonym of advance).\n(C) Retreat = move back/withdraw ⇒correctantonym.\n(D) Loan = lending of money (irrelevant meaning).\nRetreat\nQuick Tip\nLook for the type of relation first (synonym, antonym, cause–effect, part–whole). Here,\nsince eject : insert are opposites, apply the same antonym logic to the second pair."
+}

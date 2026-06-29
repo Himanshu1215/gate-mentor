@@ -1,0 +1,16 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q25",
+  "question_seq": 40,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let Yi = α + βxi + ϵi, where xi’s are fixed covariates, α and β are unknown parameters, and ϵi’s are independent and identically distributed random variables with mean zero and finite variance. Let ˆα and ˆβ be the ordinary least squares estimators of α",
+  "options": {
+    "A": "nd β, respectively. Given the following observations: 8.62 3.29 26.86 21.53 54.02 48.69 The value of ˆα + ˆβ equals (round off to 2 decimal places)."
+  },
+  "answer": null,
+  "solution": "The ordinary least squares (OLS) estimators for α and β are calculated using the following\nformulae:\nˆβ =\ni=1(xi −¯x)(yi −¯y)\ni=1(xi −¯x)2\nˆα = ¯y −ˆβ¯x\nUsing the given data, we compute the estimates for ˆα and ˆβ, and the sum ˆα + ˆβ = 6.33.\nThus, the value of ˆα + ˆβ is 6.33.\nQuick Tip\nFor linear regression, use the OLS formulas to estimate the parameters α and β and\ncompute the desired quantities."
+}

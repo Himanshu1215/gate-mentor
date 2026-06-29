@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q52",
+  "question_seq": 52,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 50: Let Ω = { 1 , 2 , 3 , . . . } Ω = { 1 , 2 , 3 , . . . }",
+  "options": {
+    "A": "nd H H",
+    "B": "e the collection of all subsets of Ω Ω . Let P be a probability measure on H H such that P ( { k } ) = 1 2 k P ( { k } ) = 1 2 k , k ≥ 1 k ≥ 1 . Further, let X : Ω → R X : Ω → R",
+    "C": "lim n → ∞ P ( 4 + 1 n 2 ≤ X < 5 − 1 n ) = 1 16 lim n → ∞ P ( 4 + 1 n 2 ≤ X < 5 − 1 n ) = 1 16",
+    "D": "If x n = 3 + ( − 1 ) n n , n ≥ 1 x n = 3 + ( − 1 ) n n , n ≥ 1 then lim n → ∞ P ( X ≤ x n ) = 7 8 lim n → ∞ P ( X ≤ x n ) = 7 8"
+  },
+  "answer": "C",
+  "solution": null
+}

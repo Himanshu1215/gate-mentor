@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q31",
+  "question_seq": 36,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let {W(t) : t ≥0} be a standard Brownian motion. Then E \u0000(W(2) + W(3))2\u0001 equals (",
+  "options": null,
+  "answer": null,
+  "solution": "We use the properties of Brownian motion to solve the problem. Specifically, for a\nstandard Brownian motion:\nE(W(t)) = 0 for all t.\nVar(W(t)) = t for all t.\nCov(W(t), W(s)) = min(t, s) for t, s ≥0.\nWe need to find E \u0000(W(2) + W(3))2\u0001. Expanding the square:\nE \u0000(W(2) + W(3))2\u0001\n= E(W(2)2) + E(W(3)2) + 2E(W(2)W(3)).\nUsing the properties of Brownian motion:\nE(W(2)2) = Var(W(2)) = 2,\nE(W(3)2) = Var(W(3)) = 3,\nE(W(2)W(3)) = Cov(W(2), W(3)) = min(2, 3) = 2.\nThus:\nE \u0000(W(2) + W(3))2\u0001\n= 2 + 3 + 2 × 2 = 2 + 3 + 4 = 9.\nThus, the answer is 9 .\nQuick Tip\nFor Brownian motion, use the properties E(W(t))\n0, Var(W(t))\nt, and\nCov(W(t), W(s)) = min(t, s) to compute expectations and variances of linear combi-\nnations of Brownian motions."
+}

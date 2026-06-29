@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q8",
+  "question_seq": 5,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The James Webb telescope, recently launched in space, is giving humankind unprecedented access to the depths of time by imaging very old stars formed almost 13",
+  "options": {
+    "B": "illion years ago. Astrophysicists and cosmologists believe that this odyssey in space may even shed light on the existence of dark matter. Dark matter is supposed to interact only via the gravitational interaction and not through the electromagnetic-, the weak- or the strong-interaction. This may justify the epithet “dark” in dark matter.",
+    "A": "No other telescope has captured images of stars older than those captured by the James Webb telescope.",
+    "D": "ark matter.",
+    "C": "The James Webb telescope could be of use in the research on dark matter."
+  },
+  "answer": "D",
+  "solution": "Step 1: Understanding the passage.\n- The James Webb telescope has captured light from very old stars (around 13 billion years\nago). - Scientists believe it may help in dark matter studies. - Dark matter is said to interact\nonly through gravity and not via electromagnetic, weak, or strong interactions. This is why it\nis termed ”dark”.\nStep 2: Analyze each option.\n- (A) Correct: No other telescope has imaged such ancient stars, consistent with the passage.\n- (B) Correct: While astrophysicists and cosmologists are mentioned, it is reasonable that\nothers may also believe in dark matter.\n- (C) Correct: The telescope may indeed be useful for dark matter research, as suggested.\n- (D) False: If dark matter interacted via the strong interaction, it would no longer be “dark.”\nThe epithet “dark” is justified only because it does not interact via electromagnetic, weak, or\nstrong forces.\nFalse statement: (D)\nQuick Tip\nDark matter is invisible because it interacts only through gravity, not through strong,\nweak, or electromagnetic forces."
+}

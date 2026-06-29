@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q35",
+  "question_seq": 52,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X1, X2, X3 be three uncorrelated random variables with common variance σ2 < ∞. Let Y1 = 2X1 + X2 + X3, Y2 = X1 + 2X2 + X3, and Y3 = X1 + X2 + 2X3. Then which of the following statements is/are true?",
+  "options": {
+    "A": "P : The sum of eigenvalues of the variance-covariance matrix of (Y1, Y2, Y3) is 18σ2",
+    "B": "Q : The correlation coefficient between Y1 and Y2 equals that between Y2 and Y3",
+    "C": "Both P and Q",
+    "D": "Neither P nor Q"
+  },
+  "answer": "C",
+  "solution": "We are given three uncorrelated random variables X1, X2, X3 with the same variance σ2, and\nthe linear combinations Y1, Y2, Y3. Let’s examine the statements.\nStep 1: Find the sum of eigenvalues of the variance-covariance matrix of (Y1, Y2, Y3).\nThe variance-covariance matrix of (Y1, Y2, Y3) can be computed using the covariance matrix\nof the random variables X1, X2, X3 and the coefficients in the linear combinations. The sum\nof the eigenvalues of the variance-covariance matrix of (Y1, Y2, Y3) is indeed 18σ2, so\nstatement P is true.\nStep 2: Analyze the correlation coefficient between Y1 and Y2 and that between Y2 and\nY3.\nThe correlation coefficients between Y1 and Y2, and between Y2 and Y3, are the same because\nthe linear combinations of the uncorrelated random variables have symmetric coefficients.\nTherefore, statement Q is also true.\nFinal Answer:\n(C) Both P and Q are true .\nQuick Tip\nWhen working with linear combinations of random variables, the covariance and corre-\nlation coefficients can be computed from the coefficients of the linear combinations and\nthe covariance matrix of the underlying random variables."
+}

@@ -1,0 +1,16 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q61",
+  "question_seq": 51,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {Xn}n≥1 be a sequence of independent and identically distributed random variables each having probability density function f(x) = e−x if x > 0 otherwise For n ≥1, let Yn = |X2n −X2n−1|. ¯Yn = 1 i=1 for n ≥1",
+  "options": {
+    "A": "nd n√n e−¯Yn −e−1\u0011o n≥1 converges in distribution to a normal random variable with mean 0 and variance"
+  },
+  "answer": "A",
+  "solution": "The problem involves a sequence of independent and identically distributed exponential\nrandom variables with mean 1. We are given that the sequence\nn√n\ne−¯Yn −e−1\u0011o\nconverges in distribution to a normal random variable with mean 0 and variance σ2.\nThe variance of the limiting normal distribution can be computed using the asymptotic\nproperties of the exponential distribution. The detailed steps of the calculation lead to an\nestimate of σ2 to be approximately between 0.12 and 0.16.\nQuick Tip\n- For convergence of sums of random variables to normal distributions, the Central\nLimit Theorem (CLT) is helpful.\n- In this case, the variance is estimated using the properties of exponential distributions\nand sample means."
+}

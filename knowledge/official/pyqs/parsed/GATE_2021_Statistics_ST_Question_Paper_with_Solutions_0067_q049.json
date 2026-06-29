@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q49",
+  "question_seq": 67,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {Xn}n≥1 be a sequence of independent and identically distributed random variables each having probability density function f(x) = e−x, x > 0, otherwise. Let X(n) = max{X1, X2, . . . , Xn} for n ≥1. If Z is the random variable to which {X(n)−log n}n≥1 converges in distribution, as n →∞, then the median of Z equals (round off to",
+  "options": null,
+  "answer": null,
+  "solution": "To find the median of Z, we examine the behavior of X(n) and the limiting distribution of Z\nas n →∞. Using standard results for the distribution of the maximum of independent\nidentically distributed random variables, we find that the median of Z is approximately:\nMedian(Z) ≈0.32.\nThus, the value is 0.32.\nQuick Tip\nTo solve problems involving the maximum of independent random variables, use the\nproperties of the distribution and the limiting behavior of the sequence."
+}

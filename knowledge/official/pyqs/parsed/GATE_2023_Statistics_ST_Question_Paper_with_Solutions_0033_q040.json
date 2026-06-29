@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q40",
+  "question_seq": 33,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let X1, X2, . . . , X10 be a random sample of size 10 from a population having N(0, θ2)",
+  "options": {
+    "D": "istribution, where θ > 0 is an unknown parameter. Let T = 1 P10 i=1 X2 i . If the mean square error of cT (for c > 0), as an estimator of θ2, is minimized at c = c0, then the value of c0 equals",
+    "A": "5",
+    "B": "2",
+    "C": "3"
+  },
+  "answer": "A",
+  "solution": "The mean square error (MSE) for an estimator is the sum of the variance and the square of\nthe bias. For the estimator cT, we want to minimize the MSE with respect to the constant c.\nUsing the properties of the variance of T and the bias of cT, we minimize the MSE\nexpression. The optimal value of c that minimizes the MSE is c0 = 5\nThe correct answer is (A) 5\nQuick Tip\n- The mean square error (MSE) is a key measure in the performance of an estimator. It\nis the sum of the variance and the square of the bias.\n- To minimize MSE, we differentiate the MSE expression with respect to the parameter\nand find the value that minimizes it."
+}

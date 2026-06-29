@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q13",
+  "question_seq": 28,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let A be the 2 × 2 real matrix having eigenvalues 1 and -1, with corresponding eigenvectors and , respectively. If A2021 = , then a + b + c + d equals (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Use the property of eigenvalues and eigenvectors. Given that A has eigenvalues 1 and\n−1, the matrix A2021 will have eigenvalues 12021 = 1 and (−1)2021 = −1.\nStep 2: Find the powers of the matrix. Since A has eigenvalues 1 and −1, we conclude that:\nA2021 = A.\nTherefore, A2021 =\n= A.\nStep 3: Calculate a + b + c + d. For A, the matrix is:\nA =\nThus,\na + b + c + d =\n2 + −1\n2 + 1\n2 +\n2 =\nApproximating\n3 ≈1.732, we round it to 1.70.\nThus, a + b + c + d = 1.70.\nQuick Tip\nFor matrix powers with integer exponents, the eigenvalues raised to those powers can\nbe used to determine the resulting matrix’s behavior."
+}

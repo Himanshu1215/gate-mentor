@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q2",
+  "question_seq": 18,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "The distribution of (X3 −µ)TS−1(X3 −µ) is χ2 6 (Chi-square distribution with 6 degrees of freedom). Then which of the above statements is/are true?",
+  "options": {
+    "A": "(I) only",
+    "B": "(II) only",
+    "C": "Both (I) and (II)",
+    "D": "Neither (I) nor (II)"
+  },
+  "answer": "C",
+  "solution": "Step 1: Analyzing Statement (I).\nThe Wishart distribution Wp(n, Σ) is the distribution of the sample covariance matrix S for a\nrandom sample from a multivariate normal distribution. Since X1, X2, . . . , X20 are from a\nN6(µ, Σ) distribution, the distribution of 19S will indeed be W6(19, Σ), where the order is 6\nand the degrees of freedom are 19. This makes statement (I) true.\nStep 2: Analyzing Statement (II).\nThe quantity (X3 −µ)TS−1(X3 −µ) follows a χ2 distribution with degrees of freedom equal\nto the number of variables, which is 6 in this case. Therefore, statement (II) is also true.\nStep 3: Conclusion.\nBoth statements (I) and (II) are true, so the correct answer is (C).\nQuick Tip\nIn a multivariate normal distribution, the sample covariance matrix S follows a Wishart\ndistribution. For a normal sample, linear combinations like (X −µ)TS−1(X −µ) follow\na Chi-square distribution with degrees of freedom equal to the dimension of the data."
+}

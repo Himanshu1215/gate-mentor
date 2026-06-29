@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q41",
+  "question_seq": 59,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {Xn}n≥1 be a sequence of independent and identically distributed random variables having common distribution function F(x). Let a < b be two real numbers such that F(x) = 0 for all x ≤a, 0 < F(x) < 1 for all a < x < b, and F(x) = 1 for all x ≥b. Let Sn(x) be the empirical distribution function at x based on X1, X2, . . . , Xn, n ≥1. Then which one of the following statements is NOT true?",
+  "options": {
+    "A": "P \u0000limn→∞sup−∞<x<∞|Sn(x) −F(x)| = 0\u0001 = 1",
+    "B": "For fixed x ∈(a, b) and t ∈(−∞, ∞), P (limn→∞ √n|Sn(x) −F(x)| ≤t) = P(Z ≤t), where Z is the standard normal random variable.",
+    "C": "The covariance between Sn(x) and Sn(y) equals 1 nF(x)(1 −F(y)) for all n ≥2 and for fixed −∞< x, y < ∞.",
+    "D": "If Yn = sup−∞<x<∞(Sn(x) −F(x))2, then {nYn}n≥1 converges in distribution to a central"
+  },
+  "answer": "D",
+  "solution": "We are given a sequence of independent and identically distributed random variables with\ncommon distribution function F(x). We need to analyze the given options.\nStep 1: Analyzing option A.\nThis statement is correct. By the Glivenko-Cantelli theorem, the empirical distribution\nfunction Sn(x) converges uniformly to the true distribution function F(x) almost surely as\nn →∞.\nStep 2: Analyzing option B.\nThis statement is correct. It represents the central limit theorem for the empirical distribution\nfunction, where √n|Sn(x) −F(x)| converges in distribution to a normal distribution.\nStep 3: Analyzing option C.\nThis statement is correct. The covariance between Sn(x) and Sn(y) is given by the expression\nnF(x)(1 −F(y)), which is a standard result for empirical distribution functions.\nStep 4: Analyzing option D.\nThis statement is incorrect. The sequence {nYn}n≥1 does not converge to a chi-square\ndistribution with 2 degrees of freedom. Instead, the limiting distribution is a different form,\nso this option is not true.\nStep 5: Conclusion.\nThe correct answer is (D) as it is the statement that is not true.\nFinal Answer: (D)\nQuick Tip\nIn empirical distribution functions, the Glivenko-Cantelli theorem guarantees uniform\nconvergence, while the central limit theorem describes the asymptotic distribution of\nthe differences between Sn(x) and F(x)."
+}

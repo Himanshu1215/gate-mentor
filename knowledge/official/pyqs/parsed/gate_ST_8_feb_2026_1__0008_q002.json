@@ -1,0 +1,19 @@
+{
+  "year": 2026,
+  "exam": "GATE ST",
+  "question_id": "Q2",
+  "question_seq": 8,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In a testing of hypothesis problem, which one of the following statements is true?",
+  "options": {
+    "A": "The probability of the Type-I error cannot be higher than the probability of the Type-II error",
+    "B": "Type-II error occurs if the test accepts the null hypothesis when the null hypothesis is",
+    "C": "Type-I error occurs if the test rejects the null hypothesis when the null hypothesis is actu-",
+    "D": "The sum of the probability of the Type-I error and the probability of the Type-II error should be 1"
+  },
+  "answer": "B",
+  "solution": "Step 1: Understanding Type-I and Type-II errors.\nIn hypothesis testing, a **Type-I error** occurs when the null hypothesis is rejected when it\nis actually true. In contrast, a **Type-II error** occurs when the null hypothesis is accepted\nwhen it is actually false. Therefore, the correct statement will describe the correct definition\nof these errors.\nStep 2: Analyzing the options.\n(A) The probability of the Type-I error cannot be higher than the probability of\nthe Type-II error: This is not true. The probabilities of Type-I and Type-II errors are\nindependent of each other, and neither is bound to be greater than the other. The likelihood\nof each error depends on the test’s significance level (α) and the power of the test.\n(B) Type-II error occurs if the test accepts the null hypothesis when the null hy-\npothesis is actually false: Correct — this is the definition of a Type-II error. A Type-II error\nhappens when the null hypothesis is incorrectly accepted when it should be rejected because it\nis actually false.\n(C) Type-I error occurs if the test rejects the null hypothesis when the null hy-\npothesis is actually false: This is incorrect. A Type-I error occurs when the null hypothesis\nis rejected when it is actually true, not false.\n(D) The sum of the probability of the Type-I error and the probability of the\nType-II error should be 1: This is incorrect. The sum of the probabilities of Type-I and\nType-II errors is not necessarily 1. They are independent of each other and depend on various\nfactors such as the significance level (α) and the power of the test.\nStep 3: Conclusion.\nThe correct statement is (B), which accurately describes the Type-II error.\nQuick Tip\nA Type-I error is rejecting a true null hypothesis, while a Type-II error is accepting a\nfalse null hypothesis."
+}

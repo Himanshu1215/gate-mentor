@@ -1,0 +1,16 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q7",
+  "question_seq": 40,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Substituting the values into the formula and solving for a, we find that:",
+  "options": {
+    "A": "= 3. Step 3: Conclusion. Therefore, the value of a is 3, and the"
+  },
+  "answer": "C",
+  "solution": null
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q23",
+  "question_seq": 17,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X1, X2, . . . , Xn be a random sample of size n(≥ 2) from a population having probability density functionf(x; θ) = θ (−loge x)2 e−( loge x θ ) if 0 < x < 1 otherwise where θ > 0 is an unknown parameter. Then which one of the following statements is true?",
+  "options": {
+    "A": "1 i=1(loge Xi)2 is the maximum likelihood estimator of θ",
+    "B": "n−1 i=1(loge Xi) is the maximum likelihood estimator of θ",
+    "C": "1 i=1 loge Xi is the maximum likelihood estimator of θ",
+    "D": "n−1 i=1 loge Xi is the maximum likelihood estimator of θ"
+  },
+  "answer": "A",
+  "solution": "1) Understanding the Problem:\nThe given probability density function (pdf) suggests that we are dealing with a distribution\ninvolving the logarithm of the sample values. The objective is to find the maximum\nlikelihood estimator (MLE) for the parameter θ.\n2) Likelihood Function:\nThe likelihood function for n independent observations from this distribution is given by:\nL(θ) =\ni=1\nθ(loge Xi)2e−(\nloge Xi\nTaking the natural logarithm of the likelihood function, we get the log-likelihood:\nlog L(θ) =\ni=1\nlog\n+ 2 loge Xi −\nloge Xi\n\u00132!\nSimplifying:\nlog L(θ) = −n log θ + 2\ni=1\nloge Xi −1\ni=1\n(loge Xi)2\n3) Maximizing the Log-Likelihood:\nTo find the MLE, we differentiate the log-likelihood with respect to θ and set it equal to zero:\ndθ log L(θ) = −n\nθ + 2\ni=1\n(loge Xi)2\nSetting the derivative equal to zero:\nθ + 2\ni=1\n(loge Xi)2 = 0\nSolving for θ, we get the MLE as:\nˆθ = 2\ni=1\n(loge Xi)2\nThus, the maximum likelihood estimator of θ is 1\ni=1(loge Xi)2.\nQuick Tip\n- To find the maximum likelihood estimator, take the derivative of the log-likelihood\nfunction with respect to the parameter and set it equal to zero.\n- The MLE is obtained by solving for the parameter in terms of the sample data."
+}

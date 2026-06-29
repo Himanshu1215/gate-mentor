@@ -1,0 +1,16 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q19",
+  "question_seq": 34,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {Xn}n≥1 be a sequence of independent and identically distributed random variables each having uniform distribution on [0, 2]. For n ≥1, let Zn = −log i=1 (2 −Xi) ! 1 Then, as n →∞, the sequence {Zn}n≥1 converges almost surely to (round off to 2",
+  "options": {
+    "D": "ecimal places)."
+  },
+  "answer": null,
+  "solution": "As n →∞, the sequence Zn converges to the expectation of log(2 −Xi), where Xi follows a\nuniform distribution on [0, 2].\nFor a uniform distribution X ∼U(0, 2), the expected value is:\nE[log(2 −X)] =\nZ 2\nlog(2 −x) · 1\n2 dx.\nThis integral evaluates to approximately 0.27.\nThus, Zn converges almost surely to 0.27.\nQuick Tip\nWhen dealing with products of random variables, consider applying the law of large\nnumbers and expectation of logarithms for convergence."
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q51",
+  "question_seq": 51,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 49: Which of the following statements is/are true?",
+  "options": {
+    "A": "If",
+    "B": "If",
+    "C": "For real numbers",
+    "D": "For real numbers"
+  },
+  "answer": "A",
+  "solution": null
+}

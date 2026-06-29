@@ -1,0 +1,16 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q23",
+  "question_seq": 38,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let (Y, X1, X2) be a random vector with mean vector",
+  "options": {
+    "A": "nd covariance matrix 0.5 −0.5 0.5 1.5 −0.5 1.5 Then the value of the multiple correlation coefficient between Y and its best linear predictor on X1 and X2 equals (round off to 2 decimal places)."
+  },
+  "answer": null,
+  "solution": "The multiple correlation coefficient RY |X1,X2 is calculated using the covariance matrix and\nthe formula for the coefficient:\nRY |X1,X2 = √\nUsing the covariance matrix and calculating the necessary values gives R ≈0.16.\nThus, the value of the multiple correlation coefficient is 0.16.\nQuick Tip\nFor calculating the multiple correlation coefficient, use the formula involving variances\nand covariances from the covariance matrix."
+}

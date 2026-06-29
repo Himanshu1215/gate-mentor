@@ -1,0 +1,17 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q35",
+  "question_seq": 35,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Question 33: Let ( X , Y ) ( X , Y ) have a bivariate normal distribution with E ( X ) = E ( Y ) = 0 E ( X ) = E ( Y ) = 0 . Denote the conditional variance of X X given Y = 1 Y = 1",
+  "options": {
+    "B": "y V",
+    "A": "r ( X ∣ Y = 1 ) V"
+  },
+  "answer": "B",
+  "solution": null
+}

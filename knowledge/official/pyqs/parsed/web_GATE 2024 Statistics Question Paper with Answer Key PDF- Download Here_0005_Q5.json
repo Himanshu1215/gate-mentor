@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q5",
+  "question_seq": 5,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 3: In an engineering college of 10,000 students, 1,500 like neither their core branches nor other branches. The number of students who like their core branches is 1 4 1 4 of the number of students who like other branches. The number of students who like both their core and other branches is 500. The number of students who like their core branches is:",
+  "options": {
+    "A": "1 , 800 1 , 800",
+    "B": "3 , 500 3 , 500",
+    "C": "1 , 600 1 , 600",
+    "D": "1 , 500 1 , 500"
+  },
+  "answer": "A",
+  "solution": null
+}

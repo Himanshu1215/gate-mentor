@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q12",
+  "question_seq": 27,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let A =  and I3 be the 3 × 3 identity matrix. Then the nullity of 5A(I3 + A + A2) equals",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Compute I3 + A + A2.\nWe begin by calculating the powers of matrix A:\nA2 =\n\n\n\n= I3\nThus,\nI3 + A + A2 = I3 + A + I3 = 2I3 + A.\nStep 2: Multiply by 5A:\n5A(I3 + A + A2) = 5A(2I3 + A) = 10A + 5A2.\nSince A2 = I3,\n5A(I3 + A + A2) = 10A + 5I3.\nStep 3: Find the nullity. The nullity of a matrix is the dimension of the null space. Since the\nmatrix 10A + 5I3 is a linear combination of A and I3, it has a nullity of 1.\nThus, the nullity is 1.\nQuick Tip\nThe nullity of a matrix is the number of free variables in its solution to the homogeneous\nequation Ax = 0."
+}

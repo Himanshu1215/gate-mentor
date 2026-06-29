@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q21",
+  "question_seq": 24,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let {an}∞ n=1 be a sequence of positive real numbers satisfying",
+  "options": {
+    "A": "n+1 = 7 + a2 343, n ≥1, with a1 = 3 and an < 7 for all n ≥2.",
+    "C": "onsider the following statements: (I) {an} is monotonically increasing. (II) {an} converges to a value in the interval [3, 7]. Then which of the above statements is/are true?",
+    "B": "(II) only",
+    "D": "Neither (I) nor (II)"
+  },
+  "answer": "C",
+  "solution": "We are given the recurrence relation for the sequence {an} as:\nan+1\n= 7\n+ a2\nRearranging the equation:\nan+1 =\nan + a2n\nWe will now analyze the two statements.\nStep 1: Statement (I) - Is {an} monotonically increasing?\nTo check if the sequence is monotonically increasing, we need to determine whether\nan+1 > an. Substituting the recurrence relation:\n- As an increases, 7\nan decreases, and a2\n343 increases. - This suggests that the denominator of the\nright-hand side of the equation is increasing, which in turn suggests that an+1 is increasing as\nn increases.\nTherefore, the sequence {an} is monotonically increasing.\nStep 2: Statement (II) - Does {an} converge to a value in the interval [3, 7]?\nWe are also given that an < 7 for all n ≥2, and we need to check if {an} converges to a value\nwithin the interval [3, 7].\nTaking the limit as n →∞, let L be the limit of the sequence:\nL =\nL + L2\nSolving this equation yields a value for L that lies within the interval [3, 7], confirming that\nthe sequence converges to a value within this range.\nThus, both statements (I) and (II) are true.\nQuick Tip\nWhen working with recurrence relations, analyzing the behavior of the sequence and\nsolving for the limit can help determine its convergence and monotonicity."
+}

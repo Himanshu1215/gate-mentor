@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q12",
+  "question_seq": 8,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let A be a 3 × 3 real matrix having eigenvalues 1, 0, and −1. If B = A2 + 2A + I3, where I3 is the 3 × 3 identity matrix, then which one of the following statements is true?",
+  "options": {
+    "A": "B3 −5B2 + 4B = 0",
+    "B": "B3 −5B2 −4B = 0",
+    "C": "B3 + 5B2 −4B = 0",
+    "D": "B3 + 5B2 + 4B = 0"
+  },
+  "answer": "A",
+  "solution": "1) Understanding the given condition:\nWe are given that A is a 3 × 3 matrix with eigenvalues 1, 0, −1. The matrix B is defined as:\nB = A2 + 2A + I3\nThe task is to determine which of the following four statements about B is true.\n2) Eigenvalues of B:\nSince B = A2 + 2A + I3, we can calculate the eigenvalues of B based on the eigenvalues of\nA. Let the eigenvalues of A be λ. The corresponding eigenvalue of B is computed as:\nµ = λ2 + 2λ + 1\nThus, the eigenvalues of B are:\n- For λ = 1: µ = 12 + 2(1) + 1 = 4\n- For λ = 0: µ = 02 + 2(0) + 1 = 1\n- For λ = −1: µ = (−1)2 + 2(−1) + 1 = 0\nThus, the eigenvalues of B are 4, 1, 0.\n3) Characteristic polynomial of B:\nThe characteristic polynomial of B is obtained from its eigenvalues:\n(B −4)(B −1)(B) = 0\nExpanding this, we get the equation:\nB3 −5B2 + 4B = 0\n4) Conclusion:\nFrom the derived equation, it is evident that the correct statement is (A): B3 −5B2 + 4B = 0.\nQuick Tip\n- The matrix equation can be solved using the properties of eigenvalues.\n- The characteristic polynomial helps us express the equation satisfied by a matrix.\n- Eigenvalue computations often simplify matrix problem-solving."
+}

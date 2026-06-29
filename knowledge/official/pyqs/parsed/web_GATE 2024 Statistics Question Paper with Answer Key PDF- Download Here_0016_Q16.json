@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q16",
+  "question_seq": 16,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 14: Let u 1 , u 2 , u 3 , v 1 , v 2 , v 3 u 1 , u 2 , u 3 , v 1 , v 2 , v 3",
+  "options": {
+    "B": "e vectors in R 4 R 4 . Let U U",
+    "A": "nd let V V",
+    "C": "onsider the following statements: (I) If the dimension of U ∩ V U ∩ V is 2 and the dimension of U U is 3, then { v 1 , v 2 , v 3 } { v 1 , v 2 , v 3 } is linearly dependent.",
+    "D": "Neither (I) nor (II)"
+  },
+  "answer": "D",
+  "solution": null
+}

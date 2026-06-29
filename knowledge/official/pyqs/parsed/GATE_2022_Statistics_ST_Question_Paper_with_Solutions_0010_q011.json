@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q11",
+  "question_seq": 10,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let M be a 2 × 2 real matrix such that (I + M)−1 = I −αM, where α is a non-zero real number and I is the 2 × 2 identity matrix. If the trace of the matrix M is 3, then the value of α is",
+  "options": {
+    "A": "3",
+    "B": "1",
+    "C": "1",
+    "D": "1"
+  },
+  "answer": "D",
+  "solution": "Given the equation (I + M)−1 = I −αM, multiply both sides of the equation by I + M:\n(I + M)(I −αM) = I\nExpanding the left-hand side:\nI −αM + M −αM2 = I\nSimplifying:\nI + (1 −α)M −αM2 = I\nSubtract I from both sides:\n(1 −α)M −αM2 = 0\nNow, the trace of M is given as 3, and the trace of a matrix is the sum of its diagonal\nelements. Therefore, using the fact that tr(M) = 3, we can solve for α.\nAfter solving, we find that the value of α is:\nα = 1\nThus, the correct answer is 1\n4 .\nQuick Tip\nWhen working with matrix equations, always remember to multiply both sides by the\ninverse matrix and simplify step by step. Also, consider using the trace property for\nhelpful insights."
+}

@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q25",
+  "question_seq": 27,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X and Y be two independent exponential random variables with E(X2) = 1 2 and E(Y 2) = 2",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

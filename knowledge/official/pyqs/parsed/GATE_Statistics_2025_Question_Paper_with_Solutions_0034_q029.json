@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q29",
+  "question_seq": 34,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let X ∼Bin(2, 1 3). Then 18 · E(X2) equals (",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Recall the properties of the Binomial distribution. For X ∼Bin(n, p), the\nexpected value E(X) and the variance Var(X) are given by:\nE(X) = np\nand\nVar(X) = np(1 −p).\nFor X ∼Bin(2, 1\n3), we have:\nE(X) = 2 × 1\n3 = 2\nVar(X) = 2 × 1\n3 × 2\n3 = 4\nStep 2: Calculate E(X2). Using the identity E(X2) = Var(X) + (E(X))2, we can compute\nE(X2):\nE(X2) = 4\n9 +\n= 4\n9 + 4\n9 = 8\nStep 3: Final Calculation. Now, we compute 18 · E(X2):\n18 · E(X2) = 18 · 8\n9 = 16.\nThus, the answer is 16 .\nQuick Tip\nFor Binomial distributions, use the identity E(X2) = Var(X) + (E(X))2 to calculate\nsecond moments."
+}

@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q20",
+  "question_seq": 35,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let {Xn}n≥0 be a time-homogeneous discrete time Markov chain with state space {0, 1} and transition probability matrix P = 0.25 0.75 0.25 If P(X0 = 0) = P(X0 = 1) = 0.5, then k=1 E[(X2k)2] equals (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "Since Xn is a Markov chain with transition probabilities, the expected value E[(X2k)2]\nrepresents the probability of X2k = 1. The transition probabilities lead to a steady-state\ndistribution of 1\n2 for both states 0 and 1.\nTherefore,\nk=1\nE[(X2k)2] = 100 × 1\n2 = 50.\nThus, the sum equals 50.\nQuick Tip\nFor a Markov chain, the long-term expected value of any state can be calculated using\nthe stationary distribution."
+}

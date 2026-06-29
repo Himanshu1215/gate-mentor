@@ -1,0 +1,16 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q54",
+  "question_seq": 71,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X1, X2, . . . , X10 be a random sample from a probability density function fθ(x) = f(x −θ), −∞< x < ∞, where −∞< θ < ∞and f(−x) = f(x) for −∞< x < ∞. For testing H0 : θ = 1.2",
+  "options": {
+    "A": "gainst H1 : θ ̸= 1.2, let T + denote the Wilcoxon Signed-rank test statistic. If η deno"
+  },
+  "answer": null,
+  "solution": "The Wilcoxon Signed-rank test statistic T + is based on the ranks of the sample values and\ntheir signs. To find the value of η, we calculate the cumulative distribution function (CDF)\nunder H0 and use it to find the probability:\n32η = 31.70.\nThus, the value is 31.70.\nQuick Tip\nFor the Wilcoxon Signed-rank test, calculate the ranks and their signs to compute the\ntest statistic, then use the CDF to find the probability."
+}

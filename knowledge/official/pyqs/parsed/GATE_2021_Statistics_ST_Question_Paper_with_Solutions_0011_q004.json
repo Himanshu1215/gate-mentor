@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q4",
+  "question_seq": 11,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Nostalgia is to anticipation as is to . Which one of the following options maintains a similar logical relation in the above sentence?",
+  "options": {
+    "A": "Present, past",
+    "B": "Future, past",
+    "C": "Past, future",
+    "D": "Future, present"
+  },
+  "answer": "C",
+  "solution": "The given analogy is comparing two pairs of words:\n- Nostalgia is associated with the past, while anticipation is associated with the future.\nThus, the relationship between the two words in the analogy is one of temporal orientation:\nnostalgia refers to a sentiment about the past, while anticipation refers to an expectation\nabout the future.\nStep 1: Break down the analogy.\nThe analogy presents a relationship between the two words:\n- Nostalgia is to anticipation as\nis to\nWe can infer that the first term in each pair refers to the past and the second term refers to the\nfuture. Therefore, we need to find a pair of words where the first word is related to the past\nand the second word is related to the future, maintaining the same relationship as nostalgia\n(past) and anticipation (future).\nStep 2: Analyze the options.\n- (A) Present, past: This does not match because the first term (present) is not related to the\npast, and the second term (past) is not related to the future.\n- (B) Future, past: This reverses the order of time and does not maintain the same\nrelationship.\n- (C) Past, future: This matches the required relationship because the first term refers to the\npast and the second term refers to the future, just like in the analogy.\n- (D) Future, present: This does not follow the correct order of time, as it starts with the\nfuture.\nStep 3: Conclusion.\nTherefore, the correct answer is option (C), ”Past, future,” which maintains the same logical\nrelation as ”Nostalgia is to anticipation.”\nFinal Answer: Past, future\nQuick Tip\nWhen solving analogies, always look for the underlying relationship between the two\nconcepts in the first pair and apply the same relationship to the second pair, ensuring the\nconcepts are logically consistent."
+}

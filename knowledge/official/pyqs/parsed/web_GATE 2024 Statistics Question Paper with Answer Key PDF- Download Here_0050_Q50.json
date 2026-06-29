@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q50",
+  "question_seq": 50,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Question 48: Let A be an n × n n × n real matrix. Which of the following statements is/are true?",
+  "options": {
+    "A": "If A is a symmetric matrix such that",
+    "B": "If n is odd, then",
+    "C": "If A is a symmetric matrix such that the singular values of A are all strictly positive, then A is positive definite.",
+    "D": "If 1 is the only singular value of A, then A is orthogonal."
+  },
+  "answer": "C",
+  "solution": null
+}

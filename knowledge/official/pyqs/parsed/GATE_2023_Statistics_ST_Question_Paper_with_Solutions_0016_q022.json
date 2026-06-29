@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q22",
+  "question_seq": 16,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable with probability density function f(x; λ) = λe−x if x > 0 otherwise where λ > 0 is an unknown parameter. Let Y1, Y2, . . . , Yn be a random sample of size n from",
+  "options": {
+    "A": "population having the same distribution as X2. If Y = 1 i=1 Yi, then which one of the following statements is true?",
+    "B": "Y is a method of moments estimator of λ",
+    "C": "1 Y is a method of moments estimator of λ",
+    "D": "2 Y is a method of moments estimator of λ"
+  },
+  "answer": "A",
+  "solution": "1) Understanding the distribution of X:\nThe given probability density function is for an exponential distribution with rate parameter\nλ. The expected value E(X) is λ. Since Yi = X2, the expected value of Yi is E(Yi) = E(X2).\nFor an exponential random variable X, we have:\nE(X2) = λ2 + λ2 = 2λ2\n2) Applying the method of moments:\nThe method of moments estimator is found by equating the sample moments to the\npopulation moments. The first moment of Y is 2λ2. Hence, the method of moments estimator\nfor λ is:\nˆλ =\nQuick Tip\n- The method of moments estimator is obtained by equating sample moments to popu-\nlation moments.\n- For exponential distributions, E(X2) = 2λ2, which helps in estimating λ."
+}

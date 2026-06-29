@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q7",
+  "question_seq": 23,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let the joint distribution of (X, Y ) be bivariate normal with mean vector and variance-covariance matrix , where −1 < ρ < 1. Let Φρ(0, 0) = P(X ≤0, Y ≤0). Then the Kendall’s τ coefficient between X and Y equals",
+  "options": {
+    "A": "4Φρ(0, 0) −1",
+    "B": "4Φρ(0, 0)",
+    "C": "4Φρ(0, 0) + 1",
+    "D": "Φρ(0, 0)"
+  },
+  "answer": "A",
+  "solution": "The Kendall’s τ coefficient is a measure of the ordinal association between two variables, and\nit can be related to the joint distribution of X and Y in the bivariate normal case. For bivariate\nnormal variables with correlation ρ, the Kendall’s τ coefficient is given by the formula:\nτ = 4Φρ(0, 0) −1,\nwhere Φρ(0, 0) is the bivariate normal cumulative distribution function evaluated at (0, 0).\nSince the joint distribution is bivariate normal, the formula above applies directly, and hence\nthe Kendall’s τ coefficient is 4Φρ(0, 0) −1.\nFinal Answer:\n(A) 4Φρ(0, 0) −1 .\nQuick Tip\nIn the bivariate normal case, the Kendall’s τ coefficient can be computed using the joint\ndistribution function Φρ(0, 0), which captures the probability of both variables being less\nthan or equal to 0."
+}

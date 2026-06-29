@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q49",
+  "question_seq": 54,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X1, X2, X3 be independent standard normal random variables, and let Y1 = X1 −X2, Y2 = X1 + X2 −2X3, Y3 = X1 + X2 + X3. Then which of the following options is/are correct?",
+  "options": {
+    "A": "Y1, Y2, Y3 are independently distributed",
+    "B": "Y 2 1 + Y 2 2 + Y 2 3 ∼χ2",
+    "C": "2Y3 3Y 2 1 +Y 2 2 ∼t2",
+    "D": "3Y 2 1 +2Y 2 2Y 2 ∼F1,1"
+  },
+  "answer": "A",
+  "solution": "Step 1: Checking the Independence of Y1, Y2, Y3 The random variables Y1, Y2, Y3\nare linear combinations of X1, X2, X3. Since X1, X2, X3 are independent, it follows that\nY1, Y2, Y3 are also independent.\nThus, Option (A) is correct.\nStep 2: Distribution of Y 2\n1 + Y 2\n2 + Y 2\nSince Y1, Y2, Y3 are linear combinations of independent normal random variables, the sum of\ntheir squares follows a chi-squared distribution with 3 degrees of freedom.\nThus, Option (B) is incorrect because the sum of squares does follow χ2\n3, but this was not\nrequired.\nStep 3: Distribution of\n2Y3\n3Y 2\n1 +Y 2\nThis expression involves the ratio of quadratic forms in normal variables, which results in a\nt-distribution with 2 degrees of freedom.\nThus, Option (C) is correct.\nStep 4: Distribution of 3Y 2\n1 +2Y 2\n2Y 2\nThis expression does not result in an F-distribution with 1 and 1 degrees of freedom, so\nOption (D) is incorrect.\nFinal Answer:\nThe correct answers are A and C .\nQuick Tip\nFor sums of squares and ratios of quadratic forms in normal variables, the resulting\ndistributions often follow chi-squared or t-distributions. Carefully analyze the depen-\ndencies and relationships between the variables involved."
+}

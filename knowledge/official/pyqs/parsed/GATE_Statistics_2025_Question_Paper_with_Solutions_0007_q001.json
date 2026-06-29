@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q1",
+  "question_seq": 7,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Even though I had planned to go skiing with my friends, I had to ............. at the last moment because of an injury. Select the most appropriate option to complete the above sentence.",
+  "options": {
+    "A": "back up",
+    "B": "back of",
+    "C": "back on",
+    "D": "back out"
+  },
+  "answer": "D",
+  "solution": "The expression ”back out” means to withdraw from a commitment, plan, or agreement. In\nthe sentence, the speaker had initially made plans to go skiing but could not follow through\nbecause of an injury. Therefore, ”back out” is the correct phrasal verb to describe this\nwithdrawal.\nOther options are incorrect:\n”back up” means to support or reverse a vehicle.\n”back of” is not a valid phrasal verb.\n”back on” doesn’t fit the sentence grammatically or idiomatically.\nThus, the most appropriate choice is ”back out”.\nQuick Tip\nPhrasal verbs often change the meaning of the root verb entirely—always learn them in\ncontext."
+}

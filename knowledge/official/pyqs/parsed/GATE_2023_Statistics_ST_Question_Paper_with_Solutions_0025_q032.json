@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q32",
+  "question_seq": 25,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {Xn}n≥1 be a sequence of independent and identically distributed random variables, each having mean 4 and variance 9. If Yn = 1 i=1 Xi for n ≥1, then lim n→∞E Yn −4 \u00132# (in integer) equals:",
+  "options": {
+    "A": "0",
+    "B": "4",
+    "C": "9",
+    "D": "1"
+  },
+  "answer": "A",
+  "solution": "1) Understanding the problem:\nWe are given that the sequence {Xn}n≥1 is a sequence of independent random variables with\nmean 4 and variance 9. We are asked to find the limit of the expected value of the squared\ndeviation of Yn from 4, normalized by √n.\n2) Applying the Law of Large Numbers:\nBy the Weak Law of Large Numbers (WLLN), as n →∞, Yn converges in probability to 4.\nTherefore, the quantity Yn−4\n√n tends to 0 as n increases.\n3) Evaluating the limit:\nAs n →∞, the expected value of the squared deviation becomes:\nYn −4\n\u00132#\n= Var(Yn)\nSince Var(Yn) = 9\nn, we get:\nYn −4\n\u00132#\n= 9\nn2 →0 as n →∞\nThus, the final result is 0.\nQuick Tip\n- The Law of Large Numbers (LLN) implies that sample averages converge to the ex-\npected value.\n- When normalizing by √n, the variance decreases and tends to zero in the limit."
+}

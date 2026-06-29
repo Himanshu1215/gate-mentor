@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q26",
+  "question_seq": 29,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable with the probability mass function pX(x) = \u0000x−1 \u0001 \u00003 \u0001x−1 \u00001 \u0001, for x = 1, 2, 3, . . .. Then the value of n=0 P(n < X ≤n + 3) (rounded off to two decimal places) is equal to",
+  "options": null,
+  "answer": null,
+  "solution": "We are given the probability mass function of X, which is of the form of a geometric\ndistribution with success probability 3"
+}

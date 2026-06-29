@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q15",
+  "question_seq": 15,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 13: Let",
+  "options": {
+    "A": "A",
+    "B": "e a 3 × 3 3 × 3 real matrix and let I 3 I 3",
+    "C": "If",
+    "D": "If the system of equations"
+  },
+  "answer": "C",
+  "solution": null
+}

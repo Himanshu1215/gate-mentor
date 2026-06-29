@@ -1,0 +1,19 @@
+{
+  "year": 2026,
+  "exam": "GATE ST",
+  "question_id": "Q8",
+  "question_seq": 11,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Then which one of the following statements is true?",
+  "options": {
+    "A": "A and B are independent as well as A and C are independent",
+    "B": "A and B are independent, but A and C are not independent",
+    "C": "A and C are independent, but A and B are not independent",
+    "D": "Neither A and B are independent, nor A and C are independent"
+  },
+  "answer": "B",
+  "solution": "Step 1: Understand the events.\n- Event A represents the outcome where the red die shows 5 or 6. Hence, the probability of A\nis:\nP(A) = P(Red die shows 5 or 6) = 2\n6 = 1\n- Event B represents the event that the sum of the outcomes of the two dice is 7. The possible\npairs for a sum of 7 are:\n(1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1)\nThere are 6 outcomes that result in a sum of 7 out of a total of 6 × 6 = 36 possible outcomes.\nTherefore:\nP(B) = 6\n36 = 1\n- Event C represents the event that the sum of the outcomes of the two dice is 8. The possible\npairs for a sum of 8 are:\n(2, 6), (3, 5), (4, 4), (5, 3), (6, 2)\nThere are 5 outcomes that result in a sum of 8 out of 36 total possible outcomes. Therefore:\nP(C) = 5\nStep 2: Check if events A and B are independent.\nTo check if two events are independent, we verify if the following holds:\nP(A ∩B) = P(A) · P(B)\n- A ∩B is the event where the red die shows 5 or 6 and the sum of the dice is 7. The pairs that\nsatisfy both conditions are:\n(5, 2), (6, 1)\nThus, there are 2 outcomes that satisfy both A and B, so:\nP(A ∩B) = 2\n36 = 1\nNow, check if P(A) · P(B) equals P(A ∩B):\nP(A) · P(B) = 1\n3 × 1\n6 = 1\nSince P(A ∩B) = P(A) · P(B), events A and B are independent.\nStep 3: Check if events A and C are independent.\nNow, check if P(A ∩C) = P(A) · P(C). - A ∩C is the event where the red die shows 5 or 6\nand the sum of the dice is 8. The pairs that satisfy both conditions are:\n(5, 3), (6, 2)\nThus, there are 2 outcomes that satisfy both A and C, so:\nP(A ∩C) = 2\n36 = 1\nNow, check if P(A) · P(C) equals P(A ∩C):\nP(A) · P(C) = 1\n3 × 5\n36 =\nSince P(A ∩C) = 1\n18 ̸=\n108, events A and C are not independent.\nStep 4: Conclusion.\nThe correct statement is (B): A and B are independent, but A and C are not independent.\nQuick Tip\nTwo events are independent if and only if P(A ∩B) = P(A) · P(B)."
+}

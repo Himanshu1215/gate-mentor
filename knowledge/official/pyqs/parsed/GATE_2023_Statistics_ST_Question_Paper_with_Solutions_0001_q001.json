@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q1",
+  "question_seq": 1,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "“I have not yet decided what I will do this evening; I visit a friend.”",
+  "options": {
+    "A": "mite",
+    "B": "would",
+    "C": "might",
+    "D": "didn’t"
+  },
+  "answer": "C",
+  "solution": "Step 1: Understanding the context.\nThe sentence shows that the speaker is uncertain about their plans for the evening. They are\nconsidering the possibility but have not made a final decision. In English grammar, when\nexpressing uncertainty or possibility, the modal verb “might” is most appropriate.\nStep 2: Evaluating each option.\n- (A) mite – Incorrect. This is a small insect and does not fit grammatically.\n- (B) would – Incorrect. “Would” indicates a definite plan or conditional situation, not\nuncertainty.\n- (C) might – Correct. “Might” expresses a possibility or an undecided action, which\nmatches the context.\n- (D) didn’t – Incorrect. Grammatically wrong for the sentence structure.\nStep 3: Correct usage.\nThe correct sentence should read: “I have not yet decided what I will do this evening; I\nmight visit a friend.”\nThe correct answer is (C) might.\nQuick Tip\nUse “might” to express uncertainty or possibility in the future. Example: “I might go\nshopping tomorrow.”"
+}

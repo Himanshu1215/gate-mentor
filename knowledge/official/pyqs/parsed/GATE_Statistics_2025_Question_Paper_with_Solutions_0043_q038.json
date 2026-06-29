@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q38",
+  "question_seq": 43,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let P = (aij) be a 10 × 10 matrix with",
+  "options": {
+    "A": "ij = if i ̸= j, if i = j. Then the rank of P equals:",
+    "B": "9",
+    "C": "1",
+    "D": "8"
+  },
+  "answer": "B",
+  "solution": null
+}

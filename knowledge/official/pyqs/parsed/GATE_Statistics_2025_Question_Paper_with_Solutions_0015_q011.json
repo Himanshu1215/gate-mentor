@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q11",
+  "question_seq": 15,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let f : [0, ∞) →[0, ∞) be a differentiable function with f(x) > 0 for all x > 0, and f(0) = 0. Further, f satisfies (f(x))2 = Z x \u0000(f(t))2 + f(t)\u0001",
+  "options": {
+    "D": "t, x > 0. Then which one of the following options is correct?",
+    "A": "0 < f(2) ≤1",
+    "B": "1 < f(2) ≤2",
+    "C": "2 < f(2) ≤3"
+  },
+  "answer": "B",
+  "solution": "Step 1: We start with the given functional equation\n(f(x))2 =\nZ x\n\u0000(f(t))2 + f(t)\u0001\ndt.\nDifferentiate both sides with respect to x:\n2f(x) · f′(x) = (f(x))2 + f(x).\nSimplifying, we get\n2f(x) · f′(x) = f(x) (f(x) + 1) .\nDividing both sides by f(x) (since f(x) > 0 for x > 0):\n2f′(x) = f(x) + 1.\nThus,\nf′(x) = f(x) + 1\nStep 2: To solve this differential equation, we separate the variables:\nf′(x)\nf(x) + 1 = 1\nIntegrating both sides:\nf(x) + 1 df(x) = 1\ndx.\nThis gives\nln |f(x) + 1| = x\n2 + C.\nExponentiating both sides:\nf(x) + 1 = e\n2 +C = Ae\n2 ,\nwhere A = eC. Thus,\nf(x) = Ae\n2 −1.\nStep 3: Use the initial condition f(0) = 0 to find A. Substitute x = 0 into the solution:\nf(0) = Ae0 −1 = A −1 = 0,\nso A = 1. Therefore,\nf(x) = e\n2 −1.\nStep 4: Now, evaluate f(2):\nf(2) = e\n2 −1 = e −1.\nSince e ≈2.718, we have\nf(2) ≈2.718 −1 = 1.718.\nThus, 1 < f(2) ≤2, which corresponds to option (B).\nQuick Tip\nTo solve differential equations of the form f′(x) = f(x)+1\n, try separating the variables\nand using integration. Also, use initial conditions to find the constant of integration."
+}

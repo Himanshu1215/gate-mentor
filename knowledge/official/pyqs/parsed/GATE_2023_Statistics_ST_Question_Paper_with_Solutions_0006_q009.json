@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q9",
+  "question_seq": 6,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let a = 30!, b = 50!, and c = 100!. Consider the following numbers: loga c, logc a, logb a, loga b Which one of the following inequalities is CORRECT?",
+  "options": {
+    "A": "loga c < loga b < logb a < loga c",
+    "B": "logc a < loga b < logb a < logb c",
+    "C": "logc a < loga b < loga c < logb a",
+    "D": "logb a < logc a < loga b < loga c"
+  },
+  "answer": "A",
+  "solution": "Step 1: Understanding the values of a, b, and c.\n- a = 30!, a very large number.\n- b = 50!, a larger number than a.\n- c = 100!, which is even larger than b.\nStep 2: Evaluate logarithmic relations.\n- loga c measures how many times you need to multiply a to get c, which will be small, since\nc = 100! is much larger than a = 30!.\n- logc a is the inverse, and it will be much smaller than loga c.\n- logb a and loga b reflect the relationship between b = 50! and a = 30!. Since b is larger, loga b\nwill be larger than logb a.\nStep 3: Compare the inequalities.\n- loga c is the smallest.\n- loga b is the next in order.\n- logb a is larger than both.\n- loga c is the largest.\nThus, the correct inequality is:\nloga c < loga b < logb a < loga c\nThe correct inequality is (A).\nQuick Tip\nIn logarithms, when comparing values of large factorials, smaller bases yield smaller\nlogarithms. For factorials like a = 30!, b = 50!, and c = 100!, loga c will be the smallest."
+}

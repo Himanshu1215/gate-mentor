@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q3",
+  "question_seq": 3,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In the given figure, PQRSTV is a regular hexagon with each side of length 5 cm. A",
+  "options": {
+    "C": "ircle is drawn with its centre at V such that it passes through P. What is the area (in",
+    "A": "25π",
+    "B": "20π",
+    "D": "7π"
+  },
+  "answer": "A",
+  "solution": "Step 1: Identify the radius of the circle.\nSince the circle is centred at V and passes through P, its radius is V P. In a regular hexagon,\nall sides are equal and adjacent vertices are 5 cm apart. Hence V P = V T = 5 cm (adjacent\nsides of the hexagon). ⇒r = 5 cm.\nStep 2: Find the angle subtended at the centre V .\nThe interior angle at any vertex of a regular hexagon is 120◦. The sector in question is formed\nby the two sides V P and V T; therefore the central angle of the circular sector ∠PV T = 120◦.\nStep 3: Area of the shaded region.\nFrom the diagram, the shaded part is exactly the sector of the circle between the radii V P\nand V T (no subtraction of the triangle is intended).\nArea of a sector with angle θ and radius r: Asector =\n360◦πr2.\nHere, θ = 120◦, r = 5 ⇒\nAshaded = 120◦\n360◦π(5)2 = 1\n3 · 25π = 25π\nQuick Tip\nRegular hexagon corner angle is 120◦. If a circle is centred at a vertex and passes through\nan adjacent vertex, the sector between two adjacent sides is a 120◦sector with radius\nequal to the side length."
+}

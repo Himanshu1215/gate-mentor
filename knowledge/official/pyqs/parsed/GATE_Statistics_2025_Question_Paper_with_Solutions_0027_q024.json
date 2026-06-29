@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q24",
+  "question_seq": 27,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "For a given data (xi, yi), i = 1, 2, . . . , n, with Pn i=1 x2 i > 0, let ˆβ satisfy i=1 (yi −ˆβxi)2 = inf β∈R i=1 (yi −βxi)2. Further, let vj = yj −xj and uj = 2xj, for j = 1, 2, . . . , n, and let ˆγ satisfy i=1 (vi −ˆγui)2 = inf γ∈R i=1 (vi −γui)2. If ˆβ = 10, then the value of ˆγ is:",
+  "options": {
+    "A": "4.5",
+    "B": "5",
+    "C": "10",
+    "D": "9"
+  },
+  "answer": "B",
+  "solution": "The given problem involves two optimization problems for minimizing the sum of\nsquared errors."
+}

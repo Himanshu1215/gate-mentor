@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q22",
+  "question_seq": 37,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable having the probability density function f(x) = 13(1 −x)(9 −x), 0 < x < 1, otherwise. Then 3E[(X2 −15X + 27)] equals (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "First, expand the expression X2 −15X + 27, and then compute the expected value using the\ngiven probability density function.\nE[X2 −15X + 27] =\nZ 1\n(x2 −15x + 27) · 3\n13(1 −x)(9 −x) dx.\nEvaluating this integral gives approximately 8.60.\nThus,\n3E[(X2 −15X + 27)] = 4\n3 × 8.60 = 8.75.\nThus, the value is 8.75.\nQuick Tip\nTo solve such integrals, expand the polynomial terms first and then integrate each term\nwith respect to the given probability density function."
+}

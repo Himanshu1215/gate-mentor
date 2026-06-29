@@ -1,0 +1,16 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q16",
+  "question_seq": 31,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable having distribution function F(x) = x < 1, 1 ≤x < 2, 2 ≤x < 3, x ≥3, where a and c are appropriate constants. Let",
+  "options": {
+    "A": "n = \u0002 1 + 1 n, 3 −1 , n ≥1, and A = S∞ i=1 Ai.IfP(X ≤1) = 1 2 and E(X) = 5 3, then P(X ∈"
+  },
+  "answer": null,
+  "solution": "We are given the distribution function and the probabilities P(X ≤1) = 1\n2 and E(X) = 5\nFrom the distribution function, we can solve for the values of a and c. Using the properties of\nthe cumulative distribution function and the expected value formula, we can determine that:\nP(X ∈A) = 0.32.\nThus, the value is 0.32.\nQuick Tip\nTo solve for probabilities in such distribution problems, use the properties of the cumu-\nlative distribution function and apply the given information systematically."
+}

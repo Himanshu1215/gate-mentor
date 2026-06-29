@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q64",
+  "question_seq": 64,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 62: Let { N ( t ) } t ≥ 0 { N ( t ) } t ≥ 0",
+  "options": {
+    "B": "e a Poisson process with rate λ λ , where λ > 0 λ > 0 is an unknown parameter. Starting from the origin, an intercity road has N ( t ) N ( t ) number of potholes up to a distance of t t kilometers. Starting from the origin, potholes are found at the following distances (in kilometers): 0.9 , 1.3 , 1.8 , 2.7 , 3.4 , 4.1 , 4.7 , 5.5 , 6.2 , 6.8 , 7.4 , 8.1 , 8.9 , 9.2 , 9.7. 0.9 , 1.3 , 1.8 , 2.7 , 3.4 , 4.1 , 4.7 , 5.5 , 6.2 , 6.8 , 7.4 , 8.1 , 8.9 , 9.2 , 9.7."
+  },
+  "answer": "C",
+  "solution": null
+}

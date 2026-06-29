@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q45",
+  "question_seq": 51,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let X1, X2, . . . , X5 be i.i.d. random vectors following the bivariate normal",
+  "options": {
+    "D": "istribution with zero mean vector and identity covariance matrix. Define the 5 × 2 matrix X = (X1, X2, . . . , X5)T. Further, let W = (Wij) = XTX, and Z = W11 + 4W12 + 4W22. Then Var(Z) equals:",
+    "A": "150",
+    "B": "200",
+    "C": "250"
+  },
+  "answer": "C",
+  "solution": "Step 1: Understanding the Components\nThe matrix X = (X1, X2, . . . , X5)T consists of independent standard normal random\nvariables. Each Xi is a 2 × 1 vector, and we are interested in the variance of\nZ = W11 + 4W12 + 4W22, where W = XTX is a 2 × 2 matrix.\nStep 2: Matrix Formulation\nThe matrix X is a 5 × 2 matrix, and W = XTX is a 2 × 2 matrix, where the elements of W\nare given by:\nW =\ni=1 X2\ni=1 Xi1Xi2\ni=1 X2\nThe statistic Z is a linear combination of the elements of W:\nZ = W11 + 4W12 + 4W22.\nStep 3: Variance Calculation\nTo calculate Var(Z), we use the fact that the elements of X are i.i.d. normal random variables\nwith unit variance. The variance of Z is computed by finding the variances and covariances\nof the elements W11, W12, and W22.\nBy applying the formulas for the variance of quadratic forms in normal random variables, we\nfind:\nVar(Z) = 250.\nThus, the correct answer is 250 .\nQuick Tip\nWhen dealing with quadratic forms in normal variables, the variance of the sum of these\nforms can be calculated by computing the variances and covariances of the individual\ncomponents."
+}

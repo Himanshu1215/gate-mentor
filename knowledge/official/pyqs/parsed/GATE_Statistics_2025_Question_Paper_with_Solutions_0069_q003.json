@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q3",
+  "question_seq": 69,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "The length of the interval from −1 to 2 3 is: 3 −(−1) = 5 Since the total length of the interval [−1, 1] is 2, the probability is: Pr(U ≤2 3) = 2 = 5 Step 5: Multiply by 6. We are asked to find 6 Pr(U ≤2 3), so: 6 × 5 6 = 5. Thus, the",
+  "options": null,
+  "answer": "C",
+  "solution": null
+}

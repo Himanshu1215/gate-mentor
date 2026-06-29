@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q63",
+  "question_seq": 63,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 61: Let ( X , Y ) ( X , Y )",
+  "options": {
+    "B": "e a random vector having joint moment generating function given by M X , Y ( u , v ) = e u 2 2 ( 1 − 2 v ) 3 , − ∞ < u < ∞ , − ∞ < v < 1 2 . M X , Y ( u , v ) = e u 2 2 ( 1 − 2 v ) 3 , − ∞ < u < ∞ , − ∞ < v < 1 2 . Then E ( 6 X 2 Y ) E ( 6 X 2 Y ) equals ____ (rounded off to two decimal places)."
+  },
+  "answer": "D",
+  "solution": null
+}

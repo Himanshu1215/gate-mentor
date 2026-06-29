@@ -1,0 +1,16 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q52",
+  "question_seq": 69,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let a random sample of size 100 from a normal population with unknown mean µ",
+  "options": {
+    "A": "nd variance 9 give the sample mean 5.608. Let Φ(·) denote the distribution function of the standard normal random variable. If Φ(1.96) = 0.975, Φ(1.64) = 0.95, and the uniformly most powerful unbiased test based on sample mean is used to test H0 : µ = 5.02"
+  },
+  "answer": null,
+  "solution": "The p-value is calculated using the test statistic based on the sample mean and the standard\nnormal distribution. Given the sample mean and the known variance, the test statistic is\ncomputed and the p-value is found to be:\np-value ≈0.045.\nThus, the value is 0.045.\nQuick Tip\nFor hypothesis testing using sample mean, calculate the test statistic and compare it\nwith critical values or use the distribution to find the p-value."
+}

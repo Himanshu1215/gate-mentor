@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q2",
+  "question_seq": 45,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Since A is positive definite, its eigenvalues must be positive, so all eigenvalues of A must be 1",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

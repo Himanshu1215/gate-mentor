@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q9",
+  "question_seq": 9,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In a class of five students P, Q, R, S and T, only one student is known to have copied in the exam. The disciplinary committee has investigated the situation and recorded the statements from the students as given below. Statement of P: R has copied in the exam. Statement of Q: S has copied in the exam. Statement of R: P did not copy in the exam. Statement of S: Only one of us is telling the truth. Statement of T: R is telling the truth. The investigating team had authentic information that S never lies.",
+  "options": {
+    "B": "ased on the information given above, the person who has copied in the exam is:",
+    "A": "R",
+    "C": "S",
+    "D": "T"
+  },
+  "answer": "C",
+  "solution": "Given that S never lies, S’s statement that ”Only one of us is telling the truth” must be true.\nThis means that only one statement among the five students’ statements is correct.\nNow, we analyze each statement:\n- If R copied, then P’s statement that ”R has copied” would be true. But since only one\nperson can be telling the truth, this contradicts the other statements, so R did not copy. - If Q\ncopied, then Q’s statement that ”S has copied” would be true, which contradicts S’s\nstatement. So Q did not copy. - If S copied, then S’s statement is true, and only one of the\nothers is true. T’s statement that ”R is telling the truth” would also be true, but we know T is\nlying, so this confirms that S copied. - Therefore, the person who copied is S .\nQuick Tip\nIn logical puzzles, carefully analyze each statement’s truth value based on the con-\nstraints provided. If one statement is true, all others must logically follow."
+}

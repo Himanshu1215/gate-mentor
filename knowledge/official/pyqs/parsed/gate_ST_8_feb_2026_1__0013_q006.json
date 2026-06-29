@@ -1,0 +1,19 @@
+{
+  "year": 2026,
+  "exam": "GATE ST",
+  "question_id": "Q6",
+  "question_seq": 13,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let A be a 3 × 3 real matrix and let I3 be the 3 × 3 identity matrix. Which one of the following statements is NOT true?",
+  "options": {
+    "A": "If the row-reduced echelon form of A is I3, then zero is not an eigenvalue of A",
+    "B": "If zero is not an eigenvalue of A, then the row-reduced echelon form of A is I3",
+    "C": "If A has three distinct eigenvalues, then the row-reduced echelon form of A is I3",
+    "D": "If the system of equations Ax = b has a solution for every 3 × 1 real column vector b, then the row-reduced echelon form of A is I3"
+  },
+  "answer": "B",
+  "solution": "Step 1: Understanding the problem.\nWe are given a 3 × 3 matrix A and the identity matrix I3. We need to analyze the truth of\nfour statements related to the row-reduced echelon form (RREF) of A, eigenvalues of A, and\nsolutions to the system Ax = b.\nStep 2: Analyzing the statements.\n(A) If the row-reduced echelon form of A is I3, then zero is not an eigenvalue of A:\nThis statement is true. If the row-reduced echelon form (RREF) of A is the identity matrix I3,\nit means that A is invertible and has full rank. An invertible matrix cannot have zero as an\neigenvalue because having a zero eigenvalue would imply that A is singular and not invertible.\nThus, zero cannot be an eigenvalue.\n(B) If zero is not an eigenvalue of A, then the row-reduced echelon form of A is\nI3: This statement is NOT true. While it is true that if the row-reduced echelon form of A is\nI3, then A is invertible and thus does not have zero as an eigenvalue, the converse is not true.\nA matrix may have no zero eigenvalue (i.e., it is invertible) but still not have the row-reduced\nechelon form as I3. For example, A could be a matrix that is not in row-reduced form, but it\nstill has no zero eigenvalue.\n(C) If A has three distinct eigenvalues, then the row-reduced echelon form of A is\nI3: This statement is true. If A has three distinct eigenvalues, it implies that A is diagonaliz-\nable and has full rank. Hence, its row-reduced echelon form must be I3, the identity matrix,\nbecause it is invertible and has no zero eigenvalue.\n(D) If the system of equations Ax = b has a solution for every 3 × 1 real column\nvector b, then the row-reduced echelon form of A is I3: This statement is true. If the\nsystem Ax = b has a solution for every possible b, it means that A is invertible. In this case,\nthe row-reduced echelon form of A must be I3, because an invertible matrix has full rank and\nits row-reduced form is the identity matrix.\nStep 3: Conclusion.\nThe false statement is (B), as having no zero eigenvalue does not necessarily imply that the\nrow-reduced echelon form of A is I3.\nQuick Tip\nIf a matrix is invertible (no zero eigenvalues), its row-reduced echelon form is I3. However,\nthe converse is not true; a matrix can be invertible without having its RREF as I3."
+}

@@ -1,0 +1,16 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q24",
+  "question_seq": 26,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let {B(t)}t≥0 be a standard Brownian motion and let Φ(·) be the cumulative",
+  "options": {
+    "D": "istribution function of the standard normal distribution. If P ((B(2) + 2B(3)) > 1) = 1 −Φ , α > 0, then the value of α (in integer) is equal to"
+  },
+  "answer": null,
+  "solution": "From the given, P ((B(2) + 2B(3)) > 1) = 1 −Φ\n. To solve for α, we first compute the\ndistribution of B(2) + 2B(3). Since B(t) is a standard Brownian motion, the random variable\nB(2) + 2B(3) is normally distributed.\nThe mean of B(2) + 2B(3) is 0 (because Brownian motion has a mean of 0 at all times), and\nthe variance is given by:\nVar(B(2) + 2B(3)) = Var(B(2)) + 4Var(B(3)) + 4Cov(B(2), B(3)).\nSince B(2) and B(3) are correlated with covariance Cov(B(2), B(3)) = 2, we have:\nVar(B(2) + 2B(3)) = 2 + 4 × 3 + 4 × 2 = 2 + 12 + 8 = 22.\nThus, B(2) + 2B(3) ∼N(0, 22). The probability is given by:\nP (B(2) + 2B(3) > 1) = 1 −Φ\nFrom the equation, we match this to 1 −Φ\n. Hence, we find α = 22.\nThus, the value of α is 22 .\nQuick Tip\nTo compute probabilities involving linear combinations of Brownian motions, calculate\nthe mean and variance of the combination and use the cumulative distribution function\nof the normal distribution."
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q49",
+  "question_seq": 53,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable such that \u0010 a 2πX ∈Z = 1,",
+  "options": {
+    "A": "> 0, where Z denotes the set of all integers. If ϕX(t), t ∈R, denotes the characteristic function of X, then which of the following is/are true?",
+    "B": "ϕX(·) is periodic with period a",
+    "C": "|ϕX(t)| < 1 for all t ̸= a",
+    "D": "R 2π e−itnϕX(t)dt = πP \u0000X = 2πn , n ∈Z, i = √−1"
+  },
+  "answer": "A",
+  "solution": "Step 1: Understanding the given condition.\nThe condition\n\u0010 a\n2πX ∈Z\n= 1\nmeans that X takes values only at discrete points of the form X = 2πn\na , where n is an integer.\nHence, X is a discrete random variable supported on multiples of 2π\na .\nStep 2: Characteristic function definition.\nThe characteristic function of X is defined as:\nϕX(t) = E[eitX] =\nn=−∞\npneit 2πn\na ,\nwhere pn = P \u0000X = 2πn\nStep 3: Compute ϕX(a).\nSubstituting t = a, we get:\nϕX(a) =\nn=−∞\npneia 2πn\na =\nn=−∞\npnei2πn =\nn=−∞\npn(1) = 1.\nThus, ϕX(a) = 1, which makes statement (A) true.\nStep 4: Checking periodicity.\nNow, consider:\nϕX(t + a) =\nn=−∞\npnei(t+a) 2πn\na =\nn=−∞\npneit 2πn\na ei2πn =\nn=−∞\npneit 2πn\na = ϕX(t).\nThus, ϕX(t) is periodic with period a, proving statement (B) true.\nStep 5: Analysis of other options.\n(C) |ϕX(t)| < 1 for all t ̸= a is not necessarily true because for a discrete distribution, ϕX(t)\nmay attain 1 at other multiples of a.\n(D) The integral expression does not hold in this general setting—it is unrelated to the\nperiodicity condition and characteristic function form.\nStep 6: Conclusion.\nTherefore, both statements (A) and (B) are correct.\nQuick Tip\nIf a random variable takes discrete values that are integer multiples of a constant, its\ncharacteristic function is periodic with a period equal to the reciprocal of that constant."
+}

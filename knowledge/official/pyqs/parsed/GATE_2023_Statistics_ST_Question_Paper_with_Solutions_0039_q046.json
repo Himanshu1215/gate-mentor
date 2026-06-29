@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q46",
+  "question_seq": 39,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable with cumulative distribution function F(x) = if x < −1 4(x + 1) if −1 ≤x < 0 4(x + 3) if 0 ≤x < 1 if x ≥1 Which one of the following statements is true?",
+  "options": {
+    "A": "limn→∞P \u0000−1 2 + 1 n < X < −1 −1 = 5",
+    "B": "limn→∞P \u0000−1 2 −1 n < X < 1 −1 = 5",
+    "C": "limn→∞P \u0000X = −1 = 1",
+    "D": "P(X = 0) = 1"
+  },
+  "answer": "B",
+  "solution": "1) Understanding the cumulative distribution function (CDF):\nThe given CDF describes a piecewise function for X. We will use this function to calculate\nthe probabilities for different intervals.\n2) Analysis of the options:\n(A) Incorrect: This option asks for the probability P \u0000−1\n2 + 1\nn < X < −1 −1\n\u0001. As n →∞,\nthe interval becomes a small neighborhood around −1, but the probability is not equal to 5\n(B) Correct: This option asks for the probability P \u0000−1\n2 −1\nn < X < 1 −1\n\u0001. As n →∞, the\ninterval approaches the entire range [−1\n2, 1], for which the CDF gives a probability of 5\n(C) Incorrect: This option concerns P(X = −1\nn), but P(X = x) for a continuous random\nvariable is always zero.\n(D) Incorrect: The probability P(X = 0) is not 1\n3 because the CDF at a single point does not\ngive a nonzero value for continuous random variables.\nThe correct answer is (B).\nQuick Tip\n- For continuous distributions, the probability at a single point is always zero.\n- The CDF can be used to calculate probabilities over intervals."
+}

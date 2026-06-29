@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q22",
+  "question_seq": 25,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {Xn}n≥1 be a sequence of i.i.d. random variables with common distribution function F, and let Fn be the empirical distribution function based on {X1, X2, . . . , Xn}. Then, for each fixed x ∈(−∞, ∞), which one of the following options is correct?",
+  "options": {
+    "A": "√n(Fn(x) −F(x)) P−→0 as n →∞",
+    "B": "n(Fn(x)−F(x)) F(x)(1−F(x))",
+    "D": "−→Z as n →∞, where Z ∼N(0, 1)",
+    "C": "Fn(x) a.s. −−→F(x) as n →∞"
+  },
+  "answer": "C",
+  "solution": "Step 1: Understanding the empirical distribution function.\nThe empirical distribution function Fn(x) is the proportion of data points in the sample\n{X1, X2, . . . , Xn} that are less than or equal to x, i.e.,\nFn(x) = 1\ni=1\n1{Xi≤x}.\nSince the Xi’s are i.i.d., Fn(x) is a consistent estimator for F(x), meaning Fn(x) a.s.\n−−→F(x) as\nn →∞(option (C)).\nStep 2: Analyzing the asymptotic behavior.\nBy the Central Limit Theorem (CLT), the difference √n(Fn(x) −F(x)) converges in\ndistribution to a normal distribution with mean 0 and variance F(x)(1 −F(x)). This\ncorresponds to option (B), but we are asked for the correct statement for fixed x, so this is not\nthe best choice.\nStep 3: Verifying other options.\nOption (A) is incorrect because √n(Fn(x) −F(x)) converges in distribution, not in\nprobability.\nOption (C) is correct as Fn(x) converges almost surely to F(x) by the Glivenko-Cantelli\ntheorem, a fundamental result in empirical process theory.\nOption (D) is incorrect because the variance of Fn(x) does not tend to zero as n →∞.\nThus, the correct answer is (C) .\nQuick Tip\nThe empirical distribution function Fn(x) converges almost surely to the true distribu-\ntion function F(x), and the Central Limit Theorem provides the asymptotic normality\nof the difference between Fn(x) and F(x)."
+}

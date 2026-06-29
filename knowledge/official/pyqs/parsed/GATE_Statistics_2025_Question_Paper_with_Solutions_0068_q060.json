@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q60",
+  "question_seq": 68,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {Xn}n≥1 be a sequence of independent random variables with Pr(Xn = −1 2n) = Pr(Xn = 1 2n) = 1 ∀n ∈N. Suppose that Pn i=1 Xi converges to U as n →∞. Then 6 Pr(U ≤2 3) equals (",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Understanding the distribution of Xn.\nEach Xn is a random variable with two possible outcomes, −1\n2n and 1\n2n, each with probability\nStep 2: Analyze the sum Sn = Pn\ni=1 Xi.\nThe random variables Xn are independent and symmetric, meaning that each step contributes\npositively or negatively by a decreasing amount, ± 1\n2n. As n →∞, the sum Sn = Pn\ni=1 Xi\nconverges to the limit U, which is a random variable.\nThe limit U is the sum of the infinite series:\nU =\nn=1\nXn.\nThis sum converges because the magnitude of each term decreases exponentially.\nStep 3: Distribution of U.\nThe limiting distribution of U is a uniform distribution on the interval [−1, 1], since the steps\nXn contribute to the value of U in a balanced way and the sum converges. Therefore, U is\nuniformly distributed on [−1, 1].\nStep 4: Calculate Pr(U ≤2\n3).\nFor a uniform random variable U on [−1, 1], the probability that U ≤2\n3 is simply the\nproportion of the interval [−1, 1] that is less than or equal to 2"
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q38",
+  "question_seq": 56,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X(1) < X(2) < X(3) < X(4) < X(5) be the order statistics corresponding to a random sample of size 5 from a uniform distribution on [0, θ], where θ ∈(0, ∞). Then which of the following statements is/are true? P: 3X(2) is an unbiased estimator of θ. Q: The variance of E[2X(3) | X(5)] is less than or equal to the variance of 2X(3).",
+  "options": {
+    "A": "P only",
+    "B": "Q only",
+    "C": "Both P and Q",
+    "D": "Neither P nor Q"
+  },
+  "answer": "C",
+  "solution": "For order statistics of a uniform distribution on [0, θ], the mean and variance for different\norder statistics have well-known properties.\nStep 1: Check statement P.\nThe second order statistic X(2) in a uniform distribution on [0, θ] has the property that\nE[X(2)] = 2θ\n6 , and therefore, 3X(2) is an unbiased estimator of θ, confirming P is true.\nStep 2: Check statement Q.\nThe variance of E[2X(3) | X(5)] is indeed less than or equal to the variance of 2X(3) based on\nthe properties of conditional variance in order statistics, confirming Q is true.\nFinal Answer:\n(C) Both P and Q\nQuick Tip\nFor order statistics in a uniform distribution, the properties of their means and variances\nare well-established and can be used to evaluate unbiased estimators and variances."
+}

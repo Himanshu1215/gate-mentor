@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q59",
+  "question_seq": 59,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 57: Let { 1 , 6 , 5 , 3 } { 1 , 6 , 5 , 3 }",
+  "options": {
+    "A": "nd { 11 , 7 , 15 , 4 } { 11 , 7 , 15 , 4 }",
+    "B": "e realizations of two independent random samples of size 4 from two separate populations having cumulative distribution functions F ( ⋅ ) F ( ⋅ )",
+    "D": "enote the Mann-Whitney U U -test statistic. Let, under H 0 H 0 : P ( U M W > 12 ) ≤ 0.10 , P ( U M W > 14 ) ≤ 0.05 , P ( U M W > 15 ) ≤ 0.025 , P ( U M W > 16 ) ≤ 0.01. P ( U M W > 12 ) ≤ 0.10 , P ( U M W > 14 ) ≤ 0.05 , P ( U M W > 15 ) ≤ 0.025 , P ( U M W > 16 ) ≤ 0.01. Then, based on the given data, which of the following statements is/are true?",
+    "C": "H 0 H 0 is rejected at level 0.025 0.025 ."
+  },
+  "answer": "A",
+  "solution": null
+}

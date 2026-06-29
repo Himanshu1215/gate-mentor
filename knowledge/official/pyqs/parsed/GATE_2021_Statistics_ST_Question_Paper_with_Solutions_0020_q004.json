@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q4",
+  "question_seq": 20,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let {x1, x2, . . . , xn} be a realization of a random sample of size n(≥2) from a N(µ, σ2)",
+  "options": {
+    "D": "istribution, where −∞< µ < ∞and σ > 0. Which of the following statements is/are true?",
+    "A": "P only",
+    "B": "Q only",
+    "C": "Both P and Q"
+  },
+  "answer": "B",
+  "solution": "We are given a random sample {x1, x2, . . . , xn} from a N(µ, σ2) distribution. We need to\nanalyze the two statements P and Q about the confidence interval for the population mean µ.\nStep 1: Analyzing statement P.\nStatement P asserts that the 95% confidence interval for µ is unique when σ is known. This\nis true because when σ is known, the confidence interval for µ is based on the normal\ndistribution, which is fixed and does not depend on any estimation of σ. Therefore, the\nconfidence interval for µ is unique when σ is known. However, this is not the main point for\nthe solution.\nStep 2: Analyzing statement Q.\nStatement Q states that the 95% confidence interval for µ is NOT unique when σ is unknown.\nThis is correct because when σ is unknown, we must estimate it using the sample standard\ndeviation S, which leads to a distribution that depends on the sample data (specifically, the\nStudent’s t-distribution). Since the t-distribution depends on the sample size, the confidence\ninterval will vary based on this estimate, and hence it is not unique.\nStep 3: Conclusion.\nSince statement P is correct and Q is also correct, the correct answer is Q only.\nFinal Answer: (B)Qonly\nQuick Tip\nWhen σ is known, the confidence interval for µ is unique. However, when σ is unknown,\nthe confidence interval depends on the sample data and is not unique, as it involves the\nStudent’s t-distribution."
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q18",
+  "question_seq": 19,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X1, X2, . . . , X18 be a random sample from the distribution f(x; θ) = θ e−x2/θ, x > 0, x ≤0. What is the maximum likelihood estimator (MLE) of θ?",
+  "options": {
+    "A": "ˆθ = 1 P18 i=1 X2",
+    "B": "ˆθ = 1 P18 i=1 X2",
+    "C": "ˆθ = 1 P18 i=1 X2",
+    "D": "ˆθ = 1 P18 i=1 X2"
+  },
+  "answer": "A",
+  "solution": "Step 1: Write the likelihood function.\nThe likelihood function L(θ) for the sample is given by:\nL(θ) =\ni=1\nf(Xi; θ) =\ni=1\n2Xi\nθ e−X2\ni /θ.\nThus, the log-likelihood function is:\nℓ(θ) =\ni=1\n2Xi\n−X2\ni=1\nln(2Xi) −ln(θ) −X2\nStep 2: Differentiate and find the MLE.\nThe derivative of the log-likelihood function with respect to θ is:\ndθℓ(θ) = −18\nθ + 1\ni=1\ni .\nSetting this equal to 0 and solving for θ, we get:\nˆθ = 1\ni=1\ni .\nStep 3: Conclusion.\nThus, the MLE of θ is ˆθ = 1\nP18\ni=1 X2\ni , and the correct answer is (A).\nQuick Tip\nThe maximum likelihood estimator (MLE) for a parameter is found by differentiating\nthe log-likelihood function and setting it equal to zero. In cases where the likelihood\ninvolves sums of squares, the MLE is typically the sample mean or a scaled version of\nit."
+}

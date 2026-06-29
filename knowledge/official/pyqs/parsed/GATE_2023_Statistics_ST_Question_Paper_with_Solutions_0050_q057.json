@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q57",
+  "question_seq": 50,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {Xn}n≥1 be a sequence of independent and identically distributed random variables with mean 0 and variance 1, all of them defined on the same probability space. For n = 1, 2, 3, . . . , let Yn = 1 n (X1X2 + X3X4 + · · · + X2n−1X2n) . Then which one of the following statements is/are true?",
+  "options": {
+    "A": "{√nYn}n≥1 converges in distribution to a standard normal random variable.",
+    "B": "{Yn}n≥1 converges in 2nd mean to 0.",
+    "C": "{Yn + 1 n}n≥1 converges in probability to 0.",
+    "D": "{Xn}n≥1 converges almost surely to 0."
+  },
+  "answer": "A",
+  "solution": "1) Analyzing statement (A):\n{√nYn}n≥1 involves scaling the sequence Yn by √n. Since Yn is the sum of independent\nrandom variables with mean 0 and variance 1, by the Central Limit Theorem, this sequence\nconverges in distribution to a standard normal random variable.\n2) Analyzing statement (B):\nSince Yn is the average of independent identically distributed random variables, we expect\nthat Yn converges in 2nd mean (or mean square) to 0, as the variance of Yn tends to 0 with\nincreasing n.\n3) Analyzing statement (C):\n{Yn + 1\nn}n≥1 converges in probability to 0 because the addition of 1\nn does not affect the\nconvergence of Yn to 0, and Yn converges to 0 in probability.\nThus, the correct answer is (A), (B), and (C).\nQuick Tip\n- The Central Limit Theorem helps to understand convergence to the normal distribution\nfor sums of independent random variables.\n- Convergence in second mean (mean square) implies that the sequence converges to\nzero in expectation and variance.\n- Convergence in probability means that the sequence will get arbitrarily close to the\nlimiting value with increasing probability as n increases."
+}

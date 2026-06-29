@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q43",
+  "question_seq": 36,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let g(x) = f(x) + f(2 - x) for all x ∈[0, 2], where f : [0, 2] → R is continuous on [0, 2] and twice differentiable on (0, 2). If g′ denotes the first derivative of g and f′′ de",
+  "options": {
+    "A": "There exists c ∈(0, 2) such that g′(c) = 0",
+    "B": "If f′′ > 0 on (0, 2), then g is strictly decreasing on (0, 1)",
+    "C": "If f′′ < 0 on (0, 2), then g is strictly increasing on (1, 2)",
+    "D": "If f′′ = 0 on (0, 2), then g is a constant function"
+  },
+  "answer": "C",
+  "solution": "1) Understanding the problem:\nWe are given that g(x) = f(x) + f(2 −x). Taking the first and second derivatives of g(x):\ng′(x) = f′(x) −f′(2 −x)\ng′′(x) = f′′(x) + f′′(2 −x)\n2) Analyzing each option:\n- (A) There exists c ∈(0, 2) such that g′(c) = 0: This is true by the Mean Value Theorem.\nSince g(x) is continuous on [0, 2] and differentiable on (0, 2), there exists a point where the\nderivative equals zero.\n- (B) If f′′ > 0 on (0, 2), then g is strictly decreasing on (0, 1): This is true. If f′′ > 0, then f is\nconcave up, and since g′′(x) = f′′(x) + f′′(2 −x), g will be decreasing on (0, 1).\n- (C) If f′′ < 0 on (0, 2), then g is strictly increasing on (1, 2): This is NOT true. If f′′ < 0, f\nis concave down, and we cannot conclude that g is increasing on (1, 2). The behavior of g\ndepends on both f(x) and f(2 −x), and this does not guarantee that g is strictly increasing.\n- (D) If f′′ = 0 on (0, 2), then g is a constant function: This is true. If f′′ = 0, f′(x) is\nconstant, and g′(x) will also be constant. Hence, g(x) will be a linear function, and if\ng′(x) = 0, it will be a constant function.\nThus, the correct answer is (C).\nQuick Tip\n- The Mean Value Theorem guarantees a point where the derivative equals zero if the\nfunction is continuous and differentiable.\n- If the second derivative of a function is positive, the function is concave up, and if it’s\nnegative, the function is concave down."
+}

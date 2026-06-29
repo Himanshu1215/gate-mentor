@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q38",
+  "question_seq": 38,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 36:",
+  "options": {
+    "C": "onsider the function f : R 2 → R f : R 2 → R",
+    "D": "efined by: f ( x , y ) = 108 x y − 2 x 2 y − 2 x y 2 . f ( x , y ) = 108 x y − 2 x 2 y − 2 x y 2 . Which one of the following statements is NOT true?",
+    "A": "f f has four critical points.",
+    "B": "f f has a local minimum at ( 0 , 0 ) ( 0 , 0 ) ."
+  },
+  "answer": "B",
+  "solution": null
+}

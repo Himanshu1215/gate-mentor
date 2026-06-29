@@ -1,0 +1,17 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q63",
+  "question_seq": 72,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let X ∼Bin(3, θ), where θ ∈(0, 1) is an unknown parameter. For testing H0 : 1 4 ≤θ ≤3",
+  "options": {
+    "A": "gainst H1 : θ < 1 θ > 3",
+    "C": "onsider the test ϕ(x) = if x ∈{0, 3}, if x ∈{1, 2}. The size of the test ϕ is (rounded off to two decimal places)."
+  },
+  "answer": null,
+  "solution": "Step 1: Define the size of the test.\nThe size of the test is the probability of rejecting H0 when H0 is true. This is the probability\nthat X ∈{0, 3} when 1\n4 ≤θ ≤3"
+}

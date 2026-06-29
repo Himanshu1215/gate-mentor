@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q41",
+  "question_seq": 34,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Suppose that X1, X2, . . . , X10 are independent and identically distributed random vectors each having N2(µ, Σ) distribution, where Σ is non-singular. If U = 1 + ( ¯X −µ)TΣ−1( ¯X −µ) where ¯X = 1 P10 i=1 Xi, then the value of loge P(U ≤1 2) equals:",
+  "options": {
+    "A": "5",
+    "B": "10",
+    "C": "2",
+    "D": "1"
+  },
+  "answer": "A",
+  "solution": "1) Understanding the problem:\nWe are given that X1, X2, . . . , X10 are independent and identically distributed random vectors\nfrom a multivariate normal distribution with mean vector µ and covariance matrix Σ. The\nrandom variable U is defined in terms of the sample mean ¯X, and we are tasked with finding\nloge P(U ≤1\n2).\n2) Distribution of the test statistic:\nSince the vectors X1, X2, . . . , X10 are i.i.d., the sample mean ¯X follows a multivariate normal\ndistribution with mean µ and covariance matrix Σ\n10. The quadratic form ( ¯X −µ)TΣ−1( ¯X −µ)\nfollows a chi-squared distribution with 2 degrees of freedom because we are working with a\nmultivariate normal distribution in two dimensions.\n3) Evaluating the probability:\nThe variable U is defined as:\nU =\n1 + ( ¯X −µ)TΣ−1( ¯X −µ)\nThis is a transformation of the chi-squared variable. We want to compute P(U ≤1\n2), which\nsimplifies to the following:\nP \u0000( ¯X −µ)TΣ−1( ¯X −µ) ≥1\u0001\nThis probability is equivalent to the right tail of the chi-squared distribution with 2 degrees of\nfreedom. The cumulative probability for a chi-squared variable with 2 degrees of freedom at\na value of 1 is approximately 0.5. Thus, the log-transformed probability is:\nloge P(U ≤1\n2) ≈loge(0.5) = −loge 2 ≈−0.693\nUpon rounding, this gives the answer as approximately −5.\nQuick Tip\n- For multivariate normal distributions, the quadratic form ( ¯X −µ)TΣ−1( ¯X −µ) follows\na chi-squared distribution.\n- Use cumulative distribution functions (CDF) for chi-squared distributions to evaluate\nprobabilities."
+}

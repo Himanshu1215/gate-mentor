@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q38",
+  "question_seq": 37,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let (3, 6)T, (4, 4)T, (5, 7)T and (4, 7)T be four independent observations from a",
+  "options": {
+    "B": "ivariate normal distribution with the mean vector µ and the covariance matrix Σ. Let ˆµ and ˆΣ be the maximum likelihood estimates of µ and Σ, respectively, based on these observations. Then ˆΣˆµ is equal to",
+    "A": "\u00003.5",
+    "C": "\u0000 4 13.5",
+    "D": "\u0000 10 3.5"
+  },
+  "answer": "A",
+  "solution": "The maximum likelihood estimates (MLE) for the mean vector µ and the covariance matrix\nΣ of a bivariate normal distribution can be computed from the sample data. Let’s break down\nthe steps involved.\nStep 1: Calculate the sample mean vector ˆµ.\nThe sample mean vector ˆµ is the average of the observed data points. We are given the\nfollowing four observations:\n(3, 6)T, (4, 4)T, (5, 7)T, (4, 7)T\nTo compute the sample mean vector ˆµ, we take the average of the x-coordinates and the\ny-coordinates separately.\nˆµ =\n\u00103 + 4 + 5 + 4\n, 6 + 4 + 7 + 7\n\u001016\n4 , 24\n= (4, 6)\nThus, the sample mean vector ˆµ is (4, 6).\nStep 2: Calculate the sample covariance matrix ˆΣ.\nThe sample covariance matrix ˆΣ is computed using the formula:\nˆΣ =\nn −1\ni=1\n(Xi −ˆµ)(Xi −ˆµ)T\nWhere Xi are the individual observations and ˆµ is the sample mean. The covariance matrix is\nsymmetric and contains the variances and covariances of the variables. We first compute the\ndeviations of each observation from the sample mean:\n(3, 6)T−(4, 6) = (−1, 0),\n(4, 4)T−(4, 6) = (0, −2),\n(5, 7)T−(4, 6) = (1, 1),\n(4, 7)T−(4, 6) = (0, 1)\nNow, we compute the covariance matrix:\nˆΣ = 1\n(−1)2 + 02 + 12 + 02\n(−1)(0) + 0(−2) + 1(1) + 0(1)\n0(−1) + (−2)(0) + 1(1) + 1(0)\n02 + (−2)2 + 12 + 12\nˆΣ = 1\nThus, the sample covariance matrix ˆΣ is:\nˆΣ =\nStep 3: Calculate ˆΣˆµ.\nNow, we calculate the product ˆΣˆµ. This is done by multiplying the covariance matrix ˆΣ with\nthe mean vector ˆµ:\nˆΣˆµ =\n3 × 4 + 1\n3 × 6\n3 × 4 + 2 × 6\n3 + 2\n3 + 12\nThus, the product ˆΣˆµ is \u000014\n3 , 40\nThe correct answer is \u00003.5\nQuick Tip\nTo calculate the maximum likelihood estimates of the mean and covariance, first find\nthe sample mean vector and sample covariance matrix. Then, use matrix multiplication\nto obtain the required estimates."
+}

@@ -1,0 +1,16 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q54",
+  "question_seq": 57,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let a linear model Y = β0 + β1X + ϵ be fitted to the following data, where ϵ is normally distributed with mean 0 and unknown variance σ2 > 0: Let ˆY0 denote the ordinary least-square estimator of Y at X = 6, and the variance of ˆY0",
+  "options": {
+    "B": "e cσ2. Then the value of the real constant c (rounded off to one decimal place) is equal"
+  },
+  "answer": null,
+  "solution": "Given Y = β0 + β1X + ϵ, we can calculate the fitted regression line parameters.\nFirst, compute the sample means:\n¯X = 0 + 1 + 2 + 3 + 4\n= 2,\n¯Y = 3 + 4 + 5 + 6 + 7\n= 5.\nThe slope is given by:\nˆβ1 =\nP(Xi −¯X)(Yi −¯Y )\nP(Xi −¯X)2\n(Xi −¯X)(Yi −¯Y ) = (−2)(−2) + (−1)(−1) + 0(0) + 1(1) + 2(2) = 10,\n(Xi −¯X)2 = (−2)2 + (−1)2 + 02 + 12 + 22 = 10.\nThus, ˆβ1 = 1.\nIntercept:\nˆβ0 = ¯Y −ˆβ1 ¯X = 5 −1(2) = 3.\nSo the fitted model is:\nˆY = 3 + X.\nThe variance of the predicted value at X0 = 6 is given by:\nVar(ˆY0) = σ2\nn +\n(X0 −¯X)2\nP(Xi −¯X)2\nSubstitute values:\nVar(ˆY0) = σ2\n5 + (6 −2)2\n= σ2 [0.2 + 1.6] = 1.8σ2.\nHence, c = 1.8 .\nQuick Tip\nThe variance of prediction increases with the distance between X0 and ¯X; this reflects\nthe uncertainty of extrapolation in regression."
+}

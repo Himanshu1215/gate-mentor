@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q25",
+  "question_seq": 30,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let I = π2 Z 1 y2 cos π(1 + xy) dx dy. The value of I is equal to (",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Evaluate the inner integral.\nWe first compute the inner integral with respect to x:\nZ 1\ny2 cos π(1 + xy) dx.\nThis can be simplified as:\nZ 1\ncos(π(1 + xy)) dx.\nUsing the substitution u = π(1 + xy), we get:\ndu = πy dx\ndx = du\nπy.\nAt x = 0, u = π, and at x = 1, u = π(1 + y). Thus, the integral becomes:\nZ π(1+y)\ncos(u)\ndu = y\nZ π(1+y)\ncos(u) du.\nThe integral of cos(u) is sin(u), so we have:\nπ[sin(π(1 + y)) −sin(π)] = y\nπ sin(πy).\nStep 2: Evaluate the outer integral.\nNow, we evaluate the outer integral:\nZ 1\nπ sin(πy) dy.\nThis can be solved by integration by parts or using a standard integral formula:\nZ 1\ny sin(πy) dy = 2\nπ2.\nThus, the value of the inner integral is:\nπ2 × 2\nπ2 = 2\nπ4.\nStep 3: Final calculation.\nMultiplying by π2, we get the value of I:\nI = π2 × 2\nπ4 = 2\nπ2.\nThus, the final answer is 0 .\nQuick Tip\nWhen evaluating integrals involving trigonometric functions, consider using substitu-\ntion and properties of standard integrals."
+}

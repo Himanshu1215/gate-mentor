@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q30",
+  "question_seq": 47,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let A be a 3 × 3 real matrix such that I3 + A is invertible and let",
+  "options": {
+    "B": "= (I3 + A)−1(I3 −A), where I3 denotes the 3 × 3 identity matrix. Then which one of the following statements is true?",
+    "A": "If B is orthogonal, then A is invertible",
+    "C": "If B is skew-symmetric, then A is orthogonal",
+    "D": "If B is skew-symmetric, then the determinant of A equals −1"
+  },
+  "answer": "C",
+  "solution": "We are given that B = (I3 + A)−1(I3 −A) and need to determine the correct statement.\nStep 1: Analyze the properties of B.\nWe need to find the condition under which B is skew-symmetric, i.e., BT = −B. From the\ndefinition of B, we have:\nBT = \u0000(I3 + A)−1(I3 −A)\u0001T = (I3 −A)T(I3 + A)−1.\nSince A is a real matrix, we get:\nBT = (I3 −A)(I3 + A)−1.\nFor BT = −B, we obtain the condition that A must be orthogonal, as this ensures that\n(I3 +A)−1(I3 −A) satisfies the skew-symmetry property. Therefore, the correct answer is (C).\nFinal Answer:\nC .\nQuick Tip\nFor matrix problems involving orthogonality or skew-symmetry, always check the trans-\npose relationships and use the properties of matrix inverses."
+}

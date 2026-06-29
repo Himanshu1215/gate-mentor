@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q2",
+  "question_seq": 23,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "The p-value is the probability of observing a value of Y greater than or equal to 4 under the null hypothesis. Thus, we calculate: P(Y ≥4) = P(Y = 4) + P(Y = 5) + P(Y = 6). Using the binomial PMF formula: P(Y = 4) = \u0013 \u00101 = 15 64, P(Y = 5) = \u0013 \u00101 = 6 64, P(Y = 6) = \u0013 \u00101 = 1 64. Thus: P(Y ≥4) = 15 64 + 6 64 + 1 64 = 22 64 = 0.34375. However, since we are testing H1 : θ > 1 2, we need the probability of Y ≥4. The p-value is the cumulative probability for the values greater than or equal to 4, which is 1 −P(Y ≤3). We can compute P(Y ≤3) as follows: P(Y ≤3) = P(Y = 0) + P(Y = 1) + P(Y = 2) + P(Y = 3). The values are: P(Y = 0) = 1 64, P(Y = 1) = 6 64, P(Y = 2) = 15 64, P(Y = 3) = 20 64. Thus: P(Y ≤3) = 1 64 + 6 64 + 15 64 + 20 64 = 42 64 = 0.65625. Therefore, the p-value is: p-value = 1 −0.65625 = 0.34375. Step 3: Conclusion. The p-value for this test is approximately 0.0625, and the",
+  "options": null,
+  "answer": "B",
+  "solution": null
+}

@@ -1,0 +1,14 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q30",
+  "question_seq": 23,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let A be a 2 × 2 real matrix such that AB = BA for all 2 × 2 real matrices B. If the trace of A equals 5, then the determinant of A (rounded off to two decimal places) equals",
+  "options": null,
+  "answer": null,
+  "solution": "1) Understanding the problem:\nThe condition AB = BA implies that the matrix A is a scalar multiple of the identity matrix.\nThis is a well-known result from matrix theory: if a matrix commutes with every matrix of\nthe same size, it must be a scalar matrix. Therefore, we can conclude that A = λI, where I is\nthe identity matrix and λ is a scalar.\n2) Determining the scalar λ:\nSince the trace of A is given as 5, and the trace of A = λI is simply 2λ (since the trace of the\nidentity matrix is 2), we have:\n2λ = 5\n⇒λ = 5\n3) Finding the determinant:\nThe determinant of a scalar matrix A = λI is simply λ2. Therefore:\ndet(A) =\n= 25\n4 = 6.25\nFinal Answer: The determinant of A is 6.25 (rounded to two decimal places).\nQuick Tip\n- If AB = BA for all matrices B, then A must be a scalar matrix.\n- The trace of a scalar matrix is the scalar multiplied by the size of the matrix.\n- The determinant of a scalar matrix is the scalar raised to the power of the matrix size."
+}

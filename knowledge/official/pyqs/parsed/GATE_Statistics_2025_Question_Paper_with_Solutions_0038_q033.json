@@ -1,0 +1,17 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q33",
+  "question_seq": 38,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let X1, . . . , X5 be a random sample from N(θ, 6), where θ ∈R, and let c(θ) be the",
+  "options": {
+    "C": "ramer-Rao lower bound for the variances of unbiased estimators of θ based on the",
+    "A": "bove sample. Then 15 · infθ∈R c(θ) equals ("
+  },
+  "answer": null,
+  "solution": "Step 1: Fisher Information for a single observation\nFor a normal distribution N(θ, σ2), the Fisher Information is:\nI(θ) = 1\nGiven σ2 = 6, we have:\nI1(θ) = 1\nStep 2: Fisher Information for the full sample\nSince the sample size is 5:\nI5(θ) = 5 · 1\n6 = 5\nStep 3: Cram´er-Rao Lower Bound\nThe CRLB is the reciprocal of the Fisher Information:\nc(θ) =\nI5(θ) = 6\nThis value is constant and does not depend on θ, so:\ninf\nθ∈R c(θ) = 6\nStep 4: Final Computation\n15 · inf\nθ∈R c(θ) = 15 · 6\n5 = 18\nFinal Answer: 18\nQuick Tip\nFor the Cramer-Rao lower bound, remember that it depends on the Fisher information,\nwhich can often be computed directly for common distributions like the normal distri-\nbution."
+}

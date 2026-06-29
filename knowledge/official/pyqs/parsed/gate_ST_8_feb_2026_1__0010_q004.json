@@ -1,0 +1,14 @@
+{
+  "year": 2026,
+  "exam": "GATE ST",
+  "question_id": "Q4",
+  "question_seq": 10,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Two fair dice, one having red and another having blue color, are tossed independently once. Let A be the event that the die having red colour will show 5 or 6. Let B be the event that the sum of the outcomes will be 7 and let C be the event that the sum of the outcomes will be",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

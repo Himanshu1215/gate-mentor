@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q19",
+  "question_seq": 13,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let (X, Y ) have joint probability density function f(x, y) = 8xy if 0 < x < y < 1 otherwise. If E(X|Y = y0) = 1 2, then y0 equals",
+  "options": {
+    "A": "3",
+    "B": "1",
+    "C": "1",
+    "D": "2"
+  },
+  "answer": "A",
+  "solution": "1) Understanding the joint probability density function:\nThe joint probability density function is given by:\nf(x, y) = 8xy\nfor\n0 < x < y < 1\nWe need to calculate E(X|Y = y0) and use the given condition that E(X|Y = y0) = 1\n2) Finding the conditional expectation:\nThe conditional probability density function is:\nf(x|y) = f(x, y)\nfY (y) =\n8xy\nfY (y)\nfor\n0 < x < y\nTo find fY (y), we integrate f(x, y) over x from 0 to y:\nfY (y) =\nZ y\n8xy dx = 4y3\nThus, the conditional density function is:\nf(x|y) = 2x\nThe conditional expectation is:\nE(X|Y = y0) =\nZ y0\nx · 2x\ndx = 2\nZ y0\nx2 dx = 2\n· y3\n3 = 1\nSetting E(X|Y = y0) = 1\n2 gives y0 = 3\nQuick Tip\n- Conditional expectation involves integrating the joint distribution with respect to one\nvariable.\n- Be sure to check the limits of integration carefully when finding conditional distribu-\ntions."
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q51",
+  "question_seq": 44,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let A be a 3 × 3 real matrix such that  =  ,  =  ,  =  . Then which of the following statements is/are true?",
+  "options": {
+    "A": "A  =  ",
+    "B": "A  =  ",
+    "C": "A  =  ",
+    "D": "A  =  "
+  },
+  "answer": "A",
+  "solution": "The given problem provides the results of multiplying matrix A with specific vectors. Based\non this information, we can deduce the matrix A. By using the provided equations, we\nconstruct a system to find the matrix elements.\nA =\n\n\nNow, checking the options:\n(A) We check if multiplying A with\n\ngives\n\n, which it does.\nThus, the correct answer is (A).\nQuick Tip\n- To solve matrix-related problems, first find the matrix elements using the given vectors\nand their corresponding outcomes.\n- Verify each option by performing the matrix multiplication and comparing the results."
+}

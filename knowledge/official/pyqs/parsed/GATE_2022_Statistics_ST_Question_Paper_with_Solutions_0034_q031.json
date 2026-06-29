@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q31",
+  "question_seq": 34,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let Xi, i = 1, 2, . . . , n, be i.i.d. random variables with the probability density function fX(x) = 2Γ( 1 x−5 6e−x 8 , 0 < x < ∞, elsewhere, where Γ(·) denotes the gamma function. Also, let ¯Xn = 1 n(X1 + X2 + · · · + Xn). If √n \u0000 ¯Xn −E[ ¯Xn]\u0001 d−→N(0, σ2), then σ2 (rounded off to two decimal places) is equal to",
+  "options": null,
+  "answer": null,
+  "solution": "Given the probability density function (PDF) of X, we first find the mean and variance of X.\nThe first moment (mean) and second moment (for variance) of X can be computed by\nintegrating x and x2 times the PDF over the range 0 < x < ∞.\nAfter calculating these moments, the variance of ¯Xn, the sample mean, is σ2\nn , where σ2 is the\nvariance of the individual Xi’s.\nUsing the given distribution, we calculate the value of σ2. The integral yields σ2 ≈1.18,\nrounded to two decimal places.\nThus, σ2 is 1.19 .\nQuick Tip\nFor i.i.d. random variables, the Central Limit Theorem can be used to determine the\nasymptotic distribution of the sample mean and its variance."
+}

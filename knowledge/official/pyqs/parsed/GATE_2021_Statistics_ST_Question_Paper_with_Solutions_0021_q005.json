@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q5",
+  "question_seq": 21,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X1, X2, . . . , Xn be a random sample of size n(≥2) from a N(0, σ2) distribution. For a given σ > 0, let fσ denote the joint probability density function of (X1, X2, . . . , Xn)",
+  "options": {
+    "A": "nd S = {fσ : σ > 0}. Let T1 = Pn i=1 X2 i and T2 = \u0000 1 i=1 Xi \u00012. For any positive integer v and any α ∈(0, 1), let χ2 v,α denote the (1 −α)-th quantile of the central chi-square",
+    "D": "istribution with v degrees of freedom. Consider testing H0 : σ = 1 against H1 : σ > 1 at level α. Then which one of the following statements is true?",
+    "B": "S has a monotone likelihood ratio in T1 and H0 is rejected if T1 > χ2 n−1,α",
+    "C": "S has a monotone likelihood ratio in T2 and H0 is rejected if T2 > χ2 n,α"
+  },
+  "answer": "A",
+  "solution": "The problem gives us two test statistics T1 = Pn\ni=1 X2\ni and T2 = \u0000 1\ni=1 Xi\n\u00012. We are\ntasked with testing the hypothesis H0 : σ = 1 against H1 : σ > 1.\nStep 1: Understanding the likelihood ratio.\nA test statistic has a monotone likelihood ratio if the likelihood function is monotonic with\nrespect to the statistic. In this problem, the likelihood ratio test statistic involves comparing\nthe observed value of the statistic with a critical value derived from the chi-square\ndistribution.\nStep 2: Applying the theory of likelihood ratio tests.\nFor the given test statistics T1 and T2, it is known that the statistic T1 has a monotone\nlikelihood ratio with respect to the hypothesis H0. This means that T1 is used to reject H0 if it\nexceeds a certain threshold derived from the chi-square distribution. Specifically, we reject\nH0 when T1 > χ2\nn,α, where χ2\nn,α is the (1 −α)-th quantile of the chi-square distribution with n\ndegrees of freedom.\nStep 3: Conclusion.\nThe correct answer is (A), as it correctly describes the behavior of the test statistic T1 and the\nrejection region for H0.\nFinal Answer:\n(A) S has a monotone likelihood ratio in T1 and H0 is rejected if T1 > χ2\nn,α.\nQuick Tip\nIn hypothesis testing using likelihood ratio tests, the likelihood ratio statistic should be\ncompared to the critical value from the appropriate distribution (chi-square in this case)\nto determine if the null hypothesis should be rejected."
+}

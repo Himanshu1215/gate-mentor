@@ -1,0 +1,18 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q40",
+  "question_seq": 45,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a continuous random variable with probability density function f(x) = exp log x −µ \u00132! x > 0, where µ ∈R, σ > 0. If loge E(X2) (E(X))2 = 4, then Var(loge X) equals: (A) 2",
+  "options": {
+    "B": "4",
+    "C": "16",
+    "D": "64"
+  },
+  "answer": "B",
+  "solution": "Step 1: Recognize the distribution.\nThe given probability density function suggests that X follows a log-normal distribution. For\na log-normal random variable X, if loge X ∼N(µ, σ2), then:\nE(X) = exp(µ + σ2\n2 ),\nE(X2) = exp(2µ + 2σ2),\nVar(X) = exp(2µ + 2σ2) −exp(2µ + σ2).\nStep 2: Analyze the given condition.\nWe are given loge\nE(X2)\n(E(X))2\n= 4. Let’s first compute\nE(X2)\n(E(X))2:\nE(X2)\n(E(X))2 = exp(2µ + 2σ2)\n\u0000exp(µ + σ2\n2 )\u00012 = exp(2µ + 2σ2)\nexp(2µ + σ2) = exp(σ2).\nThus, loge(exp(σ2)) = σ2. Given that this equals 4, we have σ2 = 4.\nStep 3: Find Var(loge X).\nSince loge X ∼N(µ, σ2), we know that the variance of loge X is simply σ2. Therefore,\nVar(loge X) = 4.\nThus, the answer is 4 .\nQuick Tip\nFor log-normal distributions, the variance of the logarithm of the variable is just σ2, the\nvariance of the underlying normal distribution."
+}

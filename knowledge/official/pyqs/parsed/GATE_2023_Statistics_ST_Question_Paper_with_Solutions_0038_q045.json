@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q45",
+  "question_seq": 38,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let f be a continuous function from [0, 1] to the set of all real numbers. Then which one of the following statements is NOT true?",
+  "options": {
+    "A": "For any sequence {xn}n≥1 in [0, 1], P∞ n=1 f(xn) is absolutely convergent",
+    "B": "If |f(x)| = 1 for all x ∈[0, 1], then R 1 0 f(x)dx = 1",
+    "C": "If {xn}n≥1 is a sequence in [0, 1] such that {f(xn)}n≥1 is convergent, then {xn}n≥1 is",
+    "D": "If f is also monotonically increasing, then the image of f is given by [f(0), f(1)]"
+  },
+  "answer": "C",
+  "solution": "1) Understanding the question:\nWe are given that f is continuous, and we are asked to identify which statement is NOT true.\nLet’s examine each option:\n2) Analysis of the options:\n(A) True: The series P∞\nn=1\nf(xn)\nis absolutely convergent. Since n2 grows rapidly, and f(xn)\nis bounded for xn ∈[0, 1], the series converges absolutely.\n(B) True: If |f(x)| = 1 for all x ∈[0, 1], then the integral R 1\n0 f(x)dx can be either 1 or -1,\ndepending on the behavior of the function. Therefore,\nR 1\n0 f(x)dx\n\f\f\f = 1.\n(C) False: The convergence of the sequence {f(xn)}n≥1 does not imply that the sequence\n{xn}n≥1 is convergent. A counterexample can be found where the function f is continuous\nbut the sequence {xn}n≥1 oscillates while still making f(xn) converge.\n(D) True: If f is monotonically increasing, then the image of f on the interval [0, 1] is given\nby the interval [f(0), f(1)]. This follows from the intermediate value theorem for continuous\nfunctions.\nThe correct answer is (C).\nQuick Tip\n- A continuous function on a closed interval maps the interval to another closed interval,\nbut the convergence of f(xn) does not guarantee the convergence of xn.\n- Monotonicity helps to determine the image of a function over an interval."
+}

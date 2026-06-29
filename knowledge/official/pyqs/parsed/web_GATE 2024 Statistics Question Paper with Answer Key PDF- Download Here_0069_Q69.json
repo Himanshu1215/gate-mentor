@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q69",
+  "question_seq": 69,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "2 . Let y y y y",
+  "options": {
+    "B": "e the solution of the differential equation with the initial conditions given below. If y ( x = 2 ) =",
+    "A": "ln 2 y ( x = 2 ) =",
+    "D": "2 y"
+  },
+  "answer": null,
+  "solution": null
+}

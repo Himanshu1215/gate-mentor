@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q1",
+  "question_seq": 5,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Mr. X speaks Japanese",
+  "options": {
+    "C": "hinese.",
+    "A": "neither / or",
+    "B": "either / nor",
+    "D": "also / but"
+  },
+  "answer": "C",
+  "solution": "Step 1: Understanding the Sentence.\nThe sentence ”Mr. X speaks\nJapanese\nChinese.” involves two languages: Japanese\nand Chinese. The blanks in the sentence are intended to be filled with conjunctions that\ndescribe the relationship between these two languages in the context of Mr. X’s abilities. The\nkey is to choose the correct pair of conjunctions that fit grammatically and logically.\nStep 2: Analysis of Options.\nLet’s evaluate the options one by one:\n- Option (A): ”neither / or” The structure ”neither ... or” is grammatically incorrect in\nEnglish. When negating two things, the correct structure is ”neither ... nor,” not ”neither ...\nor.” Therefore, this option is incorrect.\n- Option (B): ”either / nor” The structure ”either ... nor” is also grammatically incorrect in\nEnglish. ”Either” is used for positive choices, but it must be paired with ”or” (not ”nor”) in a\nnegative construction. So, this option is not correct.\n- Option (C): ”neither / nor” This is the correct pair of conjunctions. ”Neither” is used to\nnegate two items or actions, and ”nor” is used to connect these two negated items. The\nstructure ”neither ... nor” is the proper way to indicate that Mr. X speaks neither of the two\nlanguages.\n- Option (D): ”also / but” The conjunctions ”also” and ”but” do not work in this sentence.\n”Also” implies addition, and ”but” contrasts two things, but neither fits the structure needed\nfor this negative context. Therefore, this option is incorrect.\nStep 3: Conclusion.\nThe correct pair of conjunctions to use in the sentence is ”neither / nor,” which negates both\nlanguages and connects them in a negative relationship. Therefore, the correct sentence\nshould read:\nMr. X speaks neither Japanese nor Chinese.\nQuick Tip\nIn English, use ”neither ... nor” to connect two items or actions that are both negated.\nThis structure is often used when neither of the two choices applies."
+}

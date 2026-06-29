@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q57",
+  "question_seq": 57,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 55: Let X 1 , X 2 , X 3 X 1 , X 2 , X 3",
+  "options": {
+    "B": "e a random sample of size 3 from a population having Bernoulli distribution with parameter p, where p ∈ ( 0 , 1 ) p ∈ ( 0 , 1 ) is unknown. Define T 1 ( X i , X j , X k ) = X i − X j ( 1 − X k ) , T 2 ( X i , X j , X k ) = 1 2 ( X i X j + X j X k ) , T 1 ( X i , X j , X k ) = X i − X j ( 1 − X k ) , T 2 ( X i , X j , X k ) = 1 2 ( X i X j + X j X k ) , for i, j, k = 1 , 2 , 3 ; i ≠ j ≠ k k = 1 , 2 , 3 ; i ≠ j ≠ k Let x 1 , x 2 , x 3 x 1 , x 2 , x 3",
+    "D": "enote realizations from the random sample. Then which of the following statements is/are true?",
+    "A": "T 1 ( X 1 , X 2 , X 3 ) T 1 ( X 1 , X 2 , X 3 ) has the same distribution as T 1 ( X 2 , X 3 , X 1 ) , T 1 ( X 2 , X 3 , X 1 ) ,",
+    "C": "T 1 ( X 1 , X 2 , X 3 ) T 1 ( X 1 , X 2 , X 3 )"
+  },
+  "answer": "C",
+  "solution": null
+}

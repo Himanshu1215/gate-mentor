@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q39",
+  "question_seq": 57,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X1, X2, . . . , Xn be a random sample of size n ≥2 from a distribution having the probability density function f(x; θ) = θe−x θ , x > 0, otherwise, where θ ∈(0, ∞). Let X(1) = min{X1, X2, . . . , Xn} and T = Pn i=1 Xi. Then E(X(1) | T) equals",
+  "options": {
+    "A": "T",
+    "B": "T",
+    "C": "(n+1)T",
+    "D": "(n+1)T 4n2"
+  },
+  "answer": "C",
+  "solution": "We are given a random sample from an exponential distribution with rate λ = 1\nθ. The\nminimum X(1) follows the distribution fX(1)(x) = n · 1\nθe−nx\nθ , and the sum T = Pn\ni=1 Xi has\nthe distribution of a Gamma random variable with shape parameter n and rate parameter 1\nStep 1: Deriving the expected value of X(1).\nThe conditional expectation E(X(1) | T) is derived from the fact that given the total sum T,\nthe expected value of the smallest order statistic X(1) is (n+1)T\n. This result comes from the\nproperties of the exponential distribution and its order statistics.\nFinal Answer:\n(n + 1)T\nQuick Tip\nFor order statistics from exponential distributions, the conditional expectation of the\nminimum X(1) given the total sum T is known to be (n+1)T"
+}

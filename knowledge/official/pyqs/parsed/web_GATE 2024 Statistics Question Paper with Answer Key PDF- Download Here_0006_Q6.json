@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q6",
+  "question_seq": 6,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 4: For positive non-zero real variables x x",
+  "options": {
+    "A": "nd y y , if ln ( x + y 2 ) = 1 2 [ ln ( x ) + ln ( y ) ] , ln ⁡ ( x + y 2 ) = 1 2 [ ln ⁡ ( x ) + ln ⁡ ( y ) ] , then, the value of x y + y x x y + y x is:",
+    "B": "1 2 1 2",
+    "C": "2 2",
+    "D": "4 4"
+  },
+  "answer": "C",
+  "solution": null
+}

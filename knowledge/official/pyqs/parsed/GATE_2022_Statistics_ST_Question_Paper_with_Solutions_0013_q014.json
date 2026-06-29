@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q14",
+  "question_seq": 13,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let f : R2 →R be a function defined by f(x, y) = x2y x2+y2 if (x, y) ̸= (0, 0), if (x, y) = (0, 0). Find the value of ∂f ∂x at (0, 0).",
+  "options": {
+    "A": "0",
+    "B": "1",
+    "C": "1",
+    "D": "Undefined"
+  },
+  "answer": "B",
+  "solution": "To find ∂f\n∂x at (0, 0), we first check if the function is continuous at (0, 0). The function is\ndefined as:\nf(x, y) =\nx2y\nx2 + y2 for (x, y) ̸= (0, 0).\nAt (0, 0), we need to check if the limit of f(x, y) as (x, y) →(0, 0) exists:\nlim\n(x,y)→(0,0)\nx2y\nx2 + y2 = 0.\nThus, the function is continuous at (0, 0).\nNext, we compute the partial derivative ∂f\n∂x at (0, 0):\n∂x = lim\nh→0\nf(h, 0) −f(0, 0)\nSince f(h, 0) = 0 for all h, we have:\n∂x(0, 0) = lim\nh→0\n0 −0\n= 1.\nThus, ∂f\n∂x = 1 at (0, 0).\nQuick Tip\nTo find the partial derivative at a point where the function is piecewise defined, check\nthe limit carefully and confirm continuity."
+}

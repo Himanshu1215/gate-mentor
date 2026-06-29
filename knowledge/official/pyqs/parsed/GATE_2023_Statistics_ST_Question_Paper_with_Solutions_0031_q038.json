@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q38",
+  "question_seq": 31,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let {N(t)}t≥0 be a Poisson process with rate 1. Consider the following statements. (I) P(N(3) = 3 | N(5) = 5) = \u00005 \u0001 \u00003 \u00013 \u00002 \u00012. (II) If S5 denotes the time of occurrence of the 5th event for the above Poisson process, then E(S5 | N(5) = 3) = 7. Which of the above statements is/are true?",
+  "options": {
+    "A": "Only (I)",
+    "B": "Only (II)",
+    "C": "Both (I) and (II)",
+    "D": "Neither (I) nor (II)"
+  },
+  "answer": "C",
+  "solution": "1) Analyzing statement (I):\nFor a Poisson process, given the event N(5) = 5, the distribution of N(3) is binomial, as the\nnumber of events occurring in the first 3 units of time, given the total number of events in 5\nunits, follows a binomial distribution. The probability of N(3) = 3 given N(5) = 5 is:\nP(N(3) = 3 | N(5) = 5) =\n\u0013 \u00103\n\u00113 \u00102\nThus, statement (I) is correct.\n2) Analyzing statement (II):\nThe time of occurrence of the 5th event, S5, in a Poisson process with rate 1 follows a\nGamma distribution with shape parameter 5 and rate 1. The expected value of S5, given that\nthere are 3 events by time 5, is:\nE(S5 | N(5) = 3) = 7.\nThus, statement (II) is also correct.\nTherefore, both statements (I) and (II) are true, and the correct answer is (C).\nQuick Tip\n- For a Poisson process, conditional distributions of event counts in disjoint intervals are\nbinomial.\n- The expected time of the nth event in a Poisson process is the sum of n independent\nexponential random variables, resulting in a Gamma distribution."
+}

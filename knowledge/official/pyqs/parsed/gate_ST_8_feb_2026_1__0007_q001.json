@@ -1,0 +1,19 @@
+{
+  "year": 2026,
+  "exam": "GATE ST",
+  "question_id": "Q1",
+  "question_seq": 7,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable having discrete uniform distribution on {1, 3, 5, 7, . . . , 99}. Then E(X | X is not a multiple of 15) equals",
+  "options": {
+    "A": "2365",
+    "B": "2365",
+    "C": "50",
+    "D": "47"
+  },
+  "answer": "A",
+  "solution": "Step 1: Understanding the distribution of X.\nThe random variable X has a discrete uniform distribution on the set {1, 3, 5, 7, . . . , 99}, which\ncontains all odd numbers from 1 to 99. There are 50 elements in this set because the odd\nnumbers between 1 and 99 are in the form 2n + 1, where n ranges from 0 to 49. Hence, the\ntotal number of odd numbers between 1 and 99 is 50.\nStep 2: Calculating the sum of all possible values of X.\nThe sum of the first 50 odd numbers is given by:\nS = 1 + 3 + 5 + 7 + · · · + 99\nThe sum of the first n odd numbers is known to be n2. Therefore:\nS = 502 = 2500\nStep 3: Identifying multiples of 15 in the set.\nNext, we find the multiples of 15 in the set {1, 3, 5, 7, . . . , 99}. The odd multiples of 15 are:\n15, 45, 75\nThus, there are 3 multiples of 15 in the set, and their sum is:\n15 + 45 + 75 = 135\nStep 4: Subtracting the sum of multiples of 15.\nThe sum of all odd numbers excluding the multiples of 15 is:\nSum excluding multiples of 15 = 2500 −135 = 2365\nStep 5: Finding the expected value of X given that X is not a multiple of 15.\nThe number of odd numbers that are not multiples of 15 is:\n50 −3 = 47\nTherefore, the expected value of X given that it is not a multiple of 15 is the average of the\nremaining values, which is:\nE(X | X is not a multiple of 15) = 2365\nQuick Tip\nFor a uniform distribution, the expected value is the sum of the values divided by the\nnumber of values."
+}

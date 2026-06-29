@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q28",
+  "question_seq": 43,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let f : R →R be a differentiable function such that f(0) = 0 and f′(x) + 2f(x) > 0 for all x ∈R, where f′ denotes the derivative of f and R denotes the set of all real numbers. Then which one of the following statements is true?",
+  "options": {
+    "A": "f(x) > 0, for all x > 0",
+    "B": "f(x) < 0, for all x ̸= 0",
+    "C": "f(x) > 0, for all x ̸= 0",
+    "D": "f(x) < 0, for all x > 0"
+  },
+  "answer": "A",
+  "solution": "We are given the condition f′(x) + 2f(x) > 0 for all x ∈R. This inequality implies that f(x)\nbehaves in a specific way. Let’s solve this inequality to determine the behavior of f(x).\nStep 1: Solve the differential inequality.\nRewrite the inequality as:\nf′(x) > −2f(x).\nThis is a first-order linear differential inequality. The solution to the corresponding equation\nf′(x) = −2f(x) is:\nf(x) = Ce−2x,\nwhere C is a constant determined by initial conditions. For the inequality f′(x) + 2f(x) > 0,\nthis solution shows that f(x) is positive for x > 0 and negative for x < 0, confirming that\noption (A) is correct.\nFinal Answer:\nf(x) > 0, for all x > 0\nand\nf(x) < 0, for all x < 0 .\nQuick Tip\nIn solving differential inequalities, remember to consider the behavior of the solution as\nx moves away from zero to understand the sign changes."
+}

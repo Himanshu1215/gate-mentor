@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q37",
+  "question_seq": 30,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable with probability density function f(x) = if x ≥1, otherwise. If Y = log X, then P(Y < 1 | Y < 2) equals",
+  "options": {
+    "A": "1+e",
+    "B": "e−1 e+1",
+    "C": "1+e",
+    "D": "e−1"
+  },
+  "answer": "A",
+  "solution": "1) Understanding the relationship between X and Y :\nWe are given that Y = log X. This means that X = eY .\nThe probability density function of X is:\nfX(x) = 1\nx2,\nx ≥1.\nThus, for Y = log X, the probability density function of Y becomes:\nfY (y) = fX(ey) · d\ndyey = 1\ne2y · ey = 1\ney ,\ny ≥0.\n2) Computing P(Y < 1 | Y < 2):\nThe conditional probability P(Y < 1 | Y < 2) is given by:\nP(Y < 1 | Y < 2) = P(Y < 1 ∩Y < 2)\nP(Y < 2)\n= P(Y < 1)\nP(Y < 2).\nSince Y has the probability density function fY (y) = 1\ney for y ≥0, we can compute the\nprobabilities as follows:\n- P(Y < 1) = R 1\ney dy = 1 −1\ne. - P(Y < 2) = R 2\ney dy = 1 −1\ne2.\nThus,\nP(Y < 1 | Y < 2) = 1 −1\n1 −1\n= e −1\ne + 1.\n3) Final Answer:\nThe correct answer is (A)\n1+e.\nQuick Tip\n- The density of a transformed random variable is computed using the Jacobian of the\ntransformation.\n- For a logarithmic transformation, the new density function follows the rule: fY (y) =\nfX(ey) · ey."
+}

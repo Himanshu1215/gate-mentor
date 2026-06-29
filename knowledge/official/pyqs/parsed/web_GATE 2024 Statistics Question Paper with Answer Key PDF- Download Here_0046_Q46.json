@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q46",
+  "question_seq": 46,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 44: Let { X n } n ≥ 1 { X n } n ≥ 1",
+  "options": {
+    "B": "e a sequence of independent random variables such that X n X n has Poisson distribution with mean λ n λ n , where λ n = λ + 1 2 n λ n = λ + 1 2 n , n ≥ 1 n ≥ 1 , and λ > 0 λ > 0 is an unknown parameter. Which one of the following statements is true?",
+    "A": "1 n ∑ n i = 1 X i 1 n ∑ i = 1 n X i is an unbiased estimator of λ λ",
+    "C": "∑ n i = 1 X i ∑ i = 1 n X i is a consistent estimator of λ λ",
+    "D": "1 n 2 ∑ n i = 1 X i 1 n 2 ∑ i = 1 n X i is an unbiased estimator of λ λ"
+  },
+  "answer": "B",
+  "solution": null
+}

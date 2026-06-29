@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q16",
+  "question_seq": 10,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable with probability density function f(x) = αλxα−1e−λxα if x > 0 otherwise where α > 0 and λ > 0. If the median of X is 1 and the third quantile is 2, then (α, λ) equals:",
+  "options": {
+    "A": "(1, loge 2)",
+    "B": "(1, 1)",
+    "C": "(2, loge 2)",
+    "D": "(1, loge 3)"
+  },
+  "answer": "A",
+  "solution": "1) Understanding the function:\nThe given probability density function describes a generalized form of a Weibull distribution.\nFor the median and third quantile, we use the cumulative distribution function (CDF). The\nCDF F(x) is the integral of f(x).\n2) Setting up the CDF:\nF(x) =\nZ x\nf(t)dt =\nZ x\nαλtα−1e−λtαdt\nThis is a standard form whose result will lead to the calculation of the median and third\nquantile values.\n3) Using median and third quantile values:\nGiven that the median of X is 1 and the third quantile is 2, we solve the CDF equations for\nthese values. By substituting these into the CDF equation and solving for α and λ, we find\nα = 1 and λ = loge 2.\nQuick Tip\n- The median corresponds to the value where the CDF is 0.5.\n- The third quantile corresponds to the value where the CDF is 0.75.\n- Use the CDF and solve for the desired values to find parameters α and λ."
+}

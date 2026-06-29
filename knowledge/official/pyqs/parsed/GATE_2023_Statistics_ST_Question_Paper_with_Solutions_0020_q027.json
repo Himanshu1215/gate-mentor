@@ -1,0 +1,19 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q27",
+  "question_seq": 20,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Suppose that X1, X2, . . . , Xn are independent and identically distributed random variables each having probability density function f(·) and median θ. We want to test H0 : θ = θ0",
+  "options": {
+    "A": "gainst H1 : θ > θ0.",
+    "C": "onsider a test that rejects H0 if S > c for some c depending on the size of the test, where S is the cardinality of the set {i : Xi > θ0, 1 ≤i ≤n}. Then which one of the following statements is true?",
+    "B": "Under H1, the distribution of S does not depend on f(·)",
+    "D": "The power function does not depend on θ"
+  },
+  "answer": "C",
+  "solution": "1) Understanding the power function:\nThe power function of a test is defined as the probability of rejecting H0 when the true\nparameter is θ, i.e., β(θ) = P(Rejecting H0 | θ). The power function depends on how the test\nbehaves under different values of θ.\n2) Analysis:\n- The test uses the statistic S, the number of Xi greater than θ0. Under H0, this statistic\nfollows a binomial distribution with parameters n and the probability P(Xi > θ0). - The\ndistribution of S is affected by the value of θ, and so is the power of the test. Hence, the\npower function depends on θ.\nThus, the correct answer is (C).\nQuick Tip\n- The power function of a hypothesis test depends on how the test behaves for different\nvalues of the parameter θ under consideration.\n- A test’s power increases as the distance between the null hypothesis and alternative\nhypothesis increases."
+}

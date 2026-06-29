@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q56",
+  "question_seq": 59,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "While calculating Spearman’s rank correlation coefficient on n paired observations, it is found that xi are distinct for all i ≥2, with a single tie x1 = x2, and Pn i=1 d2 i = 19.5 where di = rank(xi) −rank(yi). Then the minimum possible value of n3 −n (in integer)",
+  "options": null,
+  "answer": null,
+  "solution": "For ranks without considering tie corrections, the well–known upper bound is\ni=1\ni ≤n(n2 −1)\n(attained when the two rankings are in reverse order). With only one tie in x the attainable\nvalues may be half–integers, but the same upper bound still controls the sum.\nWe need the smallest n such that 19.5 ≤n(n2 −1)\n. Check n = 3: 3(9 −1)\n= 8 < 19.5. For\nn = 4: 4(16 −1)\n= 20 ≥19.5 (feasible due to the half–integer total from the single tie).\nHence the minimum n is 4, and therefore\nn3 −n = 43 −4 = 64 −4 = 60 .\nQuick Tip\nSpearman’s P d2\ni is maximized (and thus bounded) by n(n2 −1)/3. Use this bound to\nfind the smallest n compatible with a given P d2\ni ."
+}

@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q10",
+  "question_seq": 25,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Evaluate the limit: lim n→∞ (2n + n2n sin2 n (2n −n cos 1 The value of the limit is (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "The expression inside the limit is complex, but we can analyze it by considering the behavior\nof each term as n →∞. First, look at the asymptotic behavior of each part of the expression:\nlim\nn→∞\n(2n + n2n sin2 n\n(2n −n cos 1\nFor large n, sin2 n\n2 oscillates between 0 and 1, and cos 1\nn →1. Hence, the dominant terms will\nbe the powers of 2n. The expression simplifies to:\n2n(1 + n sin2 n\nSince the factor sin2 n\n2 is bounded, the overall limit approaches:\nas n →∞.\nThus, the value of the limit approaches a large number, which can be computed more\nprecisely.\nQuick Tip\nFor limits involving trigonometric functions with high powers of n, consider the domi-\nnant terms and simplify the expression before evaluating the limit."
+}

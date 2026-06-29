@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q47",
+  "question_seq": 51,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let M be any 3 × 3 symmetric matrix with eigenvalues 1, 2, 3. Let N be any 3 × 3 matrix with real eigenvalues such that MN + NTM = 3I, where I is the 3 × 3 identity matrix. Which of the following cannot be eigenvalue(s) of the matrix N?",
+  "options": {
+    "A": "1",
+    "B": "3",
+    "C": "1",
+    "D": "7"
+  },
+  "answer": "A",
+  "solution": "Step 1: Diagonalize M.\nSince M is symmetric, there is an orthogonal Q with QTMQ = D = diag(1, 2, 3). Put\n˜N = QTNQ. The condition becomes D ˜N + ˜NTD = 3I. Similarity preserves eigenvalues, so\n˜N and N have the same eigenvalues.\nStep 2: Rayleigh identity for a real eigenpair.\nLet ˜Nv = λv with real λ and v ̸= 0. Then\nvT(D ˜N + ˜NTD)v = 3 vTv.\nThe left side equals vTD(λv) + (λv)TDv = 2λ vTDv. Hence\n2λ vTDv = 3 vTv =⇒λ = 3\nvTv\nvTDv.\nStep 3: Bound the quotient.\nFor D = diag(1, 2, 3), its eigenvalues satisfy 1 ≤vTDv\nvTv\n≤3. Therefore\n3 ≤vTv\nvTDv ≤1 =⇒1\n2 ≤λ ≤3\nStep 4: Decide feasible options.\nEvery real eigenvalue of N must lie in [1/2, 3/2]. Thus 1\n4 and 7\n4 are impossible, while 1\n2 and 3\nare attainable (e.g., by taking v along the D-eigenvectors with eigenvalues 3 and 2,\nrespectively).\nQuick Tip\nFor equations of the form AX +XTA = cI with A ≻0, testing a real eigenpair Xv = λv\nand forming vT(·)v often yields tight bounds on λ via Rayleigh quotients."
+}

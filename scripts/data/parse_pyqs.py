@@ -102,6 +102,15 @@ _NOISE = re.compile(
 )
 
 
+# Matches PDF preamble headers before actual questions begin.
+_PREAMBLE_END = re.compile(
+    r"(?:general aptitude\s*\(ga\)|statistics\s*\(st\)|subject\s*(?:section|questions))",
+    re.IGNORECASE,
+)
+# Matches bare numbered question lines: "1. " at line start (no Q. prefix).
+_BARE_NUM = re.compile(r"(?m)^(\d{1,3})\. (?=[A-Z(])")
+
+
 def preprocess(text):
     """
     Normalise raw PDF text before parsing:
@@ -109,6 +118,8 @@ def preprocess(text):
     2. Deduplicate consecutive repeated lines (Made Easy PDFs repeat each line 5×).
     3. Join lone option-letter lines with the following line:
          "(A)\nagnostic"  ->  "(A) agnostic"
+    4. Strip instruction preamble before General Aptitude / Statistics section.
+    5. Normalise bare "1. " question numbering to "Q.1 " so Q_HEADER matches.
     """
     # --- 1. Strip noise lines ---
     lines = text.split("\n")
@@ -136,7 +147,19 @@ def preprocess(text):
                 continue
         joined.append(line)
         i += 1
-    return "\n".join(joined)
+    text = "\n".join(joined)
+
+    # --- 4. Strip preamble: keep only text from first GA/ST/Subject section marker ---
+    m = _PREAMBLE_END.search(text)
+    if m:
+        text = text[m.start():]
+
+    # --- 5. Normalise bare numbering "1. " -> "Q.1 " (e.g. official IIT PDFs) ---
+    # Only do this when the text has no Q. patterns already.
+    if not re.search(r"\bQ\.\s*\d", text, re.IGNORECASE):
+        text = _BARE_NUM.sub(r"Q.\1 ", text)
+
+    return text
 
 
 def tag_concept(text):
@@ -201,7 +224,7 @@ def _extract_answer_and_solution(body):
     return body.strip(), answer, solution
 
 
-def parse_block(num, body, year, answers, seq):
+def parse_block(num, body, year, answers, seq, exam="GATE DA"):
     """Parse a single question block into the schema dict (best-effort)."""
     # First split out inline answer/solution (common in compiled solution PDFs)
     body, inline_answer, inline_solution = _extract_answer_and_solution(body)
@@ -226,7 +249,7 @@ def parse_block(num, body, year, answers, seq):
 
     return {
         "year": year,
-        "exam": "GATE DA",
+        "exam": exam,
         "question_id": qid,
         "question_seq": seq,   # global sequence — unique even across multi-year PDFs
         "question_type": qtype,
@@ -244,6 +267,7 @@ def main():
     parser = argparse.ArgumentParser(description="Parse PYQ text into structured QA JSON.")
     parser.add_argument("inputs", nargs="+", help=".txt file(s) of extracted PYQ text")
     parser.add_argument("--year", type=int, required=True, help="Exam year")
+    parser.add_argument("--exam", default="GATE DA", help="Exam label (e.g. 'GATE ST', 'GATE DA')")
     parser.add_argument("--answers", help="Optional JSON file: {question_id: answer_letter}")
     args = parser.parse_args()
 
@@ -276,7 +300,7 @@ def main():
 
         for num, body in blocks:
             global_seq += 1
-            rec = parse_block(num, body, args.year, answers, global_seq)
+            rec = parse_block(num, body, args.year, answers, global_seq, exam=args.exam)
             if not rec["question_text"]:
                 global_seq -= 1
                 continue

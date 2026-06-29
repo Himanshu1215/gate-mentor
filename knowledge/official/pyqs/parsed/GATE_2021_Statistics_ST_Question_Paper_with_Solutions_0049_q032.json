@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q32",
+  "question_seq": 49,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable having uniform distribution on \u0002 2, π \u0003. Then which one of the following statements is NOT true?",
+  "options": {
+    "A": "Y = cot X follows standard Cauchy distribution",
+    "B": "Y = tan X follows standard Cauchy distribution",
+    "C": "Y = −loge 2 + X \u0001 has moment generating function M(t) = 1−t, t < 1",
+    "D": "Y = −2 loge 2 + X \u0001 follows central chi-square distribution with one degree of freedom"
+  },
+  "answer": "D",
+  "solution": "We are given a uniform distribution for X on the interval \u0002\n2, π\nStep 1: Check each option.\n- Option (A) is correct because cot X for a uniformly distributed variable on \u0002\n2, π\n\u0003 follows\na standard Cauchy distribution.\n- Option (B) is correct because tan X also follows a standard Cauchy distribution.\n- Option (C) is correct because the transformation Y = −loge\n2 + X\n\u0001 gives a moment\ngenerating function as described.\n- Option (D) is incorrect because Y = −2 loge\n2 + X\n\u0001 does not follow a central chi-square\ndistribution with one degree of freedom.\nFinal Answer:\nY = −2 loge\n2 + X\ndoes not follow central chi-square distribution .\nQuick Tip\nWhen working with transformations of uniform distributions, use the moment generat-\ning function or known distribution properties to identify the resulting distribution."
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q6",
+  "question_seq": 7,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Mosquitoes pose a threat to human health. Controlling mosquitoes using chemicals may have undesired consequences. In Florida, authorities have used genetically modified mosquitoes to control the overall mosquito population. It remains to be seen if this novel approach has unforeseen consequences. Which one of the following is the correct logical inference based on the information in the",
+  "options": {
+    "A": "bove passage?",
+    "B": "ecause genetic engineering is dangerous",
+    "C": "Both using genetically modified mosquitoes and chemicals have undesired consequences",
+    "D": "Using chemicals to kill mosquitoes may have undesired consequences but it is not clear if using genetically modified mosquitoes has any negative consequence"
+  },
+  "answer": "D",
+  "solution": "The passage describes the use of both chemicals and genetically modified mosquitoes to\ncontrol the mosquito population. It mentions that using chemicals may have undesired\nconsequences but does not provide clear information about the potential consequences of\nusing genetically modified mosquitoes. The passage indicates uncertainty about the effects\nof genetically modified mosquitoes, specifically stating that ”it remains to be seen if this\nnovel approach has unforeseen consequences.”\nLet’s evaluate the options: - Option (A): This option makes a definitive statement about the\nsuperiority of chemicals over genetic engineering, which is not supported by the passage.\nThere is no direct comparison made in the passage between the two methods, so this option\nis incorrect.\n- Option (B): This option claims that genetically modified mosquitoes do not have side\neffects, but the passage does not support this statement. It only mentions that the\nconsequences of using genetically modified mosquitoes are still uncertain, making this\noption incorrect.\n- Option (C): While the passage does mention that both methods may have undesired\nconsequences, it does not assert that both are equally dangerous. Therefore, this option is not\nentirely accurate.\n- Option (D): This option correctly reflects the passage, which states that chemicals may\nhave undesired consequences, but it is unclear if genetically modified mosquitoes have any\nnegative effects. Hence, option (D) is the correct answer.\nQuick Tip\nWhen inferring logical conclusions from a passage, focus on what the passage directly\nstates and avoid assumptions not explicitly mentioned."
+}

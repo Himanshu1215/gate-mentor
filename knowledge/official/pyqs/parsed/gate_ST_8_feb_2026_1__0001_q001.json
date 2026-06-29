@@ -1,0 +1,16 @@
+{
+  "year": 2026,
+  "exam": "GATE ST",
+  "question_id": "Q1",
+  "question_seq": 1,
+  "question_type": "NAT",
+  "marks": 2,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "This question paper is divided into three sections: × 2 marks) for a total of 15 marks. • Environmental Science and Engineering + Engineering Mathematics: – Part A (Mandatory): 36 questions (1 questions × 1 mark + 19 questions × 2 marks) for a total of 55 marks. – Part B (Section 1): Candidates can choose either Part B1 (Surveying",
+  "options": {
+    "A": "nd Mapping) or Part B2 (Section 2). Each part contains 16 questions (8 questions × 1 mark + 11 questions × 2 marks) for a total of 30 marks."
+  },
+  "answer": null,
+  "solution": null
+}

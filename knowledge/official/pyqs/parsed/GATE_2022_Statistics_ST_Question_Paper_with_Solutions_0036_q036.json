@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q36",
+  "question_seq": 36,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let M be a 3 × 3 real symmetric matrix with eigenvalues −1, 1, 2 and the",
+  "options": {
+    "C": "orresponding unit eigenvectors u, v, w, respectively. Let x and y be two vectors in R3 such that Mx = u + 2(v + w)",
+    "A": "nd M2y = u −(v + 2w).",
+    "B": "0.25",
+    "D": "1"
+  },
+  "answer": "A",
+  "solution": "We are given that M is a symmetric matrix with eigenvalues −1, 1, 2, and we are tasked with\nfinding |x + y|2. First, let’s break down the given equations for Mx and M2y.\nStep 1: Use the properties of eigenvectors and eigenvalues.\nWe know that: - The eigenvectors corresponding to the eigenvalues −1, 1, 2 of the matrix M\nare u, v, w, respectively. - Thus, Mu = −u, Mv = v, and Mw = 2w.\nStep 2: Find x and y in terms of eigenvectors.\nWe are given that Mx = u + 2(v + w). Applying the matrix M, we get:\nMx = Mu + 2(Mv + Mw) = −u + 2(v + 2w) = −u + 2v + 4w\nThis gives us the expression for x, so x = −u + 2v + 4w.\nFor M2y = u −(v + 2w), since M2 = M × M, we apply M to both sides:\nM2y = M(u −v −2w) = Mu −Mv −2Mw = −u −v −4w\nThis gives us the expression for y, so y = −u −v −4w.\nStep 3: Compute |x + y|2.\nNow we compute the square of the length of x + y:\nx + y = (−u + 2v + 4w) + (−u −v −4w) = −2u + v\nThus, the squared length of x + y is:\n|x + y|2 = (−2u + v) · (−2u + v)\nUsing the properties of the inner product and the fact that u, v, w are unit vectors:\n|x + y|2 = 4u · u −4u · v + v · v = 4(1) −4(0) + (1) = 4 + 1 = 5\nSo, |x + y|2 = 5.\nQuick Tip\nWhen working with eigenvalues and eigenvectors, remember that the matrix operation\non an eigenvector results in a scalar multiple of the eigenvector itself, and the dot prod-\nuct of orthogonal vectors is zero."
+}

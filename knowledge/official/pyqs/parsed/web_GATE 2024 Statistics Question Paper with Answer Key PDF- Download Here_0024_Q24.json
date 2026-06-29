@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q24",
+  "question_seq": 24,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 22: Let { W ( t ) } t ≥ 0 { W ( t ) } t ≥ 0",
+  "options": {
+    "B": "e a standard Brownian motion. Which one of the following statements is NOTtrue?",
+    "A": "E [ W ( 7 ) ] = 0 E [ W ( 7 ) ] = 0 .",
+    "C": "2 W ( 1 ) 2 W ( 1 ) is normally distributed with mean 0 0",
+    "D": "E [ W ( 5 ) ∣ W ( 3 ) = 3 ] = 3 E [ W ( 5 ) ∣ W ( 3 ) = 3 ] = 3 ."
+  },
+  "answer": "B",
+  "solution": null
+}

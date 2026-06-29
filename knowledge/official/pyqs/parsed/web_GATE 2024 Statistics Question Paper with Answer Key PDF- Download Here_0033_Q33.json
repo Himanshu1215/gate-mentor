@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q33",
+  "question_seq": 33,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 31: Let X X",
+  "options": {
+    "B": "e a random variable having a Poisson distribution with mean λ > 0 λ > 0 such that P ( X = 4 ) = 2 P ( X = 5 ) P ( X = 4 ) = 2 P ( X = 5 ) . If p k = P ( X = k ) , k = 0 , 1 , 2 , … p k = P ( X = k ) , k = 0 , 1 , 2 , … , and p α = max k p k p α = max k p k , then α α equals ______ (in integer)."
+  },
+  "answer": "B",
+  "solution": null
+}

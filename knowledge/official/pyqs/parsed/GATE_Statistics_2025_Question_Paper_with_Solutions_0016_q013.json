@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q13",
+  "question_seq": 16,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let S = {(x, y, z) ∈R3 \\ {(0, 0, 0)} : z = −(x + y)}. Denote S⊥= {(p, q, r) ∈R3 : px + qy + rz = 0 for all (x, y, z) ∈S}. Then which one of the following options is correct?",
+  "options": {
+    "A": "S⊥is not a subspace of R3",
+    "B": "S⊥= {(0, 0, 0)}",
+    "C": "dim(S⊥) = 1",
+    "D": "dim(S⊥) = 2"
+  },
+  "answer": "C",
+  "solution": "Step 1: The equation of S is given by z = −(x + y), so any point (x, y, z) in S can\nbe written as (x, y, −(x + y)). Thus, the set S is the plane given by the equation z = −(x + y)\nin R3.\nStep 2: To find S⊥, we need to find all vectors (p, q, r) such that px + qy + rz = 0 for all\npoints (x, y, z) in S. Using z = −(x + y), we substitute into the equation:\npx + qy + r(−(x + y)) = 0.\nThis simplifies to:\npx + qy −rx −ry = 0\n(p −r)x + (q −r)y = 0.\nFor this to hold for all values of x and y, we must have:\np −r = 0\nand\nq −r = 0.\nThus, p = r and q = r, so the vector (p, q, r) must be of the form (r, r, r) for some scalar r.\nStep 3: Therefore, S⊥= {(r, r, r) : r ∈R}, which is a one-dimensional subspace of R3.\nThus, dim(S⊥) = 1.\nQuick Tip\nTo find the orthogonal complement S⊥of a subspace S, solve the system of equations\npx + qy + rz = 0 for all points in S. The result will give the set of vectors that are\northogonal to every vector in S."
+}

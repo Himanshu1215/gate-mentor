@@ -1,0 +1,16 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q61",
+  "question_seq": 62,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Given Φ(1.645) = 0.95 and Φ(2.33) = 0.99. For a random sample X1, . . . , Xn ∼N(µ, 22) with µ unknown, test H0 : µ = 10 vs H1 : µ = 12 using a rule that rejects H0 when X is large. Find the smallest n (in integer) so that Type I error is 0.05",
+  "options": {
+    "A": "nd Type II error is at most 0.01."
+  },
+  "answer": null,
+  "solution": "Under H0, X ∼N(10, 4/n). The level-0.05 critical value c satisfies\nPH0(X > c) = 0.05\nX −10\n2/√n > 1.645\nc = 10 + 2 · 1.645\nPower at µ = 12 is\nP12(X > c) = P\nX −12\n2/√n > c −12\n2/√n\n= P\u0000Z > −√n + 1.645\u0001\nType II error ≤0.01 means P12(X > c) ≥0.99, i.e.\nΦ(√n −1.645) ≥0.99 =⇒√n −1.645 ≥2.33 =⇒√n ≥3.975.\nHence n ≥15.80, so the smallest integer is 16 .\nQuick Tip\nFor known variance σ2 in one–sided tests, solve the size constraint for the critical value,\nthen impose the desired power under the alternative using the z–transform."
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q39",
+  "question_seq": 39,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Question 37:",
+  "options": {
+    "C": "onsider the function f : R 2 → R f : R 2 → R",
+    "D": "efined by: If f x f x",
+    "A": "nd f y f y",
+    "B": "f x ( 0 , 0 ) ≠ f y ( 0 , 0 ) f x ( 0 , 0 ) ≠ f y ( 0 , 0 ) ."
+  },
+  "answer": "C",
+  "solution": null
+}

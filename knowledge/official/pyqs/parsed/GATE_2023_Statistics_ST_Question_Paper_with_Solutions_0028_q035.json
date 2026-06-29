@@ -1,0 +1,16 @@
+{
+  "year": 2023,
+  "exam": "GATE ST",
+  "question_id": "Q35",
+  "question_seq": 28,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Suppose that (X1, X2, X3) has a N3(µ, Σ) distribution with µ =",
+  "options": {
+    "A": "nd Σ = Given that Φ(−0.5) = 0.3085, where Φ(·) denotes the cumulative distribution function of a standard normal random variable, (X1 −2X2 + 2X3)2 < 7 (rounded off to two decimal places) equals"
+  },
+  "answer": "0.35 to 0.40",
+  "solution": "1) Understanding the question:\nThe given distribution is a multivariate normal distribution, and we need to find the\nprobability of the quadratic form (X1 −2X2 + 2X3)2 being less than 7\n2. We are also provided\nwith the value of Φ(−0.5), the cumulative distribution function (CDF) of the standard normal\ndistribution.\n2) Transformation of the quadratic form:\nLet the new random variable Z = X1 −2X2 + 2X3. The distribution of Z is normal since it is\na linear combination of normally distributed variables. We need to find the probability\nP(Z2 < 7\n2). This simplifies to:\nP(−\n2 < Z <\nUsing the properties of normal distribution, we compute the standardization of Z and use the\ngiven value of Φ(−0.5) to find the probability. The final value lies between 0.35 and 0.40.\nThe correct answer is 0.35 to 0.40.\nQuick Tip\n- For quadratic forms of normal variables, the result is typically a chi-square distribution\nor a transformation of a normal distribution.\n- Use the standard normal CDF for computations involving standardization of normal\nvariables."
+}

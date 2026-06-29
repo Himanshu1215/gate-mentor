@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q4",
+  "question_seq": 6,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The figure shows a grid formed by a collection of unit squares. The unshaded unit square in the grid represents a hole. What is the maximum number of squares without",
+  "options": {
+    "A": "”hole in the interior” that can be formed within the 4 × 4 grid using the unit squares",
+    "B": "20",
+    "C": "21",
+    "D": "26"
+  },
+  "answer": "B",
+  "solution": "Step 1: Understanding the structure of the grid\nThe grid has a total of 16 unit squares. One of these unit squares is a hole in the center.\nTherefore, we need to form squares without using the unit square at the center of the grid.\nStep 2: Finding possible square sizes\n- A 1 × 1 square can be formed in any of the 15 remaining unit squares (excluding the center\nhole).\n- A 2 × 2 square can be formed by selecting four unit squares. In this case, the hole at the\ncenter prevents a 2 × 2 square from being formed completely within the grid. Thus, we can\nform 5 such 2 × 2 squares.\n- A 3 × 3 square can be formed by selecting a 3 × 3 block of squares. The hole is in the\ninterior, but it does not affect the construction of the 3 × 3 square as the hole is on the edge,\nso we can form 1 such square.\nStep 3: Summing the possible squares\nTotal number of squares that can be formed:\n- 15 squares of size 1 × 1\n- 5 squares of size 2 × 2\n- 1 square of size 3 × 3\nThus, the maximum number of squares that can be formed without a ”hole in the interior” is:\n15 + 5 + 1 = 20\nQuick Tip\nTo maximize the number of squares without a ”hole in the interior,” it is important to\nconsider the sizes of squares and avoid placing the hole within the boundaries of any\nsquare."
+}

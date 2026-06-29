@@ -1,0 +1,16 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q60",
+  "question_seq": 61,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let X1, X2, X3, X4 be a sample of size 4 from Bernoulli(θ), 0 < θ < 1. We test H0 : θ = 1 4 vs H1 : θ > 1 4, rejecting H0 if X1 + X2 + X3 + X4 > 2. If α is the Type-I error",
+  "options": {
+    "A": "nd γ(θ) the power function, then find 16α + 7γ\u00001 \u0001 (in integer)."
+  },
+  "answer": null,
+  "solution": "Let Y = X1 + X2 + X3 + X4 ∼Binomial(4, θ). Reject H0 when Y > 2, i.e. Y = 3 or 4.\nType-I error:\nα = P(Y > 2 | θ = 1\n4) =\n\u0013\u00001\n\u00013\u00003\n\u0013\u00001\n\u00014 = 4\u0000 1\n\u0001\u00003\n256 = 13\n256 ≈0.0508.\nPower at θ = 1\nγ\u00001\n= P(Y > 2 | θ = 1\n2) =\n\u0013\u00001\n\u00013\u00001\n\u0013\u00001\n\u00014 = 0.3125.\nHence\n16α + 7γ\u00001\n= 16(0.0508) + 7(0.3125) = 0.8128 + 2.1875 = 3.0003 ≈3 .\nQuick Tip\nFor small samples of Bernoulli data, the power is computed from Binomial probabilities\nunder each parameter value."
+}

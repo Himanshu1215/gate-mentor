@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q43",
+  "question_seq": 49,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X1, X2 be a random sample from a distribution having probability density function fθ(x) = θe−x/θ, x > 0, otherwise, where θ ∈(0, ∞) is an unknown parameter. For testing H0 : θ ≤1 against H1 : θ > 1,",
+  "options": {
+    "C": "onsider the test ϕ(X1, X2) = if X1 > 1, otherwise. Then which one of the following tests has the same power function as ϕ?",
+    "A": "ϕ1(X1, X2) = X1+X2−1 X1+X2 , if X1 + X2 > 1, otherwise.",
+    "B": "ϕ2(X1, X2) = 2X1+2X2−1 2(X1+X2) , if X1 + X2 > 1, otherwise.",
+    "D": "ϕ4(X1, X2) = 4X1+4X2−1 4(X1+X2) , if X1 + X2 > 1, otherwise."
+  },
+  "answer": "A",
+  "solution": "Step 1: Understand the original test ϕ(X1, X2).\nThe test ϕ(X1, X2) is defined as:\nϕ(X1, X2) =\nif X1 > 1,\notherwise.\nThis test is checking whether X1 is greater than 1, and it essentially ignores the value of X2.\nStep 2: Understand the power function of ϕ(X1, X2).\nThe power function of a test gives the probability of rejecting the null hypothesis H0 (i.e., the\ntest statistic is greater than a critical value) for various values of the parameter θ.\nFor θ = 1 (the null hypothesis), the probability of rejecting H0 is:\nP(X1 > 1 | θ = 1) =\nZ ∞\n1e−x/1 dx = e−1.\nFor θ > 1, the probability of rejecting H0 is:\nP(X1 > 1 | θ) = 1 −FX(1) = 1 −(1 −e−1/θ) = e−1/θ.\nStep 3: Analyze the options.\nOption (A): This test depends on X1 + X2, and it has the same form as the original test\nbecause the sum of X1 and X2 will determine the power function in a way that matches the\noriginal test for large θ. Hence, option (A) is correct.\nOption (B), (C), and (D): These tests differ in the factors used in the formula, which would\nresult in different power functions that do not match the power function of the original test ϕ.\nThus, the correct answer is (A) .\nQuick Tip\nWhen analyzing tests with different forms, focus on how the power function is derived\nand check if the form of the test aligns with the original test’s power function."
+}
