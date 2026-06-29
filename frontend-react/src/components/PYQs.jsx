@@ -1,108 +1,159 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import api from '../api';
 
-const mockPyqs = [
-  {
-    id: '2024_Q45',
-    year: 2024,
-    subject: 'Probability',
-    marks: 2,
-    type: 'MCQ',
-    question: 'A factory has two machines with different production shares and defect rates. Find the posterior probability that a defective item came from Machine B.',
-    hint: 'Write the total defective probability first, then divide Machine B defects by total defects.',
-    solution: 'P(B | D) = P(D | B)P(B) / [P(D | A)P(A) + P(D | B)P(B)]. This gives 0.05 x 0.40 / (0.02 x 0.60 + 0.05 x 0.40) = 0.625.',
-    similar: 'Practice Bayes theorem questions with medical tests, spam classification, and faulty batch selection.'
-  },
-  {
-    id: '2023_Q12',
-    year: 2023,
-    subject: 'Linear Algebra',
-    marks: 1,
-    type: 'NAT',
-    question: 'Find the determinant of the matrix [[1,2],[3,4]].',
-    hint: 'For a 2 x 2 matrix [[a,b],[c,d]], determinant is ad - bc.',
-    solution: 'The determinant is 1 x 4 - 2 x 3 = 4 - 6 = -2.',
-    similar: 'Try determinant questions with triangular matrices and rank-deficient matrices.'
-  },
-  {
-    id: '2024_Q22',
-    year: 2024,
-    subject: 'Machine Learning',
-    marks: 2,
-    type: 'MSQ',
-    question: 'Which statements about SVM decision boundaries and margins are true?',
-    hint: 'Focus on support vectors, margin maximization, and kernel transformations.',
-    solution: 'SVM maximizes the margin between classes. Support vectors are the training points that determine the boundary. Kernels allow nonlinear separation in transformed feature spaces.',
-    similar: 'Review margin, hinge loss, kernel trick, and support vector identification.'
-  }
-];
+const PAGE = 10;
+const BOOKMARK_KEY = 'gate_pyq_bookmarks';
 
-const PYQs = () => {
-  const [expandedId, setExpandedId] = useState(null);
-  const [activePanel, setActivePanel] = useState({});
+function loadBookmarks() {
+  try { return new Set(JSON.parse(localStorage.getItem(BOOKMARK_KEY) || '[]')); }
+  catch { return new Set(); }
+}
 
-  const toggleExpanded = (id) => {
-    setExpandedId(expandedId === id ? null : id);
-    setActivePanel({});
+export default function PYQs({ params, navigate }) {
+  const [filters, setFilters] = useState(null);
+  const [q, setQ] = useState('');
+  const [year, setYear] = useState('');
+  const [exam, setExam] = useState('');
+  const [subject, setSubject] = useState('');
+  const [type, setType] = useState('');
+  const [hasSolution, setHasSolution] = useState(false);
+  const [conceptId, setConceptId] = useState(params?.concept_id || '');
+
+  const [result, setResult] = useState(null);
+  const [page, setPage] = useState(0);
+  const [expanded, setExpanded] = useState(null);
+  const [bookmarks, setBookmarks] = useState(loadBookmarks);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => { api.getPyqFilters().then(setFilters).catch(() => {}); }, []);
+
+  const search = useCallback(async (resetPage = true) => {
+    setLoading(true);
+    const offset = (resetPage ? 0 : page) * PAGE;
+    if (resetPage) setPage(0);
+    try {
+      const data = await api.getPyqs({
+        q, year, exam, subject, type,
+        has_solution: hasSolution ? true : undefined,
+        concept_id: conceptId || undefined,
+        limit: PAGE, offset,
+      });
+      setResult(data);
+    } catch (e) { setResult({ items: [], total: 0 }); }
+    finally { setLoading(false); }
+  }, [q, year, exam, subject, type, hasSolution, conceptId, page]);
+
+  // initial + filter-driven search
+  useEffect(() => { search(true); /* eslint-disable-next-line */ }, [year, exam, subject, type, hasSolution, conceptId]);
+  useEffect(() => { search(false); /* eslint-disable-next-line */ }, [page]);
+
+  const toggleBookmark = (id) => {
+    setBookmarks((prev) => {
+      const n = new Set(prev);
+      n.has(id) ? n.delete(id) : n.add(id);
+      localStorage.setItem(BOOKMARK_KEY, JSON.stringify([...n]));
+      return n;
+    });
   };
 
-  const showPanel = (id, panel) => {
-    setActivePanel(prev => ({ ...prev, [id]: prev[id] === panel ? null : panel }));
-  };
-
-  const getPanelText = (pyq) => {
-    const panel = activePanel[pyq.id];
-    if (panel === 'try') return 'Solve it without looking at the solution. Write the known probabilities, compute the denominator, then substitute into the final expression.';
-    if (panel === 'hint') return pyq.hint;
-    if (panel === 'solution') return pyq.solution;
-    if (panel === 'similar') return pyq.similar;
-    return null;
-  };
+  const items = result?.items || [];
+  const total = result?.total || 0;
+  const pages = Math.ceil(total / PAGE);
 
   return (
     <div>
-      <header className="page-header pyq-header">
+      <header className="page-header">
         <div>
           <h1>PYQ Explorer</h1>
-          <p className="subtitle">Filter and practice Previous Year Questions.</p>
-        </div>
-        <div className="select-row">
-          <select className="app-select" aria-label="Filter by year"><option>Year: All</option></select>
-          <select className="app-select" aria-label="Filter by subject"><option>Subject: All</option></select>
-          <select className="app-select" aria-label="Filter by question type"><option>Type: All</option></select>
+          <p className="subtitle">{filters ? `${filters.stats.total} real questions · ${filters.stats.with_solution} with full solutions` : 'Previous Year Questions'}</p>
         </div>
       </header>
 
-      <div className="pyq-list">
-        {mockPyqs.map(pyq => (
-          <div key={pyq.id} className="glass pyq-card">
-            <button className="pyq-summary" type="button" onClick={() => toggleExpanded(pyq.id)}>
-              <div>
-                <strong>GATE {pyq.year}</strong> | {pyq.subject} | {pyq.marks} Marks [{pyq.type}]
-                <p>{pyq.question}</p>
-              </div>
-              <span>{expandedId === pyq.id ? 'Collapse' : 'Expand'}</span>
-            </button>
-
-            {expandedId === pyq.id && (
-              <div className="pyq-expanded">
-                <div className="action-toolbar">
-                  <button className="chip" type="button" onClick={() => showPanel(pyq.id, 'try')}>Try yourself</button>
-                  <button className="chip" type="button" onClick={() => showPanel(pyq.id, 'hint')}>Hint</button>
-                  <button className="chip" type="button" onClick={() => showPanel(pyq.id, 'solution')}>Solution</button>
-                  <button className="chip" type="button" onClick={() => showPanel(pyq.id, 'similar')}>Similar questions</button>
-                </div>
-                {getPanelText(pyq) && (
-                  <div className="explanation-panel">
-                    {getPanelText(pyq)}
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        ))}
+      <div className="pyq-filters">
+        <div className="pyq-search">
+          <input value={q} placeholder="🔍 Search questions…" onChange={(e) => setQ(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && search(true)} />
+        </div>
+        <select className="app-select" value={year} onChange={(e) => setYear(e.target.value)}>
+          <option value="">All years</option>
+          {filters?.years.map((y) => <option key={y} value={y}>{y}</option>)}
+        </select>
+        <select className="app-select" value={exam} onChange={(e) => setExam(e.target.value)}>
+          <option value="">All exams</option>
+          {filters?.exams.map((x) => <option key={x} value={x}>{x}</option>)}
+        </select>
+        <select className="app-select" value={subject} onChange={(e) => setSubject(e.target.value)}>
+          <option value="">All subjects</option>
+          {filters?.subjects.map((s) => <option key={s} value={s}>{s}</option>)}
+        </select>
+        <select className="app-select" value={type} onChange={(e) => setType(e.target.value)}>
+          <option value="">All types</option>
+          <option value="MCQ">MCQ</option>
+          <option value="MSQ">MSQ</option>
+          <option value="NAT">NAT</option>
+        </select>
+        <button className={`chip ${hasSolution ? '' : ''}`} style={hasSolution ? { borderColor: 'var(--accent-primary)', color: '#fff' } : {}}
+          onClick={() => setHasSolution((v) => !v)}>{hasSolution ? '✓ ' : ''}With solution</button>
+        {conceptId && <button className="chip" onClick={() => setConceptId('')}>✕ concept: {conceptId}</button>}
       </div>
+
+      {loading && <div className="loading"><span className="spinner" /> Searching…</div>}
+      {!loading && items.length === 0 && <div className="empty">No questions match these filters.</div>}
+
+      <div className="pyq-list">
+        {items.map((p) => {
+          const open = expanded === p.id;
+          const marked = bookmarks.has(p.id);
+          return (
+            <div className="pyq-card card" key={p.id}>
+              <div className="pyq-meta">
+                {p.exam && <span className="tag">{p.exam} {p.year}</span>}
+                <span className="tag accent">{p.question_type || 'MCQ'}</span>
+                {p.marks && <span className="tag gold">{p.marks}m</span>}
+                {p.subject && <span className="tag">{p.subject}</span>}
+                {p.has_solution && <span className="tag" style={{ color: 'var(--success)' }}>solution</span>}
+              </div>
+              <div className="pyq-q">
+                <div className="q-body" onClick={() => setExpanded(open ? null : p.id)} style={{ cursor: 'pointer' }}>
+                  {p.question_text}
+                </div>
+                <button className={`pyq-star ${marked ? 'on' : ''}`} title="Bookmark" onClick={() => toggleBookmark(p.id)}>
+                  {marked ? '★' : '☆'}
+                </button>
+              </div>
+
+              {open && (
+                <div className="pyq-detail">
+                  {p.options && Object.keys(p.options).length > 0 && (
+                    <div className="pyq-options">
+                      {Object.entries(p.options).map(([k, v]) => (
+                        <div key={k} className={`pyq-opt ${p.answer && String(p.answer).toUpperCase() === k ? 'ans' : ''}`}>
+                          <b>{k})</b> {v}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {p.answer && <p style={{ marginBottom: '0.7rem' }}><b>Answer:</b> <span style={{ color: 'var(--success)' }}>{p.answer}</span></p>}
+                  {p.solution
+                    ? <div className="solution">{p.solution}</div>
+                    : <p className="subtitle">No worked solution on file for this question.</p>}
+                  <div className="action-toolbar" style={{ marginTop: '0.8rem' }}>
+                    <button className="chip" onClick={() => navigate('tutor', { prefill: `Explain this GATE question:\n\n${p.question_text}` })}>🤖 Ask tutor</button>
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {pages > 1 && (
+        <div className="pager">
+          <button className="btn-secondary" disabled={page === 0} onClick={() => setPage((p) => Math.max(0, p - 1))}>← Prev</button>
+          <span>Page {page + 1} of {pages} · {total} questions</span>
+          <button className="btn-secondary" disabled={page + 1 >= pages} onClick={() => setPage((p) => p + 1)}>Next →</button>
+        </div>
+      )}
     </div>
   );
-};
-
-export default PYQs;
+}

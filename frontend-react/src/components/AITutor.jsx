@@ -1,123 +1,100 @@
 import React, { useState, useRef, useEffect } from 'react';
+import api from '../api';
 
-const SESSION_ID = 'user-' + Math.random().toString(36).slice(2, 9);
-const AUTH = 'Bearer gate-mentor-token';
+const SESSION_ID = 'tutor-' + Math.random().toString(36).slice(2, 9);
+const PERSONAS = ['Professor', 'Friendly Mentor', 'IIT Lecturer', 'Beginner Friendly'];
 
-const AITutor = () => {
+export default function AITutor({ params }) {
   const [messages, setMessages] = useState([
-    { role: 'ai', content: "Hello! I am your AI Mentor. Let's conquer the GATE DA syllabus together." }
+    { role: 'ai', content: "Hello! I'm your AI Mentor, grounded in your GATE DA knowledge base. Ask me anything — or tap a shortcut below." },
   ]);
   const [input, setInput] = useState('');
+  const [persona, setPersona] = useState('Professor');
   const [loading, setLoading] = useState(false);
   const bottomRef = useRef(null);
+  const prefilledRef = useRef(false);
 
-  useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
+  useEffect(() => { bottomRef.current?.scrollIntoView({ behavior: 'smooth' }); }, [messages, loading]);
 
-  const sendMessage = async (text) => {
-    const trimmed = text.trim();
+  const send = async (text) => {
+    const trimmed = (text ?? '').trim();
     if (!trimmed || loading) return;
-
-    setMessages(prev => [...prev, { role: 'user', content: trimmed }]);
+    setMessages((m) => [...m, { role: 'user', content: trimmed }]);
     setInput('');
     setLoading(true);
-
     try {
-      const res = await fetch('/api/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': AUTH,
-        },
-        body: JSON.stringify({ session_id: SESSION_ID, query: trimmed }),
-      });
-
-      if (!res.ok) throw new Error(`Server error ${res.status}`);
-      const data = await res.json();
-
-      setMessages(prev => [...prev, { role: 'ai', content: data.reply, citations: data.citations }]);
-    } catch (err) {
-      setMessages(prev => [...prev, {
-        role: 'ai',
-        content: `Sorry, I couldn't reach the backend. (${err.message})`
-      }]);
+      const data = await api.chat(trimmed, SESSION_ID, persona);
+      setMessages((m) => [...m, { role: 'ai', content: data.reply, citations: data.citations }]);
+    } catch (e) {
+      setMessages((m) => [...m, { role: 'ai', content: `Sorry, I couldn't reach the tutor. (${e.message})` }]);
     } finally {
       setLoading(false);
     }
   };
 
-  const handleChip = (text) => sendMessage(text);
+  // Deep-link prefill from Topics / PYQs ("Ask tutor about this")
+  useEffect(() => {
+    if (params?.prefill && !prefilledRef.current) {
+      prefilledRef.current = true;
+      send(params.prefill);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [params]);
 
   return (
     <div className="ai-tutor-view">
-      <header className="page-header tutor-header">
+      <header className="page-header">
         <div>
           <h1>AI Tutor</h1>
-          <p className="subtitle">Your personal mentor mapped exclusively to the GATE DA syllabus.</p>
+          <p className="subtitle">Your personal mentor, grounded in the GATE DA syllabus via RAG.</p>
         </div>
         <div className="select-row">
-          <select className="app-select" aria-label="Tutor persona">
-            <option>Professor</option>
-            <option>Friend</option>
-            <option>IIT Lecturer</option>
-            <option>Beginner Friendly</option>
-          </select>
-          <select className="app-select" aria-label="Difficulty">
-            <option>GATE Level</option>
-            <option>Beginner</option>
-            <option>Advanced</option>
+          <select className="app-select" value={persona} onChange={(e) => setPersona(e.target.value)} aria-label="Tutor persona">
+            {PERSONAS.map((p) => <option key={p} value={p}>{p}</option>)}
           </select>
         </div>
       </header>
 
-      <div id="chat-window" className="glass chat-panel">
+      <div className="glass chat-panel" style={{ borderRadius: 'var(--radius)' }}>
         <div className="messages">
-          {messages.map((message, index) => (
-            <div key={`${message.role}-${index}`} className={`message ${message.role}-message`}>
+          {messages.map((m, i) => (
+            <div key={i} className={`message ${m.role}-message`}>
               <div className="bubble">
-                {message.content}
-                {message.citations && message.citations.length > 0 && (
-                  <div className="citations" style={{ fontSize: '0.75em', opacity: 0.6, marginTop: 4 }}>
-                    Sources: {message.citations.join(', ')}
-                  </div>
+                {m.content}
+                {m.citations?.length > 0 && (
+                  <div className="citations">Sources: {m.citations.join(', ')}</div>
                 )}
               </div>
             </div>
           ))}
-          {loading && (
-            <div className="message ai-message">
-              <div className="bubble" style={{ opacity: 0.6 }}>Thinking...</div>
-            </div>
-          )}
+          {loading && <div className="message ai-message"><div className="bubble" style={{ opacity: 0.6 }}>Thinking…</div></div>}
           <div ref={bottomRef} />
         </div>
 
-        <div className="action-toolbar tutor-actions">
-          <button className="chip" type="button" onClick={() => handleChip('Explain this concept visually with an example.')}>Explain visually</button>
-          <button className="chip" type="button" onClick={() => handleChip('Show the step-by-step derivation.')}>Show derivation</button>
-          <button className="chip" type="button" onClick={() => handleChip('Give me a GATE PYQ on this topic.')}>Give a PYQ</button>
-          <button className="chip" type="button" onClick={() => handleChip('Quiz me on this concept.')}>Quiz me</button>
-          <button className="chip" type="button" onClick={() => handleChip('Create flashcards for this topic.')}>Create flashcards</button>
+        <div className="action-toolbar">
+          {[
+            ['Explain visually', 'Explain this concept visually with an intuitive example.'],
+            ['Show derivation', 'Show the full step-by-step derivation.'],
+            ['Give a PYQ', 'Give me a GATE previous-year question on this topic.'],
+            ['Quiz me', 'Ask me one GATE-level question and wait for my answer.'],
+          ].map(([label, prompt]) => (
+            <button key={label} className="chip" onClick={() => send(prompt)} disabled={loading}>{label}</button>
+          ))}
         </div>
 
         <div className="chat-input-container">
           <input
-            type="text"
-            id="chat-input"
-            placeholder="Ask me anything about Data Science and AI..."
             value={input}
+            placeholder="Ask anything about Data Science & AI…"
             onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && sendMessage(input)}
+            onKeyDown={(e) => e.key === 'Enter' && send(input)}
             disabled={loading}
           />
-          <button className="btn-primary" type="button" onClick={() => sendMessage(input)} disabled={loading}>
-            {loading ? '...' : 'Send'}
+          <button className="btn-primary" onClick={() => send(input)} disabled={loading || !input.trim()}>
+            {loading ? '…' : 'Send'}
           </button>
         </div>
       </div>
     </div>
   );
-};
-
-export default AITutor;
+}

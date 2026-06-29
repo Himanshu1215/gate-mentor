@@ -1,128 +1,158 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import api from '../api';
+import { useApp } from '../context/AppContext';
 
-const missionTasks = [
-  {
-    title: 'Revise Bayes Rule (15 min)',
-    detail: 'Mastery decaying from Level 4 to Level 3.'
-  },
-  {
-    title: 'Learn Logistic Regression',
-    detail: 'Next concept in the syllabus DAG.'
-  },
-  {
-    title: 'Solve 12 PYQs (Mixed)',
-    detail: 'Focus on Machine Learning topics.'
-  }
-];
+function Ring({ progress, size = 120, stroke = 10, children }) {
+  const r = (size - stroke) / 2;
+  const c = 2 * Math.PI * r;
+  const off = c * (1 - Math.max(0, Math.min(1, progress)));
+  return (
+    <div className="level-ring" style={{ width: size, height: size }}>
+      <svg width={size} height={size}>
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth={stroke} />
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="url(#ringGrad)" strokeWidth={stroke}
+          strokeDasharray={c} strokeDashoffset={off} strokeLinecap="round"
+          transform={`rotate(-90 ${size / 2} ${size / 2})`} style={{ transition: 'stroke-dashoffset 0.6s' }} />
+        <defs>
+          <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#7c3aed" />
+            <stop offset="100%" stopColor="#00f0ff" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <div className="ring-label">{children}</div>
+    </div>
+  );
+}
 
-const Dashboard = () => {
-  const [sessionActive, setSessionActive] = useState(false);
+export default function Dashboard({ navigate }) {
+  const { gamification, profile } = useApp();
+  const [stats, setStats] = useState(null);
+  const [alerts, setAlerts] = useState([]);
+  const [next, setNext] = useState(null);
+  const [due, setDue] = useState([]);
+
+  useEffect(() => {
+    api.dashboardStats().then(setStats).catch(() => {});
+    api.coachAlerts().then((d) => setAlerts(d.alerts || [])).catch(() => {});
+    api.curriculumNext().then(setNext).catch(() => {});
+    api.revisionDue().then((d) => setDue(d.due || [])).catch(() => {});
+  }, []);
+
+  const g = gamification || {};
+  const name = profile?.display_name || 'Aspirant';
 
   return (
     <div>
-      <header>
+      <header className="page-header">
         <div>
-          <h1>Dashboard</h1>
-          <p className="subtitle">Welcome back. Here is your daily overview.</p>
+          <h1>Welcome back, {name} 👋</h1>
+          <p className="subtitle">Here's your mission control for GATE DA.</p>
         </div>
-        <button
-          className="btn-primary"
-          type="button"
-          onClick={() => setSessionActive(true)}
-          style={{ background: sessionActive ? 'var(--success)' : '' }}
-        >
-          {sessionActive ? 'Session Active' : 'Start Study Session'}
-        </button>
+        <button className="btn-primary" onClick={() => navigate('mock')}>⏱️ Start Mock Test</button>
       </header>
 
-      <div className="stats-grid">
-        <div className="stat-card glass">
-          <h3>Target AIR</h3>
-          <div className="stat-value">540</div>
-          <div className="stat-subtext" style={{ color: 'var(--success)' }}>On Track</div>
+      <div className="dash-grid">
+        <div className="card hero-card">
+          <Ring progress={g.level_progress ?? 0}>
+            <b>{g.level ?? 1}</b><small>LEVEL</small>
+          </Ring>
+          <div style={{ flex: 1 }}>
+            <div style={{ fontSize: '1.1rem', fontWeight: 650, marginBottom: '0.3rem' }}>{g.xp ?? 0} XP</div>
+            <p className="subtitle" style={{ marginBottom: '0.8rem' }}>
+              {g.xp_into_level ?? 0} / {g.xp_per_level ?? 500} XP to level {(g.level ?? 1) + 1}
+            </p>
+            <div style={{ display: 'flex', gap: '1.2rem', flexWrap: 'wrap' }}>
+              <div><span className="flame">🔥</span> <b>{g.streak ?? 0}</b> day streak</div>
+              <div>🏅 <b>{g.badges_earned ?? 0}</b> badges</div>
+              <div>🎯 <b>{g.daily_goal_done ?? 0}/{g.daily_goal ?? 10}</b> today</div>
+            </div>
+          </div>
         </div>
-        <div className="stat-card glass">
-          <h3>Projected Score</h3>
-          <div className="stat-value">62.5</div>
-          <div className="stat-subtext">+2.1 since last week</div>
-        </div>
-        <div className="stat-card glass">
-          <h3>Hours Studied</h3>
-          <div className="stat-value">142h</div>
-          <div className="stat-subtext">Top 15% of users</div>
-        </div>
-        <div className="stat-card glass">
-          <h3>Study Streak</h3>
-          <div className="stat-value">12 days</div>
-          <div className="stat-subtext">Keep it up!</div>
+
+        <div className="card">
+          <h2>Your numbers</h2>
+          <div className="stat-grid">
+            <div className="stat-card">
+              <span className="value good">{stats ? `${stats.readiness_percentage}%` : '—'}</span>
+              <span className="label">Readiness</span>
+            </div>
+            <div className="stat-card">
+              <span className="value">{stats ? `${stats.mastered_concepts}/${stats.total_concepts}` : '—'}</span>
+              <span className="label">Concepts mastered</span>
+            </div>
+            <div className="stat-card">
+              <span className="value warn">{stats ? `#${stats.projected_air}` : '—'}</span>
+              <span className="label">Projected AIR</span>
+            </div>
+            <div className="stat-card">
+              <span className="value">{stats ? stats.total_quizzes : '—'}</span>
+              <span className="label">Questions solved</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="dashboard-layout">
-        <div className="dashboard-main">
-          <section className="glass dashboard-section">
-            <h2>Today's Mission</h2>
-            {!sessionActive ? (
-              <div className="muted-text">Click "Start Study Session" to unlock today's optimal path.</div>
-            ) : (
-              <div className="mission-list">
-                {missionTasks.map(task => (
-                  <label key={task.title} className="mission-item">
-                    <input type="checkbox" />
-                    <span>
-                      <strong>{task.title}</strong>
-                      <small>{task.detail}</small>
-                    </span>
-                  </label>
-                ))}
-              </div>
-            )}
-          </section>
-
-          <section className="alerts-section">
-            <h2>AI Coach Alerts</h2>
-            <div className="alerts-container glass">
-              <div className="alert-item warning">
-                <h4>High Risk: Negative Marking</h4>
-                <p>Your confidence calibration is skewed. You are attempting hard questions you do not know, leading to -0.66 penalties.</p>
-              </div>
-              <div className="alert-item success">
-                <h4>Excellent Work</h4>
-                <p>You have mastered Vector Spaces. It has been pushed to your long-term revision cycle.</p>
+      <div className="dash-grid" style={{ marginTop: '1.2rem' }}>
+        <div className="card">
+          <h2>Coach alerts</h2>
+          {alerts.length === 0 && <div className="empty">No alerts right now.</div>}
+          {alerts.map((a, i) => (
+            <div className={`alert ${a.type}`} key={i}>
+              <div>
+                <div className="a-title">{a.title}</div>
+                <div className="a-msg">{a.message}</div>
               </div>
             </div>
-          </section>
+          ))}
+          {next && next.concept_id !== 'ALL_DONE' && (
+            <div style={{ marginTop: '1rem' }}>
+              <h2>Next up</h2>
+              <div className="list-row">
+                <div>
+                  <div style={{ fontWeight: 600 }}>{next.topic}</div>
+                  <div className="lr-sub">{next.action === 'TEACH' ? 'Learn this next' : 'Time to review'}</div>
+                </div>
+                <button className="btn-secondary" onClick={() => navigate('quiz', { mode: 'topic', conceptId: next.concept_id, topic: next.topic })}>Practice →</button>
+              </div>
+            </div>
+          )}
         </div>
 
-        <aside className="dashboard-side">
-          <section className="glass dashboard-section">
-            <h2>Revision Due (5 Topics)</h2>
-            <ul className="topic-list">
-              <li className="danger-text">Conditional Probability</li>
-              <li className="danger-text">Matrix Determinants</li>
-              <li>Eigenvalues</li>
-              <li>Gradient Descent</li>
-              <li>SQL Joins</li>
-            </ul>
-          </section>
-
-          <section className="glass dashboard-section">
-            <h2>Weakest Topics</h2>
-            <div className="weak-topic-list">
+        <div className="card">
+          <h2>Due for revision {due.length > 0 && <span className="tag gold">{due.length}</span>}</h2>
+          {due.length === 0 && <div className="empty">Nothing due — you're all caught up! 🎉</div>}
+          {due.slice(0, 5).map((d) => (
+            <div className="list-row" key={d.concept_id}>
               <div>
-                <div className="progress-label"><span>Decision Trees</span><span>32%</span></div>
-                <div className="progress-track"><div className="progress-fill danger-fill" style={{ width: '32%' }} /></div>
+                <div style={{ fontWeight: 600 }}>{d.subtopic || d.topic}</div>
+                <div className="lr-sub">{d.subject} · {d.days_since}d since review</div>
               </div>
-              <div>
-                <div className="progress-label"><span>Relational Algebra</span><span>45%</span></div>
-                <div className="progress-track"><div className="progress-fill warning-fill" style={{ width: '45%' }} /></div>
-              </div>
+              <span className="tag accent">Lvl {d.state_level}</span>
             </div>
-          </section>
-        </aside>
+          ))}
+          {due.length > 0 && (
+            <button className="btn-secondary" style={{ marginTop: '0.8rem' }} onClick={() => navigate('revision')}>
+              Go to revision →
+            </button>
+          )}
+        </div>
       </div>
+
+      {g.badges && (
+        <div className="card" style={{ marginTop: '1.2rem' }}>
+          <h2>Achievements</h2>
+          <div className="badge-grid">
+            {g.badges.map((b) => (
+              <div className={`badge ${b.earned ? 'earned' : ''}`} key={b.id} title={b.description}>
+                <span className="b-ico">{b.icon}</span>
+                <span className="b-title">{b.title}</span>
+                <span className="b-desc">{b.description}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
-};
-
-export default Dashboard;
+}
