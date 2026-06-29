@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q7",
+  "question_seq": 150,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In Panel I of the figure below, the front view and top view of a structure are shown. Which one of the 3D structures shown in Panel II possesses the views shown in Panel I?",
+  "options": {
+    "A": "(i)",
+    "B": "(ii)",
+    "C": "(iii)",
+    "D": "(iv)"
+  },
+  "answer": null,
+  "solution": null
+}

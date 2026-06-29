@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q15",
+  "question_seq": 305,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let Φ(⋅) denote the cumulative distribution function of a standard normal random variable. If the random variable 𝑋 has the cumulative distribution function 𝐹(𝑥) = {Φ(𝑥) 𝑖𝑓 𝑥< −1 Φ(𝑥+ 1) 𝑖𝑓 𝑥≥−1, then which one of the following statements is true?",
+  "options": {
+    "A": "𝑃(𝑋≤−1) =",
+    "B": "𝑃(𝑋= −1) =",
+    "C": "𝑃(𝑋< −1) =",
+    "D": "𝑃(𝑋≤0) ="
+  },
+  "answer": null,
+  "solution": null
+}

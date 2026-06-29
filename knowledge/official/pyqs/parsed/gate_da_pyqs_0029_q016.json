@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q16",
+  "question_seq": 29,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "If a relational decomposition is not dependency-preserving, which one of the following relational operators will be executed more frequently in order to maintain the depen-",
+  "options": {
+    "D": "encies?",
+    "A": "Selection",
+    "B": "Projection",
+    "C": "Join"
+  },
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q9",
+  "question_seq": 119,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The corners and mid-points of the sides of a triangle are named using the distinct letters P, Q, R, S, T and U, but not necessarily in the same order. Consider the following statements: The line joining P and R is parallel to the line joining Q and S. P is placed on the side opposite to the corner T. S and U cannot be placed on the same side. Which one of the following statements is correct based on the above information?",
+  "options": {
+    "A": "P cannot be placed at a corner",
+    "B": "S cannot be placed at a corner",
+    "C": "U cannot be placed at a mid-point (d) R cannot be placed at a corner"
+  },
+  "answer": "B",
+  "solution": null
+}

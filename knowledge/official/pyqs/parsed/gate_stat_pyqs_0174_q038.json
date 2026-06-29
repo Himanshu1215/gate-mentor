@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q38",
+  "question_seq": 174,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let 𝐴∈𝑀𝑛(ℝ) be an 𝑛× 𝑛 real matrix, 𝑛≥2. Consider the following two statements: (I) If 𝜆∈ℂ is an eigenvalue of 𝐴, then its complex conjugate 𝜆̅ is also an eigenvalue. (II) If 𝑣= (𝑣1, 𝑣2, … , 𝑣𝑛) ∈ℂ𝑛 is an eigenvector corresponding to eigenvalue 𝜆= 𝑥+ 𝑖𝑦, 𝑦≠0, then Re(𝑣) = (Re(𝑣1), … , Re(𝑣𝑛)) and Im(𝑣) = (Im(𝑣1), … , Im(𝑣𝑛))",
+  "options": {
+    "A": "re linearly independent vectors over ℝ. Which of the following statements is correct?",
+    "B": "Only statement (II) is correct",
+    "C": "Both statements (I) and (II) are correct",
+    "D": "Neither statement (I) nor statement (II) is correct"
+  },
+  "answer": null,
+  "solution": null
+}

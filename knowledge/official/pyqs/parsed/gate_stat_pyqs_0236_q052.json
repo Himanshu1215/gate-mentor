@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q52",
+  "question_seq": 236,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋1, … , 𝑋𝑛 be a random sample from a uniform distribution over the interval 2 , 2), where 𝜃> 0 is an unknown parameter. Then which of the following options is/are correct?",
+  "options": {
+    "A": "2 max{𝑋1, … , 𝑋𝑛} is the maximum likelihood estimator of 𝜃",
+    "B": "(min{𝑋1, … , 𝑋𝑛}, max{𝑋1, … , 𝑋𝑛}) is a sufficient statistic",
+    "C": "(min{𝑋1, … , 𝑋𝑛}, max{𝑋1, … , 𝑋𝑛}) is a complete statistic",
+    "D": "2(𝑛+1) max{|𝑋1|, … , |𝑋𝑛|} is a uniformly minimum variance unbiased estimator of 𝜃"
+  },
+  "answer": null,
+  "solution": null
+}

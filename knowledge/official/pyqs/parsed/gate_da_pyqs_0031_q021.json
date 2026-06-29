@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q21",
+  "question_seq": 31,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "It is given that P(X ≥2) = 0.25 for an exponentially distributed random variable X with E[X] = 1 λ, where E[X] denotes the expectation of X. What is the value of λ? (ln denotes natural logarithm)",
+  "options": {
+    "A": "ln 2",
+    "B": "ln 4",
+    "C": "ln 3",
+    "D": "ln 0.25"
+  },
+  "answer": null,
+  "solution": null
+}

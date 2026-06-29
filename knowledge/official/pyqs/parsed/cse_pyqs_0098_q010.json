@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q10",
+  "question_seq": 98,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The preorder traversal of a binary search tree is 15, 10. 12, 11, 20, 18, 16, 19. Which one of the following is the postorder traversal of the tree?",
+  "options": {
+    "A": "20, 19, 18, 16, 15, 12, 11, 10",
+    "B": "10, 11, 12, 15, 16, 18, 19, 20",
+    "C": "19, 16, 18, 20, 11, 12, 10, 15",
+    "D": "11, 12, 10, 16, 19, 18, 20, 15"
+  },
+  "answer": "D",
+  "solution": null
+}

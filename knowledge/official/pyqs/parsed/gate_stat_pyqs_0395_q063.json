@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q63",
+  "question_seq": 395,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "If 𝑃(𝑥, 𝑦, 𝑧) is a point which is nearest to the origin and lies on the intersection of the surfaces 𝑧= 𝑥𝑦+ 5 and 𝑥+ 𝑦+ 𝑧= 1. Then the distance (in integer)",
+  "options": {
+    "B": "etween the origin and the point 𝑃 is ______"
+  },
+  "answer": null,
+  "solution": null
+}

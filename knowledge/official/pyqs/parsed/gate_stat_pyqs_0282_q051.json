@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q51",
+  "question_seq": 282,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let (𝑋, 𝑌) be a random vector having joint probability density function given by 𝑓𝑋,𝑌(𝑥, 𝑦) = { 4 ⁡⁡⁡if⁡𝑥2 ≤𝑦< 1⁡and⁡ −1 ≤𝑥≤1 0⁡⁡⁡⁡otherwise. Which of the following statements is/are true?",
+  "options": {
+    "A": "𝑋 has the same distribution as −𝑋",
+    "B": "𝐸(𝑌⁡|⁡𝑋= 0) =",
+    "C": "The correlation coefficient between 𝑋 and 𝑌 is 0",
+    "D": "𝑋 and 𝑌 are independent"
+  },
+  "answer": null,
+  "solution": null
+}

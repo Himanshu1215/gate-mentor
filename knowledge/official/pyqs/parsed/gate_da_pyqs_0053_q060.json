@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q60",
+  "question_seq": 53,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let D = {x(1), . . . , x(n)} be a dataset of n observations where each x(i) ∈R100. It is given that i=1 x(i) = 0. The covariance matrix computed from D has eigenvalues λi = 1002−i, 1 ≤i ≤100. Let u ∈R100 be the direction of maximum variance with u⊤u = 1. The value of i=1 \u0000u⊤x(i)\u00012 = (",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

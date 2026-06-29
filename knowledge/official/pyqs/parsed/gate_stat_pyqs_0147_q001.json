@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q1",
+  "question_seq": 147,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The antonym of the word protagonist is ________.",
+  "options": {
+    "A": "agnostic",
+    "B": "antagonist",
+    "C": "arsonist",
+    "D": "anarchist"
+  },
+  "answer": null,
+  "solution": null
+}

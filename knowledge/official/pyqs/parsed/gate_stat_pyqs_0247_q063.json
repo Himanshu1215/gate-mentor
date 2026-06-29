@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q63",
+  "question_seq": 247,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let 𝑋∼𝐵𝑖𝑛(3, 𝜃), where 𝜃∈(0,1) is an unknown parameter. For testing 𝐻0: 4 ≤𝜃≤ 4 against 𝐻1: 𝜃< 4 or 𝜃> 4 , consider the test 𝜙(𝑥) = {1 if 𝑥∈{0, 3} 0 if 𝑥∈{1, 2}. The size of the test 𝜙 is __________ (rounded off to two decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q30",
+  "question_seq": 371,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 and 𝑌 be two random variables such that the moment generating function of 𝑋 is 𝑀(𝑡) and the moment generating function of 𝑌 is 𝐻(𝑡) = ൬3 4 𝑒ଶ௧+ 1 4൰𝑀(𝑡), where 𝑡 ∈(−ℎ, ℎ), ℎ> 0. If the mean and the variance of 𝑋 are ଶ and ସ , respectively, then the variance of 𝑌 (in integer) is equal to _______",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

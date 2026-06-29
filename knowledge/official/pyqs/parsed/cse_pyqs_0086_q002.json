@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q2",
+  "question_seq": 86,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Raman is confident of speaking English ________ six months as he has been practising regularlythe last three weeks.",
+  "options": {
+    "A": "for, since",
+    "B": "within, for",
+    "C": "during, for",
+    "D": "for, in"
+  },
+  "answer": "B",
+  "solution": null
+}

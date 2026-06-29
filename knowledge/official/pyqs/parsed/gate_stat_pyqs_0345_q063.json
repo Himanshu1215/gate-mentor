@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q63",
+  "question_seq": 345,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {−1, − 2 , 1, 2 , 3} be a realization of a random sample of size 5 from a population having 𝑁( 2 , 𝜎2) distribution, where 𝜎> 0 is an unknown parameter. Let 𝑇 be an unbiased estimator of 𝜎2 whose variance attains the",
+  "options": {
+    "C": "ramer-Rao lower bound. Then based on the above data, the realized value of 𝑇 (rounded off to two decimal places) equals _______________"
+  },
+  "answer": null,
+  "solution": null
+}

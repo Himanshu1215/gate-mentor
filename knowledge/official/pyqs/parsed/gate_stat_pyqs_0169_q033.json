@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q33",
+  "question_seq": 169,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋1, 𝑋2, … , 𝑋10 be a random sample from the following probability density function 𝑓(𝑥) = {2 (𝑥−𝜇)𝑒−(𝑥−𝜇)2 if 𝑥> 𝜇 0 otherwise, where 𝜇∈(−∞, ∞) is an unknown parameter. It is given that the observed value of min{𝑋1, 𝑋2, … , 𝑋10} is 1. Using the pivot min{𝑋1, 𝑋2, … , 𝑋10} −𝜇, suppose a 95% confidence interval of 𝜇 is of the form (𝑐, 1), then 𝑐 equals ______________ (rounded off to two decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

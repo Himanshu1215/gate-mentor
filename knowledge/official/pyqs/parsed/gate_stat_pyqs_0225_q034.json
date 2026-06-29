@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q34",
+  "question_seq": 225,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let (1, 3), (2, 4), (7, 8) be three independent observations. Then the sample Spearman rank correlation coefficient based on the above observations is ____________ (rounded off to two decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

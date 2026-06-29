@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q54",
+  "question_seq": 84,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Suppose that in an IP-over-Ethernet network, a machine X wishes to find the MAC address of another machine Y in its subnet. Which one of the following techniques can be used for this?",
+  "options": {
+    "A": "X sends an ARP request packet with broadcast IP address in its local subnet",
+    "B": "X sends an ARP request packet to the local gateway’s MAC address which then finds the MAC address of Y and sends to X",
+    "C": "X sends an ARP request packet with broadcast MAC address in its local subnet",
+    "D": "X sends an ARP request packet to the local gateway’s IP address which then finds the MAC address of Y and sends to X"
+  },
+  "answer": "C",
+  "solution": null
+}

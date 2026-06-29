@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q9",
+  "question_seq": 93,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The dawn of the 21st century witnessed the melting glaciers oscillating between giving too much and too little to billions of people who depend on their for fresh water. The UN climate report estimates that without deep cuts to man-made emissions, at least 30% of the northern hemisphere’s surface permafrost could melt by the end of the century. Given this situation of imminent global exodus of billions of people displaced by rising seas, nation-states need to rethink their carbon footprint for political concerns, if not for environmental ones. Which one of the following statements can be inferred from the given passage?",
+  "options": {
+    "A": "Billions of people are affected by melting glaciers.",
+    "B": "Billions of people are responsible for man-made emissions.",
+    "C": "Nation-states do not have environmental concerns.",
+    "D": "Nation-states are responsible for providing fresh water to billions of people."
+  },
+  "answer": "A",
+  "solution": null
+}

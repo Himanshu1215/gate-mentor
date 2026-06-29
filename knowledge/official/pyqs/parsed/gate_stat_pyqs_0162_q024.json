@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q24",
+  "question_seq": 162,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The value of lim 𝑛→∞𝑛 ∫ 𝑒𝑡2−1 𝑑𝑡 1+ 1 1−1 equals __________ (",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

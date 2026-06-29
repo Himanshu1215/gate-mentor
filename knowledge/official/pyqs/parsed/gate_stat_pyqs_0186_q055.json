@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q55",
+  "question_seq": 186,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let {𝑁(𝑡); 𝑡≥0} be a homogeneous Poisson process with rate 3, and let 𝑇1 denote the first arrival time. Then which of the following statements is/are correct?",
+  "options": {
+    "A": "𝐸(𝑇1) = 3",
+    "B": "𝐸(𝑇1) =",
+    "C": "𝐸(𝑇1|𝑁(2) = 4) =",
+    "D": "𝐸(𝑇1|𝑁(3) = 4) ="
+  },
+  "answer": null,
+  "solution": null
+}

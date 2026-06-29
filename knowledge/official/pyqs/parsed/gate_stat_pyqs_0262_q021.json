@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q21",
+  "question_seq": 262,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {𝐹𝑛}𝑛≥1 be a sequence of cumulative distribution functions given by 𝐹𝑛(𝑥) = 0⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡if⁡⁡𝑥< −𝑛⁡ 𝑥+ 𝑛 2𝑛⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡if −𝑛≤𝑥< 𝑛 ⁡⁡⁡⁡⁡⁡⁡⁡1⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡if⁡𝑥≥𝑛.⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡ Which one of the following statements is true?",
+  "options": {
+    "A": "𝐹𝑛(𝑥) converges for all 𝑥∈ℝ and the limiting function is a cumulative",
+    "D": "istribution function",
+    "B": "𝐹𝑛(𝑥) converges for all 𝑥∈ℝ, but the limiting function is not a cumulative",
+    "C": "𝐹𝑛(𝑥) does not converge for any 𝑥∈ℝ"
+  },
+  "answer": null,
+  "solution": null
+}

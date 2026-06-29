@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q56",
+  "question_seq": 287,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋1, 𝑋2, … , 𝑋𝑛 be a random sample of size 𝑛⁡(≥2) from a population having probability density function 𝑓(𝑥; 𝜆) = { 𝜆𝑒−⁡𝑥 𝜆⁡⁡⁡⁡⁡⁡if⁡⁡𝑥≥0 0⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡otherwise, where 𝜆> 0 is an unknown parameter. Let 𝑇1 =⁡∑ 𝑖=1",
+  "options": {
+    "A": "nd 𝑇2 = (∑ 𝑋𝑖) 𝑖=1 −1. For any positive integer 𝜈 and any 𝛼∈(0, 1), let 𝜒𝜈;𝛼",
+    "D": "enote the (1 −𝛼)-th quantile of the central chi-square distribution with 𝜈",
+    "B": "𝐻0 is rejected if 𝜆0 𝑇1 > 𝜒2𝑛,1−𝛼",
+    "C": "𝐻0 is rejected if 2 𝑇2 > 𝜒2𝑛,𝛼"
+  },
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q16",
+  "question_seq": 259,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let 𝐴= [𝑎1 𝑏3] be a 2 × 3 real matrix, where (𝑎1, 𝑎2, 𝑎3) ≠(0, 0, 0) and (𝑏1, 𝑏2, 𝑏3) ≠(0, 0, 0). Assume that the rank of 𝐴 is 1. Define the subspaces 𝑊= {𝒙= [ ]⁡∈⁡ℝ3: 𝐴𝒙= 𝟎}, 𝑊1 = {𝒙= [ ]⁡∈⁡ℝ3: 𝑎1𝑥1 + 𝑎2𝑥2 + 𝑎3𝑥3 = 0} and 𝑊2 = {𝒙= [ ]⁡∈⁡ℝ3: 𝑏1𝑥1 + 𝑏2𝑥2 + 𝑏3𝑥3 = 0}.",
+  "options": {
+    "C": "onsider the following statements: (I) 𝑊= 𝑊1 ∩𝑊2 (II) 𝑊1 = 𝑊2 Which of the above statements is/are true?",
+    "A": "Only (I)",
+    "B": "Only (II)",
+    "D": "Neither (I) nor (II)"
+  },
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q15",
+  "question_seq": 155,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 and 𝑌 be identically distributed random variables with variance 𝜎2 ∈(0, ∞). Then the correlation coefficient between 𝑋 and 𝑌 is",
+  "options": {
+    "A": "1 − 𝐸(𝑋−𝑌)2 2 𝜎2",
+    "B": "1 − 2 𝐸(𝑋−𝑌)2",
+    "C": "1 − 𝐸(𝑋−𝑌)2",
+    "D": "1 − 𝐸(𝑋+𝑌)2"
+  },
+  "answer": null,
+  "solution": null
+}

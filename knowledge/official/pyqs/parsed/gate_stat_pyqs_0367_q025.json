@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q25",
+  "question_seq": 367,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 and 𝑌 be two independent exponential random variables with 𝐸(𝑋ଶ) = ଶ and 𝐸(𝑌ଶ) = ଽ . Then 𝑃(𝑋< 2𝑌) (rounded off to two decimal places) is equal to ______",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q23",
+  "question_seq": 14,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Probability to get a boy & girl is 1/2 if A man has three children, the probability to get 2 girls and 1 boy.",
+  "options": {
+    "A": "(b)",
+    "C": "(D) Sol.",
+    "B": "The probability to get a boy and girl is 1 2 . A man has three children, the probability to get 2 girl and 1 boy is___. S = {BBB, GGG, BBG, GGB} n(S) = 4 P(E) = n(E) n(S) [NAT]"
+  },
+  "answer": null,
+  "solution": null
+}

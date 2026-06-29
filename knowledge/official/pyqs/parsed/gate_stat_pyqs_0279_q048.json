@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q48",
+  "question_seq": 279,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let 𝐴 be an 𝑛× 𝑛⁡ real matrix. Which of the following statements is/are true?",
+  "options": {
+    "A": "If 𝐴 is a symmetric matrix such that 𝐴+ 𝜖⁡𝐼𝑛 is positive semi-definite for every 𝜖> 0, where 𝐼𝑛 is the 𝑛× 𝑛 identity matrix, then 𝐴 is positive semi-definite",
+    "B": "If 𝑛 is odd, then 𝐴−𝐴𝑇 is not invertible",
+    "C": "If 𝐴 is a symmetric matrix such that the singular values of 𝐴 are all strictly positive, then 𝐴 is positive definite",
+    "D": "If 1 is the only singular value of 𝐴, then 𝐴 is orthogonal"
+  },
+  "answer": null,
+  "solution": null
+}

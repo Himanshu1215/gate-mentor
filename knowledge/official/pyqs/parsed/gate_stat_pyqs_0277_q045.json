@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q45",
+  "question_seq": 277,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑿𝟏, 𝑿𝟐, … , 𝑿𝟐𝟓 be a random sample of size 25 from a population having 𝑁3(𝝁, Σ) distribution, where 𝝁 and non-singular Σ are unknown parameters. Let 𝑆= 24 ∑ (𝑿𝑗−𝑿̅)(𝑿𝑗−𝑿̅) 𝑗=1 , where 𝑿⁡̅ = 25 ∑ 𝑗=1 , and 𝐵=⁡[ 1 1]. Then which one of the following statements is true?",
+  "options": {
+    "A": "24⁡𝐵𝑆𝐵𝑇 follows a Wishart distribution of order 3 with 24 degrees of freedom",
+    "B": "24⁡𝐵𝑆𝐵𝑇 follows a Wishart distribution of order 2 with 25 degrees of freedom",
+    "C": "24⁡𝐵𝑆𝐵𝑇 follows a Wishart distribution of order 2 with 24 degrees of freedom",
+    "D": "24⁡𝐵𝑆𝐵𝑇 follows a Wishart distribution of order 3 with 25 degrees of freedom"
+  },
+  "answer": null,
+  "solution": null
+}

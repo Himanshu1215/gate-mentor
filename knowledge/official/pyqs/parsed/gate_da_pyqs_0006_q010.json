@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q10",
+  "question_seq": 6,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let f (n) denotes the maximum number of comparison made while searching for an entry in a sorted array of size n using binary search. Which one of the following options is TRUE?",
+  "options": {
+    "A": "( ) / 2 F n",
+    "B": "( ) / 2 F n",
+    "C": "( ) F n",
+    "D": "( ) / 2 F n Sol."
+  },
+  "answer": null,
+  "solution": null
+}

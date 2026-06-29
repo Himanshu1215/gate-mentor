@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q7",
+  "question_seq": 20,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Weight of a person can be expressed as a function of their age. The function usually varies from person to person. Suppose this function is identical for two brothers,",
+  "options": {
+    "A": "nd it monotonically increases till the age of 50 years and then it monotonically",
+    "D": "ecreases. Let 𝑎1 and 𝑎2 (in years) denote the ages of the brothers and 𝑎1 < 𝑎2. Which one of the following statements is correct about their age on the day when they attain the same weight?",
+    "B": "𝑎1 < 50 < 𝑎2",
+    "C": "50 < 𝑎1 < 𝑎2"
+  },
+  "answer": null,
+  "solution": null
+}

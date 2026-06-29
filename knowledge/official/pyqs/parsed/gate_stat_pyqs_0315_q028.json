@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q28",
+  "question_seq": 315,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Suppose that 𝑥 is an observed sample of size 1 from a population with probability density function 𝑓(⋅). Based on 𝑥, consider testing 𝐻0: 𝑓(𝑦) = √2𝜋 𝑒− 𝑦2 2 ; 𝑦∈ℝ against 𝐻1: 𝑓(𝑦) = 1 2 𝑒−|𝑦| ; 𝑦∈ℝ. Then which one of the following statements is true?",
+  "options": {
+    "A": "The most powerful test rejects 𝐻0 if |𝑥| > 𝑐 for some 𝑐> 0",
+    "B": "The most powerful test rejects 𝐻0 if |𝑥| < 𝑐 for some 𝑐> 0",
+    "C": "The most powerful test rejects 𝐻0 if ||𝑥| −1| > 𝑐 for some 𝑐> 0",
+    "D": "The most powerful test rejects 𝐻0 if ||𝑥| −1| < 𝑐 for some 𝑐> 0"
+  },
+  "answer": null,
+  "solution": null
+}

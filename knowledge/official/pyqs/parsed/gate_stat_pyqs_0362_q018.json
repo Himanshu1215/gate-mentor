@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q18",
+  "question_seq": 362,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋ଵ, 𝑋ଶ, … , 𝑋ଵ଼ be a random sample from the distribution 𝑓(𝑥; 𝜃) = ቐ 𝜃𝑒ି௫మ/ఏ, 𝑥> 0, 0, 𝑥≤0. Let 𝜒ఈ,௡",
+  "options": {
+    "D": "enote the value of a Chi-square random variable 𝑌 with 𝑛 degrees of freedom such that 𝑃൫𝑌> 𝜒ఈ,௡ ൯= 𝛼. If 𝑥ଵ, 𝑥ଶ, … , 𝑥ଵ଼ is a realization of this random sample, then, based on the sufficient statistic ∑ ௜ୀଵ , which one of the following is a 98% confidence interval for 𝜃?",
+    "A": "ቆ2 ∑ ௜ୀଵ 𝜒଴.଴ଵ,ଷ଺ , 2 ∑ ௜ୀଵ 𝜒଴.ଽଽ,ଷ଺",
+    "B": "ቆ2 ∑ ௜ୀଵ 𝜒଴.଴ଵ,ଵ଼ , 2 ∑ ௜ୀଵ 𝜒଴.ଽଽ,ଵ଼",
+    "C": "௜ୀଵ 𝜒଴.଴ଵ,ଷ଺ , ∑ ௜ୀଵ 𝜒଴.ଽଽ,ଷ଺"
+  },
+  "answer": null,
+  "solution": null
+}

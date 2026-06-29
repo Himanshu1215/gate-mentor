@@ -1,0 +1,17 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q35",
+  "question_seq": 171,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let (𝑋1, 𝑋2, 𝑋3)𝑇 follow a trivariate normal distribution with mean vector 𝜇 and",
+  "options": {
+    "C": "ovariance matrix Σ given by 𝜇= ( ) and Σ = ( Then Var(𝑋1| 𝑋2 = 1, 𝑋3 = −1) equals ____________ (rounded off to two",
+    "D": "ecimal places)."
+  },
+  "answer": null,
+  "solution": null
+}

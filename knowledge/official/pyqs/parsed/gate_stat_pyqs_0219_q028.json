@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q28",
+  "question_seq": 219,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 be a random variable with distribution function 𝐹, such that lim ℎ→0−𝐹(3 + ℎ) = 1 4 and 𝐹(3) = 3 4 . Then 16 Pr(𝑋= 3) equals ____________ (",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

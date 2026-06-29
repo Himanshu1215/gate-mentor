@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q52",
+  "question_seq": 338,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 be a positive valued continuous random variable with finite mean. If 𝑌= [𝑋], the largest integer less than or equal to 𝑋, then which of the following statements is/are true?",
+  "options": {
+    "A": "𝑃(𝑌≤𝑢) ≤𝑃(𝑋≤𝑢) for all 𝑢≥0",
+    "B": "𝑃(𝑌≥𝑢) ≤𝑃(𝑋≥𝑢) for all 𝑢≥0",
+    "C": "𝐸(𝑋) < 𝐸(𝑌)",
+    "D": "𝐸(𝑋) > 𝐸(𝑌)"
+  },
+  "answer": null,
+  "solution": null
+}

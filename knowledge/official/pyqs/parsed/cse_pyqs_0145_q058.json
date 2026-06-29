@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q58",
+  "question_seq": 145,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let G(V, E) be a directed graph, where V = {1, 2, 3, 4, 5} is the set of vertices and E is the set of directed edges, as defined by the following adjacency matrix A. = ⎨ [ ][ ] otherwise",
+  "options": {
+    "A": "[i][j] = 1 indicates a directed edge from node i to node j. A directed spanning tree of G, rooted at r ∈ V, is defined as a subgraph T of G such that the undirected version of T is a tree, and T contains a directed path from r to every other vertex in V. The number of such directed spanning trees rooted at vertex 5 is ___________."
+  },
+  "answer": "A",
+  "solution": null
+}

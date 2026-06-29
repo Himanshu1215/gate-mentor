@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q49",
+  "question_seq": 335,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following sets is/are countable?",
+  "options": {
+    "A": "The set of all functions from {1, 2, 3, … , 10} to the set of all rational numbers",
+    "B": "The set of all functions from the set of all natural numbers to {0, 1}",
+    "C": "The set of all integer valued sequences with only finitely many non-zero terms",
+    "D": "The set of all integer valued sequences converging to 1"
+  },
+  "answer": null,
+  "solution": null
+}

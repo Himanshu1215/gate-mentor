@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q64",
+  "question_seq": 396,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 and 𝑌 be random variables such that 𝑋 is uniformly distributed over (0, 4),",
+  "options": {
+    "A": "nd the conditional distribution of 𝑌 given 𝑋= 𝑥 is uniformly distributed over ቀ0, ସቁ. Then 𝐸(𝑌ଶ) (rounded off to three decimal places) is equal to _____"
+  },
+  "answer": null,
+  "solution": null
+}

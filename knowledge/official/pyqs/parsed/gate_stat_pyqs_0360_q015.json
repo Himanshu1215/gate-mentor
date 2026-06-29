@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q15",
+  "question_seq": 360,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋ଵ, 𝑋ଶ, … , 𝑋௡ be a random sample from a distribution with cumulative",
+  "options": {
+    "D": "istribution function 𝐹(𝑥). Let the empirical distribution function of the sample be 𝐹௡(𝑥). The classical Kolmogorov-Smirnov goodness of fit test statistic is given by 𝑇௡= √𝑛 𝐷௡= √𝑛 sup ିஶழ௫ழஶ |𝐹௡(𝑥) −𝐹(𝑥)|.",
+    "C": "onsider the following statements: (I) The distribution of 𝑇௡ is the same for all continuous underlying",
+    "A": "(I) only",
+    "B": "(II) only"
+  },
+  "answer": null,
+  "solution": null
+}

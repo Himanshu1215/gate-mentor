@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q31",
+  "question_seq": 167,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let {𝑊(𝑡) ∶ 𝑡≥0} be a standard Brownian motion, with 𝑊(0) = 0. Define 𝑍1 = 𝑊(1) + 𝑊(2) and 𝑍2 = 𝑊(2) + 𝑊(3). Let 𝜌 be the correlation coefficient between 𝑍1 and 𝑍2. Then the value of 10𝜌 is __________ (round off to two decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

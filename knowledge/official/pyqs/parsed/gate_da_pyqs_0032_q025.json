@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q25",
+  "question_seq": 32,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following statements is/are correct?",
+  "options": {
+    "A": "Rn has a unique set of orthonormal basis vectors",
+    "B": "Rn does not have a unique set of orthonormal basis vectors",
+    "C": "Linearly independent vectors in Rn are orthonormal",
+    "D": "Orthonormal vectors Rn are linearly independent"
+  },
+  "answer": null,
+  "solution": null
+}

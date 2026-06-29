@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q53",
+  "question_seq": 83,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The index node (inode) of a Unix-like file system has 12 direct, one single-indirect and one double-indirect pointers The disk block size is 4 kB and the disk block address is 32-bits long. The maximum possible file size is (rounded off to 1 decimal place) ________ GB.",
+  "options": null,
+  "answer": "A",
+  "solution": null
+}

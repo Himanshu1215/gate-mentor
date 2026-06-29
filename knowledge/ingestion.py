@@ -72,10 +72,12 @@ class KnowledgeIngestor:
         if HAS_CHROMA:
             os.makedirs(CHROMA_DB_PATH, exist_ok=True)
             self.chroma_client = chromadb.PersistentClient(path=CHROMA_DB_PATH)
+            # NOTE: must match the collection used by knowledge/ingestor.py and the
+            # API retriever, otherwise PDFs ingested here are never retrieved.
             self.collection    = self.chroma_client.get_or_create_collection(
-                name="gate_knowledge"
+                name="gate_knowledge_base"
             )
-            logger.info("ChromaDB collection 'gate_knowledge' ready.")
+            logger.info("ChromaDB collection 'gate_knowledge_base' ready.")
 
         if HAS_ST:
             os.makedirs(EMBEDDING_CACHE_DIR, exist_ok=True)
@@ -177,9 +179,24 @@ class KnowledgeIngestor:
             return
 
         # 3. Metadata
+        # Infer source_type from the path so PDF metadata matches the text
+        # ingestor's schema (source / source_type / concept_id / chunk_index).
+        lower = pdf_path.lower()
+        if   "pyqs"      in lower: source_type = "PYQ"
+        elif "textbooks" in lower: source_type = "Textbook"
+        elif "nptel"     in lower: source_type = "NPTEL"
+        elif "formulas"  in lower: source_type = "Formula"
+        elif "syllabus"  in lower: source_type = "Syllabus"
+        else:                      source_type = "Personal"
+
         ids      = [f"{concept_id}_pdf_chunk_{i}" for i in range(len(chunks))]
         metadata = [
-            {"concept_id": concept_id, "source": source_name, "chunk_index": i}
+            {
+                "concept_id":  concept_id,
+                "source":      source_name,
+                "source_type": source_type,
+                "chunk_index": i,
+            }
             for i in range(len(chunks))
         ]
 

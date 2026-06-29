@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q44",
+  "question_seq": 179,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋1, 𝑋2, … , 𝑋𝑛 (𝑛≥2) be a random sample from the probability density function 𝑓(𝑥). Consider the following hypotheses: 𝐻0: 𝑓(𝑥) = √2 𝜋 𝑒−𝑥2 2 ; −∞< 𝑥< ∞ 𝐻1: 𝑓(𝑥) = 1 2 𝑒−|𝑥|; −∞< 𝑥< ∞ . For testing 𝐻0 against 𝐻1, let 𝑅 denote the critical region based on likelihood ratio test having level 0.05. Then, for some constant 𝑐, the region 𝑅 is",
+  "options": {
+    "A": "{(𝑥1, 𝑥2, … , 𝑥𝑛) ∶ ∑ (𝑥𝑖−1)2 > 𝑐 𝑖=1",
+    "B": "{(𝑥1, 𝑥2, … , 𝑥𝑛) ∶ ∑ (𝑥𝑖−1)2 < 𝑐 𝑖=1",
+    "C": "{(𝑥1, 𝑥2, … , 𝑥𝑛) ∶ ∑ (|𝑥𝑖| −1)2 > 𝑐 𝑖=1",
+    "D": "{(𝑥1, 𝑥2, … , 𝑥𝑛) ∶ ∑ (|𝑥𝑖| −1)2 < 𝑐 𝑖=1"
+  },
+  "answer": null,
+  "solution": null
+}

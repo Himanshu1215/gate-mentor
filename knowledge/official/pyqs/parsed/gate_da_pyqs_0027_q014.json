@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q14",
+  "question_seq": 27,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let f(x) = ex −e−x , x ∈R. Let f (k)(a) denote the kth derivative of f evaluated at a. What is the value of f (10)(0)? (Note: ! denotes factorial)",
+  "options": {
+    "A": "(B)",
+    "C": "10!",
+    "D": "10!"
+  },
+  "answer": null,
+  "solution": null
+}

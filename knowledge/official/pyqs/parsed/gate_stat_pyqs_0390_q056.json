@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q56",
+  "question_seq": 390,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "While calculating Spearman’s rank correlation coefficient, based on 𝑛 observations {(𝑥௜, 𝑦௜), 𝑖= 1,2, … , 𝑛} from a paired data, it is found that 𝑥௜ are distinct for all 𝑖≥2, 𝑥ଵ= 𝑥ଶ, and ∑ ଶ= 19.5 ௜ୀଵ , where 𝑑௜= rank(𝑥௜) −rank(𝑦௜). Then the minimum possible value of 𝑛ଷ−𝑛 (in integer) is ______",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

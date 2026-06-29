@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q34",
+  "question_seq": 170,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 be a single observation from a distribution having the probability density function 𝑓𝜃(𝑥) = {1 if 𝜃< 𝑥< 𝜃+ 1 0 otherwise, where 𝜃∈(−∞, ∞). For testing 𝐻0: 𝜃≤0 against 𝐻1: 𝜃> 1, let 𝛽 be the power of the uniformly most powerful test of level 0.05. Then 225 𝛽 equals __________ (",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

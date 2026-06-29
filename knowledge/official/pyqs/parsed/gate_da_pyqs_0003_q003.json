@@ -1,0 +1,17 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q3",
+  "question_seq": 3,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let ln (x 1)cosx Lim Sol. (1/2) 1 cos lim Putting x → 0 in the above part we get ( )",
+  "options": {
+    "C": "os from Thus, using L-hospital Rule there ( ) lim f n g n So, differentiating it we get-",
+    "D": "ATA SCIENCE & ARTIFICIAL INTELLIGENCE sin"
+  },
+  "answer": null,
+  "solution": null
+}

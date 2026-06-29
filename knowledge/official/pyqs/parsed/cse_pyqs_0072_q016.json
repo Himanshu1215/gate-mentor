@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q16",
+  "question_seq": 72,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let U = {1, 2, ..., n} and A = {(x, X), x ∈ X and X ⊆ U}. Consider the following two statements on ⏐A⏐. ⏐A⏐ = n.2n – 1 II. ⋅⎜⎟ Which of the following is correct?",
+  "options": {
+    "A": "Both I and II",
+    "B": "Neither I nor II",
+    "C": "Only II",
+    "D": "Only I"
+  },
+  "answer": "A",
+  "solution": null
+}

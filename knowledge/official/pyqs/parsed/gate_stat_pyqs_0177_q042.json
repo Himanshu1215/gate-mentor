@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q42",
+  "question_seq": 177,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 be a random variable with support 𝑆= {0, 1, 2, … } and 𝑃(𝑋≥𝑘+ 1|𝑋≥𝑘) = 𝑝, 𝑘∈𝑆, 0 < 𝑝< 1 . Then which of the following statements is correct?",
+  "options": {
+    "A": "𝑃(𝑋≥𝑘+ 𝑚|𝑋≥𝑘) = 𝑃(𝑋≥𝑚), for all 𝑚, 𝑘∈𝑆",
+    "B": "𝐸(𝑋) > Var(𝑋)",
+    "C": "𝑃(𝑋≤𝑥) = 1 −𝑝𝑥, for all 𝑥∈𝑆",
+    "D": "𝑃(𝑋≤𝑘+ 𝑚|𝑋≥𝑘) = 1 −𝑝𝑚, for all 𝑘, 𝑚∈𝑆"
+  },
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q11",
+  "question_seq": 24,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Suppose X and Y are random variables. The conditional expectation of X given Y is",
+  "options": {
+    "D": "enoted by E[X|Y ]. Then E[E[X|Y ]] equals",
+    "A": "E[X|Y ]",
+    "B": "E[X] E[Y ]",
+    "C": "E[X]"
+  },
+  "answer": null,
+  "solution": null
+}

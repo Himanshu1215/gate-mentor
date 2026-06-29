@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q36",
+  "question_seq": 227,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let ℱ= {𝑓: [𝑎, 𝑏] →ℝ | 𝑓 is continuous on [a, b] and differentiable on (𝑎, 𝑏)}. Which one of the following options is correct?",
+  "options": {
+    "A": "There exists a non-constant 𝑓∈ℱ such that |𝑓(𝑥) −𝑓(𝑦)| ≤|𝑥−𝑦|2 for all 𝑥, 𝑦 ∈[𝑎, 𝑏]",
+    "B": "If 𝑓∈ℱ and 𝑥0 ∈(𝑎, 𝑏), then there exist distinct 𝑥1, 𝑥2 ∈[𝑎, 𝑏] such that 𝑓(𝑥1)−𝑓(𝑥2) 𝑥1−𝑥2 = 𝑓′(𝑥0)",
+    "C": "Let 𝑓∈ℱ and 𝑓′(𝑥) ≥0 for all 𝑥∈(𝑎, 𝑏). If 𝑓′ is zero only at two distinct points, then 𝑓 is strictly increasing",
+    "D": "Let 𝑓∈ℱ. If 𝑓′(𝑥1) < 𝑐< 𝑓′(𝑥2) for some 𝑥1, 𝑥2 ∈(𝑎, 𝑏), then there may NOT exist an 𝑥0 ∈(𝑥1, 𝑥2) such that 𝑓′(𝑥0) = 𝑐"
+  },
+  "answer": null,
+  "solution": null
+}

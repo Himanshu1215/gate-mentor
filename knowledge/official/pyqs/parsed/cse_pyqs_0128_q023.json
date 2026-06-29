@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q23",
+  "question_seq": 128,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following statements is/are TRUE?",
+  "options": {
+    "A": "Every subset of a recursively enumerable language is recursive.",
+    "B": "If a language L and its complement L are both recursively enumerable, then L must",
+    "C": "Complement of a context-free language must be recursive.",
+    "D": "If L1 and L2 are regular, then L1 ∩ L2 must be deterministic context-free."
+  },
+  "answer": "B",
+  "solution": null
+}

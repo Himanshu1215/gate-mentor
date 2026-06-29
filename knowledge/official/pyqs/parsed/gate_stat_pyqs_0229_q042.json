@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q42",
+  "question_seq": 229,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋1, … , 𝑋𝑛 , 𝑛≥2, be a random sample from a 𝑁(−𝜃, 𝜃) distribution, where 𝜃> 0 is an unknown parameter. Then which one of the following options is",
+  "options": {
+    "C": "orrect?",
+    "A": "𝑖=1 is a minimal sufficient statistic",
+    "B": "𝑖=1 2 is a minimal sufficient statistic",
+    "D": "𝑖=1 is a uniformly minimum variance unbiased estimator of 𝜃"
+  },
+  "answer": null,
+  "solution": null
+}

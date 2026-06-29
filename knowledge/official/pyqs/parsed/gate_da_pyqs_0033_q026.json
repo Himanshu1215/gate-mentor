@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q26",
+  "question_seq": 33,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_003",
+  "question_text": "Which of the following statements is/are correct in a Bayesian network?",
+  "options": {
+    "A": "Variable elimination is an approximate inference algorithm",
+    "B": "Gibbs sampling is an exact inference algorithm",
+    "C": "Variable elimination is used to determine conditional probabilities",
+    "D": "Rejection sampling is an approximate inference algorithm"
+  },
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,17 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q8",
+  "question_seq": 353,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Four points P(0, 1), Q(0, −3), R(−2, −1), and S(2, −1) represent the vertices of a quadrilateral. What is the area enclosed by the quadrilateral?",
+  "options": {
+    "A": "(B) 4ඥ2",
+    "C": "(D) 8√2 Page 7"
+  },
+  "answer": null,
+  "solution": null
+}

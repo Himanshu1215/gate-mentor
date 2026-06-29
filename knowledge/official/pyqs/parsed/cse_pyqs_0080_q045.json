@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q45",
+  "question_seq": 80,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Suppose Y is distributed uniformly in the open interval (1,6). The probability that the polynomial 3x2 + 6xY + 3Y + 6 has only real roots is (rounded off to 1 decimal place) ________.",
+  "options": null,
+  "answer": "A",
+  "solution": null
+}

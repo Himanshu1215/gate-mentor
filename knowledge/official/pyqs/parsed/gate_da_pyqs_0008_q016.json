@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q16",
+  "question_seq": 8,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let f : R→R be the function f(x) = . The value of the derivative of at x where f(x) = 0.4 is. Sol. (0.24) f(x) = 0.4 0.4 e−= 0.4 e−= 0.4 0.6 0.4 e−= e = ln e ( ) Now, = 0.24 PAGE PW Mobile APP: https://smart.link/7wwosivoicgd4 https://t.me/Gwcomsciandinfo",
+  "options": {
+    "D": "ATA SCIENCE & ARTIFICIAL INTELLIGENCE [MCQ]"
+  },
+  "answer": null,
+  "solution": null
+}

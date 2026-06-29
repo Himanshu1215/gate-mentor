@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q38",
+  "question_seq": 273,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 be a random variable with probability density function 𝑓(𝑥) = {⁡ 8 (𝑥+ 1)2⁡⁡⁡if⁡ −1 < 𝑥< 1 0⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡otherwise. If 𝑌= 1 −𝑋2, then 𝑃(𝑌≤ 4⁡) equals",
+  "options": {
+    "A": "(B)",
+    "C": "(D) Q.39 Let 𝑋 be a random variable with probability density function 𝑓(𝑥) = √𝑥⁡⁡⁡⁡⁡⁡if⁡⁡0 < 𝑥≤1⁡ 𝑥2 ⁡⁡⁡⁡⁡⁡if⁡⁡1 < 𝑥< ∞ ⁡⁡0⁡⁡⁡⁡⁡⁡⁡⁡⁡otherwise,⁡⁡⁡⁡⁡⁡⁡ where 𝑐1 and 𝑐2 are appropriate real constants. If 𝑃(𝑋∈[ 4⁡, 4]) = 8 , then",
+    "B": "Only (II)",
+    "D": "Neither (I) nor (II)"
+  },
+  "answer": null,
+  "solution": null
+}

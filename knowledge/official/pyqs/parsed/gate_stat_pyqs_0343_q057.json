@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q57",
+  "question_seq": 343,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {𝑋𝑛}𝑛≥1 be a sequence of independent and identically distributed random variables with mean 0 and variance 1, all of them defined on the same probability space. For 𝑛= 1, 2, 3, … , let 𝑌𝑛= 1 𝑛(𝑋1𝑋2 + 𝑋3𝑋4 + ⋯+ 𝑋2𝑛−1𝑋2𝑛). Then which of the following statements is/are true?",
+  "options": {
+    "A": "{√𝑛 𝑌𝑛}𝑛≥1 converges in distribution to a standard normal random variable",
+    "B": "{𝑌𝑛}𝑛≥1 converges in 2nd mean to 0",
+    "C": "{𝑌𝑛+ 𝑛≥1 converges in probability to 0",
+    "D": "{𝑋𝑛}𝑛≥1 converges almost surely to 0"
+  },
+  "answer": null,
+  "solution": null
+}

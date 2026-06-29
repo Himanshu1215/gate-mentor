@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q20",
+  "question_seq": 159,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋1 and 𝑋2 be independent and identically distributed random variables following normal distribution with mean 𝜃∈(−∞, ∞) and variance 1. Then which of the following estimators of their expected values attains the Cramer-Rao lower",
+  "options": {
+    "B": "ound?",
+    "A": "𝑋1 + 𝑋2",
+    "C": "(𝑋1 + 𝑋2)2",
+    "D": "2𝑋1 −𝑋2"
+  },
+  "answer": null,
+  "solution": null
+}

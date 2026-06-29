@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q57",
+  "question_seq": 288,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {1, 6, 5, 3} and {11, 7, 15, 4} be realizations of two independent random samples of size 4 from two separate populations having cumulative distribution functions 𝐹(⋅) and 𝐺(⋅), respectively, and probability density functions 𝑓(⋅) and 𝑔(⋅), respectively. To test 𝐻0: 𝐹(𝑡) = 𝐺(𝑡) for all 𝑡, against 𝐻1: 𝐹(𝑡) ≥𝐺(𝑡) with strict inequality for some 𝑡, let 𝑈𝑀𝑊 denote the Mann-Whitney 𝑈-test statistic. Let, under 𝐻0, 𝑃(𝑈𝑀𝑊> 12) ≤0.10, 𝑃(𝑈𝑀𝑊> 14) ≤0.05,⁡⁡⁡𝑃(𝑈𝑀𝑊> 15) ≤0.025⁡⁡ and 𝑃(𝑈𝑀𝑊> 16) ≤0.01. Then, based on the given data, which of the following statements is/are true?",
+  "options": {
+    "A": "𝐻0 is rejected at level 0.10",
+    "B": "𝐻0 is rejected at level 0.05",
+    "C": "𝐻0 is rejected at level 0.025",
+    "D": "𝐻0 is rejected at level 0.01"
+  },
+  "answer": null,
+  "solution": null
+}

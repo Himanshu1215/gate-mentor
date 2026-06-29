@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q63",
+  "question_seq": 194,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑈1, 𝑈2, 𝑈3 be three independent exponential random variables such that 𝑈𝑘 has the following probability density function 𝑓𝑘(𝑥) = {𝑘 𝑒−𝑘𝑥 if 𝑥> 0 0 otherwise, 𝑘= 1, 2, 3. Let 𝑋= min{𝑈1, 𝑈3} and 𝑌= min{𝑈2, 𝑈3} . Then 𝑃(𝑋= 𝑌) equals ______________ (rounded off to two decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

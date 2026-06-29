@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q58",
+  "question_seq": 242,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "The moment generating functions of three independent random variables 𝑋, 𝑌 and 𝑍 are respectively given as 𝑀𝑋(𝑡) = 1 9 (2 + 𝑒𝑡)2 , 𝑡∈ℝ, 𝑀𝑌(𝑡) = 𝑒(𝑒𝑡−1) , 𝑡∈ℝ,",
+  "options": {
+    "A": "nd 𝑀𝑍(𝑡) = 𝑒2(𝑒𝑡−1) , 𝑡∈ℝ. Then 10 Pr(𝑋> 𝑌+ 𝑍) equals __________ (rounded off to two decimal places)."
+  },
+  "answer": null,
+  "solution": null
+}

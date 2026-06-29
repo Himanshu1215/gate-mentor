@@ -1,0 +1,17 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q4",
+  "question_seq": 253,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "For positive non-zero real variables 𝑥 and 𝑦, if ln (𝑥+ 𝑦 ) = 1 2 [ln⁡(𝑥) + ln⁡(𝑦)] then, the value of 𝑥 is",
+  "options": {
+    "A": "(B) 1/2",
+    "C": "(D) Q.5 In the sequence 6, 9, 14, x, 30, 41, a possible value of 𝑥 is"
+  },
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q24",
+  "question_seq": 216,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "For a given data (𝑥𝑖, 𝑦𝑖), 𝑖= 1, 2, … , 𝑛, with ∑ 𝑖=1 > 0, let 𝛽̂ satisfy ∑(𝑦𝑖−𝛽̂𝑥𝑖) 𝑖=1 = inf 𝛽∈ℝ∑(𝑦𝑖−𝛽𝑥𝑖)2. 𝑖=1 Further, let 𝑣𝑗= 𝑦𝑗−𝑥𝑗 and 𝑢𝑗= 2𝑥𝑗, for 𝑗= 1,2, … , 𝑛, and let 𝛾̂ satisfy ∑(𝑣𝑖−𝛾̂𝑢𝑖)2 𝑖=1 = inf 𝛾∈ℝ∑(𝑣𝑖−𝛾𝑢𝑖)2 𝑖=1 If 𝛽̂ = 10, then the value of 𝛾̂ is",
+  "options": {
+    "A": "4.5",
+    "B": "(C)",
+    "D": "Q.25 Let 𝐼= 𝜋2 ∫∫𝑦2 cos 𝜋(1 + 𝑥𝑦) 𝑑𝑥 𝑑𝑦 The value of 𝐼 is equal to ___________ ("
+  },
+  "answer": null,
+  "solution": null
+}

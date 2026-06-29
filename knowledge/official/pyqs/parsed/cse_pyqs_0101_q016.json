@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q16",
+  "question_seq": 101,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "If there are m input lines and n output lines for a decoder that is used to uniquely address",
+  "options": {
+    "A": "byte addressable 1 KB RAM, then the minimum value of m + n is ________."
+  },
+  "answer": "D",
+  "solution": null
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q54",
+  "question_seq": 285,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋1, 𝑋2, … , 𝑋𝑛 be a random sample of size 𝑛⁡(≥2) from a population having Poisson distribution with mean 𝜆, where 𝜆> 0 is an unknown parameter. If 𝑇1 = 𝑋̅⁡⁡and⁡⁡𝑇2 = √ 𝑛−1 ∑ (𝑋𝑖−𝑋̅)2 𝑖=1 , where 𝑋̅ = 𝑖=1 , then which of the following statements is/are true?",
+  "options": {
+    "A": "𝑇1 is an unbiased estimator of 𝜆",
+    "B": "𝑇2 is an unbiased estimator of √𝜆",
+    "C": "2 is an unbiased estimator of 𝜆",
+    "D": "Both 𝑇1 and 𝑇2 are estimators of 𝜆 as well as 𝜆2"
+  },
+  "answer": null,
+  "solution": null
+}

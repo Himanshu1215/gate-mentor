@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q50",
+  "question_seq": 336,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "For a given real number 𝑎, let 𝑎+ = 𝑚𝑎𝑥{𝑎, 0} and 𝑎−= 𝑚𝑎𝑥{−𝑎, 0} . If {𝑥𝑛}𝑛≥1 is a sequence of real numbers, then which of the following statements is/are true?",
+  "options": {
+    "A": "If {𝑥𝑛}𝑛≥1 converges, then both {𝑥𝑛 +}𝑛≥1 and {𝑥𝑛 −}𝑛≥1 converge",
+    "B": "If {𝑥𝑛}𝑛≥1 converges to 0, then both {𝑥𝑛 +}𝑛≥1 and {𝑥𝑛 −}𝑛≥1 converge to 0",
+    "C": "If both {𝑥𝑛 +}𝑛≥1 and {𝑥𝑛 −}𝑛≥1 converge, then {𝑥𝑛}𝑛≥1 converges",
+    "D": "If {𝑥𝑛 2}𝑛≥1 converges, then both {𝑥𝑛 +}𝑛≥1 and {𝑥𝑛 −}𝑛≥1 converge"
+  },
+  "answer": null,
+  "solution": null
+}

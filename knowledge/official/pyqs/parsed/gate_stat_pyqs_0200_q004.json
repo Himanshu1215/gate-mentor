@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q4",
+  "question_seq": 200,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In the context of the given figure, which one of the following options correctly represents the entries in the blocks labelled (i), (ii), (iii), and (iv), respectively? (i) (ii) (iv) (iii)",
+  "options": {
+    "A": "Q, M, 12, and 8",
+    "B": "K, L, 10 and 14",
+    "C": "I, J, 10, and 8",
+    "D": "L, K, 12 and 8"
+  },
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q15",
+  "question_seq": 71,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following protocol pairs can be used to send and retrieve e-mails (in that order)?",
+  "options": {
+    "A": "IMAP, SMTP",
+    "D": "SMTP, MIME",
+    "C": "IMAP, POP3"
+  },
+  "answer": "D",
+  "solution": null
+}

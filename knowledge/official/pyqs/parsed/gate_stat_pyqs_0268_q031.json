@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q31",
+  "question_seq": 268,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 be a random variable having Poisson distribution with mean 𝜆> 0 such that 𝑃(𝑋= 4) = 2⁡𝑃(𝑋= 5). If 𝑝𝑘= 𝑃(𝑋= 𝑘), 𝑘= 0,1,2, …, and 𝑝𝛼=⁡max ⁡𝑝𝑘, then 𝛼 equals __________ (in integer).",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

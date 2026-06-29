@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q28",
+  "question_seq": 164,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 and 𝑌 be two continuous random variables having the following joint probability density function 𝑓(𝑥, 𝑦) = {𝑥+ 𝑦 if 0 < 𝑥< 1, 0 < 𝑦< 1 0 otherwise. Then 72 (Var(𝑋) + Var(𝑌)) equals _____________ (",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

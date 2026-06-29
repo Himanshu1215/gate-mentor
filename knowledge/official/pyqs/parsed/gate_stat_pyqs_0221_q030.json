@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q30",
+  "question_seq": 221,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let 𝑋 follow a 10-dimensional multivariate normal distribution with zero mean vector and identity covariance matrix. Define 𝑌= log𝑒√𝑋𝑇𝑋 and let 𝑀𝑌(𝑡)",
+  "options": {
+    "D": "enote the moment generating function of 𝑌 at 𝑡, 𝑡> −10. Then 𝑀𝑌(2) equals ____________ ("
+  },
+  "answer": null,
+  "solution": null
+}

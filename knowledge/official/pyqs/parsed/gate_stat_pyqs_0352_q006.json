@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q6",
+  "question_seq": 352,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Mosquitoes pose a threat to human health. Controlling mosquitoes using",
+  "options": {
+    "C": "hemicals may have undesired consequences. In Florida, authorities have used genetically modified mosquitoes to control the overall mosquito population. It remains to be seen if this novel approach has unforeseen consequences. Which one of the following is the correct logical inference based on the information in the above passage?",
+    "A": "Using chemicals to kill mosquitoes is better than using genetically modified mosquitoes because genetic engineering is dangerous",
+    "B": "Using genetically modified mosquitoes is better than using chemicals to kill mosquitoes because they do not have any side effects",
+    "D": "Using chemicals to kill mosquitoes may have undesired consequences but it is not clear if using genetically modified mosquitoes has any negative"
+  },
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q47",
+  "question_seq": 232,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let {𝑥𝑛}𝑛≥1 be a sequence defined as 𝑥𝑛= 1 + √2 + √3 + ⋯+ √𝑛−2(√𝑛−1). Then which of the following options is/are correct?",
+  "options": {
+    "A": "The sequence {𝑥𝑛}𝑛≥1 is unbounded",
+    "B": "The sequence {𝑥𝑛}𝑛≥1 is monotonically decreasing",
+    "C": "The sequence {𝑥𝑛}𝑛≥1 is bounded but does not converge",
+    "D": "The sequence {𝑥𝑛}𝑛≥1 converges"
+  },
+  "answer": null,
+  "solution": null
+}

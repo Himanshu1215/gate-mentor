@@ -41,6 +41,21 @@ test_log.txt
 *.bin
 *.pt
 *.onnx
+*.gguf
+*.safetensors
+models/llm/
+models/embeddings/
+
+# Raw / large data — keep OUT of git (transfer via scp/rsync/object storage)
+# Source PDFs and the text extracted from them:
+*.pdf
+knowledge/**/*.txt
+# Training artifacts (multi-GB merged model + checkpoints):
+train/out/
+train/data/*.jsonl
+# NOTE: reviewed structured questions ARE committed on purpose:
+!knowledge/official/pyqs/**/*.json
+!knowledge/official/answer_keys/**/*.json
 
 # Frontend
 frontend-react/node_modules/

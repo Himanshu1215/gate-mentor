@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q9",
+  "question_seq": 354,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In a class of five students P, Q, R, S and T, only one student is known to have",
+  "options": {
+    "C": "opied in the exam. The disciplinary committee has investigated the situation",
+    "A": "nd recorded the statements from the students as given below. Statement of P: R has copied in the exam. Statement of Q: S has copied in the exam. Statement of R: P did not copy in the exam. Statement of S: Only one of us is telling the truth. Statement of T: R is telling the truth. The investigating team had authentic information that S never lies.",
+    "B": "ased on the information given above, the person who has copied in the exam is"
+  },
+  "answer": null,
+  "solution": null
+}

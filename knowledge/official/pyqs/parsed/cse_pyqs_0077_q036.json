@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q36",
+  "question_seq": 77,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In an RSA cryptosystem, the value of the public modulus parameter n is 3007. If it is",
+  "options": {
+    "A": "lso known that φ(n) = 2880, where φ( ) denotes Euler’s Totient Function, then the prime factor of n which is greater than 50 is ________."
+  },
+  "answer": "97",
+  "solution": null
+}

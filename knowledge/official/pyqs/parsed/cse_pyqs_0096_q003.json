@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q3",
+  "question_seq": 96,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the following is used to represent the supporting many-ore relationships of a weak entity set in an entity-relationship diagram?",
+  "options": {
+    "A": "Rectangles with double/bold border",
+    "B": "Ovals with double/bold border",
+    "C": "Ovals that contain underlined identifiers",
+    "D": "Diamonds with double/bold border"
+  },
+  "answer": "D",
+  "solution": null
+}

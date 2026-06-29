@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q2",
+  "question_seq": 55,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The expenditure on the project ________ as follows; equipments Rs. 20 lakhs, salaries Rs. 12 lakhs, and contingency Rs.3 lakhs.",
+  "options": {
+    "A": "break",
+    "B": "breaks",
+    "C": "breaks down",
+    "D": "break down"
+  },
+  "answer": "C",
+  "solution": null
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q46",
+  "question_seq": 141,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following is/are undecidable?",
+  "options": {
+    "A": "Given two Turing machines M1 and M2, decide if L(M1) = L(M2).",
+    "B": "Given a Turing machine M, decide if L(M) is regular.",
+    "C": "Given a Turing machine M, decide if M accepts all strings.",
+    "D": "Given a Turing machine M, decide if M takes more than 1073 steps on every string."
+  },
+  "answer": "A",
+  "solution": null
+}

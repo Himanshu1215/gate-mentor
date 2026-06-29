@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q52",
+  "question_seq": 283,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {𝑋𝑛}𝑛≥1 be a sequence of independent random variables such that the probability density function of 𝑋𝑛 is given by 𝑓𝑛(𝑥) = { −⁡ 𝑥 𝜆𝑛⁡⁡⁡if⁡⁡𝑥≥0 0⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡⁡otherwise, where 𝜆𝑛= 10 −∑ 2𝑖−1 𝑖=1 . Which of the following statements is/are true?",
+  "options": {
+    "A": "{𝑋𝑛}𝑛≥1 converges in distribution to the zero random variable",
+    "B": "{𝑋𝑛}𝑛≥1 converges in probability to the zero random variable",
+    "C": "{𝑋𝑛}𝑛≥1 converges in distribution to a random variable having Poisson",
+    "D": "istribution with mean 10"
+  },
+  "answer": null,
+  "solution": null
+}

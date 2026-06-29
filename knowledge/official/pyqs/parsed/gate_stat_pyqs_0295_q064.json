@@ -1,0 +1,17 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q64",
+  "question_seq": 295,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let a random sample of size 4 from a normal population with unknown mean 𝜇",
+  "options": {
+    "A": "nd variance 1 yield the sample mean of 0.16. Let Φ(⋅) be the cumulative",
+    "D": "istribution function of the standard normal random variable. It is given that Φ(2.28) = 0.989, Φ(1.96) = 0.975, Φ(1.64) = 0.95. If the likelihood ratio test of size 0.05 is used to test 𝐻0: 𝜇= 0 against 𝐻1: 𝜇≠0, then the power of the test at the sample mean equals __________ (rounded off to three decimal places)."
+  },
+  "answer": null,
+  "solution": null
+}

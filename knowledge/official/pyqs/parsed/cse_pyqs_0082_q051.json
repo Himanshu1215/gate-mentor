@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q51",
+  "question_seq": 82,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "There are n unsorted arrays: A1, A2, ...., An. Assume that n is odd. Each of A1, A2, ....,",
+  "options": {
+    "A": "n contains n distinct elements. There are no common elements between any two arrays. The worst-case time complexity of computing the median of the medians of A1, A2, ....,",
+    "B": "Ο(n2)",
+    "C": "Ο(n)",
+    "D": "Ω(n2 log n)"
+  },
+  "answer": "B",
+  "solution": null
+}

@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q29",
+  "question_seq": 316,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let 𝑓: ℝ2 →ℝ be defined by 𝑓(𝑥, 𝑦) = 𝑥𝑦. Then the maximum value (rounded off to two decimal places) of 𝑓 on the ellipse 𝑥2 + 2𝑦2 = 1 equals _______________",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

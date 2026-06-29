@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q5",
+  "question_seq": 4,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "M= 3",
+  "options": {
+    "D": "et [M2 + 12M] . Sol. (0) = det [M2 + 12M] | M2 + 12M| |M(M+ 12I|)| |M| |M+ 12I| Now, |M| = 1 1 3 2 4 3 4 = 1 (6 – 9) – 2 (18 – 12) + 3 (9 – 4) = – 3 – 12 + 15 = – 15 + 15 = 0"
+  },
+  "answer": null,
+  "solution": null
+}

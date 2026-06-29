@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q6",
+  "question_seq": 117,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Some people believe that “what gets measured, improves”. Some others believe that “what gets measured, gets gamed”. One possible reason for the difference in the beliefs is the work culture in organizations. In organizations with good work culture, metrics help improve outcomes. However, the same metrics are counterproductive in organizations with poor work culture. Which one of the following is the CORRECT logical inference based on the information in the above passage?",
+  "options": {
+    "A": "Metrics are useful in organizations with poor work culture.",
+    "B": "Metrics are useful in organizations with good work culture.",
+    "C": "Metrics are always counterproductive in organizations with good work culture.",
+    "D": "Metrics are never useful in organizations with good work culture."
+  },
+  "answer": "B",
+  "solution": null
+}

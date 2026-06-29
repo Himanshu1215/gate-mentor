@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q24",
+  "question_seq": 129,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let WB and WT be two set associative cache organizations that use LRU algorithm for",
+  "options": {
+    "C": "ache block replacement. WB is a write back cache and WT is a write through cache. Which of the following statements is/are FALSE?",
+    "A": "Each cache block in WB and WT has a dirty bit.",
+    "B": "Every write hit in WB leads to a data transfer from cache to main memory.",
+    "D": "A read miss in WB will never lead to eviction of a dirty block from WB."
+  },
+  "answer": "A",
+  "solution": null
+}

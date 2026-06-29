@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q14",
+  "question_seq": 258,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let 𝒖𝟏, 𝒖𝟐, 𝒖𝟑, 𝒗𝟏, 𝒗𝟐, 𝒗𝟑 be vectors in ℝ4. Let 𝑈 be the span of {𝒖𝟏, 𝒖𝟐, 𝒖𝟑}",
+  "options": {
+    "A": "nd let 𝑉 be the span of {𝒗𝟏, 𝒗𝟐, 𝒗𝟑}.",
+    "C": "onsider the following statements: (I) If the dimension of 𝑈∩𝑉 is 2 and the dimension of 𝑈 is 3, then {𝒗𝟏, 𝒗𝟐, 𝒗𝟑} is linearly dependent. (II) If 𝑈+ 𝑉= {𝒖+ 𝒗⁡ ∶𝒖∈𝑈, 𝒗∈𝑉} = ℝ4, then either {𝒖𝟏, 𝒖𝟐, 𝒖𝟑} is linearly independent or {𝒗𝟏, 𝒗𝟐, 𝒗𝟑} is linearly independent. Which of the above statements is/are true?",
+    "B": "Only (II)",
+    "D": "Neither (I) nor (II)"
+  },
+  "answer": null,
+  "solution": null
+}

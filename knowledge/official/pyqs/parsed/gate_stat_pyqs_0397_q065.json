@@ -1,0 +1,17 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q65",
+  "question_seq": 397,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑿= (𝑋ଵ, 𝑋ଶ, 𝑋ଷ)் be a random vector with the distribution Νଷ(𝝁, 𝚺), where 𝝁= ൭ ൱ and 𝚺= ൥ Then 𝐸(𝑋ଵ|(𝑋ଶ= 4, 𝑋ଷ= 7)) (in integer) is equal to ______ Q. No. Session Question Type Subject Name Key/Range Mark MCQ NAT 12 to 12 NAT 0.25 to 0.25 NAT 22 to 22 NAT 0.55 to 0.59 NAT 2.30 to 2.32 NAT 23 to 23 NAT 243 to 243 NAT 0.57 to 0.59 NAT 1 to 1 NAT 1.18 to 1.19 NAT 12 to 12 NAT 15 to 15 NAT 0.375 to 0.375 NAT 3 to 3 MCQ MSQ",
+  "options": {
+    "A": ", B, D MSQ",
+    "B": ", C MSQ"
+  },
+  "answer": null,
+  "solution": null
+}

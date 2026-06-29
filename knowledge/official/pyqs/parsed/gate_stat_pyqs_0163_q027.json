@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q27",
+  "question_seq": 163,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 be a random variable such that 𝑃(𝑋= 𝑖) = 2𝑃(𝑋= 𝑖−1), 𝑖= 2, 3, … , 𝑛, 𝑛≥7,",
+  "options": {
+    "A": "nd ∑ 𝑃(𝑋= 𝑖) = 1. 𝑖=1 Then (2𝑛−1)𝑃(𝑋= 7) equals ________ ("
+  },
+  "answer": null,
+  "solution": null
+}

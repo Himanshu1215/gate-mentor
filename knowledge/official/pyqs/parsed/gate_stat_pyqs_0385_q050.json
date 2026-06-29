@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q50",
+  "question_seq": 385,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following real valued functions is/are uniformly continuous on [0, ∞)?",
+  "options": {
+    "A": "sinଶ𝑥",
+    "B": "𝑥sin 𝑥",
+    "C": "sin(sin 𝑥)",
+    "D": "sin(𝑥sin 𝑥) Page 36"
+  },
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q37",
+  "question_seq": 325,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 be a random variable with probability density function 𝑓(𝑥) = { 𝑥2 𝑖𝑓 𝑥≥1 0 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒. If 𝑌= log𝑒𝑋, then 𝑃(𝑌< 1 | 𝑌< 2) equals",
+  "options": {
+    "A": "1 + 𝑒",
+    "B": "𝑒−1 𝑒+ 1",
+    "C": "1 + 𝑒",
+    "D": "𝑒−1"
+  },
+  "answer": null,
+  "solution": null
+}

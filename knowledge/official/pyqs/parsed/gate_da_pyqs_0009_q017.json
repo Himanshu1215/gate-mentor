@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q17",
+  "question_seq": 9,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "M = 3",
+  "options": {
+    "A": "Eigen values of M are +ve and real",
+    "B": "Eigen value of M non-negative and zero",
+    "C": "Eigen value of M are complex conjugates pair",
+    "D": "Eigen value of M are negative and real. Sol."
+  },
+  "answer": null,
+  "solution": null
+}

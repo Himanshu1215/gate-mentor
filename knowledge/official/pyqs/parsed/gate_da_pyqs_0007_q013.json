@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q13",
+  "question_seq": 7,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Match the items in column 1 with the item in column 2 in the following table.",
+  "options": {
+    "C": "olumn 1",
+    "A": "p-(i), q-(ii), r-(iii)",
+    "B": "p-(iii), q-(ii), r-(i)",
+    "D": "p-(iii), q-(i), r-(ii) Sol."
+  },
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q59",
+  "question_seq": 52,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let f : R →R be such that |f(x) −f(y)| ≤(x −y)2 for all x, y ∈R. Then f(1) −f(0) = (",
+  "options": null,
+  "answer": "D",
+  "solution": null
+}

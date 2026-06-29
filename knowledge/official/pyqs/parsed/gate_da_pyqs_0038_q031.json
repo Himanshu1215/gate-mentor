@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q31",
+  "question_seq": 38,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "There are three boxes containing white balls and black balls.",
+  "options": {
+    "B": "ox-1 contains 2 black and 1 white balls."
+  },
+  "answer": null,
+  "solution": null
+}

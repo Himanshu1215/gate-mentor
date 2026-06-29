@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q17",
+  "question_seq": 260,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 be a random variable taking only two values, 1 and 2. Let 𝑀𝑋(⋅) be the moment generating function of 𝑋. If the expectation of 𝑋 is 10 7 , then the fourth",
+  "options": {
+    "D": "erivative of 𝑀𝑋(⋅) evaluated at 0 equals",
+    "A": "(B)",
+    "C": "(D) Q.18 Two fair dice, one having red and another having blue colour, are tossed independently once. Let 𝐴 be the event that the die having red colour will show 5 or 6. Let 𝐵 be the event that the sum of the outcomes will be 7 and let 𝐶 be the event that the sum of the outcomes will be 8. Then which one of the following statements is true?",
+    "B": "𝐴 and 𝐵 are independent, but 𝐴 and 𝐶 are not independent"
+  },
+  "answer": null,
+  "solution": null
+}

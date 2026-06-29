@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q10",
+  "question_seq": 204,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Three villages P, Q, and R are located in such a way that the distance PQ = 13 km, QR = 14 km, and RP = 15 km, as shown in the figure. A straight road joins Q and R. It is proposed to connect P to this road QR by constructing another road. What is the minimum possible length (in km) of this connecting road? Note: The figure shown is representative.",
+  "options": {
+    "A": "10.5",
+    "B": "11.0",
+    "C": "12.0",
+    "D": "12.5 14 km 13 km 15 km"
+  },
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q17",
+  "question_seq": 125,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the following facilitates transfer of bulk data from hard disk to main memory with the highest throughput?",
+  "options": {
+    "A": "DMA based I/O transfer",
+    "B": "Interrupt driven I/O transfer",
+    "C": "Polling based I/O transfer",
+    "D": "Programmed I/O transfer"
+  },
+  "answer": "A",
+  "solution": null
+}

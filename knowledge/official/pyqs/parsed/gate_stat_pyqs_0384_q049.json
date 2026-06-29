@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q49",
+  "question_seq": 384,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 be a random variable such that 𝑃ቀ𝑎 2𝜋𝑋∈ ℤቁ= 1, 𝑎> 0, where ℤ denotes the set of all integers. If 𝜙௑(𝑡), 𝑡∈ℝ, denotes the characteristic function of 𝑋, then which of the following is/are true?",
+  "options": {
+    "A": "𝜙௑(𝑎) = 1",
+    "B": "𝜙௑(⋅) is periodic with period 𝑎",
+    "C": "|𝜙௑(𝑡)| < 1 for all 𝑡≠𝑎",
+    "D": "𝑒ି௜௧௡ 𝜙௑(𝑡)𝑑𝑡= 𝜋𝑃ቀ𝑋= ଶగ௡ ௔ቁ, 𝑛∈ℤ, 𝑖= √−1"
+  },
+  "answer": null,
+  "solution": null
+}

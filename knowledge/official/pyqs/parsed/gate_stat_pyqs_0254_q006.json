@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q6",
+  "question_seq": 254,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Sequence the following sentences in a coherent passage. This fortuitous geological event generated a colossal amount of energy and heat that resulted in the rocks rising to an average height of 4 km across the",
+  "options": {
+    "C": "ontact zone. Q: Thus, the geophysicists tend to think of the Himalayas as an active geological event rather than as a static geological feature. R: The natural process of the cooling of this massive edifice absorbed large quantities of atmospheric carbon dioxide, altering the earth’s atmosphere and making it better suited for life. Many millennia ago, a breakaway chunk of bedrock from the Antarctic Plate",
+    "A": "QPSR",
+    "B": "QSPR",
+    "D": "SRPQ"
+  },
+  "answer": null,
+  "solution": null
+}

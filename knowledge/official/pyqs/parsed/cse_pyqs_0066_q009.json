@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q9",
+  "question_seq": 66,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the following kinds of derivation is used by LR parsers?",
+  "options": {
+    "A": "Rightmost",
+    "B": "Rightmost in reverse",
+    "C": "Leftmost",
+    "D": "Leftmost in reverse"
+  },
+  "answer": "B",
+  "solution": null
+}

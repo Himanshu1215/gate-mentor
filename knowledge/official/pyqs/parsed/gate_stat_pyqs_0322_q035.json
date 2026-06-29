@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q35",
+  "question_seq": 322,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Suppose that (𝑋1, 𝑋2, 𝑋3) has 𝑁3(𝝁, Σ) distribution with 𝝁= [ ] and Σ = [ Given that Φ(−0.5) = 0.3085, where Φ(⋅) denotes the cumulative",
+  "options": {
+    "D": "istribution function of a standard normal random variable, 𝑃((𝑋1 −2𝑋2 + 2𝑋3)2 < 2) (rounded off to two decimal places) equals _______________"
+  },
+  "answer": null,
+  "solution": null
+}

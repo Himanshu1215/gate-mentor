@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q55",
+  "question_seq": 389,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 0, 1, 1, 2, 0 be five observations of a random variable 𝑋 which follows a Poisson",
+  "options": {
+    "D": "istribution with the parameter 𝜃> 0. Let the minimum variance unbiased estimate of 𝑃(𝑋≤1), based on this data, be 𝛼. Then 5ସ𝛼 (in integer) is equal to ______ Page 38"
+  },
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q4",
+  "question_seq": 88,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Two straight lines are drawn perpendicular to each other in X-Y plane. If α and β are the acute angles the straight lines make with the X-axis, then α + β is ________.",
+  "options": {
+    "A": "180°",
+    "B": "120°",
+    "C": "90°",
+    "D": "60°"
+  },
+  "answer": "C",
+  "solution": null
+}

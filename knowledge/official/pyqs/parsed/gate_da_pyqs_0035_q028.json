@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q28",
+  "question_seq": 35,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let A = In + xx⊤, where In is the n × n identity matrix and x ∈Rn, x⊤x = 1. Which of the following options is/are correct?",
+  "options": {
+    "A": "Rank of A is n",
+    "B": "A is invertible",
+    "C": "0 is an eigenvalue of A",
+    "D": "A−1 has a negative eigenvalue"
+  },
+  "answer": null,
+  "solution": null
+}

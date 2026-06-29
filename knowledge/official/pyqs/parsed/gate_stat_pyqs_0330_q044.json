@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q44",
+  "question_seq": 330,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "For any subset 𝒰 of ℝ𝑛, let 𝐿(𝒰) denote the span of 𝒰. For any two subsets 𝒯 and 𝒮 of ℝ𝑛, which one of the following statements is NOT true?",
+  "options": {
+    "A": "If 𝒯 is a proper subset of 𝒮, then 𝐿(𝒯) is a proper subset of 𝐿(𝒮)",
+    "B": "𝐿(𝐿(𝒮)) = 𝐿(𝒮)",
+    "C": "𝐿(𝒯∪𝒮) = {𝑢+ 𝑣: 𝑢∈𝐿(𝒯), 𝑣∈𝐿(𝒮)}",
+    "D": "If 𝛼, 𝛽 and 𝛾 are three vectors in ℝ𝑛 such that 𝛼+ 2𝛽+ 3𝛾= 0, then 𝐿({𝛼, 𝛽}) = 𝐿({𝛽, 𝛾})"
+  },
+  "answer": null,
+  "solution": null
+}

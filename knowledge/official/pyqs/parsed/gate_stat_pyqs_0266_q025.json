@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q25",
+  "question_seq": 266,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In a testing of hypothesis problem, which one of the following statements is true?",
+  "options": {
+    "A": "The probability of the Type-I error cannot be higher than the probability of the Type-II error",
+    "B": "Type-II error occurs if the test accepts the null hypothesis when the null hypothesis is actually false",
+    "C": "Type-I error occurs if the test rejects the null hypothesis when the null hypothesis is actually false",
+    "D": "The sum of the probability of the Type-I error and the probability of the Type-II error should be 1"
+  },
+  "answer": null,
+  "solution": null
+}

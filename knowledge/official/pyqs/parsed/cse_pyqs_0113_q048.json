@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q48",
+  "question_seq": 113,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let A and B be two n × n matrices over real numbers. Let rank(M) and det(M) denote the rank and determinant of a matrix M, respectively. Consider the following statements: I.I.I.I.I. rank(AB) = rank(A) rank(B) II.",
+  "options": {
+    "D": "et(AB) = det(A) det(B) III. III. rank(A + B) ≤ rank(A) + rank(B) IV. det(A + B) ≤ det(A) + det(B) Which of the above statements are TRUE?",
+    "A": "III and IV only",
+    "B": "II and III only",
+    "C": "l and IV only"
+  },
+  "answer": "B",
+  "solution": null
+}

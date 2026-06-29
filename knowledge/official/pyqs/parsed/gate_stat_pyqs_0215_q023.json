@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q23",
+  "question_seq": 215,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let (𝑋, 𝑌)𝑇 follow a bivariate normal distribution with E(𝑋) = 3, E(𝑌) = 4, Var(𝑋) = 25, Var(𝑌) = 100, and Cov(𝑋, 𝑌) = 50𝜌, where 𝜌∈(−1,1). If E(𝑌 | 𝑋= 5) = 4.32, then 𝜌 equals",
+  "options": {
+    "A": "0.08",
+    "B": "0.8",
+    "C": "0.32",
+    "D": "0.5"
+  },
+  "answer": null,
+  "solution": null
+}

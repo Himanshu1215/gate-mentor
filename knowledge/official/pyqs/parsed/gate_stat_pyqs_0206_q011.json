@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q11",
+  "question_seq": 206,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let 𝑓: [0, ∞) →[0, ∞) be a differentiable function with 𝑓(𝑥) > 0 for all 𝑥> 0,",
+  "options": {
+    "A": "nd 𝑓(0) = 0. Further, 𝑓 satisfies (𝑓(𝑥))2 = ∫((𝑓(𝑡)) 2 + 𝑓(𝑡)) 𝑑𝑡 , 𝑥> 0. Then which one of the following options is correct?",
+    "B": "1 < 𝑓(2) ≤2",
+    "C": "2 < 𝑓(2) ≤3",
+    "D": "3 < 𝑓(2) ≤4"
+  },
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q44",
+  "question_seq": 276,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {𝑋𝑛}𝑛≥1 be a sequence of independent random variables such that 𝑋𝑛 has Poisson distribution with mean 𝜆𝑛, where 𝜆𝑛= 𝜆+ 2𝑛⁡, 𝑛≥1, and 𝜆> 0 is an unknown parameter. Which one of the following statements is true?",
+  "options": {
+    "A": "𝑖=1 is an unbiased estimator of 𝜆",
+    "B": "𝑖=1 is a consistent estimator of 𝜆",
+    "C": "𝑖=1 is a consistent estimator of 𝜆",
+    "D": "𝑛2 ∑ 𝑖=1 is an unbiased estimator of 𝜆"
+  },
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q24",
+  "question_seq": 103,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "For parameters a and b, both of which are ω(1), T (n) = T(n1/a) + 1, and T(b) = 1. Then T (n) is",
+  "options": {
+    "A": "Θ(log2 log2 n)",
+    "B": "Θ(loga logb n)",
+    "C": "Θ(logb loga n)",
+    "D": "Θ(logab n)"
+  },
+  "answer": "B",
+  "solution": null
+}

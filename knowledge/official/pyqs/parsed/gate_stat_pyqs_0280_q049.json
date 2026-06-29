@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q49",
+  "question_seq": 280,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following statements is/are true?",
+  "options": {
+    "A": "If 𝐴 is a 3 × 3⁡ real matrix with 3 distinct eigenvalues, then 𝐴 is diagonalizable",
+    "B": "If 𝐴 is a 3 × 3⁡ real matrix such that 𝐴2 is diagonalizable, then 𝐴 is",
+    "D": "iagonalizable",
+    "C": "For real numbers 𝑎, 𝑏, 𝑐, if [ ] is diagonalizable, then 𝑎= 𝑏= 𝑐= 0"
+  },
+  "answer": null,
+  "solution": null
+}

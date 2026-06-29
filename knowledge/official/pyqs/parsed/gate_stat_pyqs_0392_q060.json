@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q60",
+  "question_seq": 392,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋ଵ, 𝑋ଶ, 𝑋ଷ, 𝑋ସ be a random sample of size four from a Bernoulli distribution with the parameter 𝜃, 0 < 𝜃< 1. Consider the null hypothesis 𝐻଴: 𝜃= ସ against the alternative hypothesis 𝐻ଵ: 𝜃> ସ. Suppose 𝐻଴ is rejected if and only if 𝑋ଵ+ 𝑋ଶ+ 𝑋ଷ+ 𝑋ସ> 2. If 𝛼 is the probability of Type I error for the test and 𝛾(𝜃) is the power function of the test, then the value of 16𝛼+ 7 𝛾ቀ ଶቁ (in integer) is equal to ______",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

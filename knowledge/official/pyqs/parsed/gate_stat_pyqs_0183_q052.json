@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q52",
+  "question_seq": 183,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 be a discrete random variable with support 𝑆= {1,2,3, … } such that 𝐸(𝑋2) < ∞. Let 𝐹 be the distribution function of 𝑋. Then which of the following statements is/are correct?",
+  "options": {
+    "A": "𝐸(𝑋) = ∑ (1 −𝐹(𝑛−1)) 𝑛=1",
+    "B": "𝐹(𝑋) has discrete uniform distribution",
+    "C": "There exists at least one such random variable 𝑋 such that 𝑋 and 𝑋 have the same",
+    "D": "istribution"
+  },
+  "answer": null,
+  "solution": null
+}

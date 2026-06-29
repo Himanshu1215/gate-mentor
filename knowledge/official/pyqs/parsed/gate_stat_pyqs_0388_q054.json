@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q54",
+  "question_seq": 388,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let a linear model 𝑌= 𝛽଴+ 𝛽ଵ𝑋+ 𝜖 be fitted to the following data, where 𝜖 is normally distributed with mean 0 and unknown variance 𝜎ଶ> 0. Let 𝑌෠଴ denote the ordinary least-square estimator of 𝑌 at 𝑋= 6, and the variance of of 𝑌෠଴= 𝑐𝜎ଶ. Then the value of the real constant 𝑐 (rounded off to one decimal place) is equal to ______",
+  "options": null,
+  "answer": null,
+  "solution": null
+}

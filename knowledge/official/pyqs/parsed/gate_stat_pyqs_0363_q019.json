@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q19",
+  "question_seq": 363,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let 𝑋ଵ, 𝑋ଶ, … , 𝑋௡ be a random sample from a population 𝑓(𝑥; 𝜃), where 𝜃 is a parameter. Then which one of the following statements is NOT true?",
+  "options": {
+    "A": "௜ୀଵ is a complete and sufficient statistic for 𝜃, if 𝑓(𝑥; 𝜃) = 𝑒ିఏ𝜃௫ , 𝑥= 0, 1, 2, … , and 𝜃> 0",
+    "B": "௜ୀଵ , ∑ ௜ୀଵ ) is a complete and sufficient statistic for 𝜃, if 𝑓(𝑥; 𝜃) = √2𝜋𝜃 𝑒ି ଵ ଶఏమ(௫ିఏ)మ , −∞< 𝑥< ∞, 𝜃> 0",
+    "C": "𝑓(𝑥; 𝜃) = 𝜃𝑥ఏିଵ, 0 < 𝑥< 1, 𝜃> 0 has monotone likelihood ratio property in ௜ୀଵ",
+    "D": "𝑋(௡) −𝑋(ଵ) is ancillary statistic for 𝜃 if 𝑓(𝑥; 𝜃) = 1, 0 < 𝜃< 𝑥< 𝜃+ 1, where 𝑋(ଵ) = min{𝑋ଵ, 𝑋ଶ, … , 𝑋௡} and 𝑋(௡) = max{𝑋ଵ, 𝑋ଶ, … , 𝑋௡} Page 18"
+  },
+  "answer": null,
+  "solution": null
+}

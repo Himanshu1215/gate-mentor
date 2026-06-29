@@ -1,0 +1,16 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q53",
+  "question_seq": 387,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Suppose a random sample of size 3 is taken from a distribution with the probability",
+  "options": {
+    "D": "ensity function 𝑓(𝑥) = ൝ 2𝑥, 0 < 𝑥< 1, 0, elsewhere. If 𝑝 is the probability that the largest sample observation is at least twice the smallest sample observation, then the value of 𝑝 (rounded off to three decimal places) is ______"
+  },
+  "answer": null,
+  "solution": null
+}

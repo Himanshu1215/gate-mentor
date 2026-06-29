@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q37",
+  "question_seq": 173,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let 𝑥1 ∈(0, 4) and consider the sequence {𝑥𝑛}𝑛≥1 defined iteratively by 𝑥𝑛+1 = 2 −(4 −𝑥𝑛) 2, 𝑛≥1.",
+  "options": {
+    "C": "onsider the following statements: (I) {𝑥𝑛} converges to 0 . (II) 𝑥𝑛+1 𝑥𝑛 } converges to 4 . Which of the following statements is correct?",
+    "A": "Only statement (I) is correct",
+    "B": "Only statement (II) is correct",
+    "D": "Neither statement (I) nor statement (II) is correct"
+  },
+  "answer": null,
+  "solution": null
+}

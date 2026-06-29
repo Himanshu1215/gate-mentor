@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q56",
+  "question_seq": 187,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋1, 𝑋2, … , 𝑋𝑛 (𝑛≥2) be a random sample from the following probability",
+  "options": {
+    "D": "ensity function 𝑓(𝑥) = 1 2 𝑒−|𝑥−𝜇|, −∞< 𝑥< ∞, where 𝜇∈(−∞, ∞) is an unknown parameter. Let 𝑋̅ = 𝑛 ∑ 𝑖=1",
+    "A": "nd 𝜇̂ denote the maximum likelihood estimator of 𝜇, whenever it exists. Then which of the following statements is/are correct?",
+    "B": "𝜇̂ may not always exist",
+    "C": "𝜇̂ always exists but it may not be unique"
+  },
+  "answer": null,
+  "solution": null
+}

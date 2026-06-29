@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q65",
+  "question_seq": 196,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 be a single observation from a distribution having probability density function 𝑓𝜃(𝑥) = { 𝜃2 if 0 < 𝑥< 𝜃 0 otherwise, where 𝜃∈(0, ∞). For testing 𝐻0: 𝜃≤1 against 𝐻1: 𝜃> 1, at level of significance 0.05, let 𝛽1 be the size of the uniformly most powerful test and 𝛽2 be the power of the uniformly most powerful test at 𝜃= 2. Then 10 𝛽1 + 40 𝛽2 equals ______________ (",
+  "options": null,
+  "answer": "C",
+  "solution": null
+}

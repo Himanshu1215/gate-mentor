@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q39",
+  "question_seq": 138,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let Ri(z) and Wi(z) denote read and write operations on a data element z by a transaction Ti, respectively. Consider the schedule S with four transactions. S : : : : : R4(x), R2(x), R3(x), R1(y), W1(y), W2(x), W3(y), R4(x) Which one of the following serial schedules is conflict equivalent to S?",
+  "options": {
+    "A": "T1 → T3 → T4 → T2",
+    "B": "T1 → T4 → T3 → T2",
+    "C": "T4 → T1 → T3 → T2",
+    "D": "T3 → T1 → T4 → T2"
+  },
+  "answer": "A",
+  "solution": null
+}

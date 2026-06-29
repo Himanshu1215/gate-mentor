@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q5",
+  "question_seq": 97,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "What is the worst case time complexity of inserting n elements into an empty linked list, if the linked list needs to be maintained in sorted order?",
+  "options": {
+    "A": "Θ(n logn)",
+    "B": "Θ(n)",
+    "C": "Θ(1)",
+    "D": "Θ(n2)"
+  },
+  "answer": "A",
+  "solution": null
+}

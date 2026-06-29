@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q13",
+  "question_seq": 257,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let 𝐴 be a 3 × 3 real matrix and let 𝐼3 be the 3 × 3 identity matrix. Which one of the following statements is NOT true?",
+  "options": {
+    "A": "If the row-reduced echelon form of 𝐴 is 𝐼3, then zero is not an eigenvalue of 𝐴",
+    "B": "If zero is not an eigenvalue of 𝐴, then the row-reduced echelon form of 𝐴 is 𝐼3",
+    "C": "If 𝐴 has three distinct eigenvalues, then the row-reduced echelon form of 𝐴 is 𝐼3",
+    "D": "If the system of equations 𝐴𝒙= 𝒃 has a solution for every 3 × 1 real column vector 𝒃, then the row-reduced echelon form of 𝐴 is 𝐼3"
+  },
+  "answer": null,
+  "solution": null
+}

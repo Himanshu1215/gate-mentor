@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q20",
+  "question_seq": 212,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let a random variable 𝑋 follow a distribution with density 𝑓∈{𝑓0, 𝑓1}, where 𝑓0(𝑥) = {1 if 0 ≤𝑥≤1 0 otherwise and 𝑓1(𝑥) = {1 if 1 ≤𝑥≤2 0 otherwise. Let 𝜙 be a most powerful test of level 0.05 for testing 𝐻0: 𝑓= 𝑓0 against 𝐻1: 𝑓= 𝑓1 based on 𝑋. Then which one of the following options is necessarily",
+  "options": {
+    "C": "orrect?",
+    "A": "E𝑓0(𝜙(𝑋)) = 0.05",
+    "B": "E𝑓1(𝜙(𝑋)) = 1",
+    "D": "𝑃𝑓1(𝜙(𝑋) = 1) < 1"
+  },
+  "answer": null,
+  "solution": null
+}

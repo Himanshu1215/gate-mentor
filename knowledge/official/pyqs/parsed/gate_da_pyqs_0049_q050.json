@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q50",
+  "question_seq": 49,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let x1, x2, x3, x4, x5 be a system of orthonormal vectors in R10. Consider the matrix",
+  "options": {
+    "A": "= x1x⊤ 1 + . . . + x5x⊤ 5 . Which of the following statements is/are correct?",
+    "B": "Singular values of A are either 0 or 1",
+    "C": "Determinant of A is 1",
+    "D": "A is invertible"
+  },
+  "answer": null,
+  "solution": null
+}

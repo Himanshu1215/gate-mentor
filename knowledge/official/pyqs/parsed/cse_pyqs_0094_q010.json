@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q10",
+  "question_seq": 94,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The total revenue of a company during 2014-2018 is shown in the bar graph. If the total expenditure of the company in each year is 500 million rupees, then the aggregate profit loss (in percentage) on the total expenditure of the company during 2014-2018 is ________. Year Revenue (in millions rupees)",
+  "options": {
+    "A": "16.67% profit",
+    "B": "20% loss",
+    "C": "16.67% loss",
+    "D": "20% profit"
+  },
+  "answer": "D",
+  "solution": null
+}

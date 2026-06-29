@@ -1,0 +1,17 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q18",
+  "question_seq": 10,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "f : R  R is a function from R to R such that at some x* R, f’(x*) = 0 f” (x*) > 0, thus of necessarily has a Sol. (Local Minima) f will have a local minima a at x* as f’(x*) = 0 denotes that x* is a critical point. Now",
+  "options": {
+    "A": "s the double derivative of at (x*) is greater than 0, thus the function will have a local minima at x = x*  R PAGE PW Mobile APP: https://smart.link/7wwosivoicgd4 https://t.me/Gwcomsciandinfo",
+    "D": "ATA SCIENCE & ARTIFICIAL INTELLIGENCE [NAT]"
+  },
+  "answer": null,
+  "solution": null
+}

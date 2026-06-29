@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q14",
+  "question_seq": 154,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 and 𝑌 be two independent discrete random variables such that the moment generating functions of 𝑋 and 𝑋+ 𝑌 are given by 𝑀𝑋(𝑡) = 1 + 2𝑒−𝑡+ 3𝑒2𝑡 , 𝑡∈ℝ,",
+  "options": {
+    "A": "nd 𝑀𝑋+𝑌(𝑡) = 2 + 𝑒𝑡+ 3𝑒3𝑡 , 𝑡∈ℝ, respectively. Then which of the following statements is correct?",
+    "B": "𝑃(𝑋𝑌= 2) =",
+    "C": "𝐸(𝑋) = 0",
+    "D": "Var(𝑌) = 1"
+  },
+  "answer": null,
+  "solution": null
+}

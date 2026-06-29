@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q21",
+  "question_seq": 213,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋 be a random variable having probability density function 𝑓∈{𝑓0, 𝑓1}. Let 𝜙",
+  "options": {
+    "B": "e a most powerful test of level 0.05 for testing 𝐻0: 𝑓= 𝑓0 against 𝐻1: 𝑓= 𝑓1 based on 𝑋. Then which one of the following options is NOT necessarily correct?",
+    "A": "𝜙 is the unique most powerful test of level 0.05",
+    "C": "E𝑓0(𝜙(𝑋)) ≤0.05",
+    "D": "For some constant 𝑐≥0, 𝑃𝑓(𝑓1(𝑋) > 𝑐𝑓0(𝑋)) ≤𝑃𝑓(𝜙(𝑋) = 1), ∀ 𝑓∈{𝑓0, 𝑓1}"
+  },
+  "answer": null,
+  "solution": null
+}

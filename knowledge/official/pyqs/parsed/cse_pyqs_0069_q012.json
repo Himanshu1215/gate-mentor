@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q12",
+  "question_seq": 69,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The chip selects logic for a certain DRAM chip in memory system design is shown below.",
+  "options": {
+    "A": "ssume that memory has 16 address lines denoted by A15 to A0. What is the range of addresses (in hexadecimal) of the memory system that can get enabled by the chip select (CS) signal?",
+    "B": "C800 to CFFF",
+    "C": "C800 to C8FF",
+    "D": "CA00 to CAFF | Page 12"
+  },
+  "answer": "B",
+  "solution": null
+}

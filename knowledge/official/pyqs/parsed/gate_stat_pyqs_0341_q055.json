@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q55",
+  "question_seq": 341,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Suppose that 𝑈 and 𝑉 are two independent and identically distributed random variables each having probability density function 𝑓(𝑥) = { 𝜆2𝑥 𝑒−𝜆𝑥 𝑖𝑓 𝑥> 0 0 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒, where 𝜆> 0. Which of the following statements is/are true?",
+  "options": {
+    "A": "The distribution of 𝑈−𝑉 is symmetric about 0",
+    "B": "The distribution of 𝑈𝑉 does not depend on 𝜆",
+    "C": "The distribution of 𝑉 does not depend on 𝜆",
+    "D": "The distribution of 𝑉 is symmetric about 1"
+  },
+  "answer": null,
+  "solution": null
+}

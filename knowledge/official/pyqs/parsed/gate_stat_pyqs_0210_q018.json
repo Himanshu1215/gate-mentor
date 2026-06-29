@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q18",
+  "question_seq": 210,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑇 be a complete and sufficient statistic for a family 𝒫 of distributions and let 𝑈",
+  "options": {
+    "B": "e a sufficient statistic for 𝒫. If 𝑃𝑓(𝑇≥0) = 1 for all 𝑓∈𝒫, then which one of the following options is NOT necessarily correct?",
+    "A": "𝑇2 is a complete statistic for 𝒫",
+    "C": "𝑇 is a function of 𝑈",
+    "D": "𝑈 is a function of 𝑇"
+  },
+  "answer": null,
+  "solution": null
+}

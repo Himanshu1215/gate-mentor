@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q40",
+  "question_seq": 328,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 𝑋1, 𝑋2, … , 𝑋10 be a random sample of size 10 from a population having 𝑁(0, 𝜃2) distribution, where 𝜃> 0 is an unknown parameter. Let 𝑇= 10 ∑ 𝑖=1 . If the mean square error of 𝑐𝑇 (𝑐> 0), as an estimator of 𝜃2, is minimized at 𝑐= 𝑐0, then the value of 𝑐0 equals",
+  "options": {
+    "A": "(B)",
+    "C": "(D) Q.41 Suppose that 𝑿1, 𝑿2, … , 𝑿10 are independent and identically distributed random vectors each having 𝑁2(𝝁, Σ) distribution, where Σ is non-singular. If 1 + (𝑿̅ −𝝁)𝑇Σ−1(𝑿̅ −𝝁) , where 𝑿̅ = 10 ∑ 𝑖=1 , then the value of log𝑒𝑃(𝑈≤ 2) equals",
+    "B": "The likelihood ratio test rejects 𝐻0 if 𝑚< 𝑐 for some 𝑐",
+    "D": "The likelihood ratio test rejects 𝐻0 if 𝑚< 𝑐1 or 𝑚> 𝑐2 for some 𝑐1 and 𝑐2"
+  },
+  "answer": null,
+  "solution": null
+}

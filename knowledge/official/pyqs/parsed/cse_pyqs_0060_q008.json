@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q8",
+  "question_seq": 60,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In the given diagram, teachers are represented in the triangle, researchers in the circle",
+  "options": {
+    "A": "nd administrators in the rectangle. Out of the total number of the people, the percentage of administrators shall be in the range of ________. Researchers",
+    "B": "0 to 15",
+    "C": "31 to 45",
+    "D": "16 to 30"
+  },
+  "answer": "C",
+  "solution": null
+}

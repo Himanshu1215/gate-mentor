@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q13",
+  "question_seq": 122,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the following statements is TRUE?",
+  "options": {
+    "A": "The LALR(1) parser for a grammar G cannot have reduce-reduce conflict if the LR(1) parser for G does not have reduce-reduce conflict.",
+    "B": "Symbol table is accessed only during the lexical analysis phase.",
+    "C": "Data flow analysis is necessary for run-time memory management.",
+    "D": "LR(1) parsing is sufficient for deterministic context-free languages."
+  },
+  "answer": "D",
+  "solution": null
+}

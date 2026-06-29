@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q6",
+  "question_seq": 90,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "There are multiple routes to reach from node 1 to node 2, as shown in the network. The cost of travel on an edge between two nodes is given in rupees. Nodes ‘a’ ‘b’, ‘c’, ‘d’, ‘e’ and ‘f’ are toll booths. The toll price at toll booths marked ‘a’ and ‘c’ is Rs. 200.",
+  "options": {
+    "A": "nd is Rs. 100 for the other toll booths. Which is the cheapest route from node 1 to node 2?",
+    "B": "1-b-2",
+    "C": "1-f-b-2",
+    "D": "1-f-e-2"
+  },
+  "answer": "C",
+  "solution": null
+}

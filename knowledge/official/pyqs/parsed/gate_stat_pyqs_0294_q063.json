@@ -1,0 +1,17 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q63",
+  "question_seq": 294,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let 𝑋1, 𝑋2, 𝑋3, 𝑋4 be a random sample of size 4 from a population having uniform",
+  "options": {
+    "D": "istribution over the interval (0, 𝜃), where 𝜃> 0 is an unknown parameter. Let 𝑋(4) = max{𝑋1, 𝑋2, 𝑋3, 𝑋4}. To test 𝐻0: 𝜃= 1 against 𝐻1: 𝜃= 0.1,",
+    "C": "onsider the critical region that rejects 𝐻0 if 𝑋(4) < 0.3. Let 𝑝 be the probability of the Type-I error. Then 100⁡𝑝 equals ___________ (rounded off to two decimal places)."
+  },
+  "answer": null,
+  "solution": null
+}

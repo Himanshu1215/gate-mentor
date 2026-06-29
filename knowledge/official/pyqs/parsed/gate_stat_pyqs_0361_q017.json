@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q17",
+  "question_seq": 361,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let 𝑿𝟏, 𝑿𝟐, … , 𝑿𝟐𝟎 be a random sample of size 20 from Ν଺(𝝁, 𝚺), with",
+  "options": {
+    "D": "et(𝚺) ≠0, and suppose both 𝝁 and 𝚺 are unknown. Let 𝑿ഥ= 1 20 ෍𝑿௜ and 𝑺= 1 ௜ୀଵ ෍(𝑿௜−𝑿ഥ) ௜ୀଵ (𝑿௜−𝑿ഥ)்.",
+    "C": "onsider the following two statements: (I) The distribution of 19 𝑺 is 𝑊଺(19, 𝚺) (Wishart distribution of order 6 with 19 degrees of freedom). (II) The distribution of (𝑿𝟑−𝝁)்𝑺ିଵ(𝑿𝟑−𝝁) is 𝜒଺ ଶ (Chi-square",
+    "A": "(I) only",
+    "B": "(II) only"
+  },
+  "answer": null,
+  "solution": null
+}

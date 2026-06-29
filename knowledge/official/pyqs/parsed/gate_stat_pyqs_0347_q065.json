@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q65",
+  "question_seq": 347,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let {0.13, 0.12, 0.78, 0.51} be a realization of a random sample of size 4 from a population with cumulative distribution function 𝐹(⋅). Consider testing 𝐻0: 𝐹= 𝐹0 against 𝐻1: 𝐹≠𝐹0, where 𝐹0(𝑥) = { 0 𝑖𝑓 𝑥< 0 𝑥 𝑖𝑓 0 ≤𝑥< 1 1 𝑖𝑓 𝑥≥1. Let 𝐷 denote the Kolmogorov-Smirnov test statistic. If 𝑃(𝐷> 0.669) = 0.01 under 𝐻0 and 𝜓= { 1 𝑖𝑓 𝐻0 𝑖𝑠 𝑎𝑐𝑐𝑒𝑝𝑡𝑒𝑑 𝑎𝑡 𝑙𝑒𝑣𝑒𝑙 0.01 0 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒, then based on the given data, the observed value of 𝐷+ 𝜓 (rounded off to two",
+  "options": {
+    "D": "ecimal places) equals _______________ END OF QUESTION PAPER Q. No. Session Question Type (QT) MCQ/MSQ/NAT Subject Name (SN) Key/Range (KY) Mark (MK) 7 MCQ 7 NAT 0.32 to 0.38 7 NAT 6.10 to 6.40 7 NAT 0.28 to 0.32 7 NAT 0 to 0 7 NAT 6 to 6 7 NAT 0.36 to 0.39 7 NAT 0.35 to 0.40 7 MCQ 7 MSQ",
+    "A": ", C, D 7 MSQ",
+    "B": ", D 7 MSQ",
+    "C": ", D 7 MSQ"
+  },
+  "answer": null,
+  "solution": null
+}

@@ -1,0 +1,14 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q64",
+  "question_seq": 248,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let (𝑋1, 𝑋2, 𝑋3)𝑇 have the following distribution 𝑁3 (( ), ( 0.4 0.6 ) ). Then the value of the partial correlation coefficient between 𝑋1 and 𝑋2 given 𝑋3 is __________ (rounded off to two decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": null
+}
