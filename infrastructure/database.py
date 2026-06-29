@@ -61,7 +61,20 @@ def init_db():
         FOREIGN KEY (concept_id) REFERENCES concepts(concept_id)
     )
     """)
-    
+
+    # 5. User Profile (single-row settings: target AIR, exam date, daily goal)
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS user_profile (
+        id INTEGER PRIMARY KEY CHECK (id = 1),
+        display_name TEXT,
+        target_air INTEGER,
+        exam_date TEXT,
+        daily_goal INTEGER DEFAULT 10,
+        mocks_completed INTEGER DEFAULT 0,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+    """)
+
     conn.commit()
     conn.close()
 

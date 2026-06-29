@@ -5,7 +5,7 @@ import tempfile
 import shutil
 
 try:
-    from fastapi import FastAPI, HTTPException, Header, UploadFile, File, Form
+    from fastapi import FastAPI, HTTPException, Header, UploadFile, File, Form, Query
     from fastapi.middleware.cors import CORSMiddleware
     from pydantic import BaseModel
 except ImportError:
@@ -29,6 +29,7 @@ reasoner = AIReasoningEngine()
 class ChatRequest(BaseModel):
     session_id: str
     query: str
+    persona: Optional[str] = "Professor"
 
 class ChatResponse(BaseModel):
     reply: str
@@ -165,7 +166,7 @@ async def chat_endpoint(request: ChatRequest, authorization: Optional[str] = Hea
             "metadata": {"source": "System"}
         }]
 
-    reply = reasoner.generate_explanation(request.query, context_chunks)
+    reply = reasoner.generate_explanation(request.query, context_chunks, persona=request.persona or "Professor")
     citations = list({chunk["metadata"].get("source", "Unknown") for chunk in context_chunks})
 
     return ChatResponse(reply=reply, citations=citations)
@@ -177,15 +178,31 @@ async def quiz_submit_endpoint(request: QuizSubmitRequest, authorization: Option
     """
     if not authorization:
         raise HTTPException(status_code=401, detail="Unauthorized")
-        
+
+    # Record the attempt so analytics / gamification / calibration have data.
+    import uuid
+    from infrastructure.database import get_db_connection
+    try:
+        conn = get_db_connection()
+        conn.execute(
+            "INSERT INTO quiz_attempts (attempt_id, session_id, concept_id, is_correct, confidence) "
+            "VALUES (?, ?, ?, ?, ?)",
+            (uuid.uuid4().hex, request.session_id, request.concept_id,
+             1 if request.is_correct else 0, request.confidence),
+        )
+        conn.commit()
+        conn.close()
+    except Exception as e:
+        logging.warning(f"Could not record quiz attempt: {e}")
+
     from learning.decision_engine import MasteryCalculator
     new_level = MasteryCalculator.update_mastery(request.concept_id, request.is_correct, request.confidence)
-    
+
     # Fire event via the Event Bus asynchronously in background
     from core.event_bus import bus, Events
     import asyncio
     asyncio.create_task(bus.publish(Events.QUIZ_COMPLETED, request.dict()))
-    
+
     return QuizSubmitResponse(success=True, new_mastery_level=new_level)
 
 @app.get("/api/dashboard/stats", response_model=DashboardStatsResponse)
@@ -263,6 +280,383 @@ async def upload_file_endpoint(
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Ingestion failed: {str(e)}")
+
+# ════════════════════════════════════════════════════════════════════════════
+#  Real-data endpoints (concepts, PYQ bank, quiz bank, mocks, revision,
+#  gamification, profile, analytics) — added for the gamified frontend rebuild.
+# ════════════════════════════════════════════════════════════════════════════
+
+def _auth(authorization):
+    if not authorization:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+
+
+# prefix -> subject (mirrors knowledge/pyq_repository + seed_syllabus)
+_PREFIX_SUBJECT = {
+    "PROB": "Probability and Statistics", "LA": "Linear Algebra",
+    "CALC": "Calculus and Optimization", "DSA": "Programming, DS & Algorithms",
+    "DB": "Database Management and Warehousing", "ML": "Machine Learning",
+    "AI": "Artificial Intelligence",
+}
+
+
+@app.get("/api/concepts")
+async def list_concepts(authorization: Optional[str] = Header(None)):
+    """All concepts grouped by subject, with mastery level + locked status."""
+    _auth(authorization)
+    import json as _json
+    from infrastructure.database import get_db_connection
+
+    conn = get_db_connection()
+    rows = conn.execute("""
+        SELECT c.concept_id, c.subject, c.topic, c.subtopic, c.prerequisites,
+               c.difficulty, c.importance_weight,
+               COALESCE(m.state_level, 1) AS state_level,
+               COALESCE(m.accuracy, 0.0) AS accuracy
+        FROM concepts c
+        LEFT JOIN mastery_states m ON c.concept_id = m.concept_id
+        ORDER BY c.subject, c.concept_id
+    """).fetchall()
+    conn.close()
+
+    # mastery lookup for prereq checks
+    mastery = {r["concept_id"]: r["state_level"] for r in rows}
+
+    def locked(prereq_str):
+        try:
+            prereqs = _json.loads(prereq_str) if prereq_str else []
+        except Exception:
+            prereqs = []
+        return [p for p in prereqs if mastery.get(p, 1) <= 2]
+
+    subjects = {}
+    for r in rows:
+        blockers = locked(r["prerequisites"])
+        try:
+            prereqs = _json.loads(r["prerequisites"]) if r["prerequisites"] else []
+        except Exception:
+            prereqs = []
+        item = {
+            "concept_id": r["concept_id"],
+            "topic": r["topic"],
+            "subtopic": r["subtopic"],
+            "difficulty": r["difficulty"],
+            "importance_weight": r["importance_weight"],
+            "prerequisites": prereqs,
+            "mastery_level": r["state_level"],
+            "accuracy": round(r["accuracy"], 2),
+            "locked": len(blockers) > 0,
+            "blocked_by": blockers,
+        }
+        subjects.setdefault(r["subject"], []).append(item)
+
+    grouped = []
+    for subject, concepts in subjects.items():
+        mastered = sum(1 for c in concepts if c["mastery_level"] >= 8)
+        avg = sum(c["mastery_level"] for c in concepts) / len(concepts) if concepts else 1
+        grouped.append({
+            "subject": subject,
+            "concepts": concepts,
+            "total": len(concepts),
+            "mastered": mastered,
+            "readiness": round(avg / 8 * 100, 1),
+        })
+    return {"subjects": grouped}
+
+
+@app.get("/api/pyqs")
+async def list_pyqs(
+    q: str = Query(""), year: Optional[int] = None, exam: Optional[str] = None,
+    subject: Optional[str] = None, type: Optional[str] = None, marks: Optional[int] = None,
+    concept_id: Optional[str] = None, has_solution: Optional[bool] = None,
+    has_answer: Optional[bool] = None, limit: int = 20, offset: int = 0,
+    authorization: Optional[str] = Header(None),
+):
+    """Filtered + paginated access to the parsed PYQ bank (754 questions)."""
+    _auth(authorization)
+    from knowledge.pyq_repository import get_repository
+    repo = get_repository()
+    items = repo.filter(q=q, year=year, exam=exam, subject=subject, qtype=type,
+                        marks=marks, concept_id=concept_id,
+                        has_solution=has_solution, has_answer=has_answer)
+    return repo.paginate(items, limit=max(1, min(limit, 100)), offset=max(0, offset))
+
+
+@app.get("/api/pyqs/filters")
+async def pyq_filters(authorization: Optional[str] = Header(None)):
+    """Available filter values for the PYQ explorer UI."""
+    _auth(authorization)
+    from knowledge.pyq_repository import get_repository
+    repo = get_repository()
+    return {"years": repo.years(), "exams": repo.exams(),
+            "subjects": repo.subjects(), "stats": repo.stats()}
+
+
+@app.get("/api/pyqs/{pyq_id}")
+async def get_pyq(pyq_id: str, authorization: Optional[str] = Header(None)):
+    """A single PYQ (incl. solution)."""
+    _auth(authorization)
+    from knowledge.pyq_repository import get_repository
+    rec = get_repository().get(pyq_id)
+    if not rec:
+        raise HTTPException(status_code=404, detail="PYQ not found")
+    return rec
+
+
+@app.get("/api/quiz/next")
+async def quiz_next(
+    mode: str = Query("mixed"), concept_id: Optional[str] = None,
+    exclude: str = Query(""), authorization: Optional[str] = Header(None),
+):
+    """
+    Return one real, answerable question for the quiz flow.
+    mode: topic (needs concept_id) | mixed | weak | revision.
+    `track_concept_id` is what mastery should be recorded against.
+    """
+    _auth(authorization)
+    from knowledge.pyq_repository import get_repository
+    from infrastructure.database import get_db_connection
+    repo = get_repository()
+    exclude_ids = set(filter(None, exclude.split(",")))
+    track = concept_id
+
+    question = None
+    if mode == "topic" and concept_id:
+        question = repo.random_question(exclude_ids=exclude_ids, concept_id=concept_id)
+        if not question:  # fall back to the concept's subject
+            subj = _PREFIX_SUBJECT.get(concept_id.split("_")[0].upper())
+            question = repo.random_question(exclude_ids=exclude_ids, subject=subj)
+    elif mode in ("weak", "revision"):
+        conn = get_db_connection()
+        order = "state_level ASC" if mode == "weak" else "last_revised ASC"
+        rows = conn.execute(
+            f"SELECT concept_id FROM mastery_states WHERE state_level BETWEEN 2 AND 7 "
+            f"ORDER BY {order} LIMIT 8"
+        ).fetchall()
+        conn.close()
+        for r in rows:
+            cid = r["concept_id"]
+            subj = _PREFIX_SUBJECT.get(cid.split("_")[0].upper())
+            question = (repo.random_question(exclude_ids=exclude_ids, concept_id=cid)
+                        or repo.random_question(exclude_ids=exclude_ids, subject=subj))
+            if question:
+                track = cid
+                break
+
+    if not question:  # mixed / final fallback
+        question = repo.random_question(exclude_ids=exclude_ids)
+
+    if not question:
+        raise HTTPException(status_code=404, detail="No answerable questions available")
+
+    if not track:
+        track = question.get("concept_id")
+    return {
+        "pyq_id": question["id"],
+        "concept_id": question.get("concept_id"),
+        "track_concept_id": track,
+        "subject": question.get("subject"),
+        "question_type": question.get("question_type"),
+        "marks": question.get("marks"),
+        "year": question.get("year"),
+        "exam": question.get("exam"),
+        "question_text": question.get("question_text"),
+        "options": question.get("options") or {},
+        "answer": question.get("answer"),
+        "solution": question.get("solution"),
+    }
+
+
+@app.get("/api/revision/due")
+async def revision_due(authorization: Optional[str] = Header(None)):
+    """Concepts due for revision based on mastery level + time since last revised."""
+    _auth(authorization)
+    import datetime
+    from infrastructure.database import get_db_connection
+
+    thresholds = [(3, 3), (5, 7), (7, 14), (8, 30)]  # (max_level, days)
+
+    def threshold_for(level):
+        for max_lvl, days in thresholds:
+            if level <= max_lvl:
+                return days
+        return 30
+
+    conn = get_db_connection()
+    rows = conn.execute("""
+        SELECT m.concept_id, m.state_level, m.last_revised,
+               c.subject, c.topic, c.subtopic
+        FROM mastery_states m JOIN concepts c ON m.concept_id = c.concept_id
+        WHERE m.state_level > 1 AND m.last_revised IS NOT NULL
+    """).fetchall()
+    conn.close()
+
+    now = datetime.datetime.now()
+    due, upcoming = [], []
+    for r in rows:
+        try:
+            last = datetime.datetime.fromisoformat(r["last_revised"])
+        except Exception:
+            continue
+        days_since = (now - last).days
+        thresh = threshold_for(r["state_level"])
+        entry = {
+            "concept_id": r["concept_id"], "subject": r["subject"],
+            "topic": r["topic"], "subtopic": r["subtopic"],
+            "state_level": r["state_level"], "days_since": days_since,
+            "due_in_days": max(0, thresh - days_since),
+        }
+        (due if days_since >= thresh else upcoming).append(entry)
+
+    due.sort(key=lambda x: x["days_since"], reverse=True)
+    upcoming.sort(key=lambda x: x["due_in_days"])
+    return {"due": due, "upcoming": upcoming[:10], "due_count": len(due)}
+
+
+@app.get("/api/mock/generate")
+async def mock_generate(authorization: Optional[str] = Header(None)):
+    """Generate a real GATE-pattern mock exam (answers withheld from client)."""
+    _auth(authorization)
+    from assessment.simulation_engine import SimulationEngine
+    return SimulationEngine.generate_mock_exam(65)
+
+
+class MockGradeRequest(BaseModel):
+    exam_id: str
+    answers: Dict[str, str]
+
+
+@app.post("/api/mock/grade")
+async def mock_grade(request: MockGradeRequest, authorization: Optional[str] = Header(None)):
+    """Grade a previously generated mock and bump mocks_completed."""
+    _auth(authorization)
+    from assessment.simulation_engine import SimulationEngine
+    from infrastructure.database import get_db_connection
+    try:
+        result = SimulationEngine.grade_mock_exam(request.exam_id, request.answers)
+    except KeyError:
+        raise HTTPException(status_code=404, detail="Exam expired — generate a new mock.")
+
+    try:
+        conn = get_db_connection()
+        conn.execute("""
+            INSERT INTO user_profile (id, mocks_completed) VALUES (1, 1)
+            ON CONFLICT(id) DO UPDATE SET mocks_completed = COALESCE(mocks_completed, 0) + 1
+        """)
+        conn.commit()
+        conn.close()
+    except Exception as e:
+        logging.warning(f"Could not bump mocks_completed: {e}")
+    return result
+
+
+class ProfileRequest(BaseModel):
+    display_name: Optional[str] = None
+    target_air: Optional[int] = None
+    exam_date: Optional[str] = None
+    daily_goal: Optional[int] = None
+
+
+@app.get("/api/profile")
+async def get_profile(authorization: Optional[str] = Header(None)):
+    _auth(authorization)
+    from infrastructure.database import get_db_connection
+    conn = get_db_connection()
+    row = conn.execute("SELECT * FROM user_profile WHERE id = 1").fetchone()
+    conn.close()
+    if not row:
+        return {"onboarded": False, "display_name": None, "target_air": None,
+                "exam_date": None, "daily_goal": 10, "mocks_completed": 0}
+    d = dict(row)
+    d["onboarded"] = bool(d.get("exam_date") or d.get("target_air"))
+    return d
+
+
+@app.put("/api/profile")
+async def put_profile(request: ProfileRequest, authorization: Optional[str] = Header(None)):
+    _auth(authorization)
+    from infrastructure.database import get_db_connection
+    conn = get_db_connection()
+    conn.execute("INSERT OR IGNORE INTO user_profile (id, daily_goal) VALUES (1, 10)")
+    conn.execute("""
+        UPDATE user_profile SET
+            display_name = COALESCE(?, display_name),
+            target_air   = COALESCE(?, target_air),
+            exam_date    = COALESCE(?, exam_date),
+            daily_goal   = COALESCE(?, daily_goal)
+        WHERE id = 1
+    """, (request.display_name, request.target_air, request.exam_date, request.daily_goal))
+    conn.commit()
+    row = conn.execute("SELECT * FROM user_profile WHERE id = 1").fetchone()
+    conn.close()
+    return dict(row)
+
+
+@app.get("/api/gamification")
+async def gamification(authorization: Optional[str] = Header(None)):
+    _auth(authorization)
+    from analytics.gamification import get_gamification
+    return get_gamification()
+
+
+@app.get("/api/analytics/overview")
+async def analytics_overview(authorization: Optional[str] = Header(None)):
+    """Series powering the Analytics charts."""
+    _auth(authorization)
+    from infrastructure.database import get_db_connection
+    conn = get_db_connection()
+
+    # 1. Accuracy trend by day
+    trend = [dict(r) for r in conn.execute("""
+        SELECT DATE(timestamp) AS day,
+               COUNT(*) AS attempts,
+               SUM(CASE WHEN is_correct = 1 THEN 1 ELSE 0 END) AS correct
+        FROM quiz_attempts WHERE timestamp IS NOT NULL
+        GROUP BY DATE(timestamp) ORDER BY day
+    """).fetchall()]
+    for t in trend:
+        t["accuracy"] = round(t["correct"] / t["attempts"] * 100, 1) if t["attempts"] else 0
+
+    # 2. Mastery distribution (levels 1..8)
+    dist_rows = {r["state_level"]: r["c"] for r in conn.execute(
+        "SELECT state_level, COUNT(*) AS c FROM mastery_states GROUP BY state_level").fetchall()}
+    mastery_distribution = [{"level": lvl, "count": dist_rows.get(lvl, 0)} for lvl in range(1, 9)]
+
+    # 3. Subject readiness (avg mastery / 8)
+    subject_readiness = [{
+        "subject": r["subject"],
+        "readiness": round((r["avg_lvl"] or 1) / 8 * 100, 1),
+        "concepts": r["c"],
+    } for r in conn.execute("""
+        SELECT c.subject, AVG(COALESCE(m.state_level, 1)) AS avg_lvl, COUNT(*) AS c
+        FROM concepts c LEFT JOIN mastery_states m ON c.concept_id = m.concept_id
+        GROUP BY c.subject ORDER BY c.subject
+    """).fetchall()]
+
+    # 4. Confidence calibration (accuracy per confidence 1..5)
+    calib_rows = {r["confidence"]: r for r in conn.execute("""
+        SELECT confidence, COUNT(*) AS attempts,
+               SUM(CASE WHEN is_correct = 1 THEN 1 ELSE 0 END) AS correct
+        FROM quiz_attempts GROUP BY confidence
+    """).fetchall()}
+    confidence_calibration = []
+    for c in range(1, 6):
+        row = calib_rows.get(c)
+        attempts = row["attempts"] if row else 0
+        correct = row["correct"] if row else 0
+        confidence_calibration.append({
+            "confidence": c, "attempts": attempts,
+            "accuracy": round(correct / attempts * 100, 1) if attempts else 0,
+        })
+
+    conn.close()
+    return {
+        "accuracy_trend": trend,
+        "mastery_distribution": mastery_distribution,
+        "subject_readiness": subject_readiness,
+        "confidence_calibration": confidence_calibration,
+    }
+
 
 if __name__ == "__main__":
     import uvicorn
