@@ -369,16 +369,20 @@ async def list_pyqs(
     q: str = Query(""), year: Optional[int] = None, exam: Optional[str] = None,
     subject: Optional[str] = None, type: Optional[str] = None, marks: Optional[int] = None,
     concept_id: Optional[str] = None, has_solution: Optional[bool] = None,
-    has_answer: Optional[bool] = None, limit: int = 20, offset: int = 0,
+    has_answer: Optional[bool] = None, quality: Optional[str] = "ok",
+    limit: int = 20, offset: int = 0,
     authorization: Optional[str] = Header(None),
 ):
-    """Filtered + paginated access to the parsed PYQ bank (754 questions)."""
+    """Filtered + paginated access to the parsed PYQ bank (754 questions).
+    `quality` defaults to 'ok' (hides extraction-failure fragments); pass
+    quality='' (or 'all') to include low-quality items."""
     _auth(authorization)
     from knowledge.pyq_repository import get_repository
     repo = get_repository()
+    qual = None if quality in ("", "all", None) else quality
     items = repo.filter(q=q, year=year, exam=exam, subject=subject, qtype=type,
                         marks=marks, concept_id=concept_id,
-                        has_solution=has_solution, has_answer=has_answer)
+                        has_solution=has_solution, has_answer=has_answer, quality=qual)
     return repo.paginate(items, limit=max(1, min(limit, 100)), offset=max(0, offset))
 
 

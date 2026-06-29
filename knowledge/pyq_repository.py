@@ -88,6 +88,27 @@ def subject_for(concept_id: Optional[str], question_text: str = "") -> str:
     return "General"
 
 
+# Obvious extraction-failure markers (PDF math flattening / bad question splits).
+_MANGLE = re.compile(r"(P−→|−→\s*\d|∑|∫|\bi=1\b|d\s*ensity|^\W*$)")
+_STUB = {"the", "let", "if", "a", "an", "consider", "suppose"}
+
+
+def _quality(rec) -> str:
+    """Classify a parsed PYQ as 'ok' or 'low' so junk can be hidden."""
+    t = (rec.get("question_text") or "").strip()
+    if len(t) < 40:
+        return "low"
+    if t.lower().rstrip(".") in _STUB:
+        return "low"
+    # An MCQ with fewer than 2 options never parsed correctly.
+    if rec.get("question_type") == "MCQ" and len(rec.get("options") or {}) < 2:
+        return "low"
+    # Heavy math-mangling + very short body = unusable.
+    if _MANGLE.search(t) and len(t) < 80:
+        return "low"
+    return "ok"
+
+
 class PYQRepository:
     """Loads and queries the parsed PYQ bank."""
 
@@ -111,6 +132,7 @@ class PYQRepository:
             rec["subject"] = subject_for(rec.get("concept_id"), rec.get("question_text", ""))
             rec["has_answer"] = bool(rec.get("answer"))
             rec["has_solution"] = bool(rec.get("solution"))
+            rec["quality"] = _quality(rec)
             self._items.append(rec)
             self._by_id[stem] = rec
         logger.info(
@@ -137,6 +159,7 @@ class PYQRepository:
             "total": len(self._items),
             "answerable": sum(i["has_answer"] for i in self._items),
             "with_solution": sum(i["has_solution"] for i in self._items),
+            "good": sum(1 for i in self._items if i["quality"] == "ok"),
         }
 
     # ── filtering / search ─────────────────────────────────────────────────
@@ -151,10 +174,13 @@ class PYQRepository:
         concept_id: Optional[str] = None,
         has_solution: Optional[bool] = None,
         has_answer: Optional[bool] = None,
+        quality: Optional[str] = None,
     ) -> List[Dict[str, Any]]:
         ql = (q or "").strip().lower()
         out = []
         for it in self._items:
+            if quality and it.get("quality") != quality:
+                continue
             if year and it.get("year") != year:
                 continue
             if exam and it.get("exam") != exam:
@@ -187,6 +213,7 @@ class PYQRepository:
     # ── question selection for quizzes / mocks ──────────────────────────────
     def answerable(self, **filters) -> List[Dict[str, Any]]:
         filters["has_answer"] = True
+        filters.setdefault("quality", "ok")  # never serve junk to quiz/mock
         return self.filter(**filters)
 
     def random_question(self, exclude_ids=None, **filters) -> Optional[Dict[str, Any]]:

@@ -17,6 +17,7 @@ export default function PYQs({ params, navigate }) {
   const [subject, setSubject] = useState('');
   const [type, setType] = useState('');
   const [hasSolution, setHasSolution] = useState(false);
+  const [includeLow, setIncludeLow] = useState(false);
   const [conceptId, setConceptId] = useState(params?.concept_id || '');
 
   const [result, setResult] = useState(null);
@@ -35,16 +36,17 @@ export default function PYQs({ params, navigate }) {
       const data = await api.getPyqs({
         q, year, exam, subject, type,
         has_solution: hasSolution ? true : undefined,
+        quality: includeLow ? 'all' : 'ok',
         concept_id: conceptId || undefined,
         limit: PAGE, offset,
       });
       setResult(data);
     } catch (e) { setResult({ items: [], total: 0 }); }
     finally { setLoading(false); }
-  }, [q, year, exam, subject, type, hasSolution, conceptId, page]);
+  }, [q, year, exam, subject, type, hasSolution, includeLow, conceptId, page]);
 
   // initial + filter-driven search
-  useEffect(() => { search(true); /* eslint-disable-next-line */ }, [year, exam, subject, type, hasSolution, conceptId]);
+  useEffect(() => { search(true); /* eslint-disable-next-line */ }, [year, exam, subject, type, hasSolution, includeLow, conceptId]);
   useEffect(() => { search(false); /* eslint-disable-next-line */ }, [page]);
 
   const toggleBookmark = (id) => {
@@ -92,8 +94,10 @@ export default function PYQs({ params, navigate }) {
           <option value="MSQ">MSQ</option>
           <option value="NAT">NAT</option>
         </select>
-        <button className={`chip ${hasSolution ? '' : ''}`} style={hasSolution ? { borderColor: 'var(--accent-primary)', color: '#fff' } : {}}
+        <button className="chip" style={hasSolution ? { borderColor: 'var(--accent-primary)', color: '#fff' } : {}}
           onClick={() => setHasSolution((v) => !v)}>{hasSolution ? '✓ ' : ''}With solution</button>
+        <button className="chip" style={includeLow ? { borderColor: 'var(--warning)', color: '#fff' } : {}}
+          onClick={() => setIncludeLow((v) => !v)} title="Show questions with imperfect PDF extraction">{includeLow ? '✓ ' : ''}Include low-quality</button>
         {conceptId && <button className="chip" onClick={() => setConceptId('')}>✕ concept: {conceptId}</button>}
       </div>
 
