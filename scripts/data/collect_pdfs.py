@@ -42,6 +42,32 @@ logger = logging.getLogger(__name__)
 
 KNOWLEDGE_DIR = os.path.join(ROOT, "knowledge")
 
+# Auto-map folder path substrings -> concept_id.
+# More specific entries first. Keeps in sync with seed_syllabus.py concept IDs.
+FOLDER_CONCEPT_MAP = [
+    ("probability/cheatsheet",  "PROB_001"),
+    ("probability",             "PROB_001"),   # broad — covers Ross, All-of-Stats, etc.
+    ("linear_algebra",          "LA_001"),
+    ("calculus",                "LA_001"),
+    ("machine_learning",        "ML_001"),
+    ("dbms",                    "GENERAL"),
+    ("dsa",                     "GENERAL"),
+    ("ai",                      "GENERAL"),
+    ("nptel",                   "GENERAL"),
+    ("formulas",                "GENERAL"),
+    ("pyqs",                    "GENERAL"),    # PYQs are multi-topic; tag per-question
+    ("syllabus",                "GENERAL"),
+]
+
+
+def auto_concept(pdf_path):
+    """Infer concept_id from the PDF's folder path."""
+    lower = pdf_path.replace("\\", "/").lower()
+    for fragment, cid in FOLDER_CONCEPT_MAP:
+        if fragment in lower:
+            return cid
+    return "GENERAL"
+
 
 def find_pdfs(targets):
     """Resolve CLI targets to a flat list of .pdf paths."""
@@ -74,7 +100,8 @@ def main():
     parser = argparse.ArgumentParser(description="Extract text from GATE PDFs into the knowledge base.")
     parser.add_argument("targets", nargs="*", help="PDF files or directories (default: scan knowledge/)")
     parser.add_argument("--ingest", action="store_true", help="Also ingest extracted text into ChromaDB")
-    parser.add_argument("--concept", default="GENERAL", help="concept_id to tag when ingesting")
+    parser.add_argument("--concept", default=None,
+                        help="concept_id to tag all PDFs (default: auto-map from folder name)")
     parser.add_argument("--no-txt", action="store_true", help="Do not write sibling .txt files")
     args = parser.parse_args()
 
@@ -93,7 +120,9 @@ def main():
         try:
             extract_one(ingestor, pdf, write_txt=not args.no_txt)
             if args.ingest:
-                ingestor.ingest_document(pdf, args.concept, os.path.basename(pdf))
+                concept = args.concept or auto_concept(pdf)
+                logger.info(f"  concept_id: {concept}")
+                ingestor.ingest_document(pdf, concept, os.path.basename(pdf))
         except Exception as e:  # keep going on a single bad file
             logger.error(f"Failed on {pdf}: {e}")
 
