@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import api from '../api';
+import MathText from './MathText';
 
 const PAGE = 10;
 const BOOKMARK_KEY = 'gate_pyq_bookmarks';
@@ -119,7 +120,7 @@ export default function PYQs({ params, navigate }) {
               </div>
               <div className="pyq-q">
                 <div className="q-body" onClick={() => setExpanded(open ? null : p.id)} style={{ cursor: 'pointer' }}>
-                  {p.question_text}
+                  <MathText>{p.question_text}</MathText>
                 </div>
                 <button className={`pyq-star ${marked ? 'on' : ''}`} title="Bookmark" onClick={() => toggleBookmark(p.id)}>
                   {marked ? '★' : '☆'}
@@ -132,14 +133,14 @@ export default function PYQs({ params, navigate }) {
                     <div className="pyq-options">
                       {Object.entries(p.options).map(([k, v]) => (
                         <div key={k} className={`pyq-opt ${p.answer && String(p.answer).toUpperCase() === k ? 'ans' : ''}`}>
-                          <b>{k})</b> {v}
+                          <b>{k})</b> <MathText>{v}</MathText>
                         </div>
                       ))}
                     </div>
                   )}
                   {p.answer && <p style={{ marginBottom: '0.7rem' }}><b>Answer:</b> <span style={{ color: 'var(--success)' }}>{p.answer}</span></p>}
                   {p.solution
-                    ? <div className="solution">{p.solution}</div>
+                    ? <div className="solution"><MathText>{p.solution}</MathText></div>
                     : <p className="subtitle">No worked solution on file for this question.</p>}
                   <div className="action-toolbar" style={{ marginTop: '0.8rem' }}>
                     <button className="chip" onClick={() => navigate('tutor', { prefill: `Explain this GATE question:\n\n${p.question_text}` })}>🤖 Ask tutor</button>

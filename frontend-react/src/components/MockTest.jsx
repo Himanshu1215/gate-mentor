@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import api from '../api';
 import { useApp } from '../context/AppContext';
+import MathText from './MathText';
 
 function fmt(s) {
   const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
@@ -148,13 +149,13 @@ export default function MockTest() {
             {q.negative_marks ? <span className="tag" style={{ color: 'var(--danger)' }}>{q.negative_marks}</span> : null}
             {q.subject && <span className="tag">{q.subject}</span>}
           </div>
-          <div className="q-text">{q.question}</div>
+          <div className="q-text"><MathText>{q.question}</MathText></div>
 
           {hasOptions ? (
             <div className="options">
               {Object.entries(q.options).map(([k, v]) => (
                 <button key={k} className={`option ${answers[q.q_id] === k ? 'selected' : ''}`} onClick={() => setAnswer(k)}>
-                  <span className="opt-key">{k}</span><span>{v}</span>
+                  <span className="opt-key">{k}</span><span><MathText>{v}</MathText></span>
                 </button>
               ))}
             </div>

@@ -162,6 +162,29 @@ def preprocess(text):
     return text
 
 
+def preprocess_markdown(text):
+    """
+    Pre-clean MinerU markdown (which carries math as LaTeX $...$ / $$...$$),
+    then run the normal preprocess. Crucially, this PRESERVES LaTeX — unlike
+    plain PyMuPDF text which flattens fractions/superscripts/symbols.
+    """
+    # Drop image references: ![alt](images/xx.jpg)
+    text = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", text)
+    # Drop bare HTML comments / page tags MinerU may emit
+    text = re.sub(r"<!--.*?-->", "", text, flags=re.DOTALL)
+    # Strip markdown heading hashes but keep the heading text on its line
+    text = re.sub(r"(?m)^\s{0,3}#{1,6}\s*", "", text)
+    # Collapse display math onto one line so it stays inside its question block:
+    #   $$ ... $$  ->  $ ... $   (keep the LaTeX, lose the line breaks)
+    def _inline(m):
+        inner = " ".join(m.group(1).split())
+        return f" $ {inner} $ "
+    text = re.sub(r"\$\$(.+?)\$\$", _inline, text, flags=re.DOTALL)
+    # Bold/italic markers add noise to question text; remove the markers, keep text
+    text = re.sub(r"\*\*(.+?)\*\*", r"\1", text, flags=re.DOTALL)
+    return preprocess(text)
+
+
 def tag_concept(text):
     low = text.lower()
     for kw, cid in CONCEPT_KEYWORDS:
@@ -269,6 +292,8 @@ def main():
     parser.add_argument("--year", type=int, required=True, help="Exam year")
     parser.add_argument("--exam", default="GATE DA", help="Exam label (e.g. 'GATE ST', 'GATE DA')")
     parser.add_argument("--answers", help="Optional JSON file: {question_id: answer_letter}")
+    parser.add_argument("--md", action="store_true",
+                        help="Input is MinerU markdown (preserves LaTeX math); use the markdown pre-cleaner")
     args = parser.parse_args()
 
     answers = {}
@@ -293,7 +318,7 @@ def main():
     for path in files:
         with open(path, encoding="utf-8", errors="replace") as f:
             text = f.read()
-        text = preprocess(text)
+        text = preprocess_markdown(text) if args.md else preprocess(text)
         stem = os.path.splitext(os.path.basename(path))[0]
         blocks = split_questions(text)
         logger.info(f"{path}: detected {len(blocks)} question block(s).")

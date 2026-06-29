@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import api from '../api';
+import MathText from './MathText';
 
 const SESSION_ID = 'tutor-' + Math.random().toString(36).slice(2, 9);
 const PERSONAS = ['Professor', 'Friendly Mentor', 'IIT Lecturer', 'Beginner Friendly'];
@@ -60,7 +61,7 @@ export default function AITutor({ params }) {
           {messages.map((m, i) => (
             <div key={i} className={`message ${m.role}-message`}>
               <div className="bubble">
-                {m.content}
+                <MathText>{m.content}</MathText>
                 {m.citations?.length > 0 && (
                   <div className="citations">Sources: {m.citations.join(', ')}</div>
                 )}

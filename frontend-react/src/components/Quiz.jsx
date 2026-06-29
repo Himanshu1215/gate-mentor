@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import api from '../api';
 import { useApp } from '../context/AppContext';
+import MathText from './MathText';
 
 const MODES = [
   { id: 'topic', ico: '🎯', title: 'Topic Quiz', desc: 'Focus on one concept you choose.' },
@@ -167,7 +168,7 @@ export default function Quiz({ params, navigate }) {
             {q.subject && <span className="tag">{q.subject}</span>}
           </div>
 
-          <div className="q-text">{q.question_text}</div>
+          <div className="q-text"><MathText>{q.question_text}</MathText></div>
 
           {hasOptions ? (
             <div className="options">
@@ -179,7 +180,7 @@ export default function Quiz({ params, navigate }) {
                 } else if (k === selected) cls += ' selected';
                 return (
                   <button key={k} className={cls} disabled={answered} onClick={() => setSelected(k)}>
-                    <span className="opt-key">{k}</span><span>{v}</span>
+                    <span className="opt-key">{k}</span><span><MathText>{v}</MathText></span>
                   </button>
                 );
               })}
@@ -206,7 +207,7 @@ export default function Quiz({ params, navigate }) {
           {answered && (
             <div className={`quiz-feedback ${isCorrect ? 'correct' : 'wrong'}`}>
               <div className="fb-title">{isCorrect ? '✅ Correct!' : `❌ Incorrect — answer is ${q.answer}`}</div>
-              {q.solution && <div className="fb-sol">{q.solution}</div>}
+              {q.solution && <div className="fb-sol"><MathText>{q.solution}</MathText></div>}
             </div>
           )}
 
