@@ -1,16 +1,18 @@
 # GPU-VM-only requirements for fine-tuning Phi-4-mini (QLoRA).
 # Do NOT install these on the 8 GB CPU app VM — they pull a CUDA torch build.
 #
-# Install on the GPU VM (CUDA 12.x):
+# Install on the GPU VM:
 #   python -m venv venv && source venv/bin/activate
 #   pip install -r train/requirements-gpu.txt
-#
-# If torch does not pick up CUDA automatically, install it first from the
-# official index, e.g.:
-#   pip install torch --index-url https://download.pytorch.org/whl/cu121
 
-torch>=2.3.0
-transformers>=4.45.0
+# PyTorch pinned to CUDA 12.1 (works with NVIDIA driver 520+ / CUDA 12.x).
+# If the VM has a different CUDA, replace cu121 with cu118 or cu124.
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch==2.3.1+cu121
+torchvision==0.18.1+cu121
+
+# transformers must be <=4.53 — Phi-4-mini uses LossKwargs removed in 4.54+
+transformers==4.53.3
 datasets>=2.20.0
 accelerate>=0.34.0
 peft>=0.12.0

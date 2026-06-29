@@ -123,7 +123,15 @@ def main():
         report_to="none",
     )
 
-    # SFTTrainer applies the tokenizer's chat template to the "messages" field.
+    def format_messages(example):
+        """Apply the model's chat template to the messages list -> plain text."""
+        return tokenizer.apply_chat_template(
+            example["messages"],
+            tokenize=False,
+            add_generation_prompt=False,
+        )
+
+    # SFTTrainer needs a text column; we format the messages ourselves.
     trainer = SFTTrainer(
         model=model,
         args=sft_config,
@@ -131,6 +139,7 @@ def main():
         eval_dataset=ds.get("validation"),
         peft_config=lora,
         processing_class=tokenizer,
+        formatting_func=format_messages,
     )
 
     logger.info("Starting QLoRA training ...")

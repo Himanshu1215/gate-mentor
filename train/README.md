@@ -37,24 +37,34 @@ Then copy the whole `train/` folder (including `train/data/*.jsonl`) to the GPU 
 
 ```bash
 python -m venv venv && source venv/bin/activate
-pip install -r train/requirements-gpu.txt          # CUDA torch + peft + trl + bitsandbytes
+
+# requirements-gpu.txt pins torch to CUDA 12.1 and transformers==4.53.3
+# (Phi-4-mini breaks with transformers>=4.54 due to removed LossKwargs)
+pip install -r train/requirements-gpu.txt
 
 python train/train_qlora.py                         # -> train/out/adapter/
 #   tune with: --epochs 3 --batch-size 2 --grad-accum 8 --lr 2e-4
 ```
 
-Fits a single 16 GB GPU. On 12 GB use `--batch-size 1`.
+Fits a single 16–40 GB GPU. On 12 GB use `--batch-size 1 --grad-accum 16`.
+
+> **CUDA mismatch?** If `torch.cuda.is_available()` returns False, check your
+> driver: `nvidia-smi` shows the max supported CUDA. Replace `cu121` in
+> `requirements-gpu.txt` with `cu118` (driver <520) or `cu124` (driver 525+).
 
 ---
 
 ## Step 3 — On the GPU VM: merge + export to GGUF
 
 ```bash
-# Build llama.cpp once (needed for GGUF conversion):
-git clone https://github.com/ggerganov/llama.cpp && (cd llama.cpp && make)
+# Build llama.cpp (cmake required — install via apt or pip):
+apt-get install -y cmake build-essential   # or: pip install cmake
+git clone https://github.com/ggerganov/llama.cpp /tmp/llama.cpp
+cd /tmp/llama.cpp && cmake -B build -DGGML_CUDA=ON && cmake --build build --config Release -j$(nproc)
+cd -
 
-python train/merge_and_export.py --llama-cpp ./llama.cpp
-#   -> models/llm/phi-4-mini-instruct-q4_k_m.gguf
+python train/merge_and_export.py --llama-cpp /tmp/llama.cpp
+#   -> phi-4-mini-instruct-q4_k_m.gguf
 ```
 
 If you skip `--llama-cpp`, the script still produces the merged HF model and
