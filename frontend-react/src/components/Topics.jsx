@@ -1,5 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import api from '../api';
+
+function ProgressBar({ value }) {
+  const pct = Math.max(0, Math.min(100, Number(value) || 0));
+  return (
+    <div className="progress-track">
+      <div className="progress-fill" style={{ width: `${pct}%` }} />
+    </div>
+  );
+}
 
 function DiffDots({ n }) {
   return (
@@ -9,81 +18,336 @@ function DiffDots({ n }) {
   );
 }
 
+function flattenConcepts(subjects) {
+  return (subjects || []).flatMap((s) => s.concepts || []);
+}
+
+function groupByTopic(concepts) {
+  return concepts.reduce((acc, concept) => {
+    if (!acc[concept.topic]) acc[concept.topic] = [];
+    acc[concept.topic].push(concept);
+    return acc;
+  }, {});
+}
+
+function GraphNode({ concept, active, onClick }) {
+  if (!concept) return null;
+  return (
+    <button className={`graph-node ${active ? 'current' : ''}`} onClick={() => onClick(concept.concept_id)}>
+      <span>{concept.subtopic || concept.topic}</span>
+      <small>Lvl {concept.mastery_level}/8</small>
+    </button>
+  );
+}
+
+function DependencyGraph({ concept, lookup, onSelect }) {
+  const prereqs = (concept.prerequisites || []).map((id) => lookup[id]).filter(Boolean);
+  const dependents = (concept.dependents || []).map((id) => lookup[id]).filter(Boolean);
+  return (
+    <div className="dependency-graph">
+      <div className="graph-column">
+        <div className="graph-label">Prerequisites</div>
+        {prereqs.length ? prereqs.map((c) => <GraphNode key={c.concept_id} concept={c} onClick={onSelect} />) : <div className="graph-empty">Start topic</div>}
+      </div>
+      <div className="graph-column">
+        <div className="graph-label">Current</div>
+        <GraphNode concept={concept} active onClick={onSelect} />
+      </div>
+      <div className="graph-column">
+        <div className="graph-label">Next topics</div>
+        {dependents.length ? dependents.map((c) => <GraphNode key={c.concept_id} concept={c} onClick={onSelect} />) : <div className="graph-empty">End of branch</div>}
+      </div>
+    </div>
+  );
+}
+
 export default function Topics({ navigate }) {
-  const [data, setData] = useState(null);
+  const [payload, setPayload] = useState(null);
   const [active, setActive] = useState(null);
+  const [selectedId, setSelectedId] = useState(null);
   const [error, setError] = useState(null);
+  const [aiNotes, setAiNotes] = useState({});
+  const [aiLoading, setAiLoading] = useState(false);
+  const [aiError, setAiError] = useState(null);
+  const [selfNote, setSelfNote] = useState('');
+  const [noteStatus, setNoteStatus] = useState('');
+  const [files, setFiles] = useState([]);
+  const [uploadStatus, setUploadStatus] = useState('');
+  const [revisionStatus, setRevisionStatus] = useState('');
+
+  const subjects = payload?.subjects || [];
+  const allConcepts = useMemo(() => flattenConcepts(subjects), [subjects]);
+  const lookup = useMemo(() => Object.fromEntries(allConcepts.map((c) => [c.concept_id, c])), [allConcepts]);
+  const current = subjects.find((s) => s.subject === active);
+  const selected = selectedId ? lookup[selectedId] : null;
 
   useEffect(() => {
     api.getConcepts()
       .then((d) => {
-        setData(d.subjects);
-        if (d.subjects.length) setActive(d.subjects[0].subject);
+        setPayload(d);
+        if (d.subjects?.length) setActive(d.subjects[0].subject);
       })
       .catch((e) => setError(e.message));
   }, []);
 
-  if (error) return <div className="empty">Couldn't load topics: {error}</div>;
-  if (!data) return <div className="loading"><span className="spinner" /> Loading syllabus…</div>;
+  useEffect(() => {
+    if (!selectedId) return;
+    setNoteStatus('');
+    setUploadStatus('');
+    setRevisionStatus('');
+    api.getConcept(selectedId)
+      .then((d) => {
+        setSelfNote(d.notes?.self_note || '');
+        setFiles(d.notes?.uploaded_files || []);
+      })
+      .catch(() => {
+        setSelfNote('');
+        setFiles([]);
+      });
+  }, [selectedId]);
 
-  const current = data.find((s) => s.subject === active);
+  const selectConcept = (conceptId) => {
+    const concept = lookup[conceptId];
+    if (concept) setActive(concept.subject);
+    setSelectedId(conceptId);
+  };
+
+  const generateAiNotes = async () => {
+    if (!selected) return;
+    setAiLoading(true);
+    setAiError(null);
+    try {
+      const prompt = `Create concise but complete GATE DA study notes for:
+Subject: ${selected.subject}
+Topic: ${selected.topic}
+Subtopic: ${selected.subtopic}
+
+Include:
+1. Core idea
+2. Important formulas
+3. Step-by-step example
+4. Common mistakes
+5. PYQ-style patterns
+6. What to practice next
+
+Keep it exam-focused.`;
+      const res = await api.chat(prompt, `syllabus-${selected.concept_id}`, 'Professor');
+      setAiNotes((prev) => ({ ...prev, [selected.concept_id]: res.reply }));
+    } catch (e) {
+      setAiError(e.message);
+    } finally {
+      setAiLoading(false);
+    }
+  };
+
+  const saveNotes = async () => {
+    if (!selected) return;
+    setNoteStatus('Saving...');
+    try {
+      const saved = await api.saveConceptNotes(selected.concept_id, selfNote);
+      setSelfNote(saved.content || '');
+      setNoteStatus('Saved');
+    } catch (e) {
+      setNoteStatus(`Failed: ${e.message}`);
+    }
+  };
+
+  const uploadFile = async (event) => {
+    const file = event.target.files?.[0];
+    if (!selected || !file) return;
+    setUploadStatus('Uploading...');
+    try {
+      await api.uploadConceptFile(selected.concept_id, file);
+      const refreshed = await api.getConceptFiles(selected.concept_id);
+      setFiles(refreshed.files || []);
+      setUploadStatus('Uploaded');
+    } catch (e) {
+      setUploadStatus(`Failed: ${e.message}`);
+    } finally {
+      event.target.value = '';
+    }
+  };
+
+  const scheduleRevision = async () => {
+    if (!selected) return;
+    setRevisionStatus('Scheduling...');
+    try {
+      await api.scheduleRevision(selected.concept_id, 1);
+      setRevisionStatus('Added to revision for tomorrow');
+    } catch (e) {
+      setRevisionStatus(`Failed: ${e.message}`);
+    }
+  };
+
+  if (error) return <div className="empty">Couldn't load syllabus: {error}</div>;
+  if (!payload) return <div className="loading"><span className="spinner" /> Loading syllabus...</div>;
+
+  if (selected) {
+    const notes = aiNotes[selected.concept_id];
+    const prereqNames = (selected.blocked_by || []).map((id) => lookup[id]?.subtopic || id).join(', ');
+    return (
+      <div className="concept-detail">
+        <button className="btn-secondary" onClick={() => setSelectedId(null)}>Back to syllabus</button>
+
+        <header className="detail-header">
+          <div>
+            <div className="cc-topic">{selected.subject} / {selected.topic}</div>
+            <h1>{selected.subtopic}</h1>
+            <p className="subtitle">{selected.status} / Difficulty {selected.difficulty}/8 / {selected.est_learning_time_mins} min learn / {selected.est_revision_time_mins} min revise</p>
+          </div>
+          <div className="detail-score">
+            <b>{selected.progress_percent}%</b>
+            <span>topic progress</span>
+          </div>
+        </header>
+
+        <div className="card detail-meta">
+          <div>
+            <span>Mastery</span>
+            <b>Level {selected.mastery_level}/8</b>
+            <ProgressBar value={selected.progress_percent} />
+          </div>
+          <div>
+            <span>Accuracy</span>
+            <b>{Math.round((selected.accuracy || 0) * 100)}%</b>
+            <ProgressBar value={(selected.accuracy || 0) * 100} />
+          </div>
+          <div>
+            <span>Importance</span>
+            <b>{Math.round((selected.importance_weight || 0) * 100)}%</b>
+            <ProgressBar value={(selected.importance_weight || 0) * 100} />
+          </div>
+        </div>
+
+        {selected.locked && <div className="empty compact">Locked for practice until prerequisites improve: {prereqNames}</div>}
+
+        <div className="card">
+          <h2>Learning graph</h2>
+          <DependencyGraph concept={selected} lookup={lookup} onSelect={selectConcept} />
+        </div>
+
+        <div className="detail-grid">
+          <section className="card ai-notes-panel">
+            <div className="panel-head">
+              <h2>AI study notes</h2>
+              <button className="chip" onClick={generateAiNotes} disabled={aiLoading}>{notes ? 'Regenerate' : 'Generate'}</button>
+            </div>
+            {aiLoading && <div className="loading"><span className="spinner" /> Generating notes...</div>}
+            {aiError && <div className="empty compact">AI notes failed: {aiError}</div>}
+            {!notes && !aiLoading && <p className="subtitle">Generate exam-focused notes for this topic using the tutor.</p>}
+            {notes && <div className="notes-output">{notes}</div>}
+          </section>
+
+          <section className="card uploaded-notes-panel">
+            <h2>Uploaded notes</h2>
+            <div className="upload-row">
+              <input type="file" accept=".pdf,.md,.txt" onChange={uploadFile} />
+              {uploadStatus && <span className="save-status">{uploadStatus}</span>}
+            </div>
+            <div className="file-list">
+              {files.length === 0 && <p className="subtitle">No PDFs or files uploaded for this topic yet.</p>}
+              {files.map((f) => (
+                <a className="file-item" key={f.file_id} href={`/api/concepts/${selected.concept_id}/files/${f.file_id}`} target="_blank" rel="noreferrer">
+                  <span>{f.filename}</span>
+                  <small>{f.file_type || 'file'} / {f.uploaded_at}</small>
+                </a>
+              ))}
+            </div>
+          </section>
+        </div>
+
+        <section className="card self-notes-panel">
+          <div className="panel-head">
+            <h2>My self notes</h2>
+            {noteStatus && <span className="save-status">{noteStatus}</span>}
+          </div>
+          <textarea
+            className="notes-textarea"
+            value={selfNote}
+            onChange={(e) => setSelfNote(e.target.value)}
+            placeholder="Write formulas, shortcuts, mistakes, and personal reminders for this topic."
+          />
+          <div className="concept-actions">
+            <button className="btn-primary" onClick={saveNotes}>Save notes</button>
+            <button className="btn-secondary" onClick={() => navigate('quiz', { mode: 'topic', conceptId: selected.concept_id, topic: selected.subtopic })}>Practice questions</button>
+            <button className="btn-secondary" onClick={() => navigate('pyqs', { concept_id: selected.concept_id })}>Solve PYQs</button>
+            <button className="btn-secondary" onClick={() => navigate('tutor', { prefill: `Explain ${selected.subtopic} from ${selected.subject} for GATE DA with examples.` })}>Ask tutor</button>
+            <button className="btn-secondary" onClick={scheduleRevision}>Add to revision</button>
+            {revisionStatus && <span className="save-status">{revisionStatus}</span>}
+          </div>
+        </section>
+      </div>
+    );
+  }
+
+  const grouped = current ? groupByTopic(current.concepts || []) : {};
 
   return (
     <div>
       <header className="page-header">
         <div>
-          <h1>Topic Explorer</h1>
-          <p className="subtitle">The full GATE DA syllabus — {data.reduce((a, s) => a + s.total, 0)} concepts across {data.length} subjects.</p>
+          <h1>Syllabus</h1>
+          <p className="subtitle">Topic-wise GATE DA syllabus with notes, graph, PYQs, practice, and revision.</p>
         </div>
       </header>
 
+      <section className="card syllabus-overview">
+        <div className="overall-progress">
+          <div>
+            <h2>Overall GATE DA progress</h2>
+            <p className="subtitle">{payload.overall.mastered}/{payload.overall.total} mastered / average mastery {payload.overall.average_mastery}/8</p>
+          </div>
+          <b>{payload.overall.progress_percent}%</b>
+        </div>
+        <ProgressBar value={payload.overall.progress_percent} />
+      </section>
+
+      <div className="subject-progress-list">
+        {subjects.map((s) => (
+          <button key={s.subject} className={`subject-progress-row ${active === s.subject ? 'active' : ''}`} onClick={() => setActive(s.subject)}>
+            <span>{s.subject}</span>
+            <ProgressBar value={s.progress_percent || s.readiness} />
+            <b>{s.progress_percent || s.readiness}%</b>
+          </button>
+        ))}
+      </div>
+
       <div className="subject-tabs">
-        {data.map((s) => (
+        {subjects.map((s) => (
           <button key={s.subject} className={`subject-tab ${active === s.subject ? 'active' : ''}`} onClick={() => setActive(s.subject)}>
             {s.subject}<span className="st-count">{s.mastered}/{s.total}</span>
           </button>
         ))}
       </div>
 
-      {current && (
-        <>
-          <div style={{ marginBottom: '1rem', color: 'var(--text-secondary)' }}>
-            Subject readiness: <b style={{ color: 'var(--accent-primary)' }}>{current.readiness}%</b>
-          </div>
+      {current && Object.entries(grouped).map(([topic, concepts]) => (
+        <section className="topic-section" key={topic}>
+          <h2 className="topic-section-title">{topic}</h2>
           <div className="concept-grid">
-            {current.concepts.map((c) => (
+            {concepts.map((c) => (
               <div className={`concept-card card ${c.locked ? 'locked' : ''}`} key={c.concept_id}>
                 <div className="cc-head">
                   <div>
-                    <div className="cc-topic">{c.topic}</div>
+                    <div className="cc-topic">{c.status}</div>
                     <div className="cc-title">{c.subtopic}</div>
                   </div>
                   <DiffDots n={c.difficulty || 5} />
                 </div>
-
                 <div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.78rem', color: 'var(--text-secondary)', marginBottom: '0.3rem' }}>
-                    <span>Mastery</span><span>Lvl {c.mastery_level}/8</span>
-                  </div>
-                  <div className="mastery-bar">
-                    <div className={`mastery-fill ${c.mastery_level >= 8 ? 'mastered' : ''}`} style={{ width: `${(c.mastery_level / 8) * 100}%` }} />
-                  </div>
+                  <div className="mini-row"><span>Mastery</span><span>Lvl {c.mastery_level}/8</span></div>
+                  <ProgressBar value={c.progress_percent} />
                 </div>
-
-                {c.locked ? (
-                  <div className="lock-badge">🔒 Unlock by mastering prerequisites</div>
-                ) : (
-                  <div className="concept-actions">
-                    <button className="chip" onClick={() => navigate('quiz', { mode: 'topic', conceptId: c.concept_id, topic: c.subtopic })}>✏️ Quiz</button>
-                    <button className="chip" onClick={() => navigate('pyqs', { concept_id: c.concept_id })}>📄 PYQs</button>
-                    <button className="chip" onClick={() => navigate('tutor', { prefill: `Explain ${c.subtopic} for GATE DA with an example.` })}>🤖 Ask Tutor</button>
-                  </div>
-                )}
+                {c.locked && <div className="lock-badge">Locked by prerequisites</div>}
+                <div className="concept-actions">
+                  <button className="chip" onClick={() => selectConcept(c.concept_id)}>Detail</button>
+                  <button className="chip" onClick={() => navigate('quiz', { mode: 'topic', conceptId: c.concept_id, topic: c.subtopic })}>Quiz</button>
+                  <button className="chip" onClick={() => navigate('pyqs', { concept_id: c.concept_id })}>PYQs</button>
+                </div>
               </div>
             ))}
           </div>
-        </>
-      )}
+        </section>
+      ))}
     </div>
   );
 }

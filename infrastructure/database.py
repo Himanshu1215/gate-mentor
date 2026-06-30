@@ -75,6 +75,39 @@ def init_db():
     )
     """)
 
+    # 6. User notes written directly against a syllabus concept.
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS concept_notes (
+        concept_id TEXT PRIMARY KEY,
+        content TEXT NOT NULL DEFAULT '',
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (concept_id) REFERENCES concepts(concept_id)
+    )
+    """)
+
+    # 7. Uploaded personal study material metadata. The actual files live on disk.
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS concept_files (
+        file_id TEXT PRIMARY KEY,
+        concept_id TEXT NOT NULL,
+        filename TEXT NOT NULL,
+        stored_path TEXT NOT NULL,
+        file_type TEXT,
+        uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (concept_id) REFERENCES concepts(concept_id)
+    )
+    """)
+
+    # 8. Manual revision queue entries created from the syllabus detail page.
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS manual_revision_items (
+        concept_id TEXT PRIMARY KEY,
+        due_at TIMESTAMP NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (concept_id) REFERENCES concepts(concept_id)
+    )
+    """)
+
     conn.commit()
     conn.close()
 

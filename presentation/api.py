@@ -7,6 +7,7 @@ import shutil
 try:
     from fastapi import FastAPI, HTTPException, Header, UploadFile, File, Form, Query
     from fastapi.middleware.cors import CORSMiddleware
+    from fastapi.responses import FileResponse
     from pydantic import BaseModel
 except ImportError:
     logging.warning("FastAPI not installed. Run: pip install -r requirements.txt")
@@ -78,6 +79,13 @@ class UploadResponse(BaseModel):
     success: bool
     message: str
     chunks_ingested: int
+
+class ConceptNoteRequest(BaseModel):
+    content: str = ""
+
+class RevisionScheduleRequest(BaseModel):
+    concept_id: str
+    due_in_days: int = 1
 
 @app.post("/api/session/start", response_model=SessionStartResponse)
 async def session_start_endpoint(request: SessionStartRequest, authorization: Optional[str] = Header(None)):
@@ -244,13 +252,25 @@ async def upload_file_endpoint(
         raise HTTPException(status_code=400, detail="concept_id is required")
 
     # Determine file type
+    import uuid
+    from infrastructure.database import get_db_connection
+
+    _ensure_learning_tables()
+    conn = get_db_connection()
+    concept_exists = conn.execute("SELECT 1 FROM concepts WHERE concept_id = ?", (concept_id,)).fetchone()
+    conn.close()
+    if not concept_exists:
+        raise HTTPException(status_code=404, detail="Concept not found")
+
     filename = file.filename or "unknown"
     is_pdf = filename.lower().endswith(".pdf")
+    file_type = os.path.splitext(filename)[1].lower().lstrip(".") or "file"
 
     # Save uploaded file to a temporary location
     knowledge_dir = os.path.join(os.path.dirname(__file__), "..", "knowledge", "personal", "notes")
     os.makedirs(knowledge_dir, exist_ok=True)
-    dest_path = os.path.join(knowledge_dir, filename)
+    safe_name = f"{concept_id}_{uuid.uuid4().hex}_{os.path.basename(filename)}"
+    dest_path = os.path.join(knowledge_dir, safe_name)
 
     try:
         with open(dest_path, "wb") as f:
@@ -273,6 +293,18 @@ async def upload_file_endpoint(
             ingestor.ingest_file(dest_path, concept_id)
             chunks_count = -1  # Will be logged
 
+        try:
+            conn = get_db_connection()
+            conn.execute("""
+                INSERT INTO concept_files
+                (file_id, concept_id, filename, stored_path, file_type)
+                VALUES (?, ?, ?, ?, ?)
+            """, (uuid.uuid4().hex, concept_id, filename, os.path.abspath(dest_path), file_type))
+            conn.commit()
+            conn.close()
+        except Exception as e:
+            logging.warning(f"Could not record uploaded file metadata: {e}")
+
         return UploadResponse(
             success=True,
             message=f"Successfully ingested '{filename}' into the knowledge base for concept '{concept_id}'.",
@@ -291,6 +323,144 @@ def _auth(authorization):
         raise HTTPException(status_code=401, detail="Unauthorized")
 
 
+def _ensure_learning_tables():
+    from infrastructure.database import get_db_connection
+    conn = get_db_connection()
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS concept_notes (
+            concept_id TEXT PRIMARY KEY,
+            content TEXT NOT NULL DEFAULT '',
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (concept_id) REFERENCES concepts(concept_id)
+        )
+    """)
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS concept_files (
+            file_id TEXT PRIMARY KEY,
+            concept_id TEXT NOT NULL,
+            filename TEXT NOT NULL,
+            stored_path TEXT NOT NULL,
+            file_type TEXT,
+            uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (concept_id) REFERENCES concepts(concept_id)
+        )
+    """)
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS manual_revision_items (
+            concept_id TEXT PRIMARY KEY,
+            due_at TIMESTAMP NOT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (concept_id) REFERENCES concepts(concept_id)
+        )
+    """)
+    conn.commit()
+    conn.close()
+
+
+def _parse_prereqs(value):
+    import json as _json
+    try:
+        return _json.loads(value) if value else []
+    except Exception:
+        return []
+
+
+def _progress_for_level(level):
+    return round(max(0, min(8, level or 1)) / 8 * 100, 1)
+
+
+def _status_for_level(level):
+    if level >= 8:
+        return "Mastered"
+    if level >= 5:
+        return "Strong"
+    if level >= 2:
+        return "Learning"
+    return "Not started"
+
+
+def _concepts_payload():
+    from infrastructure.database import get_db_connection
+
+    conn = get_db_connection()
+    rows = conn.execute("""
+        SELECT c.concept_id, c.subject, c.topic, c.subtopic, c.prerequisites,
+               c.difficulty, c.importance_weight, c.est_learning_time_mins,
+               c.est_revision_time_mins,
+               COALESCE(m.state_level, 1) AS state_level,
+               COALESCE(m.accuracy, 0.0) AS accuracy
+        FROM concepts c
+        LEFT JOIN mastery_states m ON c.concept_id = m.concept_id
+        ORDER BY c.subject, c.concept_id
+    """).fetchall()
+    conn.close()
+
+    prereqs_by_id = {r["concept_id"]: _parse_prereqs(r["prerequisites"]) for r in rows}
+    mastery = {r["concept_id"]: r["state_level"] for r in rows}
+    dependents_by_id = {r["concept_id"]: [] for r in rows}
+    for cid, prereqs in prereqs_by_id.items():
+        for prereq in prereqs:
+            if prereq in dependents_by_id:
+                dependents_by_id[prereq].append(cid)
+
+    subjects = {}
+    concepts_by_id = {}
+    for r in rows:
+        cid = r["concept_id"]
+        prereqs = prereqs_by_id[cid]
+        blockers = [p for p in prereqs if mastery.get(p, 1) <= 2]
+        level = r["state_level"] or 1
+        item = {
+            "concept_id": cid,
+            "subject": r["subject"],
+            "topic": r["topic"],
+            "subtopic": r["subtopic"],
+            "difficulty": r["difficulty"] or 5,
+            "importance_weight": r["importance_weight"] or 1.0,
+            "est_learning_time_mins": r["est_learning_time_mins"] or 30,
+            "est_revision_time_mins": r["est_revision_time_mins"] or 10,
+            "prerequisites": prereqs,
+            "dependents": dependents_by_id.get(cid, []),
+            "mastery_level": level,
+            "accuracy": round(r["accuracy"] or 0.0, 2),
+            "progress_percent": _progress_for_level(level),
+            "status": _status_for_level(level),
+            "locked": len(blockers) > 0,
+            "blocked_by": blockers,
+        }
+        concepts_by_id[cid] = item
+        subjects.setdefault(r["subject"], []).append(item)
+
+    grouped = []
+    all_concepts = []
+    for subject, concepts in subjects.items():
+        all_concepts.extend(concepts)
+        mastered = sum(1 for c in concepts if c["mastery_level"] >= 8)
+        avg = sum(c["mastery_level"] for c in concepts) / len(concepts) if concepts else 1
+        grouped.append({
+            "subject": subject,
+            "concepts": concepts,
+            "total": len(concepts),
+            "mastered": mastered,
+            "readiness": round(avg / 8 * 100, 1),
+            "progress_percent": round(avg / 8 * 100, 1),
+        })
+
+    total = len(all_concepts)
+    mastered = sum(1 for c in all_concepts if c["mastery_level"] >= 8)
+    avg = sum(c["mastery_level"] for c in all_concepts) / total if total else 1
+    return {
+        "overall": {
+            "total": total,
+            "mastered": mastered,
+            "average_mastery": round(avg, 2),
+            "progress_percent": round(avg / 8 * 100, 1),
+        },
+        "subjects": grouped,
+        "concepts_by_id": concepts_by_id,
+    }
+
+
 # prefix -> subject (mirrors knowledge/pyq_repository + seed_syllabus)
 _PREFIX_SUBJECT = {
     "PROB": "Probability and Statistics", "LA": "Linear Algebra",
@@ -304,64 +474,136 @@ _PREFIX_SUBJECT = {
 async def list_concepts(authorization: Optional[str] = Header(None)):
     """All concepts grouped by subject, with mastery level + locked status."""
     _auth(authorization)
-    import json as _json
+    _ensure_learning_tables()
+    payload = _concepts_payload()
+    return {"overall": payload["overall"], "subjects": payload["subjects"]}
+
+
+@app.get("/api/concepts/{concept_id}")
+async def get_concept_detail(concept_id: str, authorization: Optional[str] = Header(None)):
+    _auth(authorization)
+    _ensure_learning_tables()
+    from infrastructure.database import get_db_connection
+
+    payload = _concepts_payload()
+    concept = payload["concepts_by_id"].get(concept_id)
+    if not concept:
+        raise HTTPException(status_code=404, detail="Concept not found")
+
+    conn = get_db_connection()
+    note = conn.execute(
+        "SELECT content, updated_at FROM concept_notes WHERE concept_id = ?",
+        (concept_id,),
+    ).fetchone()
+    files = [dict(r) for r in conn.execute("""
+        SELECT file_id, filename, file_type, uploaded_at
+        FROM concept_files WHERE concept_id = ?
+        ORDER BY uploaded_at DESC
+    """, (concept_id,)).fetchall()]
+    manual = conn.execute(
+        "SELECT due_at FROM manual_revision_items WHERE concept_id = ?",
+        (concept_id,),
+    ).fetchone()
+    conn.close()
+
+    return {
+        "concept": concept,
+        "prerequisites": [payload["concepts_by_id"][cid] for cid in concept["prerequisites"] if cid in payload["concepts_by_id"]],
+        "dependents": [payload["concepts_by_id"][cid] for cid in concept["dependents"] if cid in payload["concepts_by_id"]],
+        "subject_progress": next((s for s in payload["subjects"] if s["subject"] == concept["subject"]), None),
+        "revision_status": {"manual_due_at": manual["due_at"] if manual else None},
+        "notes": {
+            "self_note": note["content"] if note else "",
+            "updated_at": note["updated_at"] if note else None,
+            "uploaded_files": files,
+        },
+    }
+
+
+@app.get("/api/concepts/{concept_id}/notes")
+async def get_concept_notes(concept_id: str, authorization: Optional[str] = Header(None)):
+    _auth(authorization)
+    _ensure_learning_tables()
     from infrastructure.database import get_db_connection
 
     conn = get_db_connection()
-    rows = conn.execute("""
-        SELECT c.concept_id, c.subject, c.topic, c.subtopic, c.prerequisites,
-               c.difficulty, c.importance_weight,
-               COALESCE(m.state_level, 1) AS state_level,
-               COALESCE(m.accuracy, 0.0) AS accuracy
-        FROM concepts c
-        LEFT JOIN mastery_states m ON c.concept_id = m.concept_id
-        ORDER BY c.subject, c.concept_id
-    """).fetchall()
+    concept = conn.execute("SELECT 1 FROM concepts WHERE concept_id = ?", (concept_id,)).fetchone()
+    if not concept:
+        conn.close()
+        raise HTTPException(status_code=404, detail="Concept not found")
+    note = conn.execute(
+        "SELECT content, updated_at FROM concept_notes WHERE concept_id = ?",
+        (concept_id,),
+    ).fetchone()
     conn.close()
+    return {
+        "concept_id": concept_id,
+        "content": note["content"] if note else "",
+        "updated_at": note["updated_at"] if note else None,
+    }
 
-    # mastery lookup for prereq checks
-    mastery = {r["concept_id"]: r["state_level"] for r in rows}
 
-    def locked(prereq_str):
-        try:
-            prereqs = _json.loads(prereq_str) if prereq_str else []
-        except Exception:
-            prereqs = []
-        return [p for p in prereqs if mastery.get(p, 1) <= 2]
+@app.put("/api/concepts/{concept_id}/notes")
+async def put_concept_notes(concept_id: str, request: ConceptNoteRequest, authorization: Optional[str] = Header(None)):
+    _auth(authorization)
+    _ensure_learning_tables()
+    from infrastructure.database import get_db_connection
 
-    subjects = {}
-    for r in rows:
-        blockers = locked(r["prerequisites"])
-        try:
-            prereqs = _json.loads(r["prerequisites"]) if r["prerequisites"] else []
-        except Exception:
-            prereqs = []
-        item = {
-            "concept_id": r["concept_id"],
-            "topic": r["topic"],
-            "subtopic": r["subtopic"],
-            "difficulty": r["difficulty"],
-            "importance_weight": r["importance_weight"],
-            "prerequisites": prereqs,
-            "mastery_level": r["state_level"],
-            "accuracy": round(r["accuracy"], 2),
-            "locked": len(blockers) > 0,
-            "blocked_by": blockers,
-        }
-        subjects.setdefault(r["subject"], []).append(item)
+    conn = get_db_connection()
+    concept = conn.execute("SELECT 1 FROM concepts WHERE concept_id = ?", (concept_id,)).fetchone()
+    if not concept:
+        conn.close()
+        raise HTTPException(status_code=404, detail="Concept not found")
+    conn.execute("""
+        INSERT INTO concept_notes (concept_id, content, updated_at)
+        VALUES (?, ?, CURRENT_TIMESTAMP)
+        ON CONFLICT(concept_id) DO UPDATE SET
+            content=excluded.content,
+            updated_at=CURRENT_TIMESTAMP
+    """, (concept_id, request.content))
+    conn.commit()
+    note = conn.execute(
+        "SELECT content, updated_at FROM concept_notes WHERE concept_id = ?",
+        (concept_id,),
+    ).fetchone()
+    conn.close()
+    return {"concept_id": concept_id, "content": note["content"], "updated_at": note["updated_at"]}
 
-    grouped = []
-    for subject, concepts in subjects.items():
-        mastered = sum(1 for c in concepts if c["mastery_level"] >= 8)
-        avg = sum(c["mastery_level"] for c in concepts) / len(concepts) if concepts else 1
-        grouped.append({
-            "subject": subject,
-            "concepts": concepts,
-            "total": len(concepts),
-            "mastered": mastered,
-            "readiness": round(avg / 8 * 100, 1),
-        })
-    return {"subjects": grouped}
+
+@app.get("/api/concepts/{concept_id}/files")
+async def get_concept_files(concept_id: str, authorization: Optional[str] = Header(None)):
+    _auth(authorization)
+    _ensure_learning_tables()
+    from infrastructure.database import get_db_connection
+
+    conn = get_db_connection()
+    concept = conn.execute("SELECT 1 FROM concepts WHERE concept_id = ?", (concept_id,)).fetchone()
+    if not concept:
+        conn.close()
+        raise HTTPException(status_code=404, detail="Concept not found")
+    files = [dict(r) for r in conn.execute("""
+        SELECT file_id, filename, file_type, uploaded_at
+        FROM concept_files WHERE concept_id = ?
+        ORDER BY uploaded_at DESC
+    """, (concept_id,)).fetchall()]
+    conn.close()
+    return {"files": files}
+
+
+@app.get("/api/concepts/{concept_id}/files/{file_id}")
+async def download_concept_file(concept_id: str, file_id: str, authorization: Optional[str] = Header(None)):
+    _ensure_learning_tables()
+    from infrastructure.database import get_db_connection
+
+    conn = get_db_connection()
+    row = conn.execute("""
+        SELECT filename, stored_path FROM concept_files
+        WHERE concept_id = ? AND file_id = ?
+    """, (concept_id, file_id)).fetchone()
+    conn.close()
+    if not row or not os.path.exists(row["stored_path"]):
+        raise HTTPException(status_code=404, detail="File not found")
+    return FileResponse(row["stored_path"], filename=row["filename"])
 
 
 @app.get("/api/pyqs")
@@ -478,6 +720,7 @@ async def revision_due(authorization: Optional[str] = Header(None)):
     import datetime
     from infrastructure.database import get_db_connection
 
+    _ensure_learning_tables()
     thresholds = [(3, 3), (5, 7), (7, 14), (8, 30)]  # (max_level, days)
 
     def threshold_for(level):
@@ -493,7 +736,6 @@ async def revision_due(authorization: Optional[str] = Header(None)):
         FROM mastery_states m JOIN concepts c ON m.concept_id = c.concept_id
         WHERE m.state_level > 1 AND m.last_revised IS NOT NULL
     """).fetchall()
-    conn.close()
 
     now = datetime.datetime.now()
     due, upcoming = [], []
@@ -512,9 +754,71 @@ async def revision_due(authorization: Optional[str] = Header(None)):
         }
         (due if days_since >= thresh else upcoming).append(entry)
 
+    manual_rows = conn.execute("""
+        SELECT r.concept_id, r.due_at,
+               c.subject, c.topic, c.subtopic,
+               COALESCE(m.state_level, 1) AS state_level
+        FROM manual_revision_items r
+        JOIN concepts c ON r.concept_id = c.concept_id
+        LEFT JOIN mastery_states m ON r.concept_id = m.concept_id
+    """).fetchall()
+    conn.close()
+
+    for r in manual_rows:
+        try:
+            due_at = datetime.datetime.fromisoformat(r["due_at"])
+        except Exception:
+            continue
+        delta_days = (due_at.date() - now.date()).days
+        entry = {
+            "concept_id": r["concept_id"], "subject": r["subject"],
+            "topic": r["topic"], "subtopic": r["subtopic"],
+            "state_level": r["state_level"], "days_since": 0,
+            "due_in_days": max(0, delta_days), "source": "manual",
+        }
+        target = due if due_at <= now else upcoming
+        if not any(x["concept_id"] == entry["concept_id"] and x.get("source") == "manual" for x in target):
+            target.append(entry)
+
     due.sort(key=lambda x: x["days_since"], reverse=True)
     upcoming.sort(key=lambda x: x["due_in_days"])
     return {"due": due, "upcoming": upcoming[:10], "due_count": len(due)}
+
+
+@app.post("/api/revision/schedule")
+async def revision_schedule(request: RevisionScheduleRequest, authorization: Optional[str] = Header(None)):
+    """Manually add a concept to the revision queue."""
+    _auth(authorization)
+    _ensure_learning_tables()
+    import datetime
+    from infrastructure.database import get_db_connection
+
+    due_in_days = max(0, min(365, request.due_in_days))
+    due_at = (datetime.datetime.now() + datetime.timedelta(days=due_in_days)).replace(microsecond=0)
+
+    conn = get_db_connection()
+    concept = conn.execute("SELECT subject, topic, subtopic FROM concepts WHERE concept_id = ?", (request.concept_id,)).fetchone()
+    if not concept:
+        conn.close()
+        raise HTTPException(status_code=404, detail="Concept not found")
+    conn.execute("""
+        INSERT INTO manual_revision_items (concept_id, due_at, created_at)
+        VALUES (?, ?, CURRENT_TIMESTAMP)
+        ON CONFLICT(concept_id) DO UPDATE SET
+            due_at=excluded.due_at,
+            created_at=CURRENT_TIMESTAMP
+    """, (request.concept_id, due_at.isoformat()))
+    conn.commit()
+    conn.close()
+    return {
+        "success": True,
+        "concept_id": request.concept_id,
+        "due_at": due_at.isoformat(),
+        "due_in_days": due_in_days,
+        "subject": concept["subject"],
+        "topic": concept["topic"],
+        "subtopic": concept["subtopic"],
+    }
 
 
 @app.get("/api/mock/generate")

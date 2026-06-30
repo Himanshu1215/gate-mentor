@@ -13,7 +13,7 @@ import { useApp, daysUntil } from './context/AppContext';
 const NAV = [
   { id: 'dashboard', label: 'Dashboard', ico: '🏠' },
   { id: 'tutor', label: 'AI Tutor', ico: '🤖' },
-  { id: 'topics', label: 'Topics', ico: '📚' },
+  { id: 'topics', label: 'Syllabus', ico: '📚' },
   { id: 'quiz', label: 'Quiz Center', ico: '✏️' },
   { id: 'mock', label: 'Mock Test', ico: '⏱️' },
   { id: 'pyqs', label: 'PYQ Explorer', ico: '📄' },
@@ -105,3 +105,4 @@ export default function App() {
     </>
   );
 }
+

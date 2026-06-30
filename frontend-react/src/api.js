@@ -46,6 +46,30 @@ export const api = {
 
   // concepts / topics
   getConcepts: () => request('/api/concepts'),
+  getConcept: (conceptId) => request(`/api/concepts/${conceptId}`),
+  getConceptNotes: (conceptId) => request(`/api/concepts/${conceptId}/notes`),
+  saveConceptNotes: (conceptId, content) =>
+    request(`/api/concepts/${conceptId}/notes`, { method: 'PUT', body: { content } }),
+  getConceptFiles: (conceptId) => request(`/api/concepts/${conceptId}/files`),
+  uploadConceptFile: async (conceptId, file) => {
+    const form = new FormData();
+    form.append('concept_id', conceptId);
+    form.append('file', file);
+    const res = await fetch('/api/upload', {
+      method: 'POST',
+      headers: { Authorization: AUTH },
+      body: form,
+    });
+    if (!res.ok) {
+      let detail = `HTTP ${res.status}`;
+      try {
+        const j = await res.json();
+        detail = j.detail || detail;
+      } catch (_) { /* ignore */ }
+      throw new Error(detail);
+    }
+    return res.json();
+  },
 
   // pyqs
   getPyqs: (params) => request('/api/pyqs', { params }),
@@ -58,6 +82,11 @@ export const api = {
 
   // revision
   revisionDue: () => request('/api/revision/due'),
+  scheduleRevision: (conceptId, dueInDays = 1) =>
+    request('/api/revision/schedule', {
+      method: 'POST',
+      body: { concept_id: conceptId, due_in_days: dueInDays },
+    }),
 
   // mock
   mockGenerate: () => request('/api/mock/generate'),

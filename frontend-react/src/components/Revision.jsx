@@ -11,7 +11,6 @@ export default function Revision({ navigate }) {
     api.revisionDue().then(setData).catch((e) => setError(e.message));
   }, []);
 
-  // Build a simple 7-day strip around today; mark days that have upcoming reviews.
   const today = new Date();
   const week = Array.from({ length: 7 }, (_, i) => {
     const d = new Date(today);
@@ -25,10 +24,10 @@ export default function Revision({ navigate }) {
       <header className="page-header">
         <div>
           <h1>Revision</h1>
-          <p className="subtitle">Spaced repetition driven by your mastery decay — review before you forget.</p>
+          <p className="subtitle">Spaced repetition from quiz progress and topics you manually add from Syllabus.</p>
         </div>
         {data?.due_count > 0 && (
-          <button className="btn-primary" onClick={() => navigate('quiz', { mode: 'revision' })}>🔁 Revise now ({data.due_count})</button>
+          <button className="btn-primary" onClick={() => navigate('quiz', { mode: 'revision' })}>Revise now ({data.due_count})</button>
         )}
       </header>
 
@@ -43,22 +42,30 @@ export default function Revision({ navigate }) {
       </div>
 
       {error && <div className="empty">Couldn't load revision: {error}</div>}
-      {!error && !data && <div className="loading"><span className="spinner" /> Loading schedule…</div>}
+      {!error && !data && <div className="loading"><span className="spinner" /> Loading schedule...</div>}
 
       {data && (
         <>
           <h2>Due today {data.due.length > 0 && <span className="tag gold">{data.due.length}</span>}</h2>
           {data.due.length === 0 && (
-            <div className="empty">🎉 Nothing overdue. Keep practising in the Quiz Center to build your revision queue.</div>
+            <div className="empty">
+              No topics are due today. Revision is created automatically after quizzes, or you can add any topic from Syllabus.
+              <br />
+              <button className="btn-secondary" style={{ marginTop: '1rem' }} onClick={() => navigate('topics')}>Go to Syllabus</button>
+            </div>
           )}
+
           <div className="rev-list">
             {data.due.map((d) => (
-              <div className="rev-card card" key={d.concept_id}>
+              <div className="rev-card card" key={`${d.source || 'auto'}-${d.concept_id}`}>
                 <div>
                   <div style={{ fontWeight: 650 }}>{d.subtopic || d.topic}</div>
-                  <div className="rc-meta">{d.subject} · Mastery Lvl {d.state_level} · <span className="overdue">{d.days_since}d since review</span></div>
+                  <div className="rc-meta">
+                    {d.subject} / Mastery Lvl {d.state_level}
+                    {d.source === 'manual' ? ' / manual revision' : ` / ${d.days_since}d since review`}
+                  </div>
                 </div>
-                <button className="btn-secondary" onClick={() => navigate('quiz', { mode: 'topic', conceptId: d.concept_id, topic: d.subtopic })}>Revise →</button>
+                <button className="btn-secondary" onClick={() => navigate('quiz', { mode: 'topic', conceptId: d.concept_id, topic: d.subtopic })}>Revise</button>
               </div>
             ))}
           </div>
@@ -68,10 +75,13 @@ export default function Revision({ navigate }) {
               <h2 style={{ marginTop: '1.6rem' }}>Coming up</h2>
               <div className="rev-list">
                 {data.upcoming.map((u) => (
-                  <div className="rev-card card" key={u.concept_id}>
+                  <div className="rev-card card" key={`${u.source || 'auto'}-${u.concept_id}`}>
                     <div>
                       <div style={{ fontWeight: 650 }}>{u.subtopic || u.topic}</div>
-                      <div className="rc-meta">{u.subject} · due in {u.due_in_days} day{u.due_in_days === 1 ? '' : 's'}</div>
+                      <div className="rc-meta">
+                        {u.subject} / due in {u.due_in_days} day{u.due_in_days === 1 ? '' : 's'}
+                        {u.source === 'manual' ? ' / manual revision' : ''}
+                      </div>
                     </div>
                     <span className="tag accent">Lvl {u.state_level}</span>
                   </div>
