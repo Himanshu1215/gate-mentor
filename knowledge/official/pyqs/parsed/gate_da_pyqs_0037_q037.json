@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q37",
+  "question_seq": 37,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let $A \\in \\mathbb { R } ^ { n \\times n }$ be such that $A ^ { 3 } = A$ . Which one of the following statements is ALWAYS correct? (A) A is invertible (B) Determinant of A is 0 (C) The sum of the diagonal elements of A is 1 (D) A and $A ^ { 2 }$ have the same rank",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the problem, we start with the given condition \\( A^3 = A \\). This can be rewritten as:\n\n\\[ A^3 - A = 0 \\]\n\\[ A(A^2 - I) = 0 \\]\n\\[ A(A - I)(A + I) = 0 \\]\n\nThis equation tells us that the matrix \\( A \\) satisfies the polynomial equation \\( p(A) = A(A - I)(A + I) = 0 \\). Therefore, the eigenvalues of \\( A \\) must be the roots of the polynomial \\( p(\\lambda) = \\lambda(\\lambda - 1)(\\lambda + 1) = 0 \\). The roots are \\( \\lambda = 0 \\), \\( \\lambda = 1 \\), and \\( \\lambda = -1 \\). This means that the eigenvalues of \\( A \\) are either 0, 1, or -1.\n\nNow, let's analyze each statement:\n\n(A) A is invertible.\nA matrix is invertible if and only if none of its eigenvalues are zero. Since the eigenvalues of \\( A \\) can be 0, 1, or -1, \\( A \\) is not necessarily invertible. For example, if \\( A \\) is the zero matrix, then \\( A \\) is not invertible. Therefore, statement (A) is not always correct.\n\n(B) Determinant of A is 0.\nThe determinant of a matrix is the product of its eigenvalues. Since the eigenvalues of \\( A \\) are either 0, 1, or -1, the determinant of \\( A \\) can be 0 (if at least one eigenvalue is 0), 1 (if all eigenvalues are 1), or -1 (if all eigenvalues are -1). Therefore, the determinant of \\( A \\) is not always 0. For example, if \\( A \\) is the identity matrix, then the determinant of \\( A \\) is 1. Therefore, statement (B) is not always correct.\n\n(C) The sum of the diagonal elements of A is 1.\nThe sum of the diagonal elements of a matrix is its trace. The trace of a matrix is the sum of its eigenvalues. Since the eigenvalues of \\( A \\) are either 0, 1, or -1, the trace of \\( A \\) can be any integer. For example, if \\( A \\) is the zero matrix, then the trace of \\( A \\) is 0. Therefore, the sum of the diagonal elements of \\( A \\) is not always 1. For example, if \\( A \\) is the identity matrix, then the sum of the diagonal elements of \\( A \\) is \\( n \\). Therefore, statement (C) is not always correct.\n\n(D) A and \\( A^2 \\) have the same rank.\nThe rank of a matrix is the number of linearly independent rows (or columns) it has. Since \\( A^3 = A \\), we have \\( A(A^2 - I) = 0 \\). This means that the column space of \\( A^2 \\) is contained in the column space of \\( A \\). Therefore, the rank of \\( A^2 \\) is less than or equal to the rank of \\( A \\). However, since \\( A^2",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

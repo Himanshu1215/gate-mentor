@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q57",
+  "question_seq": 180,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In a $\\mathsf { B } ^ { + }$ - tree where each node can hold at most four key values, a root to leaf path",
+  "options": {
+    "C": "onsists of the following nodes:",
+    "A": "= (49, 77, 83, −), B = (7, 19, 33, 44), C = (20\\*, 22\\*, 25\\*, 26\\*) The \\*-marked keys signify that these are data entries in a leaf."
+  },
+  "answer": null,
+  "solution": "To determine the correct path in the B+ tree, we need to follow the rules of B+ tree insertions. Each node can hold at most four key values, and when a node is filled to capacity and a new key is inserted, the node is split into two new nodes.\n\nLet's start with the given keys and insert them into the tree step by step.\n\n1. **Initial Tree:**\n   - Root node: []\n\n2. **Insert 49:**\n   - Root node: [49]\n\n3. **Insert 77:**\n   - Root node: [49, 77]\n\n4. **Insert 83:**\n   - Root node: [49, 77, 83]\n\n5. **Insert -:**\n   - Root node: [49, 77, 83, -]\n\n6. **Insert 7:**\n   - Since the root node is full, we split it into two new nodes.\n   - New root node: []\n   - New node 1: [49, 77]\n   - New node 2: [83, -]\n   - Insert 7 into the new node 1.\n   - New node 1: [7, 49, 77]\n\n7. **Insert 19:**\n   - Insert 19 into the new node 1.\n   - New node 1: [7, 19, 49, 77]\n\n8. **Insert 33:**\n   - Insert 33 into the new node 1.\n   - New node 1: [7, 19, 33, 49, 77]\n   - Since the new node 1 is full, we split it into two new nodes.\n   - New root node: [7, 19]\n   - New node 1: [33]\n   - New node 2: [49, 77]\n   - Insert 33 into the new node 1.\n   - New node 1: [33]\n   - New node 2: [49, 77]\n\n9. **Insert 44:**\n   - Insert 44 into the new node 2.\n   - New node 2: [49, 77, 44]\n\n10. **Insert 20\\**:**\n    - Insert 20\\ into the new node 2.\n    - New node 2: [49, 77, 44, 20\\]\n\n11. **Insert 22\\**:**\n    - Insert 22\\ into the new node 2.\n    - New node 2: [49, 77, 44, 20\\]\n\n12. **Insert 25\\**:**\n    - Insert 25\\ into the new node 2.\n    - New node 2: [49, 77, 44, 20\\]\n\n13. **Insert 26\\**:**\n    - Insert 26\\ into the new node 2.\n    - New node 2: [49, 77, 44, 20\\]\n\nThe final tree structure",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

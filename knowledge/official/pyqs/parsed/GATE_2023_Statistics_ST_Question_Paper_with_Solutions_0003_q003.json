@@ -3,17 +3,14 @@
   "exam": "GATE ST",
   "question_id": "Q3",
   "question_seq": 3,
-  "question_type": "MCQ",
+  "question_type": "NAT",
   "marks": null,
   "difficulty": null,
   "concept_id": "GENERAL",
-  "question_text": "In the given figure, PQRSTV is a regular hexagon with each side of length 5 cm. A",
+  "question_text": "In the given figure, PQRSTV is a regular hexagon with each side of length 5 cm. A circle is drawn with its centre at V such that it passes through P. What is the area (in $\\mathbf { c m } ^ { 2 } )$ of the shaded region? (The diagram is representative)",
   "options": {
-    "C": "ircle is drawn with its centre at V such that it passes through P. What is the area (in",
-    "A": "25π",
-    "B": "20π",
-    "D": "7π"
+    "A": "$\\frac { 2 5 \\pi } { \\textrm { - } }$ (B) $\\frac { 2 0 \\pi } { 3 }$ (C) $6 \\pi$ (D) $7 \\pi$"
   },
   "answer": "A",
-  "solution": "Step 1: Identify the radius of the circle.\nSince the circle is centred at V and passes through P, its radius is V P. In a regular hexagon,\nall sides are equal and adjacent vertices are 5 cm apart. Hence V P = V T = 5 cm (adjacent\nsides of the hexagon). ⇒r = 5 cm.\nStep 2: Find the angle subtended at the centre V .\nThe interior angle at any vertex of a regular hexagon is 120◦. The sector in question is formed\nby the two sides V P and V T; therefore the central angle of the circular sector ∠PV T = 120◦.\nStep 3: Area of the shaded region.\nFrom the diagram, the shaded part is exactly the sector of the circle between the radii V P\nand V T (no subtraction of the triangle is intended).\nArea of a sector with angle θ and radius r: Asector =\n360◦πr2.\nHere, θ = 120◦, r = 5 ⇒\nAshaded = 120◦\n360◦π(5)2 = 1\n3 · 25π = 25π\nQuick Tip\nRegular hexagon corner angle is 120◦. If a circle is centred at a vertex and passes through\nan adjacent vertex, the sector between two adjacent sides is a 120◦sector with radius\nequal to the side length."
+  "solution": "Step 1: Identify the radius of the circle.\n\nSince the circle is centred at $V$ and passes through $P ,$ its radius is V P . In a regular hexagon, all sides are equal and adjacent vertices are 5 cm apart. Hence $V P = V T = 5$ cm (adjacent sides of the hexagon). $\\Rightarrow r = 5 \\mathrm { c m }$\n\nStep 2: Find the angle subtended at the centre $V .$\n\nThe interior angle at any vertex of a regular hexagon is $1 2 0 ^ { \\circ }$ . The sector in question is formed by the two sides $V P$ and $V T { \\mathrm { : } }$ therefore the central angle of the circular sector $\\angle P V T = 1 2 0 ^ { \\circ }$ Step 3: Area of the shaded region.\n\nFrom the diagram, the shaded part is exactly the sector of the circle between the radii $V P$ and V T (no subtraction of the triangle is intended).\n\nArea of a sector with angle θ and radius r: $A _ { \\mathrm { s e c t o r } } = { \\frac { \\theta } { 3 6 0 ^ { \\circ } } } \\pi r ^ { 2 } .$\n\nHere, $\\theta = 1 2 0 ^ { \\circ } , r = 5 \\Rightarrow$\n\n $ A _ { \\mathrm { s h a d e d } } = { \\frac { 1 2 0 ^ { \\circ } } { 3 6 0 ^ { \\circ } } } \\pi ( 5 ) ^ { 2 } = { \\frac { 1 } { 3 } } \\cdot 2 5 \\pi = \\left\\lfloor { \\frac { 2 5 \\pi } { 3 } } \\right\\rfloor . $ \nQuick Tip\n\nRegular hexagon corner angle is $1 2 0 ^ { \\circ }$ . If a circle is centred at a vertex and passes through an adjacent vertex, the sector between two adjacent sides is a $1 2 0 ^ { \\circ }$ sector with radius equal to the side length."
 }

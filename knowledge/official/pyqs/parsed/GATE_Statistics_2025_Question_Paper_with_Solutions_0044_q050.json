@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q50",
+  "question_seq": 44,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $\\{ X _ { n } \\} _ { n \\ge 1 }$ be a sequence of independent random variables and $X _ { n } \\xrightarrow { a . s . } 0$ as $n \\infty .$ . Then which of the following options is/are necessarily correct?",
+  "options": {
+    "A": "$E ( X _ { n } ^ { 3 } ) \\to 0$ as $n \\to \\infty$",
+    "B": "$X _ { n } ^ { 7 } \\overset { P } { \\longrightarrow } 0$ as $n \\to \\infty$",
+    "C": "For any $\\epsilon > 0 , \\sum _ { n = 1 } ^ { \\infty } \\operatorname* { P r } ( | X _ { n } | \\geq \\epsilon ) < \\infty$",
+    "D": "$X _ { n } ^ { 2 } + X _ { n } + 5 \\xrightarrow { { a . s . } } 5$ as $n \\to \\infty$"
+  },
+  "answer": "B",
+  "solution": "Step 1: Convergence of $E ( X _ { n } ^ { 3 } )$\n\nSince $X _ { n }  0$ almost surely, $E ( X _ { n } ^ { 3 } )$ will also tend to 0. This is because the third moment of a sequence that converges to 0 almost surely will also tend to 0.   \nThus, Option (A) is incorrect because we need to show that the third moment tends to zero, but it is not guaranteed under the given conditions.   \nStep 2: Convergence in Probability of $X _ { n } ^ { 7 }$   \nBy the convergence in probability of $X _ { n }$ to 0, we can raise $X _ { n }$ to any positive power, including 7, and it will still converge to 0 in probability.   \nThus, Option (B) is correct.   \nStep 3: Series Convergence for $| X _ { n } | \\geq \\epsilon$   \nThe Borel-Cantelli Lemma tells us that $\\begin{array} { r } { \\operatorname* { i f } \\sum _ { n = 1 } ^ { \\infty } \\operatorname* { P r } ( | X _ { n } | \\geq \\epsilon ) < \\infty } \\end{array}$ , then $X _ { n }  0$ almost surely. Since $X _ { n }  0$ almost surely, this condition holds.   \nThus, Option (C) is correct.   \nStep 4: Almost Sure Convergence of $X _ { n } ^ { 2 } + X _ { n } + 5$   \nAs $X _ { n }  0$ almost surely, we have $X _ { n } ^ { 2 } + X _ { n } + 5  5$ almost surely.   \nThus, Option (D) is correct.   \nFinal Answer: The correct answers are $\\boxed { B , C , D }$\nQuick Tip\n\nAlmost sure convergence implies that the sequence converges pointwise for almost all outcomes. Additionally, properties of sums and series involving probabilities can be used to analyze convergence in probability and almost surely."
+}

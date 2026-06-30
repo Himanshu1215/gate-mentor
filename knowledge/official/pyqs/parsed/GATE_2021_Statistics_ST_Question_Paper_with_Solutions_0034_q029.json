@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q29",
+  "question_seq": 34,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let M be the collection of all $3 \\times 3$ real symmetric positive definite matrices. Consider the set $ S = \\left\\{ { \\cal A } \\in { \\cal M } : { \\cal A } ^ { 5 0 } - \\frac { 1 } { 4 } { \\cal A } ^ { 4 8 } = 0 \\right\\} , $ where 0 denotes the $3 \\times 3$ zero matrix. Then the number of elements in $S$ equals",
+  "options": {
+    "A": "0",
+    "B": "1",
+    "C": "8",
+    "D": "∞"
+  },
+  "answer": "B",
+  "solution": "We are given the equation $A ^ { 5 0 } - { \\textstyle \\frac { 1 } { 4 } } A ^ { 4 8 } = 0$ . Factoring out $A ^ { 4 8 }$ , we get:\n\n $ { \\cal A } ^ { 4 8 } \\left( { \\cal A } ^ { 2 } - \\frac { 1 } { 4 } I \\right) = 0 . $ \n\nSince A is a symmetric positive definite matrix, it is invertible, implying $A ^ { 4 8 } \\neq 0$ . Therefore, the equation reduces to:\n\n $ A ^ { 2 } = { \\frac { 1 } { 4 } } I . $ \n\nThis means that the eigenvalues of A are $\\pm \\frac { 1 } { 2 }$ . Since A is positive definite, its eigenvalues must be positive, so all eigenvalues of A must be ${ \\frac { 1 } { 2 } } .$ . Thus, $A = { \\frac { 1 } { 2 } } I$ , and the number of such matrices is exactly 1.\nFinal Answer:\nQuick Tip\n\nWhen dealing with matrix equations involving powers of matrices, always consider the eigenvalue decomposition to simplify the problem."
+}

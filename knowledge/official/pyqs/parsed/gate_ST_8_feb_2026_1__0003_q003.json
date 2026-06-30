@@ -10,5 +10,6 @@
   "question_text": "The duration of the exam is 3 hours.",
   "options": null,
   "answer": null,
-  "solution": null
+  "solution": "To determine the duration of the exam, we start with the given information: the exam lasts for 3 hours. Since no additional details or calculations are required beyond simply restating the given duration, the solution is straightforward.\n\nHere is the step-by-step reasoning:\n\n1. Identify the given duration of the exam: 3 hours.\n2. Since no other information or calculations are provided, the duration remains 3 hours.\n\nTherefore, the final answer is:\n\n\\[\n\\boxed{3 \\text{ hours}}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
 }

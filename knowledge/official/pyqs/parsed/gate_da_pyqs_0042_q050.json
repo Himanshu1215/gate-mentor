@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q50",
+  "question_seq": 42,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let $x _ { 1 } , x _ { 2 } , x _ { 3 } , x _ { 4 } , x _ { 5 }$ be a system of orthonormal vectors in $\\mathbb { R } ^ { 1 0 }$ . Consider the matrix $A = x _ { 1 } x _ { 1 } ^ { \\top } + \\ldots + x _ { 5 } x _ { 5 } ^ { \\top }$ . Which of the following statements is/are correct?",
+  "options": {
+    "A": "Singular values of A are also its eigenvalues",
+    "B": "Singular values of A are either 0 or 1",
+    "C": "Determinant of A is 1",
+    "D": "A is invertible"
+  },
+  "answer": null,
+  "solution": "To solve the problem, we need to analyze the matrix \\( A = x_1 x_1^\\top + x_2 x_2^\\top + x_3 x_3^\\top + x_4 x_4^\\top + x_5 x_5^\\top \\), where \\( x_1, x_2, x_3, x_4, x_5 \\) are orthonormal vectors in \\( \\mathbb{R}^{10} \\).\n\n### Step 1: Understanding Orthonormal Vectors\nOrthonormal vectors satisfy two properties:\n1. Each vector has a norm of 1: \\( \\|x_i\\| = 1 \\) for all \\( i \\).\n2. Any two different vectors are orthogonal: \\( x_i^\\top x_j = 0 \\) for \\( i \\neq j \\).\n\n### Step 2: Properties of the Matrix \\( A \\)\nThe matrix \\( A \\) is a sum of outer products of orthonormal vectors. Each term \\( x_i x_i^\\top \\) is a rank-1 matrix.\n\n### Step 3: Rank of \\( A \\)\nSince \\( x_1, x_2, x_3, x_4, x_5 \\) are linearly independent (they are orthonormal), the rank of \\( A \\) is 5. This is because the sum of rank-1 matrices with linearly independent vectors results in a matrix of rank equal to the number of vectors.\n\n### Step 4: Eigenvalues of \\( A \\)\nTo find the eigenvalues of \\( A \\), consider the equation \\( A \\mathbf{v} = \\lambda \\mathbf{v} \\). For \\( \\mathbf{v} \\) in the span of \\( x_1, x_2, x_3, x_4, x_5 \\), we have:\n\\[\nA \\mathbf{v} = (x_1 x_1^\\top + x_2 x_2^\\top + x_3 x_3^\\top + x_4 x_4^\\top + x_5 x_5^\\top) \\mathbf{v} = x_1 (x_1^\\top \\mathbf{v}) + x_2 (x_2^\\top \\mathbf{v}) + x_3 (x_3^\\top \\mathbf{v}) + x_4 (x_4^\\top \\mathbf{v}) + x_5 (x_5^\\top \\mathbf{v})\n\\]\nIf \\( \\mathbf{v} = x_i \\) for some \\( i \\), then:\n\\[\nA x_i = x_i (x_i^\\top x_i) = x_i \\cdot 1 = x_i\n\\]\nThus, \\( \\lambda = 1 \\) is an eigenvalue with multiplicity 5.\n\nFor vectors orthogonal to \\( x_1, x_2, x_3, x_4, x_5 \\), say \\( \\mathbf{v} \\) is such that \\( x_i^\\top \\mathbf{v} = 0 \\) for all \\( i \\), we have:\n\\[\nA \\mathbf{v} = x_1 (x_1^\\top \\mathbf{v}) +",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

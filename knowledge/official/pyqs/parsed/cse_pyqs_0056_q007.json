@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q7",
+  "question_seq": 56,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "is to surgery as writer is to Which one of the following options maintains a similar logical relation in the above sentence?",
+  "options": {
+    "A": "Plan, outline",
+    "C": "Doctor, book",
+    "B": "Hospital, library",
+    "D": "Medicine, grammar"
+  },
+  "answer": "C",
+  "solution": "To determine the correct answer, we need to analyze the logical relationship between the pairs of words given in the options. The original pair is \"surgery\" and \" writer\". We need to find another pair where the second word is related to the first word in a similar way.\n\nLet's break down the relationship between \"surgery\" and \" writer\":\n\n1. **Surgery** is a process of performing operations on the body.\n2. ** writer** is a person who writes.\n\nThe relationship between these two words can be described as follows:\n- surgery is a process that involves the body.\n- writer is a person who involves writing.\n\nNow, let's analyze each option to see which one maintains a similar logical relationship:\n\n(A) **Plan, outline**\n- **Plan** is a process of making a plan.\n- **outline** is a process of making an outline.\n- This pair does not maintain the same logical relationship as \"surgery\" and \" writer\" because both words in this pair are processes, not a process and a person.\n\n(B) **Hospital, library**\n- **Hospital** is a place where people go for medical treatment.\n- ** library** is a place where people go for information.\n- This pair does not maintain the same logical relationship as \"surgery\" and \" writer\" because \"hospital\" is related to medical treatment, not to the body, and \"library\" is related to information, not to writing.\n\n(C) **Doctor, book**\n- **Doctor** is a person who performs medical operations.\n- **Book** is a person who writes.\n- This pair maintains the same logical relationship as \"surgery\" and \" writer\" because \"doctor\" is a person who involves medical operations (which are similar to surgery), and \"book\" is a person who involves writing.\n\n(D) **Medicine, grammar**\n- **Medicine** is a field of study that involves the study of the human body.\n- ** Grammar** is a field of study that involves the study of language.\n- This pair does not maintain the same logical relationship as \"surgery\" and \" writer\" because \"medicine\" is related to the study of the body, not to the body itself, and \"grammar\" is related to the study of language, not to writing.\n\nBased on the analysis, the correct answer is:\n\\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

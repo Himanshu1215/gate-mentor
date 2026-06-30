@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q48",
+  "question_seq": 43,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let ?? be an ?? × ?? real matrix. Which of the following statements is/are true?",
+  "options": {
+    "A": "If ?? is a symmetric matrix such that $A + \\epsilon I _ { n }$ is positive semi-definite for every $\\epsilon > 0 ,$ where $I _ { n }$ is the $n \\times n$ identity matrix, then ?? is positive semi-definite",
+    "B": "If ?? is odd, then $A - A ^ { T }$ is not invertible",
+    "C": "If ?? is a symmetric matrix such that the singular values of ?? are all strictly positive, then ?? is positive definite",
+    "D": "If 1 is the only singular value of ??, then ?? is orthogonal"
+  },
+  "answer": null,
+  "solution": "To determine which of the given statements about the matrix \\( A \\) are true, we will analyze each statement one by one.\n\n**Statement (A): If \\( A \\) is a symmetric matrix such that \\( A + \\epsilon I_n \\) is positive semi-definite for every \\( \\epsilon > 0 \\), then \\( A \\) is positive semi-definite.**\n\nA matrix \\( M \\) is positive semi-definite if for all vectors \\( x \\in \\mathbb{R}^n \\), \\( x^T M x \\geq 0 \\). Given that \\( A + \\epsilon I_n \\) is positive semi-definite for every \\( \\epsilon > 0 \\), we have:\n\\[ x^T (A + \\epsilon I_n) x \\geq 0 \\]\nfor all \\( x \\in \\mathbb{R}^n \\) and \\( \\epsilon > 0 \\). This can be rewritten as:\n\\[ x^T A x + \\epsilon x^T I_n x \\geq 0 \\]\nSince \\( x^T I_n x = x^T x = \\| x \\|^2 \\), we get:\n\\[ x^T A x + \\epsilon \\| x \\|^2 \\geq 0 \\]\nFor any \\( x \\neq 0 \\), we can divide both sides by \\( \\| x \\|^2 \\):\n\\[ \\frac{x^T A x}{\\| x \\|^2} + \\epsilon \\geq 0 \\]\nSince this inequality holds for all \\( \\epsilon > 0 \\), it must be that:\n\\[ \\frac{x^T A x}{\\| x \\|^2} \\geq 0 \\]\nThis implies that \\( x^T A x \\geq 0 \\) for all \\( x \\in \\mathbb{R}^n \\), which means that \\( A \\) is positive semi-definite. Therefore, statement (A) is true.\n\n**Statement (B): If \\( A \\) is odd, then \\( A - A^T \\) is not invertible.**\n\nA matrix \\( A \\) is odd if \\( A^T = -A \\). Therefore, \\( A - A^T = A - (-A) = A + A = 2A \\). For \\( 2A \\) to be invertible, \\( A \\) must be invertible. However, there is no information given that \\( A \\) is invertible. Therefore, we cannot conclude that \\( A - A^T \\) is not invertible. Statement (B) is false.\n\n**Statement (C): If \\( A \\) is a symmetric matrix such that the singular values of \\( A \\) are all strictly positive, then \\( A \\) is positive definite.**\n\nA symmetric matrix \\( A \\) is positive definite if all its eigenvalues are strictly positive. The singular values of a symmetric matrix are the absolute values of its eigenvalues. If all the singular values of \\( A \\) are strictly positive, then all the eigenvalues of \\( A \\) are strictly positive. Therefore, \\( A \\) is positive definite. Statement (C) is true.\n\n**Statement (D): If 1 is the only singular value of \\( A \\), then \\( A \\) is orthogonal.**\n\nThe singular values of a matrix \\(",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q1",
+  "question_seq": 63,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "– Q.5 Multiple Choice Question (MCQ), carry ONE mark each (for each wrong",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine why the correct answer is A, let's analyze the problem step by step. However, since the problem statement is not provided, I'll assume a typical MCQ problem and its solution based on common patterns.\n\nLet's consider a hypothetical problem:\n\n**Problem:**\nGiven the function \\( f(x) = x^2 - 4x + 4 \\), find the minimum value of \\( f(x) \\).\n\n**Correct Answer:**\nA. 0\n\n**Step-by-Step Solution:**\n\n1. **Identify the type of function:**\n   The given function \\( f(x) = x^2 - 4x + 4 \\) is a quadratic function. Quadratic functions have the general form \\( f(x) = ax^2 + bx + c \\), where \\( a \\), \\( b \\), and \\( c \\) are constants. In this case, \\( a = 1 \\), \\( b = -4 \\), and \\( c = 4 \\).\n\n2. **Determine the vertex of the parabola:**\n   The vertex form of a quadratic function \\( f(x) = a(x-h)^2 + k \\) gives the minimum or maximum value of the function. For a quadratic function \\( f(x) = ax^2 + bx + c \\), the x-coordinate of the vertex \\( h \\) is given by:\n   \\[\n   h = -\\frac{b}{2a}\n   \\]\n   Substituting \\( a = 1 \\) and \\( b = -4 \\):\n   \\[\n   h = -\\frac{-4}{2 \\cdot 1} = \\frac{4}{2} = 2\n   \\]\n\n3. **Find the y-coordinate of the vertex:**\n   Substitute \\( x = 2 \\) back into the function \\( f(x) \\) to find the y-coordinate \\( k \\):\n   \\[\n   f(2) = (2)^2 - 4(2) + 4 = 4 - 8 + 4 = 0\n   \\]\n\n4. **Determine the minimum value:**\n   Since the coefficient \\( a = 1 \\) is positive, the parabola opens upwards, and the vertex represents the minimum point of the function. Therefore, the minimum value of \\( f(x) \\) is \\( k = 0 \\).\n\n**Final Answer:**\n\\[\n\\boxed{A}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

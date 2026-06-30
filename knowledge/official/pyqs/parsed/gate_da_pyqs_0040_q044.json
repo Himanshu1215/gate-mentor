@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q44",
+  "question_seq": 40,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The state graph shows the action cost along the edges and the heuristic function h associated with each state. Suppose A<sup>∗</sup> algorithm is applied on this state graph using priority queue to store the frontier. In what sequence are the nodes expanded?",
+  "options": {
+    "A": "$\\mathbf { S } , \\mathbf { A } , \\mathbf { E } , \\mathbf { C } , \\mathbf { B } , \\mathbf { D } , \\mathbf { G }$",
+    "B": "$\\mathbf { S } , \\mathbf { E } , \\mathbf { A } , \\mathbf { C } , \\mathbf { B } , \\mathbf { D } , \\mathbf { G }$",
+    "C": "S,A,E,B,C,D,G",
+    "D": "S,A,B,E,C,D,G"
+  },
+  "answer": null,
+  "solution": "To determine the sequence in which the nodes are expanded using the A<sup>∗</sup> algorithm, we need to follow these steps:\n\n1. ** Initialize the open list (frontier) with the starting node \\( S \\).**\n2. ** Calculate the f-score for each node, which is given by \\( f(n) = g(n) + h(n) \\), where \\( g(n) \\) is the actual cost from the start node to node \\( n \\) and \\( h(n) \\) is the heuristic function.**\n3. ** expanded the node with the lowest f-score from the open list.**\n4. ** Update the f-scores of its neighbors.**\n5. ** Repeat steps 3 and 4 until the open list is empty.**\n\nLet's apply these steps to the given state graph.\n\n### Step-by-Step Solution:\n\n1. ** Initialize the open list:**\n   - Open list: \\( S \\)\n   - \\( g(S) = 0 \\)\n   - \\( h(S) = 5 \\)\n   - \\( f(S) = 0 + 5 = 5 \\)\n\n2. ** Expand the node \\( S \\):**\n   - Neighbors of \\( S \\): \\( A \\) and \\( E \\)\n   - \\( g(A) = 1 \\)\n   - \\( h(A) = 4 \\)\n   - \\( f(A) = 1 + 4 = 5 \\)\n   - \\( g(E) = 2 \\)\n   - \\( h(E) = 3 \\)\n   - \\( f(E) = 2 + 3 = 5 \\)\n   - Update open list: \\( A, E \\)\n\n3. ** Expand the node with the lowest f-score (either \\( A \\) or \\( E \\)). Let's choose \\( A \\) first:**\n   - Neighbors of \\( A \\): \\( E \\) and \\( C \\)\n   - \\( g(E) \\) is already 2 (no update needed)\n   - \\( g(C) = 1 + 4 = 5 \\)\n   - \\( h(C) = 1 \\)\n   - \\( f(C) = 5 + 1 = 6 \\)\n   - Update open list: \\( E, C \\)\n\n4. ** Expand the node with the lowest f-score (either \\( E \\) or \\( C \\)). Let's choose \\( E \\):**\n   - Neighbors of \\( E \\): \\( S \\) and \\( B \\)\n   - \\( g(S) \\) is already 0 (no update needed)\n   - \\( g(B) = 2 + 2 = 4 \\)\n   - \\( h(B) = 2 \\)\n   - \\( f(B) = 4 + 2 = 6 \\)\n   - Update open list: \\( C, B \\)\n\n5. ** Expand the node with the lowest f-score (either \\( C \\) or \\( B \\)). Let's choose \\( C \\):**\n   - Neighbors of \\( C \\): \\( A \\) and \\( D \\)\n   - \\( g(A) \\) is already 1 (no update needed)\n   - \\( g(D) = 5 + 4 = 9 \\)\n   - \\( h(D) = 1 \\)\n   - \\( f(D) =",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

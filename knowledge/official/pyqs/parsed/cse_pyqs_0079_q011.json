@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q11",
+  "question_seq": 79,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the following statements is TRUE for all positive functions $\\begin{array} { l } { { \\displaystyle f ( \\boldsymbol n ) ? } } \\end{array}$",
+  "options": {
+    "A": "$f ( n ^ { 2 } ) = \\Theta ( f ( n ) ^ { 2 } )$ , when $f ( n )$ is a polynomial",
+    "B": "$f ( n ^ { 2 } ) = \\mathrm { o } ( f ( n ) ^ { 2 } )$",
+    "C": "$f ( n ^ { 2 } ) = \\mathrm { O } ( f ( n ) ^ { 2 } ) .$ , when $f ( n )$ is an exponential function",
+    "D": "$f ( n ^ { 2 } ) = \\Omega ( f ( n ) ^ { 2 } )$"
+  },
+  "answer": "A",
+  "solution": "To determine which statement is true for all positive functions \\( f(n) \\), we need to analyze each option step by step.\n\n### Option (A): \\( f(n^2) = \\Theta(f(n)^2) \\) when \\( f(n) \\) is a polynomial\n\nA polynomial function can be written as:\n\\[ f(n) = a_k n^k + a_{k-1} n^{k-1} + \\cdots + a_1 n + a_0 \\]\nwhere \\( a_k \\neq 0 \\) and \\( k \\) is a non-negative integer.\n\nConsider \\( f(n^2) \\):\n\\[ f(n^2) = a_k (n^2)^k + a_{k-1} (n^2)^{k-1} + \\cdots + a_1 (n^2) + a_0 \\]\n\\[ f(n^2) = a_k n^{2k} + a_{k-1} n^{2(k-1)} + \\cdots + a_1 n^2 + a_0 \\]\n\nNow, consider \\( f(n)^2 \\):\n\\[ f(n)^2 = (a_k n^k + a_{k-1} n^{k-1} + \\cdots + a_1 n + a_0)^2 \\]\n\nThe leading term in \\( f(n)^2 \\) is \\( (a_k n^k)^2 = a_k^2 n^{2k} \\).\n\nSince both \\( f(n^2) \\) and \\( f(n)^2 \\) have the same leading term \\( a_k^2 n^{2k} \\), we can say:\n\\[ f(n^2) \\sim f(n)^2 \\]\n\nThis implies:\n\\[ f(n^2) = \\Theta(f(n)^2) \\]\n\nThus, option (A) is true.\n\n### Option (B): \\( f(n^2) = \\mathrm{o}(f(n)^2) \\)\n\nFor \\( f(n^2) = \\mathrm{o}(f(n)^2) \\), we need:\n\\[ \\lim_{n \\to \\infty} \\frac{f(n^2)}{f(n)^2} = 0 \\]\n\nFrom our analysis in option (A), we know:\n\\[ f(n^2) \\sim f(n)^2 \\]\n\nThis implies:\n\\[ \\lim_{n \\to \\infty} \\frac{f(n^2)}{f(n)^2} = 1 \\]\n\nSince the limit is 1, \\( f(n^2) \\neq \\mathrm{o}(f(n)^2) \\).\n\nThus, option (B) is false.\n\n### Option (C): \\( f(n^2) = \\mathrm{O}(f(n)^2) \\), when \\( f(n) \\) is an exponential function\n\nAn exponential function can be written as:\n\\[ f(n) = a^b^n \\]\nwhere \\( a > 1 \\) and \\( b > 0 \\).\n\nConsider \\( f(n^2) \\):\n\\[ f(n^2) = a^{b^{n^2}} \\]\n\nNow, consider \\( f(n)^2 \\):\n\\[ f(n)^2 = (a^{b^n})^2 = a^{2b^n} \\]\n\nSince \\( b^{",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

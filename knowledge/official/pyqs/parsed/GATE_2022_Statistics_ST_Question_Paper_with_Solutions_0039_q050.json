@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q50",
+  "question_seq": 39,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following real-valued functions is/are uniformly continuous on $\\lbrack 0 , \\infty ) \\colon$",
+  "options": {
+    "A": "$\\sin ^ { 2 } x$",
+    "B": "x sin x",
+    "C": "sin(sin x)",
+    "D": "sin(x sin x)"
+  },
+  "answer": "A",
+  "solution": "Step 1: Understanding uniform continuity.\n\nA function $f ( x )$ is said to be uniformly continuous on an interval if, for every $\\epsilon > 0$ , there exists a $\\delta > 0$ such that for all $x _ { 1 } , x _ { 2 } \\in [ 0 , \\infty ) , { \\mathrm { i f ~ } } | x _ { 1 } - x _ { 2 } | < \\delta _ { \\mathrm { { i } } }$ , then $| f ( x _ { 1 } ) - f ( x _ { 2 } ) | < \\epsilon$ Intuitively, uniform continuity means that the rate of change of the function does not become unbounded as $x \\to \\infty$\nStep 2: Analyze each function.\n\n(A) $f ( x ) = \\sin ^ { 2 }$ x: Since sin x is bounded and continuous for all real x, and squaring it does not affect its periodic bounded nature, $\\sin ^ { 2 } x$ oscillates between 0 and 1. Furthermore, $\\sin ^ { 2 }$ x has bounded derivative $f ^ { \\prime } ( x ) = 2$ sin x cos $x = \\sin { 2 x }$ , which implies that $f ( x )$ is Lipschitz continuous. Hence, $\\sin ^ { 2 }$ x is uniformly continuous on $[ 0 , \\infty )$\n\n(B) $f ( x ) = x$ sin x: Here, the term x increases without bound as $x \\to \\infty$ . Although sin x oscillates between -1 and 1, the product x sin x has amplitude that grows without bound. The derivative $f ^ { \\prime } ( x ) = \\sin x + x$ cos x is unbounded, implying that small changes in x can lead to arbitrarily large changes in $f ( x )$ . Therefore, x sin x is not uniformly continuous on $[ 0 , \\infty )$ (C) $f ( x ) = \\sin ( \\sin x )$ : Since sin x is bounded between $[ - 1 , 1 ]$ , the inner sin x ensures that the input to the outer sine function is also bounded within this range. Thus, $f ( x ) = \\sin ( \\sin x )$ remains bounded and continuous for all x. As both sine functions are Lipschitz continuous with constant 1, their composition sin(sin x) is also Lipschitz continuous and therefore uniformly continuous on $[ 0 , \\infty )$\n\n(D) $f ( x ) = \\sin ( x \\sin x )$ : In this case, x sin x is unbounded as $x \\to \\infty$ , which means the argument of the sine function increases indefinitely. The sine function remains bounded, but due to rapid oscillations of x sin x, sin(x sin x) does not have a uniformly small variation over large x. Hence, sin(x sin x) is not uniformly continuous.\nStep 3: Conclusion.\n\nFrom the above analysis, we conclude that functions $( \\mathbf { A } ) \\sin ^ { 2 } x$ and $( \\mathbf { C } ) \\sin ( \\sin x )$ are uniformly continuous on $\\lbrack 0 , \\infty )$ .\nQuick Tip\n\nBounded and Lipschitz continuous functions on the entire real line (or any interval) are always uniformly continuous. Unbounded oscillatory functions like x sin x fail this property as their derivatives grow without bound."
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q10",
+  "question_seq": 66,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "– Q.25 Numerical",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine why the correct answer is A, let's break down the problem step by step. However, since the specific question is not provided, I'll assume a common type of numerical problem that might be asked in a GATE exam. Let's consider a problem involving probability, which is a common topic in such exams.\n\n**Problem:**\nA bag contains 3 red balls and 2 blue balls. Two balls are drawn at random without replacement. What is the probability that both balls drawn are red?\n\n**Step-by-Step Solution:**\n\n1. **Determine the total number of balls:**\n   The bag contains 3 red balls and 2 blue balls, so the total number of balls is:\n   \\[\n   3 + 2 = 5\n   \\]\n\n2. **Calculate the probability of drawing the first red ball:**\n   There are 3 red balls out of 5 total balls, so the probability of drawing a red ball first is:\n   \\[\n   \\frac{3}{5}\n   \\]\n\n3. **Calculate the probability of drawing the second red ball given that the first ball drawn was red:**\n   After drawing the first red ball, there are now 2 red balls left and 4 balls in total. So, the probability of drawing a red ball second is:\n   \\[\n   \\frac{2}{4} = \\frac{1}{2}\n   \\]\n\n4. **Calculate the probability of both events happening (drawing two red balls in succession):**\n   Since the events are dependent, we multiply the probabilities of each event:\n   \\[\n   \\frac{3}{5} \\times \\frac{1}{2} = \\frac{3}{10}\n   \\]\n\nTherefore, the probability that both balls drawn are red is \\(\\frac{3}{10}\\).\n\n**Final Answer:**\n\\[\n\\boxed{A}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

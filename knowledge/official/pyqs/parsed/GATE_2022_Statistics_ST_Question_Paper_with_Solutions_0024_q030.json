@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q30",
+  "question_seq": 24,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X and Y be two random variables such that the moment generating function of $X$ is $M ( t )$ and the moment generating function of $Y$ is $ H ( t ) = \\left( \\frac { 3 } { 4 } e ^ { 2 t } + \\frac { 1 } { 4 } \\right) M ( t ) , $ where $t \\in ( - h , h ) , h > 0$ . If the mean and the variance of X are $\\frac { 1 } { 2 }$ and $\\frac { 1 } { 4 }$ , respectively, then the variance of $Y$ (in integer) is equal to",
+  "options": null,
+  "answer": null,
+  "solution": "The moment generating function (MGF) of a random variable Z is defined as $M _ { Z } ( t ) = E [ e ^ { t Z } ]$ . The MGF of Y is given as:\n\n $ H ( t ) = \\left( \\frac { 3 } { 4 } e ^ { 2 t } + \\frac { 1 } { 4 } \\right) M _ { X } ( t ) , $ \n\nwhere $M _ { X } ( t )$ is the MGF of X.\n\nThe mean and variance of X are the first and second moments of the MGF of X. From the properties of MGFs:\n\n $ E [ X ] = M _ { X } ^ { \\prime } ( 0 ) , \\quad \\mathrm { V a r } ( X ) = M _ { X } ^ { \\prime \\prime } ( 0 ) - \\left( M _ { X } ^ { \\prime } ( 0 ) \\right) ^ { 2 } . $ \n\nWe are given $\\begin{array} { r } { E [ X ] = \\frac { 1 } { 2 } } \\end{array}$ and $\\begin{array} { r } { \\mathrm { V a r } ( X ) = \\frac { 1 } { 4 } } \\end{array}$\n\nNow, using the MGF of Y , we calculate the mean and variance of Y . First, differentiate $H ( t )$ to find $E [ Y ]$ and $\\operatorname { V a r } ( Y )$ . Using the chain rule:\n\n $ E [ Y ] = H ^ { \\prime } ( 0 ) , \\quad \\mathrm { V a r } ( Y ) = H ^ { \\prime \\prime } ( 0 ) - ( H ^ { \\prime } ( 0 ) ) ^ { 2 } . $ \n\nAfter calculating the derivatives and substituting the known values for $E [ X ]$ and $\\operatorname { V a r } ( X )$ , we find that the variance of Y is 1 .\nQuick Tip\n\nTo find the mean and variance of a random variable using its MGF, differentiate the MGF and evaluate at $t = 0$"
+}

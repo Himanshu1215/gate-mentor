@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q14",
+  "question_seq": 22,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $f ( x ) = { \\frac { e ^ { x } - e ^ { - x } } { 2 } } , x \\in$ <sup>R</sup>. Let $f ^ { ( k ) } ( a )$ denote the $k ^ { t h }$ derivative of f evaluated at a. What is the value of $f ^ { ( 1 0 ) } ( 0 ) \\ ?$ (Note: ! denotes factorial) (A) 0 (B) 1 (C) $\\frac { 1 } { 1 0 ! }$ (D) $\\frac { 2 } { 1 0 ! }$",
+  "options": null,
+  "answer": null,
+  "solution": "To find the value of \\( f^{(10)}(0) \\) for the function \\( f(x) = \\frac{e^x - e^{-x}}{2} \\), we start by recognizing that \\( f(x) \\) is the hyperbolic sine function, denoted as \\( \\sinh(x) \\). Therefore, we have:\n\n\\[ f(x) = \\sinh(x) \\]\n\nThe derivatives of the hyperbolic sine function are well-known. Specifically, the derivatives cycle every four terms as follows:\n\n\\[ f'(x) = \\cosh(x) \\]\n\\[ f''(x) = \\sinh(x) \\]\n\\[ f'''(x) = \\cosh(x) \\]\n\\[ f^{(4)}(x) = \\sinh(x) \\]\n\\[ \\vdots \\]\n\nThis pattern tells us that the \\( n \\)-th derivative of \\( \\sinh(x) \\) is \\( \\sinh(x) \\) if \\( n \\) is odd, and \\( \\cosh(x) \\) if \\( n \\) is even. Since 10 is even, we have:\n\n\\[ f^{(10)}(x) = \\cosh(x) \\]\n\nNext, we evaluate \\( f^{(10)}(x) \\) at \\( x = 0 \\):\n\n\\[ f^{(10)}(0) = \\cosh(0) \\]\n\nThe value of the hyperbolic cosine function at 0 is:\n\n\\[ \\cosh(0) = 1 \\]\n\nTherefore, the value of \\( f^{(10)}(0) \\) is:\n\n\\[ \\boxed{1} \\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

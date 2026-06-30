@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q20",
+  "question_seq": 25,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let $\\{ X _ { n } \\} _ { n \\ge 0 }$ be a time-homogeneous discrete time Markov chain with state space {0, 1} and transition probability matrix $ P = \\left[ { \\begin{array} { l l } { 0 . 2 5 } & { 0 . 7 5 } \\\\ { 0 . 7 5 } & { 0 . 2 5 } \\end{array} } \\right] . $ If $P ( X _ { 0 } = 0 ) = P ( X _ { 0 } = 1 ) = 0 . 5 .$ then $\\sum _ { k = 1 } ^ { 1 0 0 } E [ ( X _ { 2 k } ) ^ { 2 } ]$ equals (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "Since $X _ { n }$ is a Markov chain with transition probabilities, the expected value $E [ ( X _ { 2 k } ) ^ { 2 } ]$ represents the probability of $X _ { 2 k } = 1$ . The transition probabilities lead to a steady-state distribution of $\\begin{array} { l } { { \\frac { 1 } { 2 } } } \\end{array}$ for both states 0 and 1.\n\nTherefore,\n\n $ \\sum _ { k = 1 } ^ { 1 0 0 } E [ ( X _ { 2 k } ) ^ { 2 } ] = 1 0 0 \\times \\frac { 1 } { 2 } = 5 0 . $ \n\nThus, the sum equals 50.\nQuick Tip\n\nFor a Markov chain, the long-term expected value of any state can be calculated using the stationary distribution."
+}

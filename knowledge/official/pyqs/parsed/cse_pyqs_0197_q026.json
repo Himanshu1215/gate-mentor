@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q26",
+  "question_seq": 197,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let M be a non-deterministic finite automaton (NFA) with 6 states over a finite alphabet. Which of the following options CANNOT be the number of states in the minimal deterministic finite automaton (DFA) that is equivalent to M? (a) 32 (b) 65 (c) 1 (d) 128",
+  "options": null,
+  "answer": "B",
+  "solution": "To determine which option cannot be the number of states in the minimal deterministic finite automaton (DFA) that is equivalent to a non-deterministic finite automaton (NFA) with 6 states, we need to understand the relationship between the number of states in an NFA and the number of states in its equivalent DFAs.\n\n1. **Understanding the Conversion from NFA to DFA:**\n   - The standard conversion from an NFA to a DFA involves the powerset construction. This means that each state in the resulting DFAs corresponds to a subset of the states in the original NFA.\n   - If the NFA has \\( n \\) states, the number of possible subsets of these states is \\( 2^n \\). Therefore, the DFAs obtained from the powerset construction will have at most \\( 2^n \\) states.\n\n2. **Applying the Conversion to the Given NFA:**\n   - The NFA has 6 states. Using the powerset construction, the maximum number of states in the equivalent DFAs is \\( 2^6 = 64 \\).\n\n3. **Analyzing the Options:**\n   - Option (a): 32\n     - \\( 32 \\leq 64 \\). This is possible.\n   - Option (b): 65\n     - \\( 65 > 64 \\). This is not possible.\n   - Option (c): 1\n     - \\( 1 \\leq 64 \\). This is possible.\n   - Option (d): 128\n     - \\( 128 > 64 \\). This is not possible.\n\n4. **Conclusion:**\n   - The options that cannot be the number of states in the minimal deterministic finite automaton that is equivalent to an NFA with 6 states are 65 and 128. However, since we are asked to identify the option that CANNOT be the number of states, and both 65 and 128 are not possible, we need to select the option that is explicitly mentioned in the problem.\n\nTherefore, the correct answer is:\n\\[\n\\boxed{B}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

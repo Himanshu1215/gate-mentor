@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q33",
+  "question_seq": 201,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The height of a binary tree is the number of edges in the longest path from the root to a leaf in the tree. The maximum possible height of a full binary tree with 23 nodes is . (",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine the maximum possible height of a full binary tree with 23 nodes, we need to understand the structure of a full binary tree. A full binary tree is a binary tree in which every node has either 0 or 2 children. The height of a full binary tree with \\( n \\) nodes can be found using the formula for the number of nodes in a full binary tree of height \\( h \\).\n\nThe number of nodes \\( n \\) in a full binary tree of height \\( h \\) is given by:\n\\[ n = 2^{h+1} - 1 \\]\n\nWe need to find the height \\( h \\) such that \\( n = 23 \\). So, we set up the equation:\n\\[ 23 = 2^{h+1} - 1 \\]\n\nFirst, we add 1 to both sides of the equation:\n\\[ 24 = 2^{h+1} \\]\n\nNext, we take the base-2 logarithm of both sides to solve for \\( h+1 \\):\n\\[ \\log_2 24 = h+1 \\]\n\nWe know that \\( \\log_2 24 \\) is not an integer, so we need to find the closest integer value. We can express \\( \\log_2 24 \\) as:\n\\[ \\log_2 24 = \\log_2 (8 \\times 3) = \\log_2 8 + \\log_2 3 = 3 + \\log_2 3 \\]\n\nSince \\( \\log_2 3 \\) is approximately 1.585, we have:\n\\[ \\log_2 24 \\approx 3 + 1.585 = 4.585 \\]\n\nTherefore, \\( h+1 \\approx 4.585 \\), and the integer part of \\( h+1 \\) is 4. This means:\n\\[ h = 4 \\]\n\nTo verify, we check the number of nodes in a full binary tree of height 4:\n\\[ n = 2^{4+1} - 1 = 2^5 - 1 = 32 - 1 = 31 \\]\n\nSince 31 is greater than 23, we check the height of a full binary tree of height 3:\n\\[ n = 2^{3+1} - 1 = 2^4 - 1 = 16 - 1 = 15 \\]\n\nSince 15 is less than 23, the height of a full binary tree with 23 nodes must be 4. However, a full binary tree with 23 nodes is not a perfect binary tree of height 4, but it can be a binary tree of height 4 with some nodes missing from the bottom level.\n\nTherefore, the maximum possible height of a full binary tree with 23 nodes is:\n\\[ \\boxed{4} \\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

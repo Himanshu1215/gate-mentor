@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q13",
+  "question_seq": 62,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "For a Turing machine M, 〈M> denotes an encoding of M. Consider the following two languages: $L _ { 1 } = \\{ \\langle M \\rangle |$ M takes more than 2021 steps on all inputs} L2 = {<M>|M takes more than 2021 steps on some input} Which one of the following options is correct?",
+  "options": {
+    "A": "Both $L _ { 1 }$ and $L _ { 2 }$ are decidable. (b) $L _ { \\uparrow }$ is undecidable and $L _ { 2 }$ is decidable.",
+    "C": "Both $L _ { \\uparrow }$ and $L _ { 2 }$ are undecidable. (d) $L _ { 1 }$ is decidable and $L _ { 2 }$ is undecidable."
+  },
+  "answer": "A",
+  "solution": "To determine the decodability of the languages \\( L_1 \\) and \\( L_2 \\), we need to analyze the nature of the problems they represent.\n\n### Language \\( L_1 \\)\n\\[ L_1 = \\{ \\langle M \\rangle \\mid M \\text{ takes more than 2021 steps on all inputs} \\} \\]\n\n**Step-by-Step Analysis:**\n1. **Understanding \\( L_1 \\)**: This language consists of all encodings of Turing machines \\( M \\) such that \\( M \\) halts and takes more than 2021 steps on every possible input.\n2. **Decidability of \\( L_1 \\)**: To determine if \\( L_1 \\) is decidable, we need to check if there exists an algorithm that can always correctly determine whether a given machine \\( M \\) belongs to \\( L_1 \\).\n3. **Reduction to the Halting Problem**: Consider a machine \\( M \\) and an input \\( w \\). We can construct a new machine \\( M' \\) that simulates \\( M \\) on \\( w \\) and then halts after 2021 steps if \\( M \\) has not yet halted. If \\( M \\) halts within 2021 steps, \\( M' \\) will loop indefinitely.\n4. ** halting Problem**: The halting problem is undecidable. Therefore, there is no algorithm that can determine whether \\( M' \\) halts on all inputs. Since \\( M' \\) halts on all inputs if and only if \\( M \\) takes more than 2021 steps on all inputs, \\( L_1 \\) is undecidable.\n\n### Language \\( L_2 \\)\n\\[ L_2 = \\{ \\langle M \\rangle \\mid M \\text{ takes more than 2021 steps on some input} \\} \\]\n\n**Step-by-Step Analysis:**\n1. **Understanding \\( L_2 \\)**: This language consists of all encodings of Turing machines \\( M \\) such that \\( M \\) halts and takes more than 2021 steps on at least one input.\n2. **Decidability of \\( L_2 \\)**: To determine if \\( L_2 \\) is decidable, we need to check if there exists an algorithm that can always correctly determine whether a given machine \\( M \\) belongs to \\( L_2 \\).\n3. **Reduction to the Halting Problem**: Consider a machine \\( M \\) and an input \\( w \\). We can construct a new machine \\( M' \\) that simulates \\( M \\) on \\( w \\) and halts after 2021 steps if \\( M \\) has not yet halted. If \\( M \\) halts within 2021 steps, \\( M' \\) will loop indefinitely.\n4. ** halting Problem**: The halting problem is undecidable. However, we can use a different approach to determine if \\( M' \\) halts on some input. We can simulate \\( M' \\) on all possible inputs of length up to 2021 steps. If \\( M' \\) halts on any input within 2021 steps, then \\( M \\) takes more than",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

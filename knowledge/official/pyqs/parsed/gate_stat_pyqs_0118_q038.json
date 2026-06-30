@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q38",
+  "question_seq": 118,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "ML_002",
+  "question_text": "Let $( X _ { 1 } , X _ { 2 } )$ be a random vector with variance-covariance matrix $\\begin{array} { r } { \\left[ { \\begin{array} { l l } { 4 } & { 0 } \\\\ { 0 } & { 2 } \\end{array} } \\right] } \\end{array}$ . The two principal components are (A) $X _ { 1 }$ and $X _ { 2 }$ (B) $- X _ { 1 } \\mathrm { a n d } X _ { 2 }$ (C) $X _ { 1 } \\mathrm { a n d } - X _ { 2 }$ (D) $X _ { 1 } + X _ { 2 } { \\mathrm { a n d } } X _ { 2 }$",
+  "options": null,
+  "answer": null,
+  "solution": "To determine the principal components of the random vector \\((X_1, X_2)\\) with the given variance-covariance matrix \\(\\begin{pmatrix} 4 & 0 \\\\ 0 & 2 \\end{pmatrix}\\), we need to follow these steps:\n\n1. **Identify the eigenvalues and eigenvectors of the variance-covariance matrix.**\n\n   The variance-covariance matrix is already diagonal, which means the eigenvalues are the diagonal elements, and the eigenvectors are the standard basis vectors.\n\n   - Eigenvalues: \\(\\lambda_1 = 4\\) and \\(\\lambda_2 = 2\\)\n   - Eigenvectors: \\(\\mathbf{v}_1 = \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}\\) and \\(\\mathbf{v}_2 = \\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}\\)\n\n2. **Understand the relationship between eigenvalues and eigenvectors and the principal components.**\n\n   The principal components are linear combinations of the original variables \\(X_1\\) and \\(X_2\\) that maximize the variance. The first principal component corresponds to the eigenvector associated with the largest eigenvalue, and the second principal component corresponds to the eigenvector associated with the second largest eigenvalue.\n\n   - First principal component: \\(\\mathbf{v}_1 = \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}\\) corresponds to \\(X_1\\)\n   - Second principal component: \\(\\mathbf{v}_2 = \\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}\\) corresponds to \\(X_2\\)\n\n3. **Conclusion.**\n\n   Therefore, the two principal components are \\(X_1\\) and \\(X_2\\).\n\nThe final answer is \\(\\boxed{A}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

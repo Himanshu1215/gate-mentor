@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q25",
+  "question_seq": 106,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "For $i = { 1 , 2 , 3 , 4 } ,$ , let $Y _ { i } = \\alpha + \\beta x _ { i } + \\epsilon _ { i }$ where $x _ { i } ^ { \\prime } \\mathrm { s }$ are fixed covariates and $\\epsilon _ { i } ^ { \\prime } \\mathrm { s }$ are uncorrelated random variables with mean 0 and variance 3. Here, α and $\\beta$ are unknown parameters. Given the following observations, <table><tr><td rowspan=1 colspan=1> $\\underline { { Y _ { i } } }$ </td><td rowspan=1 colspan=1>2</td><td rowspan=1 colspan=1> $2 . 5$ </td><td rowspan=1 colspan=1>-0.5</td><td rowspan=1 colspan=1>1</td></tr><tr><td rowspan=1 colspan=1> $\\underline { { x } } _ { i }$ </td><td rowspan=1 colspan=1>3</td><td rowspan=1 colspan=1>2</td><td rowspan=1 colspan=1>-4</td><td rowspan=1 colspan=1>-1</td></tr></table> the variance of the least squares estimator of $\\boldsymbol { \\beta }$ is equal to ...",
+  "options": null,
+  "answer": null,
+  "solution": "To find the variance of the least squares estimator of \\(\\beta\\), we start by recalling the formula for the least squares estimator \\(\\hat{\\beta}\\) in a simple linear regression model \\(Y_i = \\alpha + \\beta x_i + \\epsilon_i\\). The least squares estimator \\(\\hat{\\beta}\\) is given by:\n\n\\[\n\\hat{\\beta} = \\frac{\\sum_{i=1}^n (x_i - \\bar{x})(Y_i - \\bar{Y})}{\\sum_{i=1}^n (x_i - \\bar{x})^2}\n\\]\n\nwhere \\(\\bar{x}\\) and \\(\\bar{Y}\\) are the sample means of \\(x_i\\) and \\(Y_i\\) respectively. The variance of \\(\\hat{\\beta}\\) is given by:\n\n\\[\n\\text{Var}(\\hat{\\beta}) = \\frac{\\sigma^2}{\\sum_{i=1}^n (x_i - \\bar{x})^2}\n\\]\n\nHere, \\(\\sigma^2\\) is the variance of the error term \\(\\epsilon_i\\), which is given as 3. First, we need to calculate \\(\\bar{x}\\) and \\(\\bar{Y}\\).\n\nThe sample mean of \\(x_i\\) is:\n\n\\[\n\\bar{x} = \\frac{3 + 2 - 4 - 1}{4} = \\frac{0}{4} = 0\n\\]\n\nThe sample mean of \\(Y_i\\) is:\n\n\\[\n\\bar{Y} = \\frac{2 + 2.5 - 0.5 + 1}{4} = \\frac{5}{4} = 1.25\n\\]\n\nNext, we calculate \\(\\sum_{i=1}^n (x_i - \\bar{x})^2\\):\n\n\\[\n\\sum_{i=1}^n (x_i - \\bar{x})^2 = (3 - 0)^2 + (2 - 0)^2 + (-4 - 0)^2 + (-1 - 0)^2 = 9 + 4 + 16 + 1 = 30\n\\]\n\nNow, we can substitute \\(\\sigma^2 = 3\\) and \\(\\sum_{i=1}^n (x_i - \\bar{x})^2 = 30\\) into the formula for the variance of \\(\\hat{\\beta}\\):\n\n\\[\n\\text{Var}(\\hat{\\beta}) = \\frac{3}{30} = \\frac{1}{10}\n\\]\n\nTherefore, the variance of the least squares estimator of \\(\\beta\\) is:\n\n\\[\n\\boxed{\\frac{1}{10}}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q34",
+  "question_seq": 33,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "ML_001",
+  "question_text": "Given data $\\{ ( - 1 , 1 ) , ( 2 , - 5 ) , ( 3 , 5 ) \\}$ of the form $( x , y )$ , we fit a model $y = w x$ using linear least-squares regression. The optimal value of w is (Round off to three decimal places)",
+  "options": null,
+  "answer": null,
+  "solution": "To find the optimal value of \\( w \\) for the linear least-squares regression model \\( y = w x \\) given the data points \\((-1, 1)\\), \\((2, -5)\\), and \\((3, 5)\\), we need to minimize the sum of the squared residuals. The residual for each data point \\((x_i, y_i)\\) is given by \\( y_i - w x_i \\). The sum of the squared residuals is:\n\n\\[\nS = \\sum_{i=1}^3 (y_i - w x_i)^2\n\\]\n\nSubstituting the given data points into the equation, we get:\n\n\\[\nS = (1 - w(-1))^2 + (-5 - w(2))^2 + (5 - w(3))^2\n\\]\n\nSimplifying inside the parentheses, we have:\n\n\\[\nS = (1 + w)^2 + (-5 - 2w)^2 + (5 - 3w)^2\n\\]\n\nExpanding each square, we get:\n\n\\[\nS = (1 + 2w + w^2) + (25 + 20w + 4w^2) + (25 - 30w + 9w^2)\n\\]\n\nCombining like terms, we get:\n\n\\[\nS = 1 + 2w + w^2 + 25 + 20w + 4w^2 + 25 - 30w + 9w^2 = 14w^2 - 8w + 51\n\\]\n\nTo find the value of \\( w \\) that minimizes \\( S \\), we take the derivative of \\( S \\) with respect to \\( w \\) and set it to zero:\n\n\\[\n\\frac{dS}{dw} = 28w - 8\n\\]\n\nSetting the derivative equal to zero, we get:\n\n\\[\n28w - 8 = 0\n\\]\n\nSolving for \\( w \\), we get:\n\n\\[\n28w = 8 \\implies w = \\frac{8}{28} = \\frac{2}{7}\n\\]\n\nTherefore, the optimal value of \\( w \\) is:\n\n\\[\n\\boxed{0.286}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

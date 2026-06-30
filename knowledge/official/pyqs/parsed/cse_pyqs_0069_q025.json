@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q25",
+  "question_seq": 69,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let G = (V. E) be an undirected unweighted connected araph. The diameter of G is",
+  "options": {
+    "D": "efined as",
+    "A": "$\\left\\lceil \\mathsf { d i a m } ( G ) / 2 \\right\\rceil < \\mathsf { d i a m } ( G _ { 2 } ) < \\mathsf { d i a m } ( G )$",
+    "B": "diam $\\forall ( G _ { 2 } ) \\leq \\lceil \\mathsf { d i a m } ( G ) / 2 \\rceil$",
+    "C": "$\\mathsf { d i a m } ( G ) < \\mathsf { d i a m } ( G _ { 2 } ) \\leq 2 \\mathsf { d i a m } ( G )$"
+  },
+  "answer": "B",
+  "solution": "To determine the correct answer, we need to understand the properties of the diameter of a graph and how it changes when we form the square of the graph.\n\n1. **Definition of Diameter**: The diameter of a graph \\( G \\), denoted as \\( \\mathbf{diam}(G) \\), is the maximum shortest path distance between any two vertices in \\( G \\).\n\n2. **Square of a Graph**: The square of a graph \\( G \\), denoted as \\( G_2 \\), is a graph where two vertices are adjacent if and only if their distance in \\( G \\) is at most 2. This means that in \\( G_2 \\), any two vertices that are connected by a path of length 1 or 2 in \\( G \\) are directly connected in \\( G_2 \\).\n\n3. **Diameter of \\( G_2 \\)**: The diameter of \\( G_2 \\), \\( \\mathbf{diam}(G_2) \\), is the maximum shortest path distance between any two vertices in \\( G_2 \\). Since \\( G_2 \\) includes all edges of \\( G \\) and additional edges connecting vertices that are two steps apart in \\( G \\), the diameter of \\( G_2 \\) can be at most 2 times the diameter of \\( G \\). However, it cannot be less than the ceiling of half the diameter of \\( G \\).\n\nLet's analyze the options:\n\n- **Option (A)**: \\( \\left\\lceil \\mathbf{diam}(G) / 2 \\right\\rceil < \\mathbf{diam}(G_2) < \\mathbf{diam}(G) \\)\n  - This option is incorrect because \\( \\mathbf{diam}(G_2) \\) can be greater than \\( \\mathbf{diam}(G) \\).\n\n- **Option (B)**: \\( \\mathbf{diam}(G_2) \\leq \\left\\lceil \\mathbf{diam}(G) / 2 \\right\\rceil \\)\n  - This option is incorrect because \\( \\mathbf{diam}(G_2) \\) can be greater than \\( \\left\\lceil \\mathbf{diam}(G) / 2 \\right\\rceil \\).\n\n- **Option (C)**: \\( \\mathbf{diam}(G) < \\mathbf{diam}(G_2) \\leq 2 \\mathbf{diam}(G) \\)\n  - This option is correct because the diameter of \\( G_2 \\) is always greater than the diameter of \\( G \\) and at most twice the diameter of \\( G \\).\n\n- **Option (D)**: This option is not provided.\n\nTherefore, the correct answer is \\(\\boxed{C}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

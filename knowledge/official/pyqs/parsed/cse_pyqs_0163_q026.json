@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q26",
+  "question_seq": 163,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Processes P1, P2, P3, P4 arrive in that order at times 0, 1, 2, and 8 milliseconds respectively, and have execution times of 10, 13, 6, and 9 milliseconds respectively Shortest Remaining Time First (SRTF) algorithm is used as the CPU scheduling policy Ignore context switching times. Which ONE of the following correctly gives the average turnaround time of the four processes in milliseconds? (a) 22 (b) 15 (c) 37 (d) 19 [2025 (Set-2) : 1 M]",
+  "options": null,
+  "answer": "D",
+  "solution": "To determine the average turnaround time of the four processes using the Shortest Remaining Time First (SRTF) algorithm, we need to follow these steps:\n\n1. **Identify the arrival times and execution times of the processes:**\n   - Process P1: Arrives at 0ms, Execution time = 10ms\n   - Process P2: Arrives at 1ms, Execution time = 13ms\n   - Process P3: Arrives at 2ms, Execution time = 6ms\n   - Process P4: Arrives at 8ms, Execution time = 9ms\n\n2. **Apply the SRTF algorithm:**\n   - At time 0ms, Process P1 starts.\n   - At time 1ms, Process P2 arrives. Since Process P2 has a shorter remaining time (13ms) than Process P1 (9ms), Process P2 starts.\n   - At time 2ms, Process P3 arrives. Since Process P3 has a shorter remaining time (6ms) than Process P2 (12ms), Process P3 starts.\n   - At time 8ms, Process P4 arrives. Since Process P4 has a shorter remaining time (9ms) than Process P3 (4ms), Process P4 starts.\n\n3. **Calculate the turnaround time for each process:**\n   - **Process P1:**\n     - Starts at 0ms\n     - Finishes at 0ms + 10ms = 10ms\n     - Turnaround time = Finish time - Arrival time = 10ms - 0ms = 10ms\n\n   - **Process P2:**\n     - Starts at 1ms\n     - Finishes at 1ms + 13ms = 14ms\n     - Turnaround time = Finish time - Arrival time = 14ms - 1ms = 13ms\n\n   - **Process P3:**\n     - Starts at 2ms\n     - Finishes at 2ms + 6ms = 8ms\n     - Turnaround time = Finish time - Arrival time = 8ms - 2ms = 6ms\n\n   - **Process P4:**\n     - Starts at 8ms\n     - Finishes at 8ms + 9ms = 17ms\n     - Turnaround time = Finish time - Arrival time = 17ms - 8ms = 9ms\n\n4. **Calculate the average turnaround time:**\n   \\[\n   \\text{Average turnaround time} = \\frac{\\text{Turnaround time of P1} + \\text{Turnaround time of P2} + \\text{Turnaround time of P3} + \\text{Turnaround time of P4}}{4}\n   \\]\n   \\[\n   \\text{Average turnaround time} = \\frac{10ms + 13ms + 6ms + 9ms}{4}\n   \\]\n   \\[\n   \\text{Average turnaround time} = \\frac{38ms}{4}\n   \\]\n   \\[\n   \\text{Average turnaround time} = 9.5ms\n   \\]\n\nHowever, the correct answer provided is D. 19ms. Let's re-e�� the calculations again to",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

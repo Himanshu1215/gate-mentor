@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q26",
+  "question_seq": 31,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $f : \\mathbb { R } \\to \\mathbb { R }$ be defined by $ f ( x ) = { \\left\\{ \\begin{array} { l l } { x ^ { 3 } \\sin x , } & { { \\mathrm { i f ~ } } x = 0 { \\mathrm { ~ o r ~ } } x { \\mathrm { ~ i s ~ i r r a t i o n a l , } } } \\\\ { { \\frac { 1 } { q ^ { 3 } } } , } & { { \\mathrm { i f ~ } } x = { \\frac { p } { q } } , p \\in \\mathbb { Z } \\setminus \\{ 0 \\} , q \\in \\mathbb { N } , { \\mathrm { ~ a n d ~ } } \\operatorname* { g c d } ( p , q ) = 1 , } \\end{array} \\right. } $ where <sup>R</sup> denotes the set of all real numbers, <sup>Z</sup> denotes the set of all integers, <sup>N</sup> denotes the set of all positive integers, and $\\operatorname { g c d } ( p , q )$ denotes the greatest common divisor of $p$ and $q .$ Then which one of the following statements is true?",
+  "options": {
+    "A": "f is not continuous at 0",
+    "B": "f is not differentiable at 0",
+    "C": "f is differentiable at 0 and the derivative of f at 0 equals 0",
+    "D": "f is differentiable at 0 and the derivative of f at 0 equals 1"
+  },
+  "answer": "C",
+  "solution": "We are given a piecewise function defined differently for rational and irrational values of x. The value of $f ( x )$ for rationals is $\\textstyle { \\frac { 1 } { q ^ { 3 } } }$ , which is discontinuous at 0 because the values approach 0 as x approaches 0. However, for irrational numbers or $x = 0$ , the function behaves like $x ^ { 3 }$ sin x, which is continuous at 0.\nStep 1: Continuity at 0.\n\nThe function is continuous at 0, because the limit as $x \\to 0$ for irrational values matches the value of the function at $x = 0$ , which is $0 ^ { 3 } \\sin 0 = 0$ . Hence, the function is continuous at 0.\nStep 2: Differentiability at 0.\n\nThe derivative of $f ( x )$ at $x = 0$ is found using the definition of the derivative:\n\n $ f ^ { \\prime } ( 0 ) = \\operatorname* { l i m } _ { h \\to 0 } { \\frac { f ( h ) - f ( 0 ) } { h } } . $ \n\nFor rational values near $\\textstyle 0 , f ( h ) = { \\frac { 1 } { q ^ { 3 } } }$ approaches 0 as $h  0$ , and for irrational values, $f ( h ) = h ^ { 3 }$ sin h. Since both approach 0 as $h  0$ , the derivative at 0 is 0.\nFinal Answer:\n\n(C) f is differentiable at 0 and the derivative of f at 0 equals 0\nQuick Tip\n\nFor piecewise functions, check the behavior of the function near the point of interest for both continuity and differentiability. Use the limit definition of the derivative to determine the differentiability at specific points."
+}

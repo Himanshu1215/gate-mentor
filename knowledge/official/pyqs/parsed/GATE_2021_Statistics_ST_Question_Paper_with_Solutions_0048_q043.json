@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q43",
+  "question_seq": 48,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let Y follow $N _ { 8 } ( 0 , I _ { 8 } )$ distribution, where $I _ { 8 }$ is the $8 \\times 8$ identity matrix. Let $Y ^ { T } \\Sigma _ { 1 } Y$ and $Y ^ { T } \\Sigma _ { 2 } Y$ be independent and follow central chi-square distributions with 3 and 4 degrees of freedom, respectively, where $\\Sigma _ { 1 }$ and $\\Sigma _ { 2 }$ are $8 \\times 8$ matrices and $Y ^ { T }$ denotes transpose of Y . Then which of the following statements is/are true? $P : \\Sigma _ { 1 }$ and $\\Sigma _ { 2 }$ are idempotent. $Q : \\Sigma _ { 1 } \\Sigma _ { 2 } = 0$ , where 0 is the $8 \\times 8$ zero matrix.",
+  "options": {
+    "A": "P only",
+    "B": "Q only",
+    "C": "Both P and Q",
+    "D": "Neither P nor Q"
+  },
+  "answer": "C",
+  "solution": "We are given a multivariate normal distribution Y with specific conditions on its transformation. We are asked to determine the truth of two statements: $P$ and $Q .$\n\nStep 1: Understanding the idempotent property.\n\nA matrix Σ is idempotent if $\\Sigma ^ { 2 } = \\Sigma$ . Given the structure of the problem, we know that both $\\Sigma _ { 1 }$ and $\\Sigma _ { 2 }$ are matrices associated with chi-square distributed variables, and they have the idempotent property. This means that both P and $Q$ are true.\n\nStep 2: Analyzing the zero matrix condition.\n\nThe condition $\\Sigma _ { 1 } \\Sigma _ { 2 } = 0$ implies that $\\Sigma _ { 1 }$ and $\\Sigma _ { 2 }$ are orthogonal matrices. This condition holds in this case, confirming that both $P$ and $Q$ are correct.\n\nStep 3: Conclusion.\n\nThe correct answer is (C), as both statements P and $Q$ are true.\n\nFinal Answer:\n\n(C) Both P and Q are true.\nQuick Tip\n\nIn matrix theory, the idempotent property means that a matrix multiplied by itself equals the matrix. For orthogonal matrices, their product is zero, implying that they are independent or orthogonal."
+}

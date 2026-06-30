@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q49",
+  "question_seq": 54,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $\\{ X _ { n } \\} _ { n \\ge 1 }$ be a sequence of independent and identically distributed random variables each having probability density function $ f ( x ) = { \\left\\{ \\begin{array} { l l } { e ^ { - x } , } & { x > 0 , } \\\\ { 0 , } & { { \\mathrm { o t h e r w i s e } } . } \\end{array} \\right. } $ Let $X _ { ( n ) } = \\operatorname* { m a x } \\{ X _ { 1 } , X _ { 2 } , \\ldots , X _ { n } \\}$ for $n \\geq 1$ . If Z is the random variable to which $\\{ X _ { ( n ) } - \\log n \\} _ { n \\geq 1 }$ converges in distribution, as $n \\to \\infty$ , then the median of Z equals (round off to",
+  "options": null,
+  "answer": null,
+  "solution": "To find the median of $Z ,$ we examine the behavior of $X _ { ( n ) }$ and the limiting distribution of Z as $n \\to \\infty$ . Using standard results for the distribution of the maximum of independent identically distributed random variables, we find that the median of $Z$ is approximately:\n\n $ \\mathbf { M e d i a n } ( Z ) \\approx 0 . 3 2 . $ \n\nThus, the value is 0.32.\nQuick Tip\n\nTo solve problems involving the maximum of independent random variables, use the properties of the distribution and the limiting behavior of the sequence."
+}

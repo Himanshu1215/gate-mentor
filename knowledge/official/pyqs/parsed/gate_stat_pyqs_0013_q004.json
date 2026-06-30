@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q4",
+  "question_seq": 13,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "For positive non-zero real variables ?? and ??, if $\\ln \\left( { \\frac { x + y } { 2 } } \\right) = { \\frac { 1 } { 2 } } \\left[ \\ln \\left( x \\right) + \\ln \\left( y \\right) \\right]$ then, the value of ${ \\frac { x } { y } } + { \\frac { y } { x } }$ is",
+  "options": {
+    "B": "1/2",
+    "C": "2",
+    "D": "4 <sup>Q.5</sup> In the sequence 6, 9, 14, x, 30, 41, a possible value of ?? is",
+    "A": "25"
+  },
+  "answer": null,
+  "solution": "To solve the given problem, we start with the equation:\n\n\\[\n\\ln \\left( \\frac{x + y}{2} \\right) = \\frac{1}{2} \\left[ \\ln(x) + \\ln(y) \\right]\n\\]\n\nFirst, we use the properties of logarithms to simplify the right-hand side:\n\n\\[\n\\frac{1}{2} \\left[ \\ln(x) + \\ln(y) \\right] = \\frac{1}{2} \\ln(xy) = \\ln(xy)^{1/2} = \\ln(\\sqrt{xy})\n\\]\n\nSo the equation becomes:\n\n\\[\n\\ln \\left( \\frac{x + y}{2} \\right) = \\ln(\\sqrt{xy})\n\\]\n\nSince the natural logarithm function is one-to-one, we can equate the arguments:\n\n\\[\n\\frac{x + y}{2} = \\sqrt{xy}\n\\]\n\nNext, we square both sides to eliminate the square root:\n\n\\[\n\\left( \\frac{x + y}{2} \\right)^2 = xy\n\\]\n\nThis simplifies to:\n\n\\[\n\\frac{(x + y)^2}{4} = xy\n\\]\n\nMultiplying both sides by 4 gives:\n\n\\[\n(x + y)^2 = 4xy\n\\]\n\nExpanding the left-hand side, we get:\n\n\\[\nx^2 + 2xy + y^2 = 4xy\n\\]\n\nSubtracting \\(4xy\\) from both sides, we obtain:\n\n\\[\nx^2 - 2xy + y^2 = 0\n\\]\n\nThis can be factored as:\n\n\\[\n(x - y)^2 = 0\n\\]\n\nTaking the square root of both sides, we get:\n\n\\[\nx - y = 0\n\\]\n\nSo, we conclude that:\n\n\\[\nx = y\n\\]\n\nNow, we need to find the value of \\(\\frac{x}{y} + \\frac{y}{x}\\):\n\n\\[\n\\frac{x}{y} + \\frac{y}{x} = \\frac{x}{x} + \\frac{x}{x} = 1 + 1 = 2\n\\]\n\nTherefore, the value is:\n\n\\[\n\\boxed{2}\n\\]\n\nThe correct option is \\(\\boxed{C}\\).\n\nNext, we solve the sequence problem. The sequence given is 6, 9, 14, \\(x\\), 30, 41. We need to find a possible value of \\(x\\).\n\nFirst, let's examine the differences between consecutive terms:\n\n\\[\n9 - 6 = 3\n\\]\n\\[\n14 - 9 = 5\n\\]\n\\[\nx - 14 = ?\n\\]\n\\[\n30 - x = ?\n\\]\n\\[\n41 - 30 = 11\n\\]\n\nWe observe that the differences between consecutive terms form an arithmetic sequence with a common difference of 2:\n\n\\[\n3, 5, 7, 9, 11\n\\]\n\nSo, the difference between 14 and \\(x\\) should be 7:\n\n\\[\nx - 14 = 7\n\\]\n\nSolving for \\(x\\), we get:\n\n\\[\nx = 14 + 7 = 21",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

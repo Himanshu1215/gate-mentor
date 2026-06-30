@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q51",
+  "question_seq": 28,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "There are unsorted arrays: $A _ { 1 } , A _ { 2 } , . . . . , A _ { n } .$ Assume that is odd. Each of $A _ { 1 } , A _ { 2 } ,$ $A _ { n }$ contains distinct elements. There are no common elements between any two arrays. The worst-case time complexity of computing the median of the medians of $A _ { 1 } , A _ { 2 } , \\ldots ,$ $A _ { n }$ is (a) Ο( log ) (b) Ο( <sup>2</sup>) (c) Ο( ) (d) Ω( <sup>2</sup> log )",
+  "options": null,
+  "answer": "B",
+  "solution": "To determine the worst-case time complexity of computing the median of the medians of \\( A_1, A_2, \\ldots, A_n \\), where each array \\( A_i \\) contains distinct elements and there are no common elements between any two arrays, we can follow these steps:\n\n1. **Find the median of each array**: Since each array \\( A_i \\) has an odd number of elements, the median of each array can be found in \\( O(n) \\) time. This is because the median of an odd-sized array is the middle element when the array is sorted, and sorting an array of size \\( n \\) can be done in \\( O(n) \\) time using an efficient sorting algorithm like quicksort or mergesort. Therefore, finding the median of each of the \\( n \\) arrays takes \\( O(n) \\times n = O(n^2) \\) time.\n\n2. **Create a new array of medians**: After finding the median of each array, we have a new array \\( M \\) of size \\( n \\), where each element of \\( M \\) is the median of one of the original arrays. Since \\( n \\) is odd, the median of this new array \\( M \\) can also be found in \\( O(n) \\) time.\n\n3. **Combine the steps**: The total time complexity is the sum of the time taken to find the medians of the original arrays and the time taken to find the median of the new array of medians. This is \\( O(n^2) + O(n) = O(n^2) \\).\n\nTherefore, the worst-case time complexity of computing the median of the medians of \\( A_1, A_2, \\ldots, A_n \\) is \\( \\boxed{B} \\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

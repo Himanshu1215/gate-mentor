@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q22",
+  "question_seq": 223,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the following protocols may need to broadcast some of its messages?",
+  "options": {
+    "A": "${ \\mathsf { S M T P } }$",
+    "C": "$\\mathsf { D H C P }$",
+    "B": "$\\mathsf { F } \\mathsf { T } \\mathsf { P }$",
+    "D": "$\\mathsf { H T } \\mathsf { P }$"
+  },
+  "answer": "C",
+  "solution": "To determine which protocol may need to broadcast some of its messages, let's analyze each option step by step:\n\n1. **SMail (A)**:\n   - SMail is a simple e-mail system.\n   - It does not have a specific broadcast requirement.\n   - Therefore, it does not need to broadcast any messages.\n\n2. **FTail (B)**:\n   - FTail is a distributed e-mail system.\n   - It does not have a specific broadcast requirement.\n   - Therefore, it does not need to broadcast any messages.\n\n3. **DHC (C)**:\n   - DHC (Data际际际ifier) is a distributed e-mail system.\n   - It requires each message to be broadcast to all other nodes in the network.\n   - Therefore, it needs to broadcast some of its messages.\n\n4. **HTail (D)**:\n   - HTail is a distributed e-mail system.\n   - It does not have a specific broadcast requirement.\n   - Therefore, it does not need to broadcast any messages.\n\nBased on the analysis, the protocol that may need to broadcast some of its messages is DHC (C).\n\nThe final answer is: \\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

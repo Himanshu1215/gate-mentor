@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q9",
+  "question_seq": 93,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $Y _ { i } = \\beta _ { 0 } + \\beta _ { 1 } x _ { 1 i } + \\beta _ { 2 } x _ { 2 i } + \\epsilon _ { i } ,$ ,for $i = 1 , \\ldots , 1 0$ , where $x _ { 1 i } \\mathrm { ' s }$ and $x _ { 2 i } \\mathrm { ' s }$ are fixed covariates, and $\\epsilon _ { i } ^ { \\prime } { : }$ s are uncorrelated random variables with mean 0 and unknown variance $\\sigma ^ { 2 }$ . Here $\\beta _ { 0 } , \\beta _ { 1 }$ and $\\beta _ { 2 }$ are unknown parameters. Further, define $\\hat { Y } _ { i } = \\hat { \\beta } _ { 0 } + \\hat { \\beta } _ { 1 } x _ { 1 i } +$ $\\hat { \\beta } _ { 2 } x _ { 2 i }$ , where $( \\hat { \\beta } _ { 0 } , \\hat { \\beta } _ { 1 } , \\hat { \\beta } _ { 2 } )$ is the unbiased least squares estimator of $( \\beta _ { 0 } , \\beta _ { 1 } , \\beta _ { 2 } )$ ). Then an unbiased estimator of $\\sigma ^ { 2 }$ is (A) $\\begin{array} { r } { \\frac { \\sum _ { i = 1 } ^ { 1 0 } ( Y _ { i } - \\hat { Y } _ { i } ) ^ { 2 } } { 1 0 } } \\end{array}$ (B) $\\begin{array} { r } { \\frac { \\sum _ { i = 1 } ^ { 1 0 } ( Y _ { i } - \\hat { Y } _ { i } ) ^ { 2 } } { \\gamma } } \\end{array}$ (C) $\\frac { \\Sigma _ { i = 1 } ^ { 1 0 } ( Y _ { i } - \\hat { Y } _ { i } ) ^ { 2 } } { 8 }$ (D) $\\begin{array} { r } { \\frac { \\sum _ { i = 1 } ^ { 1 0 } ( Y _ { i } - \\hat { Y } _ { i } ) ^ { 2 } } { 9 } } \\end{array}$",
+  "options": null,
+  "answer": null,
+  "solution": "To find an unbiased estimator of \\(\\sigma^2\\), we need to use the properties of the least squares estimator in a linear regression model. The least squares estimator \\(\\hat{\\beta}_0, \\hat{\\beta}_1, \\hat{\\beta}_2\\) minimizes the sum of the squared residuals, which is given by:\n\n\\[\n\\sum_{i=1}^{10} (Y_i - \\hat{Y}_i)^2\n\\]\n\nThe sum of the squared residuals can be expressed in terms of the total sum of squares (SST), the regression sum of squares (SSR), and the error sum of squares (SSE):\n\n\\[\nSST = SSR + SSE\n\\]\n\nwhere:\n- SST is the total sum of squares: \\(\\sum_{i=1}^{10} (Y_i - \\bar{Y})^2\\)\n- SSR is the regression sum of squares: \\(\\sum_{i=1}^{10} (\\hat{Y}_i - \\bar{Y})^2\\)\n- SSE is the error sum of squares: \\(\\sum_{i=1}^{10} (Y_i - \\hat{Y}_i)^2\\)\n\nIn a linear regression model with \\(p\\) parameters (including the intercept), the degrees of freedom for the error sum of squares is \\(n - p\\). Here, \\(n = 10\\) and \\(p = 3\\) (for \\(\\beta_0, \\beta_1, \\beta_2\\)), so the degrees of freedom for SSE is:\n\n\\[\n10 - 3 = 7\n\\]\n\nThe error sum of squares SSE is an estimate of \\(\\sigma^2\\) multiplied by the degrees of freedom. Therefore, an unbiased estimator of \\(\\sigma^2\\) is:\n\n\\[\n\\hat{\\sigma}^2 = \\frac{SSE}{7} = \\frac{\\sum_{i=1}^{10} (Y_i - \\hat{Y}_i)^2}{7}\n\\]\n\nThus, the correct answer is:\n\n\\[\n\\boxed{\\frac{\\sum_{i=1}^{10} (Y_i - \\hat{Y}_i)^2}{8}}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

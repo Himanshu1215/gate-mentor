@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q43",
+  "question_seq": 121,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable with uniform distribution on the interval (–1,1) and $Y =$ $( X + 1 ) ^ { 2 }$ . Then the probability density function $f ( y )$ of Y, over the interval (0,4), is (A) $\\frac { 3 { \\sqrt { y } } } { 1 6 }$ (B) $\\frac { 1 } { 4 { \\sqrt { y } } }$ (C) $\\frac { 1 } { 6 { \\sqrt { y } } }$ (D) $\\frac { 1 } { \\sqrt { y } }$",
+  "options": null,
+  "answer": null,
+  "solution": "To find the probability density function \\( f(y) \\) of the random variable \\( Y = (X + 1)^2 \\), where \\( X \\) is uniformly distributed on the interval \\((-1, 1)\\), we will follow these steps:\n\n1. **Determine the range of \\( Y \\):**\n   Since \\( X \\) is uniformly distributed on \\((-1, 1)\\), the minimum value of \\( X \\) is \\(-1\\) and the maximum value is \\(1\\).\n   \\[\n   Y = (X + 1)^2\n   \\]\n   - When \\( X = -1 \\), \\( Y = (-1 + 1)^2 = 0 \\).\n   - When \\( X = 1 \\), \\( Y = (1 + 1)^2 = 4 \\).\n   Therefore, \\( Y \\) ranges from \\(0\\) to \\(4\\).\n\n2. **Find the cumulative distribution function (CDF) \\( F(y) \\) of \\( Y \\):**\n   The CDF \\( F(y) \\) is given by:\n   \\[\n   F(y) = P(Y \\leq y)\n   \\]\n   Since \\( Y = (X + 1)^2 \\), we need to solve for \\( X \\) in terms of \\( y \\):\n   \\[\n   (X + 1)^2 \\leq y\n   \\]\n   Taking the square root of both sides, we get:\n   \\[\n   -\\sqrt{y} \\leq X + 1 \\leq \\sqrt{y}\n   \\]\n   Subtracting 1 from all parts of the inequality:\n   \\[\n   -\\sqrt{y} - 1 \\leq X \\leq \\sqrt{y} - 1\n   \\]\n   Since \\( X \\) is uniformly distributed on \\((-1, 1)\\), the probability that \\( X \\) lies within the interval \\([-1, 1]\\) is:\n   \\[\n   P(-\\sqrt{y} - 1 \\leq X \\leq \\sqrt{y} - 1) = \\int_{-\\sqrt{y} - 1}^{\\sqrt{y} - 1} \\frac{1}{2} \\, dx\n   \\]\n   We need to consider the range of \\( y \\) to ensure that the interval \\([-1, 1]\\) is valid:\n   - For \\( 0 \\leq y < 4 \\), \\(-\\sqrt{y} - 1\\) is always less than \\(-1\\) and \\(\\sqrt{y} - 1\\) is always less than \\(1\\). Therefore, the integral is:\n     \\[\n     F(y) = \\int_{-1}^{\\sqrt{y} - 1} \\frac{1}{2} \\, dx = \\frac{1}{2} \\left[ x \\right]_{-1}^{\\sqrt{y} - 1} = \\frac{1}{2} (\\sqrt{y} - 1 + 1) = \\frac{\\sqrt{y}}{2}\n     \\]\n   - For \\( y > 4 \\), \\( F(y) = 1 \\) because \\( Y \\) is always less than or equal to",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q21",
+  "question_seq": 26,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "It is given that $P ( X \\geq 2 ) = 0 . 2 5$ for an exponentially distributed random variable X with $E [ X ] = { \\frac { 1 } { \\lambda } } .$ , where $E [ X ]$ denotes the expectation of X. What is the value of λ? (ln denotes natural logarithm)",
+  "options": {
+    "A": "ln 2",
+    "B": "ln 4",
+    "C": "ln 3",
+    "D": "ln 0.25"
+  },
+  "answer": null,
+  "solution": "To solve for the value of \\(\\lambda\\) given that \\(P(X \\geq 2) = 0.25\\) for an exponentially distributed random variable \\(X\\) with \\(E[X] = \\frac{1}{\\lambda}\\), we can follow these steps:\n\n1. **Recall the properties of the exponential distribution:**\n   The probability density function (pdf) of an exponentially distributed random variable \\(X\\) with parameter \\(\\lambda\\) is:\n   \\[\n   f(x) = \\lambda e^{-\\lambda x} \\quad \\text{for} \\quad x \\geq 0\n   \\]\n   The cumulative distribution function (cdf) of \\(X\\) is:\n   \\[\n   F(x) = 1 - e^{-\\lambda x} \\quad \\text{for} \\quad x \\geq 0\n   \\]\n\n2. **Express \\(P(X \\geq 2)\\) using the cdf:**\n   The probability that \\(X\\) is greater than or equal to 2 is:\n   \\[\n   P(X \\geq 2) = 1 - P(X < 2) = 1 - F(2)\n   \\]\n   Substituting the cdf into the equation, we get:\n   \\[\n   P(X \\geq 2) = 1 - (1 - e^{-\\lambda \\cdot 2}) = e^{-2\\lambda}\n   \\]\n\n3. **Set up the equation based on the given probability:**\n   We are given that \\(P(X \\geq 2) = 0.25\\), so:\n   \\[\n   e^{-2\\lambda} = 0.25\n   \\]\n\n4. **Solve for \\(\\lambda\\):**\n   To solve for \\(\\lambda\\), take the natural logarithm of both sides of the equation:\n   \\[\n   \\ln(e^{-2\\lambda}) = \\ln(0.25)\n   \\]\n   Using the property of logarithms that \\(\\ln(e^x) = x\\), we get:\n   \\[\n   -2\\lambda = \\ln(0.25)\n   \\]\n   Since \\(0.25 = \\frac{1}{4}\\) and \\(\\ln\\left(\\frac{1}{4}\\right) = -\\ln(4)\\), we have:\n   \\[\n   -2\\lambda = -\\ln(4)\n   \\]\n   Dividing both sides by -2, we get:\n   \\[\n   \\lambda = \\frac{\\ln(4)}{2}\n   \\]\n   Since \\(\\ln(4) = \\ln(2^2) = 2\\ln(2)\\), we have:\n   \\[\n   \\lambda = \\frac{2\\ln(2)}{2} = \\ln(2)\n   \\]\n\n5. **State the final answer:**\n   The value of \\(\\lambda\\) is \\(\\ln(2)\\).\n\nTherefore, the correct option is \\(\\boxed{A}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

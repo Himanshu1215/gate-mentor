@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q33",
+  "question_seq": 115,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $\\{ X _ { n } \\} _ { n \\geq 1 }$ be a sequence of independent and identically distributed random variables with mean θ and variance θ, where $\\theta > 0$ . Then $\\frac { \\sum _ { i = 1 } ^ { n } X _ { i } } { \\sum _ { i = 1 } ^ { n } { X _ { i } } ^ { 2 } }$ • is a consistent estimator of (A) $\\scriptstyle { \\frac { 1 } { 1 + \\theta } }$ (B) $\\textstyle { \\frac { 1 + \\theta } { \\theta } }$ (C) $\\textstyle { \\frac { 1 } { \\theta } }$ (D) $\\frac { \\theta } { 1 + \\theta }$",
+  "options": null,
+  "answer": null,
+  "solution": "To determine the consistent estimator of the given expression \\(\\frac{\\sum_{i=1}^n X_i}{\\sum_{i=1}^n X_i^2}\\), we will use the Law of Large Numbers (LLN) and properties of expected value and variance.\n\nGiven:\n- \\(\\{X_n\\}_{n \\geq 1}\\) is a sequence of independent and identically distributed (i.i.d.) random variables with mean \\(\\theta\\) and variance \\(\\theta\\).\n- We need to find the consistent estimator of \\(\\frac{\\sum_{i=1}^n X_i}{\\sum_{i=1}^n X_i^2}\\).\n\nFirst, let's apply the Law of Large Numbers to the numerator and the denominator separately.\n\n### Step 1: Apply the Law of Large Numbers to the Numerator\nThe Law of Large Numbers states that for an i.i.d. sequence of random variables \\(\\{X_i\\}\\) with mean \\(\\mu\\),\n\\[\n\\frac{1}{n} \\sum_{i=1}^n X_i \\xrightarrow{P} \\mu.\n\\]\nIn our case, \\(\\mu = \\theta\\). Therefore,\n\\[\n\\frac{1}{n} \\sum_{i=1}^n X_i \\xrightarrow{P} \\theta.\n\\]\n\n### Step 2: Apply the Law of Large Numbers to the Denominator\nSimilarly, for the denominator, we need to consider the expected value of \\(X_i^2\\). Given that the variance of \\(X_i\\) is \\(\\theta\\), we have:\n\\[\n\\text{Var}(X_i) = E(X_i^2) - (E(X_i))^2 = \\theta.\n\\]\nSince \\(E(X_i) = \\theta\\), we can substitute this into the variance formula:\n\\[\n\\theta = E(X_i^2) - \\theta^2.\n\\]\nSolving for \\(E(X_i^2)\\), we get:\n\\[\nE(X_i^2) = \\theta + \\theta^2.\n\\]\nApplying the Law of Large Numbers to \\(X_i^2\\), we have:\n\\[\n\\frac{1}{n} \\sum_{i=1}^n X_i^2 \\xrightarrow{P} E(X_i^2) = \\theta + \\theta^2.\n\\]\n\n### Step 3: Combine the Results\nNow, we combine the results from the numerator and the denominator:\n\\[\n\\frac{\\sum_{i=1}^n X_i}{\\sum_{i=1}^n X_i^2} = \\frac{\\frac{1}{n} \\sum_{i=1}^n X_i}{\\frac{1}{n} \\sum_{i=1}^n X_i^2} \\xrightarrow{P} \\frac{\\theta}{\\theta + \\theta^2}.\n\\]\n\n### Step 4: Simplify the Expression\nSimplify the fraction:\n\\[\n\\frac{\\theta}{\\theta + \\theta^2} = \\frac{\\theta}{\\theta(1 + \\theta)} = \\frac{1}{1 + \\theta}.\n\\]\n\nTherefore, the consistent estimator of \\(\\frac{\\sum_{i=1}^n X_i",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

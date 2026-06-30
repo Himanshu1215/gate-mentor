@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q27",
+  "question_seq": 109,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $\\{ X _ { k } \\} _ { k \\ge 1 }$ be a sequence of independent and identically distributed Bernoulli random variables with success probability $p \\in ( 0 , 1 )$ . Then, as $n \\to \\infty$ ${ \\frac { 1 } { n } } \\sum _ { k = 1 } ^ { n } ( X _ { k } ) ^ { k }$ converges almost surely to (A) p (B) $\\scriptstyle { \\frac { 1 } { 1 - p } }$ (C) $\\textstyle { \\frac { 1 - p } { p } }$ (D) 1",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the problem, we need to analyze the behavior of the sequence \\(\\frac{1}{n} \\sum_{k=1}^n (X_k)^k\\) as \\(n \\to \\infty\\), where \\(\\{X_k\\}_{k \\ge 1}\\) is a sequence of independent and identically distributed Bernoulli random variables with success probability \\(p \\in (0, 1)\\).\n\nFirst, let's consider the possible values of \\((X_k)^k\\):\n- If \\(X_k = 0\\), then \\((X_k)^k = 0^k = 0\\).\n- If \\(X_k = 1\\), then \\((X_k)^k = 1^k = 1\\).\n\nSince \\(X_k\\) is a Bernoulli random variable with success probability \\(p\\), the probability that \\(X_k = 1\\) is \\(p\\) and the probability that \\(X_k = 0\\) is \\(1 - p\\).\n\nNext, we need to find the expected value of \\((X_k)^k\\):\n\\[\nE[(X_k)^k] = 0 \\cdot P(X_k = 0) + 1 \\cdot P(X_k = 1) = 0 \\cdot (1 - p) + 1 \\cdot p = p.\n\\]\n\nBy the Law of Large Numbers, for a sequence of independent and identically distributed random variables, the sample mean converges almost surely to the expected value of the individual random variables. Therefore, we have:\n\\[\n\\frac{1}{n} \\sum_{k=1}^n (X_k)^k \\to E[(X_k)^k] = p \\quad \\text{almost surely as} \\quad n \\to \\infty.\n\\]\n\nThus, the sequence \\(\\frac{1}{n} \\sum_{k=1}^n (X_k)^k\\) converges almost surely to \\(p\\).\n\nThe final answer is:\n\\[\n\\boxed{A}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q26",
+  "question_seq": 108,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $\\textstyle a _ { n } = { \\frac { ( - 1 ) ^ { n + 1 } } { n ! } } , n \\geq 0$ , and $\\begin{array} { r } { b _ { n } = \\sum _ { k = 0 } ^ { n } a _ { k } , n \\ge 0 } \\end{array}$ . Then, for $| x | < 1$ , the series $\\scriptstyle \\sum _ { n = 0 } ^ { \\infty } b _ { n } x ^ { n }$ converges to (A) $\\frac { - e ^ { - x } } { 1 + x }$ (B) $\\frac { - e ^ { - x } } { 1 - x ^ { 2 } }$ (C) $\\frac { - e ^ { - x } } { 1 - x }$ (D) $- ( 1 + x ) e ^ { - x }$",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the problem, we need to find the sum of the series \\(\\sum_{n=0}^{\\infty} b_n x^n\\) where \\(b_n = \\sum_{k=0}^n a_k\\) and \\(a_n = \\frac{(-1)^{n+1}}{n!}\\).\n\nFirst, let's express \\(b_n\\) in terms of the exponential function. Notice that \\(a_n\\) is the \\((n+1)\\)-th term of the Taylor series expansion of \\(-e^{-x}\\) evaluated at \\(x = 1\\). Specifically, we have:\n\\[\na_n = \\frac{(-1)^{n+1}}{n!} = -\\frac{(-1)^n}{n!}\n\\]\nThe Taylor series expansion of \\(e^{-x}\\) is:\n\\[\ne^{-x} = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^n}{n!}\n\\]\nTherefore, we can write:\n\\[\n-e^{-x} = -\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^n}{n!} = \\sum_{n=0}^{\\infty} \\frac{(-1)^{n+1} x^n}{n!}\n\\]\nThis means that:\n\\[\na_n = \\frac{(-1)^{n+1}}{n!} = \\text{the coefficient of } x^n \\text{ in } -e^{-x}\n\\]\nNow, \\(b_n\\) is the sum of the first \\(n+1\\) terms of the series \\(\\sum_{k=0}^{\\infty} a_k\\). This is the same as the partial sum of the series \\(-e^{-x}\\) evaluated at \\(x\\):\n\\[\nb_n = \\sum_{k=0}^n a_k = \\sum_{k=0}^n \\frac{(-1)^{k+1}}{k!} = -\\sum_{k=0}^n \\frac{(-1)^k}{k!}\n\\]\nThe series \\(\\sum_{k=0}^{\\infty} \\frac{(-1)^k x^k}{k!}\\) converges to \\(e^{-x}\\) for all \\(x\\). Therefore, the series \\(\\sum_{n=0}^{\\infty} b_n x^n\\) is the same as the series \\(-e^{-x}\\) but with each term multiplied by \\(x^n\\) and then summed. This is the same as the series for \\(-e^{-x}\\) but with \\(x\\) replaced by \\(x\\):\n\\[\n\\sum_{n=0}^{\\infty} b_n x^n = -e^{-x}\n\\]\nHowever, we need to find the sum of the series \\(\\sum_{n=0}^{\\infty} b_n x^n\\) for \\(|x| < 1\\). To do this, we need to consider the function \\(f(x) = \\sum_{n=0}^{\\infty} b_n x^n\\) and its relationship to the exponential function. Notice that:\n\\[\nf(x) = \\sum_{n=0}^{\\in",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

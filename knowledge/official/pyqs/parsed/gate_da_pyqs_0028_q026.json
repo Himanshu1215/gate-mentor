@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q26",
+  "question_seq": 28,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_003",
+  "question_text": "Which of the following statements is/are correct in a Bayesian network?",
+  "options": {
+    "A": "Variable elimination is an approximate inference algorithm",
+    "B": "Gibbs sampling is an exact inference algorithm",
+    "C": "Variable elimination is used to determine conditional probabilities",
+    "D": "Rejection sampling is an approximate inference algorithm"
+  },
+  "answer": null,
+  "solution": "To determine which statements are correct in a Bayesian network, let's analyze each option step by step.\n\n(A) Variable elimination is an approximate inference algorithm.\n- Variable elimination is an exact inference algorithm in a Bayesian network. It involves eliminating variables from the network by summing out their contributions to the probability distribution. This method provides exact probabilities but can be computationally expensive for large networks. Therefore, statement (A) is incorrect.\n\n(B) Gibbs sampling is an exact inference algorithm.\n- Gibbs sampling is an approximate inference algorithm. It is a Markov chain Monte Carlo (MCMC) method that iteratively samples from the conditional distributions of each variable given the current values of the other variables. This method provides approximate probabilities and is useful for large and complex networks. Therefore, statement (B) is incorrect.\n\n(C) Variable elimination is used to determine conditional probabilities.\n- Variable elimination is indeed used to determine conditional probabilities in a Bayesian network. By eliminating variables, we can focus on the variables of interest and their conditional probabilities. Therefore, statement (C) is correct.\n\n(D) Rejection sampling is an approximate inference algorithm.\n- Rejection sampling is an approximate inference algorithm. It involves generating random samples from a proposal distribution and then owes each sample based on its likelihood relative to the target distribution. This method provides approximate probabilities and is useful for complex distributions. Therefore, statement (D) is correct.\n\nBased on the analysis, the correct statements are (C) and (D). Therefore, the final answer is:\n\n\\boxed{C \\text{ and } D}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

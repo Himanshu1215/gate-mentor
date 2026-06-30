@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q36",
+  "question_seq": 36,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $Y = Z ^ { 2 } , Z = \\frac { X - \\mu } { \\sigma } ,$ , where X is a normal random variable with mean µ and variance $\\sigma ^ { 2 } .$ . The variance of Y is (A) 1 (B) 2 (C) (D) 4",
+  "options": null,
+  "answer": null,
+  "solution": "To find the variance of \\( Y \\), where \\( Y = Z^2 \\) and \\( Z = \\frac{X - \\mu}{\\sigma} \\), and \\( X \\) is a normal random variable with mean \\( \\mu \\) and variance \\( \\sigma^2 \\), we can follow these steps:\n\n1. **Identify the distribution of \\( Z \\):**\n   Since \\( X \\) is a normal random variable with mean \\( \\mu \\) and variance \\( \\sigma^2 \\), the random variable \\( Z = \\frac{X - \\mu}{\\sigma} \\) is a standard normal random variable. This means \\( Z \\) has a mean of 0 and a variance of 1.\n\n2. **Express the variance of \\( Y \\):**\n   The variance of \\( Y \\) is given by \\( \\text{Var}(Y) = \\text{Var}(Z^2) \\). We can use the formula for the variance of a function of a random variable:\n   \\[\n   \\text{Var}(Z^2) = E(Z^4) - [E(Z^2)]^2\n   \\]\n   We know that \\( E(Z^2) = \\text{Var}(Z) = 1 \\). So, we need to find \\( E(Z^4) \\).\n\n3. **Calculate \\( E(Z^4) \\):**\n   For a standard normal random variable \\( Z \\), the fourth moment \\( E(Z^4) \\) is given by:\n   \\[\n   E(Z^4) = 3\n   \\]\n   This result can be derived from the properties of the standard normal distribution. If you are not familiar with this result, it can be derived using the moment generating function or by integration.\n\n4. **Substitute \\( E(Z^4) \\) and \\( E(Z^2) \\) into the variance formula:**\n   \\[\n   \\text{Var}(Z^2) = E(Z^4) - [E(Z^2)]^2 = 3 - 1^2 = 3 - 1 = 2\n   \\]\n\nTherefore, the variance of \\( Y \\) is \\( 2 \\).\n\nThe final answer is: \\(\\boxed{B}\\)",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

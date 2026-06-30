@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q9",
+  "question_seq": 78,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The corners and mid-points of the sides of a triangle are named using the distinct letters P, Q, R, S, T and U, but not necessarily in the same order. Consider the following statements: • The line joining P and R is parallel to the line joining Q and S. • P is placed on the side opposite to the corner T. • S and U cannot be placed on the same side. Which one of the following statements is correct based on the above information?",
+  "options": {
+    "A": "P cannot be placed at a corner (b) S cannot be placed at a corner",
+    "C": "U cannot be placed at a mid-point (d) R cannot be placed at a corner"
+  },
+  "answer": "B",
+  "solution": "To solve this problem, let's analyze the given statements step by step.\n\n1. **Identify the points and their positions:**\n   - We have a triangle with corners A, B, and C.\n   - The midpoints of the sides are D (midpoint of AB), E (midpoint of BC), and F (midpoint of CA).\n   - The points P, Q, R, S, T, and U are assigned to these six points.\n\n2. **Analyze the first statement:**\n   - The line joining P and R is parallel to the line joining Q and S.\n   - This implies that P and R must be midpoints of two sides, and Q and S must be midpoints of the other two sides. This is because the line joining the midpoints of two sides of a triangle is parallel to the third side and half its length.\n\n3. **Analyze the second statement:**\n   - P is placed on the side opposite to the corner T.\n   - This means that P cannot be a corner (A, B, or C). Therefore, P must be a midpoint (D, E, or F).\n\n4. **Analyze the third statement:**\n   - S and U cannot be placed on the same side.\n   - This means that S and U cannot both be midpoints of the same side. Therefore, S and U must be midpoints of different sides.\n\n5. **Determine the possible assignments:**\n   - Since P is a midpoint, let's assume P is D (midpoint of AB).\n   - Since S and U cannot be on the same side, S and U must be midpoints of different sides. Let's assume S is E (midpoint of BC) and U is F (midpoint of CA).\n   - This leaves Q and R to be the corners A, B, and C. Since P is D, R cannot be A or B (because P is already D, and R must be a corner). Therefore, R must be C.\n   - This leaves Q to be either A or B.\n\n6. **Verify the first statement with the assignments:**\n   - P is D, R is C.\n   - Q is either A or B.\n   - S is E, U is F.\n   - The line joining P and R is DC, which is parallel to AB.\n   - The line joining Q and S is either AC or BC, which is parallel to the side opposite to the corner T (which is either B or A).\n   - This satisfies the first statement.\n\n7. **Conclusion:**\n   - Since P is a midpoint and cannot be a corner, option (A) is correct.\n   - S can be a corner (either A or B), so option (B) is incorrect.\n   - U can be a corner (C), so option (C) is incorrect.\n   - R can be a corner (C), so option (D) is incorrect.\n\nTherefore, the correct answer is \\boxed{B}.",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

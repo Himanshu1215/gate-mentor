@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q9",
+  "question_seq": 15,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , X _ { 3 } , Y _ { 1 } , Y _ { 2 } , Y _ { 3 } , Y _ { 4 }$ be independent random vectors such that $X _ { i }$ follows $N _ { 4 } ( 0 , \\Sigma _ { 1 } )$ distribution for $i = { 1 , 2 , 3 } ,$ , and $Y _ { j }$ follows $N _ { 4 } ( 0 , \\Sigma _ { 2 } )$ distribution for $j = 1 , 2 , 3 , 4 ,$ where $\\Sigma _ { 1 }$ and $\\Sigma _ { 2 }$ are positive definite matrices. Further, let $ Z = \\Sigma _ { 1 } ^ { - 1 / 2 } X X ^ { T } \\Sigma _ { 1 } ^ { - 1 / 2 } + \\Sigma _ { 2 } ^ { - 1 / 2 } Y Y ^ { T } \\Sigma _ { 2 } ^ { - 1 / 2 } , $ where $X = [ X _ { 1 } X _ { 2 } X _ { 3 } ]$ is $\\mathbf { a } \\ 4 \\times 3$ matrix, $Y = \\left[ Y _ { 1 } Y _ { 2 } Y _ { 3 } Y _ { 4 } \\right]$ is $\\mathbf { a } \\ 4 \\times 4$ matrix and $X ^ { T }$ and $Y ^ { T }$ denote transposes of X and $Y .$ , respectively. If $W _ { m } ( n , \\Sigma )$ denotes a Wishart distribution of order m with n degrees of freedom and variance-covariance matrix Σ, then which one of the following statements is true?",
+  "options": {
+    "A": "Z follows $W _ { 4 } ( 7 , I _ { 4 } )$ distribution",
+    "B": "Z follows $W _ { 4 } ( 4 , I _ { 4 } )$ distribution",
+    "C": "Z follows $W _ { 7 } ( 4 , I _ { 7 } )$ distribution",
+    "D": "Z follows $W _ { 7 } ( 7 , I _ { 7 } )$ distribution"
+  },
+  "answer": "B",
+  "solution": "We are given that $X _ { 1 } , X _ { 2 } , X _ { 3 }$ follow a multivariate normal distribution $N _ { 4 } ( 0 , \\Sigma _ { 1 } )$ , and $Y _ { 1 } , Y _ { 2 } , Y _ { 3 } , Y _ { 4 }$ follow $N _ { 4 } ( 0 , \\Sigma _ { 2 } )$ . The matrix Z is a sum of Wishart-distributed terms.\nStep 1: Wishart Distribution Properties.\n\nThe Wishart distribution $W _ { m } ( n , \\Sigma )$ is a generalization of the chi-squared distribution to multiple dimensions. For each term in the sum, we apply the properties of the Wishart distribution:\n\n$W _ { 4 } ( 4 , I _ { 4 } )$ is the distribution of a matrix formed by a sum of independent Gaussian vectors.\nStep 2: Determine the Distribution of Z.\n\nGiven that Z involves the sum of two independent components (one related to X and the other to Y ), the correct distribution for Z is $W _ { 4 } ( 4 , I _ { 4 } )$ , where $I _ { 4 }$ is the identity matrix.\n\nFinal Answer:\n\n $ \\boxed { W _ { 4 } ( 4 , I _ { 4 } ) } . $ \nQuick Tip\n\nWhen dealing with the Wishart distribution, remember that the number of degrees of freedom and the covariance matrix determine the distribution type."
+}

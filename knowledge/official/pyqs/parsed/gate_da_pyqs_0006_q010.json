@@ -3,17 +3,15 @@
   "exam": "GATE DA",
   "question_id": "Q10",
   "question_seq": 6,
-  "question_type": "MCQ",
+  "question_type": "NAT",
   "marks": null,
   "difficulty": null,
   "concept_id": "GENERAL",
   "question_text": "Let f (n) denotes the maximum number of comparison made while searching for an entry in a sorted array of size n using binary search. Which one of the following options is TRUE?",
   "options": {
-    "A": "( ) / 2 F n",
-    "B": "( ) / 2 F n",
-    "C": "( ) F n",
-    "D": "( ) / 2 F n Sol."
+    "A": "$ F { \\big ( } n { \\big ) } = F { \\big ( } { \\big | } n / 2 { \\big ) } { \\big ) }\\tag{b} $ $ F { \\bigl ( } n { \\bigr ) } = F { \\bigl ( } { \\bigl \\lfloor } n / 2 { \\bigr \\rfloor } { \\bigr ) } + F { \\bigl ( } { \\bigl \\lfloor } n / 2 { \\bigr \\rfloor } { \\bigr ) }\\tag{c} $ $ F { \\big ( } n { \\big ) } = F { \\big ( } n - 1 { \\big ) } + 1\\tag{d} $ $ F { \\Big ( } n { \\Big ) } = F { \\Big ( } { \\Big \\lfloor } n / 2 { \\Big \\rfloor } { \\Big ) } + 1 $ Sol. (d) In bianry search in one comparision entire array is divided into two halves. If we have input array size of n, then in one comparison we are making the size to n/2. So, $F { \\big ( } n { \\big ) } = F { \\big ( } { \\big \\lfloor } n / 2 { \\big \\rfloor } { \\big ) } + 1$ Hence, option (d) is correct. [NAT]"
   },
   "answer": null,
-  "solution": null
+  "solution": "To determine the correct option for the maximum number of comparisons made while searching for an entry in a sorted array of size \\( n \\) using binary search, let's analyze the process step by step.\n\n1. **Understanding Binary Search**:\n   - Binary search works by repeatedly dividing the search interval in half.\n   - In each step, it compares the middle element of the current interval with the target value.\n   - If the middle element is equal to the target, the search is complete.\n   - If the middle element is less than the target, the search continues in the right half of the interval.\n   - If the middle element is greater than the target, the search continues in the left half of the interval.\n\n2. **Recursive Formula**:\n   - Let \\( F(n) \\) denote the maximum number of comparisons made while searching for an entry in a sorted array of size \\( n \\).\n   - In the first comparison, the array is divided into two halves.\n   - If the target is in the left half, the search continues with an array of size \\( \\left\\lfloor \\frac{n}{2} \\right\\rfloor \\).\n   - If the target is in the right half, the search continues with an array of size \\( \\left\\lfloor \\frac{n}{2} \\right\\rfloor \\).\n   - Therefore, the total number of comparisons is 1 (for the first comparison) plus the maximum number of comparisons needed to search the remaining half.\n\n3. **Formulating the Recurrence**:\n   - The recurrence relation for \\( F(n) \\) can be written as:\n     \\[\n     F(n) = F\\left( \\left\\lfloor \\frac{n}{2} \\right\\rfloor \\right) + 1\n     \\]\n\n4. **Base Case**:\n   - When \\( n = 1 \\), the array has only one element, and no comparisons are needed to find it.\n   - Therefore, \\( F(1) = 0 \\).\n\n5. **Solving the Recurrence**:\n   - We can solve this recurrence relation by observing the pattern:\n     \\[\n     \\begin{aligned}\n     F(1) &= 0 \\\\\n     F(2) &= F\\left( \\left\\lfloor \\frac{2}{2} \\right\\rfloor \\right) + 1 = F(1) + 1 = 0 + 1 = 1 \\\\\n     F(3) &= F\\left( \\left\\lfloor \\frac{3}{2} \\right\\rfloor \\right) + 1 = F(1) + 1 = 0 + 1 = 1 \\\\\n     F(4) &= F\\left( \\left\\lfloor \\frac{4}{2} \\right\\rfloor \\right) + 1 = F(2) + 1 = 1 + 1 = 2 \\\\\n     F(5) &= F\\left( \\left\\lfloor \\frac{5}{2} \\right\\rfloor \\right) + 1 = F(2) + 1 = 1 + 1 = 2 \\\\\n     F(6) &= F\\left( \\left\\lfloor \\frac{6}{2} \\right\\rfloor \\right) + 1 = F(3)",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
 }

@@ -1,0 +1,17 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q15",
+  "question_seq": 10,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , \\ldots , X _ { n }$ be a random sample from a distribution with cumulative distribution function $F ( x )$ . Let the empirical distribution function of the sample be $F _ { n } ( x )$ . The classical Kolmogorov-Smirnov goodness of fit test statistic is given by $ T _ { n } = \\sqrt { n } D _ { n } = \\sqrt { n } \\operatorname* { s u p } _ { - \\infty < x < \\infty } | F _ { n } ( x ) - F ( x ) | . $",
+  "options": {
+    "C": "onsider the following statements:"
+  },
+  "answer": null,
+  "solution": "To solve the problem, we need to understand the classical Kolmogorov-Smirnov (KS) goodness of fit test statistic and its properties. The test statistic \\( T_n \\) is given by:\n\n\\[ T_n = \\sqrt{n} D_n = \\sqrt{n} \\operatorname*{sup}_{-\\infty < x < \\infty} | F_n(x) - F(x) | \\]\n\nwhere \\( F_n(x) \\) is the empirical distribution function of the sample and \\( F(x) \\) is the cumulative distribution function of the population.\n\nThe empirical distribution function \\( F_n(x) \\) is defined as:\n\n\\[ F_n(x) = \\frac{1}{n} \\sum_{i=1}^n I(X_i \\leq x) \\]\n\nwhere \\( I(X_i \\leq x) \\) is the indicator function that equals 1 if \\( X_i \\leq x \\) and 0 otherwise.\n\nThe KS test statistic \\( T_n \\) measures the maximum absolute difference between the empirical distribution function \\( F_n(x) \\) and the true cumulative distribution function \\( F(x) \\), scaled by \\( \\sqrt{n} \\).\n\nThe critical values for the KS test are determined from the distribution of \\( T_n \\) under the null hypothesis that the sample comes from the population with distribution \\( F(x) \\). For large \\( n \\), the distribution of \\( T_n \\) converges to the distribution of the maximum of a Brownian bridge.\n\nThe critical values for the KS test at a significance level \\( \\alpha \\) are given by:\n\n\\[ T_{n, \\alpha} = \\sqrt{-\\frac{\\ln(\\alpha/2)}{2n}} \\]\n\nTo find the critical value for a given significance level \\( \\alpha \\), we can use the following formula:\n\n\\[ T_{n, \\alpha} = \\sqrt{-\\frac{\\ln(\\alpha/2)}{2n}} \\]\n\nFor example, if \\( \\alpha = 0.05 \\) and \\( n = 100 \\), the critical value is:\n\n\\[ T_{100, 0.05} = \\sqrt{-\\frac{\\ln(0.05/2)}{2 \\cdot 100}} = \\sqrt{-\\frac{\\ln(0.025)}{200}} \\approx 1.36 \\]\n\nTherefore, the final answer is:\n\n\\[\n\\boxed{1.36}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

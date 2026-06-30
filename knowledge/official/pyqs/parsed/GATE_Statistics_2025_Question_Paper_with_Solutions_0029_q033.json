@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q33",
+  "question_seq": 29,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $X _ { 1 } , \\ldots , X _ { 5 }$ be a random sample from $N ( \\theta , 6 )$ , where $\\theta \\in \\mathbb { R }$ , and let $c ( \\theta )$ be the Cramer-Rao lower bound for the variances of unbiased estimators of θ based on the above sample. Then $1 5 \\cdot \\operatorname { i n f } _ { \\theta \\in \\mathbb { R } } c ( \\theta )$ equals (",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Fisher Information for a single observation\n\nFor a normal distribution ${ \\mathcal { N } } ( \\theta , \\sigma ^ { 2 } )$ , the Fisher Information is:\n\n $ I ( \\theta ) = { \\frac { 1 } { \\sigma ^ { 2 } } } $ \n\nGiven $\\sigma ^ { 2 } = 6$ , we have:\n\n $ I _ { 1 } ( \\theta ) = \\frac { 1 } { 6 } $ \nStep 2: Fisher Information for the full sample\n\nSince the sample size is 5:\n\n $ I _ { 5 } ( \\theta ) = 5 \\cdot { \\frac { 1 } { 6 } } = { \\frac { 5 } { 6 } } $ \nStep 3: Cramer-Rao Lower Bound´\n\nThe CRLB is the reciprocal of the Fisher Information:\n\n $ c ( \\theta ) = { \\frac { 1 } { I _ { 5 } ( \\theta ) } } = { \\frac { 6 } { 5 } } $ \n\nThis value is constant and does not depend on θ, so:\n\n $ \\operatorname* { i n f } _ { \\theta \\in \\mathbb { R } } c ( \\theta ) = \\frac { 6 } { 5 } $ \n\nStep 4: Final Computation\n\n $ 1 5 \\cdot \\operatorname* { i n f } _ { \\theta \\in \\mathbb { R } } c ( \\theta ) = 1 5 \\cdot \\frac { 6 } { 5 } = 1 8 $ \n\nFinal Answer: 18\nQuick Tip\n\nFor the Cramer-Rao lower bound, remember that it depends on the Fisher information, which can often be computed directly for common distributions like the normal distribution."
+}

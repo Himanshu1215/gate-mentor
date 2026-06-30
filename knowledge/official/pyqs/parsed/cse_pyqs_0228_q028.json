@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q28",
+  "question_seq": 228,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In a system, numbers are represented using 4-bit two's complement form. Consider four numbers N1 = 1011, $N 2 = 1 1 0 1$ $N 3 = 1 0 1 0$ and $N 4 = 1 0 0 1$ in the system. Which of the following operations will result in arithmetic overflow?",
+  "options": {
+    "A": "$N 1 + N 2$",
+    "C": "$N 3 - N 4$",
+    "B": "$N 2 + N 3$",
+    "D": "$N 1 ~ + ~ N 4$"
+  },
+  "answer": "B",
+  "solution": "To determine which operation will result in arithmetic overflow, we need to understand the range of numbers that can be represented in a 4-bit two's complement system. The range of a 4-bit two's complement system is from \\(-8\\) to \\(7\\). Let's convert each of the given numbers from binary to decimal to see where they fall within this range.\n\n1. \\(N_1 = 1011_2\\)\n   - This is a negative number because the most significant bit (MSB) is 1.\n   - To find its decimal value, we calculate: \\(-2^3 + 2^2 + 2^1 + 0 = -8 + 4 + 2 + 0 = -2\\).\n   - So, \\(N_1 = -2\\).\n\n2. \\(N_2 = 1101_2\\)\n   - This is a negative number because the most significant bit (MSB) is 1.\n   - To find its decimal value, we calculate: \\(-2^3 + 2^2 + 0 + 2^0 = -8 + 4 + 0 + 1 = -3\\).\n   - So, \\(N_2 = -3\\).\n\n3. \\(N_3 = 1010_2\\)\n   - This is a negative number because the most significant bit (MSB) is 1.\n   - To find its decimal value, we calculate: \\(-2^3 + 2^2 + 0 + 2^0 = -8 + 4 + 0 + 0 = -4\\).\n   - So, \\(N_3 = -4\\).\n\n4. \\(N_4 = 1001_2\\)\n   - This is a negative number because the most significant bit (MSB) is 1.\n   - To find its decimal value, we calculate: \\(-2^3 + 0 + 0 + 2^0 = -8 + 0 + 0 + 1 = -7\\).\n   - So, \\(N_4 = -7\\).\n\nNow, let's perform each of the given operations and check if the result is within the range \\([-8, 7]\\).\n\n(A) \\(N_1 + N_2 = -2 + (-3) = -5\\)\n   - \\(-5\\) is within the range \\([-8, 7]\\), so there is no overflow.\n\n(B) \\(N_2 + N_3 = -3 + (-4) = -7\\)\n   - \\(-7\\) is within the range \\([-8, 7]\\), so there is no overflow.\n\n(C) \\(N_3 - N_4 = -4 - (-7) = -4 + 7 = 3\\)\n   - \\(3\\) is within the range \\([-8, 7]\\), so there is no overflow.\n\n(D) \\(N_1 + N_4 = -2 + (-7) = -9\\)\n   - \\(-9\\) is not within the range \\([-8, 7]\\), so there is an overflow.\n\nTherefore, the operation that will result in arithmetic overflow is \\(\\boxed{D}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

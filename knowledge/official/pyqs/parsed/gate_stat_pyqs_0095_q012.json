@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q12",
+  "question_seq": 95,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "${ \\left[ \\begin{array} { l l l l } { 1 } & { 1 } & { 2 } & { 0 } \\\\ { 0 } & { 2 } & { 1 } & { 0 } \\\\ { 0 } & { 0 } & { 1 } & { 0 } \\\\ { 0 } & { 0 } & { 0 } & { 2 } \\end{array} \\right] } ~ .$ The minimal polynomial of the matrix .is (A) $( x - 1 ) ( x - 2 )$ (B) $( x - 1 ) ^ { 2 } ( x - 2 )$ (C) $( x - 1 ) ( x - 2 ) ^ { 2 }$ (D) $( x - 1 ) ^ { 2 } ( x - 2 ) ^ { 2 }$",
+  "options": null,
+  "answer": null,
+  "solution": "To find the minimal polynomial of the matrix \\( A = \\begin{pmatrix} 1 & 1 & 2 & 0 \\\\ 0 & 2 & 1 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 2 \\end{pmatrix} \\), we need to determine the smallest degree polynomial \\( p(x) \\) such that \\( p(A) = 0 \\).\n\nFirst, let's find the characteristic polynomial of \\( A \\). The characteristic polynomial is given by \\( \\det(A - \\lambda I) \\), where \\( I \\) is the identity matrix.\n\n\\[ A - \\lambda I = \\begin{pmatrix} 1 - \\lambda & 1 & 2 & 0 \\\\ 0 & 2 - \\lambda & 1 & 0 \\\\ 0 & 0 & 1 - \\lambda & 0 \\\\ 0 & 0 & 0 & 2 - \\lambda \\end{pmatrix} \\]\n\nThe determinant of this matrix is:\n\n\\[ \\det(A - \\lambda I) = (1 - \\lambda) \\begin{vmatrix} 2 - \\lambda & 1 & 0 \\\\ 0 & 1 - \\lambda & 0 \\\\ 0 & 0 & 2 - \\lambda \\end{vmatrix} - 1 \\begin{vmatrix} 0 & 1 & 0 \\\\ 0 & 1 - \\lambda & 0 \\\\ 0 & 0 & 2 - \\lambda \\end{vmatrix} + 2 \\begin{vmatrix} 0 & 2 - \\lambda & 0 \\\\ 0 & 0 & 2 - \\lambda \\\\ 0 & 0 & 0 \\end{vmatrix} - 0 \\begin{vmatrix} 0 & 2 - \\lambda & 1 \\\\ 0 & 0 & 1 - \\lambda \\\\ 0 & 0 & 0 \\end{vmatrix} \\]\n\nSimplifying the determinants, we get:\n\n\\[ \\det(A - \\lambda I) = (1 - \\lambda) (2 - \\lambda)^3 - 1 \\cdot 0 + 2 \\cdot 0 - 0 = (1 - \\lambda) (2 - \\lambda)^3 \\]\n\nSo, the characteristic polynomial is \\( (x - 1)(x - 2)^3 \\).\n\nNext, we need to find the minimal polynomial. The minimal polynomial must divide the characteristic polynomial and must be the smallest degree polynomial such that \\( p(A) = 0 \\).\n\nLet's check the options:\n\n(A) \\( (x - 1)(x - 2) \\)\n(B) \\( (x - 1)^2(x - 2) \\)\n(C) \\( (x - 1)(x - 2)^2 \\)\n(D) \\( (x - 1)^2(x - 2)^2 \\)\n\nWe need to check which of these polynomials satisfy \\( p(A) = 0 \\).\n\n1. For \\( p(x) = (x - 1)(x - 2) \\):\n   \\[ p(A) = (A - I)(A - 2I) = \\begin{pmatrix} 0 & 1 & 2",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

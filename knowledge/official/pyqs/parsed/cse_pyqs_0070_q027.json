@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q27",
+  "question_seq": 70,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let (M> denote an encoding of an automaton M. Suppose that Σ{0, 1}. Which of the following languages is/are NOT recursive?",
+  "options": {
+    "A": "L = {〈M>| M is a DFA such that L(M) = Σ\\*}",
+    "B": "L = {<M>| M is a PDA such that L(M) = Σ\\*}",
+    "C": "L = {〈M>|M is a PDA such that L(M) = φ}",
+    "D": "L = {〈M>|M is a DFA such that L(M) = φ}"
+  },
+  "answer": "B",
+  "solution": "To determine which of the given languages is NOT recursive, we need to analyze the computability of each language. A language is recursive if there exists a total computable function (an algorithm) that decides whether a given string belongs to the language or not.\n\nLet's analyze each option step by step:\n\n**Option (A): \\( L = \\{ \\langle M \\rangle \\mid M \\text{ is a DFA such that } L(M) = \\Sigma^* \\} \\)**\n\nA deterministic finite automaton (DFA) recognize regular languages. The language \\( \\Sigma^* \\) is the set of all possible strings over the alphabet \\( \\Sigma \\), which is a regular language. Therefore, there exists an algorithm that can determine whether a given DFA \\( M \\) recognizing \\( \\Sigma^* \\). This algorithm can check if \\( M \\) has a single accept state and if every state is reachable from the start state. If these conditions are satisfied, then \\( L(M) = \\Sigma^* \\). Since there is an algorithm to decide this, \\( L \\) is recursive.\n\n**Option (B): \\( L = \\{ \\langle M \\rangle \\mid M \\text{ is a PDA such that } L(M) = \\Sigma^* \\} \\)**\n\nA pushdown automaton (PDA) recognizing the language \\( \\Sigma^* \\) is more complex. The language \\( \\Sigma^* \\) is context-free, and a PDA can recognize context-free languages. However, there is no algorithm that can determine whether a given PDA \\( M \\) recognizing \\( \\Sigma^* \\). This is because the problem of determining whether a context-free language is equal to \\( \\Sigma^* \\) is undecidable. Therefore, \\( L \\) is NOT recursive.\n\n**Option (C): \\( L = \\{ \\langle M \\rangle \\mid M \\text{ is a PDA such that } L(M) = \\varnothing \\} \\)**\n\nA PDA recognizing the empty language \\( \\varnothing \\) is also undecidable. There is no algorithm that can determine whether a given PDA \\( M \\) recognizing \\( \\varnothing \\). Therefore, \\( L \\) is NOT recursive. However, this option is not the correct answer because we are asked to find which language is NOT recursive, and we already found that option (B) is not recursive.\n\n**Option (D): \\( L = \\{ \\langle M \\rangle \\mid M \\text{ is a DFA such that } L(M) = \\varnothing \\} \\)**\n\nA deterministic finite automaton (DFA) recognizing the empty language \\( \\varnothing \\) is decidable. There exists an algorithm that can determine whether a given DFA \\( M \\) recognizing \\( \\varnothing \\). This algorithm can check if there is no path from the start state to any accept state. If there is no such path, then \\( L(M) = \\varnothing \\). Since there is an algorithm to decide this, \\( L \\) is recursive.\n\nBased on the analysis, the language that is NOT recursive is:\n\n\\[\n\\boxed{B}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

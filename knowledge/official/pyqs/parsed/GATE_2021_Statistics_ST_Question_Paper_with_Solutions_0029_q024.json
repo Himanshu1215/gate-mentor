@@ -1,0 +1,16 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q24",
+  "question_seq": 29,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , X _ { 3 }$ be a random sample from a bivariate normal distribution with unknown mean vector $\\mu$ and unknown variance-covariance matrix Σ, which is a positive definite matrix. The p-value corresponding to the likelihood ratio test for testing $ H _ { 0 } : \\mu = 0 \\quad { \\mathrm { a g a i n s t } } \\quad H _ { 1 } : \\mu \\neq 0 $",
+  "options": {
+    "B": "ased on the realization $ \\{ ( 1 , 2 ) , ( 4 , - 2 ) , ( - 5 , 0 ) \\} $ of the random sample equals (round off to 2 decimal places)."
+  },
+  "answer": null,
+  "solution": "For the likelihood ratio test, we calculate the test statistic and compare it with the critical value or compute the p-value. The formula for the likelihood ratio test statistic is:\n\n $ \\lambda = \\frac { L ( \\hat { \\mu } _ { 0 } ) } { L ( \\hat { \\mu } ) } $ \n\nUsing the given sample values and calculating the statistic gives a p-value of 1.00.   \nThus, the p-value is 1.00.\nQuick Tip\n\nFor likelihood ratio tests, calculate the likelihood ratio statistic and compare it with the distribution under the null hypothesis to compute the p-value."
+}

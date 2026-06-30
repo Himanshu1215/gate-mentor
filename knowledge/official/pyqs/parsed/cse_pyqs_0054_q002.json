@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q2",
+  "question_seq": 54,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "There are five bags each containing identical sets of ten distinct chocolates. One chocolate is picked from each bag. The probability that at least two chocolates are identical is",
+  "options": {
+    "A": "0.6976 (b) 0.3024",
+    "C": "0.4235 (d) 0.8125"
+  },
+  "answer": "A",
+  "solution": "To determine the probability that at least two chocolates are identical when one chocolate is picked from each of five bags, we can use the complementary probability approach. This means we first calculate the probability that all five chocolates are distinct, and then subtract this probability from 1.\n\n1. **Calculate the total number of possible outcomes:**\n   Each bag contains 10 distinct chocolates, and we are picking one chocolate from each bag. Therefore, the total number of possible outcomes is:\n   \\[\n   10 \\times 10 \\times 10 \\times 10 \\times 10 = 10^5 = 100000\n   \\]\n\n2. **Calculate the number of favorable outcomes where all five chocolates are distinct:**\n   - For the first bag, we have 10 choices.\n   - For the second bag, we have 9 choices (since we cannot pick the same chocolate as the one from the first bag).\n   - For the third bag, we have 8 choices (since we cannot pick the same chocolate as the ones from the first two bags).\n   - For the fourth bag, we have 7 choices (since we cannot pick the same chocolate as the ones from the first three bags).\n   - For the fifth bag, we have 6 choices (since we cannot pick the same chocolate as the ones from the first four bags).\n   Therefore, the number of favorable outcomes where all five chocolates are distinct is:\n   \\[\n   10 \\times 9 \\times 8 \\times 7 \\times 6 = 30240\n   \\]\n\n3. **Calculate the probability that all five chocolates are distinct:**\n   The probability is the number of favorable outcomes divided by the total number of possible outcomes:\n   \\[\n   \\frac{30240}{100000} = 0.3024\n   \\]\n\n4. **Calculate the probability that at least two chocolates are identical:**\n   This is the complement of the probability that all five chocolates are distinct:\n   \\[\n   1 - 0.3024 = 0.6976\n   \\]\n\nTherefore, the probability that at least two chocolates are identical is \\(\\boxed{0.6976}\\). The correct answer is \\(\\boxed{A}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q35",
+  "question_seq": 26,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , \\ldots , X _ { 8 }$ be a random sample taken from a distribution with the probability density function $ f _ { X } ( x ) = { \\left\\{ \\begin{array} { l l } { \\hfill \\frac { x } { 8 } , \\quad 0 < x < 4 , } \\\\ { \\hfill 0 , \\quad { \\mathrm { e l s e w h e r e } } . } \\end{array} \\right. } $ Let $F _ { 8 } ( x )$ be the empirical distribution function of the sample. $\\mathbf { I f } \\ \\alpha$ is the variance of $F _ { 8 } ( 2 )$ , then 128α (in integer) is equal to",
+  "options": null,
+  "answer": null,
+  "solution": "The probability density function is given by $\\begin{array} { r } { f _ { X } ( x ) = \\frac { x } { 8 } } \\end{array}$ for $0 < x < 4$ , and 0 elsewhere. The cumulative distribution function $F _ { X } ( x )$ is the integral of $f _ { X } ( x )$ from 0 to $x \\mathrm { : }$\n\n $ F _ { X } ( x ) = \\int _ { 0 } ^ { x } { \\frac { t } { 8 } } d t = { \\frac { x ^ { 2 } } { 1 6 } } , \\quad 0 < x < 4 . $ \n\nNow, the empirical distribution function $F _ { 8 } ( x )$ is the proportion of sample points less than or equal to x. We are interested in $F _ { 8 } ( 2 )$ , the empirical distribution function at $x = 2$ . Since the sample size is $8 , F _ { 8 } ( 2 )$ is the proportion of sample points less than or equal to 2.\n\nThe variance of the empirical distribution function is given by:\n\n $ \\mathrm { V a r } ( F _ { 8 } ( 2 ) ) = \\frac { F _ { 8 } ( 2 ) ( 1 - F _ { 8 } ( 2 ) ) } { 8 } . $ \n\nFrom the distribution function, we know $\\begin{array} { r } { F _ { X } ( 2 ) = \\frac { 2 ^ { 2 } } { 1 6 } = \\frac { 4 } { 1 6 } = 0 . 2 5 } \\end{array}$ . Thus, $F _ { 8 } ( 2 ) \\approx 0 . 2 5$ and:\n\n $ \\mathrm { V a r } ( F _ { 8 } ( 2 ) ) = { \\frac { 0 . 2 5 ( 1 - 0 . 2 5 ) } { 8 } } = { \\frac { 0 . 2 5 \\times 0 . 7 5 } { 8 } } = { \\frac { 0 . 1 8 7 5 } { 8 } } = 0 . 0 2 3 4 3 7 5 . $ \n\nFinally, we compute $1 2 8 \\times \\mathsf { V a r } ( F _ { 8 } ( 2 ) )$ :\n\n $ 1 2 8 \\times { 0 . 0 2 3 4 3 7 5 } = 3 . $ \n\nThus, $1 2 8 \\times \\alpha$ is $\\boxed { 3 } .$\nQuick Tip\n\nFor empirical distribution functions, the variance can be computed using the formula $\\textstyle { \\frac { p ( 1 - p ) } { n } }$ , where $p$ is the cumulative probability and $n$ is the sample size."
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q14",
+  "question_seq": 8,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable having the Poisson distribution with mean $\\log _ { e } 2 .$ . Then $E \\left( e ^ { ( \\log _ { e } 3 ) X } \\right)$ equals:",
+  "options": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4"
+  },
+  "answer": "D",
+  "solution": "The Poisson distribution is given by the probability mass function:\n\n $ P ( X = k ) = { \\frac { \\lambda ^ { k } e ^ { - \\lambda } } { k ! } } , \\quad k = 0 , 1 , 2 , . . . . $ \n\nwhere $\\lambda = \\log _ { e } 2$ is the mean. We are asked to find $E \\left( e ^ { ( \\log _ { e } 3 ) X } \\right)$\n\nStep 1: Recognizing the moment-generating function of a Poisson random variable. The moment-generating function (MGF) of a Poisson random variable X with mean λ is given by:\n\n $ M _ { X } ( t ) = E ( e ^ { t X } ) = e ^ { \\lambda ( e ^ { t } - 1 ) } $ \n\nSubstituting $t = \\log _ { e } 3$ and $\\lambda = \\log _ { e } 2$ , we get:\n\n $ E \\left( e ^ { ( \\log _ { e } 3 ) X } \\right) = e ^ { \\lambda ( e ^ { \\log _ { e } 3 } - 1 ) } $ \n\nStep 2: Simplifying the expression. Since $e ^ { \\log _ { e } 3 } = 3$ , the expression becomes:\n\n $ E \\left( e ^ { ( \\log _ { e } 3 ) X } \\right) = e ^ { \\log _ { e } 2 ( 3 - 1 ) } = e ^ { 2 \\log _ { e } 2 } $ \n\nStep 3: Final calculation. Using the property of logarithms $e ^ { \\log _ { e } a } = a$ , we find:\n\n $ e ^ { 2 \\log _ { e } 2 } = 2 ^ { 2 } = 4 $ \n\nTherefore, the correct answer is 4 .\nQuick Tip\n\nFor Poisson-distributed random variables, the moment-generating function is useful for calculating expectations of exponential functions of the random variable."
+}

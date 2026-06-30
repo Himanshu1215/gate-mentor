@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q9",
+  "question_seq": 128,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "If two distinct non-zero real variables x and y are such that (x + y) is proportional to (x - y) then the value of $\\frac { x } { y }$",
+  "options": {
+    "A": "is a constant",
+    "B": "depends on xy",
+    "C": "depends only on x and not on y (d) depends only on y and not on x"
+  },
+  "answer": "A",
+  "solution": "To determine the value of \\(\\frac{x}{y}\\) given that \\(x + y\\) is proportional to \\(x - y\\), we start by expressing the proportionality mathematically. This means there exists a constant \\(k\\) such that:\n\n\\[\nx + y = k(x - y)\n\\]\n\nNext, we expand and rearrange the equation to isolate terms involving \\(x\\) and \\(y\\):\n\n\\[\nx + y = kx - ky\n\\]\n\n\\[\nx - kx = -ky - y\n\\]\n\n\\[\nx(1 - k) = -y(1 + k)\n\\]\n\nAssuming \\(k \\neq 1\\) (since \\(x\\) and \\(y\\) are distinct and non-zero), we can divide both sides by \\(1 - k\\):\n\n\\[\nx = -y \\frac{1 + k}{1 - k}\n\\]\n\nNow, we solve for \\(\\frac{x}{y}\\):\n\n\\[\n\\frac{x}{y} = -\\frac{1 + k}{1 - k}\n\\]\n\nSince \\(k\\) is a constant, \\(\\frac{1 + k}{1 - k}\\) is also a constant. Therefore, \\(\\frac{x}{y}\\) is a constant.\n\nThus, the correct answer is:\n\n\\boxed{A}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

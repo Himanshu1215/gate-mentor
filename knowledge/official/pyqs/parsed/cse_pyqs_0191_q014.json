@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q14",
+  "question_seq": 191,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Match each addressing mode in List I with a data element or an element of a data structure (in a high-level language) in List II: List II P. Immediate 1. Element of an array Q. Indirect 2. Pointer R. Base with index 3. Element of a record S. Base with offset/displacement 4. Constant",
+  "options": {
+    "A": "P-4, Q-3, R-1, S-2",
+    "B": "P-4, Q-2, R-1, S-3",
+    "C": "P-1, Q-4, R-3, S-2",
+    "D": "P-2, Q-3, R-1, S-4"
+  },
+  "answer": "B",
+  "solution": "To determine the correct addressing mode for each data element or element of a data structure, let's analyze each option step by step:\n\n1. ** immediate (P)**: This mode refers to a data element that is stored directly in memory without any additional information needed to access it. In a high-level language, this typically corresponds to a constant.\n   - Therefore, P should be matched with 4.\n\n2. ** indirect (Q)**: This mode refers to a data element that is stored in memory but requires an additional piece of information (a pointer) to access it. In a high-level language, this typically corresponds to an element of an array or a record.\n   - Therefore, Q should be matched with either 2 or 3.\n\n3. ** base with index (R)**: This mode refers to an element of an array that is accessed using an index. In a high-level language, this typically corresponds to an element of an array.\n   - Therefore, R should be matched with 1.\n\n4. ** base with offset/displacement (S)**: This mode refers to an element of a record or a structure that is accessed using an offset or displacement from the base of the structure. In a high-level language, this typically corresponds to an element of a record.\n   - Therefore, S should be matched with 3.\n\nGiven these matches, the correct choice is:\n- P-4\n- Q-2\n- R-1\n- S-3\n\nThus, the correct answer is \\boxed{B}.",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

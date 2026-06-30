@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q16",
+  "question_seq": 24,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "If a relational decomposition is not dependency-preserving, which one of the following relational operators will be executed more frequently in order to maintain the dependencies? (A) Selection (B) Projection (C) Join (D) Set union",
+  "options": null,
+  "answer": null,
+  "solution": "To determine which relational operator will be executed more frequently in order to maintain the dependencies when a relational decomposition is not dependency-preserving, let's analyze each option step by step.\n\n1. **Selection**: Selection is an operation that filter rows from a relation based on a given condition. It does not necessarily involve combining or matching rows from different relations. Therefore, selection is not typically used to maintain dependencies between relations.\n\n2. **Projection**: Projection is an operation that select a subset of columns from a relation. It does not necessarily involve combining or matching rows from different relations. Therefore, projection is not typically used to maintain dependencies between relations.\n\n3. **join**: Join is an operation that combines rows from two different relations based on a common attribute. It is used to maintain the relationships between the relations. When a relational decomposition is not dependency-preserving, a join operation is often necessary to recombine the relations in a way that preserves the original dependencies.\n\n4. **Set union**: Set union is an operation that combines all rows from two different relations, without considering any common attributes. It does not necessarily involve matching rows from different relations. Therefore, set union is not typically used to maintain dependencies between relations.\n\nBased on the analysis, the relational operator that will be executed more frequently in order to maintain the dependencies when a relational decomposition is not dependency-preserving is the join operation.\n\nTherefore, the final answer is: \\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q11",
+  "question_seq": 17,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $ I = 4 \\int _ { 0 } ^ { \\frac { 1 } { \\sqrt { 2 } } } \\int _ { 0 } ^ { x } \\frac { 1 } { \\sqrt { x ^ { 2 } + y ^ { 2 } } } d y d x $ Then the value of $e ^ { l + \\pi }$ is (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "We are given the double integral I. First, evaluate the inner integral:\n\n $ \\int _ { 0 } ^ { x } { \\frac { 1 } { \\sqrt { x ^ { 2 } + y ^ { 2 } } } } d y $ \n\nThis is a standard integral, and its result is:\n\n $ \\ln ( x + { \\sqrt { x ^ { 2 } + y ^ { 2 } } } ) { \\bigg \\vert } _ { 0 } ^ { x } = \\ln ( x + { \\sqrt { 2 x ^ { 2 } } } ) . $ \n\nThis simplifies to:\n\n $ \\ln ( x + x { \\sqrt { 2 } } ) = \\ln ( x ( 1 + { \\sqrt { 2 } } ) ) = \\ln x + \\ln ( 1 + { \\sqrt { 2 } } ) . $ \n\nNext, integrate with respect to x:\n\n $ \\int _ { 0 } ^ { \\frac { 1 } { \\sqrt { 2 } } } \\left( \\ln x + \\ln ( 1 + { \\sqrt { 2 } } ) \\right) d x . $ \n\nThis is a straightforward integration, and the result gives the value of I. The next step involves evaluating the expression for $e ^ { l + \\pi }$\nQuick Tip\n\nWhen handling integrals with square roots, recognize the standard forms and simplify step-by-step."
+}

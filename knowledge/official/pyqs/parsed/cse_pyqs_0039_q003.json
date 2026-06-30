@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q3",
+  "question_seq": 39,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the following is used to represent the supporting many-ore relationships of a weak entity set in an entity-relationship diagram?",
+  "options": {
+    "A": "Rectangles with double/bold border",
+    "B": "Ovals with double/bold border",
+    "C": "Ovals that contain underlined identifiers",
+    "D": "Diamonds with double/bold border"
+  },
+  "answer": "D",
+  "solution": "To determine which option is used to represent the supporting many-ore relationships of a weak entity set in an entity-relationship diagram, let's analyze each option step by step.\n\n1. **Option (A): Rectangles with double/bold border**\n   - Rectangles in an entity-relationship diagram typically represent entities or tables.\n   - A double/bold border is used to indicate a primary key or a unique identifier.\n   - This option is not used to represent the supporting many-ore relationships.\n\n2. **Option (B): Ovals with double/bold border**\n   - Ovals in an entity-relationship diagram represent tables or relationships.\n   - A double/bold border is used to indicate a primary key or a unique identifier.\n   - This option is not used to represent the supporting many-ore relationships.\n\n3. **Option (C): Ovals that contain underlined identifiers**\n   - Ovals in an entity-relationship diagram represent tables or relationships.\n   - Underlined identifiers are used to indicate foreign keys or relationships between tables.\n   - This option is not used to represent the supporting many-ore relationships.\n\n4. **Option (D): Diamonds with double/bold border**\n   - Diamonds in an entity-relationship diagram represent relationships.\n   - A double/bold border is used to indicate a primary key or a unique identifier.\n   - This option is used to represent the supporting many-ore relationships.\n\nTherefore, the correct answer is \\boxed{D}.",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q32",
+  "question_seq": 37,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable having uniform distribution on $\\left[ - \\frac { \\pi } { 2 } , \\frac { \\pi } { 2 } \\right]$ . Then which one of the following statements is NOT true?",
+  "options": {
+    "A": "Y = cot X follows standard Cauchy distribution",
+    "B": "Y = tan X follows standard Cauchy distribution",
+    "C": "$\\begin{array} { r } { Y = - \\log _ { e } \\left( \\frac { 1 } { 2 } + \\frac { X } { \\pi } \\right) } \\end{array}$ has moment generating function $\\begin{array} { r } { M ( t ) = \\frac { 1 } { 1 - t } , t < 1 } \\end{array}$",
+    "D": "$\\begin{array} { r } { Y = - 2 \\log _ { e } \\left( \\frac { 1 } { 2 } + \\frac { X } { \\pi } \\right) } \\end{array}$ follows central chi-square distribution with one degree of freedom"
+  },
+  "answer": "D",
+  "solution": "We are given a uniform distribution for X on the interval $\\left[ - \\frac { \\pi } { 2 } , \\frac { \\pi } { 2 } \\right]$\n\nStep 1: Check each option.\n\n\\- Option (A) is correct because cot X for a uniformly distributed variable on $[ - \\frac { \\pi } { 2 } , \\frac { \\pi } { 2 } ]$ follows a standard Cauchy distribution.\n\n\\- Option (B) is correct because tan X also follows a standard Cauchy distribution.\n\n\\- Option (C) is correct because the transformation $\\begin{array} { r } { Y = - \\log _ { e } \\left( \\frac { 1 } { 2 } + \\frac { X } { \\pi } \\right) } \\end{array}$ gives a moment generating function as described.\n\n\\- Option (D) is incorrect because $\\begin{array} { r } { Y = - 2 \\log _ { e } \\left( \\frac { 1 } { 2 } + \\frac { X } { \\pi } \\right) } \\end{array}$ does not follow a central chi-square distribution with one degree of freedom.\n\nFinal Answer:\n\n$Y = - 2 \\log _ { e } \\left( { \\frac { 1 } { 2 } } + { \\frac { X } { \\pi } } \\right)$ does not follow central chi-square distribution\nQuick Tip\n\nWhen working with transformations of uniform distributions, use the moment generating function or known distribution properties to identify the resulting distribution."
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q45",
+  "question_seq": 146,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The baseline execution time of a program on a 2 GHz single core machine is 100 nanoseconds (ns). The code corresponding to 90% of the execution time can be fully parallelized. The overhead for using an additional core is 10 ns when running on a multicore system. Assume that all cores in the multicore system run their share of the parallelized code for an equal amount of time. The number of cores that minimize the execution time of the program is \\_",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine the number ofcores that minimize the execution time of the program, we need to analyze the execution time for different numbers ofcores. Let's denote the number ofcores by \\( n \\).\n\n1. **Calculate the parallelized and sequential parts of the code:**\n   - The baseline execution time of the program is 100 ns.\n   - The code corresponding to 90% of the execution time can be fully parallelized. Therefore, the parallelized part of the code takes \\( 0.9 \\times 100 = 90 \\) ns.\n   - The sequential part of the code takes \\( 100 - 90 = 10 \\) ns.\n\n2. **Determine the execution time for \\( n \\) cores:**\n   - When running on \\( n \\) cores, the parallelized part of the code will be divided equally among the cores. So, each core will execute \\( \\frac{90}{n} \\) ns of the parallelized code.\n   - The overhead for using an additional core is 10 ns. Therefore, the total execution time for \\( n \\) cores is given by:\n     \\[\n     T(n) = 10 + \\frac{90}{n} + 10(n-1) = 10 + \\frac{90}{n} + 10n - 10 = 10n + \\frac{90}{n}\n     \\]\n\n3. **Find the value of \\( n \\) that minimizes \\( T(n) \\):**\n   - To find the minimum value of \\( T(n) \\), we take the derivative of \\( T(n) \\) with respect to \\( n \\) and set it to zero:\n     \\[\n     T'(n) = 10 - \\frac{90}{n^2}\n     \\]\n     Setting \\( T'(n) = 0 \\):\n     \\[\n     10 - \\frac{90}{n^2} = 0 \\implies 10 = \\frac{90}{n^2} \\implies n^2 = 9 \\implies n = 3\n     \\]\n   - Since \\( n \\) must be a positive integer, we check the values of \\( T(n) \\) for \\( n = 2 \\), \\( n = 3 \\), and \\( n = 4 \\) to confirm that \\( n = 3 \\) gives the minimum execution time.\n     \\[\n     T(2) = 10 \\cdot 2 + \\frac{90}{2} = 20 + 45 = 65 \\text{ ns}\n     \\]\n     \\[\n     T(3) = 10 \\cdot 3 + \\frac{90}{3} = 30 + 30 = 60 \\text{ ns}\n     \\]\n     \\[\n     T(4) = 10 \\cdot 4 + \\frac{90}{4} = 40 + 22.5 = 62.5 \\text{ ns}\n     \\]\n   - From these calculations, we see that \\( T(3) = 60 \\) ns is the minimum execution time.\n\nTherefore, the number ofcores",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

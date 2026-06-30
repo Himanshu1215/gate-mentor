@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q12",
+  "question_seq": 157,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The value of x such that $x > 1$ , satisfying the equation $\\int _ { 1 } ^ { x } t \\ln t d t = \\frac { 1 } { 4 }$ is",
+  "options": {
+    "A": "$\\sqrt { e }$",
+    "C": "$\\boldsymbol { \\mathrm { e } } ^ { 2 }$",
+    "B": "$\\boldsymbol { \\theta }$",
+    "D": "$e - 1$ [2025 (Set-2) : 1 M]"
+  },
+  "answer": "A",
+  "solution": "To solve the equation \\(\\int_{1}^{x} t \\ln t \\, dt = \\frac{1}{4}\\), we need to evaluate the integral on the left-hand side. We will use integration by parts, which is given by the formula:\n\n\\[\n\\int u \\, dv = uv - \\int v \\, du\n\\]\n\nFor the integral \\(\\int t \\ln t \\, dt\\), we choose:\n\\[\nu = \\ln t \\quad \\text{and} \\quad dv = t \\, dt\n\\]\n\nThen, we find \\(du\\) and \\(v\\):\n\\[\ndu = \\frac{1}{t} \\, dt \\quad \\text{and} \\quad v = \\frac{t^2}{2}\n\\]\n\nApplying integration by parts:\n\\[\n\\int t \\ln t \\, dt = \\ln t \\cdot \\frac{t^2}{2} - \\int \\frac{t^2}{2} \\cdot \\frac{1}{t} \\, dt\n\\]\n\nSimplify the integral on the right-hand side:\n\\[\n\\int t \\ln t \\, dt = \\frac{t^2 \\ln t}{2} - \\int \\frac{t}{2} \\, dt\n\\]\n\nEvaluate the remaining integral:\n\\[\n\\int \\frac{t}{2} \\, dt = \\frac{1}{2} \\int t \\, dt = \\frac{1}{2} \\cdot \\frac{t^2}{2} = \\frac{t^2}{4}\n\\]\n\nPutting it all together:\n\\[\n\\int t \\ln t \\, dt = \\frac{t^2 \\ln t}{2} - \\frac{t^2}{4}\n\\]\n\nNow, we evaluate this integral from 1 to \\(x\\):\n\\[\n\\int_{1}^{x} t \\ln t \\, dt = \\left[ \\frac{t^2 \\ln t}{2} - \\frac{t^2}{4} \\right]_{1}^{x}\n\\]\n\nSubstitute the limits of integration:\n\\[\n\\left[ \\frac{x^2 \\ln x}{2} - \\frac{x^2}{4} \\right] - \\left[ \\frac{1^2 \\ln 1}{2} - \\frac{1^2}{4} \\right]\n\\]\n\nSince \\(\\ln 1 = 0\\):\n\\[\n\\left[ \\frac{x^2 \\ln x}{2} - \\frac{x^2}{4} \\right] - \\left[ 0 - \\frac{1}{4} \\right] = \\frac{x^2 \\ln x}{2} - \\frac{x^2}{4} + \\frac{1}{4}\n\\]\n\nSet this equal to \\(\\frac{1}{4}\\):\n\\[\n\\frac{x^2 \\ln x}{2} - \\frac{x^2}{4} + \\frac{1}{4} = \\frac{1}{4}\n\\]\n\nSubtract \\(\\frac{1}{4}\\) from both sides:\n\\[\n\\frac{x^2 \\ln x}{2} - \\frac{x^2}{4} = 0\n\\]\n\nFactor out",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

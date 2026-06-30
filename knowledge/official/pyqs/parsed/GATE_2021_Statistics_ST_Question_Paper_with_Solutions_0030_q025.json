@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q25",
+  "question_seq": 30,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $Y _ { i } = \\alpha + \\beta x _ { i } + \\epsilon _ { i } ,$ where $x _ { i }$ ’s are fixed covariates, $\\alpha$ and $\\beta$ are unknown parameters, and $\\epsilon _ { i } { ' } \\mathbf { s }$ are independent and identically distributed random variables with mean zero and finite variance. Let $\\hat { \\alpha }$ and $\\hat { \\beta }$ be the ordinary least squares estimators of α and $\\beta ,$ respectively. Given the following observations: <table><tr><td> $y _ { i }$ </td><td> $x _ { i }$ </td></tr><tr><td>8.62</td><td>3.29</td></tr><tr><td>26.86</td><td>21.53</td></tr><tr><td>54.02</td><td>48.69</td></tr></table> The value of ${ \\hat { \\alpha } } + { \\hat { \\beta } } $ equals (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "The ordinary least squares (OLS) estimators for α and $\\beta$ are calculated using the following formulae:\n\n $ { \\hat { \\beta } } = { \\frac { \\sum _ { i = 1 } ^ { n } ( x _ { i } - { \\bar { x } } ) ( y _ { i } - { \\bar { y } } ) } { \\sum _ { i = 1 } ^ { n } ( x _ { i } - { \\bar { x } } ) ^ { 2 } } } $ \n\n $ \\hat { \\alpha } = \\bar { y } - \\hat { \\beta } \\bar { x } $ \n\nUsing the given data, we compute the estimates for $\\hat { \\alpha }$ and ${ \\hat { \\boldsymbol { \\beta } } } ,$ , and the sum $\\hat { \\alpha } + \\hat { \\beta } = 6 . 3 3$ Thus, the value of ${ \\hat { \\alpha } } + { \\hat { \\beta } } $ is 6.33.\nQuick Tip\n\nFor linear regression, use the OLS formulas to estimate the parameters α and $\\beta$ and compute the desired quantities."
+}

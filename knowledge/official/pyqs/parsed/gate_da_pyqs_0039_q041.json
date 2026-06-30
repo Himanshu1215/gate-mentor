@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q41",
+  "question_seq": 39,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "For $x \\in \\mathbb { R }$ , the floor function is denoted by $f ( x ) = \\lfloor x \\rfloor$ and defined as follows $ \\lfloor x \\rfloor = k , k \\leq x < k + 1 , $ where $k$ is an integer. Let $Y = \\lfloor X \\rfloor$ , where X is an exponentially distributed random variable with mean $\\frac { 1 } { \\ln { 1 0 } }$ , where ln denotes natural logarithm. For any positive integer $\\ell ,$ one can write the probability of the event $Y = \\ell$ as follows $ P ( Y = \\ell ) = q ^ { \\ell } ( 1 - q ) $",
+  "options": null,
+  "answer": null,
+  "solution": "To solve for \\( P(Y = \\ell) \\) where \\( Y = \\lfloor X \\rfloor \\) and \\( X \\) is an exponentially distributed random variable with mean \\( \\frac{1}{\\ln 10} \\), we need to follow these steps:\n\n1. **Determine the probability density function (pdf) of \\( X \\):**\n\n   The pdf of an exponentially distributed random variable \\( X \\) with mean \\( \\mu \\) is given by:\n   \\[\n   f(x) = \\frac{1}{\\mu} e^{-\\frac{x}{\\mu}}\n   \\]\n   Given \\( \\mu = \\frac{1}{\\ln 10} \\), we substitute this value into the pdf:\n   \\[\n   f(x) = \\ln 10 \\cdot e^{-\\ln 10 \\cdot x}\n   \\]\n\n2. **Express \\( P(Y = \\ell) \\) in terms of \\( X \\):**\n\n   Since \\( Y = \\lfloor X \\rfloor \\), the event \\( Y = \\ell \\) occurs when \\( \\ell \\leq X < \\ell + 1 \\). Therefore:\n   \\[\n   P(Y = \\ell) = P(\\ell \\leq X < \\ell + 1)\n   \\]\n\n3. **Integrate the pdf over the interval \\([ \\ell, \\ell + 1 ]\\):**\n\n   To find \\( P(\\ell \\leq X < \\ell + 1) \\), we integrate the pdf \\( f(x) \\) from \\( \\ell \\) to \\( \\ell + 1 \\):\n   \\[\n   P(\\ell \\leq X < \\ell + 1) = \\int_{\\ell}^{\\ell + 1} \\ln 10 \\cdot e^{-\\ln 10 \\cdot x} \\, dx\n   \\]\n\n4. **Evaluate the integral:**\n\n   We use the substitution \\( u = -\\ln 10 \\cdot x \\). Then \\( du = -\\ln 10 \\, dx \\) or \\( dx = -\\frac{1}{\\ln 10} \\, du \\). The limits of integration change as follows:\n   - When \\( x = \\ell \\), \\( u = -\\ln 10 \\cdot \\ell \\)\n   - When \\( x = \\ell + 1 \\), \\( u = -\\ln 10 \\cdot (\\ell + 1) \\)\n\n   Substituting these into the integral, we get:\n   \\[\n   \\int_{\\ell}^{\\ell + 1} \\ln 10 \\cdot e^{-\\ln 10 \\cdot x} \\, dx = \\int_{-\\ln 10 \\cdot \\ell}^{-\\ln 10 \\cdot (\\ell + 1)} \\ln 10 \\cdot e^u \\left( -\\frac{1}{\\ln 10} \\right) \\, du\n   \\]\n   Simplifying the integrand:\n   \\[\n   = \\int_{-\\ln 10 \\cdot \\ell}^{-\\ln 10 \\cdot (\\ell + 1)} -e^u \\, du\n   \\]\n   \\[\n   = -\\",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

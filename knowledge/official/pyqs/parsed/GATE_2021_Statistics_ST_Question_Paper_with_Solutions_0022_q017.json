@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q17",
+  "question_seq": 22,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "If the marginal probability density function of the kth order statistic of a random sample of size 8 from a uniform distribution on [0, 2] is $ f ( x ) = { \\left\\{ \\begin{array} { l l } { { \\frac { 7 } { 3 2 } } x ^ { 6 } ( 2 - x ) , } & { 0 < x < 2 , } \\\\ { 0 , } & { { \\mathrm { o t h e r w i s e } } , } \\end{array} \\right. } $ then k equals (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "Given the marginal probability density function, we can recognize that this corresponds to the distribution of an order statistic from a uniform distribution. By analyzing the form of the density function, we find that:\n\n $ k = 7 . $ \n\nThus, the value is 7.\nQuick Tip\n\nFor order statistics, the density function often takes a specific form depending on the sample size and the order k."
+}

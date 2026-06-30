@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q39",
+  "question_seq": 37,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let ?? be a random variable with probability density function $ f ( x ) = \\left\\{ \\begin{array} { l l } { \\displaystyle \\frac { c _ { 1 } } { \\sqrt { x } } } & { \\mathrm { ~ i f ~ } 0 < x \\leq 1 } \\\\ { \\displaystyle \\frac { c _ { 2 } } { x ^ { 2 } } } & { \\mathrm { ~ i f ~ } 1 < x < \\infty } \\\\ { 0 } & { \\mathrm { ~ o t h e r w i s e , } } \\end{array} \\right. $ where $c _ { 1 }$ and $c _ { 2 }$ are appropriate real constants. If $P \\left( X \\in \\left[ { \\frac { 1 } { 4 } } , 4 \\right] \\right) = { \\frac { 5 } { 8 } }$ , then consider the following statements: (I) $\\begin{array} { r } { P ( X \\in [ 3 , 5 ] ) = \\frac { 1 } { 1 2 } } \\end{array}$ (II) Both ?? as well as $\\frac { 1 } { X }$ do not have finite expectations. Which of the above statements is/are true?",
+  "options": {
+    "A": "Only (I)",
+    "B": "Only (II)",
+    "C": "Both (I) and (II)",
+    "D": "Neither (I) nor (II)"
+  },
+  "answer": null,
+  "solution": "To solve the problem, we need to determine the values of \\( c_1 \\) and \\( c_2 \\) and then check the given statements.\n\nFirst, we use the fact that the total probability must be 1. Therefore, we have:\n\\[\n\\int_{0}^{1} \\frac{c_1}{\\sqrt{x}} \\, dx + \\int_{1}^{\\infty} \\frac{c_2}{x^2} \\, dx = 1\n\\]\n\nWe evaluate each integral separately. For the first integral:\n\\[\n\\int_{0}^{1} \\frac{c_1}{\\sqrt{x}} \\, dx = c_1 \\int_{0}^{1} x^{-1/2} \\, dx = c_1 \\left[ 2x^{1/2} \\right]_{0}^{1} = c_1 (2 \\cdot 1^{1/2} - 2 \\cdot 0^{1/2}) = 2c_1\n\\]\n\nFor the second integral:\n\\[\n\\int_{1}^{\\infty} \\frac{c_2}{x^2} \\, dx = c_2 \\int_{1}^{\\infty} x^{-2} \\, dx = c_2 \\left[ -x^{-1} \\right]_{1}^{\\infty} = c_2 \\left( 0 - (-1) \\right) = c_2\n\\]\n\nAdding these results together, we get:\n\\[\n2c_1 + c_2 = 1\n\\]\n\nNext, we use the given information that \\( P(X \\in [1/4, 4]) = \\frac{5}{8} \\). This probability can be expressed as:\n\\[\nP(X \\in [1/4, 4]) = \\int_{1/4}^{1} \\frac{c_1}{\\sqrt{x}} \\, dx + \\int_{1}^{4} \\frac{c_2}{x^2} \\, dx\n\\]\n\nWe evaluate each integral separately. For the first integral:\n\\[\n\\int_{1/4}^{1} \\frac{c_1}{\\sqrt{x}} \\, dx = c_1 \\int_{1/4}^{1} x^{-1/2} \\, dx = c_1 \\left[ 2x^{1/2} \\right]_{1/4}^{1} = c_1 (2 \\cdot 1^{1/2} - 2 \\cdot (1/4)^{1/2}) = c_1 (2 - 1) = c_1\n\\]\n\nFor the second integral:\n\\[\n\\int_{1}^{4} \\frac{c_2}{x^2} \\, dx = c_2 \\int_{1}^{4} x^{-2} \\, dx = c_2 \\left[ -x^{-1} \\right]_{1}^{4} = c_2 \\left( -\\frac{1}{4} - (-1) \\right) = c_2 \\left( 1 - \\frac{1}{4} \\right) = c_2 \\cdot \\frac",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

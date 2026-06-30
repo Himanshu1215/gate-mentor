@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q57",
+  "question_seq": 50,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $P = { \\binom { 2 } { 1 } } \\ 1 ) \\mathbf { a n d } \\ Q = { ( \\begin{array} { l l } { 1 } & { 1 } \\\\ { - 2 } & { 4 } \\end{array} ) }$ . Then the value of trace $( P ^ { 5 } + Q ^ { 4 } )$ equals:",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Trace of a Matrix\n\nRecall that the trace of a matrix is the sum of its diagonal elements. The trace function is linear, so:\n\n $ \\mathrm { t r a c e } ( P ^ { 5 } + Q ^ { 4 } ) = \\mathrm { t r a c e } ( P ^ { 5 } ) + \\mathrm { t r a c e } ( Q ^ { 4 } ) . $ \nStep 2: Calculating trace $( P ^ { 5 } )$\n\nFirst, we compute the first few powers of $P \\colon$\n\n $ P ^ { 2 } = { \\binom { 2 } { 1 } } \\ 1 \\left( { \\begin{array} { l l } { 2 } & { 1 } \\\\ { 1 } & { 2 } \\end{array} } \\right) = { \\binom { 5 } { 4 } } \\ 4 \\quad $ \n\n $ P ^ { 3 } = { \\binom { 5 } { 4 } } \\ 4 ) ( \\begin{array} { l l } { { 2 } } & { { 1 } } \\\\ { { 1 } } & { { 2 } } \\end{array} ) = { \\binom { 1 4 } { 1 3 } } \\ 1 3 ) . $ \n\n $ P ^ { 4 } = { \\binom { 1 4 } { 1 3 } } \\ 1 3 { \\binom { 2 } { 1 } } \\ 1 = { \\binom { 3 9 4 1 } { 4 1 3 9 } } \\ . $ \n\n $ P ^ { 5 } = { \\binom { 3 9 4 1 } { 4 1 3 9 } } \\left( 2 1 2 \\right) = { \\binom { 1 1 9 1 1 9 } { 1 1 9 } } . $ \n\nThe trace of $P ^ { 5 }$ is the sum of the diagonal elements:\n\n $ \\mathrm { t r a c e } ( P ^ { 5 } ) = 1 1 9 + 1 1 9 = 2 3 8 . $ \nStep 3: Calculating trace $( Q ^ { 4 } )$\n\nNext, we calculate the powers of $Q$\n\n $ Q ^ { 2 } = { \\binom { 1 } { - 2 } } \\ 1 ( \\begin{array} { l l } { { 1 } } & { { 1 } } \\\\ { { - 2 } } & { { 4 } } \\end{array} ) = { \\binom { - 1 } { - 6 } } \\ 5 \\atop 1 5 ) \\ . $ \n\n $ Q ^ { 3 } = { \\binom { - 1 \\quad 5 } { - 6 \\quad 1 5 } } \\left( \\begin{array} { l l } { { 1 } } & { { 1 } } \\\\ { { - 2 } } & { { 4 } } \\end{array} \\right) = { \\binom { - 1 1 \\quad 2 9 } { - 2 4 \\quad 6 0 } } . $ \n\n $ Q ^ { 4 } = { \\binom { - 1 1 } { - 2 4 } } \\ 2 9 ( { \\begin{array} { l l } { 1 } & { 1 } \\\\ { - 2 } & { 4 } \\end{array} } ) = { \\binom { - 5 9 } { - 1 2 0 } } \\ 1 4 7 ) . $ \n\nThe trace of $Q ^ { 4 }$ is the sum of the diagonal elements:\n\n $ \\operatorname { t r a c e } ( Q ^ { 4 } ) = - 5 9 + 3 0 0 = 2 4 1 . $ \nStep 4: Final Calculation\n\nNow we can add the traces of $P ^ { 5 }$ and $Q ^ { 4 }$ :\n\n $ \\mathrm { t r a c e } ( P ^ { 5 } + Q ^ { 4 } ) = 2 3 8 + 2 4 1 = 3 4 1 . $ \n\nThus, the value of trace $( P ^ { 5 } + Q ^ { 4 } ) { \\mathrm { ~ i s } } [ 3 4 1 ] .$\nQuick Tip\n\nTo compute the trace of matrix powers, first calculate the matrix powers and then sum the diagonal elements. The trace function is linear, so you can separate the trace of the sum of matrices."
+}

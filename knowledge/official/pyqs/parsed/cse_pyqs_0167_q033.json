@@ -1,0 +1,17 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q33",
+  "question_seq": 167,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "int x = 126, y = 105;",
+  "options": {
+    "D": "o { if(x > y) x = x − y; else y = y − x; }while(x!=y); printf(“%d”, x); The output of the given C code segment is \\_. ("
+  },
+  "answer": "A",
+  "solution": "To determine the output of the given C code segment, we need to analyze the loop and how it affects the values of \\(x\\) and \\(y\\). The code segment is:\n\n```c\nint x = 126, y = 105;\nwhile(x != y) {\n    if(x > y) x = x - y;\n    else y = y - x;\n}\nprintf(\" %d\", x);\n```\n\nThis code segment is an implementation of the Euclidean algorithm, which is used to find the greatest common divisor (GCD) of two numbers. The Euclidean algorithm works by repeatedly replacing the larger number by the remainder of the division of the larger number by the smaller number until the two numbers are equal. The final value of \\(x\\) (or \\(y\\)) will be the GCD of the original two numbers.\n\nLet's step through the loop with the initial values \\(x = 126\\) and \\(y = 105\\):\n\n1. **First iteration:**\n   - \\(x = 126\\) and \\(y = 105\\)\n   - Since \\(x > y\\), we set \\(x = x - y = 126 - 105 = 21\\)\n   - Now \\(x = 21\\) and \\(y = 105\\)\n\n2. **Second iteration:**\n   - \\(x = 21\\) and \\(y = 105\\)\n   - Since \\(y > x\\), we set \\(y = y - x = 105 - 21 = 84\\)\n   - Now \\(x = 21\\) and \\(y = 84\\)\n\n3. **Third iteration:**\n   - \\(x = 21\\) and \\(y = 84\\)\n   - Since \\(y > x\\), we set \\(y = y - x = 84 - 21 = 63\\)\n   - Now \\(x = 21\\) and \\(y = 63\\)\n\n4. **Fourth iteration:**\n   - \\(x = 21\\) and \\(y = 63\\)\n   - Since \\(y > x\\), we set \\(y = y - x = 63 - 21 = 42\\)\n   - Now \\(x = 21\\) and \\(y = 42\\)\n\n5. **Fifth iteration:**\n   - \\(x = 21\\) and \\(y = 42\\)\n   - Since \\(y > x\\), we set \\(y = y - x = 42 - 21 = 21\\)\n   - Now \\(x = 21\\) and \\(y = 21\\)\n\nAt this point, \\(x\\) and \\(y\\) are equal, so the loop terminates. The final value of \\(x\\) (or \\(y\\)) is 21, which is the GCD of 126 and 105.\n\nTherefore, the output of the given C code segment is \\(\\boxed{21}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

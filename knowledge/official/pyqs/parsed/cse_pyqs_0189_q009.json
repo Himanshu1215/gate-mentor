@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q9",
+  "question_seq": 189,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In the 2020 summer Olympics' Javelin throw finals, Neeraj Chopra exhibited a spectacular performance to win the gold medal. The silver medal was won by Jakub Vadlejch and the bronze medal was won by Vitezlav Vesely. There were six rounds of throws with each athlete having one throw per round. The best of all the throws of each athlete is considered for the medal. Following were the observations about the throws: (i) The first and second rounds were dominated by Neeraj Chopra with a gold medal performance in his second throw, while the other two athletes did not have any medal winning throws in these rounds (ii) The throws in the last round by both Jakub Vadlejch and Vitezlav Vesely were fouls and were not considered for scoring. (iii) After four rounds, Vitezlav Vesely was in the second position and could not improve upon his best throw in the succeeding rounds. (iv) In the fourth round, the throw by Jakub Vadlejch was the best in that round In which round did Vitezlav Vesely have his best throw?",
+  "options": {
+    "A": "Third (b) Fourth",
+    "C": "Fifth (d) Sixth"
+  },
+  "answer": "A",
+  "solution": "To determine in which round Vitialav Vesely had his best throw, let's analyze the given information step by step.\n\n1. **First and Second Rounds:**\n   - Neeraj Chopra dominated these rounds with a gold medal performance in his second throw.\n   - The other two athletes (Jakub Vojaljch and Vitialav Vesely) did not have any medal winning throws in these rounds.\n\n2. **Last Round:**\n   - Both Jakub Vojaljch and Vitialav Vesely had fouls in the last round, so their throws were not considered for scoring.\n\n3. **After Four Rounds:**\n   - Vitialav Vesely was in the second position.\n   - He could not improve upon his best throw in the succeeding rounds.\n\n4. **Fourth Round:**\n   - In the fourth round, the throw by Jakub Vojaljch was the best in that round.\n\nLet's summarize the information and deduce the best throw for Vitialav Vesely:\n\n- Neeraj Chopra's best throw was in his second round.\n- Jakub Vojaljch's best throw was in his fourth round.\n- Vitialav Vesely was in the second position after four rounds and could not improve upon his best throw in the succeeding rounds.\n\nSince Vitialav Vesely was in the second position after four rounds, his best throw must have been in one of the first four rounds. Given that he could not improve upon his best throw in the succeeding rounds, his best throw must have been in one of the first three rounds.\n\nSince Neeraj Chopra's best throw was in his second round and Jakub Vojaljch's best throw was in his fourth round, Vitialav Vesely's best throw must have been in either the first or third round. However, since Vitialav Vesely was in the second position after four rounds, his best throw cannot have been in the first round (because then he would have been in first place after four rounds). Therefore, his best throw must have been in the third round.\n\nThus, Vitialav Vesely had his best throw in the third round.\n\nThe answer is: \\boxed{A}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

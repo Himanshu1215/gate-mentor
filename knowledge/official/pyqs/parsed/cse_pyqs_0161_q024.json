@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q24",
+  "question_seq": 161,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which ONE of the following languages is accepted by a deterministic pushdown automaton? (a) Any regular language (b) Any context-free language. (c) Any language accepted by a non-deterministic pushdown automaton (d) Any decidable language. [2025 (Set-2) : 1 M]",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine which language is accepted by a deterministic pushdown automaton (DPDA), let's analyze each option step by step.\n\n1. **Option (a): Any regular language**\n   - A regular language can be recognized by a deterministic finite automaton (DFA). A DFA is a simpler machine than a DPDA, as it does not have a stack. However, every regular language can also be recognized by a DPDA by simply ignoring the stack. Therefore, any regular language is accepted by a DPDA.\n\n2. **Option (b): Any context-free language**\n   - A context-free language is a language that can be recognized by a non-deterministic pushdown automaton (NPDA). However, not all context-free languages can be recognized by a deterministic pushdown automaton. For example, the language \\( \\{a^n b^n \\mid n \\geq 0\\} \\) is context-free but cannot be recognized by a DPDA because the DPDA would need to count the number of \\(a\\)'s and then match it with the number of \\(b\\)'s, which requires non-determinism. Therefore, not all context-free languages are accepted by a DPDA.\n\n3. **Option (c): Any language accepted by a non-deterministic pushdown automaton**\n   - This option is the same as option (b), which we have already determined is not correct. Therefore, not all languages accepted by an NPDA are accepted by a DPDA.\n\n4. **Option (d): Any decidable language**\n   - A decidable language is a language that can be recognized by a Turing machine. While all languages accepted by a DPDA are decidable, not all decidable languages can be recognized by a DPDA. For example, the language of all palindromes over the alphabet \\( \\{a, b\\} \\) is decidable but cannot be recognized by a DPDA because the DPDA would need to check the entire string to determine if it is a palindrome, which requires more than a stack. Therefore, not all decidable languages are accepted by a DPDA.\n\nBased on the analysis, the correct answer is:\n\n\\[\n\\boxed{A}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

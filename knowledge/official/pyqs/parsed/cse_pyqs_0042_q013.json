@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q13",
+  "question_seq": 42,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "What is the worst case time complexity of inserting $\\boldsymbol { \\eta ^ { 2 } }$ elements into an AVL-tree with elements initially? (a) θ( <sup>4</sup>) (b) $\\mathsf { \\theta } ( n ^ { 2 } \\mathsf { \\ l o g } n )$ (c) $\\theta ( n ^ { 3 } )$ (d) $\\theta ( n ^ { 2 } )$",
+  "options": null,
+  "answer": "B",
+  "solution": "To determine the worst-case time complexity of inserting \\( \\eta^2 \\) elements into an AVL tree with \\( n \\) initial elements, we need to consider the properties of an AVL tree. An AVL tree is a self-balancing binary search tree where the heights of the two child subtrees of any node differ by at most one. The time complexity of inserting an element into anAVL tree is \\( O(\\log n) \\) in the worst case, where \\( n \\) is the number of elements in the tree.\n\nHere are the steps to find the worst-case time complexity of inserting \\( \\eta^2 \\) elements into anAVL tree with \\( n \\) initial elements:\n\n1. **Initial Time Complexity**: The initial number of elements in the tree is \\( n \\). The time complexity of inserting one element into anAVL tree with \\( n \\) elements is \\( O(\\log n) \\).\n\n2. **Inserting \\( \\eta^2 \\) Elements**: When we insert \\( \\eta^2 \\) elements, each insertion operation takes \\( O(\\log n) \\) time. Therefore, the total time complexity for inserting \\( \\eta^2 \\) elements is:\n   \\[\n   \\eta^2 \\times O(\\log n) = O(\\eta^2 \\log n)\n   \\]\n\n3. **Considering the Initial Number of Elements**: After inserting \\( \\eta^2 \\) elements, the total number of elements in the tree becomes \\( n + \\eta^2 \\). However, the time complexity of each insertion operation is based on the number of elements at the time of each insertion, not the final number of elements. Since \\( \\eta^2 \\) is much larger than \\( n \\) in the worst-case scenario (where \\( \\eta^2 \\) is close to \\( n^2 \\)), we can approximate the time complexity as \\( O(n^2 \\log n) \\) if we consider the worst-case scenario where \\( \\eta^2 \\approx n^2 \\).\n\n4. **Final Answer**: The worst-case time complexity of inserting \\( \\eta^2 \\) elements into anAVL tree with \\( n \\) initial elements is \\( O(n^2 \\log n) \\).\n\nTherefore, the correct answer is:\n\\[\n\\boxed{B}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

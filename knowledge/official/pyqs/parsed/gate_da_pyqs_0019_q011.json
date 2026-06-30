@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q11",
+  "question_seq": 19,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Suppose X and Y are random variables. The conditional expectation of X given Y is denoted by $E [ X | Y ]$ . Then $E [ E [ X | Y ] ]$ equals (A) $E [ X | Y ]$ (B) $\\frac { E [ X ] } { E [ Y ] }$ (C) $E [ X ]$ (D) $E [ Y ]$",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the problem, we need to understand the properties of conditional expectation. Specifically, we need to use the law of total expectation, which states that the expected value of a random variable can be found by taking the expected value of its conditional expectation given another random variable.\n\nThe law of total expectation is given by:\n\\[ E[X] = E[E[X|Y]] \\]\n\nThis means that the expected value of \\(X\\) is equal to the expected value of the conditional expectation of \\(X\\) given \\(Y\\).\n\nLet's apply this to our problem. We are asked to find \\(E[E[X|Y]]\\). According to the law of total expectation, we have:\n\\[ E[E[X|Y]] = E[X] \\]\n\nTherefore, the correct answer is:\n\\[ \\boxed{C} \\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

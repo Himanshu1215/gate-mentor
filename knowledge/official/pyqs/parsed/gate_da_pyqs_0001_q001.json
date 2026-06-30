@@ -3,17 +3,13 @@
   "exam": "GATE DA",
   "question_id": "Q1",
   "question_seq": 1,
-  "question_type": "MCQ",
+  "question_type": "NAT",
   "marks": null,
   "difficulty": null,
   "concept_id": "GENERAL",
-  "question_text": "“Which algorithm sort the array in exactly using 2 swap [4, 3, 2, 1, 5] Selection sort Insertion sort",
-  "options": {
-    "B": "ubble sort”",
-    "A": "Selection sort",
-    "C": "Buffel sort",
-    "D": "None of these Sol."
-  },
+  "question_text": "“Which algorithm sort the array in exactly using 2 swap [4, 3, 2, 1, 5] Selection sort Insertion sort Bubble sort” (a) Selection sort (b) Insertion sort (c) Buffel sort (d) None of these Sol. (a) 4 3 2 1 5 1 3 2 4 5 ← end of pass 1 ↑ 1 2 3 4 5 ← end of pass 2 $\\therefore \\mathrm { ~ \\omega ~ } ^ { \\bullet } \\mathrm { ~ a ^ { \\prime } ~ }$ is",
+  "options": null,
   "answer": "A",
-  "solution": null
+  "solution": "To determine which algorithm sorts the array \\([4, 3, 2, 1, 5]\\) in exactly two swaps, we need to analyze each sorting algorithm step by step.\n\n### Selection Sort\n1. **First Pass:**\n   - Find the minimum element in the array, which is \\(1\\).\n   - Swap \\(1\\) with the first element \\(4\\).\n   - Array becomes \\([1, 3, 2, 4, 5]\\).\n\n2. **Second Pass:**\n   - Find the minimum element in the remaining array \\([3, 2, 4, 5]\\), which is \\(2\\).\n   - Swap \\(2\\) with the second element \\(3\\).\n   - Array becomes \\([1, 2, 3, 4, 5]\\).\n\nAfter two swaps, the array is sorted. Therefore, Selection Sort can sort the array in exactly two swaps.\n\n### Insertion Sort\n1. **First Pass:**\n   - Compare the second element \\(3\\) with the first element \\(4\\).\n   - Since \\(3 < 4\\), swap \\(3\\) with \\(4\\).\n   - Array becomes \\([3, 4, 2, 1, 5]\\).\n\n2. **Second Pass:**\n   - Compare the third element \\(2\\) with the second element \\(4\\).\n   - Since \\(2 < 4\\), swap \\(2\\) with \\(4\\).\n   - Compare \\(2\\) with the first element \\(3\\).\n   - Since \\(2 < 3\\), swap \\(2\\) with \\(3\\).\n   - Array becomes \\([2, 3, 4, 1, 5]\\).\n\nAfter two swaps, the array is not sorted. Therefore, Insertion Sort cannot sort the array in exactly two swaps.\n\n### Bubble Sort\n1. **First Pass:**\n   - Compare the second element \\(3\\) with the first element \\(4\\).\n   - Since \\(3 < 4\\), swap \\(3\\) with \\(4\\).\n   - Array becomes \\([3, 4, 2, 1, 5]\\).\n   - Compare the third element \\(2\\) with the second element \\(4\\).\n   - Since \\(2 < 4\\), swap \\(2\\) with \\(4\\).\n   - Array becomes \\([3, 2, 4, 1, 5]\\).\n   - Compare the fourth element \\(1\\) with the third element \\(4\\).\n   - Since \\(1 < 4\\), swap \\(1\\) with \\(4\\).\n   - Array becomes \\([3, 2, 1, 4, 5]\\).\n   - Compare the fifth element \\(5\\) with the fourth element \\(4\\).\n   - Since \\(5 > 4\\), no swap is needed.\n   - Array remains \\([3, 2, 1, 4, 5]\\).\n\nAfter one pass, the array is not sorted. Therefore, Bubble Sort cannot sort the array in exactly two swaps.\n\n### Conclusion\nThe only algorithm that can sort the array \\([4, 3, 2, 1, 5]\\) in exactly two swaps is Selection Sort.\n\nThus, the correct answer is \\(\\boxed{A}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
 }

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q62",
+  "question_seq": 235,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "The determinant of $\\textsf { a 4 } \\times \\textsf { 4 }$ matrix A is 3. The value of the determinant of 2A is \\_. (",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine the value of the determinant of \\(2A\\) given that the determinant of a \\(4 \\times 4\\) matrix \\(A\\) is 3, we can use a property of determinants. Specifically, if \\(A\\) is an \\(n \\times n\\) matrix and \\(c\\) is a scalar, then the determinant of \\(cA\\) is given by:\n\n\\[\n\\det(cA) = c^n \\det(A)\n\\]\n\nIn this problem, \\(A\\) is a \\(4 \\times 4\\) matrix, so \\(n = 4\\). The scalar \\(c\\) is 2. Therefore, we can substitute \\(c = 2\\) and \\(n = 4\\) into the formula:\n\n\\[\n\\det(2A) = 2^4 \\det(A)\n\\]\n\nWe know that \\(\\det(A) = 3\\), so we substitute this value into the equation:\n\n\\[\n\\det(2A) = 2^4 \\cdot 3\n\\]\n\nNext, we calculate \\(2^4\\):\n\n\\[\n2^4 = 16\n\\]\n\nSo, we have:\n\n\\[\n\\det(2A) = 16 \\cdot 3 = 48\n\\]\n\nTherefore, the value of the determinant of \\(2A\\) is \\(\\boxed{48}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

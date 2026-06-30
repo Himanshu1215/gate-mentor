@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q6",
+  "question_seq": 101,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The country of Zombieland is in distress since more than 75% of its working population is suffering from serious health issues. Studies conducted by competent health experts concluded that a complete lack of physical exercise among its working population was one of the leading causes of their health issues. As one of the measures to address the problem, the Government of Zombieland has decided to provide monetary incentives to those who ride bicycles to work",
+  "options": {
+    "B": "ased only on the information provided above, which one of the following statements can be logically inferred with certainty?",
+    "A": "All the working population of Zombieland will henceforth ride bicycles to work.",
+    "C": "The health experts suggested to the Government of Zombieland to declare riding bicycles as mandatory.",
+    "D": "The Government of Zombieland believes that riding bicycles is a form of physical exercise."
+  },
+  "answer": "D",
+  "solution": "To determine the correct answer, let's analyze the information given and the options provided step by step.\n\n1. **Given Information:**\n   - More than 75% of the working population in Zombieland is suffering from serious health issues.\n   - Studies conducted by competent health experts concluded that a complete lack of physical exercise among its working population was one of the leading causes of their health issues.\n   - The Government of Zombieland has decided to provide monetary incentives to those who ride bicycles to work.\n\n2. **Option Analysis:**\n   - **Option (A):** \"All the working population of Zombieland will henceforth ride bicycles to work.\"\n     - This statement is not necessarily true based on the given information. The政府 has decided to provide incentives, but it does not imply that all working people will immediately start riding bicycles. There could be other factors influencing the decision to ride bicycles.\n   - **Option (B):** \"Based only on the information provided above, which one of the following statements can be logically inferred with certainty?\"\n     - This option asks for a statement that can be logically inferred with certainty. However, based on the given information, we cannot infer any specific statement with certainty. The information only suggests a potential solution to the health issue.\n   - **Option (C):** \"The health experts suggested to the Government of Zombieland to declare riding bicycles as mandatory.\"\n     - This statement is not supported by the given information. The health experts结论 that a complete lack of physical exercise is a leading cause, but they do not suggest that riding bicycles is mandatory.\n   - **Option (D):** \"The Government of Zombieland believes that riding bicycles is a form of physical exercise.\"\n     - This statement is supported by the given information. The government has decided to provide monetary incentives to those who ride bicycles to work, which implies that they believe riding bicycles is a form of physical exercise.\n\n3. **Conclusion:**\n   - Based on the analysis, the only statement that can be logically inferred with certainty from the given information is that the Government of Zombieland believes that riding bicycles is a form of physical exercise.\n\nTherefore, the correct answer is: \\boxed{D}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

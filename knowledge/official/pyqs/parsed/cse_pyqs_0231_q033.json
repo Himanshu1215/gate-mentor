@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q33",
+  "question_seq": 231,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "If an IP network uses a subnet mask of 255.255.240.0, the maximum number of IP addresses that can be assigned to network interfaces is \\_. (",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine the maximum number of IP addresses that can be assigned to network interfaces given a subnet mask of 255.255.240.0, we need to understand how the subnet mask affects the binary representation of the IP address.\n\n1. **Identify the number of bits used for the network and host parts:**\n   - Theip address is divided into four octets: 255.255.240.0.\n   - The subnet mask 255.255.240.0 corresponds to the binary value 11111111.11111111.11110000.00000000.\n   - The first two octets (255.255) are all 1s, which means they are used for the network part.\n   - The third octet (240) is 11110000 in binary, which means the first 8 bits of the third octet are used for the network part and the last 4 bits are used for the host part.\n   - The fourth octet (0) is 00000000 in binary, which means all 8 bits are used for the host part.\n\n2. **Calculate the total number of host bits:**\n   - From the third octet, we have 4 host bits.\n   - From the fourth octet, we have 8 host bits.\n   - Therefore, the total number of host bits is \\(4 + 8 = 12\\).\n\n3. **Determine the maximum number of IP addresses:**\n   - The maximum number of IP addresses that can be assigned to network interfaces is \\(2^{12}\\) because each host bit can be either 0 or 1.\n   - Calculate \\(2^{12}\\): \\(2^{12} = 4096\\).\n\nThus, the maximum number of IP addresses that can be assigned to network interfaces is \\(\\boxed{4096}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

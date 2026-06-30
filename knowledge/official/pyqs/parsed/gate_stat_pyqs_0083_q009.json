@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q9",
+  "question_seq": 83,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Two trains started at 7AM from the same point. The first train travelled north at a speed of 80km/h and the second train travelled south at a speed of 100 km/h. The time at which they were 540 km apart is AM. (A)9 (B) 10 (C) 11 (D) 11.30",
+  "options": null,
+  "answer": null,
+  "solution": "To determine the time at which the two trains were 540 km apart, we need to calculate the total distance they traveled together. Since they are traveling in opposite directions, their relative speed is the sum of their individual speeds.\n\n1. Calculate the relative speed of the two trains:\n   \\[\n   \\text{Relative speed} = 80 \\text{ km/h} + 100 \\text{ km/h} = 180 \\text{ km/h}\n   \\]\n\n2. Determine the time it takes for the trains to be 540 km apart. We use the formula:\n   \\[\n   \\text{Distance} = \\text{Relative speed} \\times \\text{Time}\n   \\]\n   Rearranging the formula to solve for time, we get:\n   \\[\n   \\text{Time} = \\frac{\\text{Distance}}{\\text{Relative speed}} = \\frac{540 \\text{ km}}{180 \\text{ km/h}} = 3 \\text{ hours}\n   \\]\n\n3. Since the trains started at 7 AM, we add the time they traveled to find the time at which they were 540 km apart:\n   \\[\n   7 \\text{ AM} + 3 \\text{ hours} = 10 \\text{ AM}\n   \\]\n\nTherefore, the time at which they were 540 km apart is \\boxed{B}.",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

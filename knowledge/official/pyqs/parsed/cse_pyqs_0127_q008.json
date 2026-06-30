@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q8",
+  "question_seq": 127,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The number of coins of 1, 5, and 10 denominations that a person has are in the ratio 5 : 3 : 13. Of the total amount, the percentage of money in ₹5 coins is (a) $1 4 \\frac { 2 } { 7 } \\%$ (b) 10% (c) 21% (d) 30%",
+  "options": null,
+  "answer": "B",
+  "solution": "To determine the percentage of money in ₹5 coins, we start by defining the number of coins of each denomination in terms of a common variable. Let the number of coins of 1, 5, and 10 denominations be \\(5x\\), \\(3x\\), and \\(13x\\) respectively.\n\nNext, we calculate the total value of the coins. The value of the 1-rupee coins is \\(5x \\times 1 = 5x\\) rupees, the value of the 5-rupee coins is \\(3x \\times 5 = 15x\\) rupees, and the value of the 10-rupee coins is \\(13x \\times 10 = 130x\\) rupees. Therefore, the total value of all the coins is:\n\\[\n5x + 15x + 130x = 150x \\text{ rupees}\n\\]\n\nWe are asked to find the percentage of the total amount that is in ₹5 coins. The value of the 5-rupee coins is \\(15x\\) rupees, so the percentage is:\n\\[\n\\left( \\frac{15x}{150x} \\right) \\times 100\\% = \\left( \\frac{15}{150} \\right) \\times 100\\% = \\left( \\frac{1}{10} \\right) \\times 100\\% = 10\\%\n\\]\n\nThus, the percentage of money in ₹5 coins is \\(\\boxed{10\\%}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

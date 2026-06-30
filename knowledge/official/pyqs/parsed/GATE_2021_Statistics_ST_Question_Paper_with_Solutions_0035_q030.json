@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q30",
+  "question_seq": 35,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let A be a $3 \\times 3$ real matrix such that $I _ { 3 } + A$ is invertible and let $ B = ( I _ { 3 } + A ) ^ { - 1 } ( I _ { 3 } - A ) , $ where $I _ { 3 }$ denotes the $3 \\times 3$ identity matrix. Then which one of the following statements is true?",
+  "options": {
+    "A": "If B is orthogonal, then A is invertible",
+    "B": "If B is orthogonal, then all the eigenvalues of A are real",
+    "C": "If B is skew-symmetric, then A is orthogonal",
+    "D": "If B is skew-symmetric, then the determinant of A equals −1"
+  },
+  "answer": "C",
+  "solution": "We are given that $B = ( I _ { 3 } + A ) ^ { - 1 } ( I _ { 3 } - A )$ and need to determine the correct statement.\n\nStep 1: Analyze the properties of B.\n\nWe need to find the condition under which B is skew-symmetric, i.e., $B ^ { T } = - B$ . From the definition of B, we have:\n\n $ B ^ { T } = \\left( ( I _ { 3 } + A ) ^ { - 1 } ( I _ { 3 } - A ) \\right) ^ { T } = ( I _ { 3 } - A ) ^ { T } ( I _ { 3 } + A ) ^ { - 1 } . $ \n\nSince A is a real matrix, we get:\n\n $ B ^ { T } = ( I _ { 3 } - A ) ( I _ { 3 } + A ) ^ { - 1 } . $ \n\nFor $B ^ { T } = - B$ , we obtain the condition that A must be orthogonal, as this ensures that $( I _ { 3 } + A ) ^ { - 1 } ( I _ { 3 } - A )$ satisfies the skew-symmetry property. Therefore, the correct answer is (C).\n\nFinal Answer:\nQuick Tip\n\nFor matrix problems involving orthogonality or skew-symmetry, always check the transpose relationships and use the properties of matrix inverses."
+}

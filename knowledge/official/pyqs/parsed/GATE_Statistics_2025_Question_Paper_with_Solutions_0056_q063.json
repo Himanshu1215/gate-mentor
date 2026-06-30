@@ -1,0 +1,16 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q63",
+  "question_seq": 56,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $X \\sim \\mathbf { B } \\mathbf { i n } ( 3 , \\theta )$ , where $\\theta \\in ( 0 , 1 )$ is an unknown parameter. For testing $ H _ { 0 } : \\frac { 1 } { 4 } \\leq \\theta \\leq \\frac { 3 } { 4 } \\quad \\mathrm { a g a i n s t } \\quad H _ { 1 } : \\theta < \\frac { 1 } { 4 } \\quad \\mathrm { o r } \\quad \\theta > \\frac { 3 } { 4 } , $",
+  "options": {
+    "C": "onsider the test $ \\phi ( x ) = { \\left\\{ \\begin{array} { l l } { 1 } & { { \\mathrm { i f ~ } } x \\in \\{ 0 , 3 \\} , } \\\\ { 0 } & { { \\mathrm { i f ~ } } x \\in \\{ 1 , 2 \\} . } \\end{array} \\right. } $ The size of the test $\\phi$ is (rounded off to two decimal places)."
+  },
+  "answer": null,
+  "solution": "Step 1: Define the size of the test.\n\nThe size of the test is the probability of rejecting $H _ { 0 }$ when $H _ { 0 }$ is true. This is the probability that $X \\in \\{ 0 , 3 \\}$ when $\\textstyle { \\frac { 1 } { 4 } } \\leq \\theta \\leq { \\frac { 3 } { 4 } }$ . In other words, we need to compute:\n\n $ { \\mathrm { S i z e ~ o f ~ t h e ~ t e s t } } = \\operatorname* { P r } ( X = 0 \\mid { \\frac { 1 } { 4 } } \\leq \\theta \\leq { \\frac { 3 } { 4 } } ) + \\operatorname* { P r } ( X = 3 \\mid { \\frac { 1 } { 4 } } \\leq \\theta \\leq { \\frac { 3 } { 4 } } ) . $ \nStep 2: Calculate the probability mass function for $X .$ .\n\nFor a binomial distribution $X \\sim \\mathbf { B i n } ( 3 , \\theta )$ , the probability mass function is:\n\n $ \\operatorname* { P r } ( X = x ) = { \\binom { 3 } { x } } \\theta ^ { x } ( 1 - \\theta ) ^ { 3 - x } . $ \n\nThus, for $X = 0$ and $X = 3 \\mathrm { : }$\n\n $ \\operatorname* { P r } ( X = 0 ) = { \\binom { 3 } { 0 } } \\theta ^ { 0 } ( 1 - \\theta ) ^ { 3 } = ( 1 - \\theta ) ^ { 3 } , $ \n\n $ \\operatorname* { P r } ( X = 3 ) = { \\binom { 3 } { 3 } } \\theta ^ { 3 } ( 1 - \\theta ) ^ { 0 } = \\theta ^ { 3 } . $ \n\nStep 3: Integrate over the range $\\textstyle { \\frac { 1 } { 4 } } \\leq \\theta \\leq { \\frac { 3 } { 4 } }$\n\nThe size of the test is:\n\n $ \\int _ { 1 / 4 } ^ { 3 / 4 } \\mathrm { P r } ( X = 0 \\mid \\theta ) d \\theta + \\int _ { 1 / 4 } ^ { 3 / 4 } \\mathrm { P r } ( X = 3 \\mid \\theta ) d \\theta . $ \n\nSubstitute the expressions for $\\mathrm { P r } ( X = 0 )$ and $\\mathrm { P r } ( X = 3 )$\n\n $ \\int _ { 1 / 4 } ^ { 3 / 4 } ( 1 - \\theta ) ^ { 3 } d \\theta + \\int _ { 1 / 4 } ^ { 3 / 4 } \\theta ^ { 3 } d \\theta . $ \n\nUsing standard integration, we find:\n\n $ \\int _ { 1 / 4 } ^ { 3 / 4 } ( 1 - \\theta ) ^ { 3 } d \\theta \\approx 0 . 1 4 0 6 2 5 , ~ \\int _ { 1 / 4 } ^ { 3 / 4 } \\theta ^ { 3 } d \\theta \\approx 0 . 1 4 0 6 2 5 . $ \n\nThus, the size of the test is approximately:\n\n $ 0 . 1 4 0 6 2 5 + 0 . 1 4 0 6 2 5 = 0 . 2 8 1 2 5 . $ \n\nThus, the size of the test is 0.28 .\nQuick Tip\n\nFor binomial tests, the size of the test is computed by integrating the probabilities over the relevant range of parameter values under the null hypothesis."
+}

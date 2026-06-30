@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q48",
+  "question_seq": 53,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $\\{ X _ { n } \\} _ { n \\ge 1 }$ be a sequence of independent and identically distributed random variables each having uniform distribution on [0, 3]. Let Y be a random variable, independent of $\\{ X _ { n } \\} _ { n \\ge 1 }$ , having probability mass function $ P ( Y = k ) = { \\frac { 1 } { ( e - 1 ) k ! } } , \\quad k = 1 , 2 , . . . $ Then $P ( \\operatorname* { m a x } ( X _ { 1 } , X _ { 2 } , \\ldots , X _ { Y } ) \\leq 1 )$ = (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "Using the given information, we calculate the probability that the maximum of the sequence $X _ { 1 } , X _ { 2 } , \\ldots , X _ { Y }$ is less than or equal to 1. The probability is:\n\n $ P ( \\operatorname* { m a x } ( X _ { 1 } , X _ { 2 } , \\ldots , X _ { Y } ) \\leq 1 ) \\approx 0 . 2 1 . $ \n\nThus, the value is 0.21.\nQuick Tip\n\nFor problems involving the maximum of a random sample, use the distribution of the maximum and calculate the desired probabilities accordingly."
+}

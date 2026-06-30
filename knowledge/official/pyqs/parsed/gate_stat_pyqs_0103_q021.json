@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q21",
+  "question_seq": 103,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable with probability density function $f ( x ; \\theta ) = \\theta e ^ { - \\theta x }$ , where $x \\geq$ 0 and $\\theta > 0$ . To test $H _ { 0 } \\colon \\theta = 1$ against $H _ { 1 } \\colon \\theta > 1$ , the following test is used: Reject $H _ { 0 }$ if and only if $X > \\log _ { e } 2 0$ Then the size of the test is ..",
+  "options": null,
+  "answer": null,
+  "solution": "To determine the size of the test, we need to find the probability of rejecting the null hypothesis \\(H_0\\) when it is true. The null hypothesis \\(H_0\\) is \\(\\theta = 1\\), and the test reject \\(H_0\\) if and only if \\(X > \\log_e 20\\).\n\nThe probability density function (pdf) of \\(X\\) under \\(H_0\\) is:\n\\[ f(x; 1) = 1 \\cdot e^{-1 \\cdot x} = e^{-x} \\]\nfor \\(x \\geq 0\\).\n\nThe size of the test is the probability that \\(X > \\log_e 20\\) when \\(\\theta = 1\\). This is given by the integral of the pdf from \\(\\log_e 20\\) to \\(\\infty\\):\n\\[ P(X > \\log_e 20) = \\int_{\\log_e 20}^{\\infty} e^{-x} \\, dx \\]\n\nTo evaluate this integral, we use the fact that the integral of \\(e^{-x}\\) is \\(-e^{-x}\\):\n\\[ \\int_{\\log_e 20}^{\\infty} e^{-x} \\, dx = \\left[ -e^{-x} \\right]_{\\log_e 20}^{\\infty} \\]\n\nEvaluating the antiderivative at the limits of integration, we get:\n\\[ \\left[ -e^{-x} \\right]_{\\log_e 20}^{\\infty} = -e^{-\\infty} - (-e^{-\\log_e 20}) = 0 + e^{-\\log_e 20} = e^{\\log_e \\frac{1}{20}} = \\frac{1}{20} \\]\n\nTherefore, the size of the test is:\n\\[ \\boxed{\\frac{1}{20}} \\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

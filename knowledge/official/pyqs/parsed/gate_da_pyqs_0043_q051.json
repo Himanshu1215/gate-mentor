@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q51",
+  "question_seq": 43,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let f : <sup>R</sup> → <sup>R</sup> be a twice-differentiable function and suppose its second derivative satisfies $f ^ { \\prime \\prime } ( x ) > 0$ for all $x \\in \\mathbb { R }$ . Which of the following statements is/are ALWAYS correct?",
+  "options": {
+    "A": "f has a local minima",
+    "B": "There does not exist x and $y , x \\neq y ,$ , such that $f ^ { \\prime } ( x ) = f ^ { \\prime } ( y ) = 0$",
+    "C": "f has at most one global minimum",
+    "D": "f has at most one local minimum"
+  },
+  "answer": null,
+  "solution": "To solve the problem, we need to analyze the properties of the function \\( f \\) given that its second derivative \\( f''(x) > 0 \\) for all \\( x \\in \\mathbb{R} \\). This condition tells us that the function \\( f \\) is strictly convex. Let's examine each statement one by one.\n\n**Statement (A): \\( f \\) has a local minima.**\n\nA strictly convex function has a unique point where the first derivative is zero, and this point is a local minimum. However, it does not necessarily have a local minimum if the first derivative does not have any zeros. For example, the function \\( f(x) = e^x \\) is strictly convex but does not have any local minima. Therefore, statement (A) is not always correct.\n\n**Statement (B): There does not exist \\( x \\) and \\( y \\), \\( x \\neq y \\), such that \\( f'(x) = f'(y) = 0 \\).**\n\nSince \\( f \\) is strictly convex, its first derivative \\( f' \\) is strictly increasing. This means that \\( f' \\) can have at most one zero. If \\( f' \\) has no zeros, then there are no \\( x \\) and \\( y \\) such that \\( f'(x) = f'(y) = 0 \\). If \\( f' \\) has exactly one zero, then there is exactly one \\( x \\) such that \\( f'(x) = 0 \\), and again there are no \\( x \\) and \\( y \\) such that \\( f'(x) = f'(y) = 0 \\) and \\( x \\neq y \\). Therefore, statement (B) is always correct.\n\n**Statement (C): \\( f \\) has at most one global minimum.**\n\nA strictly convex function has a unique point where the first derivative is zero, and this point is both a local minimum and a global minimum. Therefore, statement (C) is always correct.\n\n**Statement (D): \\( f \\) has at most one local minimum.**\n\nAs mentioned earlier, a strictly convex function has a unique point where the first derivative is zero, and this point is a local minimum. Therefore, statement (D) is always correct.\n\nThe statements that are always correct are (B), (C), and (D). However, the problem asks for the statement that is always correct, so we need to choose the most specific or the one that is directly asked for in the problem. Since the problem does not specify to choose multiple answers, we can choose the most specific one that is always correct.\n\nThe correct answer is \\(\\boxed{B}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

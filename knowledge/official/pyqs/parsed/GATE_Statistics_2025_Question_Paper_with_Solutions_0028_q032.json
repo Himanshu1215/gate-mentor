@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q32",
+  "question_seq": 28,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $x _ { 1 } = 0 , x _ { 2 } = 1 , x _ { 3 } = 1 , x _ { 4 } = 1 , x _ { 5 } = 0$ be observed values of a random sample of size 5 from $\\mathbf { B i n } ( 1 , \\theta )$ distribution, where $\\theta \\in ( 0 , 0 . 7 ]$ . Then the maximum likelihood estimate of θ based on the above sample is (rounded off to two decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "For a binomial distribution Bin(1, θ), the likelihood function is given by:\n\n $ L ( \\theta ) = \\prod _ { i = 1 } ^ { n } \\theta ^ { x _ { i } } ( 1 - \\theta ) ^ { 1 - x _ { i } } . $ \n\nFor the given sample, the likelihood function becomes:\n\n $ L ( \\theta ) = \\theta ^ { x _ { 1 } } ( 1 - \\theta ) ^ { 1 - x _ { 1 } } \\times \\theta ^ { x _ { 2 } } ( 1 - \\theta ) ^ { 1 - x _ { 2 } } \\times \\cdot \\cdot \\cdot \\times \\theta ^ { x _ { 5 } } ( 1 - \\theta ) ^ { 1 - x _ { 5 } } . $ \n\nThus, the log-likelihood is:\n\n $ \\ln { \\cal L } ( \\theta ) = \\sum _ { i = 1 } ^ { 5 } x _ { i } \\ln \\theta + ( 1 - x _ { i } ) \\ln ( 1 - \\theta ) . $ \n\nSubstituting the observed values $x _ { 1 } = 0 , x _ { 2 } = 1 , x _ { 3 } = 1 , x _ { 4 } = 1 , x _ { 5 } = 0$\n\n $ \\ln L ( \\theta ) = ( 0 + 1 + 1 + 1 + 0 ) \\ln \\theta + ( 1 + 0 + 0 + 0 + 1 ) \\ln ( 1 - \\theta ) . $ \n\nSimplifying:\n\n $ \\ln L ( \\theta ) = 3 \\ln \\theta + 2 \\ln ( 1 - \\theta ) . $ \n\nTo find the maximum likelihood estimate, we take the derivative of ln L(θ) with respect to θ and set it equal to 0:\n\n $ { \\frac { d } { d \\theta } } \\left( 3 \\ln \\theta + 2 \\ln ( 1 - \\theta ) \\right) = { \\frac { 3 } { \\theta } } - { \\frac { 2 } { 1 - \\theta } } = 0 . $ \n\nSolving for θ:\n\n $ { \\frac { 3 } { \\theta } } = { \\frac { 2 } { 1 - \\theta } } \\quad \\Rightarrow \\quad 3 ( 1 - \\theta ) = 2 \\theta \\quad \\Rightarrow \\quad 3 - 3 \\theta = 2 \\theta \\quad \\Rightarrow \\quad 3 = 5 \\theta \\quad \\Rightarrow \\quad \\theta = { \\frac { 3 } { 5 } } = 0 . 6 . $ \n\nThus, the maximum likelihood estimate of θ is 0.60 .\nQuick Tip\n\nFor binomial distributions, the maximum likelihood estimate (MLE) of θ is simply the sample mean $\\frac { \\sum _ { i = 1 } ^ { n } x _ { i } } { n }$ , since the likelihood function is maximized when θ equals the proportion of successes in the sample."
+}

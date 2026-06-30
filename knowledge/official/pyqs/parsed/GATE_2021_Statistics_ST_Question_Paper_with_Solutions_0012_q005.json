@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q5",
+  "question_seq": 12,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , \\ldots , X _ { n }$ be a random sample of size $n ( \\geq 2 )$ from a $N ( 0 , \\sigma ^ { 2 } )$ distribution. For a given $\\sigma > 0$ , let $f _ { \\sigma }$ denote the joint probability density function of $( X _ { 1 } , X _ { 2 } , \\ldots , X _ { n } )$ and $S = \\{ f _ { \\sigma } : \\sigma > 0 \\}$ . Let $\\textstyle T _ { 1 } = \\sum _ { i = 1 } ^ { n } X _ { i } ^ { 2 }$ and $\\begin{array} { r } { T _ { 2 } = \\left( \\frac { 1 } { n } \\sum _ { i = 1 } ^ { n } X _ { i } \\right) ^ { 2 } } \\end{array}$ . For any positive integer v and any $\\alpha \\in ( 0 , 1 )$ , let $\\chi _ { v , \\alpha } ^ { 2 }$ denote the $( 1 - \\alpha )$ -th quantile of the central chi-square distribution with v degrees of freedom. Consider testing $H _ { 0 } : \\sigma = 1$ against $H _ { 1 } : \\sigma > 1$ at level $\\alpha .$ . Then which one of the following statements is true?",
+  "options": {
+    "A": "S has a monotone likelihood ratio in $T _ { 1 }$ and $H _ { 0 }$ is rejected if $T _ { 1 } > \\chi _ { n , \\alpha } ^ { 2 }$",
+    "B": "S has a monotone likelihood ratio in $T _ { 1 }$ and $H _ { 0 }$ is rejected if $T _ { 1 } > \\chi _ { n - 1 , o } ^ { 2 }$",
+    "C": "S has a monotone likelihood ratio in $T _ { 2 }$ and $H _ { 0 }$ is rejected if $T _ { 2 } > \\chi _ { n , \\alpha } ^ { 2 }$",
+    "D": "S has a monotone likelihood ratio in $T _ { 2 }$ and $H _ { 0 }$ is rejected if $T _ { 2 } > \\chi _ { n - 1 , \\alpha } ^ { 2 }$"
+  },
+  "answer": "A",
+  "solution": "The problem gives us two test statistics $\\textstyle T _ { 1 } = \\sum _ { i = 1 } ^ { n } X _ { i } ^ { 2 }$ and $\\begin{array} { r } { T _ { 2 } = \\left( \\frac { 1 } { n } \\sum _ { i = 1 } ^ { n } X _ { i } \\right) ^ { 2 } } \\end{array}$ . We are tasked with testing the hypothesis $H _ { 0 } : \\sigma = 1$ against $H _ { 1 } : \\sigma > 1$\nStep 1: Understanding the likelihood ratio.\n\nA test statistic has a monotone likelihood ratio if the likelihood function is monotonic with respect to the statistic. In this problem, the likelihood ratio test statistic involves comparing the observed value of the statistic with a critical value derived from the chi-square distribution.\nStep 2: Applying the theory of likelihood ratio tests.\n\nFor the given test statistics $T _ { 1 }$ and $T _ { 2 }$ , it is known that the statistic $T _ { 1 }$ has a monotone likelihood ratio with respect to the hypothesis $H _ { 0 }$ . This means that $T _ { 1 }$ is used to reject $H _ { 0 }$ if it exceeds a certain threshold derived from the chi-square distribution. Specifically, we reject $H _ { 0 }$ when $T _ { 1 } > \\chi _ { n , \\alpha } ^ { 2 }$ , where $\\chi _ { n , \\alpha } ^ { 2 }$ is the $( 1 - \\alpha )$ -th quantile of the chi-square distribution with n degrees of freedom.\nStep 3: Conclusion.\n\nThe correct answer is (A), as it correctly describes the behavior of the test statistic $T _ { 1 }$ and the rejection region for $H _ { 0 }$\nFinal Answer:\n\n(A) S has a monotone likelihood ratio in $T _ { 1 }$ and $H _ { 0 }$ is rejected if $T _ { 1 } > \\chi _ { n , \\alpha } ^ { 2 } .$\nQuick Tip\n\nIn hypothesis testing using likelihood ratio tests, the likelihood ratio statistic should be compared to the critical value from the appropriate distribution (chi-square in this case) to determine if the null hypothesis should be rejected."
+}

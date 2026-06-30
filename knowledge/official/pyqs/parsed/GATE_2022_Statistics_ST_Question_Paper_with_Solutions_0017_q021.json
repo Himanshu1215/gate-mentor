@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q21",
+  "question_seq": 17,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $\\{ a _ { n } \\} _ { n = 1 } ^ { \\infty }$ be a sequence of positive real numbers satisfying $ { \\frac { 8 } { a _ { n + 1 } } } = { \\frac { 7 } { a _ { n } } } + { \\frac { a _ { n } ^ { 2 } } { 3 4 3 } } , \\quad n \\geq 1 , $ with $a _ { 1 } = 3$ and $a _ { n } < 7$ for all $n \\geq 2 .$",
+  "options": {
+    "C": "onsider the following statements: (I) $\\{ a _ { n } \\}$ is monotonically increasing. (II) $\\{ a _ { n } \\}$ converges to a value in the interval [3, 7]. Then which of the above statements is/are true?",
+    "A": "(I) only",
+    "B": "(II) only",
+    "D": "Neither (I) nor (II)"
+  },
+  "answer": "C",
+  "solution": "We are given the recurrence relation for the sequence $\\{ a _ { n } \\}$ as:\n\n $ { \\frac { 8 } { a _ { n + 1 } } } = { \\frac { 7 } { a _ { n } } } + { \\frac { a _ { n } ^ { 2 } } { 3 4 3 } } $ \n\nRearranging the equation:\n\n $ a _ { n + 1 } = { \\frac { 8 } { { \\frac { 7 } { a _ { n } } } + { \\frac { a _ { n } ^ { 2 } } { 3 4 3 } } } } $ \n\nWe will now analyze the two statements.\nStep 1: Statement (I) - Is $\\{ a _ { n } \\}$ monotonically increasing?\n\nTo check if the sequence is monotonically increasing, we need to determine whether\n\n$a _ { n + 1 } > a _ { n }$ . Substituting the recurrence relation:\n\n$- \\operatorname { A s } a _ { n }$ increases, $\\frac { 7 } { a _ { n } }$ decreases, and $\\frac { a _ { n } ^ { 2 } } { 3 4 3 }$ increases. - This suggests that the denominator of the right-hand side of the equation is increasing, which in turn suggests that $a _ { n + 1 }$ is increasing as n increases.\n\nTherefore, the sequence $\\{ a _ { n } \\}$ is monotonically increasing.\nStep 2: Statement (II) - Does $\\{ a _ { n } \\}$ converge to a value in the interval $[ 3 , 7 ] ?$\n\nWe are also given that $a _ { n } < 7$ for all $n \\geq 2$ , and we need to check if $\\{ a _ { n } \\}$ converges to a value within the interval [3, 7].\n\nTaking the limit as $n \\to \\infty$ , let L be the limit of the sequence:\n\n $ L = { \\frac { 8 } { { \\frac { 7 } { L } } + { \\frac { L ^ { 2 } } { 3 4 3 } } } } $ \n\nSolving this equation yields a value for L that lies within the interval [3, 7], confirming that the sequence converges to a value within this range.\n\nThus, both statements (I) and (II) are true.\nQuick Tip\n\nWhen working with recurrence relations, analyzing the behavior of the sequence and solving for the limit can help determine its convergence and monotonicity."
+}

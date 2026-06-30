@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q10",
+  "question_seq": 9,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "“A recent High Court judgement has sought to dispel the idea of begging as a disease — which leads to its stigmatization and criminalization — and to regard it as a symptom. The underlying disease is the failure of the state to protect citizens who fall through the social security net”. Which one of the following statements can be inferred from the given passage?",
+  "options": {
+    "A": "Begging is an offence that has to be dealt with firmly",
+    "B": "Beggars are created because of the lack of social welfare schemes",
+    "C": "Begging has to be banned because it adversely affects the welfare of the state",
+    "D": "Beggars are lazy people who beg because they are unwilling to work"
+  },
+  "answer": "B",
+  "solution": "To determine the correct answer from the given passage, let's analyze the key points and their implications step by step.\n\n1. **Understanding the Passage:**\n   - The passage states that a High Court judgement has sought to dispel the idea of beggling as a disease.\n   - It suggests that beggling should be regarded as a symptom rather than a disease.\n   - The underlying disease is the failure of the state to protect citizens who fall through the social security net.\n\n2. **Interpreting the Options:**\n   - **Option (A):** Begging is an offence that has to be dealt with firmly.\n     - This option suggests that beggling is a serious offense that needs to be strictly handled. However, the passage does not explicitly state that beggling is an offense.\n   - **Option (B):** Beggars are created because of the lack of social welfare schemes.\n     - This option suggests that the reason beggling exists is due to the lack of social welfare schemes. The passage implies that the state's failure to protect citizens who fall through the social security net leads to beggling.\n   - **Option (C):** Begging has to be banned because it adverse affects the welfare of the state.\n     - This option suggests that beggling should be banned because it negatively affects the state's welfare. The passage does not directly state that beggling affects the state's welfare.\n   - **Option (D):** Beggars are lazy people who beg because they are unwilling to work.\n     - This option suggests that beggars are lazy and unwilling to work. The passage does not provide any information about the behavior of beggars.\n\n3. **Conclusion:**\n   - The only option that aligns with the information provided in the passage is Option (B). The passage clearly states that the underlying disease (which is beggling) is due to the state's failure to protect citizens who fall through the social security net.\n\nTherefore, the correct answer is \\boxed{B}.",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

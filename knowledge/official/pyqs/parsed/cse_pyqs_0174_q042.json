@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q42",
+  "question_seq": 174,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let F be the set of all functions from {1,..., n} to {0,1}. Define the binary relation on F as follows: ∀f.g ∈ F, f ≤g if and only if $\\forall x \\in \\{ 1 , \\ . . . , \\ n \\} , \\ f ( x ) \\leq g ( x ) .$ , where 0 = 1. Which of the following statement(s) is/are TRUE? re TRUE?",
+  "options": {
+    "A": "is a symmetric relation (b) (F, <) is a partial order",
+    "C": "(F, ) is a lattice (d)is an equivalence relation [2025 (Set-2) : 2 M]"
+  },
+  "answer": "B",
+  "solution": "To determine which statement(s) is/are true, we need to analyze the binary relation \\( \\leq \\) defined on the set \\( F \\) of all functions from \\( \\{1, \\ldots, n\\} \\) to \\( \\{0, 1\\} \\). The relation \\( f \\leq g \\) holds if and only if \\( f(x) \\leq g(x) \\) for all \\( x \\in \\{1, \\ldots, n\\} \\).\n\nLet's check each statement one by one:\n\n**Statement (A): \\( \\leq \\) is a symmetric relation.**\n\nA relation \\( R \\) is symmetric if \\( a R b \\) implies \\( b R a \\). For \\( f \\leq g \\), we need \\( f(x) \\leq g(x) \\) for all \\( x \\in \\{1, \\ldots, n\\} \\). However, this does not imply that \\( g(x) \\leq f(x) \\) for all \\( x \\in \\{1, \\ldots, n\\} \\). For example, consider the functions \\( f \\) and \\( g \\) where \\( f(1) = 0 \\) and \\( g(1) = 1 \\), and \\( f(x) = g(x) = 0 \\) for \\( x = 2, \\ldots, n \\). Here, \\( f \\leq g \\) but \\( g \\not\\leq f \\). Therefore, \\( \\leq \\) is not a symmetric relation.\n\n**Statement (B): \\( (F, \\leq) \\) is a partial order.**\n\nA partial order is a relation that is reflexive, antisymmetric, and transitive. Let's check each property:\n\n1. **Reflexivity**: For any function \\( f \\in F \\), \\( f(x) \\leq f(x) \\) for all \\( x \\in \\{1, \\ldots, n\\} \\). Therefore, \\( f \\leq f \\) for all \\( f \\in F \\). So, \\( \\leq \\) is reflexive.\n2. **Antisymmetry**: If \\( f \\leq g \\) and \\( g \\leq f \\), then \\( f(x) \\leq g(x) \\) and \\( g(x) \\leq f(x) \\) for all \\( x \\in \\{1, \\ldots, n\\} \\). This implies \\( f(x) = g(x) \\) for all \\( x \\in \\{1, \\ldots, n\\} \\), so \\( f = g \\). Therefore, \\( \\leq \\) is antisymmetric.\n3. **Transitivity**: If \\( f \\leq g \\) and \\( g \\leq h \\), then \\( f(x) \\leq g(x) \\) and \\( g(x) \\leq h(x) \\) for all \\( x \\in \\{1, \\ldots, n\\} \\). This implies \\( f(x) \\leq h(x) \\) for all \\( x \\in \\{1, \\ldots, n\\} \\), so \\( f \\leq h \\). Therefore, \\( \\leq \\)",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q29",
+  "question_seq": 229,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following grammars is/are ambiguous?",
+  "options": {
+    "A": "$S \\to a S b | \\in$",
+    "C": "$S \\to a S { \\big | } S a { \\big | } \\in$",
+    "B": "$E \\to E + E \\mid E * E \\mid { \\mathsf { i d } }$",
+    "D": "$S \\to a S | \\in$"
+  },
+  "answer": "B",
+  "solution": "To determine which of the given grammars is ambiguous, we need to check if there exists at least one string that can be derived from the start symbol in more than one way. Let's analyze each option step by step.\n\n**Option (A):** \\( S \\to a S b | \\in \\)\n\n- The start symbol \\( S \\) can generate either \\( a S b \\) or \\( \\in \\).\n- If \\( S \\) generates \\( a S b \\), we can again apply the rule to \\( S \\) in \\( a S b \\), resulting in \\( a a S b b \\). This process can continue indefinitely, but it will always result in a string of the form \\( a^n b^n \\) for some \\( n \\geq 0 \\).\n- If \\( S \\) generates \\( \\in \\), it simply results in the empty string.\n- There is no string that can be derived in more than one way. Therefore, this grammar is not ambiguous.\n\n**Option (B):** \\( E \\to E + E \\mid E * E \\mid \\mathbf{i}d \\)\n\n- The start symbol \\( E \\) can generate either \\( E + E \\), \\( E * E \\), or \\( \\mathbf{i}d \\).\n- If \\( E \\) generates \\( E + E \\), we can again apply the rule to each \\( E \\) in \\( E + E \\), resulting in \\( E + E + E \\), and so on. This process can continue indefinitely, but it will always result in a string of addition operations.\n- If \\( E \\) generates \\( E * E \\), we can again apply the rule to each \\( E \\) in \\( E * E \\), resulting in \\( E * E * E \\), and so on. This process can continue indefinitely, but it will always result in a string of multiplication operations.\n- If \\( E \\) generates \\( \\mathbf{i}d \\), it simply results in the identity element \\( \\mathbf{i}d \\).\n- There is no string that can be derived in more than one way using only one rule. However, if we consider a string like \\( E + E * E \\), it can be derived in two different ways:\n  1. \\( E \\to E + E \\) first, then \\( E \\to E * E \\) on the second \\( E \\), resulting in \\( E + E * E \\).\n  2. \\( E \\to E * E \\) first, then \\( E \\to E + E \\) on the first \\( E \\), resulting in \\( E * E + E \\).\n- Since \\( E + E * E \\) and \\( E * E + E \\) are different strings, this grammar is ambiguous.\n\n**Option (C):** \\( S \\to a S \\{ \\mid S a \\mid \\in \\)\n\n- The start symbol \\( S \\) can generate either \\( a S \\), \\( S a \\), or \\( \\in \\).\n- If \\( S \\) generates \\( a S \\), we can again apply the rule to \\( S \\) in \\( a S \\), resulting in \\( a a S \\), and so on. This process can continue indefinitely, but it will always result in a string of \\( a \\)'s followed by \\( S \\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

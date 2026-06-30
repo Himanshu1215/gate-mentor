@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q42",
+  "question_seq": 120,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let A be a n × n positive semi-definite matrix with eigenvalues $\\lambda _ { 1 } \\geq \\cdots \\geq \\lambda _ { n }$ , and with α as the maximum diagonal entry. We can find a vector x such that $x ^ { t } x = 1$ , where t denotes the transpose, and (A) $x ^ { t } A x > \\lambda _ { 1 }$ (B) $x ^ { t } A x < \\lambda _ { n }$ (C) $\\lambda _ { n } \\leq x ^ { t } A x \\leq \\lambda _ { 1 }$ (D) $x ^ { t } A x > n \\alpha$",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the problem, we need to analyze the properties of the positive semi-definite matrix \\( A \\) and the expression \\( x^t A x \\) for a unit vector \\( x \\).\n\nGiven:\n- \\( A \\) is a \\( n \\times n \\) positive semi-definite matrix.\n- The eigenvalues of \\( A \\) are \\( \\lambda_1 \\geq \\cdots \\geq \\lambda_n \\).\n- \\( \\alpha \\) is the maximum diagonal entry of \\( A \\).\n- We need to find a vector \\( x \\) such that \\( x^t x = 1 \\) and determine the range of \\( x^t A x \\).\n\n### Step-by-Step Solution:\n\n1. **Eigenvalue Properties**:\n   - Since \\( A \\) is positive semi-definite, all its eigenvalues are non-negative: \\( \\lambda_i \\geq 0 \\) for \\( i = 1, 2, \\ldots, n \\).\n   - The maximum eigenvalue \\( \\lambda_1 \\) is the largest among all eigenvalues.\n\n2. **Diagonal entries and Eigenvalues**:\n   - The diagonal entries of \\( A \\) are \\( a_{11}, a_{22}, \\ldots, a_{nn} \\).\n   - Given \\( \\alpha \\) is the maximum diagonal entry, we have \\( \\alpha = \\max(a_{ii}) \\).\n\n3. **Range of \\( x^t A x \\)**:\n   - For any vector \\( x \\) such that \\( x^t x = 1 \\), the expression \\( x^t A x \\) represents a quadratic form.\n   - By the properties of positive semi-definite matrices, the quadratic form \\( x^t A x \\) is bounded by the minimum and maximum eigenvalues of \\( A \\):\n     \\[\n     \\lambda_n \\leq x^t A x \\leq \\lambda_1\n     \\]\n\n4. **Verification**:\n   - To verify, consider the eigenvectors \\( v_1, v_2, \\ldots, v_n \\) corresponding to the eigenvalues \\( \\lambda_1, \\lambda_2, \\ldots, \\lambda_n \\). These eigenvectors form an orthonormal basis.\n   - For the eigenvector \\( v_1 \\) corresponding to \\( \\lambda_1 \\), we have \\( v_1^t A v_1 = \\lambda_1 \\).\n   - For the eigenvector \\( v_n \\) corresponding to \\( \\lambda_n \\), we have \\( v_n^t A v_n = \\lambda_n \\).\n   - For any unit vector \\( x \\), \\( x^t A x \\) can be expressed as a weighted sum of the eigenvalues:\n     \\[\n     x^t A x = \\sum_{i=1}^n \\lambda_i (x^t v_i)^2\n     \\]\n     Since \\( (x^t v_i)^2 \\leq 1 \\) and \\( \\sum_{i=1}^n (x^t v_i)^2 = 1 \\), it follows that:\n     \\[\n     \\lambda_n \\leq x^t A x \\leq \\lambda_1\n     \\]\n\n### Conclusion:\nThe correct",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

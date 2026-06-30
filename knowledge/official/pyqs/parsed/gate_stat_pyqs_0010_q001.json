@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q1",
+  "question_seq": 10,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "If ‘→’ denotes increasing order of intensity, then the meaning of the words [walk → jog → sprint] is analogous to [bothered → → daunted]. Which one of the given options is appropriate to fill the blank?",
+  "options": {
+    "A": "phased",
+    "B": "phrased",
+    "C": "fazed",
+    "D": "fused"
+  },
+  "answer": null,
+  "solution": "To solve the problem, we need to understand the relationship between the words in the given sequences and find the appropriate word to fill the blank in the second sequence.\n\n1. **Analyze the first sequence:**\n   - [walk → jog → sprint]\n   - This sequence represents increasing order of intensity. \"Walk\" is less intense than \"jog,\" and \"jog\" is less intense than \"sprint.\"\n\n2. **Analyze the second sequence:**\n   - [bothered → → daunt]\n   - We need to find a word that fits between \"bothered\" and \"daunt\" in terms of intensity.\n\n3. **Consider the options:**\n   - (A) phased\n   - (B) phrased\n   - (C) fazed\n   - (D) fused\n\n4. **Determine the intensity order:**\n   - \"Bothered\" means to be easily satisfied or content.\n   - \"Daunt\" means to be very insistent or determined.\n   - We need a word that is more insistent than \"bothered\" but less insistent than \"daunt.\"\n\n5. **Evaluate each option:**\n   - (A) phased: This means to be in a state of change or to be moving from one state to another. It does not necessarily fit the intensity order.\n   - (B) phrased: This means to be expressed or to be moving from one state to another. It does not necessarily fit the intensity order.\n   - (C) fazed: This means to be in a state of change or to be moving from one state to another. It does not necessarily fit the intensity order.\n   - (D) fused: This means to be combined or to be moving from one state to another. It does not necessarily fit the intensity order.\n\n6. **Reconsider the options:**\n   - The correct option should be \"phrased\" because it fits the intensity order.\n\n7. **Final answer:**\n   - The correct option is (B) phrased.\n\nTherefore, the final answer is:\n\\boxed{B}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q54",
+  "question_seq": 30,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Suppose that in an IP-over-Ethernet network, a machine X wishes to find the MAC address of another machine Y in its subnet. Which one of the following techniques can be used for this?",
+  "options": {
+    "A": "X sends an ARP request packet with broadcast IP address in its local subnet",
+    "B": "X sends an ARP request packet to the local gateway’s MAC address which then finds the MAC address of Y and sends to X",
+    "C": "X sends an ARP request packet with broadcast MAC address in its local subnet",
+    "D": "X sends an ARP request packet to the local gateway’s IP address which then finds the MAC address of Y and sends to X"
+  },
+  "answer": "C",
+  "solution": "To determine the correct technique for machine X to find the MAC address of another machine Y in its subnet, let's analyze each option step by step.\n\n**Option (A): X sends an ARP request packet with broadcast IP address in its localsubnet.**\n\n1. ** broadcast IP address**: This means that the packet is sent to all devices in the local(subnet.\n2. ** ARP request**: The xe will receive a response from each device that has a valid MAC address and is within the local(subnet.\n3. ** Problem**: This method will not necessarily find the MAC address of machine Y because it will receive responses from all devices in the local(subnet, not just machine Y. Therefore, it is not a specific and efficient way to find the MAC address of machine Y.\n\n**Option (B): X sends an ARP request packet to the local gateway’s MAC address which then finds the MAC address of Y and sends to X.**\n\n1. ** local gateway’s MAC address**: This means that the packet is sent to the MAC address of the local gateway.\n2. ** ARP request**: The xe will receive a response from the local gateway.\n3. ** Problem**: The local gateway is a bridge between the local(subnet and the rest of the network. The MAC address of the local gateway is not necessarily the same as the MAC address of machine Y. Therefore, this method will not find the MAC address of machine Y.\n\n**Option (C): X sends an ARP request packet with broadcast MAC address in its localsubnet.**\n\n1. ** broadcast MAC address**: This means that the packet is sent to all devices in the local(subnet.\n2. ** ARP request**: The xe will receive a response from each device that has a valid MAC address and is within the local(subnet.\n3. ** Problem**: This method will not necessarily find the MAC address of machine Y because it will receive responses from all devices in the local(subnet, not just machine Y. Therefore, it is not a specific and efficient way to find the MAC address of machine Y.\n\n**Option (D): X sends an ARP request packet to the local gateway’s IP address which then finds the MAC address of Y and sends to X.**\n\n1. ** local gateway’s IP address**: This means that the packet is sent to the IP address of the local gateway.\n2. ** ARP request**: The xe will receive a response from the local gateway.\n3. ** Problem**: The local gateway is a bridge between the local(subnet and the rest of the network. The IP address of the local gateway is not necessarily the same as the MAC address of machine Y. Therefore, this method will not find the MAC address of machine Y.\n\n**Correct Option: C**\n\nTo find the MAC address of machine Y in its local(subnet, machine X should send an ARP request packet with a broadcast MAC address in its local(subnet. This will ensure that the packet is sent to all devices in the local(subnet, and the device that receives the packet will forward it to machine Y, which will then forward it back to machine X with the MAC address of machine Y.\n\nTherefore, the correct answer is: \\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

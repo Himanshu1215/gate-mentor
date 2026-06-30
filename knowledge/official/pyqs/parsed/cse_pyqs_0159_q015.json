@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q15",
+  "question_seq": 159,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $P ( x )$ be an arbitrary predicate over the domain of natural numbers. Which ONE of the following statements is TRUE? (a) $( P ( 0 ) \\land ( \\forall x [ P ( x + 1 ) ] ) ) \\Rightarrow ( \\forall x P ( x ) )$ (b) $( P ( 0 ) \\land ( \\forall x [ P ( x ) \\Rightarrow P ( x - 1 ) ] ) ) \\Rightarrow ( \\forall x P ( x ) )$ (c) $( P ( 1 0 0 0 ) \\land ( \\forall x [ P ( x ) \\Rightarrow P ( x - 1 ) ] ) ) \\Rightarrow ( \\forall x P ( x ) )$ (d) $( P ( \\neg 0 0 0 ) \\land ( \\forall x [ P ( x ) \\Rightarrow P ( x + 1 ) ] ) ) \\Rightarrow ( \\forall x P ( x ) )$ [2025 (Set-2) : 1 M]",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine which statement is true, we need to analyze each option step by step.\n\n**Option (a):** \\(( P ( 0 ) \\land ( \\forall x [ P ( x + 1 ) ] ) ) \\Rightarrow ( \\forall x P ( x ) )\\)\n\nThis statement says that if \\(P(0)\\) is true and \\(P(x+1)\\) is true for all \\(x\\), then \\(P(x)\\) is true for all \\(x\\). Let's break it down:\n\n1. \\(P(0)\\) is true.\n2. If \\(P(x)\\) is true, then \\(P(x+1)\\) is true. This means that if \\(P(0)\\) is true, then \\(P(1)\\) is true. If \\(P(1)\\) is true, then \\(P(2)\\) is true, and so on. Therefore, \\(P(x)\\) is true for all natural numbers \\(x\\).\n\nSo, option (a) is true.\n\n**Option (b):** \\(( P ( 0 ) \\land ( \\forall x [ P ( x ) \\Rightarrow P ( x - 1 ) ] ) ) \\Rightarrow ( \\forall x P ( x ) )\\)\n\nThis statement says that if \\(P(0)\\) is true and \\(P(x) \\Rightarrow P(x-1)\\) for all \\(x\\), then \\(P(x)\\) is true for all \\(x\\). Let's break it down:\n\n1. \\(P(0)\\) is true.\n2. If \\(P(x)\\) is true, then \\(P(x-1)\\) is true. This means that if \\(P(0)\\) is true, then \\(P(-1)\\) is true. However, \\(P(-1)\\) is not in the domain of natural numbers, so this statement is not necessarily true for all natural numbers \\(x\\).\n\nSo, option (b) is false.\n\n**Option (c):** \\(( P ( 1 0 0 0 ) \\land ( \\forall x [ P ( x ) \\Rightarrow P ( x - 1 ) ] ) ) \\Rightarrow ( \\forall x P ( x ) )\\)\n\nThis statement says that if \\(P(1000)\\) is true and \\(P(x) \\Rightarrow P(x-1)\\) for all \\(x\\), then \\(P(x)\\) is true for all \\(x\\). Let's break it down:\n\n1. \\(P(1000)\\) is true.\n2. If \\(P(x)\\) is true, then \\(P(x-1)\\) is true. This means that if \\(P(1000)\\) is true, then \\(P(999)\\) is true, and so on. However, this only tells us that \\(P(x)\\) is true for \\(x \\leq 1000\\), not for all natural numbers \\(x\\).\n\nSo, option (c) is false.\n\n**Option (d):** \\(( P ( \\neg 0 0 0 ) \\land ( \\forall x [ P ( x ) \\Rightarrow P ( x + 1 ) ] ) ) \\Rightarrow ( \\forall x P ( x ) )\\)\n\nThis statement says that if \\(P(\\neg",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

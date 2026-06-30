@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q9",
+  "question_seq": 60,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Suppose that $L _ { \\mathrm { \\uparrow } }$ is a regular language and $L _ { 2 }$ is a context-free language. Which one of the following languages is NOT necessarily context-free?",
+  "options": {
+    "A": "$L _ { 1 } \\cdot L _ { 2 }$",
+    "C": "$L _ { 1 } - L _ { 2 }$",
+    "B": "$L _ { 1 } \\cup L _ { 2 }$",
+    "D": "$L _ { 1 } \\cap L _ { 2 }$"
+  },
+  "answer": "C",
+  "solution": "To determine which of the given languages is NOT necessarily context-free, we need to analyze each option based on the properties of regular and context-free languages.\n\n1. **Option (A): \\( L_1 \\cdot L_2 \\)**\n   - The product of a regular language \\( L_1 \\) and a context-free language \\( L_2 \\) is context-free. This is because the context-free languages are closed under regular intersection, and we can express \\( L_1 \\cdot L_2 \\) as a union of context-free languages.\n   - Therefore, \\( L_1 \\cdot L_2 \\) is context-free.\n\n2. **Option (B): \\( L_1 \\cup L_2 \\)**\n   - The union of a regular language \\( L_1 \\) and a context-free language \\( L_2 \\) is context-free. This is because the context-free languages are closed under union.\n   - Therefore, \\( L_1 \\cup L_2 \\) is context-free.\n\n3. **Option (C): \\( L_1 - L_2 \\)**\n   - The difference of a regular language \\( L_1 \\) and a context-free language \\( L_2 \\) is NOT necessarily context-free. This is because the context-free languages are not closed under complementation or set difference.\n   - To see why, consider the following counterexample: Let \\( L_1 = \\{a^n b^n \\mid n \\geq 0\\} \\) (which is context-free) and \\( L_2 = \\{a^n b^n c^n \\mid n \\geq 0\\} \\) (which is context-free). Then \\( L_1 - L_2 = \\{a^n b^n \\mid n \\geq 0\\} \\setminus \\{a^n b^n c^n \\mid n \\geq 0\\} = \\{a^n b^n \\mid n \\geq 0\\} \\), which is context-free. However, if we choose \\( L_2 = \\{a^n b^n \\mid n \\geq 0\\} \\), then \\( L_1 - L_2 = \\emptyset \\), which is context-free. But if we choose \\( L_2 = \\{a^n b^n c^n \\mid n \\geq 0\\} \\), then \\( L_1 - L_2 = \\{a^n b^n \\mid n \\geq 0\\} \\setminus \\{a^n b^n c^n \\mid n \\geq 0\\} = \\{a^n b^n \\mid n \\geq 0\\} \\), which is context-free. However, if we choose \\( L_2 = \\{a^n b^n c^n \\mid n \\geq 0\\} \\), then \\( L_1 - L_2 = \\{a^n b^n \\mid n \\geq 0\\} \\setminus \\{a^n b^n c^n \\mid n \\geq 0\\} = \\{a^n b^n \\mid n \\geq 0\\} \\), which is context-free. Therefore, \\( L_1 - L_2 \\) is NOT necessarily context-free.\n\n4. **Option (D): \\( L_",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

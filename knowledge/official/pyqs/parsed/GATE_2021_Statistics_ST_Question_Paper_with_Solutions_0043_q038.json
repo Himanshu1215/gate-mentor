@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q38",
+  "question_seq": 43,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { ( 1 ) } < X _ { ( 2 ) } < X _ { ( 3 ) } < X _ { ( 4 ) } < X _ { ( 5 ) }$ be the order statistics corresponding to a random sample of size 5 from a uniform distribution on $[ 0 , \\theta ] _ { ; }$ , where $\\theta \\in ( 0 , \\infty )$ . Then which of the following statements is/are true? P: $3 X _ { ( 2 ) }$ is an unbiased estimator of θ. Q: The variance of $E [ 2 X _ { ( 3 ) } \\mid X _ { ( 5 ) } ]$ is less than or equal to the variance of $2 X _ { ( 3 ) }$",
+  "options": {
+    "A": "P only",
+    "B": "Q only",
+    "C": "Both P and Q",
+    "D": "Neither P nor Q"
+  },
+  "answer": "C",
+  "solution": "For order statistics of a uniform distribution on [0, θ], the mean and variance for different order statistics have well-known properties.\n\nStep 1: Check statement P.\n\nThe second order statistic $X _ { ( 2 ) }$ in a uniform distribution on [0, θ] has the property that $\\begin{array} { r } { E [ X _ { ( 2 ) } ] = \\frac { 2 \\theta } { 6 } } \\end{array}$ , and therefore, $3 X _ { ( 2 ) }$ is an unbiased estimator of θ, confirming P is true.\n\nStep 2: Check statement Q.\n\nThe variance of $E [ 2 X _ { ( 3 ) } \\mid X _ { ( 5 ) } ]$ is indeed less than or equal to the variance of $2 X _ { ( 3 ) }$ based on the properties of conditional variance in order statistics, confirming Q is true.\n\nFinal Answer:\n\n(C) Both P and Q\nQuick Tip\n\nFor order statistics in a uniform distribution, the properties of their means and variances are well-established and can be used to evaluate unbiased estimators and variances."
+}

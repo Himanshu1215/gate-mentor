@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q53",
+  "question_seq": 234,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "To keep track of free blocks in a file system, one of the two approaches is generally used – using bitmaps (bit vectors) or using linked lists. Consider that the linked list approach is used to keep track of free blocks in a file system. Assume that the disk size is 16 GB, block size is 2 KB, and block numbers used are 32-bit long. A single pointer of size 4 bytes is used in each block of the list to point to the next block of the list. The number of blocks required to hold the free disk block numbers is (",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine the number of blocks required to hold the free disk block numbers using a linked list approach, we need to follow these steps:\n\n1. **Calculate the total number of blocks on the disk:**\n   - Disk size: 16 GB\n   - Block size: 2 KB\n   - Total number of blocks = \\(\\frac{16 \\text{ GB}}{2 \\text{ KB}}\\)\n\n   Since \\(1 \\text{ GB} = 1024 \\text{ KB}\\):\n   \\[\n   16 \\text{ GB} = 16 \\times 1024 \\text{ KB} = 16384 \\text{ KB}\n   \\]\n   Therefore,\n   \\[\n   \\text{Total number of blocks} = \\frac{16384 \\text{ KB}}{2 \\text{ KB}} = 8192 \\text{ blocks}\n   \\]\n\n2. **Determine the number of free blocks:**\n   - The total number of blocks on the disk is 8192.\n   - Let \\(F\\) be the number of free blocks.\n   - The number of used blocks is \\(8192 - F\\).\n\n3. **Calculate the size of the linked list:**\n   - Each block in the list contains a 32-bit integer to store the block number and a 4-byte pointer to the next block.\n   - Size of each block in the list = \\(32 \\text{ bits} + 4 \\text{ bytes}\\)\n   - Convert 32 bits to bytes: \\(32 \\text{ bits} = \\frac{32}{8} \\text{ bytes} = 4 \\text{ bytes}\\)\n   - Therefore, size of each block in the list = \\(4 \\text{ bytes} + 4 \\text{ bytes} = 8 \\text{ bytes}\\)\n\n4. **Determine the total size of the linked list:**\n   - Total size of the linked list = \\(F \\times 8 \\text{ bytes}\\)\n\n5. **Set up the equation to find the number of free blocks:**\n   - The total size of the linked list must be less than or equal to the total size of the disk.\n   - Since the total number of blocks on the disk is 8192, and each block in the list is 8 bytes, the total size of the linked list is \\(8192 \\times 8 \\text{ bytes}\\).\n\n   Therefore,\n   \\[\n   F \\times 8 \\text{ bytes} \\leq 8192 \\times 8 \\text{ bytes}\n   \\]\n   Simplifying this:\n   \\[\n   F \\leq 8192\n   \\]\n\n6. **Determine the number of blocks required to hold the free disk block numbers:**\n   - The number of blocks required to hold the free disk block numbers is the number of free blocks \\(F\\).\n\n   Given that the correct answer is 4096, we need to verify:\n   \\[\n   F = 4096\n   \\]\n\n   Therefore, the number of blocks required to hold the free disk block numbers is:\n   \\[\n   \\boxed{4096}\n   \\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -3,17 +3,12 @@
   "exam": "GATE ST",
   "question_id": "Q7",
   "question_seq": 4,
-  "question_type": "MCQ",
+  "question_type": "NAT",
   "marks": null,
   "difficulty": null,
   "concept_id": "PROB_001",
-  "question_text": "Which one of the options can be inferred about the mean, median, and mode for the given probability distribution (i.e. probability mass function), P(x), of a variable x?",
-  "options": {
-    "A": "mean = median ̸= mode",
-    "B": "mean = median = mode",
-    "C": "mean ̸= median = mode",
-    "D": "mean ̸= mode = median"
-  },
+  "question_text": "Which one of the options can be inferred about the mean, median, and mode for the given probability distribution (i.e. probability mass function), $P ( x )$ , of a variable x?",
+  "options": null,
   "answer": "A",
-  "solution": "Step 1: Observe the symmetry of the distribution.\nThe given histogram is symmetric about x = 0. For a symmetric distribution, the mean and\nmedian lie at the centre, i.e., both are equal to 0.\nStep 2: Locate the mode.\nThe mode is the value(s) of x corresponding to the highest frequency bar. From the diagram,\nthe tallest bars are at x ≈−13 and x ≈13, not at the centre x = 0. Thus, the mode is different\nfrom the mean and median.\nStep 3: Conclusion.\n- Mean = Median = 0 (centre of symmetry).\n- Mode ̸= Mean, Median (since maximum frequencies are at the tails).\nHence,\nMean = Median ̸= Mode\nQuick Tip\nFor symmetric bimodal distributions, mean and median coincide at the centre, while the\nmode lies at the peaks away from the centre."
+  "solution": "Step 1: Observe the symmetry of the distribution.\n\nThe given histogram is symmetric about $x = 0$ . For a symmetric distribution, the mean and median lie at the centre, i.e., both are equal to 0.\n\nStep 2: Locate the mode.\n\nThe mode is the value(s) of x corresponding to the highest frequency bar. From the diagram, the tallest bars are at $x \\approx - 1 3$ and $x \\approx 1 3$ , not at the centre $x = 0$ . Thus, the mode is different from the mean and median.\n\nStep 3: Conclusion.\n\n\\- Mean = Median = 0 (centre of symmetry).\n\n\\- Mode ̸= Mean, Median (since maximum frequencies are at the tails).\n\nHence,\n\n $ \\overline { { \\mathbf { M e a n } = \\mathbf { M e d i a n } \\neq \\mathbf { M o d e } } } $ \nQuick Tip\n\nFor symmetric bimodal distributions, mean and median coincide at the centre, while the mode lies at the peaks away from the centre."
 }

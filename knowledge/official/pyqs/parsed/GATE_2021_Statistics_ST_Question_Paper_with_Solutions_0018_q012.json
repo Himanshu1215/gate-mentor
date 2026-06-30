@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q12",
+  "question_seq": 18,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let $A = { \\left[ \\begin{array} { l l l } { 0 } & { 0 } & { 1 } \\\\ { 1 } & { 0 } & { 0 } \\\\ { 0 } & { 1 } & { 0 } \\end{array} \\right] }$ and $I _ { 3 }$ be the $\\mathbf { 3 \\times 3 }$ identity matrix. Then the nullity of $5 A ( I _ { 3 } + A + \\overline { { { A } } } ^ { 2 } )$ equals",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Compute $I _ { 3 } + A + A ^ { 2 }$\n\nWe begin by calculating the powers of matrix A:\n\n $ A ^ { 2 } = { \\left[ \\begin{array} { l l l } { 0 } & { 0 } & { 1 } \\\\ { 1 } & { 0 } & { 0 } \\\\ { 0 } & { 1 } & { 0 } \\end{array} \\right] } ^ { 2 } = { \\left[ \\begin{array} { l l l } { 1 } & { 0 } & { 0 } \\\\ { 0 } & { 1 } & { 0 } \\\\ { 0 } & { 0 } & { 1 } \\end{array} \\right] } = I _ { 3 } $ \n\nThus,\n\n $ I _ { 3 } + A + A ^ { 2 } = I _ { 3 } + A + I _ { 3 } = 2 I _ { 3 } + A . $ \n\nStep 2: Multiply by 5A:\n\n $ 5 A ( I _ { 3 } + A + A ^ { 2 } ) = 5 A ( 2 I _ { 3 } + A ) = 1 0 A + 5 A ^ { 2 } . $ \n\nSince $A ^ { 2 } = I _ { 3 }$\n\n $ 5 A ( I _ { 3 } + A + A ^ { 2 } ) = 1 0 A + 5 I _ { 3 } . $ \n\nStep 3: Find the nullity. The nullity of a matrix is the dimension of the null space. Since the matrix $1 0 A + 5 I _ { 3 }$ is a linear combination of A and $I _ { 3 }$ , it has a nullity of 1.\n\nThus, the nullity is 1.\nQuick Tip\n\nThe nullity of a matrix is the number of free variables in its solution to the homogeneous equation $A \\mathbf { x } = 0 ,$"
+}

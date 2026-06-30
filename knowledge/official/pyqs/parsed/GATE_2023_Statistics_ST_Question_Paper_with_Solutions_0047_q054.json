@@ -7,13 +7,13 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "PROB_001",
-  "question_text": "Suppose that X is a discrete random variable with the following probability mass function: P(X = 0) = 1 2(1 + e−1), P(X = k) = e−1 2k! for k = 1, 2, 3, . . . Which of the following statements is/are true?",
+  "question_text": "Suppose that X is a discrete random variable with the following probability mass function: $ P ( X = 0 ) = \\frac { 1 } { 2 } ( 1 + e ^ { - 1 } ) , \\quad P ( X = k ) = \\frac { e ^ { - 1 } } { 2 k ! } \\operatorname { f o r } k = 1 , 2 , 3 , . . . $ Which of the following statements is/are true?",
   "options": {
-    "A": "E(X) = 1",
-    "B": "E(X) < 1",
-    "C": "E(X|X > 0) < 1",
-    "D": "E(X|X > 0) > 1"
+    "A": "$E ( X ) = 1$",
+    "B": "$E ( X ) < 1$",
+    "C": "$E ( X | X > 0 ) < \\frac { 1 } { 2 }$",
+    "D": "$\\begin{array} { r } { E ( X | X > 0 ) > \\frac { 1 } { 2 } } \\end{array}$"
   },
   "answer": "B",
-  "solution": "1) Understanding the problem:\nWe are given a discrete random variable X with a probability mass function (PMF), and we\nneed to compute expected values and conditional expectations.\n2) Analyzing each option:\n- (A) E(X) = 1: This is false. We need to calculate the expected value of X. Since the PMF\ninvolves an exponential decay, E(X) will be less than 1.\n- (B) E(X) < 1: This is true. We calculate the expected value E(X) as:\nE(X) =\nk=0\nkP(X = k) = 1\n2(1 + e−1) +\nk=1\ne−1\n2k! = 1\n2(1 + e−1) + 1\n2(e−1 + 1)\nThis value is less than 1.\n- (C) E(X|X > 0) < 1\n2: This is false. The conditional expectation given X > 0 is greater than\n2, as the value tends to be skewed towards higher values of X.\n- (D) E(X|X > 0) > 1\n2: This is true. The conditional expectation E(X|X > 0) is greater than\n2 because most of the mass is at higher values of X, such as 1, 2, 3, etc.\nThus, the correct answer is (B) and (D).\nQuick Tip\n- When calculating expectations, use the PMF and sum over all possible values of X.\nFor conditional expectations, adjust the probabilities accordingly. - The expected value\nE(X) can be computed as a weighted average of all possible outcomes, weighted by\ntheir probabilities."
+  "solution": "1) Understanding the problem:\n\nWe are given a discrete random variable X with a probability mass function (PMF), and we need to compute expected values and conditional expectations.\n2) Analyzing each option:\n\n$- \\left( \\mathrm { A } \\right) E ( X ) = 1$ : This is false. We need to calculate the expected value of X. Since the PMF involves an exponential decay, $E ( X )$ will be less than 1.\n\n$\\mathbf { \\nabla } - \\left( \\mathbf { B } \\right) E ( X ) < 1 \\colon$ : This is true. We calculate the expected value $E ( X )$ as:\n\n $ E ( X ) = \\sum _ { k = 0 } ^ { \\infty } k P ( X = k ) = { \\frac { 1 } { 2 } } ( 1 + e ^ { - 1 } ) + \\sum _ { k = 1 } ^ { \\infty } { \\frac { e ^ { - 1 } } { 2 k ! } } = { \\frac { 1 } { 2 } } ( 1 + e ^ { - 1 } ) + { \\frac { 1 } { 2 } } ( e ^ { - 1 } + 1 ) $ \n\nThis value is less than 1.\n\n$- \\left( { \\bf C } \\right) E ( X | X > 0 ) < \\frac { 1 } { 2 }$ : This is false. The conditional expectation given $X > 0$ is greater than ${ \\frac { 1 } { 2 } } .$ , as the value tends to be skewed towards higher values of $X$\n\n\\- (D) $\\begin{array} { r } { E ( X | X > 0 ) > \\frac { 1 } { 2 } } \\end{array}$ : This is true. The conditional expectation $E ( X | X > 0 )$ is greater than $\\frac { 1 } { 2 }$ because most of the mass is at higher values of X, such as 1, 2, 3, etc.\n\nThus, the correct answer is (B) and (D).\nQuick Tip\n\n\\- When calculating expectations, use the PMF and sum over all possible values of X. For conditional expectations, adjust the probabilities accordingly. - The expected value E(X) can be computed as a weighted average of all possible outcomes, weighted by their probabilities."
 }

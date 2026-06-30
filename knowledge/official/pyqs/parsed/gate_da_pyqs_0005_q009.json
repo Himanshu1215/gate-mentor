@@ -7,13 +7,14 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "GENERAL",
-  "question_text": "Given the relational schema R = (U, V, W, X, Y, Z) and the set of functional",
+  "question_text": "Given the relational schema R = (U, V, W, X, Y, Z) and the set of functional dependencies: $ \\mathbf { F } { = } { \\{ \\begin{array} { l l } { \\mathbf { U } { } \\mathbf { V } } \\\\ { \\mathbf { U } { } \\mathbf { W } } \\\\ { \\mathbf { W } \\mathbf { X } { } \\mathbf { Y } } \\\\ { \\mathbf { W } \\mathbf { X } { } \\mathbf { Z } } \\\\ { \\mathbf { V } { } \\mathbf { X } } \\end{array} } $ Which of the following FD can be derived from the above set?",
   "options": {
-    "D": "ependencies: Which of the following FD can be derived from the above set?",
-    "A": "VW Y",
-    "B": "VW  YZ",
-    "C": "VW U"
+    "A": "$\\mathrm { V W } \\to \\mathrm { Y }$",
+    "C": "$\\mathrm { V W } \\to \\mathrm { U }$",
+    "B": "$\\mathrm { V W } \\to \\mathrm { Y Z }$",
+    "D": "$\\mathrm { W X } \\to \\mathrm { Y Z }$ Sol. (a, b, d) Given ${ \\sf R } = ( { \\sf U } , { \\sf V } , { \\sf W } , { \\sf X } , { \\sf Y } , { \\sf Z } )$ $ [ \\mathrm { V W } ] ^ { + } = \\{ \\mathrm { V } , \\mathrm { X } , \\mathrm { W } , \\mathrm { Y } , Z \\} $ Therefore VW→Y true, also VW→YZ also true and VW→U is false $ [ \\mathrm { W X } ] ^ { + } = \\{ \\mathrm { W } , \\mathrm { X } , \\mathrm { Z } , \\mathrm { Y } \\} $ Therefore WX → YZ true. Option a, b and d are correct. [MCQ]"
   },
   "answer": null,
-  "solution": null
+  "solution": "To determine which functional dependencies (FDs) can be derived from the given set of FDs, we need to use the properties of functional dependencies and the concept of the plus-closure of a set of attributes. The plus-closure of a set of attributes \\(X\\) in a relational schema \\(R\\) with a set of FDs \\(F\\), denoted as \\(X^+\\), is the set of all attributes that can be functionally determined from \\(X\\) using the FDs in \\(F\\).\n\nGiven the relational schema \\(R = (U, V, W, X, Y, Z)\\) and the set of functional dependencies:\n\\[ F = \\{ U \\to V, U \\to W, W \\to X Y, W \\to X Z, V \\to X \\} \\]\n\nWe will check each option to see if it can be derived from \\(F\\).\n\n**Option (A): \\(VW \\to Y\\)**\n- Start with \\(VW\\).\n- From \\(V \\to X\\) (using \\(V\\) in \\(VW\\)), we get \\(VW \\to X\\).\n- From \\(W \\to XY\\) (using \\(W\\) in \\(VW\\)), we get \\(VW \\to X\\) and \\(VW \\to Y\\).\n- Therefore, \\(VW \\to Y\\) is true.\n\n**Option (B): \\(VW \\to YZ\\)**\n- Start with \\(VW\\).\n- From \\(V \\to X\\) (using \\(V\\) in \\(VW\\)), we get \\(VW \\to X\\).\n- From \\(W \\to XY\\) (using \\(W\\) in \\(VW\\)), we get \\(VW \\to X\\) and \\(VW \\to Y\\).\n- From \\(W \\to XZ\\) (using \\(W\\) in \\(VW\\)), we get \\(VW \\to X\\) and \\(VW \\to Z\\).\n- Combining \\(VW \\to Y\\) and \\(VW \\to Z\\), we get \\(VW \\to YZ\\).\n- Therefore, \\(VW \\to YZ\\) is true.\n\n**Option (C): \\(VW \\to U\\)**\n- Start with \\(VW\\).\n- From \\(V \\to X\\) (using \\(V\\) in \\(VW\\)), we get \\(VW \\to X\\).\n- From \\(W \\to XY\\) (using \\(W\\) in \\(VW\\)), we get \\(VW \\to X\\) and \\(VW \\to Y\\).\n- From \\(W \\to XZ\\) (using \\(W\\) in \\(VW\\)), we get \\(VW \\to X\\) and \\(VW \\to Z\\).\n- From \\(U \\to V\\) (using \\(U\\) not in \\(VW\\)), we cannot determine \\(U\\) from \\(VW\\).\n- Therefore, \\(VW \\to U\\) is false.\n\n**Option (D): \\(WX \\to YZ\\)**\n- Start with \\(WX\\).\n- From \\(W \\to XY\\) (using \\(W\\) in \\(WX\\)), we get \\(WX \\to X\\) and \\(WX \\to Y\\).\n- From \\(W \\to XZ\\) (using \\(W\\) in \\(WX\\)), we get",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
 }

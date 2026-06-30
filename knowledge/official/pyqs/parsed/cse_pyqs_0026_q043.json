@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q43",
+  "question_seq": 26,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let T be a full binary tree with 8 leaves. (A full binary tree has every level full.) Suppose two leaves and of T are chosen uniformly and independently at random. The expected value of the distance between and in T (i.e., the number of edges in the unique path between and ) is (rounded off to 2 decimal places)",
+  "options": null,
+  "answer": "D",
+  "solution": "To determine the expected value of the distance between two randomly chosen leaves in a full binary tree with 8 leaves, we need to follow these steps:\n\n1. **Understand the structure of the tree:**\n   A full binary tree with 8 leaves has 3 levels. The root is at level 0, the first level has 2 nodes, the second level has 4 nodes, and the third level has 8 leaves.\n\n2. **Calculate the distances between leaves:**\n   We need to consider the different possible distances between any two leaves. The possible distances are:\n   - 2 (leaves on the same level)\n   - 4 (leaves on different levels but in the same sub tree)\n   - 6 (leaves on different sub trees but in the same tree)\n\n3. **Count the number of pairs of leaves for each distance:**\n   - **Distance 2:**\n     - There are 4 pairs of leaves on the second level.\n     - There are 4 pairs of leaves on the third level.\n     - Total pairs: \\(4 + 4 = 8\\)\n\n   - **Distance 4:**\n     - Each leaf on the second level has 4 leaves on the third level in the same sub tree.\n     - There are 2 leaves on the second level.\n     - Total pairs: \\(2 \\times 4 = 8\\)\n\n   - **Distance 6:**\n     - Each leaf on the third level has 4 leaves on the third level in different sub trees.\n     - There are 8 leaves on the third level.\n     - Total pairs: \\(\\binom{8}{2} - 8 - 8 = 28 - 8 - 8 = 12\\)\n\n4. **Calculate the probability of each distance:**\n   - Total number of pairs of leaves: \\(\\binom{8}{2} = 28\\)\n   - Probability of distance 2: \\(\\frac{8}{28} = \\frac{2}{7}\\)\n   - Probability of distance 4: \\(\\frac{8}{28} = \\frac{2}{7}\\)\n   - Probability of distance 6: \\(\\frac{12}{28} = \\frac{3}{7}\\)\n\n5. **Calculate the expected value:**\n   The expected value \\(E\\) of the distance between two randomly chosen leaves is given by the weighted average of the distances:\n   \\[\n   E = 2 \\cdot \\frac{2}{7} + 4 \\cdot \\frac{2}{7} + 6 \\cdot \\frac{3}{7}\n   \\]\n\n6. **Perform the calculations:**\n   \\[\n   E = \\frac{4}{7} + \\frac{8}{7} + \\frac{18}{7} = \\frac{4 + 8 + 18}{7} = \\frac{30}{7} \\approx 4.29\n   \\]\n\nTherefore, the expected value of the distance between two randomly chosen leaves in the tree is \\(\\boxed{4.29}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

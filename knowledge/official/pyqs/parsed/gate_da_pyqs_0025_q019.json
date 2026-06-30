@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q19",
+  "question_seq": 25,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a continuous random variable whose cumulative distribution function (CDF) $F _ { X } ( x )$ , for some t, is given as follows: $ F _ { X } ( x ) = { \\left\\{ \\begin{array} { l l } { 0 \\quad \\quad \\quad x \\leq t } \\\\ { { \\frac { x - t } { 4 - t } } \\quad \\quad t \\leq x \\leq 4 } \\\\ { 1 \\quad \\quad \\quad x \\geq 4 } \\end{array} \\right. } $ If the median of X is 3, then what is the value of t?",
+  "options": {
+    "A": "2",
+    "B": "1",
+    "C": "−1",
+    "D": "0 Let $X = a Z + b ,$ where Z is a standard normal random variable, and a, b are two unknown constants. It is given that $ E [ X ] = 1 , E [ ( X - E [ X ] ) Z ] = - 2 , E [ ( X - E [ X ] ) ^ { 2 } ] = 4 , $ where $E [ X ]$ denotes the expectation of random variable X. The values of a, b are:"
+  },
+  "answer": null,
+  "solution": "To solve for the constants \\(a\\) and \\(b\\) in the equation \\(X = aZ + b\\), we will use the given expectations:\n\n1. \\(E[X] = 1\\)\n2. \\(E[(X - E[X])Z] = -2\\)\n3. \\(E[(X - E[X])^2] = 4\\)\n\nFirst, let's use the expectation of \\(X\\):\n\\[E[X] = E[aZ + b] = aE[Z] + b.\\]\nSince \\(Z\\) is a standard normal random variable, \\(E[Z] = 0\\). Therefore,\n\\[E[X] = b = 1.\\]\nSo, we have \\(b = 1\\).\n\nNext, let's use the expectation \\(E[(X - E[X])Z]\\):\n\\[E[(X - E[X])Z] = E[(aZ + b - 1)Z] = E[aZ^2 + (b-1)Z] = aE[Z^2] + (b-1)E[Z].\\]\nSince \\(E[Z^2] = 1\\) and \\(E[Z] = 0\\), we get\n\\[E[(X - E[X])Z] = a \\cdot 1 + (1-1) \\cdot 0 = a.\\]\nWe are given that \\(E[(X - E[X])Z] = -2\\), so\n\\[a = -2.\\]\nSo, we have \\(a = -2\\).\n\nFinally, let's verify the expectation \\(E[(X - E[X])^2]\\):\n\\[E[(X - E[X])^2] = E[(aZ + b - 1)^2] = E[(aZ + (b-1))^2] = E[(-2Z)^2] = E[4Z^2] = 4E[Z^2] = 4 \\cdot 1 = 4.\\]\nThis matches the given value, confirming our values for \\(a\\) and \\(b\\).\n\nTherefore, the values of \\(a\\) and \\(b\\) are \\(\\boxed{-2 \\text{ and } 1}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

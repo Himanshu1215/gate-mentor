@@ -1,0 +1,17 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q38",
+  "question_seq": 144,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let G = (V, Σ, S, P) be a context-free grammar in Chomsky Normal Form with $\\Sigma = \\{ a , b ,$ c}",
+  "options": {
+    "A": "nd Vcontaining 10 variable symbols including the start symbol S. The string $W = a ^ { 3 0 } b ^ { 3 0 } c ^ { 3 0 }$ is derivable from S. The number of steps (application of rules) in the derivation S →\\* w is"
+  },
+  "answer": "A",
+  "solution": "To determine the number of steps in the derivation \\( S \\rightarrow^* W \\) for the string \\( W = a^{30} b^{30} c^{30} \\) in a context-free grammar \\( G \\) in Chomsky Normal Form (CNF), we need to understand the structure of CNF rules and how they generate strings.\n\nIn CNF, each production rule is of the form:\n1. \\( A \\rightarrow BC \\)\n2. \\( A \\rightarrow a \\)\nwhere \\( A, B, \\) and \\( C \\) are non-terminals, and \\( a \\) is a terminal.\n\nGiven that \\( G \\) has 10 variable symbols (non terminals) including the start symbol \\( S \\), we can infer that each production rule involving non terminals will reduce the number of non terminals by 1. The process continues until all non terminals are replaced by terminals.\n\nLet's break down the steps:\n\n1. **Initial State**: We start with the start symbol \\( S \\), which is a non terminal. Therefore, we have 1 non terminal.\n2. **Final State**: We want to derive the string \\( W = a^{30} b^{30} c^{30} \\), which consists of 30 terminals. Since each production rule involving non terminals reduces the number of non terminals by 1, we need to convert all 1 non terminal into 30 terminals.\n\nTo convert 1 non terminal into 30 terminals, we need to apply production rules that reduce the number of non terminals by 1 each time. This means we need to apply production rules 29 times to reduce the number of non terminals from 1 to 0 (and then convert the remaining non terminals to terminals).\n\nHowever, since each production rule involving non terminals reduces the number of non terminals by 1, we need to apply production rules 29 times to reduce the number of non terminals from 1 to 0.\n\nTherefore, the total number of steps in the derivation \\( S \\rightarrow^* W \\) is:\n\\[\n\\boxed{90}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

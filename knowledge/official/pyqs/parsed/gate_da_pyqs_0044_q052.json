@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q52",
+  "question_seq": 44,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "${ \\mathrm { A n ~ } } n \\times n$ matrix A with real entries satisfies the property: $\\| A x \\| ^ { 2 } = \\| x \\| ^ { 2 }$ , for all $x \\in \\mathbb { R } ^ { n }$ , where $\\| \\cdot \\|$ denotes the Euclidean norm. Which of the following statements is/are ALWAYS correct?",
+  "options": {
+    "A": "A must be orthogonal",
+    "B": "A = I, where I denotes the identity matrix, is the only solution",
+    "C": "The eigenvalues of A are either +1 or −1",
+    "D": "A has full rank"
+  },
+  "answer": null,
+  "solution": "To solve the problem, we need to analyze the given property of the matrix \\( A \\), which is \\( \\| A x \\| ^ { 2 } = \\| x \\| ^ { 2 } \\) for all \\( x \\in \\mathbb { R } ^ { n } \\). This property implies that the matrix \\( A \\) preserves the Euclidean norm of any vector \\( x \\). Let's go through the options step by step.\n\n**Option (A): A must be orthogonal**\n\nA matrix \\( A \\) is orthogonal if \\( A^T A = I \\), where \\( I \\) is the identity matrix. We can show that the given property implies that \\( A \\) is orthogonal. Starting from the property \\( \\| A x \\| ^ { 2 } = \\| x \\| ^ { 2 } \\), we can write:\n\\[\n\\| A x \\| ^ { 2 } = (A x) \\cdot (A x) = x^T A^T A x\n\\]\nSince \\( \\| x \\| ^ { 2 } = x \\cdot x = x^T x \\), we have:\n\\[\nx^T A^T A x = x^T x\n\\]\nThis equation must hold for all \\( x \\in \\mathbb { R } ^ { n } \\). Therefore, we can conclude that:\n\\[\nA^T A = I\n\\]\nThis means that \\( A \\) is orthogonal. So, option (A) is correct.\n\n**Option (B): A = I, where I denotes the identity matrix, is the only solution**\n\nWhile it is true that \\( A = I \\) is a solution, it is not the only solution. For example, any orthogonal matrix \\( A \\) will satisfy the property \\( \\| A x \\| ^ { 2 } = \\| x \\| ^ { 2 } \\). Therefore, option (B) is incorrect.\n\n**Option (C): The eigenvalues of A are either +1 or −1**\n\nSince \\( A \\) is orthogonal, its eigenvalues must have absolute value 1. This means that the eigenvalues of \\( A \\) are either +1 or -1. So, option (C) is correct.\n\n**Option (D): A has full rank**\n\nAn orthogonal matrix is always invertible, which means it has full rank. Therefore, option (D) is correct.\n\nBased on the analysis, the correct options are (A), (C), and (D). However, the problem asks for the statement that is always correct. Since (A) is the most specific and directly follows from the given property, the final answer is:\n\n\\[\n\\boxed{A}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

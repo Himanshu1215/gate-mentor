@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q1",
+  "question_seq": 33,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "The statistics K and $X _ { 1 } ^ { 2 } + X _ { 2 } ^ { 2 } + \\cdots + X _ { 7 } ^ { 2 }$ are independent. 2. $\\textstyle { \\frac { 7 K } { 2 } }$ has an F -distribution with 2 and 7 degrees of freedom. 3. $\\begin{array} { r } { E ( K ^ { 2 } ) = \\frac { 8 } { 6 3 } . } \\end{array}$ Then which of the above statements is/are true?",
+  "options": {
+    "A": "(I) and (II) only",
+    "B": "(I) and (III) only",
+    "C": "(II) and (III) only",
+    "D": "(I) only"
+  },
+  "answer": "C",
+  "solution": "Step 1: Analyzing Statement (I).\n\nThe statistic K involves the sum of squared normal variables $X _ { 1 } ^ { 2 } , X _ { 2 } ^ { 2 } , \\ldots , X _ { 7 } ^ { 2 }$ , which are not independent because they are derived from the same underlying sample of normal variables. Thus, K and the sum of squared variables $X _ { 1 } ^ { 2 } + X _ { 2 } ^ { 2 } + \\cdots + X _ { 7 } ^ { 2 }$ are not independent. Hence, statement (I) is false.\nStep 2: Analyzing Statement (II).\n\nThe statistic $\\textstyle { \\frac { 7 K } { 2 } }$ is a ratio of chi-square variables. The numerator 7K follows a chi-square distribution with 7 degrees of freedom, and the denominator follows a chi-square distribution with 2 degrees of freedom. The ratio of two scaled chi-square variables follows an F -distribution with degrees of freedom equal to the numerator and denominator, making statement (II) true.\nStep 3: Analyzing Statement (III).\n\nThe expected value of $K ^ { 2 }$ , based on the properties of the chi-square distribution and variance of the sample mean, is known to be $\\begin{array} { r } { E ( K ^ { 2 } ) = \\frac { 8 } { 6 3 } } \\end{array}$ . Hence, statement (III) is true.\nStep 4: Conclusion.\n\nSince statements (II) and (III) are true, the correct answer is (C).\nQuick Tip\n\nIn statistical problems involving the ratio of chi-square variables, always check whether the result follows an F -distribution, which arises from the ratio of two scaled chi-square distributions."
+}

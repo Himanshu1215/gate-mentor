@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q8",
+  "question_seq": 13,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the following is NOT a valid identity?",
+  "options": {
+    "A": "$x \\oplus y = ( x y + x ^ { \\prime } y ^ { \\prime } ) ^ { \\prime }$",
+    "C": "$( x \\ \\oplus \\ y ) \\ \\oplus \\ z = x \\ \\oplus \\ ( y \\ \\oplus \\ z )$",
+    "B": "$x \\ \\oplus \\ y = x + y , \\ \\mathsf { i f } \\ x y = 0$",
+    "D": "$( x ~ + ~ y ) ~ \\oplus ~ { \\ o { z } } = { \\boldsymbol { x } } ~ \\oplus ~ ( y ~ + ~ { \\ o { z } } )$"
+  },
+  "answer": "D",
+  "solution": "To determine which of the given identities is not valid, we need to analyze each option step by step.\n\n### Option (A): \\( x \\oplus y = ( x y + x' y' )' \\)\n\nThe operation \\( \\oplus \\) is typically defined as the XOR (exclusive OR) operation. The XOR operation can be expressed in terms of other logical operations as follows:\n\\[ x \\oplus y = (x \\land \\neg y) \\lor (\\neg x \\land y) \\]\n\nWe need to check if this is equivalent to \\( ( x y + x' y' )' \\).\n\nFirst, let's simplify \\( ( x y + x' y' )' \\):\n\\[ ( x y + x' y' )' = \\neg ( x y + x' y' ) \\]\n\nUsing De Morgan's laws, we get:\n\\[ \\neg ( x y + x' y' ) = \\neg x y \\land \\neg x' y' \\]\n\nNow, let's simplify \\( \\neg x y \\) and \\( \\neg x' y' \\):\n\\[ \\neg x y = \\neg x \\lor \\neg y \\]\n\\[ \\neg x' y' = x \\lor y \\]\n\nThus:\n\\[ \\neg x y \\land \\neg x' y' = (\\neg x \\lor \\neg y) \\land (x \\lor y) \\]\n\nThis expression is not equivalent to \\( (x \\land \\neg y) \\lor (\\neg x \\land y) \\), which is the definition of \\( x \\oplus y \\). Therefore, option (A) is not a valid identity.\n\n### Option (B): \\( x \\oplus y = x + y \\) if \\( x y = 0 \\)\n\nIf \\( x y = 0 \\), it means that at least one of \\( x \\) or \\( y \\) is 0. Let's check the values of \\( x \\oplus y \\) and \\( x + y \\) in this case:\n\n- If \\( x = 0 \\) and \\( y = 0 \\):\n  \\[ x \\oplus y = 0 \\oplus 0 = 0 \\]\n  \\[ x + y = 0 + 0 = 0 \\]\n\n- If \\( x = 0 \\) and \\( y = 1 \\):\n  \\[ x \\oplus y = 0 \\oplus 1 = 1 \\]\n  \\[ x + y = 0 + 1 = 1 \\]\n\n- If \\( x = 1 \\) and \\( y = 0 \\):\n  \\[ x \\oplus y = 1 \\oplus 0 = 1 \\]\n  \\[ x + y = 1 + 0 = 1 \\]\n\nIn all cases where \\( x y = 0 \\), \\( x \\oplus y = x + y \\). Therefore, option (B) is a valid identity.\n\n### Option (C): \\( ( x \\oplus y ) \\oplus z = x \\oplus ( y \\oplus z ) \\)\n\nThe XOR operation is associative. This means that:\n\\[ ( x \\oplus y ) \\oplus z = x \\oplus ( y \\oplus z ) \\]\n\nTherefore, option (C) is a",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

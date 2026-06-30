@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q10",
+  "question_seq": 14,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the following statements is NOT correct about the $\\mathsf { B } ^ { + }$ tree data structure used for creating an index of a relational database table?",
+  "options": {
+    "A": "Key values in each node are kept in sorted order",
+    "B": "Each leaf node has a pointer to the next leaf node",
+    "C": "$\\mathsf { B } ^ { + }$ tree is a height balanced tree",
+    "D": "Non-leaf nodes have pointers to data records"
+  },
+  "answer": "D",
+  "solution": "To determine why option (D) is not correct about the \\(\\mathbf{B}^+\\) tree data structure, let's analyze each option step by step.\n\n(A) Key values in each node are kept in sorted order.\n- This is correct. In a \\(\\mathbf{B}^+\\) tree, the key values in each node are kept in sorted order. This allows for efficient range queries and binary search operations.\n\n(B) Each leaf node has a pointer to the next leaf node.\n- This is correct. In a \\(\\mathbf{B}^+\\) tree, each leaf node has a pointer to the next leaf node. This allows for efficient遍历 of the leaf nodes in sorted order.\n\n(C) \\(\\mathbf{B}^+\\) tree is a height balanced tree.\n- This is correct. In a \\(\\mathbf{B}^+\\) tree, the height of the tree is balanced, meaning that the distance from the root to any leaf node is the same. This ensures that operations such as search, insert, and delete take logarithmic time.\n\n(D) Non-leaf nodes have pointers to data records.\n- This is not correct. In a \\(\\mathbf{B}^+\\) tree, non-leaf nodes do not have pointers to data records. Instead, non-leaf nodes have pointers to other nodes in the tree. Specifically, each non-leaf node has pointers to its children, which are also \\(\\mathbf{B}^+\\) trees.\n\nTherefore, the correct answer is \\(\\boxed{D}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

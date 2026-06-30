@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q18",
+  "question_seq": 15,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , \\ldots , X _ { 1 8 }$ be a random sample from the distribution $ f ( x ; \\theta ) = \\left\\{ \\begin{array} { l l } { \\frac { 2 x } { \\theta } e ^ { - x ^ { 2 } / \\theta } , } & { x > 0 , } \\\\ { 0 , } & { x \\leq 0 . } \\end{array} \\right. $ What is the maximum likelihood estimator (MLE) of $\\theta ?$",
+  "options": {
+    "A": "$\\begin{array} { r } { \\hat { \\theta } = \\frac { 1 } { 1 8 } \\sum _ { i = 1 } ^ { 1 8 } X _ { i } ^ { 2 } } \\end{array}$",
+    "B": "$\\begin{array} { r } { \\hat { \\theta } = \\frac { 1 } { 9 } \\sum _ { i = 1 } ^ { 1 8 } X _ { i } ^ { 2 } } \\end{array}$",
+    "C": "$\\begin{array} { r } { \\hat { \\theta } = \\frac { 1 } { 3 6 } \\sum _ { i = 1 } ^ { 1 8 } X _ { i } ^ { 2 } } \\end{array}$",
+    "D": "$\\begin{array} { r } { \\hat { \\theta } = \\frac { 1 } { 2 } \\sum _ { i = 1 } ^ { 1 8 } X _ { i } ^ { 2 } } \\end{array}$"
+  },
+  "answer": "B",
+  "solution": "Step 1: Write the likelihood function.\n\nThe likelihood function $L ( \\theta )$ for the sample is given by:\n\n $ L ( \\theta ) = \\prod _ { i = 1 } ^ { 1 8 } f ( X _ { i } ; \\theta ) = \\prod _ { i = 1 } ^ { 1 8 } \\frac { 2 X _ { i } } { \\theta } e ^ { - X _ { i } ^ { 2 } / \\theta } . $ \n\nThus, the log-likelihood function is:\n\n $ \\ell ( \\theta ) = \\sum _ { i = 1 } ^ { 1 8 } \\left[ \\ln \\left( \\frac { 2 X _ { i } } { \\theta } \\right) - \\frac { X _ { i } ^ { 2 } } { \\theta } \\right] = \\sum _ { i = 1 } ^ { 1 8 } \\left( \\ln ( 2 X _ { i } ) - \\ln ( \\theta ) - \\frac { X _ { i } ^ { 2 } } { \\theta } \\right) . $ \n\nStep 2: Differentiate and find the MLE.\n\nThe derivative of the log-likelihood function with respect to $\\theta$ is:\n\n $ { \\frac { d } { d \\theta } } \\ell ( \\theta ) = - { \\frac { 1 8 } { \\theta } } + { \\frac { 1 } { \\theta ^ { 2 } } } \\sum _ { i = 1 } ^ { 1 8 } X _ { i } ^ { 2 } . $ \n\nSetting this equal to 0 and solving for θ, we get:\n\n $ \\hat { \\theta } = \\frac { 1 } { 1 8 } \\sum _ { i = 1 } ^ { 1 8 } X _ { i } ^ { 2 } . $ \n\nStep 3: Conclusion.\n\nThus, the MLE of θ is $\\begin{array} { r } { \\hat { \\theta } = \\frac { 1 } { 1 8 } \\sum _ { i = 1 } ^ { 1 8 } X _ { i } ^ { 2 } } \\end{array}$ , and the correct answer is $( \\mathsf { A } )$\nQuick Tip\n\nThe maximum likelihood estimator (MLE) for a parameter is found by differentiating the log-likelihood function and setting it equal to zero. In cases where the likelihood involves sums of squares, the MLE is typically the sample mean or a scaled version of it."
+}

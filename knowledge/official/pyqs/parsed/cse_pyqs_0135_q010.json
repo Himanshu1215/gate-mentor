@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q10",
+  "question_seq": 135,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Given an integer array of size N, we want to check if the array is sorted (in either",
+  "options": {
+    "A": "scending or descending order). An algorithm solves this problem by making a single pass through the array and comparing each element of the array only with its adjacent elements. The worst-case time complexity of this algorithm is",
+    "C": "Both O(N) and Ω(N) (d) Neither O(N) nor Ω(N)"
+  },
+  "answer": "C",
+  "solution": "To determine the worst-case time complexity of the algorithm that checks if an integer array of size \\( N \\) is sorted (in either ascending or descending order) by making a single pass through the array and comparing each element with its adjacent elements, let's analyze the algorithm step by step.\n\n1. **Algorithm Description**:\n   - The algorithm iterates through the array from the first element to the second-to-last element.\n   - For each element, it comparing it with its adjacent element.\n   - If the elements are not in the correct order (either not in ascending or not in descending order), the algorithm immediately returns that the array is not sorted.\n   - If the algorithm completes the iteration without finding any elements that are out of order, it returns that the array is sorted.\n\n2. **Time Complexity Analysis**:\n   - The algorithm makes a single pass through the array, which means it visits each element exactly once.\n   - Since there are \\( N \\) elements in the array, the number of comparisons made by the algorithm is \\( N - 1 \\) (it compares the first element with the second, the second with the third, and so on, up to the \\( (N-1) \\)-th element with the \\( N \\)-th element).\n   - The time complexity of making \\( N - 1 \\) comparisons is \\( O(N) \\), because the time taken to make each comparison is constant.\n   - The algorithm also spends a constant amount of time in each comparison, so the lower bound of the time complexity is \\( \\Omega(N) \\).\n\nTherefore, the worst-case time complexity of the algorithm is both \\( O(N) \\) and \\( \\Omega(N) \\), which means it is \\( \\Theta(N) \\).\n\nThe correct answer is: \\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

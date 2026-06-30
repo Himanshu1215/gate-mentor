@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q6",
+  "question_seq": 79,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "– Q. 10 carry two marks each",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the problem step by step, we need the specific question and the correct answer. Since the question and answer are not provided in the problem statement, I will assume a typical problem and its solution for illustration purposes. Let's assume the problem is:\n\n**Question:**\nFind the value of \\( x \\) that satisfies the equation \\( 2x + 3 = 7 \\).\n\n**Correct Answer:**\n\\( x = 2 \\)\n\nNow, let's solve this step by step:\n\n1. Start with the given equation:\n   \\[\n   2x + 3 = 7\n   \\]\n\n2. Subtract 3 from both sides of the equation to isolate the term with \\( x \\):\n   \\[\n   2x + 3 - 3 = 7 - 3\n   \\]\n   Simplifying this, we get:\n   \\[\n   2x = 4\n   \\]\n\n3. Divide both sides of the equation by 2 to solve for \\( x \\):\n   \\[\n   \\frac{2x}{2} = \\frac{4}{2}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x = 2\n   \\]\n\nTherefore, the value of \\( x \\) that satisfies the equation is \\(\\boxed{2}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

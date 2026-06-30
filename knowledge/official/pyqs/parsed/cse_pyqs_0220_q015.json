@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q15",
+  "question_seq": 220,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In the context of DBMS, consider the two sets T and S given below. I: Logical schema II: Physical schema L: Views M: File organization and indexes III: External schema N: Relations Which one of the following is the correct match from T to S?",
+  "options": {
+    "A": "$| \\mathbf { \\sigma } - \\mathbf { \\sigma } | , \\ | | \\mathbf { \\sigma } - \\mathsf { M } , \\ | | | \\mathbf { \\sigma } - \\mathsf { N }$",
+    "B": "$| \\mathbf { \\partial } - \\mathsf { M } , \\mathsf { \\Omega } | | \\mathbf { \\partial } - \\mathsf { L } , \\mathsf { \\Omega } | | | \\mathbf { \\partial } - \\mathsf { N }$",
+    "C": "$| \\mathbf { \\Pi } - \\mathsf { N } , \\mathsf { \\Pi } | | \\mathbf { \\Pi } - \\mathsf { M } , \\mathsf { \\Pi } | | \\mathbf { \\Pi } - \\mathsf { L }$",
+    "D": "$| \\mathbf { \\Pi } - \\textsf { N } , \\ | | \\mathbf { \\Pi } - \\textsf { L } , \\ | | | \\mathbf { \\Pi } - \\textsf { M }$"
+  },
+  "answer": "C",
+  "solution": "To determine the correct match from set T to set S, we need to understand the relationships between the elements in each set. Let's analyze each set step by step.\n\nSet T:\n- \\( \\mathbf{\\sigma} \\): Logical schema\n- \\( \\mathbf{M} \\): File organization and indexes\n- \\( \\mathbf{N} \\): Relations\n\nSet S:\n- \\( \\mathbf{\\sigma} \\): Logical schema\n- \\( \\mathbf{M} \\): File organization and indexes\n- \\( \\mathbf{N} \\): Relations\n\nWe need to find a match where each element in set T is paired with an element in set S such that the logical relationship between them is preserved.\n\nLet's consider each option:\n\n**Option (A):**\n- \\( | \\mathbf{\\sigma} - \\mathbf{\\sigma} | \\): This represents the symmetric difference between the logical schema and itself, which is always 0.\n- \\( | \\mathbf{\\sigma} - \\mathbf{M} | \\): This represents the symmetric difference between the logical schema and the file organization and indexes.\n- \\( | \\mathbf{\\sigma} - \\mathbf{N} | \\): This represents the symmetric difference between the logical schema and the relations.\n\n**Option (B):**\n- \\( | \\mathbf{\\partial} - \\mathbf{M} | \\): This represents the symmetric difference between the logical schema and the file organization and indexes.\n- \\( | \\mathbf{\\partial} - \\mathbf{L} | \\): This represents the symmetric difference between the logical schema and the views.\n- \\( | \\mathbf{\\partial} - \\mathbf{N} | \\): This represents the symmetric difference between the logical schema and the relations.\n\n**Option (C):**\n- \\( | \\mathbf{\\pi} - \\mathbf{N} | \\): This represents the symmetric difference between the logical schema and the relations.\n- \\( | \\mathbf{\\pi} - \\mathbf{M} | \\): This represents the symmetric difference between the logical schema and the file organization and indexes.\n- \\( | \\mathbf{\\pi} - \\mathbf{L} | \\): This represents the symmetric difference between the logical schema and the views.\n\n**Option (D):**\n- \\( | \\mathbf{\\pi} - \\text{N} | \\): This represents the symmetric difference between the logical schema and the relations.\n- \\( | \\mathbf{\\pi} - \\text{L} | \\): This represents the symmetric difference between the logical schema and the views.\n- \\( | \\mathbf{\\pi} - \\mathbf{M} | \\): This represents the symmetric difference between the logical schema and the file organization and indexes.\n\nFrom the analysis, we can see that option (C) correctly pairs each element in set T with an element in set S such that the logical relationship between them is preserved. Therefore, the correct answer is:\n\n\\[\n\\boxed{C}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

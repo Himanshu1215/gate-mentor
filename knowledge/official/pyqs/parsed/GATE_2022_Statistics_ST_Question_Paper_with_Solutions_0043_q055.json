@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q55",
+  "question_seq": 43,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let 0, 1, 1, 2, 0 be five observations of a random variable X which follows a Poisson distribution with parameter $\\theta > 0 .$ . Let the minimum variance unbiased estimate of $P ( X \\leq 1 )$ , based on this data, be $\\alpha .$ . Then $5 ^ { 4 } \\alpha$ (in integer) is equal to",
+  "options": null,
+  "answer": null,
+  "solution": "For i.i.d. Poisson(θ), the sufficient and complete statistic is the total $\\begin{array} { r } { T = \\sum _ { i = 1 } ^ { 5 } X _ { i } \\sim \\operatorname { P o i s s o n } ( 5 \\theta ) . } \\end{array}$\n\n $ h ( T ) = \\mathbb { E } \\big [ \\mathbf { 1 } \\{ X _ { 1 } \\leq 1 \\} \\mid T \\big ] $ \n\n $ g ( \\theta ) = P ( X \\leq 1 ) = e ^ { - \\theta } ( 1 + \\theta ) $ \n\n $ X _ { 1 } \\mid T = t \\sim $ \n\n $ T = t , $ \n\n $ h ( t ) = P ( X _ { 1 } \\leq 1 \\mid T = t ) = \\left( { \\frac { 4 } { 5 } } \\right) ^ { t } + { \\frac { t } { 5 } } \\left( { \\frac { 4 } { 5 } } \\right) ^ { t - 1 } . $ \n\nWith the observed data, $t = \\sum ( 0 , 1 , 1 , 2 , 0 ) = 4 \\mathrm { { ; } }$ ; therefore\n\n $ \\alpha = h ( 4 ) = \\left( { \\frac { 4 } { 5 } } \\right) ^ { 4 } + { \\frac { 4 } { 5 } } \\left( { \\frac { 4 } { 5 } } \\right) ^ { 3 } = { \\frac { 2 5 6 } { 6 2 5 } } + { \\frac { 2 5 6 } { 6 2 5 } } = { \\frac { 5 1 2 } { 6 2 5 } } . $ \n\nThus,\n\n $ 5 ^ { 4 } \\alpha = 6 2 5 \\times \\frac { 5 1 2 } { 6 2 5 } = 5 1 2 . $ \nQuick Tip\n\nFor Poisson samples, obtain UMVUEs by conditioning on the complete sufficient statistic $T = \\sum X _ { i }$ and using Poisson–multinomial splitting."
+}

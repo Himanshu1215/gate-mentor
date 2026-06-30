@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q20",
+  "question_seq": 113,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let A be the adjacency matrix of the graph with vertices {1, 2, 3, 4, 5}. Let $\\lambda _ { 1 } , \\lambda _ { 2 } , \\lambda _ { 3 } , \\lambda _ { 4 }$ and $\\lambda _ { 5 }$ be the five eigenvalues of A. Note that these eigenvalues need not be distinct The value of $\\lambda _ { 1 } + \\lambda _ { 2 } + \\lambda _ { 3 } + \\lambda _ { 4 } + \\lambda _ { 5 } =$",
+  "options": null,
+  "answer": "B",
+  "solution": "To determine the value of \\(\\lambda_1 + \\lambda_2 + \\lambda_3 + \\lambda_4 + \\lambda_5\\) for the adjacency matrix \\(A\\) of a graph with vertices \\(\\{1, 2, 3, 4, 5\\}\\), we can use a property of the eigenvalues of a matrix. Specifically, the sum of the eigenvalues of a matrix is equal to the trace of the matrix.\n\nThe trace of a matrix is the sum of the elements on its main diagonal. For an adjacency matrix \\(A\\) of a graph, the element \\(A_{ij}\\) is 1 if there is an edge between vertices \\(i\\) and \\(j\\), and 0 otherwise. Therefore, the diagonal elements \\(A_{ii}\\) are all 0 because there are no self-loops in a simple graph (assuming the graph is simple).\n\nLet's write down the adjacency matrix \\(A\\) for a graph with 5 vertices:\n\n\\[\nA = \\begin{pmatrix}\n0 & a_{12} & a_{13} & a_{14} & a_{15} \\\\\na_{21} & 0 & a_{23} & a_{24} & a_{25} \\\\\na_{31} & a_{32} & 0 & a_{34} & a_{35} \\\\\na_{41} & a_{42} & a_{43} & 0 & a_{45} \\\\\na_{51} & a_{52} & a_{53} & a_{54} & 0\n\\end{pmatrix}\n\\]\n\nThe trace of \\(A\\) is the sum of the diagonal elements:\n\n\\[\n\\text{trace}(A) = 0 + 0 + 0 + 0 + 0 = 0\n\\]\n\nSince the sum of the eigenvalues of a matrix is equal to its trace, we have:\n\n\\[\n\\lambda_1 + \\lambda_2 + \\lambda_3 + \\lambda_4 + \\lambda_5 = \\text{trace}(A) = 0\n\\]\n\nTherefore, the value of \\(\\lambda_1 + \\lambda_2 + \\lambda_3 + \\lambda_4 + \\lambda_5\\) is \\(\\boxed{0}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

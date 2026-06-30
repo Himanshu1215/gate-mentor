@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q1",
+  "question_seq": 129,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In a B+ tree, the requirement of at least half-full (50%) node occupancy is relaxed for which one of the following cases?",
+  "options": {
+    "A": "Only the root node",
+    "C": "All leaf nodes",
+    "B": "Only the leftmost leaf node",
+    "D": "All internal nodes"
+  },
+  "answer": "A",
+  "solution": "To determine why the requirement of at least half-full (50%) node occupancy is relaxed for the root node in a B+ tree, let's analyze the structure and properties of B+ trees.\n\nA B+ tree is a type of balanced tree data structure where each node can have multiple keys and multiple children. The key properties of a B+ tree are:\n1. All leaves are at the same level.\n2. Each non-leaf node (internal node) has at least \\( \\lceil \\frac{m}{2} \\rceil \\) children, where \\( m \\) is the maximum number of children a node can have.\n3. Each leaf node has at least \\( \\lceil \\frac{m}{2} \\rceil \\) keys.\n\nThe relaxation of the 50% occupancy requirement for the root node is due to the fact that the root node is the only node that does not necessarily need to be split when a new key is inserted. Here's why:\n\n1. **Root Node**: The root node is the topmost node in the tree. When a new key is inserted into the tree, if the root node is not already full, it can simply be updated to include the new key. If the root node is full, it can be split into two new root nodes, each containing approximately half of the keys. However, the root node does not need to be split if the tree is not full, unlike the internal nodes and leaf nodes which must satisfy the 50% occupancy requirement to avoid splitting.\n\n2. **Internal Nodes and Leaf Nodes**: For internal nodes and leaf nodes, the 50% occupancy requirement ensures that the tree remains balanced and that no node becomes too empty, which could lead to frequent splits and a less efficient tree structure. However, the root node does not have the same constraint because it is the topmost node and does not need to be split if it is not full.\n\nTherefore, the correct answer is:\n\\boxed{A}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

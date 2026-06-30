@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q8",
+  "question_seq": 188,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "For positive real numbers S and K, the function $H _ { K } ( S )$ is defined as: $H _ { k } ( S ) = \\mathsf { m a x } ( S - K , 0 )$ . The max function is defined as: $ \\begin{array} { r } { \\mathsf { m a x } ( a , \\ b ) = \\left\\{ \\begin{array} { l l } { a , } & { \\mathsf { w h e n } \\ a > b } \\\\ { b , } & { \\mathsf { w h e n } \\ a \\leq b } \\end{array} \\right. } \\end{array} $ The graph below shows the plot of a function N(S) versus S. N(S) can be expressed as",
+  "options": {
+    "A": "$H _ { 1 0 } ( S ) - H _ { 2 0 } ( S )$",
+    "C": "$- H _ { 1 0 } ( S ) + H _ { 2 0 } ( S )$",
+    "B": "$H _ { 1 0 } ( S ) - 2 H _ { 2 0 } ( S )$",
+    "D": "$H _ { 1 5 } ( S ) - H _ { 2 0 } ( S )$"
+  },
+  "answer": "A",
+  "solution": "To determine which expression correctly represents the function \\( N(S) \\) given the graph, we need to analyze the behavior of \\( N(S) \\) and compare it to the properties of the max function \\( H_K(S) \\).\n\nThe function \\( H_K(S) \\) is defined as:\n\\[ H_K(S) = \\max(S - K, 0) \\]\nThis means:\n- If \\( S > K \\), then \\( H_K(S) = S - K \\).\n- If \\( S \\leq K \\), then \\( H_K(S) = 0 \\).\n\nLet's analyze the given graph of \\( N(S) \\):\n\n1. For \\( S < 10 \\), \\( N(S) = 0 \\).\n2. For \\( 10 \\leq S < 20 \\), \\( N(S) = S - 10 \\).\n3. For \\( S \\geq 20 \\), \\( N(S) = 0 \\).\n\nWe need to find an expression that matches this behavior using the max function.\n\nConsider the expression \\( H_{10}(S) - H_{20}(S) \\):\n- For \\( S < 10 \\):\n  \\[ H_{10}(S) = 0 \\quad \\text{and} \\quad H_{20}(S) = 0 \\]\n  \\[ H_{10}(S) - H_{20}(S) = 0 - 0 = 0 \\]\n- For \\( 10 \\leq S < 20 \\):\n  \\[ H_{10}(S) = S - 10 \\quad \\text{and} \\quad H_{20}(S) = 0 \\]\n  \\[ H_{10}(S) - H_{20}(S) = (S - 10) - 0 = S - 10 \\]\n- For \\( S \\geq 20 \\):\n  \\[ H_{10}(S) = S - 10 \\quad \\text{and} \\quad H_{20}(S) = S - 20 \\]\n  \\[ H_{10}(S) - H_{20}(S) = (S - 10) - (S - 20) = S - 10 - S + 20 = 10 \\]\n  However, we need \\( N(S) = 0 \\) for \\( S \\geq 20 \\). Therefore, we need to adjust our expression.\n\nLet's consider the expression \\( H_{10}(S) - 2H_{20}(S) \\):\n- For \\( S < 10 \\):\n  \\[ H_{10}(S) = 0 \\quad \\text{and} \\quad H_{20}(S) = 0 \\]\n  \\[ H_{10}(S) - 2H_{20}(S) = 0 - 2 \\cdot 0 = 0 \\]\n- For \\( 10 \\leq S < 20 \\):\n  \\[ H_{10}(S) = S - 10 \\quad \\text{and} \\quad H_{20}(S) = 0 \\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

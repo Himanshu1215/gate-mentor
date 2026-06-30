@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q36",
+  "question_seq": 170,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Suppose we are transmitting frames between two nodes using Stop-and-Wait protocol. The frame size is 3000 bits. The transmission rate of the channel is 2000 bps (bits/ second) and the propagation delay between the two nodes is 100 milliseconds. Assume that the processing times at the source and destination are negligible. Also, assume that the size of the acknowledgement packet is negligible. Which ONE of the following most accurately gives the channel utilization for the above scenario in percentage?",
+  "options": {
+    "A": "88.23",
+    "C": "85.44",
+    "B": "93.75",
+    "D": "66.67 [2025 (Set-2) : 2 M]"
+  },
+  "answer": "A",
+  "solution": "To determine the channel utilization for the given scenario, we need to calculate the total time taken to transmit one frame and then find the ratio of the actual data transmission time to the total time taken.\n\n1. **Calculate the transmission time for one frame:**\n   The frame size is 3000 bits and the transmission rate is 2000 bps.\n   \\[\n   \\text{ transcend time} = \\frac{\\text{frame size}}{\\text{transmission rate}} = \\frac{3000 \\text{ bits}}{2000 \\text{ bps}} = 1.5 \\text{ seconds}\n   \\]\n\n2. **Calculate the total time taken to transmit one frame:**\n   The total time taken to transmit one frame includes the transmission time and the propagation delay.\n   \\[\n   \\text{total time} = \\text{transmission time} + \\text{propagation delay} = 1.5 \\text{ seconds} + 0.1 \\text{ seconds} = 1.6 \\text{ seconds}\n   \\]\n\n3. **Calculate the channel utilization:**\n   The channel utilization is the ratio of the actual data transmission time to the total time taken, expressed as a percentage.\n   \\[\n   \\text{channel utilization} = \\left( \\frac{\\text{transmission time}}{\\text{total time}} \\right) \\times 100 = \\left( \\frac{1.5 \\text{ seconds}}{1.6 \\text{ seconds}} \\right) \\times 100 = 93.75\\%\n   \\]\n\nTherefore, the channel utilization for the above scenario is \\(\\boxed{93.75}\\). The correct option is \\(\\boxed{B}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

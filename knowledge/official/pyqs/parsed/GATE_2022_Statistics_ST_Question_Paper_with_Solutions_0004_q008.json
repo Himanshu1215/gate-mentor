@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q8",
+  "question_seq": 4,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Four points $P ( 0 , 1 ) , Q ( 0 , - 3 ) , R ( - 2 , - 1 )$ , and $S ( 2 , - 1 )$ represent the vertices of a quadrilateral. What is the area enclosed by the quadrilateral?",
+  "options": {
+    "A": "4",
+    "B": "$4 \\sqrt { 2 }$",
+    "C": "8",
+    "D": "$8 \\sqrt { 2 }$"
+  },
+  "answer": "C",
+  "solution": "The formula for the area of a quadrilateral with vertices at $( x _ { 1 } , y _ { 1 } ) , ( x _ { 2 } , y _ { 2 } ) , ( x _ { 3 } , y _ { 3 } ) , ( x _ { 4 } , y _ { 4 } )$ is:\n\n $ \\mathrm { A r e a } = { \\frac { 1 } { 2 } } \\left| x _ { 1 } y _ { 2 } + x _ { 2 } y _ { 3 } + x _ { 3 } y _ { 4 } + x _ { 4 } y _ { 1 } - ( y _ { 1 } x _ { 2 } + y _ { 2 } x _ { 3 } + y _ { 3 } x _ { 4 } + y _ { 4 } x _ { 1 } ) \\right| $ \n\nSubstituting the coordinates of the points $P ( 0 , 1 ) , Q ( 0 , - 3 ) , R ( - 2 , - 1 ) , S ( 2 , - 1 )$ , we get:\n\n $ \\begin{array} { c } { { \\mathrm { A r e a } = \\displaystyle \\frac { 1 } { 2 } \\left| 0 \\times ( - 3 ) + 0 \\times ( - 1 ) + ( - 2 ) \\times ( - 1 ) + 2 \\times 1 - ( 1 \\times 0 + ( - 3 ) \\times ( - 2 ) + ( - 1 ) \\times 2 + ( - 1 ) \\times 0 ) \\right| } } \\\\ { { { } } } \\\\ { { = \\displaystyle \\frac { 1 } { 2 } \\left| 0 + 0 + 2 + 2 - ( 0 + 6 - 2 + 0 ) \\right| } } \\\\ { { { } } } \\\\ { { = \\displaystyle \\frac { 1 } { 2 } \\left| 4 - 4 \\right| = \\displaystyle \\frac { 1 } { 2 } \\times 8 = 8 } } \\end{array} $ \n\nThus, the area enclosed by the quadrilateral is 8 .\nQuick Tip\n\nTo find the area of a quadrilateral, use the shoelace formula. Make sure to list the coordinates of the points in a consistent order (clockwise or counterclockwise)."
+}

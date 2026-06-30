@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q28",
+  "question_seq": 89,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Suppose a binary search tree with 1000 distinct elements is also a complete binary tree. The tree is stored using the array representation of binary heap trees. Assuming that the array indices start with 0, the $3 ^ { \\mathsf { r d } }$ largest element of the tree is stored at index",
+  "options": null,
+  "answer": "D",
+  "solution": "To determine the index at which the \\(3^{\\text{rd}}\\) largest element of a complete binary tree with 1000 distinct elements is stored in its array representation, we need to understand the structure of the tree and the properties of the array representation.\n\nA complete binary tree with \\(n\\) elements has a height \\(h\\) such that \\(2^h \\leq n < 2^{h+1}\\). For \\(n = 1000\\), we find:\n\\[2^9 = 512 \\quad \\text{and} \\quad 2^{10} = 1024.\\]\nThus, the height of the tree is 9.\n\nIn the array representation of a complete binary tree, the root is at index 0, the left child of a node at index \\(i\\) is at index \\(2i+1\\), and the right child is at index \\(2i+2\\). The leaves of the tree are at indices from \\(2^9 = 512\\) to \\(1023\\), but since the tree has only 1000 elements, the leaves are at indices from 512 to 999.\n\nThe largest element in the tree is at the root, which is index 0. The second largest element is at one of the children of the root, which are indices 1 and 2. The third largest element is at one of the children of the children of the root, which are indices 3, 4, 5, and 6. Specifically, it is at one of the leaves of the tree that is closest to the root in terms of height.\n\nTo find the index of the third largest element, we need to consider the structure of the tree. The leaves are at indices from 512 to 999. The third largest element will be at the index that is closest to the root among these leaves. Since the tree is complete, the leaves are filled from left to right. Therefore, the third largest element will be at index 514.\n\nThus, the \\(3^{\\text{rd}}\\) largest element of the tree is stored at index \\(\\boxed{514}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

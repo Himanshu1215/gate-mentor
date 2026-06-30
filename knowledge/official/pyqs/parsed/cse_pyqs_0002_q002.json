@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q2",
+  "question_seq": 2,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The expenditure on the project as follows; equipments Rs. 20 lakhs, salaries Rs. 12 lakhs, and contingency Rs.3 lakhs. (a) break (b) breaks (c) breaks down (d) break down",
+  "options": null,
+  "answer": "C",
+  "solution": "To determine the correct answer, let's analyze the given information and the options provided.\n\nThe expenditure on the project is given as follows:\n- Equipment: Rs. 20 crores\n- Salaries: Rs. 12 crores\n- Contingency: Rs. 3 crores\n\nThe total expenditure is the sum of these three components:\n\\[ 20 + 12 + 3 = 35 \\text{ crores} \\]\n\nThe question asks us to break down the expenditure. \"Break down\" means to divide the total expenditure into its individual components. Therefore, the correct answer is \"breaks down\".\n\nLet's verify this by looking at the options:\n- (a) break: This means to separate or divide, but it does not specify into which components.\n- (b) breaks: This is similar to \"break\" and does not specify into which components.\n- (c) breaks down: This means to divide into its individual components.\n- (d) break down: This is the same as \"breaks down\".\n\nSince \"breaks down\" is the correct choice to describe the process of dividing the total expenditure into its individual components, the correct answer is:\n\n\\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q47",
+  "question_seq": 42,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "If ??: [−2, 2] → ℝ is a continuous function, then which of the following statements is/are true?",
+  "options": {
+    "A": "$F \\colon [ 0 , 2 ] \\mathbb { R }$ defined by $\\textstyle F ( x ) = \\int _ { 0 } ^ { x } f ( t )$ ???? is differentiable on (0, 2)",
+    "B": "For any $x _ { 1 } , x _ { 2 } , \\ldots , x _ { 1 0 } \\in [ - 2 , 2 ]$ there exists a point $x _ { 0 } \\in [ - 2 , 2 ]$ such that $f ( x _ { 0 } ) = { \\frac { 1 } { 1 0 } } \\ ( f ( x _ { 1 } ) + f ( x _ { 2 } ) + \\cdots + f ( x _ { 1 0 } ) )$",
+    "C": "?? is bounded on [−2, 2]",
+    "D": "If ?? is differentiable at 0 and $f ( 0 ) = 0$ , then $ \\operatorname* { l i m } _ { x \\to 0 } { \\frac { 1 } { x } } \\left( f ( x ) + f { \\Big ( } { \\frac { x } { 2 } } { \\Big ) } + \\cdots + f { \\Big ( } { \\frac { x } { 1 0 } } { \\Big ) } \\right) = 1 0 f ^ { \\prime } ( 0 ) , $ where $f ^ { \\prime } ( 0 )$ is the derivative of ?? at 0"
+  },
+  "answer": null,
+  "solution": "Let's analyze each statement one by one.\n\n**Statement (A):** \\( F \\colon [0, 2] \\to \\mathbb{R} \\) defined by \\( F(x) = \\int_0^x f(t) \\) is differentiable on (0, 2).\n\nSince \\( f \\) is continuous on \\([-2, 2]\\), by the Fundamental Theorem of Calculus, \\( F(x) \\) is differentiable on \\((0, 2)\\) and \\( F'(x) = f(x) \\). Therefore, statement (A) is true.\n\n**Statement (B):** For any \\( x_1, x_2, \\ldots, x_{10} \\in [-2, 2] \\) there exists a point \\( x_0 \\in [-2, 2] \\) such that \\( f(x_0) = \\frac{1}{10} ( f(x_1) + f(x_2) + \\cdots + f(x_{10}) ) \\).\n\nThis statement is a direct application of the Intermediate Value Theorem. Since \\( f \\) is continuous on \\([-2, 2]\\), the function \\( f \\) attains its minimum and maximum values on this interval. Let \\( m = \\min_{x \\in [-2, 2]} f(x) \\) and \\( M = \\max_{x \\in [-2, 2]} f(x) \\). Then, for any \\( x_1, x_2, \\ldots, x_{10} \\in [-2, 2] \\), we have:\n\\[ m \\leq f(x_i) \\leq M \\text{ for all } i = 1, 2, \\ldots, 10. \\]\nThis implies:\n\\[ 10m \\leq f(x_1) + f(x_2) + \\cdots + f(x_{10}) \\leq 10M. \\]\nTherefore,\n\\[ m \\leq \\frac{1}{10} ( f(x_1) + f(x_2) + \\cdots + f(x_{10}) ) \\leq M. \\]\nSince \\( f \\) is continuous, by the Intermediate Value Theorem, there exists a point \\( x_0 \\in [-2, 2] \\) such that:\n\\[ f(x_0) = \\frac{1}{10} ( f(x_1) + f(x_2) + \\cdots + f(x_{10}) ). \\]\nThus, statement (B) is true.\n\n**Statement (C):** \\( f \\) is bounded on \\([-2, 2]\\).\n\nSince \\( f \\) is continuous on the closed interval \\([-2, 2]\\), by the Extreme Value Theorem, \\( f \\) attains its minimum and maximum values on this interval. Therefore, \\( f \\) is bounded on \\([-2, 2]\\). Thus, statement (C) is true.\n\n**Statement (D):** If \\( f \\) is differentiable at 0 and \\( f(0) = 0 \\), then \\( \\lim_{x \\to 0} \\frac{1}{x} \\left( f(x) +",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

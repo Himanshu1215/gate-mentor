@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q30",
+  "question_seq": 26,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let X follow a 10-dimensional multivariate normal distribution with zero mean vector and identity covariance matrix. Define $Y = \\log _ { e } { \\sqrt { X ^ { T } X } }$ and let $M _ { Y } ( t )$ denote the moment generating function of $Y$ at $t , t > - 1 0$ . Then $M _ { Y } ( 2 )$ equals (",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Distribution of $X ^ { T } X$\n\nSince $X \\sim \\mathcal { N } _ { 1 0 } ( 0 , I )$ , it follows that:\n\n $ X ^ { T } X = \\sum _ { i = 1 } ^ { 1 0 } X _ { i } ^ { 2 } \\sim \\chi _ { 1 0 } ^ { 2 } $ \n\nStep 2: Relation to $Y$\n\nGiven:\n\n $ Y = { \\frac { 1 } { 2 } } \\log ( X ^ { T } X ) \\Rightarrow e ^ { 2 Y } = X ^ { T } X $ \n\nStep 3: Moment Generating Function\n\n $ M _ { Y } ( 2 ) = \\mathbb { E } [ e ^ { 2 Y } ] = \\mathbb { E } [ X ^ { T } X ] $ \n\nSince $X ^ { T } X \\sim \\chi _ { 1 0 } ^ { 2 }$ , and the expected value of a chi-squared distribution with 10 degrees of freedom is 10:\n\n $ \\mathbb { E } [ X ^ { T } X ] = 1 0 $ \n\nFinal Answer:\n\n10\nQuick Tip\n\nWhen dealing with the moment generating function of transformations of multivariate normal distributions, use known formulas and properties of chi-squared distributions to simplify your calculations."
+}

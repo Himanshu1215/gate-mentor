@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q2",
+  "question_seq": 130,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following statements about threads is/are TRUE?",
+  "options": {
+    "A": "Threads can only be implemented in Kernel space",
+    "B": "Each thread has its own file descriptor table for open files",
+    "C": "Threads belonging to a process are by default not protected from each other",
+    "D": "All the threads belonging to a process share a common stack"
+  },
+  "answer": "C",
+  "solution": "To determine which statement about threads is true, let's analyze each option step by step.\n\n(A) threads can only be implemented in Kernel space\n- This statement is false. threads can be implemented in both kernel space and user space. In kernel space, threads are part of the operating system's thread pool, while in user space, threads are part of a process.\n\n(B) Each thread has its own file descriptor table for open files\n- This statement is false. Each process has its own file descriptor table for open files, not each thread.Threads within a process share the same file descriptor table.\n\n(C) threads belonging to a process are by default not protected from each other\n- This statement is true. threads belonging to a process are not protected from each other by default. They can communicate and share resources through shared memory, message passing, or other forms of communication.\n\n(D) All the threads belonging to a process share a common stack\n- This statement is false. threads belonging to a process do not necessarily share a common stack. They can have their own stack, which is used for function call and return operations.\n\nBased on the analysis, the correct answer is:\n\\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q2",
+  "question_seq": 99,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Kind : : : Often : Frequently (By word meaning) (a) Mean (c) Cruel",
+  "options": {
+    "B": "Type",
+    "D": "Kindly"
+  },
+  "answer": "B",
+  "solution": "To determine the correct answer, we need to analyze the given analogy: Kind : : : often : frequently. The word \"kind\" is a adjective that describes something as being nice, compassionate, or considerate. The word \"often\" is an adverb that describes something as happening frequently or often. The word \"frequently\" is also an adverb that describes something as happening often or frequently. Therefore, the word that fits in the blank should be an adverb that describes something as being of a certain type or nature.\n\nLet's analyze the options:\n\n(A) Mean: Mean is an adjective that describes something as being average or middle-of-the-road. It does not fit the context of the analogy because it is not an adverb.\n\n(B) Type: Type is an adjective that describes something as being of a certain type or nature. It fits the context of the analogy because it is an adverb that describes something as being of a certain type or nature.\n\n(C) Cruel: Cruel is an adjective that describes something as being mean or mean-spirited. It does not fit the context of the analogy because it is not an adverb.\n\n(D) Kindly: Kindly is an adjective that describes something as being nice, compassionate, or considerate. It does not fit the context of the analogy because it is not an adverb.\n\nTherefore, the correct answer is: B. The word \"type\" fits the context of the analogy because it is an adverb that describes something as being of a certain type or nature.\n\nThe final answer is: \\boxed{B}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

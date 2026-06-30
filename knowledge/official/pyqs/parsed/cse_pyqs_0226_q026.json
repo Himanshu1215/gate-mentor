@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q26",
+  "question_seq": 226,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let R be a binary relation on the set {1, 2, ..., 10}, where (x, y) ∈, R if the product of x and y is square of an integer. Which of the following properties is/are satisfied by R? (a) Reflexive (b) Symmetric (c) Transitive (d) Antisymmetric",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine which properties the binary relation \\( R \\) satisfies, we need to analyze each property step by step.\n\n**Property (a): Reflexive**\n\nA relation \\( R \\) is reflexive if for every element \\( x \\) in the set, \\( (x, x) \\in R \\). This means that \\( x \\cdot x = x^2 \\) must be a square of an integer. Since \\( x^2 \\) is always a square of an integer, \\( (x, x) \\in R \\) for all \\( x \\in \\{1, 2, \\ldots, 10\\} \\). Therefore, \\( R \\) is reflexive.\n\n**Property (b): Symmetric**\n\nA relation \\( R \\) is symmetric if for every pair \\( (x, y) \\in R \\), \\( (y, x) \\in R \\). This means that if \\( x \\cdot y \\) is a square of an integer, then \\( y \\cdot x \\) must also be a square of an integer. Since multiplication is commutative, \\( x \\cdot y = y \\cdot x \\), so if \\( x \\cdot y \\) is a square, then \\( y \\cdot x \\) is also a square. Therefore, \\( R \\) is symmetric.\n\n**Property (c): Transitive**\n\nA relation \\( R \\) is transitive if for every pair \\( (x, y) \\in R \\) and \\( (y, z) \\in R \\), \\( (x, z) \\in R \\). This means that if \\( x \\cdot y \\) is a square and \\( y \\cdot z \\) is a square, then \\( x \\cdot z \\) must also be a square. Let's check this with an example. Consider \\( x = 2 \\), \\( y = 8 \\), and \\( z = 2 \\). Then \\( x \\cdot y = 2 \\cdot 8 = 16 \\) (which is a square), and \\( y \\cdot z = 8 \\cdot 2 = 16 \\) (which is a square), but \\( x \\cdot z = 2 \\cdot 2 = 4 \\) (which is a square). However, if we consider \\( x = 2 \\), \\( y = 8 \\), and \\( z = 18 \\), then \\( x \\cdot y = 2 \\cdot 8 = 16 \\) (which is a square), and \\( y \\cdot z = 8 \\cdot 18 = 144 \\) (which is a square), but \\( x \\cdot z = 2 \\cdot 18 = 36 \\) (which is a square). This example shows that \\( R \\) is transitive.\n\n**Property (d): Antisymmetric**\n\nA relation \\( R \\) is antisymmetric if for every pair \\( (x, y) \\in R \\) and \\( (y, x) \\in R \\), \\( x = y \\). This means that if \\( x \\cdot y \\) is a square and \\( y \\cdot x \\) is a square, then \\( x \\) must equal \\( y \\). However, we have already shown that \\( R \\) is symmetric, so if \\( (",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q56",
+  "question_seq": 49,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let $ P = { \\left( \\begin{array} { l l l l l } { 0 } & { 1 } & { 1 } & { 1 } & { 1 } \\\\ { - 1 } & { 0 } & { 1 } & { 1 } & { 1 } \\\\ { - 1 } & { - 1 } & { 0 } & { 1 } & { 1 } \\\\ { - 1 } & { - 1 } & { - 1 } & { 0 } & { 1 } \\\\ { - 1 } & { - 1 } & { - 1 } & { - 1 } & { 0 } \\\\ { - 1 } & { - 1 } & { - 1 } & { - 1 } & { 0 } \\end{array} \\right) } $ $\\mathbf { I f } \\lambda _ { 1 } , \\lambda _ { 2 } , \\lambda _ { 3 } , \\lambda _ { 4 } , \\lambda _ { 5 }$ are eigenvalues of P , then $\\textstyle \\prod _ { i = 1 } ^ { 5 } \\lambda _ { i } = _ { -- }$ (",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Recognize the structure of the matrix P . The matrix P is a $5 \\times 5$ matrix where each off-diagonal element is −1, and diagonal elements are 0. This matrix represents the Laplacian matrix of the complete graph $K _ { 5 }$ , where each node is connected to every other node.\n\nThe Laplacian matrix for a complete graph $K _ { n }$ has the following properties:\n\nOne eigenvalue is $n - 1$ , where n is the number of vertices (in this case, $n = 5$ , so one eigenvalue is 4).\n\nThe remaining eigenvalues are −1, with multiplicity $n - 1$\n\nThus, the eigenvalues of P are:\n\n $ \\lambda _ { 1 } = 4 , \\quad \\lambda _ { 2 } = \\lambda _ { 3 } = \\lambda _ { 4 } = \\lambda _ { 5 } = - 1 . $ \n\nStep 2: Compute the product of the eigenvalues.\n\nThe product of the eigenvalues is:\n\n $ \\prod _ { i = 1 } ^ { 5 } \\lambda _ { i } = 4 \\times ( - 1 ) ^ { 4 } = 4 \\times 1 = 4 . $ \n\nHowever, there is a critical point we missed earlier:\n\nThe matrix P as it is given actually represents a signed Laplacian matrix for a graph with negative weights. This would imply that the eigenvalues are not simply 4 and −1. In fact, the product of eigenvalues will be 0 because one eigenvalue will be 0, as this is a property of signed Laplacians where there is always at least one eigenvalue equal to 0 due to the row-sum property of Laplacian matrices.\nStep 3: Correct the product of eigenvalues.\n\nSince one of the eigenvalues is 0, the product of the eigenvalues is:\n\n $ \\prod _ { i = 1 } ^ { 5 } \\lambda _ { i } = 0 . $ \n\nThus, the correct answer is $\\boxed { 0 } .$\nQuick Tip\n\nIn Laplacian matrices, particularly for signed graphs or when the matrix has specific structural properties, always verify that the row sums equal zero. This ensures that one of the eigenvalues will be zero, influencing the product of eigenvalues."
+}

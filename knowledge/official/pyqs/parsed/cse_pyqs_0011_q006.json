@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q6",
+  "question_seq": 11,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Two numbers are chosen independently and uniformly at random from the set {1, 2, ...,13}. The probability (rounded off to 3 decimal places) that their 4-bit (unsigned) binary representations have the same most significant bit is",
+  "options": null,
+  "answer": "0.503",
+  "solution": "To determine the probability that two numbers chosen independently and uniformly at random from the set \\(\\{1, 2, \\ldots, 13\\}\\) have the same most significant bit in their 4-bit binary representations, we need to follow these steps:\n\n1. **Identify the range of numbers and their binary representations:**\n   - The set \\(\\{1, 2, \\ldots, 13\\}\\) in binary is:\n     \\[\n     \\{0001, 0010, 0011, 0100, 0101, 0110, 0111, 1000, 1001, 1010, 1011, 1100, 1101\\}\n     \\]\n   - The most significant bit (MSB) for these numbers is either 0 or 1.\n\n2. **Count the numbers with each MSB:**\n   - Numbers with MSB = 0: \\(\\{0001, 0010, 0011, 0100, 0101, 0110, 0111\\}\\) (7 numbers)\n   - Numbers with MSB = 1: \\(\\{1000, 1001, 1010, 1011, 1100, 1101\\}\\) (6 numbers)\n\n3. **Calculate the probability of each MSB:**\n   - Probability of MSB = 0: \\(\\frac{7}{13}\\)\n   - Probability of MSB = 1: \\(\\frac{6}{13}\\)\n\n4. **Determine the probability that both numbers have the same MSB:**\n   - The probability that both numbers have MSB = 0 is:\n     \\[\n     \\left(\\frac{7}{13}\\right) \\times \\left(\\frac{7}{13}\\right) = \\frac{49}{169}\n     \\]\n   - The probability that both numbers have MSB = 1 is:\n     \\[\n     \\left(\\frac{6}{13}\\right) \\times \\left(\\frac{6}{13}\\right) = \\frac{36}{169}\n     \\]\n\n5. **Add the probabilities of the two mutually exclusive events:**\n   - The total probability that both numbers have the same MSB is:\n     \\[\n     \\frac{49}{169} + \\frac{36}{169} = \\frac{85}{169}\n     \\]\n\n6. **Convert the fraction to a decimal and round to three decimal places:**\n   \\[\n   \\frac{85}{169} \\approx 0.503\n   \\]\n\nTherefore, the probability that their 4-bit binary representations have the same most significant bit is \\(\\boxed{0.503}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q3",
+  "question_seq": 131,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "The product of all eigen values of the matrix $ \\left[ { \\begin{array} { l l l } { 1 } & { 2 } & { 3 } \\\\ { 4 } & { 5 } & { 6 } \\\\ { 7 } & { 8 } & { 9 } \\end{array} } \\right] $",
+  "options": {
+    "A": "0 (b) 1",
+    "C": "1 (d) 2"
+  },
+  "answer": "A",
+  "solution": "To determine the product of all eigenvalues of the matrix \\( A = \\left[ \\begin{array}{ccc} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{array} \\right] \\), we can use the property that the product of the eigenvalues of a matrix is equal to its determinant. Therefore, we need to compute the determinant of \\( A \\).\n\nThe determinant of a 3x3 matrix \\( \\left[ \\begin{array}{ccc} a & b & c \\\\ d & e & f \\\\ g & h & i \\end{array} \\right] \\) is given by the formula:\n\\[\n\\det(A) = a(ei - fh) - b(di - fg) + c(dh - eg)\n\\]\nFor the matrix \\( A = \\left[ \\begin{array}{ccc} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{array} \\right] \\), we substitute \\( a = 1 \\), \\( b = 2 \\), \\( c = 3 \\), \\( d = 4 \\), \\( e = 5 \\), \\( f = 6 \\), \\( g = 7 \\), \\( h = 8 \\), and \\( i = 9 \\) into the formula:\n\\[\n\\det(A) = 1(5 \\cdot 9 - 6 \\cdot 8) - 2(4 \\cdot 9 - 6 \\cdot 7) + 3(4 \\cdot 8 - 5 \\cdot 7)\n\\]\nFirst, we calculate the individual products:\n\\[\n5 \\cdot 9 = 45, \\quad 6 \\cdot 8 = 48, \\quad 4 \\cdot 9 = 36, \\quad 6 \\cdot 7 = 42, \\quad 4 \\cdot 8 = 32, \\quad 5 \\cdot 7 = 35\n\\]\nNext, we substitute these values back into the determinant formula:\n\\[\n\\det(A) = 1(45 - 48) - 2(36 - 42) + 3(32 - 35)\n\\]\nSimplify the expressions inside the parentheses:\n\\[\n\\det(A) = 1(-3) - 2(-6) + 3(-3)\n\\]\nThen, perform the multiplications:\n\\[\n\\det(A) = -3 + 12 - 9\n\\]\nFinally, add the results together:\n\\[\n\\det(A) = 0\n\\]\nSince the determinant of the matrix is 0, the product of all eigenvalues of the matrix is also 0. Therefore, the correct answer is:\n\\[\n\\boxed{A}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

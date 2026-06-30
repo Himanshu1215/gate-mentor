@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q38",
+  "question_seq": 117,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $U = \\{ 1 , 2 , . . . , n \\}$ , where n is a large positive integer greater than 1000. Let k be a positive integer less than n. Let A, B be subsets of Uwith $\\left| A \\right| = { \\big | } B { \\big | } = k \\operatorname { a n d } A \\cap B = \\Phi .$ We say that a permutation of U separates A from B if one of the following is true.",
+  "options": {
+    "A": "n!",
+    "B": "${ \\binom { n } { 2 k } } ( n - 2 k ) !$",
+    "C": "${ \\binom { n } { 2 k } } ( n - 2 k ) ! ( k ! ) ^ { 2 }$",
+    "D": "$2 { \\binom { n } { 2 k } } ( n - 2 k ) ! ( k ! ) ^ { 2 }$"
+  },
+  "answer": "C",
+  "solution": "To determine the number of permutations of \\( U \\) that separate \\( A \\) from \\( B \\), we need to consider the following steps:\n\n1. **Choose the positions for elements of \\( A \\) and \\( B \\):**\n   - There are \\( n \\) positions in the permutation.\n   - We need to choose \\( k \\) positions for the elements of \\( A \\).\n   - After choosing \\( k \\) positions for \\( A \\), there are \\( n - k \\) positions left.\n   - We need to choose \\( k \\) positions from these \\( n - k \\) positions for the elements of \\( B \\).\n\n   The number of ways to choose \\( k \\) positions out of \\( n \\) for \\( A \\) is given by the binomial coefficient \\( \\binom{n}{k} \\).\n   After choosing \\( k \\) positions for \\( A \\), the number of ways to choose \\( k \\) positions out of the remaining \\( n - k \\) positions for \\( B \\) is given by \\( \\binom{n-k}{k} \\).\n\n   Therefore, the total number of ways to choose the positions for \\( A \\) and \\( B \\) is:\n   \\[\n   \\binom{n}{k} \\binom{n-k}{k}\n   \\]\n\n2. **Arrange the elements within \\( A \\) and \\( B \\):**\n   - There are \\( k! \\) ways to arrange the \\( k \\) elements of \\( A \\) in the chosen \\( k \\) positions.\n   - There are \\( k! \\) ways to arrange the \\( k \\) elements of \\( B \\) in the chosen \\( k \\) positions.\n\n   Therefore, the total number of ways to arrange the elements within \\( A \\) and \\( B \\) is:\n   \\[\n   k! \\times k!\n   \\]\n\n3. **Arrange the remaining elements:**\n   - After placing the elements of \\( A \\) and \\( B \\), there are \\( n - 2k \\) elements left.\n   - There are \\( (n - 2k)! \\) ways to arrange these \\( n - 2k \\) elements in the remaining \\( n - 2k \\) positions.\n\n   Therefore, the total number of ways to arrange the remaining elements is:\n   \\[\n   (n - 2k)!\n   \\]\n\n4. **Combine all the steps:**\n   - The total number of permutations of \\( U \\) that separate \\( A \\) from \\( B \\) is the product of the number of ways to choose the positions for \\( A \\) and \\( B \\), the number of ways to arrange the elements within \\( A \\) and \\( B \\), and the number of ways to arrange the remaining elements:\n   \\[\n   \\binom{n}{k} \\binom{n-k}{k} k! k! (n - 2k)!\n   \\]\n\n   Using the identity \\( \\binom{n}{k} = \\frac{n!}{k!(n-k)!} \\), we can simplify the expression:\n   \\[\n   \\binom{n}{k} \\binom{n-k}{k} = \\frac{n!}{k!(n-k)!} \\cdot \\frac{(n-k)!}{k!(n-2k)!} = \\frac{n!",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

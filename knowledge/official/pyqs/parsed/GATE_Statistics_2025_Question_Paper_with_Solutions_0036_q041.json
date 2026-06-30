@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q41",
+  "question_seq": 36,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X and Y be discrete random variables with joint probability mass function $ p _ { X , Y } ( m , n ) = { \\frac { \\lambda ^ { n } e ^ { - \\lambda } 2 ^ { n } m ! ( n - m ) ! } { n ! } } , \\quad m = 0 , \\ldots , n , \\quad n = 0 , 1 , 2 , \\ldots , $ where λ is a fixed positive real number. Then which one of the following options is correct?",
+  "options": {
+    "A": "The marginal distribution of X is Poisson with mean λ",
+    "B": "The marginal distribution of Y is Poisson with mean 2λ",
+    "C": "The conditional distribution of X given $Y = 3 \\operatorname { i s } \\mathrm { \\mathbf { B i n } ( 3 , \\frac { 1 } { 2 } ) }$",
+    "D": "$\\begin{array} { r } { E ( Y | X = 2 ) = \\frac { \\lambda } { 2 } } \\end{array}$"
+  },
+  "answer": "C",
+  "solution": "Step 1: Understand the joint distribution.\n\nThe given joint probability mass function is:\n\n $ p _ { X , Y } ( m , n ) = { \\frac { \\lambda ^ { n } e ^ { - \\lambda } 2 ^ { n } m ! ( n - m ) ! } { n ! } } , \\quad m = 0 , \\ldots , n , \\quad n = 0 , 1 , 2 , \\ldots . $ \n\nThis represents a compound distribution where X is conditionally distributed as a binomial random variable given $Y = n$ , with parameters n and $\\begin{array} { r } { p = \\frac { 1 } { 2 } } \\end{array}$ . The marginal distribution of Y is Poisson with mean 2λ, and the conditional distribution of X given $Y = n$ is Binomial $( n , { \\frac { 1 } { 2 } } )$\nStep 2: Analyze the options.\n\nOption (A): The marginal distribution of X is not Poisson with mean $\\lambda ;$ it’s a compound distribution.\n\nOption (B): The marginal distribution of Y is indeed Poisson with mean 2λ, but this is not the correct option for the question.\n\nOption (C): Given $Y = 3$ , the conditional distribution of X is $\\mathrm { B i n o m i a l } ( 3 , { \\frac { 1 } { 2 } } )$ . This is the correct option.\n\nOption (D): The expected value $E ( Y | X = 2 )$ does not equal $\\frac { \\lambda } { 2 } .$ , so this option is incorrect.   \nThus, the correct answer is $\\boxed { ( C ) }$ .\nQuick Tip\n\nIn joint distributions, check whether the conditional distributions are binomial or Poisson, and use that to identify relationships between the variables."
+}

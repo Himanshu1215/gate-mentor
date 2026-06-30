@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q19",
+  "question_seq": 25,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let ?? be a random variable with probability density function $ f ( x ) = { \\left\\{ \\begin{array} { l l } { { \\frac { \\Gamma ( \\alpha + \\beta ) } { \\Gamma ( \\alpha ) \\Gamma ( \\beta ) } } x ^ { \\alpha - 1 } ( 1 - x ) ^ { \\beta - 1 } } & { { \\mathrm { i f } } \\ 0 < x < 1 } \\\\ { 0 } & { { \\mathrm { o t h e r w i s e , } } } \\end{array} \\right. } $ where $\\alpha > 0 , \\beta > 0$ . If $\\begin{array} { r } { E ( X ) = \\frac { 1 } { 3 } } \\end{array}$ and $\\begin{array} { r } { E ( X ^ { 2 } ) = \\frac { 1 } { 6 } } \\end{array}$ , then $\\alpha + 3 \\beta$ equals",
+  "options": {
+    "A": "7",
+    "B": "5",
+    "C": "4",
+    "D": "8"
+  },
+  "answer": null,
+  "solution": "To solve for \\(\\alpha + 3\\beta\\) given the probability density function \\( f(x) = \\frac{\\Gamma(\\alpha + \\beta)}{\\Gamma(\\alpha) \\Gamma(\\beta)} x^{\\alpha - 1} (1 - x)^{\\beta - 1} \\) and the expected values \\( E(X) = \\frac{1}{3} \\) and \\( E(X^2) = \\frac{1}{6} \\), we will use the properties of the Beta distribution.\n\nThe expected value \\( E(X) \\) of a Beta random variable \\( X \\) with parameters \\(\\alpha\\) and \\(\\beta\\) is given by:\n\\[\nE(X) = \\frac{\\alpha}{\\alpha + \\beta}\n\\]\nGiven \\( E(X) = \\frac{1}{3} \\), we can set up the equation:\n\\[\n\\frac{\\alpha}{\\alpha + \\beta} = \\frac{1}{3}\n\\]\nCross-multiplying gives:\n\\[\n3\\alpha = \\alpha + \\beta\n\\]\nSubtracting \\(\\alpha\\) from both sides, we get:\n\\[\n2\\alpha = \\beta\n\\]\nThus, we have:\n\\[\n\\beta = 2\\alpha\n\\]\n\nNext, we use the second given expected value \\( E(X^2) = \\frac{1}{6} \\). The expected value \\( E(X^2) \\) of a Beta random variable \\( X \\) with parameters \\(\\alpha\\) and \\(\\beta\\) is given by:\n\\[\nE(X^2) = \\frac{\\alpha(\\alpha + 1)}{(\\alpha + \\beta)(\\alpha + \\beta + 1)}\n\\]\nGiven \\( E(X^2) = \\frac{1}{6} \\), we can set up the equation:\n\\[\n\\frac{\\alpha(\\alpha + 1)}{(\\alpha + \\beta)(\\alpha + \\beta + 1)} = \\frac{1}{6}\n\\]\nSubstituting \\(\\beta = 2\\alpha\\) into the equation, we get:\n\\[\n\\frac{\\alpha(\\alpha + 1)}{(\\alpha + 2\\alpha)(\\alpha + 2\\alpha + 1)} = \\frac{1}{6}\n\\]\nSimplifying the denominators, we have:\n\\[\n\\frac{\\alpha(\\alpha + 1)}{3\\alpha(3\\alpha + 1)} = \\frac{1}{6}\n\\]\nCanceling \\(\\alpha\\) from the numerator and the denominator, we get:\n\\[\n\\frac{\\alpha + 1}{3(3\\alpha + 1)} = \\frac{1}{6}\n\\]\nCross-multiplying gives:\n\\[\n6(\\alpha + 1) = 3(3\\alpha + 1)\n\\]\nExpanding both sides, we get:\n\\[\n6\\alpha + 6 = 9\\alpha + 3\n\\]\nSubtracting \\(6\\alpha\\) from both sides, we get:\n\\[\n6 = 3\\alpha + 3\n\\]\nSubtracting 3 from both sides, we get:\n\\[\n3 = 3\\alpha\n\\]\nDividing both sides by 3, we get:\n\\[\n\\alpha = 1",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

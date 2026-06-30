@@ -1,0 +1,18 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q6",
+  "question_seq": 13,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X and Y be two random variables such that $p _ { 1 1 } + p _ { 1 0 } + p _ { 0 1 } + p _ { 0 0 } = 1$ , where $p _ { i j } = P ( X = i , Y = j ) , i , j = 0 , 1$ . Suppose that a realization of a random sample of size 60 from the joint distribution of $( X , Y )$ gives $n _ { 1 1 } = 1 0 , n _ { 1 0 } = 2 0 , n _ { 0 1 } = 2 0 , n _ { 0 0 } = 1 0$ , where $n _ { i j }$ denotes the frequency of $( i , j )$ for $i , j = 0 ;$ , 1. If the chi-square test of independence is used to test $ H _ { 0 } : p _ { i j } = p _ { i } p _ { j } \\mathrm { ~ f o r ~ } i , j = 0 , 1 \\quad \\mathrm { a g a i n s t } \\quad H _ { 1 } : p _ { i j } \\neq p _ { i } p _ { j } \\mathrm { ~ f o r ~ a t ~ l e a s t ~ o n e ~ p a i r ~ } ( i , j ) , $ where $p _ { i } = p _ { i 0 } + p _ { i 1 }$ and $p _ { j } = p _ { 0 j } + p _ { 1 j }$ , then which one of the following statements is true? $( \\mathsf { A } )$ Under $H _ { 0 }$ , the test statistic follows central chi-square distribution with one degree of freedom and the observed value of the test statistic is $\\frac { 2 0 } { 3 }$",
+  "options": {
+    "B": "Under $H _ { 0 }$ , the test statistic follows central chi-square distribution with three degrees of freedom and the observed value of the test statistic is $\\frac { 2 0 } { 3 }$",
+    "C": "Under $H _ { 0 } ,$ , the test statistic follows central chi-square distribution with one degree of freedom and the observed value of the test statistic is $\\frac { 1 6 } { 3 }$",
+    "D": "Under $H _ { 0 }$ , the test statistic follows central chi-square distribution with three degrees of freedom and the observed value of the test statistic is $\\frac { 1 6 } { 3 }$"
+  },
+  "answer": "A",
+  "solution": "The given joint distribution is for two random variables X and $Y$ , and the chi-square test of independence is being used. The chi-square statistic for the test is given by:\n\n $ \\chi ^ { 2 } = \\sum _ { i , j } \\frac { ( n _ { i j } - E _ { i j } ) ^ { 2 } } { E _ { i j } } , $ \n\nwhere $E _ { i j }$ is the expected frequency for each cell, computed under the assumption of independence, $E _ { i j } = n \\cdot p _ { i } p _ { j }$ , where n is the sample size, and $p _ { i } , p _ { j }$ are the marginal probabilities.\n\nFor the given question, we have 2 rows and 2 columns, which gives 1 degree of freedom.\n\nThus, the test statistic follows a central chi-square distribution with one degree of freedom.\n\nThe observed value of the test statistic is calculated to be $\\frac { 2 0 } { 3 }$ .\nFinal Answer:\n\n(A) Under $H _ { 0 }$ , the test statistic follows central chi-square distribution with one degree of freedom and t\nQuick Tip\n\nIn a chi-square test of independence, the degrees of freedom are calculated as $( r - 1 ) ( c -$ 1), where r and c are the number of rows and columns in the contingency table."
+}

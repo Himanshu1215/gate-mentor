@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q16",
+  "question_seq": 82,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Suppose we are given keys, m hash table slots, and two simple uniform hash functions $h _ { \\scriptscriptstyle 1 }$ and $h _ { 2 } .$ . Further suppose our hashing scheme uses $h _ { \\scriptscriptstyle 1 }$ for the odd keys and $h _ { 2 }$ for the even keys. What is the expected number of keys in a slot?",
+  "options": {
+    "A": "$\\frac { m } { n }$ (b) $\\frac { n } { m }$",
+    "C": "$\\frac { 2 n } { m }$",
+    "D": "$\\frac { n } { 2 m }$"
+  },
+  "answer": "B",
+  "solution": "To determine the expected number of keys in a slot, we need to consider the properties of the hash functions and the distribution of keys.\n\n1. **Identify the number of keys and hash functions:**\n   - We have \\( n \\) keys.\n   - We have \\( m \\) hash table slots.\n   - We use \\( h_1 \\) for the odd keys and \\( h_2 \\) for the even keys.\n   - Since there are \\( n \\) keys, half of them are odd and half are even (assuming \\( n \\) is even for simplicity; if \\( n \\) is odd, the analysis is similar but slightly more complex).\n\n2. **Determine the number of keys hash to each function:**\n   - There are \\( \\frac{n}{2} \\) odd keys and \\( \\frac{n}{2} \\) even keys.\n\n3. **Calculate the expected number of keys in a slot for each function:**\n   - For \\( h_1 \\), which is used for the odd keys, the expected number of keys in a slot is \\( \\frac{\\frac{n}{2}}{m} = \\frac{n}{2m} \\).\n   - For \\( h_2 \\), which is used for the even keys, the expected number of keys in a slot is also \\( \\frac{\\frac{n}{2}}{m} = \\frac{n}{2m} \\).\n\n4. **Combine the expected values:**\n   - Since each slot can contain keys from either \\( h_1 \\) or \\( h_2 \\), the overall expected number of keys in a slot is the average of the expected values from both functions. However, in a uniform distribution, the expected number of keys in a slot is simply the total number of keys divided by the number of slots, which is \\( \\frac{n}{m} \\).\n\nTherefore, the expected number of keys in a slot is \\( \\frac{n}{m} \\).\n\nThe correct answer is: \\boxed{B}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

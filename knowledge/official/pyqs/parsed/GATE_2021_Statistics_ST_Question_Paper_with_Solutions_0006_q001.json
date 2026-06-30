@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q1",
+  "question_seq": 6,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a non-constant positive random variable such that $E ( X ) = 9$ . Then which one of the following statements is true?",
+  "options": {
+    "A": "$E \\left( \\frac { 1 } { X + 1 } \\right) > 0 . 1$ and $P ( X \\geq 1 0 ) \\leq 0 . 9$",
+    "B": "$E \\left( \\frac { 1 } { X + 1 } \\right) < 0 . 1$ and $P ( X \\geq 1 0 ) \\leq 0 . 9$",
+    "C": "$E \\left( \\frac { 1 } { X + 1 } \\right) > 0 . 1$ and $P ( X \\ge 1 0 ) > 0 . 9$",
+    "D": "$E \\left( \\frac { 1 } { X + 1 } \\right) < 0 . 1$ and $P ( X \\ge 1 0 ) > 0 . 9$"
+  },
+  "answer": "A",
+  "solution": "Given that $E ( X ) = 9$ and X is a non-constant positive random variable, we need to analyze the expectations and probabilities provided in the options.\n\nStep 1: Understanding the expectation and probability.\n\nThe expectation $E ( X ) = 9$ tells us that on average, the random variable X takes a value around 9. From this, we can infer that for a positive random variable, values larger than 9 are possible, and thus, $P ( X \\geq 1 0 )$ is less than or equal to 1, but should reasonably be less than 0.9.\n\nStep 2: Investigating $\\textstyle E \\left( { \\frac { 1 } { X + 1 } } \\right)$\n\nThe term $\\begin{array} { r } { E \\left( \\frac { 1 } { X + 1 } \\right) } \\end{array}$ involves the reciprocal of $X + 1$ , which is a decreasing function of X. Given that $E ( X ) = 9 , { \\frac { 1 } { X + 1 } }$ should have an average value greater than 0.1, because $X + 1$ will mostly hover around 10, and the reciprocal of 10 is 0.1. Therefore, it is reasonable to expect that $E \\left( \\frac { 1 } { X + 1 } \\right) > 0 . 1$\n\nStep 3: Conclusion.\n\nFrom the analysis, the most plausible option is (A), where both conditions $E \\left( \\frac { 1 } { X + 1 } \\right) > 0 . 1$ and $P ( X \\ge 1 0 ) \\le 0 . 9$ hold true.\n\nFinal Answer:\n\n $ \\left| \\left( \\mathbf { A } \\right) E \\left( { \\frac { 1 } { X + 1 } } \\right) > 0 . 1 { \\mathrm { ~ a n d ~ } } P ( X \\geq 1 0 ) \\leq 0 . 9 \\right| $ \nQuick Tip\n\nWhen analyzing expectations involving transformations of a random variable, consider the nature of the transformation (e.g., reciprocals) and the behavior of the random variable around its mean to estimate the value of the expectation."
+}

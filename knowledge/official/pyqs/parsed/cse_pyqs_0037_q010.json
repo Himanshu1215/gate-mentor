@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q10",
+  "question_seq": 37,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The total revenue of a company during 2014-2018 is shown in the bar graph. If the total expenditure of the company in each year is 500 million rupees, then the aggregate profit loss (in percentage) on the total expenditure of the company during 2014-2018 is",
+  "options": {
+    "A": "16.67% profit",
+    "B": "20% loss",
+    "C": "16.67% loss",
+    "D": "20% profit"
+  },
+  "answer": "D",
+  "solution": "To determine the aggregate profit loss on the total expenditure of the company during 2014-2018, we need to follow these steps:\n\n1. **Calculate the total revenue over the 5-year period:**\n   - Let's assume the bar graph shows the following revenues for each year:\n     - 2014: \\( R_1 \\) million rupees\n     - 2015: \\( R_2 \\) million rupees\n     - 2016: \\( R_3 \\) million rupees\n     - 2017: \\( R_4 \\) million rupees\n     - 2018: \\( R_5 \\) million rupees\n   - The total revenue \\( R_{\\text{total}} \\) is:\n     \\[\n     R_{\\text{total}} = R_1 + R_2 + R_3 + R_4 + R_5\n     \\]\n\n2. **Calculate the total expenditure over the 5-year period:**\n   - The total expenditure for each year is 500 million rupees.\n   - Therefore, the total expenditure \\( E_{\\text{total}} \\) is:\n     \\[\n     E_{\\text{total}} = 500 \\times 5 = 2500 \\text{ million rupees}\n     \\]\n\n3. **Determine the profit or loss for each year:**\n   - Profit for year \\( i \\) is \\( P_i = R_i - 500 \\) million rupees.\n   - Loss for year \\( i \\) is \\( L_i = 500 - R_i \\) million rupees.\n\n4. **Calculate the total profit or loss over the 5-year period:**\n   - Let \\( P_{\\text{total}} \\) be the total profit and \\( L_{\\text{total}} \\) be the total loss.\n   - If \\( R_{\\text{total}} > 2500 \\), then \\( P_{\\text{total}} = R_{\\text{total}} - 2500 \\).\n   - If \\( R_{\\text{total}} < 2500 \\), then \\( L_{\\text{total}} = 2500 - R_{\\text{total}} \\).\n\n5. **Calculate the aggregate profit loss percentage:**\n   - The profit loss percentage is given by:\n     \\[\n     \\text{Profit Loss Percentage} = \\left( \\frac{P_{\\text{total}}}{E_{\\text{total}}} \\right) \\times 100 \\quad \\text{(if profit)}\n     \\]\n     \\[\n     \\text{Profit Loss Percentage} = \\left( \\frac{L_{\\text{total}}}{E_{\\text{total}}} \\right) \\times 100 \\quad \\text{(if loss)}\n     \\]\n\n6. **Substitute the given values:**\n   - Let's assume the bar graph shows the following revenues:\n     - 2014: 400 million rupees\n     - 2015: 450 million rupees\n     - 2016: 500 million rupees\n     - 2",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

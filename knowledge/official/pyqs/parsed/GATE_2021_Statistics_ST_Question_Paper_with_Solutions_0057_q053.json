@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q53",
+  "question_seq": 57,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a discrete random variable with probability mass function $p \\in \\{ p _ { 0 } , p _ { 1 } \\}$ 9 <table><tr><td rowspan=1 colspan=1>x</td><td rowspan=1 colspan=1>7</td><td rowspan=1 colspan=1>8</td><td rowspan=1 colspan=1>9</td><td rowspan=1 colspan=1>10</td></tr><tr><td rowspan=1 colspan=1> ${ \\pmb p } _ { 1 } ( { \\pmb x } )$ </td><td rowspan=1 colspan=1>0.69</td><td rowspan=1 colspan=1>0.10</td><td rowspan=1 colspan=1>0.16</td><td rowspan=1 colspan=1>0.05</td></tr><tr><td rowspan=1 colspan=1> ${ \\pmb p } _ { \\bf 0 } ( { \\pmb x } )$ </td><td rowspan=1 colspan=1>0.90</td><td rowspan=1 colspan=1>0.05</td><td rowspan=1 colspan=1>0.04</td><td rowspan=1 colspan=1>0.01</td></tr></table> To test $H _ { 0 } : p = p _ { 0 }$ against $H _ { 1 } : p = p _ { 1 }$ , the power of the most powerful test of size 0.05, based on $X$ , equals (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "To calculate the power of the most powerful test, we use the likelihood ratio test statistic and calculate the probability of rejecting $H _ { 0 }$ when $p = p _ { 1 }$ . The power is the probability that the test correctly rejects the null hypothesis. Based on the given values, the power is approximately:\n\n $ \\mathrm { P o w e r = 0 . 2 0 . } $ \n\nThus, the value is 0.20.\nQuick Tip\n\nTo calculate the power of a hypothesis test, compute the probability of rejecting the null hypothesis when the alternative hypothesis is true."
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q65",
+  "question_seq": 237,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "It is necessary to design a link-layer protocol between two hosts that are directly connected over a lossless link of length 3000 kilometers. Assume that the link bandwidth is 10⁸ bits per second and that the propagation delay in the link is 5 nanoseconds per meter. Every transmitted data byte is assigned a unique sequence number. Let N be the minimum number of bits needed for the sequence number field in the protocol header such that (i) the sequence numbers do not wrap around before 60 seconds, and (ii) the maximum utilization of the link is achieved The value of N is \\_. (",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine the minimum number of bits \\( N \\) needed for the sequence number field in the protocol header, we need to ensure that the sequence numbers do not wrap around before 60 seconds and that the maximum utilization of the link is achieved. Let's break this down step by step.\n\n1. **Calculate the maximum number of sequence numbers that can be generated in 60 seconds:**\n   - The link bandwidth is \\( 10^8 \\) bits per second.\n   - Each data byte is 8 bits.\n   - Therefore, the link can transmit \\( \\frac{10^8}{8} = 12.5 \\times 10^6 \\) bytes per second.\n   - In 60 seconds, the link can transmit \\( 12.5 \\times 10^6 \\times 60 = 750 \\times 10^6 \\) bytes.\n   - Since each byte has a unique sequence number, the maximum number of sequence numbers needed is \\( 750 \\times 10^6 \\).\n\n2. **Determine the minimum number of bits \\( N \\) required to represent \\( 750 \\times 10^6 \\) sequence numbers:**\n   - The number of bits \\( N \\) needed to represent \\( 750 \\times 10^6 \\) sequence numbers is given by the smallest integer \\( N \\) such that \\( 2^N \\geq 750 \\times 10^6 \\).\n   - We can use logarithms to find \\( N \\):\n     \\[\n     N \\geq \\log_2 (750 \\times 10^6)\n     \\]\n     Using the properties of logarithms, we can break this down:\n     \\[\n     N \\geq \\log_2 750 + \\log_2 10^6\n     \\]\n     \\[\n     N \\geq \\log_2 750 + 6 \\log_2 10\n     \\]\n     Using the approximation \\( \\log_2 10 \\approx 3.322 \\), we get:\n     \\[\n     N \\geq \\log_2 750 + 6 \\times 3.322\n     \\]\n     \\[\n     N \\geq \\log_2 750 + 19.932\n     \\]\n     Using the approximation \\( \\log_2 750 \\approx 9.544 \\), we get:\n     \\[\n     N \\geq 9.544 + 19.932\n     \\]\n     \\[\n     N \\geq 29.476\n     \\]\n     Since \\( N \\) must be an integer, we round up to the next whole number:\n     \\[\n     N = 30\n     \\]\n\nTherefore, the minimum number of bits needed for the sequence number field in the protocol header is \\(\\boxed{30}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

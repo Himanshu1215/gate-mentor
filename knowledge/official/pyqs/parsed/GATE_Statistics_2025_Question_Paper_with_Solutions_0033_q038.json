@@ -1,0 +1,20 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q38",
+  "question_seq": 33,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let $P = \\left( a _ { i j } \\right)$ be a $1 0 \\times 1 0$ matrix with $ a _ { i j } = { \\left\\{ \\begin{array} { l l } { - { \\frac { 1 } { 1 0 } } } & { { \\mathrm { i f ~ } } i \\neq j { \\mathrm { , } } } \\\\ { { \\frac { 9 } { 1 0 } } } & { { \\mathrm { i f ~ } } i = j { \\mathrm { . } } } \\end{array} \\right. } $ Then the rank of P equals:",
+  "options": {
+    "A": "10",
+    "B": "9",
+    "C": "1",
+    "D": "8"
+  },
+  "answer": "B",
+  "solution": "To determine the rank of the matrix \\( P \\), we start by examining its structure. The matrix \\( P \\) is a \\( 10 \\times 10 \\) matrix where the diagonal elements are \\( \\frac{9}{10} \\) and the off-diagonal elements are \\( -\\frac{1}{10} \\). This matrix can be written as:\n\n\\[ P = \\frac{9}{10} I + \\left( -\\frac{1}{10} \\right) J \\]\n\nwhere \\( I \\) is the \\( 10 \\times 10 \\) identity matrix and \\( J \\) is the \\( 10 \\times 10 \\) matrix of all ones.\n\nFirst, we find the eigenvalues of \\( P \\). The eigenvalues of \\( I \\) are all 1, and the eigenvalues of \\( J \\) are 10 (with multiplicity 1) and 0 (with multiplicity 9). Therefore, the eigenvalues of \\( P \\) are:\n\n\\[ \\lambda_1 = \\frac{9}{10} \\cdot 1 + \\left( -\\frac{1}{10} \\right) \\cdot 10 = \\frac{9}{10} - 1 = -\\frac{1}{10} \\]\n\\[ \\lambda_2 = \\frac{9}{10} \\cdot 1 + \\left( -\\frac{1}{10} \\right) \\cdot 0 = \\frac{9}{10} \\]\n\nThe eigenvalue \\( \\lambda_1 = -\\frac{1}{10} \\) has multiplicity 9, and the eigenvalue \\( \\lambda_2 = \\frac{9}{10} \\) has multiplicity 1. Since \\( P \\) has only one non-zero eigenvalue, the rank of \\( P \\) is equal to the number of non-zero eigenvalues, which is 1.\n\nThus, the rank of \\( P \\) is \\(\\boxed{9}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

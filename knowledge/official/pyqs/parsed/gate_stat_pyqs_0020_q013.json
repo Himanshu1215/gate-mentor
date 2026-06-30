@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q13",
+  "question_seq": 20,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let ?? be a $3 \\times 3$ real matrix and let $I _ { 3 }$ be the $3 \\times 3$ identity matrix. Which one of the following statements is NOT true?",
+  "options": {
+    "A": "If the row-reduced echelon form of ?? is $I _ { 3 }$ , then zero is not an eigenvalue of ??",
+    "B": "If zero is not an eigenvalue of ??, then the row-reduced echelon form of ?? is $I _ { 3 }$",
+    "C": "If ?? has three distinct eigenvalues, then the row-reduced echelon form of ?? is $I _ { 3 }$",
+    "D": "If the system of equations $A x = b$ has a solution for every 3 × 1 real column vector ??, then the row-reduced echelon form of ?? is $I _ { 3 }$ 3"
+  },
+  "answer": null,
+  "solution": "To determine which statement is NOT true, let's analyze each option step by step.\n\n(A) If the row-reduced echelon form of \\( A \\) is \\( I_3 \\), then zero is not an eigenvalue of \\( A \\).\n\n- If the row-reduced echelon form of \\( A \\) is \\( I_3 \\), then \\( A \\) is invertible.\n- For an invertible matrix, the determinant is non-zero.\n- The eigenvalues of a matrix are the roots of its characteristic polynomial, which is given by \\( \\det(A - \\lambda I) = 0 \\).\n- If the determinant of \\( A \\) is non-zero, then \\( \\det(A - 0I) = \\det(A) \\neq 0 \\).\n- Therefore, zero is not an eigenvalue of \\( A \\).\n\nThis statement is true.\n\n(B) If zero is not an eigenvalue of \\( A \\), then the row-reduced echelon form of \\( A \\) is \\( I_3 \\).\n\n- If zero is not an eigenvalue of \\( A \\), then the characteristic polynomial \\( \\det(A - \\lambda I) \\) has no root at \\( \\lambda = 0 \\).\n- This means \\( \\det(A) \\neq 0 \\).\n- A matrix with a non-zero determinant is invertible.\n- For an invertible matrix, the row-reduced echelon form is \\( I_3 \\).\n\nThis statement is true.\n\n(C) If \\( A \\) has three distinct eigenvalues, then the row-reduced echelon form of \\( A \\) is \\( I_3 \\).\n\n- If \\( A \\) has three distinct eigenvalues, then the characteristic polynomial \\( \\det(A - \\lambda I) \\) has three distinct roots.\n- This implies that \\( A \\) is diagonalizable.\n- A diagonalizable matrix is similar to a diagonal matrix with its eigenvalues on the diagonal.\n- However, being diagonalizable does not necessarily mean that the row-reduced echelon form is \\( I_3 \\). It only means that \\( A \\) can be written as \\( PDP^{-1} \\) where \\( D \\) is a diagonal matrix.\n\nThis statement is NOT necessarily true.\n\n(D) If the system of equations \\( A x = b \\) has a solution for every 3 × 1 real column vector \\( b \\), then the row-reduced echelon form of \\( A \\) is \\( I_3 \\).\n\n- If the system \\( A x = b \\) has a solution for every 3 × 1 real column vector \\( b \\), then \\( A \\) is surjective.\n- For a \\( 3 \\times 3 \\) matrix, surjectivity implies that \\( A \\) is also injective (since the dimensions are equal).\n- Therefore, \\( A \\) is bijective, which means \\( A \\) is invertible.\n- For an invertible matrix, the row-reduced echelon form is \\( I_3 \\).\n\nThis statement is true.\n\nBased on the analysis, the statement that is NOT true is:\n\n\\(\\boxed{C}\\)",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

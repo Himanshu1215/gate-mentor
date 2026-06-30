@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q14",
+  "question_seq": 9,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $f : \\mathbb { R } ^ { 2 } \\to \\mathbb { R }$ be a function defined by $ f ( x , y ) = { \\left\\{ \\begin{array} { l l } { { \\frac { x ^ { 2 } y } { x ^ { 2 } + y ^ { 2 } } } } & { { \\mathrm { i f ~ } } ( x , y ) \\neq ( 0 , 0 ) , } \\\\ { 0 } & { { \\mathrm { i f ~ } } ( x , y ) = ( 0 , 0 ) . } \\end{array} \\right. } $ Find the value of $\\textstyle { \\frac { \\partial f } { \\partial x } }$ at (0, 0).",
+  "options": {
+    "A": "0",
+    "B": "1",
+    "C": "1",
+    "D": "Undefined"
+  },
+  "answer": "B",
+  "solution": "To find $\\textstyle { \\frac { \\partial f } { \\partial x } }$ at $( 0 , 0 )$ , we first check if the function is continuous at (0, 0). The function is defined as:\n\n $ f ( x , y ) = { \\frac { x ^ { 2 } y } { x ^ { 2 } + y ^ { 2 } } } { \\mathrm { ~ f o r ~ } } ( x , y ) \\neq ( 0 , 0 ) . $ \n\nAt (0, 0), we need to check if the limit of f (x, y) as $( x , y ) \\to ( 0 , 0 )$ exists:\n\n $ \\operatorname* { l i m } _ { ( x , y ) \\to ( 0 , 0 ) } { \\frac { x ^ { 2 } y } { x ^ { 2 } + y ^ { 2 } } } = 0 . $ \n\nThus, the function is continuous at (0, 0).\n\nNext, we compute the partial derivative $\\textstyle { \\frac { \\partial f } { \\partial x } }$ at (0, 0):\n\n $ { \\frac { \\partial f } { \\partial x } } = \\operatorname* { l i m } _ { h \\to 0 } { \\frac { f ( h , 0 ) - f ( 0 , 0 ) } { h } } . $ \n\nSince $f ( h , 0 ) = 0$ for all h, we have:\n\n $ { \\frac { \\partial f } { \\partial x } } ( 0 , 0 ) = \\operatorname* { l i m } _ { h \\to 0 } { \\frac { 0 - 0 } { h } } = 1 . $ \n\nThus, $\\begin{array} { r } { \\frac { \\partial f } { \\partial x } = 1 \\mathrm { a t } ( 0 , 0 ) } \\end{array}$\nQuick Tip\n\nTo find the partial derivative at a point where the function is piecewise defined, check the limit carefully and confirm continuity."
+}

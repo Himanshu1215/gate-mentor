@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q3",
+  "question_seq": 106,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let SLLdel be a function that deletes a node in a singly-linked list given a pointer to the node and a pointer to the head of the list. Similarly, let DLLdel be another function that deletes a node in a doubly-linked list given a pointer to the node and a pointer to the head of the list Let n denote the number of nodes in each of the linked lists. Which one of the following choices is TRUE about the worst-case time complexity of SLLdel and DLLdel?",
+  "options": {
+    "A": "SLLdel is O(1) and DLLdel is O(n)",
+    "B": "Both SLLdel and DLLdel are O(log(n))",
+    "C": "Both SLLdel and DLLdel are O(1)",
+    "D": "SLLdel is O(n) and DLLdel is O(1)"
+  },
+  "answer": "D",
+  "solution": "To determine the worst-case time complexity of the functions SLLdel and_DLLdel, we need to analyze the operations involved in each function.\n\n### SLLdel (Singly-Linked List Deletion)\n1. **Find the node to delete**: This requires遍历 the list from the head to the node to be deleted. In the worst case, this takes \\( O(n) \\) time, where \\( n \\) is the number of nodes in the list.\n2. **造ate a new node**: This operation is constant time, \\( O(1) \\).\n3. **Set the next pointer**: This operation is also constant time, \\( O(1) \\).\n\nThe total time complexity for SLLdel in the worst case is the sum of these operations:\n\\[ O(n) + O(1) + O(1) = O(n) \\]\n\n###_dlldel (Doubly-Linked List Deletion)\n1. **Find the node to delete**: This requires遍历 the list from the head to the node to be deleted. In the worst case, this takes \\( O(n) \\) time, where \\( n \\) is the number of nodes in the list.\n2. **造ate a new node**: This operation is constant time, \\( O(1) \\).\n3. **Set the next and previous pointers**: This operation is constant time, \\( O(1) \\).\n\nThe total time complexity for_dlldel in the worst case is the sum of these operations:\n\\[ O(n) + O(1) + O(1) = O(n) \\]\n\nHowever, there is a crucial difference in the implementation of these functions:\n- In SLLdel, we only need to update the next pointer of the node before the node to be deleted.\n- In_dlldel, we need to update both the next and previous pointers of the node before the node to be deleted.\n\nThis additional step in_dlldel does not change the overall time complexity from \\( O(n) \\) to \\( O(n) \\), but it does make the implementation more complex. However, the problem statement asks for the worst-case time complexity, which is \\( O(n) \\) for both functions.\n\nGiven the options:\n(A) SLLdel is \\( O(1) \\) and_dlldel is \\( O(n) \\)\n(B) Both SLLdel and_dlldel are \\( O(\\log(n)) \\)\n(C) Both SLLdel and_dlldel are \\( O(1) \\)\n(D) SLLdel is \\( O(n) \\) and_dlldel is \\( O(1) \\)\n\nThe correct answer is:\n\\[\n\\boxed{D}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

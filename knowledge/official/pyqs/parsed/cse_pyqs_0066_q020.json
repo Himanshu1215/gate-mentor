@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q20",
+  "question_seq": 66,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let Pbe an array containing n integers. Let t be the lowest upper bound on the number of comparisons of the array elements, required to find the minimum and maximum values in an arbitrary array of n elements. Which one of the following choices is correct?",
+  "options": {
+    "A": "$t > n \\operatorname { a n d } t \\leq 3 \\left\\lceil { \\frac { n } { 2 } } \\right\\rceil$",
+    "C": "$t > 2 n - 2$",
+    "B": "$t > 3 \\left\\lceil { \\frac { n } { 2 } } \\right\\rceil$ and $t \\leq 2 n - 2$ $ ( \\mathsf { d } ) \\ t > \\lceil \\mathsf { l o g } _ { 2 } ( n ) \\rceil \\ \\mathsf { a n d } \\ t \\leq n $"
+  },
+  "answer": "B",
+  "solution": "To determine the lowest upper bound on the number of comparisons required to find the minimum and maximum values in an arbitrary array of \\( n \\) elements, let's analyze the problem step by step.\n\n1. **Understanding the Problem:**\n   - We need to find both the minimum and maximum values in an array of \\( n \\) integers.\n   - Each comparison between two elements in the array costs 1.\n\n2. **Initial Approach:**\n   - A straightforward approach is to compare each element to a current minimum and maximum. This would require \\( n-1 \\) comparisons for the minimum and \\( n-1 \\) comparisons for the maximum, but this is not efficient because we are comparing the same elements multiple times.\n\n3. **Optimized Approach:**\n   - A more efficient method is to pair up elements and compare them in pairs. This reduces the number of comparisons needed.\n   - If \\( n \\) is even, we can pair up all \\( n \\) elements into \\( \\frac{n}{2} \\) pairs. Each pair requires 1 comparison, so we need \\( \\frac{n}{2} \\) comparisons to find the minimum and maximum in each pair.\n   - After finding the minimum and maximum in each pair, we need to find the minimum and maximum among the \\( \\frac{n}{2} \\) winners. This requires \\( \\frac{n}{2} - 1 \\) comparisons.\n   - Therefore, the total number of comparisons is \\( \\frac{n}{2} + \\left( \\frac{n}{2} - 1 \\right) = n - 1 \\).\n\n4. **Case for Odd \\( n \\):**\n   - If \\( n \\) is odd, we can pair up \\( n-1 \\) elements into \\( \\frac{n-1}{2} \\) pairs, and leave one element unpaired.\n   - Each pair requires 1 comparison, so we need \\( \\frac{n-1}{2} \\) comparisons to find the minimum and maximum in each pair.\n   - After finding the minimum and maximum in each pair, we need to find the minimum and maximum among the \\( \\frac{n-1}{2} + 1 = \\frac{n+1}{2} \\) winners. This requires \\( \\frac{n+1}{2} - 1 = \\frac{n-1}{2} \\) comparisons.\n   - Therefore, the total number of comparisons is \\( \\frac{n-1}{2} + \\frac{n-1}{2} = n - 1 \\).\n\n5. **Conclusion:**\n   - For both even and odd \\( n \\), the minimum number of comparisons required to find the minimum and maximum values is \\( n - 1 \\).\n   - However, we need to find the lowest upper bound on the number of comparisons, which means we need to consider the worst-case scenario where the array is already sorted or reverse-sorted. In such cases, we need to compare each element to the current minimum and maximum, which requires \\( 2(n-1) \\) comparisons.\n\n6. **Final Answer:**\n   - The correct answer is \\( t > 3 \\left\\lceil \\frac{n}{2} \\right\\rceil \\) and \\( t \\leq 2n - 2 \\).\n\nTherefore, the correct choice is \\(\\boxed{B}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q11",
+  "question_seq": 61,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "There are 6 jobs with distinct difficulty levels, and 3 computers with distinct processing speeds. Each job is assigned to a computer such that: The fastest computer gets the toughest job and the slowest computer gets the easiest job. • Every computer gets at least one job. The number of ways in which this can be done is \\_",
+  "options": null,
+  "answer": "C",
+  "solution": "To determine the number of ways to assign 6 jobs with distinct difficulty levels to 3 computers with distinct processing speeds such that the fastest computer gets the toughest job, the slowest computer gets the easiest job, and every computer gets at least one job, we can follow these steps:\n\n1. **Identify the constraints:**\n   - The fastest computer gets the toughest job.\n   - The slowest computer gets the easiest job.\n   - Every computer gets at least one job.\n\n2. **Fix the positions of the toughest and easiest jobs:**\n   - The toughest job is assigned to the fastest computer.\n   - The easiest job is assigned to the slowest computer.\n\n3. **Determine the remaining jobs:**\n   - After assigning the toughest and easiest jobs, we have 4 jobs left to assign to the 3 computers.\n\n4. **Use the principle of inclusion-exclusion to count the number of ways to assign the remaining 4 jobs such that each computer gets at least one job:**\n   - Let \\( A \\), \\( B \\), and \\( C \\) be the events that the first, second, and third computers do not get any of the remaining 4 jobs, respectively.\n   - We need to find the number of ways to assign the 4 jobs such that none of the events \\( A \\), \\( B \\), or \\( C \\) occur.\n\n5. **Calculate the total number of ways to assign the 4 jobs without any restrictions:**\n   - Each of the 4 jobs can be assigned to any of the 3 computers.\n   - Therefore, the total number of ways is \\( 3^4 = 81 \\).\n\n6. **Calculate the number of ways where at least one computer gets no job:**\n   - Use the principle of inclusion-exclusion:\n     \\[\n     |A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |A \\cap C| - |B \\cap C| + |A \\cap B \\cap C|\n     \\]\n\n7. **Determine the individual terms:**\n   - \\( |A| \\): The number of ways to assign the 4 jobs to 2 computers (since the first computer gets none).\n     \\[\n     |A| = 2^4 = 16\n     \\]\n   - Similarly, \\( |B| = 16 \\) and \\( |C| = 16 \\).\n\n   - \\( |A \\cap B| \\): The number of ways to assign the 4 jobs to 1 computer (since both the first and second computers get none).\n     \\[\n     |A \\cap B| = 1^4 = 1\n     \\]\n   - Similarly, \\( |A \\cap C| = 1 \\) and \\( |B \\cap C| = 1 \\).\n\n   - \\( |A \\cap B \\cap C| \\): The number of ways to assign the 4 jobs to 0 computers (since all three computers get none).\n     \\[\n     |A \\cap B \\cap C| = 0\n     \\]\n\n8. **Substitute the values into the inclusion-exclusion formula:**\n   \\[\n   |A \\cup B \\cup C| = 16 + 16 +",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

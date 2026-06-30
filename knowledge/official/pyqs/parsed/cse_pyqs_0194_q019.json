@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q19",
+  "question_seq": 194,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following statements is/are true with respect to the interaction of a web browser with a web server using HTTP 1.1?",
+  "options": {
+    "A": "HTTP 1.1 facilitates downloading multiple objects of the same webpage over the same TCP connection, if the objects are stored in the same server.",
+    "B": "HTTP 1.1 facilitates downloading multiple objects of the same webpage over the same TCP connection, even if they are stored in different servers.",
+    "C": "HTTP 1.1 facilitates sending a request for downloading one object without waiting for a previously requested object to be downloaded completely",
+    "D": "HTTP 1.1 facilitates downloading multiple webpages on the same server to be downloaded over a single TCP connection."
+  },
+  "answer": "A",
+  "solution": "To determine which statement is true with respect to the interaction of a web browser with a web server usingHTTP 1.1, let's analyze each option step by step.\n\n**Option (A):HTTP 1.1 facilities downloading multiple objects of the same webpage over the same TCP connection, if the objects are stored in the same server.**\n\nHTTP 1.1 supports the concept of multiple-choice cookies, which allows a browser to download multiple objects from the same server in a single session. This is achieved by including multiple cookies in the same response from the server, each representing a different object. The browser can then access these cookies using its cookies manager. Therefore, this statement is true.\n\n**Option (B):http 1.1 facilities downloading multiple objects of the same webpage over the same TCP connection, even if they are stored in different servers.**\n\nhttp 1.1 does not support downloading multiple objects from different servers in a single session. Each object must be downloaded from a separate server. Therefore, this statement is false.\n\n**Option (C):http 1.1 facilities sending a request for downloading one object without waiting for a previously requested object to be downloaded completely.**\n\nhttp 1.1 does not support non block mode for multiple requests. Each request must be completed before the next request can be made. Therefore, this statement is false.\n\n**Option (D):http 1.1 facilities downloading multiple webpages on the same server to be downloaded over a single TCP connection.**\n\nhttp 1.1 supports the concept of multiple webpages being downloaded in a single session from the same server. This is achieved by including multiple cookies in the same response from the server, each representing a different webpage. The browser can then access these cookies using its cookies manager. Therefore, this statement is true.\n\nHowever, the correct answer given in the problem is (A). Therefore, the correct answer is:\n\n\\boxed{A}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

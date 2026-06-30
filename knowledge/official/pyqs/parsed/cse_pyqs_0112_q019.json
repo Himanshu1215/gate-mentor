@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q19",
+  "question_seq": 112,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let f and g be functions of natural numbers given by $f ( n ) = n$ and $g ( n ) = n ^ { 2 } .$ Which of the following statements is/are TRUE?",
+  "options": {
+    "A": "$f \\in { \\bf \\cal O } ( g )$ (b) $f \\in \\Omega ( { \\mathfrak { g } } )$",
+    "C": "$f \\in \\mathrm { { \\ o } } ( g )$ (d) $f \\in \\Theta ( g )$ ```"
+  },
+  "answer": "A",
+  "solution": "To determine which of the given statements is true, we need to analyze the relationship between the functions \\( f(n) = n \\) and \\( g(n) = n^2 \\) using the definitions of big O, big omega, big theta, and big O notation.\n\n### Step-by-Step Analysis:\n\n1. **Big O Notation (\\( f \\in \\mathcal{O}(g) \\))**:\n   - \\( f(n) \\in \\mathcal{O}(g(n)) \\) if there exist positive constants \\( c \\) and \\( n_0 \\) such that \\( f(n) \\leq c \\cdot g(n) \\) for all \\( n \\geq n_0 \\).\n   - For \\( f(n) = n \\) and \\( g(n) = n^2 \\), we need to find \\( c \\) and \\( n_0 \\) such that \\( n \\leq c \\cdot n^2 \\) for all \\( n \\geq n_0 \\).\n   - Dividing both sides by \\( n \\) (assuming \\( n > 0 \\)), we get \\( 1 \\leq c \\cdot n \\).\n   - Solving for \\( c \\), we find \\( c \\geq \\frac{1}{n} \\).\n   - Since \\( n \\geq n_0 \\), we can choose \\( c = 1 \\) and \\( n_0 = 1 \\). For \\( n \\geq 1 \\), \\( 1 \\leq n \\) is always true.\n   - Therefore, \\( f(n) \\in \\mathcal{O}(g(n)) \\).\n\n2. **Big Omega Notation (\\( f \\in \\Omega(g) \\))**:\n   - \\( f(n) \\in \\Omega(g(n)) \\) if there exist positive constants \\( c \\) and \\( n_0 \\) such that \\( f(n) \\geq c \\cdot g(n) \\) for all \\( n \\geq n_0 \\).\n   - For \\( f(n) = n \\) and \\( g(n) = n^2 \\), we need to find \\( c \\) and \\( n_0 \\) such that \\( n \\geq c \\cdot n^2 \\) for all \\( n \\geq n_0 \\).\n   - Dividing both sides by \\( n \\) (assuming \\( n > 0 \\)), we get \\( 1 \\geq c \\cdot n \\).\n   - Solving for \\( c \\), we find \\( c \\leq \\frac{1}{n} \\).\n   - Since \\( n \\geq n_0 \\), as \\( n \\) increases, \\( \\frac{1}{n} \\) decreases. There is no constant \\( c \\) that can satisfy \\( c \\leq \\frac{1}{n} \\) for all \\( n \\geq n_0 \\).\n   - Therefore, \\( f(n) \\notin \\Omega(g(n)) \\).\n\n3. **Big O Notation (\\( f \\in \\omega(g) \\))**:\n   - \\( f(n) \\in \\omega(g(n)) \\) if for every positive constant \\( c \\), there exists an \\( n_0 \\) such that \\( f(n) >",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

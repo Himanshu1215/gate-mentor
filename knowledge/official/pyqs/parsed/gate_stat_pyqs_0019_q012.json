@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q12",
+  "question_seq": 19,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "<sub>Let</sub> $\\{ a _ { n } \\} _ { n \\geq 1 }$ be a sequence of real numbers such that $a _ { 1 } = { \\sqrt { 6 } }$ and $a _ { n + 1 } = { \\sqrt { 6 + a _ { n } } }$ for $n \\geq 1$ . Consider the following statements: (I) $\\{ a _ { n } \\} _ { n \\geq 1 }$ is an increasing sequence. (II) $\\operatorname* { l i m } _ { n \\to \\infty } a _ { n } = 2 .$ Which of the above statements is/are true?",
+  "options": {
+    "A": "Only (I)",
+    "B": "Only (II)",
+    "C": "Both (I) and (II)",
+    "D": "Neither (I) nor (II)"
+  },
+  "answer": null,
+  "solution": "To determine the truth of the statements about the sequence \\(\\{ a_n \\}_{n \\geq 1}\\) defined by \\(a_1 = \\sqrt{6}\\) and \\(a_{n+1} = \\sqrt{6 + a_n}\\), we will analyze the sequence step by step.\n\n### Step 1: Show that the sequence is increasing\nWe need to show that \\(a_{n+1} > a_n\\) for all \\(n \\geq 1\\).\n\nAssume \\(a_n > a_{n-1}\\) for some \\(n \\geq 2\\). Then,\n\\[a_{n+1} = \\sqrt{6 + a_n} > \\sqrt{6 + a_{n-1}} = a_n.\\]\nThis shows that if \\(a_n > a_{n-1}\\), then \\(a_{n+1} > a_n\\). Since \\(a_2 = \\sqrt{6 + a_1} = \\sqrt{6 + \\sqrt{6}} > \\sqrt{6} = a_1\\), by induction, the sequence is increasing.\n\n### Step 2: Show that the sequence is bounded above\nWe need to show that there exists an upper bound for the sequence. We will show that \\(a_n < 3\\) for all \\(n \\geq 1\\).\n\nAssume \\(a_n < 3\\) for some \\(n \\geq 1\\). Then,\n\\[a_{n+1} = \\sqrt{6 + a_n} < \\sqrt{6 + 3} = \\sqrt{9} = 3.\\]\nThis shows that if \\(a_n < 3\\), then \\(a_{n+1} < 3\\). Since \\(a_1 = \\sqrt{6} < 3\\), by induction, the sequence is bounded above by 3.\n\n### Step 3: Determine the limit of the sequence\nSince the sequence is increasing and bounded above, it converges to some limit \\(L\\). To find \\(L\\), we take the limit of both sides of the recurrence relation \\(a_{n+1} = \\sqrt{6 + a_n}\\):\n\\[\\lim_{n \\to \\infty} a_{n+1} = \\lim_{n \\to \\infty} \\sqrt{6 + a_n}.\\]\nSince \\(\\lim_{n \\to \\infty} a_{n+1} = L\\) and \\(\\lim_{n \\to \\infty} a_n = L\\), we have:\n\\[L = \\sqrt{6 + L}.\\]\nTo solve for \\(L\\), we square both sides:\n\\[L^2 = 6 + L.\\]\nRearranging the equation gives:\n\\[L^2 - L - 6 = 0.\\]\nThis is a quadratic equation, which we can solve using the quadratic formula \\(L = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\\), where \\(a = 1\\), \\(b = -1\\), and \\(c = -6\\):\n\\[L = \\frac{1 \\pm \\sqrt{1 + 24}}{2} = \\frac{1 \\pm \\sqrt{25}}{2} = \\",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

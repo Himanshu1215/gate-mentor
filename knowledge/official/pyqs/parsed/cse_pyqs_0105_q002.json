@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q2",
+  "question_seq": 105,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the following sequences when stored in an array at locations A[1], ..., A[10] forms a max-heap?",
+  "options": {
+    "A": "23, 17, 10, 6, 13, 14, 1, 5, 7, 12",
+    "B": "23, 17, 14, 7, 13, 10, 1, 5, 6, 12",
+    "C": "23, 17, 14, 6, 13, 10, 1, 5, 7, 15",
+    "D": "23, 14, 17, 1, 10, 13, 16, 12, 7, 5"
+  },
+  "answer": "B",
+  "solution": "To determine which sequence forms a max-heap, we need to check if each element in the array satisfies the max-heap property. The max-heap property states that for any given node \\(i\\), the value of the parent node \\(P(i)\\) is greater than or equal to the value of the child nodes \\(C(i)\\). The root of the tree is at index 1, and the children of a node at index \\(i\\) are at indices \\(2i\\) and \\(2i+1\\).\n\nLet's analyze each option step by step:\n\n**Option (A): 23, 17, 10, 6, 13, 14, 1, 5, 7, 12**\n\n1. Root (index 1): 23\n   - Left child (index 2): 17 (23 ≥ 17)\n   - Right child (index 3): 10 (23 ≥ 10)\n2. Index 2: 17\n   - Left child (index 4): 6 (17 ≥ 6)\n   - Right child (index 5): 13 (17 ≥ 13)\n3. Index 3: 10\n   - Left child (index 6): 14 (10 < 14) - This violates the max-heap property.\n\nSince the max-heap property is violated at index 3, option (A) is not a max-heap.\n\n**Option (B): 23, 17, 14, 7, 13, 10, 1, 5, 6, 12**\n\n1. Root (index 1): 23\n   - Left child (index 2): 17 (23 ≥ 17)\n   - Right child (index 3): 14 (23 ≥ 14)\n2. Index 2: 17\n   - Left child (index 4): 7 (17 ≥ 7)\n   - Right child (index 5): 13 (17 ≥ 13)\n3. Index 3: 14\n   - Left child (index 6): 10 (14 ≥ 10)\n   - Right child (index 7): 1 (14 ≥ 1)\n4. Index 4: 7\n   - Left child (index 8): 5 (7 ≥ 5)\n   - Right child (index 9): 6 (7 ≥ 6)\n5. Index 5: 13\n   - Left child (index 10): 12 (13 ≥ 12)\n   - Right child (index 11): -1 (not present)\n\nSince all the max-heap property conditions are satisfied, option (B) is a max-heap.\n\n**Option (C): 23, 17, 14, 6, 13, 10, 1, 5, 7, 15**\n\n1. Root (index 1): 23\n   - Left child (index 2): 17 (23 ≥ 17)\n   - Right child (index",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

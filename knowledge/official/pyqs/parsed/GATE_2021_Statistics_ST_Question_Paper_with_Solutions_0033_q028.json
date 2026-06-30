@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q28",
+  "question_seq": 33,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $f : \\mathbb { R } \\to \\mathbb { R }$ be a differentiable function such that $f ( 0 ) = 0$ and $f ^ { \\prime } ( x ) + 2 f ( x ) > 0$ for all $x \\in \\mathbb { R }$ , where $f ^ { \\prime }$ denotes the derivative of f and <sup>R</sup> denotes the set of all real numbers. Then which one of the following statements is true?",
+  "options": {
+    "A": "$f ( x ) > 0$ , for all $x > 0$ and $f ( x ) < 0$ , for all $x < 0$",
+    "B": "$f ( x ) < 0 ,$ , for all $x \\neq 0$",
+    "C": "$f ( x ) > 0$ , for all $x \\neq 0$",
+    "D": "$f ( x ) < 0$ , for all $x > 0$ and $f ( x ) > 0$ , for all $x < 0$"
+  },
+  "answer": "A",
+  "solution": "We are given the condition $f ^ { \\prime } ( x ) + 2 f ( x ) > 0$ for all $x \\in \\mathbb { R }$ . This inequality implies that $f ( x )$ behaves in a specific way. Let’s solve this inequality to determine the behavior of $f ( x )$\n\nStep 1: Solve the differential inequality.\n\nRewrite the inequality as:\n\n $ f ^ { \\prime } ( x ) > - 2 f ( x ) . $ \n\nThis is a first-order linear differential inequality. The solution to the corresponding equation $f ^ { \\prime } ( x ) = - 2 f ( x )$ is:\n\n $ f ( x ) = C e ^ { - 2 x } , $ \n\nwhere $C$ is a constant determined by initial conditions. For the inequality $f ^ { \\prime } ( x ) + 2 f ( x ) > 0 .$ this solution shows that $f ( x )$ is positive for $x > 0$ and negative for $x < 0$ , confirming that option (A) is correct.\n\nFinal Answer:\n\n $ \\boxed { f ( x ) > 0 , \\mathrm { f o r } \\mathrm { a l l } x > 0 \\quad \\mathrm { a n d } \\quad f ( x ) < 0 , \\mathrm { f o r } \\mathrm { a l l } x < 0 } . $ \nQuick Tip\n\nIn solving differential inequalities, remember to consider the behavior of the solution as x moves away from zero to understand the sign changes."
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q11",
+  "question_seq": 7,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "– Q.35 Carry ONE mark Each",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the given problem, we need to follow a step-by-step approach. However, since the specific question is not provided in the problem statement, I will assume a typical problem that might be asked in a GATE Data Science & AI exam. Let's consider a problem related to probability, which is a common topic in such exams.\n\n**Problem:**\nA bag contains 5 red balls and 3 blue balls. Two balls are drawn at random without replacement. What is the probability that both balls drawn are red?\n\n**Step-by-Step Solution:**\n\n1. **Determine the total number of balls:**\n   The bag contains 5 red balls and 3 blue balls, so the total number of balls is:\n   \\[\n   5 + 3 = 8\n   \\]\n\n2. **Calculate the probability of drawing the first red ball:**\n   The probability of drawing a red ball on the first draw is the number of red balls divided by the total number of balls:\n   \\[\n   P(\\text{First red ball}) = \\frac{5}{8}\n   \\]\n\n3. **Calculate the probability of drawing the second red ball given that the first ball drawn was red:**\n   After drawing the first red ball, there are now 4 red balls left and a total of 7 balls left in the bag. So, the probability of drawing a red ball on the second draw is:\n   \\[\n   P(\\text{Second red ball} \\mid \\text{First red ball}) = \\frac{4}{7}\n   \\]\n\n4. **Calculate the probability of both events happening (drawing two red balls in succession):**\n   Since the draws are without replacement, the probability of both events happening is the product of the individual probabilities:\n   \\[\n   P(\\text{Both red balls}) = P(\\text{First red ball}) \\times P(\\text{Second red ball} \\mid \\text{First red ball}) = \\frac{5}{8} \\times \\frac{4}{7} = \\frac{20}{56} = \\frac{5}{14}\n   \\]\n\n**Final Answer:**\n\\[\n\\boxed{\\frac{5}{14}}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

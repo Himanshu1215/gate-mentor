@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q50",
+  "question_seq": 178,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following Boolean algebraic equation(s) is/are CORRECT?",
+  "options": {
+    "A": "${ \\overline { { A } } } B C + A { \\overline { { B } } } { \\overline { { C } } } + { \\overline { { A } } } { \\overline { { B } } } { \\overline { { C } } } + A { \\overline { { B } } } C + A B C = B C + { \\overline { { B } } } { \\overline { { C } } } + { \\overline { { A } } } { \\overline { { B } } }$",
+    "B": "$A B + \\overline { { A } } C + B C = A B + \\overline { { A } } C$",
+    "C": "$( A + C ) ( { \\overline { { A } } } + B ) = A B + { \\overline { { A } } } C$ $ ( \\mathrm { d } ) \\overline { { ( A + \\overline { { B } } + \\overline { { D } } ) ( C + D ) ( \\overline { { A } } + C + D ) ( A + B + \\overline { { D } } ) } } = \\overline { { A } } D + \\overline { { C } } \\overline { { D } } $ [2025 (Set-2) :2 M]"
+  },
+  "answer": "B",
+  "solution": "To determine which of the given Boolean algebraic equations is correct, we will analyze each option step by step.\n\n**Option (A):**\n\\[\n{\\overline{A}}BC + A{\\overline{B}}{\\overline{C}} + {\\overline{A}}{\\overline{B}}{\\overline{C}} + A{\\overline{B}}C + ABC = BC + {\\overline{B}}{\\overline{C}} + {\\overline{A}}{\\overline{B}}{\\overline{C}}\n\\]\n\nFirst, let's simplify the left-hand side (LHS):\n\\[\n{\\overline{A}}BC + A{\\overline{B}}{\\overline{C}} + {\\overline{A}}{\\overline{B}}{\\overline{C}} + A{\\overline{B}}C + ABC\n\\]\n\nNotice that we can group the terms involving \\(A\\) and \\(\\overline{A}\\):\n\\[\n({\\overline{A}}BC + A{\\overline{B}}C) + (A{\\overline{B}}{\\overline{C}} + {\\overline{A}}{\\overline{B}}{\\overline{C}}) + ABC\n\\]\n\nFactor out the common factors:\n\\[\nC({\\overline{A}}B + A{\\overline{B}}) + {\\overline{B}}{\\overline{C}}(A + \\overline{A}) + ABC\n\\]\n\nSince \\({\\overline{A}}B + A{\\overline{B}} = B \\oplus A\\) (XOR) and \\(A + \\overline{A} = 1\\):\n\\[\nC(B \\oplus A) + {\\overline{B}}{\\overline{C}} \\cdot 1 + ABC\n\\]\n\nSimplify further:\n\\[\nC(B \\oplus A) + {\\overline{B}}{\\overline{C}} + ABC\n\\]\n\nNow, let's expand \\(C(B \\oplus A)\\):\n\\[\nC(B \\oplus A) = C(B + A - AB)\n\\]\n\\[\nC(B \\oplus A) = CB + CA - CAB\n\\]\n\nSubstitute back:\n\\[\nCB + CA - CAB + {\\overline{B}}{\\overline{C}} + ABC\n\\]\n\nCombine like terms:\n\\[\nCB + CA + {\\overline{B}}{\\overline{C}} + ABC - CAB + CAB\n\\]\n\\[\nCB + CA + {\\overline{B}}{\\overline{C}}\n\\]\n\nThe right-hand side (RHS) is:\n\\[\nBC + {\\overline{B}}{\\overline{C}} + {\\overline{A}}{\\overline{B}}{\\overline{C}}\n\\]\n\nSince \\(CB = BC\\), the LHS and RHS are not equal. Therefore, option (A) is incorrect.\n\n**Option (B):**\n\\[\nAB + \\overline{A}C + BC = AB + \\overline{A}C\n\\]\n\nSubtract \\(AB + \\overline{A}C\\) from both sides:\n\\[\n(AB + \\overline{A}C + BC) - (AB + \\overline{",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

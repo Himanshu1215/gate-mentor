@@ -1,0 +1,17 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q17",
+  "question_seq": 12,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , \\ldots , X _ { 2 0 }$ be a random sample of size 20 from $N _ { 6 } ( \\mu , \\Sigma )$ , with $\\mathbf { d e t } ( \\Sigma ) \\neq 0 ,$ and suppose both $\\mu$ and $\\Sigma$ are unknown. Let $ { \\bar { X } } = { \\frac { 1 } { 2 0 } } \\sum _ { i = 1 } ^ { 2 0 } X _ { i } \\quad { \\mathrm { a n d } } \\quad { \\cal S } = { \\frac { 1 } { 1 9 } } \\sum _ { i = 1 } ^ { 2 0 } ( X _ { i } - { \\bar { X } } ) ( X _ { i } - { \\bar { X } } ) ^ { T } . $",
+  "options": {
+    "C": "onsider the following two statements:"
+  },
+  "answer": null,
+  "solution": "To solve the problem, we need to determine which of the given statements are true. Let's analyze each statement step by step.\n\n### Statement (A)\nThe first statement is:\n\\[\n\\frac{1}{20} \\sum_{i=1}^{20} (X_i - \\bar{X})(X_i - \\bar{X})^T = \\mathbf{S}\n\\]\n\nGiven:\n\\[\n\\mathbf{S} = \\frac{1}{19} \\sum_{i=1}^{20} (X_i - \\bar{X})(X_i - \\bar{X})^T\n\\]\n\nBy comparing the two expressions, we see that:\n\\[\n\\frac{1}{20} \\sum_{i=1}^{20} (X_i - \\bar{X})(X_i - \\bar{X})^T \\neq \\mathbf{S}\n\\]\n\nThus, statement (A) is **false**.\n\n### Statement (B)\nThe second statement is:\n\\[\n\\frac{1}{19} \\sum_{i=1}^{20} (X_i - \\bar{X})(X_i - \\bar{X})^T = \\mathbf{S}\n\\]\n\nThis is exactly the definition of \\(\\mathbf{S}\\) given in the problem. Therefore, statement (B) is **true**.\n\n### Statement (C)\nThe third statement is:\n\\[\n\\mathbf{S} \\text{ is an unbiased estimator of } \\mathbf{\\Sigma}\n\\]\n\nTo verify this, we need to check if the expected value of \\(\\mathbf{S}\\) equals \\(\\mathbf{\\Sigma}\\).\n\nThe sample covariance matrix \\(\\mathbf{S}\\) is defined as:\n\\[\n\\mathbf{S} = \\frac{1}{19} \\sum_{i=1}^{20} (X_i - \\bar{X})(X_i - \\bar{X})^T\n\\]\n\nThe expected value of \\(\\mathbf{S}\\) is:\n\\[\nE[\\mathbf{S}] = E\\left[\\frac{1}{19} \\sum_{i=1}^{20} (X_i - \\bar{X})(X_i - \\bar{X})^T\\right]\n\\]\n\nUsing the linearity of expectation:\n\\[\nE[\\mathbf{S}] = \\frac{1}{19} \\sum_{i=1}^{20} E[(X_i - \\bar{X})(X_i - \\bar{X})^T]\n\\]\n\nNext, we use the fact that:\n\\[\nE[(X_i - \\bar{X})(X_i - \\bar{X})^T] = E[X_i X_i^T] - E[\\bar{X} \\bar{X}^T]\n\\]\n\nSince \\(X_i\\) are identically distributed with mean \\(\\mu\\):\n\\[\nE[X_i X_i^T] = \\mathbf{\\Sigma} + \\mu \\mu^T\n\\]\n\nAnd since \\(\\bar{X}\\) is the sample mean:\n\\[\nE[\\bar{X} \\bar{X}^T] = \\frac{1}{20} \\sum_{",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

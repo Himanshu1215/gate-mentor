@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q4",
+  "question_seq": 76,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Given below are four statements: Statement 1: All students are inquisitive. Statement 2: Some students are inquisitive. Statement 3: No student is inquisitive. Statement 4: Some students are not inquisitive. From the given four statements, find the two statements that CANNOT BE TRUE simultaneously, assuming that there is at least one student in the class.",
+  "options": {
+    "A": "Statement 1 and Statement 3 (b) Statement 1 and Statement 2",
+    "C": "Statement 2 and Statement 4 (d) Statement 3 and Statement 4"
+  },
+  "answer": "A",
+  "solution": "To determine which two statements cannot be true simultaneously, let's analyze each statement and their logical implications:\n\n1. **Statement 1: All students are inquisitive.**\n   - This means every student in the class has a interest in something.\n\n2. **Statement 2: Some students are inquisitive.**\n   - This means at least one student in the class has a interest in something.\n\n3. **Statement 3: No student is inquisitive.**\n   - This means no student in the class has a interest in anything.\n\n4. **Statement 4: Some students are not inquisitive.**\n   - This means at least one student in the class does not have a interest in something.\n\nNow, let's check each pair of statements to see if they can be true at the same time:\n\n- **Statement 1 and Statement 3:**\n  - If all students are inquisitive (Statement 1), then there cannot be any student who is not inquisitive.\n  - If no student is inquisitive (Statement 3), then there cannot be any student who is inquisitive.\n  - These two statements are contradictory. Therefore, they cannot both be true simultaneously.\n\n- **Statement 1 and Statement 2:**\n  - If all students are inquisitive (Statement 1), then it is also true that some students are inquisitive (Statement 2).\n  - These two statements can both be true simultaneously.\n\n- **Statement 2 and Statement 4:**\n  - If some students are inquisitive (Statement 2), then it is possible that some students are not inquisitive (Statement 4).\n  - These two statements can both be true simultaneously.\n\n- **Statement 3 and Statement 4:**\n  - If no student is inquisitive (Statement 3), then it is also true that some students are not inquisitive (Statement 4).\n  - These two statements can both be true simultaneously.\n\nFrom the analysis, the only pair of statements that cannot be true simultaneously is Statement 1 and Statement 3.\n\nTherefore, the correct answer is \\(\\boxed{A}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

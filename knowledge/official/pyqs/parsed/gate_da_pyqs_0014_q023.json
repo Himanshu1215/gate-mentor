@@ -3,16 +3,13 @@
   "exam": "GATE DA",
   "question_id": "Q23",
   "question_seq": 14,
-  "question_type": "MCQ",
+  "question_type": "NAT",
   "marks": null,
   "difficulty": null,
   "concept_id": "PROB_001",
-  "question_text": "Probability to get a boy & girl is 1/2 if A man has three children, the probability to get 2 girls and 1 boy.",
-  "options": {
-    "A": "(b)",
-    "C": "(D) Sol.",
-    "B": "The probability to get a boy and girl is 1 2 . A man has three children, the probability to get 2 girl and 1 boy is___. S = {BBB, GGG, BBG, GGB} n(S) = 4 P(E) = n(E) n(S) [NAT]"
-  },
+  "question_text": "Probability to get a boy & girl is 1/2 if A man has three children, the probability to get 2 girls and 1 boy. (a) $\\frac 1 8$ (b) $\\frac { 2 } { 8 }$ (c) $\\frac { 3 } { 8 }$ (d) $\\frac 1 2$ Sol. (b) The probability to get a boy and girl is $\\frac 1 2$ . A man has three children, the probability to get 2 girl and 1 boy is\\_\\_\\_. S = {BBB, GGG, BBG, GGB} n(S) = 4 $ \\mathrm { P ( E ) } = \\frac { \\mathrm { n ( E ) } } { \\mathrm { n ( S ) } } \\mathrm { = } \\frac { 1 } { 4 } \\mathrm { = } \\frac { 2 } { 8 } $ [NAT]",
+  "options": null,
   "answer": null,
-  "solution": null
+  "solution": "To solve the problem step by step, let's break it down into smaller parts and understand the probability involved.\n\n1. **Identify the possible outcomes for the gender of three children:**\n   Each child can either be a boy (B) or a girl (G). Therefore, the total number of possible outcomes when having three children is:\n   \\[\n   S = \\{BBB, GGG, BBG, GGB, BGB, GBG, GBB, GGG\\}\n   \\]\n   There are 8 possible outcomes in total.\n\n2. **Determine the favorable outcomes for getting 2 girls and 1 boy:**\n   We need to count the number of outcomes that have exactly 2 girls and 1 boy. These outcomes are:\n   \\[\n   \\{BBG, GGB, BGB, GBG\\}\n   \\]\n   There are 4 favorable outcomes.\n\n3. **Calculate the probability:**\n   The probability of an event is given by the ratio of the number of favorable outcomes to the total number of possible outcomes. Therefore, the probability of getting 2 girls and 1 boy is:\n   \\[\n   P(E) = \\frac{\\text{Number of favorable outcomes}}{\\text{Total number of possible outcomes}} = \\frac{4}{8} = \\frac{1}{2}\n   \\]\n\n4. **Final answer:**\n   The probability to get 2 girls and 1 boy is:\n   \\[\n   \\boxed{\\frac{3}{8}}\n   \\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
 }

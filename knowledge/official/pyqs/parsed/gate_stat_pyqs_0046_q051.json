@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q51",
+  "question_seq": 46,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let (??, ??) be a random vector having joint probability density function given by $ f _ { X , Y } ( x , y ) = { \\left\\{ \\begin{array} { l l } { 3 } & { { \\mathrm { i f ~ } } x ^ { 2 } \\leq y < 1 { \\mathrm { ~ a n d ~ } } - 1 \\leq x \\leq 1 } \\\\ { 0 } & { { \\mathrm { o t h e r w i s e . } } } \\end{array} \\right. } $ Which of the following statements is/are true?",
+  "options": {
+    "A": "?? has the same distribution as −?? $ E ( Y \\mid X = 0 ) = { \\frac { 1 } { 2 } }\\tag{B} $",
+    "C": "The correlation coefficient between ?? and ?? is 0",
+    "D": "?? and ?? are independent Let $\\{ X _ { n } \\} _ { n \\geq 1 }$ be a sequence of independent random variables such that the probability density function of $X _ { n }$ is given by $ f _ { n } ( x ) = { \\left\\{ \\begin{array} { l l } { \\displaystyle { \\frac { 1 } { \\lambda _ { n } } } e ^ { - { \\frac { x } { \\lambda _ { n } } } } { \\mathrm { i f } } \\ x \\geq 0 } \\\\ { 0 } & { { \\mathrm { o t h e r w i s e } } , } \\end{array} \\right. } $ where $\\begin{array} { r } { \\lambda _ { n } = 1 0 - \\sum _ { i = 1 } ^ { n } \\frac { 5 } { 2 ^ { i - 1 } } } \\end{array}$ . Which of the following statements is/are true?",
+    "B": "$\\{ X _ { n } \\} _ { n \\geq 1 }$ converges in probability to the zero random variable"
+  },
+  "answer": null,
+  "solution": "To solve the given problem, we need to analyze each statement step by step.\n\n### Statement (A): \\(X\\) has the same distribution as \\(-X\\)\n\nTo check if \\(X\\) has the same distribution as \\(-X\\), we need to compare their probability density functions (pdfs). The pdf of \\(X\\) is given by:\n\\[ f_X(x) = \\int_{x^2}^1 3 \\, dy = 3(1 - x^2) \\quad \\text{for} \\quad -1 \\leq x \\leq 1. \\]\n\nNow, let's find the pdf of \\(-X\\). Since \\(X\\) is symmetric around 0, the pdf of \\(-X\\) is the same as the pdf of \\(X\\). Therefore, \\(X\\) has the same distribution as \\(-X\\).\n\nSo, statement (A) is true.\n\n### Statement (B): \\( \\{X_n\\}_{n \\geq 1} \\) converges in probability to the zero random variable\n\nTo check if \\( \\{X_n\\}_{n \\geq 1} \\) converges in probability to the zero random variable, we need to check if for any \\(\\epsilon > 0\\),\n\\[ \\lim_{n \\to \\infty} P(|X_n| > \\epsilon) = 0. \\]\n\nThe pdf of \\(X_n\\) is given by:\n\\[ f_n(x) = \\frac{1}{\\lambda_n} e^{-\\frac{x}{\\lambda_n}} \\quad \\text{for} \\quad x \\geq 0. \\]\n\nThe probability that \\(|X_n| > \\epsilon\\) is the same as the probability that \\(X_n > \\epsilon\\) because \\(X_n\\) is non-negative. This probability is:\n\\[ P(X_n > \\epsilon) = \\int_{\\epsilon}^{\\infty} \\frac{1}{\\lambda_n} e^{-\\frac{x}{\\lambda_n}} \\, dx = e^{-\\frac{\\epsilon}{\\lambda_n}}. \\]\n\nNow, we need to find \\(\\lambda_n\\):\n\\[ \\lambda_n = 10 - \\sum_{i=1}^n \\frac{5}{2^{i-1}}. \\]\n\nThe sum \\(\\sum_{i=1}^n \\frac{5}{2^{i-1}}\\) is a geometric series with the first term 5 and common ratio \\(\\frac{1}{2}\\). The sum of the first \\(n\\) terms of a geometric series is given by:\n\\[ \\sum_{i=1}^n \\frac{5}{2^{i-1}} = 5 \\left( \\frac{1 - \\left( \\frac{1}{2} \\right)^n}{1 - \\frac{1}{2}} \\right) = 5 \\left( 2 - \\frac{1}{2^{n-1}} \\right) = 10 - \\frac{5}{2^{n-1}}. \\]\n\nTherefore,\n\\[ \\lambda_n = 10 - \\left( 10 - \\frac{5}{2^{n-1}} \\right) = \\frac{5}{2^{n-1}}. \\]\n\nSubstituting \\",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

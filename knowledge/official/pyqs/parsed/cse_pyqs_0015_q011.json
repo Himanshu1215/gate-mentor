@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q11",
+  "question_seq": 15,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The value of $3 ^ { 5 1 }$ mod 5 is",
+  "options": null,
+  "answer": "B",
+  "solution": "To find the value of \\(3^{51} \\mod 5\\), we can use properties of modular arithmetic, specifically Euler's theorem. Euler's theorem states that if \\(a\\) and \\(n\\) are coprime, then \\(a^{\\phi(n)} \\equiv 1 \\pmod{n}\\), where \\(\\phi(n)\\) is Euler's totient function.\n\nFirst, we need to determine \\(\\phi(5)\\). Since 5 is a prime number, \\(\\phi(5) = 5 - 1 = 4\\). According to Euler's theorem, \\(3^4 \\equiv 1 \\pmod{5}\\).\n\nNext, we express 51 in terms of 4, since \\(3^4 \\equiv 1 \\pmod{5}\\). We can write \\(51 = 4 \\cdot 12 + 3\\). Therefore, we have:\n\\[\n3^{51} = 3^{4 \\cdot 12 + 3} = (3^4)^{12} \\cdot 3^3\n\\]\nUsing Euler's theorem, \\((3^4)^{12} \\equiv 1^{12} \\equiv 1 \\pmod{5}\\). Thus, we have:\n\\[\n3^{51} \\equiv 1 \\cdot 3^3 \\equiv 3^3 \\pmod{5}\n\\]\nNow, we need to compute \\(3^3 \\mod 5\\):\n\\[\n3^3 = 27\n\\]\nTo find \\(27 \\mod 5\\), we divide 27 by 5 and find the remainder:\n\\[\n27 \\div 5 = 5 \\text{ remainder } 2\n\\]\nTherefore, \\(27 \\equiv 2 \\pmod{5}\\). So, we have:\n\\[\n3^{51} \\equiv 2 \\pmod{5}\n\\]\nThe value of \\(3^{51} \\mod 5\\) is \\(\\boxed{2}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

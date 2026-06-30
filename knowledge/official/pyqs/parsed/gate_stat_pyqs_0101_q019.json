@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q19",
+  "question_seq": 101,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $( X _ { 1 } , X _ { 2 } )$ be a random vector following bivariate normal distribution with mean vector $( 0 , 0 )$ , Variance $( X _ { 1 } ) = { \\mathrm { V a r i a n c e } } ( X _ { 2 } ) = 1$ and correlation coefficient $\\rho ,$ , where $| \\rho | < 1$ Then $P ( X _ { 1 } + X _ { 2 } > 0 )$ is equal to ..",
+  "options": null,
+  "answer": null,
+  "solution": "To solve for \\( P(X_1 + X_2 > 0) \\) where \\((X_1, X_2)\\) is a bivariate normal distribution with mean vector \\((0, 0)\\), variance \\(\\text{Var}(X_1) = \\text{Var}(X_2) = 1\\), and correlation coefficient \\(\\rho\\), we can follow these steps:\n\n1. **Define the new random variable:**\n   Let \\( Y = X_1 + X_2 \\). We need to find \\( P(Y > 0) \\).\n\n2. **Determine the mean and variance of \\( Y \\):**\n   - The mean of \\( Y \\) is:\n     \\[\n     E(Y) = E(X_1 + X_2) = E(X_1) + E(X_2) = 0 + 0 = 0\n     \\]\n   - The variance of \\( Y \\) is:\n     \\[\n     \\text{Var}(Y) = \\text{Var}(X_1 + X_2) = \\text{Var}(X_1) + \\text{Var}(X_2) + 2 \\text{Cov}(X_1, X_2)\n     \\]\n     Given \\(\\text{Var}(X_1) = 1\\), \\(\\text{Var}(X_2) = 1\\), and \\(\\text{Cov}(X_1, X_2) = \\rho\\), we have:\n     \\[\n     \\text{Var}(Y) = 1 + 1 + 2\\rho = 2 + 2\\rho = 2(1 + \\rho)\n     \\]\n\n3. **Standardize \\( Y \\):**\n   Since \\( Y \\) is normally distributed with mean 0 and variance \\( 2(1 + \\rho) \\), we standardize \\( Y \\) by dividing by its standard deviation:\n   \\[\n   Z = \\frac{Y - E(Y)}{\\sqrt{\\text{Var}(Y)}} = \\frac{Y - 0}{\\sqrt{2(1 + \\rho)}} = \\frac{Y}{\\sqrt{2(1 + \\rho)}}\n   \\]\n   \\( Z \\) follows a standard normal distribution \\( N(0, 1) \\).\n\n4. **Convert the probability:**\n   We need to find \\( P(Y > 0) \\). This can be expressed in terms of \\( Z \\):\n   \\[\n   P(Y > 0) = P\\left( \\frac{Y}{\\sqrt{2(1 + \\rho)}} > \\frac{0}{\\sqrt{2(1 + \\rho)}} \\right) = P(Z > 0)\n   \\]\n\n5. **Evaluate the standard normal probability:**\n   The probability that a standard normal random variable \\( Z \\) is greater than 0 is:\n   \\[\n   P(Z > 0) = \\frac{1}{2}\n   \\]\n\nTherefore, the final answer is:\n\\[\n\\boxed{\\frac{1}{2}}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

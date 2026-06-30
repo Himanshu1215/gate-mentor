@@ -1,0 +1,15 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q3",
+  "question_seq": 9,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "The covariance Cov $( W ( t ) , W ( s ) ) = \\operatorname* { m i n } ( t , s )$ Step 2: Apply the formula for variance. The variance of the product of two random variables can be written as: $ \\operatorname { V a r } ( W ( 1 ) W ( 2 ) ) = \\mathbb { E } [ ( W ( 1 ) W ( 2 ) ) ^ { 2 } ] - ( \\mathbb { E } [ W ( 1 ) W ( 2 ) ] ) ^ { 2 } . $ First, we compute the expectation $\\mathbb { E } [ W ( 1 ) W ( 2 ) ]$ . Since $W ( 1 )$ and $W ( 2 )$ are both part of the same Brownian motion, we use the covariance property: $ \\mathbb { E } [ W ( 1 ) W ( 2 ) ] = \\mathbf { C o v } ( W ( 1 ) , W ( 2 ) ) = 1 . $ Next, we compute $\\mathbb { E } [ ( W ( 1 ) W ( 2 ) ) ^ { 2 } .$ ]: $ \\mathbb { E } [ ( W ( 1 ) W ( 2 ) ) ^ { 2 } ] = \\mathbb { E } [ W ( 1 ) ^ { 2 } W ( 2 ) ^ { 2 } ] . $ Since $W ( 1 )$ and $W ( 2 )$ are jointly Gaussian, we can use Isserlis’ theorem to express this expectation as: $ \\begin{array} { r } { \\mathbb { E } [ W ( 1 ) ^ { 2 } W ( 2 ) ^ { 2 } ] = \\mathbb { E } [ W ( 1 ) ^ { 2 } ] \\mathbb { E } [ W ( 2 ) ^ { 2 } ] + 2 ( \\mathbb { E } [ W ( 1 ) W ( 2 ) ] ) ^ { 2 } . } \\end{array} $ We know that $\\mathbb { E } [ W ( 1 ) ^ { 2 } ] = 1 \\mathrm { a n d } \\mathbb { E } [ W ( 2 ) ^ { 2 } ] = 2 .$ , so: $ \\mathbb { E } [ W ( 1 ) ^ { 2 } W ( 2 ) ^ { 2 } ] = 1 \\cdot 2 + 2 \\cdot 1 ^ { 2 } = 2 + 2 = 4 . $ Step 3: Calculate the variance. Now, we can compute the variance: $ \\operatorname { V a r } ( W ( 1 ) W ( 2 ) ) = 4 - 1 ^ { 2 } = 4 - 1 = 3 . $ Final",
+  "options": null,
+  "answer": "B",
+  "solution": "To find the variance of the product of two random variables \\( W(1) \\) and \\( W(2) \\) from a Brownian motion, we start with the formula for the variance of a product of two random variables:\n\n\\[\n\\operatorname{Var}(W(1)W(2)) = \\mathbb{E}[(W(1)W(2))^2] - (\\mathbb{E}[W(1)W(2)])^2.\n\\]\n\nFirst, we compute the expectation \\(\\mathbb{E}[W(1)W(2)]\\). Since \\(W(1)\\) and \\(W(2)\\) are both part of the same Brownian motion, we use the covariance property:\n\n\\[\n\\mathbb{E}[W(1)W(2)] = \\mathbf{Cov}(W(1), W(2)) = \\min(1, 2) = 1.\n\\]\n\nNext, we compute \\(\\mathbb{E}[(W(1)W(2))^2]\\):\n\n\\[\n\\mathbb{E}[(W(1)W(2))^2] = \\mathbb{E}[W(1)^2 W(2)^2].\n\\]\n\nSince \\(W(1)\\) and \\(W(2)\\) are jointly Gaussian, we can use Isserils' theorem to express this expectation as:\n\n\\[\n\\mathbb{E}[W(1)^2 W(2)^2] = \\mathbb{E}[W(1)^2] \\mathbb{E}[W(2)^2] + 2 (\\mathbb{E}[W(1)W(2)])^2.\n\\]\n\nWe know that \\(\\mathbb{E}[W(1)^2] = 1\\) and \\(\\mathbb{E}[W(2)^2] = 2\\), so:\n\n\\[\n\\mathbb{E}[W(1)^2 W(2)^2] = 1 \\cdot 2 + 2 \\cdot 1^2 = 2 + 2 = 4.\n\\]\n\nNow, we can compute the variance:\n\n\\[\n\\operatorname{Var}(W(1)W(2)) = 4 - 1^2 = 4 - 1 = 3.\n\\]\n\nTherefore, the variance of \\(W(1)W(2)\\) is \\(\\boxed{3}\\). The correct answer is: \\(\\boxed{C}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

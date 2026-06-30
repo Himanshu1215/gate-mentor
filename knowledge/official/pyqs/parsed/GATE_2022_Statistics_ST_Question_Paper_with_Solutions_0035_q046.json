@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q46",
+  "question_seq": 35,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $\\{ X _ { n } \\} , n \\geq 1$ , be a sequence of random variables with the probability mass functions $ p _ { X _ { n } } ( x ) = { \\left\\{ \\begin{array} { l l } { { \\frac { n } { n + 1 } } , } & { x = 0 } \\\\ { { \\frac { 1 } { n + 1 } } , } & { x = n } \\\\ { 0 , } & { { \\mathrm { e l s e w h e r e } } } \\end{array} \\right. } $ Let X be a random variable with $P ( X = 0 ) = 1$ . Then which of the following statements is/are true?",
+  "options": {
+    "A": "$X _ { n }$ converges to X in distribution",
+    "B": "$X _ { n }$ converges to X in probability",
+    "C": "$E ( X _ { n } ) \\to E ( X )$",
+    "D": "There exists a subsequence $\\{ X _ { n _ { k } } \\}$ of $\\{ X _ { n } \\}$ such that $X _ { n _ { k } }$ converges to X almost surely"
+  },
+  "answer": "A",
+  "solution": "Step 1: Understand the sequence of random variables $X _ { n }$ .\n\nThe probability mass function of $X _ { n }$ is given by:\n\n $ P ( X _ { n } = 0 ) = \\frac { n } { n + 1 } , \\quad P ( X _ { n } = n ) = \\frac { 1 } { n + 1 } . $ \n\nAs $n \\to \\infty$ , we observe the following: - $\\cdot \\ P ( X _ { n } = 0 ) \\to 1$ , since $\\textstyle { \\frac { n } { n + 1 } } \\to 1$ as n increases. - $P ( X _ { n } = n ) \\to 0$ , since $\\textstyle { \\frac { 1 } { n + 1 } } \\to 0$ as $n \\to \\infty$\n\nThus, the sequence $X _ { n }$ tends to 0 with probability 1 as $n \\to \\infty$ , which is the value of the random variable X (since $P ( X = 0 ) = 1 )$ .\nStep 2: Analyzing convergence in distribution.\n\nFor convergence in distribution, we check if the cumulative distribution function (CDF) of $X _ { n }$ converges to the CDF of X. We know that $X _ { n }  0$ almost surely as $n \\to \\infty$ , and since $P ( X = 0 ) = 1$ , the distribution of $X _ { n }$ converges to the distribution of X in distribution. Therefore, statement (A) is true: $X _ { n }$ converges to X in distribution.\nStep 3: Analyzing convergence in probability.\n\nConvergence in probability occurs when for any $\\epsilon > 0$ , the probability $P ( | X _ { n } - X | \\geq \\epsilon )  0$ as $n \\to \\infty$ . Since $X _ { n }$ converges to 0 almost surely and $X = 0$ , we can conclude that $X _ { n }$ converges to X in probability. Thus, statement (B) is also true.\nStep 4: Analyzing expected values.\n\nSince $X _ { n }  0$ almost surely, we would expect that $E ( X _ { n } ) \\to E ( X )$ , where $E ( X ) = 0 $ However, the expected values $E ( X _ { n } )$ do not converge to $E ( X )$ as the variance of $X _ { n }$ does not go to zero. Therefore, statement (C) is false.\nStep 5: Analyzing almost sure convergence for a subsequence.\n\nBy the Borel-Cantelli Lemma, there exists a subsequence $\\left\\{ X _ { n _ { k } } \\right\\}$ of $\\{ X _ { n } \\}$ such that $X _ { n _ { k } }  0$ almost surely. This is because the probability of $X _ { n }$ being 0 tends to 1, and there are infinitely many terms where $X _ { n } = 0$ . Hence, statement (D) is true.\n\nStep 6: Conclusion.\n\nThus, the correct answer is (A), (B), and (D).\nQuick Tip\n\nConvergence in distribution and convergence in probability are related, but convergence in probability is a stronger condition. If a sequence of random variables converges almost surely, it also converges in probability."
+}

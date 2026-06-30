@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q45",
+  "question_seq": 40,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , \\ldots , X _ { 5 }$ be i.i.d. random vectors following the bivariate normal distribution with zero mean vector and identity covariance matrix. Define the $5 \\times 2$ matrix $X = ( X _ { 1 } , X _ { 2 } , \\ldots , X _ { 5 } ) ^ { T }$ . Further, let $W = ( W _ { i j } ) = X ^ { T } X$ , and $ Z = W _ { 1 1 } + 4 W _ { 1 2 } + 4 W _ { 2 2 } . $ Then $\\mathbf { V a r } ( Z )$ equals:",
+  "options": {
+    "A": "150",
+    "B": "200",
+    "C": "250",
+    "D": "300"
+  },
+  "answer": "C",
+  "solution": "Step 1: Understanding the Components\n\nThe matrix $X = ( X _ { 1 } , X _ { 2 } , \\ldots , X _ { 5 } ) ^ { T }$ consists of independent standard normal random variables. Each $X _ { i }$ is a $2 \\times 1$ vector, and we are interested in the variance of $Z = W _ { 1 1 } + 4 W _ { 1 2 } + 4 W _ { 2 2 }$ , where $W = X ^ { T } X$ is a $2 \\times 2$ matrix.\nStep 2: Matrix Formulation\n\nThe matrix X is $\\mathrm { ~ a ~ 5 ~ } \\times \\mathrm { ~ 2 ~ }$ matrix, and $W = X ^ { T } X$ is $\\mathbf { a } \\ 2 \\times 2$ matrix, where the elements of $W$ are given by:\n\n $ W = \\left( \\sum _ { i = 1 } ^ { 5 } X _ { i 1 } ^ { 2 } \\sum _ { i = 1 } ^ { 5 } X _ { i 1 } X _ { i 2 } \\right) . $ \n\nThe statistic Z is a linear combination of the elements of $W \\colon$\n\n $ Z = W _ { 1 1 } + 4 W _ { 1 2 } + 4 W _ { 2 2 } . $ \nStep 3: Variance Calculation\n\nTo calculate $\\mathrm { V a r } ( Z )$ , we use the fact that the elements of X are i.i.d. normal random variables with unit variance. The variance of Z is computed by finding the variances and covariances of the elements $W _ { 1 1 } , W _ { 1 2 }$ , and $W _ { 2 2 }$\n\nBy applying the formulas for the variance of quadratic forms in normal random variables, we find:\n\n $ \\operatorname { V a r } ( Z ) = 2 5 0 . $ \n\nThus, the correct answer is 250 .\nQuick Tip\n\nWhen dealing with quadratic forms in normal variables, the variance of the sum of these forms can be calculated by computing the variances and covariances of the individual components."
+}

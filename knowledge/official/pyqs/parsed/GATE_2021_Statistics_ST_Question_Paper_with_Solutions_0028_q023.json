@@ -1,0 +1,16 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q23",
+  "question_seq": 28,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $( Y , X _ { 1 } , X _ { 2 } )$ be a random vector with mean vector $ \\left( \\begin{array} { c } { { 5 } } \\\\ { { 2 } } \\\\ { { 0 } } \\end{array} \\right) $",
+  "options": {
+    "A": "nd covariance matrix $ \\left( \\begin{array} { l l l } { 1 0 } & { 0 . 5 } & { - 0 . 5 } \\\\ { 0 . 5 } & { 7 } & { 1 . 5 } \\\\ { - 0 . 5 } & { 1 . 5 } & { 2 } \\end{array} \\right) $ Then the value of the multiple correlation coefficient between Y and its best linear predictor on $X _ { 1 }$ and $X _ { 2 }$ equals (round off to 2 decimal places)."
+  },
+  "answer": null,
+  "solution": "The multiple correlation coefficient $R _ { Y | X _ { 1 } , X _ { 2 } }$ is calculated using the covariance matrix and the formula for the coefficient:\n\n $ R _ { Y | X _ { 1 } , X _ { 2 } } = \\surd $ \n\nUsing the covariance matrix and calculating the necessary values gives $R \\approx 0 . 1 6$\n\nThus, the value of the multiple correlation coefficient is 0.16.\nQuick Tip\n\nFor calculating the multiple correlation coefficient, use the formula involving variances and covariances from the covariance matrix."
+}

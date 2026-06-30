@@ -7,13 +7,13 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "PROB_001",
-  "question_text": "Let X be a random variable with probability density function f(x) = if x ≥1, otherwise. If Y = log X, then P(Y < 1 | Y < 2) equals",
+  "question_text": "Let X be a random variable with probability density function $ f ( x ) = { \\left\\{ \\begin{array} { l l } { { \\frac { 1 } { x ^ { 2 } } } } & { { \\mathrm { i f ~ } } x \\geq 1 , } \\\\ { 0 } & { { \\mathrm { o t h e r w i s e . } } } \\end{array} \\right. } $ $\\mathbf { I f } \\ Y = \\log X$ , then $P ( Y < 1 \\mid Y < 2 )$ equals",
   "options": {
-    "A": "1+e",
-    "B": "e−1 e+1",
-    "C": "1+e",
-    "D": "e−1"
+    "A": "$\\frac { e } { 1 + e }$",
+    "B": "$\\textstyle { \\frac { e - 1 } { e + 1 } }$",
+    "C": "$\\displaystyle \\frac { 1 } { 1 + e }$",
+    "D": "$\\scriptstyle { \\frac { 1 } { e - 1 } }$"
   },
   "answer": "A",
-  "solution": "1) Understanding the relationship between X and Y :\nWe are given that Y = log X. This means that X = eY .\nThe probability density function of X is:\nfX(x) = 1\nx2,\nx ≥1.\nThus, for Y = log X, the probability density function of Y becomes:\nfY (y) = fX(ey) · d\ndyey = 1\ne2y · ey = 1\ney ,\ny ≥0.\n2) Computing P(Y < 1 | Y < 2):\nThe conditional probability P(Y < 1 | Y < 2) is given by:\nP(Y < 1 | Y < 2) = P(Y < 1 ∩Y < 2)\nP(Y < 2)\n= P(Y < 1)\nP(Y < 2).\nSince Y has the probability density function fY (y) = 1\ney for y ≥0, we can compute the\nprobabilities as follows:\n- P(Y < 1) = R 1\ney dy = 1 −1\ne. - P(Y < 2) = R 2\ney dy = 1 −1\ne2.\nThus,\nP(Y < 1 | Y < 2) = 1 −1\n1 −1\n= e −1\ne + 1.\n3) Final Answer:\nThe correct answer is (A)\n1+e.\nQuick Tip\n- The density of a transformed random variable is computed using the Jacobian of the\ntransformation.\n- For a logarithmic transformation, the new density function follows the rule: fY (y) =\nfX(ey) · ey."
+  "solution": "1) Understanding the relationship between X and Y :\n\nWe are given that $Y = \\log X$ . This means that $X = e ^ { Y }$\n\nThe probability density function of X is:\n\n $ f _ { X } ( x ) = { \\frac { 1 } { x ^ { 2 } } } , \\quad x \\geq 1 . $ \n\nThus, for $Y = \\log X$ , the probability density function of Y becomes:\n\n $ f _ { Y } ( y ) = f _ { X } ( e ^ { y } ) \\cdot { \\frac { d } { d y } } e ^ { y } = { \\frac { 1 } { e ^ { 2 y } } } \\cdot e ^ { y } = { \\frac { 1 } { e ^ { y } } } , \\quad y \\geq 0 . $ \n2) Computing $P ( Y < 1 \\mid Y < 2 )$\n\nThe conditional probability $P ( Y < 1 \\mid Y < 2 )$ is given by:\n\n $ P ( Y < 1 \\mid Y < 2 ) = { \\frac { P ( Y < 1 \\cap Y < 2 ) } { P ( Y < 2 ) } } = { \\frac { P ( Y < 1 ) } { P ( Y < 2 ) } } . $ \n\nSince Y has the probability density function $\\begin{array} { r } { f _ { Y } ( y ) = \\frac { 1 } { e ^ { y } } } \\end{array}$ for $y \\geq 0$ , we can compute the probabilities as follows:\n\n $ \\begin{array} { r } { - \\ P ( Y < 1 ) = \\int _ { 0 } ^ { 1 } \\frac { 1 } { e ^ { y } } d y = 1 - \\frac { 1 } { e } . - P ( Y < 2 ) = \\int _ { 0 } ^ { 2 } \\frac { 1 } { e ^ { y } } d y = 1 - \\frac { 1 } { e ^ { 2 } } . } \\end{array} $ \n\nThus,\n\n $ P ( Y < 1 \\mid Y < 2 ) = { \\frac { 1 - { \\frac { 1 } { e } } } { 1 - { \\frac { 1 } { e ^ { 2 } } } } } = { \\frac { e - 1 } { e + 1 } } . $ \n3) Final Answer:\n\nThe correct answer is $( \\mathbf { A } ) \\frac { e } { 1 + e }$\nQuick Tip\n\n\\- The density of a transformed random variable is computed using the Jacobian of the transformation.\n\n\\- For a logarithmic transformation, the new density function follows the rule: $f _ { Y } ( y ) =$ $f _ { X } ( e ^ { y } ) \\cdot e ^ { y } .$"
 }

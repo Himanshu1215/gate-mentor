@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q16",
+  "question_seq": 221,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the following options is not a property of Boolean Algebra? Note: + is OR operation, · is AND operation, and'is NOT operation (a) a + b = b + a (b) a·a′= 1 (c) $\\ a + \\ a ^ { \\prime } = 1$ (d)a×b = b·a",
+  "options": null,
+  "answer": "B",
+  "solution": "To determine which option is not a property of Boolean Algebra, let's analyze each option step by step.\n\n**Option (a): \\(a + b = b + a\\)**\n\nThis is the commutative property of the OR operation. In Boolean Algebra, the OR operation is commutative, meaning the order of the variables does not matter. Therefore, \\(a + b = b + a\\) is a property of Boolean Algebra.\n\n**Option (b): \\(a \\cdot a' = 1\\)**\n\nThis is not a property of Boolean Algebra. The expression \\(a \\cdot a'\\) represents the AND operation between a variable \\(a\\) and its complement \\(a'\\). According to the definition of the AND operation in Boolean Algebra, the AND of a variable and its complement is always 0, not 1. Therefore, \\(a \\cdot a' = 0\\), not \\(a \\cdot a' = 1\\). This means that option (b) is not a property of Boolean Algebra.\n\n**Option (c): \\(a + a' = 1\\)**\n\nThis is the property of the OR operation between a variable and its complement. In Boolean Algebra, the OR of a variable and its complement is always 1. Therefore, \\(a + a' = 1\\) is a property of Boolean Algebra.\n\n**Option (d): \\(a \\times b = b \\cdot a\\)**\n\nThis is the commutative property of the AND operation. In Boolean Algebra, the AND operation is commutative, meaning the order of the variables does not matter. Therefore, \\(a \\times b = b \\cdot a\\) is a property of Boolean Algebra.\n\nBased on the analysis, the option that is not a property of Boolean Algebra is:\n\n\\(\\boxed{B}\\)",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

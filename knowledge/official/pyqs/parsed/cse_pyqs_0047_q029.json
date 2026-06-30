@@ -1,0 +1,17 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q29",
+  "question_seq": 47,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $G = ( V , E )$ be a weighted undirected graph and let be a Minimum Spanning Tree (MST) of maintained using adjacency lists. Suppose a new weighted edge ( , ) ∈ × is added to . The worst case time complexity of determining if is still an MST of the resultant graph is (a) (a) $\\Theta ( | E | | V | )$ (b) (b) $\\Theta ( | \\vee | )$",
+  "options": {
+    "C": "$\\Theta ( | E | + | V | )$"
+  },
+  "answer": "B",
+  "solution": "To determine if a given Minimum Spanning Tree (MST) \\( T \\) of a weighted undirected graph \\( G = (V, E) \\) remains an MST after adding a new weighted edge \\( (u, v) \\in V \\times V \\), we need to follow these steps:\n\n1. **Understand the properties of an MST**: An MST is a subset of the edges of a graph that connects all the vertices with the minimum possible total edge weight. This means that any edge in the MST is a lightest edge connecting some subset of vertices.\n\n2. **Check if the new edge forms a cycle**: When we add the new edge \\( (u, v) \\) to the graph, it might form a cycle. If it does, we need to check if this cycle contains any edge that is heavier than \\( (u, v) \\). If it does, then \\( (u, v) \\) is a lighter edge than the heaviest edge in the cycle, and thus \\( T \\) is no longer an MST. If it does not, then \\( T \\) remains an MST.\n\n3. **Find the cycle formed by adding the new edge**: To find the cycle formed by adding \\( (u, v) \\), we can use a depth-first search (DFS) or a breadth-first search (BFS) starting from either \\( u \\) or \\( v \\) and following the edges of \\( T \\) until we reach the other vertex. This will give us the path in \\( T \\) between \\( u \\) and \\( v \\).\n\n4. **Compare the weights of the edges in the cycle**: Once we have the path in \\( T \\) between \\( u \\) and \\( v \\), we compare the weight of \\( (u, v) \\) with the weights of the edges in this path. If \\( (u, v) \\) is lighter than the heaviest edge in the path, then \\( T \\) is no longer an MST. Otherwise, \\( T \\) remains an MST.\n\nThe time complexity of finding the cycle formed by adding the new edge using DFS or BFS is \\( \\Theta(|V|) \\), because in the worst case, we might need to visit all the vertices in the graph. After finding the cycle, we need to compare the weight of the new edge with the weight of the heaviest edge in the cycle, which takes \\( \\Theta(1) \\) time. Therefore, the total time complexity of determining if \\( T \\) is still an MST after adding the new edge is \\( \\Theta(|V|) \\).\n\nThus, the correct answer is \\(\\boxed{B}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

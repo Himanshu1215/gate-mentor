@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q20",
+  "question_seq": 19,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "If is a regular language over $\\Sigma = \\{ a , b \\}$ which one of the following languages is NOT regular?",
+  "options": {
+    "A": "⋅ {x ⏐x ∈ , ∈ }",
+    "B": "Suffix $\\left( L \\right) = \\left\\{ y \\in \\Sigma ^ { \\star } \\mid \\exists x \\in \\Sigma ^ { \\star } \\right.$ such that x ∈ }",
+    "C": "Prefix $\\left( L \\right) = \\left\\{ x \\in \\Sigma ^ { \\star } \\vert \\exists y \\in \\Sigma ^ { \\star } \\right.$ such that x ∈ }",
+    "D": "{ ⏐ ∈ }"
+  },
+  "answer": "D",
+  "solution": "To determine which of the given languages is NOT regular, we need to analyze each option in the context of regular languages and their properties.\n\nGiven:\n- \\( L \\) is a regular language over \\( \\Sigma = \\{a, b\\} \\).\n\nLet's analyze each option:\n\n**Option (A): \\( \\{ x \\mid x \\in L \\text{ and } x^R \\in L \\} \\)**\n\n- This language consists of all strings \\( x \\) that are in \\( L \\) and their reverse \\( x^R \\) is also in \\( L \\).\n- Since \\( L \\) is regular, the set of all strings in \\( L \\) is regular.\n- The operation of taking the reverse of a string is a computable operation, and the set of all strings that are reverses of strings in \\( L \\) is also regular (because regular languages are closed under the reverse operation).\n- Therefore, the intersection of two regular languages ( \\( L \\) and its reverse) is regular.\n- Hence, option (A) is regular.\n\n**Option (B): Suffix \\( (L) = \\{ y \\in \\Sigma^* \\mid \\exists x \\in \\Sigma^* \\text{ such that } xy \\in L \\} \\)**\n\n- This language consists of all suffixes of strings in \\( L \\).\n- Since \\( L \\) is regular, the set of all strings in \\( L \\) is regular.\n- The operation of taking a suffix of a string is a computable operation, and the set of all suffixes of strings in \\( L \\) is also regular (because regular languages are closed under the suffix operation).\n- Therefore, option (B) is regular.\n\n**Option (C): Prefix \\( (L) = \\{ x \\in \\Sigma^* \\mid \\exists y \\in \\Sigma^* \\text{ such that } xy \\in L \\} \\)**\n\n- This language consists of all prefixes of strings in \\( L \\).\n- Since \\( L \\) is regular, the set of all strings in \\( L \\) is regular.\n- The operation of taking a prefix of a string is a computable operation, and the set of all prefixes of strings in \\( L \\) is also regular (because regular languages are closed under the prefix operation).\n- Therefore, option (C) is regular.\n\n**Option (D): \\( \\{ x \\mid x \\in L \\text{ and } x^R \\notin L \\} \\)**\n\n- This language consists of all strings \\( x \\) that are in \\( L \\) but their reverse \\( x^R \\) is not in \\( L \\).\n- Since \\( L \\) is regular, the set of all strings in \\( L \\) is regular.\n- The operation of taking the reverse of a string is a computable operation, and the set of all strings that are reverses of strings in \\( L \\) is also regular.\n- However, the set of all strings that are in \\( L \\) but not in the set of all strings that are reverses of strings in \\( L \\) is not necessarily regular. This is because regular languages are not closed under set difference.\n- Therefore, option (D) is NOT regular.\n\nThus, the correct answer is:\n\\[\n\\boxed{D}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

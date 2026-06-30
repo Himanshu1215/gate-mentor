@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q50",
+  "question_seq": 45,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $\\Omega = \\{ 1 , 2 , 3 , \\dots \\}$ and ℋ be the collection of all subsets of Ω. Let ?? be a probability measure on ℋ such that $\\begin{array} { r } { P ( \\{ k \\} ) = \\frac { 1 } { 2 ^ { k } } , k \\ge 1 } \\end{array}$ . Further, let $X \\colon \\Omega \\to$ ℝ be defined by $X ( \\omega ) = \\omega$ for all $\\omega \\in \\Omega$ . Then which of the following statements is/are true?",
+  "options": {
+    "A": "There exists $k \\in \\Omega$ such that $P ( X = k ) < 1 0 ^ { - 6 }$",
+    "B": "lim ?? (?? ≥ 4 + <sup>1</sup>) 1 = ??→∞ ?? 16",
+    "C": "$ \\operatorname* { l i m } _ { n \\to \\infty } P \\left( 4 + { \\frac { 1 } { n ^ { 2 } } } \\leq X < 5 - { \\frac { 1 } { n } } \\right) = { \\frac { 1 } { 1 6 } }\\tag{D} $ $ { \\mathrm { I f ~ } } x _ { n } = 3 + { \\frac { ( - 1 ) ^ { n } } { n } } , n \\geq 1 , { \\mathrm { ~ t h e n ~ } } \\operatorname* { l i m } _ { n \\to \\infty } P ( X \\leq x _ { n } ) = { \\frac { 7 } { 8 } } $"
+  },
+  "answer": null,
+  "solution": "To solve the given problem, we need to analyze each statement one by one.\n\n**Statement (A): There exists \\( k \\in \\Omega \\) such that \\( P(X = k) < 10^{-6} \\)**\n\nThe probability measure \\( P \\) is given by \\( P(\\{k\\}) = \\frac{1}{2^k} \\) for \\( k \\geq 1 \\). We need to find if there exists a \\( k \\) such that \\( \\frac{1}{2^k} < 10^{-6} \\).\n\nSolving the inequality:\n\\[ \\frac{1}{2^k} < 10^{-6} \\]\n\\[ 2^k > 10^6 \\]\nTaking the logarithm base 2 on both sides:\n\\[ k > \\log_2(10^6) \\]\n\\[ k > 6 \\log_2(10) \\]\nUsing the approximation \\( \\log_2(10) \\approx 3.32193 \\):\n\\[ k > 6 \\times 3.32193 \\]\n\\[ k > 19.93158 \\]\n\nSince \\( k \\) must be an integer, the smallest possible value for \\( k \\) is 20. Therefore, there exists \\( k = 20 \\) such that \\( P(X = 20) = \\frac{1}{2^{20}} = \\frac{1}{1048576} < 10^{-6} \\).\n\nSo, statement (A) is true.\n\n**Statement (B): \\(\\lim_{n \\to \\infty} P(X \\geq 4 + \\frac{1}{n}) = \\frac{1}{16}\\)**\n\nWe need to find the limit of \\( P(X \\geq 4 + \\frac{1}{n}) \\) as \\( n \\to \\infty \\). Since \\( X(\\omega) = \\omega \\) and \\( \\omega \\) is a positive integer, \\( X \\geq 4 + \\frac{1}{n} \\) is equivalent to \\( X \\geq 5 \\) for all \\( n \\geq 1 \\). Therefore:\n\\[ P(X \\geq 4 + \\frac{1}{n}) = P(X \\geq 5) \\]\n\nThe probability \\( P(X \\geq 5) \\) is the sum of the probabilities of all integers greater than or equal to 5:\n\\[ P(X \\geq 5) = \\sum_{k=5}^{\\infty} P(\\{k\\}) = \\sum_{k=5}^{\\infty} \\frac{1}{2^k} \\]\n\nThis is a geometric series with the first term \\( a = \\frac{1}{2^5} = \\frac{1}{32} \\) and common ratio \\( r = \\frac{1}{2} \\):\n\\[ P(X \\geq 5) = \\frac{\\frac{1}{32}}{1 - \\frac{1}{2}} = \\frac{\\frac{1}{32}}{\\frac{1}{2}} = \\frac{1}{32} \\times",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

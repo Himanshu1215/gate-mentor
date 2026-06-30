@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q25",
+  "question_seq": 20,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let be an arbitrary group. Consider the following relations on $G \\mathrm { : }$ $R _ { 1 } { : }$ ∀ , $b \\in G , a R _ { 1 } b$ if and only $\\mathfrak { i } \\mathfrak { f } \\ \\exists g \\in G$ such that $a = g ^ { - 1 } b g$ $R _ { 2 } { \\mathrm { : } }$ ∀ , $b \\in G , a R _ { 2 }$ if and only if $a = b ^ { - 1 }$ Which of the above is/are equivalence relation/relations?",
+  "options": {
+    "A": "$R _ { 1 }$ and $R _ { 2 }$",
+    "C": "$R _ { 2 }$ only",
+    "B": "$R _ { 1 }$ only",
+    "D": "Neither $R _ { 1 }$ nor $R _ { 2 }$"
+  },
+  "answer": "B",
+  "solution": "To determine which of the given relations \\( R_1 \\) and \\( R_2 \\) are equivalence relations, we need to check if they satisfy the three properties of an equivalence relation: reflexivity, symmetry, and transitivity.\n\n**Relation \\( R_1 \\):**\n\\( R_1 \\) is defined as follows:\n\\[ a R_1 b \\text{ if and only if } \\exists g \\in G \\text{ such that } a = g^{-1} b g. \\]\n\n1. **Reflexivity:**\n   We need to check if \\( a R_1 a \\) for all \\( a \\in G \\).\n   Let \\( a \\in G \\). Choose \\( g = e \\) (the identity element of \\( G \\)). Then,\n   \\[ a = e^{-1} a e = a. \\]\n   Therefore, \\( a R_1 a \\) for all \\( a \\in G \\). So, \\( R_1 \\) is reflexive.\n\n2. **Symmetry:**\n   We need to check if \\( a R_1 b \\) implies \\( b R_1 a \\) for all \\( a, b \\in G \\).\n   Suppose \\( a R_1 b \\). Then, there exists \\( g \\in G \\) such that \\( a = g^{-1} b g \\). We need to show that \\( b R_1 a \\), i.e., there exists \\( h \\in G \\) such that \\( b = h^{-1} a h \\).\n   Let \\( h = g^{-1} \\). Then,\n   \\[ b = g a g^{-1} = h^{-1} a h. \\]\n   Therefore, \\( b R_1 a \\). So, \\( R_1 \\) is symmetric.\n\n3. **Transitivity:**\n   We need to check if \\( a R_1 b \\) and \\( b R_1 c \\) imply \\( a R_1 c \\) for all \\( a, b, c \\in G \\).\n   Suppose \\( a R_1 b \\) and \\( b R_1 c \\). Then, there exist \\( g, h \\in G \\) such that \\( a = g^{-1} b g \\) and \\( b = h^{-1} c h \\). We need to show that \\( a R_1 c \\), i.e., there exists \\( k \\in G \\) such that \\( a = k^{-1} c k \\).\n   Substitute \\( b = h^{-1} c h \\) into \\( a = g^{-1} b g \\):\n   \\[ a = g^{-1} (h^{-1} c h) g = (g^{-1} h^{-1}) c (h g). \\]\n   Let \\( k = h g \\). Then,\n   \\[ a = k^{-1} c k. \\]\n   Therefore, \\( a R_1 c \\). So, \\( R_1 \\) is transitive.\n\nSince \\( R_1 \\) satisfies all three properties of an equivalence relation, \\( R_1 \\) is an equivalence relation.\n\n**Relation \\( R_2 \\):**\n\\( R_2 \\) is defined as follows:\n\\[ a R_2 b \\text{ if and only if } a = b^{-1",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

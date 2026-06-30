@@ -7,13 +7,13 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "PROB_001",
-  "question_text": "Let (X, Y ) have joint probability mass function p(x, y) = 2x+y+2 if x = 0, 1, 2, . . . ; y = 0, 1, 2, . . . ; x ̸= y, otherwise. Then which one of the following statements is true?",
+  "question_text": "Let $( X , Y )$ have joint probability mass function $ p ( x , y ) = { \\left\\{ \\begin{array} { l l } { { \\frac { c } { 2 x + y + 2 } } } & { { \\mathrm { i f ~ } } x = 0 , 1 , 2 , \\ldots ; y = 0 , 1 , 2 , \\ldots ; x \\neq y , } \\\\ { 0 } & { { \\mathrm { o t h e r w i s e . } } } \\end{array} \\right. } $ Then which one of the following statements is true?",
   "options": {
-    "A": "c = 1",
-    "B": "c = 1",
-    "C": "c > 1",
+    "A": "$\\begin{array} { r } { c = \\frac { 1 } { 2 } } \\end{array}$",
+    "B": "$\\begin{array} { r } { c = \\frac { 1 } { 4 } } \\end{array}$",
+    "C": "$c > 1$",
     "D": "X and Y are independent"
   },
-  "answer": "C",
-  "solution": "1) Understanding the probability mass function:\nThe joint probability mass function p(x, y) is given as:\np(x, y) =\n2x + y + 2,\nx, y = 0, 1, 2, . . . ; x ̸= y.\nTo ensure that this is a valid joint probability mass function, we need to check that the sum of\np(x, y) over all possible values of x and y equals 1:\nx=0\ny=0\ny̸=x\n2x + y + 2 = 1.\n2) Calculating the sum:\nWe need to compute the sum for x = 0, 1, 2, . . . and y = 0, 1, 2, . . . , with x ̸= y. This is a\nnon-trivial sum but can be computed by evaluating it for different values of x and y. After\nperforming the calculations (either by series summation or using software tools), we find that\nthe constant c must satisfy c > 1 for the sum to equal 1.\n3) Conclusion:\nTherefore, the correct answer is (C), where c > 1.\nQuick Tip\n- For a joint probability mass function, the sum over all possible (x, y) pairs must equal\n- The value of c is determined by normalizing the joint probability mass function so that\nthe total probability sums to 1."
+  "answer": "A",
+  "solution": "1) Understanding the probability mass function:\n\nThe joint probability mass function $p ( x , y )$ is given as:\n\n $ p ( x , y ) = { \\frac { c } { 2 x + y + 2 } } , \\quad x , y = 0 , 1 , 2 , \\ldots ; x \\neq y . $ \n\nTo ensure that this is a valid joint probability mass function, we need to check that the sum of $p ( x , y )$ over all possible values of x and y equals 1:\n\n $ \\sum _ { x = 0 } ^ { \\infty } \\sum _ { y = 0 \\atop y \\neq x } ^ { \\infty } { \\frac { c } { 2 x + y + 2 } } = 1 . $ \n2) Calculating the sum:\n\nWe need to compute the sum for $x = 0 , 1 , 2 , . . .$ . and $y = 0 , 1 , 2 , \\ldots ,$ , with $x \\neq y$ . This is a non-trivial sum but can be computed by evaluating it for different values of x and y. After performing the calculations (either by series summation or using software tools), we find that the constant c must satisfy $c > 1$ for the sum to equal 1.\n3) Conclusion:\n\nTherefore, the correct answer is (C), where $c > 1$\nQuick Tip\n\n\\- For a joint probability mass function, the sum over all possible $( x , y )$ pairs must equal 1.\n\n\\- The value of c is determined by normalizing the joint probability mass function so that the total probability sums to 1."
 }

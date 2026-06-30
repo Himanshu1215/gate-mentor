@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q63",
+  "question_seq": 54,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , X _ { 3 } , X _ { 4 }$ be a random sample of size 4 from a population having uniform distribution over the interval $( 0 , \\theta )$ where $\\theta > 0$ is an unknown parameter. Let $X _ { ( 4 ) } = \\operatorname* { m a x } \\{ X _ { 1 } , X _ { 2 } , X _ { 3 } , X _ { 4 } \\}$ . To test $H _ { 0 } \\colon \\theta = 1$ against $\\textstyle H _ { 1 } \\colon \\theta = 0 . 1$ consider the critical region that rejects $H _ { 0 }$ if $X _ { ( 4 ) } < 0 . 3$ . Let ?? be the probability of the Type-I error. Then 100 ?? equals (rounded off to two decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "To determine the probability of the Type-I error, we need to find the probability that the maximum value of the sample, \\(X_{(4)}\\), is less than 0.3 when the null hypothesis \\(H_0: \\theta = 1\\) is true. This probability is denoted as \\(P(X_{(4)} < 0.3 \\mid \\theta = 1)\\).\n\nThe cumulative distribution function (CDF) of the maximum value \\(X_{(4)}\\) from a sample of size 4 from a uniform distribution over the interval \\((0, \\theta)\\) is given by:\n\\[ F_{X_{(4)}}(x) = P(X_{(4)} \\leq x) = P(X_1 \\leq x, X_2 \\leq x, X_3 \\leq x, X_4 \\leq x) = F_X(x)^4 \\]\nwhere \\(F_X(x)\\) is the CDF of the uniform distribution over \\((0, \\theta)\\). For \\(0 < x < \\theta\\), the CDF of the uniform distribution is:\n\\[ F_X(x) = \\frac{x}{\\theta} \\]\nTherefore, the CDF of \\(X_{(4)}\\) is:\n\\[ F_{X_{(4)}}(x) = \\left(\\frac{x}{\\theta}\\right)^4 \\]\n\nUnder the null hypothesis \\(H_0: \\theta = 1\\), the CDF of \\(X_{(4)}\\) becomes:\n\\[ F_{X_{(4)}}(x) = x^4 \\]\nfor \\(0 < x < 1\\).\n\nThe probability of the Type-I error is the probability that \\(X_{(4)} < 0.3\\) when \\(\\theta = 1\\):\n\\[ P(X_{(4)} < 0.3 \\mid \\theta = 1) = F_{X_{(4)}}(0.3) = (0.3)^4 = 0.0081 \\]\n\nTo find 100 times this probability, we calculate:\n\\[ 100 \\times 0.0081 = 0.81 \\]\n\nTherefore, the final answer is:\n\\[ \\boxed{0.81} \\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

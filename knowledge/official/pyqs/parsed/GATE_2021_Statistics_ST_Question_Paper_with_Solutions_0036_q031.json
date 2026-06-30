@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q31",
+  "question_seq": 36,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable having Poisson distribution such that $E ( X ^ { 2 } ) = 1 1 0$ Then which one of the following statements is NOT true?",
+  "options": {
+    "A": "$E ( X ^ { n } ) = 1 0 E \\left( ( X + 1 ) ^ { n } - 1 \\right)$ , for all $n = 1 , 2 , 3 , . . .$",
+    "B": "$P ( X { \\mathrm { ~ i s ~ e v e n } } ) = { \\frac { 1 } { 4 } } ( 1 + e ^ { - 2 0 } )$",
+    "C": "$P ( X = k ) < P ( X = k + 1 ) , \\quad \\mathrm { f o r } k = 0 , 1 , \\ldots , 8$",
+    "D": "$P ( X = k ) > P ( X = k + 1 ) , \\quad { \\mathrm { f o r } } k = 1 0 , 1 1 , . . .$"
+  },
+  "answer": "B",
+  "solution": "We are given that X follows a Poisson distribution with $E ( X ^ { 2 } ) = 1 1 0$ . For a Poisson distribution, we know that $E ( X ) = \\lambda$ and $\\operatorname { V a r } ( X ) = \\lambda$ . Thus, $E ( X ^ { 2 } ) = \\lambda + \\lambda ^ { 2 }$ , which gives $\\lambda = 1 0$ . Hence, the Poisson distribution is X ∼ Poisson(10).\n\nStep 1: Evaluate each option.\n\n\\- Option (A) is correct because $E ( X ^ { n } )$ for Poisson distribution satisfies this relation.\n\n\\- Option (B) is incorrect because the formula for $P ( X$ is even) for a Poisson distribution is different, and $\\frac { 1 } { 4 } ( 1 + e ^ { - 2 0 } )$ is not the correct expression.\n\n\\- Option (C) is correct because for a Poisson distribution with $\\lambda = 1 0$ , the probability increases for small k and decreases for large k.\n\n\\- Option (D) is correct because the probability decreases for large k.\n\nFinal Answer:\n\n $ { \\sqrt { P ( X { \\mathrm { ~ i s ~ e v e n } } ) = { \\frac { 1 } { 4 } } ( 1 + e ^ { - 2 0 } ) } } \\Biggr ] . $ \nQuick Tip\n\nFor Poisson distributions, the probability of the event being even or odd can be computed using the probability generating function."
+}

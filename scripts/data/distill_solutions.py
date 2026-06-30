@@ -113,6 +113,9 @@ def main():
 
     logger.info(f"Loading teacher {args.teacher} ...")
     tok = AutoTokenizer.from_pretrained(args.teacher, trust_remote_code=True)
+    tok.padding_side = "left"
+    if tok.pad_token is None:
+        tok.pad_token = tok.eos_token
     kw = dict(trust_remote_code=True, device_map="auto", torch_dtype=torch.bfloat16)
     if args.load_4bit:
         kw["quantization_config"] = BitsAndBytesConfig(
@@ -121,30 +124,42 @@ def main():
     model.eval()
 
     done = 0
-    for path, rec in targets:
-        messages = [{"role": "system", "content": SYSTEM},
-                    {"role": "user", "content": build_user_prompt(rec)}]
-        prompt = tok.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-        inputs = tok(prompt, return_tensors="pt").to(model.device)
+    batch_size = 12
+    for idx in range(0, len(targets), batch_size):
+        batch = targets[idx:idx+batch_size]
+        prompts = []
+        for path, rec in batch:
+            messages = [{"role": "system", "content": SYSTEM},
+                        {"role": "user", "content": build_user_prompt(rec)}]
+            prompts.append(tok.apply_chat_template(messages, tokenize=False, add_generation_prompt=True))
+        
+        inputs = tok(prompts, padding=True, return_tensors="pt").to(model.device)
         with torch.no_grad():
-            out = model.generate(**inputs, max_new_tokens=args.max_new_tokens,
-                                 temperature=0.2, top_p=0.9, do_sample=True)
-        text = tok.decode(out[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True).strip()
-        if not text:
-            continue
-
-        rec["solution"] = text
-        rec["solution_source"] = f"distilled:{args.teacher}"
-        if not rec.get("answer"):
-            ans = extract_final_answer(text, bool(rec.get("options")))
-            if ans:
-                rec["answer"] = ans
-                rec["answer_source"] = f"distilled:{args.teacher}"
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(rec, f, indent=2, ensure_ascii=False)
-        done += 1
-        if done % 20 == 0:
-            logger.info(f"  {done}/{len(targets)} solved")
+            outputs = model.generate(
+                **inputs,
+                max_new_tokens=args.max_new_tokens,
+                temperature=0.2,
+                top_p=0.9,
+                do_sample=True,
+                pad_token_id=tok.pad_token_id
+            )
+        
+        for j, (path, rec) in enumerate(batch):
+            gen_tokens = outputs[j][inputs["input_ids"].shape[1]:]
+            text = tok.decode(gen_tokens, skip_special_tokens=True).strip()
+            if not text:
+                continue
+            rec["solution"] = text
+            rec["solution_source"] = f"distilled:{args.teacher}"
+            if not rec.get("answer"):
+                ans = extract_final_answer(text, bool(rec.get("options")))
+                if ans:
+                    rec["answer"] = ans
+                    rec["answer_source"] = f"distilled:{args.teacher}"
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(rec, f, indent=2, ensure_ascii=False)
+            done += 1
+        logger.info(f"  {done}/{len(targets)} solved")
 
     logger.info(f"Done. Wrote {done} distilled solutions. Next: python train/build_dataset.py")
 

@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q1",
+  "question_seq": 184,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The antonym of the word protagonist is",
+  "options": {
+    "A": "agnostic",
+    "C": "arsonist",
+    "B": "antagonist",
+    "D": "anarchist"
+  },
+  "answer": "B",
+  "solution": "To determine the antonym of the word \"protagonist,\" we need to understand what an antonym is. An antonym is a word that has the opposite meaning of another word. Therefore, we need to find a word that means the opposite of \"protagonist.\"\n\nLet's analyze the meaning of \"protagonist\":\n- A protagonist is a person who is the main character or lead in a story, movie, or play.\n- It can also refer to a person who is the center of attention or the most important person in a situation.\n\nNow, let's consider the options given:\n(A) agnostic\n(B) opponent\n(C) arsonist\n(D) anarchist\n\nWe need to find a word that means the opposite of \"protagonist.\" Let's analyze each option:\n- Agnostic: This means someone who is not, or does not believe in, any particular religious or religious belief. This does not have the opposite meaning of \"protagonist.\"\n- Opponent: This means someone who is in opposition or contradiction to another person or thing. This is the opposite of \"protagonist\" because a protagonist is the main character, and an opponent is someone who is in contradiction to the main character.\n- Arsonist: This means someone who is a fire1 conflagrant or set on fire. This does not have the opposite meaning of \"protagonist.\"\n- Anarchist: This means someone who supports a system of government in which power is distributed to the people and not to a few Elites. This does not have the opposite meaning of \"protagonist.\"\n\nBased on the analysis, the word that means the opposite of \"protagonist\" is \"opponent.\"\n\nTherefore, the correct answer is: \\boxed{B}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

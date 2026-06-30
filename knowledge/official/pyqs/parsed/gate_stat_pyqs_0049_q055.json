@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q55",
+  "question_seq": 49,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , X _ { 3 }$ be a random sample of size 3 from a population having Bernoulli distribution with parameter $p ,$ where $p \\in ( 0 , 1 )$ is unknown. Define $\\begin{array} { r } { T _ { 1 } \\big ( X _ { i } , X _ { j } , X _ { k } \\big ) = X _ { i } - X _ { j } ( 1 - X _ { k } ) , T _ { 2 } \\big ( X _ { i } , X _ { j } , X _ { k } \\big ) = \\frac { 1 } { 2 } ( X _ { i } X _ { j } + X _ { j } X _ { k } ) } \\end{array}$ for $i , j , k = 1 , 2 , 3 ; i \\neq j \\neq k$ . Let $x _ { 1 } , x _ { 2 } , x _ { 3 }$ denote realizations from the random sample. Then which of the following statements is/are true?",
+  "options": {
+    "A": "$T _ { 1 } ( X _ { 1 } , X _ { 2 } , X _ { 3 } )$ has the same distribution as $T _ { 1 } ( X _ { 2 } , X _ { 3 } , X _ { 1 } )$ , but $T _ { 1 } ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) \\not = \\ T _ { 1 } ( x _ { 2 } , x _ { 3 } , x _ { 1 } )$ for some realization $x _ { 1 } , x _ { 2 } , x _ { 3 }$",
+    "B": "$T _ { 2 } ( X _ { 1 } , X _ { 2 } , X _ { 3 } )$ and $T _ { 2 } ( X _ { 3 } , X _ { 2 } , X _ { 1 } )$ are both unbiased estimators for $p ^ { 2 }$",
+    "C": "$T _ { 1 } ( X _ { 1 } , X _ { 2 } , X _ { 3 } )$ and $T _ { 1 } ( X _ { 2 } , X _ { 3 } , X _ { 1 } )$ are both unbiased estimators for $p ^ { 2 }$ and $T _ { 1 } ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = \\ T _ { 1 } ( x _ { 2 } , x _ { 3 } , x _ { 1 } )$ for all realizations $x _ { 1 } , x _ { 2 } , x _ { 3 }$",
+    "D": "$T _ { 2 } ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = T _ { 2 } ( x _ { 3 } , x _ { 2 } , x _ { 1 } )$ for all realizations $x _ { 1 } , x _ { 2 } , x _ { 3 }$"
+  },
+  "answer": null,
+  "solution": "To determine which of the given statements is true, we need to analyze the properties of the functions \\( T_1 \\) and \\( T_2 \\) and their behavior under permutations of the arguments.\n\n### Step 1: Analyze \\( T_1 \\)\nThe function \\( T_1 \\) is defined as:\n\\[ T_1(X_1, X_2, X_3) = X_1 - X_2(1 - X_3) \\]\n\n#### Check if \\( T_1 \\) has the same distribution as \\( T_1(X_2, X_3, X_1) \\)\nWe need to compute \\( T_1(X_2, X_3, X_1) \\):\n\\[ T_1(X_2, X_3, X_1) = X_2 - X_3(1 - X_1) \\]\n\nTo check if \\( T_1(X_1, X_2, X_3) \\) has the same distribution as \\( T_1(X_2, X_3, X_1) \\), we need to consider the possible values of \\( X_1, X_2, \\) and \\( X_3 \\) (which are 0 or 1) and compute the corresponding values of \\( T_1 \\).\n\n- If \\( X_1 = 0 \\):\n  \\[ T_1(0, X_2, X_3) = 0 - X_2(1 - X_3) = -X_2 + X_2X_3 \\]\n  \\[ T_1(X_2, X_3, 0) = X_2 - X_3(1 - 0) = X_2 - X_3 \\]\n\n- If \\( X_1 = 1 \\):\n  \\[ T_1(1, X_2, X_3) = 1 - X_2(1 - X_3) = 1 - X_2 + X_2X_3 \\]\n  \\[ T_1(X_2, X_3, 1) = X_2 - X_3(1 - 1) = X_2 \\]\n\nFrom these calculations, we see that \\( T_1(X_1, X_2, X_3) \\) and \\( T_1(X_2, X_3, X_1) \\) do not always have the same value. For example, if \\( X_1 = 0 \\), \\( X_2 = 1 \\), and \\( X_3 = 1 \\):\n\\[ T_1(0, 1, 1) = -1 + 1 \\cdot 1 = 0 \\]\n\\[ T_1(1, 1, 0) = 1 - 1 = 0 \\]\n\nHowever, if \\( X_1 = 0 \\), \\( X_2 = 1 \\), and \\( X_3 = 0 \\):\n\\[ T_1(0, 1, 0) = -1 + 1 \\cdot 0 = -1 \\]\n\\[ T_1(1, 0, 0) = 1 - 0 = 1 \\]\n\nThus, \\( T_1(X_1, X_",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q4",
+  "question_seq": 55,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "We have 2 rectangular sheets of paper, M and N, of dimensions 6 cm × 1 cm each. Sheet M is rolled to form an open cylinder by bringing the short edges of the sheet together. Sheet N is cut into equal square patches and assembled to form the largest possible closed cube. Assuming the ends of the cylinder are closed, the ratio of the volume of the cylinder to that of the cube is",
+  "options": {
+    "A": "$\\frac { 9 } { \\pi }$",
+    "C": "$\\frac { \\pi } { 2 }$",
+    "B": "3π",
+    "D": "$\\frac { 3 } { \\pi }$"
+  },
+  "answer": "A",
+  "solution": "To solve the problem, we need to find the volume of the cylinder formed from sheet M and the volume of the cube formed from sheet N, and then determine the ratio of these volumes.\n\n**Step 1: Calculate the volume of the cylinder.**\n\n sheet M is a rectangle of dimensions 6 cm × 1 cm. When the short edges are brought together to form an open cylinder, the height of the cylinder is 1 cm and the circumference of the base is 6 cm. The circumference of a circle is given by \\(2\\pi r\\), where \\(r\\) is the radius. Therefore, we can find the radius \\(r\\) of the base of the cylinder as follows:\n\\[2\\pi r = 6 \\implies r = \\frac{6}{2\\pi} = \\frac{3}{\\pi} \\text{ cm}\\]\n\nThe volume \\(V_{\\text{cylinder}}\\) of a cylinder is given by the formula:\n\\[V_{\\text{cylinder}} = \\pi r^2 h\\]\nSubstituting the values of \\(r\\) and \\(h\\):\n\\[V_{\\text{cylinder}} = \\pi \\left(\\frac{3}{\\pi}\\right)^2 \\cdot 1 = \\pi \\cdot \\frac{9}{\\pi^2} = \\frac{9}{\\pi} \\text{ cm}^3\\]\n\n**Step 2: Calculate the volume of the cube.**\n\n sheet N is a rectangle of dimensions 6 cm × 1 cm. To form the largest possible closed cube, we need to cut the sheet into equal square patches. The side length of the square patches must be a divisor of both 6 cm and 1 cm. The only common divisor is 1 cm, so each square patch is 1 cm × 1 cm. Since the area of sheet N is \\(6 \\times 1 = 6 \\text{ cm}^2\\), we can form a cube with a base area of 1 cm² and a height of 6 cm divided by the number of squares along the length, which is 6. Therefore, the side length of the cube is:\n\\[s = \\sqrt[3]{6 \\text{ cm}^2 \\cdot 1 \\text{ cm}} = \\sqrt[3]{6} \\text{ cm}\\]\n\nHowever, we need to re-eide the correct approach. The correct approach is to cut the sheet into 6 squares of 1 cm each and then form a cube with side length 1 cm. The volume \\(V_{\\text{cube}}\\) of the cube is:\n\\[V_{\\text{cube}} = 1^3 = 1 \\text{ cm}^3\\]\n\n**Step 3: Calculate the ratio of the volume of the cylinder to the volume of the cube.**\n\nThe ratio of the volume of the cylinder to the volume of the cube is:\n\\[\\text{Ratio} = \\frac{V_{\\text{cylinder}}}{V_{\\text{cube}}} = \\frac{\\frac{9}{\\pi}}{1} = \\frac{9}{\\pi}\\]\n\nTherefore, the correct answer is:\n\\[\\boxed{A}\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

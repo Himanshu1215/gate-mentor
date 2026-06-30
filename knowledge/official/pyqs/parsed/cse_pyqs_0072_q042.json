@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q42",
+  "question_seq": 72,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let G be a group of order 6, and H be a subgroup of G such that $1 < | H | < 6 .$ Which one of the following options is correct?",
+  "options": {
+    "A": "Both G and H are always cyclic.",
+    "B": "G is always cyclic, but H may not be cyclic.",
+    "C": "G may not be cyclic, but H is always cyclic.",
+    "D": "Both G and H may not be cyclic."
+  },
+  "answer": "C",
+  "solution": "To determine which option is correct, we need to analyze the properties of groups of order 6 and their subgroups.\n\nFirst, let's consider the possible orders for the subgroup \\( H \\). Since \\( 1 < |H| < 6 \\), the possible orders for \\( H \\) are 2, 3, or 4.\n\n### Case 1: Order of \\( H \\) is 2\nA group of order 2 is always cyclic because it has an identity element and one other element that is its own inverse. Therefore, any subgroup of order 2 is cyclic.\n\n### Case 2: Order of \\( H \\) is 3\nA group of order 3 is always cyclic because it is a prime number. Therefore, any subgroup of order 3 is cyclic.\n\n### Case 3: Order of \\( H \\) is 4\nA group of order 4 can be either cyclic (isomorphic to \\(\\mathbb{Z}_4\\)) or non-cyclic (isomorphic to the Klein four-group \\(\\mathbb{Z}_2 \\times \\mathbb{Z}_2\\)). Therefore, a subgroup of order 4 may or may not be cyclic.\n\n### Case 4: Order of \\( G \\) is 6\nA group of order 6 can be either cyclic (isomorphic to \\(\\mathbb{Z}_6\\)) or non-cyclic (isomorphic to \\(S_3\\), the symmetric group on 3 elements). Therefore, a group of order 6 may or may not be cyclic.\n\nFrom the above analysis, we can see that:\n- A subgroup of order 2 or 3 is always cyclic.\n- A subgroup of order 4 may or may not be cyclic.\n- A group of order 6 may or may not be cyclic.\n\nTherefore, the correct option is:\n\\[\n\\boxed{C}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

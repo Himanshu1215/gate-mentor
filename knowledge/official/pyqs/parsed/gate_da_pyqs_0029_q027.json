@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q27",
+  "question_seq": 29,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "For which of the following inputs does binary search take time O(log n) in the worst case?",
+  "options": {
+    "A": "An array of n integers in any order",
+    "B": "A linked list of n integers in any order",
+    "C": "An array of n integers in increasing order",
+    "D": "A linked list of n integers in increasing order Let $A = I _ { n } + x x ^ { \\top }$ , where $I _ { n }$ is the n × n identity matrix and $x \\in \\mathbb { R } ^ { n } , x ^ { \\top } x = 1$ . Which of the following options is/are correct?"
+  },
+  "answer": null,
+  "solution": "To determine for which of the given inputs binary search takes time \\( O(\\log n) \\) in the worst case, let's analyze each option step by step.\n\n**Option (A): An array of \\( n \\) integers in any order**\n\nBinary search requires the input to be sorted in either ascending or descending order to work efficiently. If the array is not sorted, binary search will not work correctly and will have a worst-case time complexity of \\( O(n) \\). Therefore, option (A) is incorrect.\n\n**Option (B): A linked list of \\( n \\) integers in any order**\n\n similar to option (A), binary search requires the input to be sorted. If the linked list is not sorted, binary search will not work correctly and will have a worst-case time complexity of \\( O(n) \\). Therefore, option (B) is incorrect.\n\n**Option (C): An array of \\( n \\) integers in increasing order**\n\nIf the array is sorted in increasing order, binary search will work correctly and will have a worst-case time complexity of \\( O(\\log n) \\). Therefore, option (C) is correct.\n\n**Option (D): A linked list of \\( n \\) integers in increasing order**\n\nIf the linked list is sorted in increasing order, binary search will work correctly and will have a worst-case time complexity of \\( O(\\log n) \\). Therefore, option (D) is correct.\n\nBased on the analysis, the correct options are (C) and (D).\n\nThe final answer is:\n\\[\n\\boxed{C \\text{ and } D}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

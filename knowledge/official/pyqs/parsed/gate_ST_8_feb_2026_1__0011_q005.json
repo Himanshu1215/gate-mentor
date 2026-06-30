@@ -1,0 +1,19 @@
+{
+  "year": 2026,
+  "exam": "GATE ST",
+  "question_id": "Q5",
+  "question_seq": 11,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable taking only two values, 1 and 2. Let $M _ { X } ( t )$ be the moment generating function of X. If the expectation of X is $\\frac { 1 0 } { 7 }$ , then the fourth derivative of $M _ { X } ( t )$ evaluated at 0 equals",
+  "options": {
+    "A": "52",
+    "B": "67",
+    "C": "48",
+    "D": "60 $\\frac { 5 2 } { 7 }$ $\\frac { 6 7 } { 7 }$ $\\frac { 4 8 } { 7 }$ $\\frac { 6 0 } { 7 }$"
+  },
+  "answer": "C",
+  "solution": "Step 1: Understanding the random variable $X .$\n\nThe random variable X takes only two values, 1 and 2. Let the probability mass function of X be:\n\n $ P ( X = 1 ) = p \\quad { \\mathrm { a n d } } \\quad P ( X = 2 ) = 1 - p $ \n\nThe expectation of $X , E [ X ]$ , is given as $\\frac { 1 0 } { 7 }$ . Using the formula for expectation:\n\n $ E [ X ] = 1 \\cdot p + 2 \\cdot ( 1 - p ) = p + 2 ( 1 - p ) = 2 - p $ \n\nGiven $\\textstyle E [ X ] = { \\frac { 1 0 } { 7 } }$ , we have the equation:\n\n $ 2 - p = { \\frac { 1 0 } { 7 } } $ \n\nSolving for $p \\mathrm { : }$\n\n $ p = 2 - { \\frac { 1 0 } { 7 } } = { \\frac { 1 4 } { 7 } } - { \\frac { 1 0 } { 7 } } = { \\frac { 4 } { 7 } } $ \n\n$\\mathrm { S o } , p = { \\textstyle { \\frac { 4 } { 7 } } }$ and $\\textstyle P ( X = 1 ) = { \\frac { 4 } { 7 } } .$ , and $\\begin{array} { r } { P ( X = 2 ) = \\frac { 3 } { 7 } } \\end{array}$\n\nStep 2: Moment generating function of $X .$\n\nThe moment generating function $M _ { X } ( t )$ of X is defined as:\n\n $ M _ { X } ( t ) = E [ e ^ { t X } ] = e ^ { t \\cdot 1 } \\cdot P ( X = 1 ) + e ^ { t \\cdot 2 } \\cdot P ( X = 2 ) $ \n\nSubstituting the values for $P ( X = 1 )$ and $P ( X = 2 )$\n\n $ M _ { X } ( t ) = e ^ { t } \\cdot \\frac { 4 } { 7 } + e ^ { 2 t } \\cdot \\frac { 3 } { 7 } $ \n\nStep 3: Finding the fourth derivative of $M _ { X } ( t )$\n\nTo find the fourth derivative of $M _ { X } ( t )$ at $t = 0$ , we diferentiate $M _ { X } ( t )$ four times:\n\n $ M _ { X } ^ { \\prime } ( t ) = \\frac { 4 } { 7 } e ^ { t } + \\frac { 6 } { 7 } e ^ { 2 t } $ \n\n $ M _ { X } ^ { \\prime \\prime } ( t ) = \\frac { 4 } { 7 } e ^ { t } + \\frac { 1 2 } { 7 } e ^ { 2 t } $ \n\n $ M _ { X } ^ { ( 3 ) } ( t ) = \\frac { 4 } { 7 } e ^ { t } + \\frac { 2 4 } { 7 } e ^ { 2 t } $ \n\n $ M _ { X } ^ { ( 4 ) } ( t ) = \\frac { 4 } { 7 } e ^ { t } + \\frac { 4 8 } { 7 } e ^ { 2 t } $ \n\nNow, evaluate $M _ { X } ^ { ( 4 ) } ( t )$ at $t = 0$\n\n $ M _ { X } ^ { ( 4 ) } ( 0 ) = \\frac { 4 } { 7 } e ^ { 0 } + \\frac { 4 8 } { 7 } e ^ { 0 } = \\frac { 4 } { 7 } + \\frac { 4 8 } { 7 } = \\frac { 5 2 } { 7 } $ \n\nStep 4: Conclusion.\n\nThe fourth derivative of $M _ { X } ( t )$ evaluated at 0 is $\\frac { 5 2 } { 7 }$ , hence the correct answer is $\\boxed { C } .$\nQuick Tip\n\nFor a discrete random variable, the moment generating function is the weighted sum of $e ^ { t x }$ for all possible values of x, where the weights are the probabilities of the corresponding values."
+}

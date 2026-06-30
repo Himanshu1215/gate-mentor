@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q18",
+  "question_seq": 140,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let A and B be non-empty finite sets such that there exist one-to-one and onto functions (i) from A to B and (ii) from $A \\times A$ to $A \\cup B .$ The number of possible values of $\\vert A \\vert$ is",
+  "options": null,
+  "answer": "B",
+  "solution": "To determine the number of possible values of \\( |A| \\), we start by analyzing the given conditions:\n\n1. There exists a one-to-one and onto function from \\( A \\) to \\( B \\). This implies that \\( |A| = |B| \\).\n2. There exists a one-to-one and onto function from \\( A \\times A \\) to \\( A \\cup B \\). This implies that \\( |A \\times A| = |A \\cup B| \\).\n\nSince \\( |A \\times A| = |A|^2 \\) and \\( |A \\cup B| = |A| + |B| - |A \\cap B| \\), and given that \\( |A| = |B| \\), we can substitute \\( |B| \\) with \\( |A| \\) in the equation for \\( |A \\cup B| \\):\n\n\\[ |A|^2 = |A| + |A| - |A \\cap B| \\]\n\\[ |A|^2 = 2|A| - |A \\cap B| \\]\n\nRearranging the equation, we get:\n\n\\[ |A|^2 - 2|A| + |A \\cap B| = 0 \\]\n\nSince \\( A \\) and \\( B \\) are non-empty and \\( |A| = |B| \\), \\( A \\cap B \\) can be either \\( A \\) (if \\( A = B \\)) or a proper subset of \\( A \\). However, if \\( A \\cap B \\) were a proper subset of \\( A \\), then \\( |A \\cap B| < |A| \\), and the equation \\( |A|^2 - 2|A| + |A \\cap B| = 0 \\) would not have integer solutions for \\( |A| \\) that are greater than 1. Let's check the case when \\( A = B \\):\n\nIf \\( A = B \\), then \\( |A \\cap B| = |A| \\), and the equation becomes:\n\n\\[ |A|^2 - 2|A| + |A| = 0 \\]\n\\[ |A|^2 - |A| = 0 \\]\n\\[ |A|(|A| - 1) = 0 \\]\n\nThe solutions to this equation are \\( |A| = 0 \\) or \\( |A| = 1 \\). Since \\( A \\) is a non-empty set, \\( |A| = 0 \\) is not a valid solution. Therefore, the only possible value for \\( |A| \\) is 1.\n\nThus, the number of possible values of \\( |A| \\) is \\(\\boxed{1}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q1",
+  "question_seq": 1,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The current population of a city is 11,02,500. If it has been increasing at the rate of 5% per annum, what was its population 2 years ago?",
+  "options": {
+    "A": "9,92,500",
+    "B": "9,95,006",
+    "C": "10,00,000",
+    "D": "12,51,506"
+  },
+  "answer": "C",
+  "solution": "Let the population 2 years ago be P . The population increases at a rate of 5% per annum, so after 2 years, the population becomes:\n\n $ P \\times ( 1 + 0 . 0 5 ) ^ { 2 } = 1 1 , 0 2 , 5 0 0 $ \n\nSolving for P :\n\n $ P \\times 1 . 1 0 2 5 = 1 1 , 0 2 , 5 0 0 $ \n\n $ P = { \\frac { 1 1 , 0 2 , 5 0 0 } { 1 . 1 0 2 5 } } = 1 0 , 0 0 , 0 0 0 $ \n\nThus, the population 2 years ago was 10,00,000. The correct answer is option (C).\n\nFinal Answer: (C) 10,00,000\nQuick Tip\n\nTo find the population in the past, divide the current population by $( 1 + \\mathrm { r a t e } ) ^ { n }$ , where n is the number of years.\n\n2. p and q are positive integers and\n\n $ \\frac { p } { q } + \\frac { q } { p } = 3 , $ \n\nthen,\n\n $ \\frac { p ^ { 2 } } { q ^ { 2 } } + \\frac { q ^ { 2 } } { p ^ { 2 } } =\\tag{A) 3} $ \n\n(B) 7\n\n(C) 9\n\n(D) 11\n\nCorrect Answer: (B) 7\n\nSolution:\n\nWe are given that $\\textstyle { \\frac { p } { q } } + { \\frac { q } { p } } = 3$ . Let us square both sides of this equation:\n\n $ { \\Bigg ( } { \\frac { p } { q } } + { \\frac { q } { p } } { \\Bigg ) } ^ { 2 } = 3 ^ { 2 } $ \n\nExpanding the left-hand side:\n\n $ \\frac { p ^ { 2 } } { q ^ { 2 } } + 2 + \\frac { q ^ { 2 } } { p ^ { 2 } } = 9 $ \n\n $ { \\frac { p ^ { 2 } } { q ^ { 2 } } } + { \\frac { q ^ { 2 } } { p ^ { 2 } } } = 9 - 2 = 7 $ \n\nThus, $\\begin{array} { r } { \\frac { p ^ { 2 } } { q ^ { 2 } } + \\frac { q ^ { 2 } } { p ^ { 2 } } = 7 . } \\end{array}$ , so the correct answer is option (B).\n\nFinal Answer: (B) 7\nQuick Tip\n\nWhen given a sum of fractions like ${ \\begin{array} { l } { { \\underline { { p } } } } \\end{array} } + { \\frac { q } { p } } .$ , square the equation to simplify and find the desired expression."
+}

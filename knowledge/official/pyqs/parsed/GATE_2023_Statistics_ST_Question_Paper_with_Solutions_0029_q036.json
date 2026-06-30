@@ -7,13 +7,13 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "LA_001",
-  "question_text": "Let A be an n × n real matrix. Consider the following statements. (I) If A is symmetric, then there exists c ≥0 such that A + cIn is symmetric and positive",
+  "question_text": "Let A be an $n \\times n$ real matrix. Consider the following statements. (I) If A is symmetric, then there exists $c \\geq 0$ such that $A + c I _ { n }$ is symmetric and positive definite, where $I _ { n }$ is the $n \\times n$ identity matrix. (II) If A is symmetric and positive definite, then there exists a symmetric and positive definite matrix B such that $A = B ^ { 2 }$ Which of the above statements is/are true?",
   "options": {
-    "D": "efinite, where In is the n × n identity matrix. (II) If A is symmetric and positive definite, then there exists a symmetric and positive",
     "A": "Only (I)",
     "B": "Only (II)",
-    "C": "Both (I) and (II)"
+    "C": "Both (I) and (II)",
+    "D": "Neither (I) nor (II)"
   },
   "answer": "C",
-  "solution": "1) Statement (I):\nThis statement is true. If A is symmetric, we can add a scalar multiple of the identity matrix\ncIn to make the matrix A + cIn positive definite. Since the eigenvalues of a symmetric matrix\nare real, adding a positive scalar to the diagonal entries ensures that the matrix becomes\npositive definite.\n2) Statement (II):\nThis statement is also true. If A is symmetric and positive definite, it can be decomposed as\nA = B2, where B is a symmetric and positive definite matrix. This follows from the spectral\ndecomposition theorem, which allows the square root decomposition of positive definite\nmatrices.\nThe correct answer is (C) Both (I) and (II).\nQuick Tip\n- Symmetric matrices can always be made positive definite by adding a scalar multiple\nof the identity matrix.\n- Positive definite matrices have a unique square root decomposition."
+  "solution": "1) Statement (I):\n\nThis statement is true. If A is symmetric, we can add a scalar multiple of the identity matrix $c I _ { n }$ to make the matrix $A + c I _ { n }$ positive definite. Since the eigenvalues of a symmetric matrix are real, adding a positive scalar to the diagonal entries ensures that the matrix becomes positive definite.\n\n2) Statement (II):\n\nThis statement is also true. If A is symmetric and positive definite, it can be decomposed as $A = B ^ { 2 }$ , where B is a symmetric and positive definite matrix. This follows from the spectral decomposition theorem, which allows the square root decomposition of positive definite matrices.\n\nThe correct answer is (C) Both (I) and (II).\nQuick Tip\n\n\\- Symmetric matrices can always be made positive definite by adding a scalar multiple of the identity matrix.\n\n\\- Positive definite matrices have a unique square root decomposition."
 }

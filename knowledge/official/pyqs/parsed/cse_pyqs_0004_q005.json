@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q5",
+  "question_seq": 4,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The search engine’s business model around the fulcrum of trust. (a) plays (b) bursts (c) revolves (d) sinks",
+  "options": null,
+  "answer": "C",
+  "solution": "To determine why the correct answer to the question \"The search engine’s business model around thefulcrum of trust. (a) plays (b) bursts (c) revolves (d) sinks\" is \"C,\" we need to analyze the context and the meaning of each option in the context of a search engine's business model.\n\n1. ** plays**: This option suggests that the search engine is an active participant in the market, but it does not necessarily imply a specific behavior or relationship with trust.\n2. ** bursts**: This option suggests that the search engine is making a sudden and significant change or increase in its activities, which is not necessarily related to the concept of trust.\n3. ** revolves**: This option suggests that the search engine is involved in a circular or recursive process, which can be interpreted as a continuous and dynamic relationship with its users and the market. This can be seen as a way to maintain trust through continuous improvement and user satisfaction.\n4. ** sinks**: This option suggests that the search engine is decreasing in its activities or value, which is not necessarily related to the concept of trust.\n\nGiven the options, the most appropriate choice that fits the context of a search engine's business model around the fulcrum of trust is \"revolves.\" This suggests a continuous and dynamic relationship with its users and the market, which is a key aspect of maintaining trust.\n\nTherefore, the correct answer is:\n\n\\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

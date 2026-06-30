@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q8",
+  "question_seq": 59,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In a pushdown automaton $P = ( Q , \\Sigma , \\Gamma , \\delta , q _ { 0 } , F )$ , a transition of the form, where $p , \\ q , \\in \\mathsf { Q } , \\ a \\in \\Sigma \\cup \\{ \\varepsilon \\}$ , and $X , ~ Y \\in \\Gamma \\cup \\{ \\varepsilon \\}$ , represents $( q , \\ Y ) \\in \\delta ( p , \\ a , \\ X )$ Consider the following pushdown automaton over the input alphabet $\\Sigma \\{ a , b \\}$ and stack alphabet $\\Gamma = \\{ \\# , A \\}$ The number of strings of length 100 accepted by the above pushdown automaton is",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine the number of strings of length 100 accepted by the given pushdown automaton, we need to analyze the structure of the automaton and its transitions. Let's break down the problem step by step.\n\n### Step 1: Understand the Automaton\nThe pushdown automaton \\( P = ( Q, \\Sigma, \\Gamma, \\delta, q_0, F) \\) has:\n- \\( Q = \\{ q_0, q_1, q_2 \\} \\)\n- \\( \\Sigma = \\{ a, b \\} \\)\n- \\( \\Gamma = \\{ \\# , A \\} \\)\n- Transitions:\n  - \\( \\delta(q_0, a, \\#) = \\{ (q_1, A) \\} \\)\n  - \\( \\delta(q_0, b, \\#) = \\{ (q_1, A) \\} \\)\n  - \\( \\delta(q_1, a, A) = \\{ (q_2, \\varepsilon) \\} \\)\n  - \\( \\delta(q_1, b, A) = \\{ (q_2, \\varepsilon) \\} \\)\n  - \\( \\delta(q_2, a, A) = \\{ (q_1, A) \\} \\)\n  - \\( \\delta(q_2, b, A) = \\{ (q_1, A) \\} \\)\n- Initial state: \\( q_0 \\)\n- Final state: \\( q_2 \\)\n\n### Step 2: Analyze the Transitions\nThe automaton starts in state \\( q_0 \\) with an empty stack ( containing \\(\\#\\) initially).\n\n1. **From \\( q_0 \\) to \\( q_1 \\)**:\n   - Reading an \\( a \\) or \\( b \\) while the stack top is \\(\\#\\)推推 \\( A \\) onto the stack.\n   - This transition can be written as:\n     \\[\n     \\delta(q_0, a, \\#) = \\{ (q_1, A) \\}\n     \\]\n     \\[\n     \\delta(q_0, b, \\#) = \\{ (q_1, A) \\}\n     \\]\n\n2. **From \\( q_1 \\) to \\( q_2 \\)**:\n   - Reading an \\( a \\) or \\( b \\) while the stack top is \\( A \\)弹弹 \\( A \\) from the stack.\n   - This transition can be written as:\n     \\[\n     \\delta(q_1, a, A) = \\{ (q_2, \\varepsilon) \\}\n     \\]\n     \\[\n     \\delta(q_1, b, A) = \\{ (q_2, \\varepsilon) \\}\n     \\]\n\n3. **From \\( q_2 \\) to \\( q_1 \\)**:\n   - Reading an \\( a \\) or \\( b \\) while the stack top is \\( A \\)推推 \\( A \\) onto the stack.\n   - This transition can be written as:\n     \\[\n     \\delta(q_2, a, A) = \\{ (q_1, A) \\}\n     \\]\n     \\[\n     \\delta",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

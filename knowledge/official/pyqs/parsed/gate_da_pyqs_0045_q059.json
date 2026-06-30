@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q59",
+  "question_seq": 45,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let f : <sup>R</sup> → <sup>R</sup> be such that $| f ( x ) - f ( y ) | \\leq ( x - y ) ^ { 2 }$ for all $x , y \\in \\mathbb { R }$ . Then f (1) − f (0) = (",
+  "options": null,
+  "answer": "C",
+  "solution": "To determine the value of \\( f(1) - f(0) \\) given the condition \\( |f(x) - f(y)| \\leq (x - y)^2 \\) for all \\( x, y \\in \\mathbb{R} \\), we can follow these steps:\n\n1. **Substitute specific values for \\( x \\) and \\( y \\):**\n   Let \\( x = 1 \\) and \\( y = 0 \\). Then the inequality becomes:\n   \\[\n   |f(1) - f(0)| \\leq (1 - 0)^2 = 1^2 = 1\n   \\]\n   This tells us that \\( |f(1) - f(0)| \\leq 1 \\).\n\n2. **Consider the general form of the inequality:**\n   The given condition \\( |f(x) - f(y)| \\leq (x - y)^2 \\) suggests that the difference \\( f(x) - f(y) \\) is very small compared to the square of the difference \\( x - y \\). As \\( x \\) approaches \\( y \\), \\( (x - y)^2 \\) approaches 0, which implies that \\( |f(x) - f(y)| \\) must also approach 0. This suggests that \\( f(x) \\) is a continuous function and possibly even differentiable.\n\n3. **Use the definition of the derivative:**\n   To find the derivative of \\( f \\) at \\( x = 0 \\), we consider the limit:\n   \\[\n   f'(0) = \\lim_{h \\to 0} \\frac{f(0 + h) - f(0)}{h}\n   \\]\n   Using the given inequality \\( |f(x) - f(y)| \\leq (x - y)^2 \\), we substitute \\( x = 0 + h \\) and \\( y = 0 \\):\n   \\[\n   |f(h) - f(0)| \\leq h^2\n   \\]\n   Dividing both sides by \\( |h| \\) (assuming \\( h \\neq 0 \\)), we get:\n   \\[\n   \\left| \\frac{f(h) - f(0)}{h} \\right| \\leq |h|\n   \\]\n   As \\( h \\) approaches 0, \\( |h| \\) approaches 0. Therefore, by the Squeeze Theorem, we have:\n   \\[\n   \\lim_{h \\to 0} \\left| \\frac{f(h) - f(0)}{h} \\right| = 0\n   \\]\n   This implies:\n   \\[\n   f'(0) = 0\n   \\]\n\n4. **Conclusion:**\n   Since \\( f'(0) = 0 \\), the function \\( f \\) is not changing at \\( x = 0 \\). This suggests that \\( f(x) \\) is a constant function. If \\( f(x) \\) is constant, then \\( f(1) = f(0) \\), which implies:\n   \\[\n   f(1) - f(0) = 0\n   \\]\n\nTherefore, the value of \\( f(1) - f(0) \\) is \\(\\boxed{0}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

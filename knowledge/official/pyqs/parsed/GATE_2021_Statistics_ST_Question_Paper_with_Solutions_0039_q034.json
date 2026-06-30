@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q34",
+  "question_seq": 39,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $( X , Y )$ have the joint probability density function $ f _ { X , Y } ( x , y ) = \\left\\{ { \\begin{array} { l l } { \\frac { 4 } { ( x + y ) ^ { 3 } } , } & { x > 1 , y > 1 , } \\\\ { 0 , } & { \\mathrm { o t h e r w i s e } . } \\end{array} } \\right. $ Then which one of the following statements is NOT true?",
+  "options": {
+    "A": "The probability density function of $X + Y$ is $ f _ { X + Y } ( z ) = \\frac { 4 } { z ^ { 3 } } ( z - 2 ) , z > 2 , \\mathrm { o t h e r w i s e } . $",
+    "B": "$P ( X + Y > 4 ) = { \\frac { 3 } { 4 } }$",
+    "C": "$E ( X + Y ) = 4 \\log 2$",
+    "D": "$E ( Y | X = 2 ) = 4$"
+  },
+  "answer": "C",
+  "solution": "We are given the joint probability density function $f _ { X , Y } ( x , y )$ , and we need to evaluate the provided statements.\n\nStep 1: Find the probability density function of $X + Y .$\n\nThe given joint probability density function for X and Y can be used to find the probability density function of $X + Y$ , denoted by $f _ { X + Y } ( z )$ . The correct form of $f _ { X + Y } ( z )$ is:\n\n $ f _ { X + Y } ( z ) = \\frac { 4 } { z ^ { 3 } } ( z - 2 ) , z > 2 . $ \n\nThis corresponds to option (A), so it is true.\n\nStep 2: Evaluate $P ( X + Y > 4 )$\n\nTo find $P ( X + Y > 4 )$ , we integrate the probability density function $f _ { X + Y } ( z )$ from 4 to infinity:\n\n $ P ( X + Y > 4 ) = \\int _ { 4 } ^ { \\infty } { \\frac { 4 } { z ^ { 3 } } } ( z - 2 ) d z = { \\frac { 3 } { 4 } } . $ \n\nSo, option (B) is also true.\n\nStep 3: Evaluate $E ( X + Y )$\n\nThe expected value of $X + Y$ is given by:\n\n $ E ( X + Y ) = \\int _ { 2 } ^ { \\infty } z f _ { X + Y } ( z ) d z . $ \n\nUsing the correct form of the density function, the expected value $E ( X + Y )$ does not equal 4 log 2, and this makes option (C) false.\n\nFinal Answer:\n\n $ \\boxed { ( \\mathbf { C } ) E ( X + Y ) = 4 \\log 2 \\mathrm { { i s } N O T \\ t r u e } } . $ \nQuick Tip\n\nTo find the expected value of a sum of random variables, use the probability density function of the sum and integrate it over the appropriate range."
+}

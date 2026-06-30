@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q13",
+  "question_seq": 190,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "For $n > 1$ , the maximum multiplicity of any eigenvalue of an $n \\times n$ matrix with elements from R is (a) n (b) $n - 1$ (c) 1 (d) $n + 1$",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine the maximum multiplicity of any eigenvalue of an \\( n \\times n \\) matrix with elements from \\(\\mathbb{R}\\), we need to understand the concept of eigenvalues and their multiplicities.\n\n1. **Eigenvalues and Multiplicities**:\n   - An eigenvalue \\(\\lambda\\) of a matrix \\(A\\) is a scalar such that there exists a non-zero vector \\(\\mathbf{v}\\) ( called an eigenvector) satisfying the equation \\(A\\mathbf{v} = \\lambda\\mathbf{v}\\).\n   - The algebraic multiplicity of an eigenvalue \\(\\lambda\\) is the number of times \\(\\lambda\\) appears as a root of the characteristic polynomial of \\(A\\).\n   - The geometric multiplicity of an eigenvalue \\(\\lambda\\) is the dimension of the eigenspace corresponding to \\(\\lambda\\).\n\n2. **Characteristic Polynomial**:\n   - The characteristic polynomial of an \\( n \\times n \\) matrix \\(A\\) is given by \\(\\det(A - \\lambda I)\\), where \\(I\\) is the \\( n \\times n \\) identity matrix.\n   - The characteristic polynomial is a polynomial of degree \\(n\\), so it has at most \\(n\\) roots ( eigenvalues).\n\n3. **Maximum Multiplicity**:\n   - The algebraic multiplicity of an eigenvalue \\(\\lambda\\) cannot exceed the degree of the characteristic polynomial.\n   - Therefore, the maximum algebraic multiplicity of any eigenvalue of an \\( n \\times n \\) matrix is \\(n\\).\n\n4. **Example**:\n   - Consider the identity matrix \\(I_n\\), which is an \\( n \\times n \\) matrix with 1's on the diagonal and 0's elsewhere.\n   - The characteristic polynomial of \\(I_n\\) is \\(\\det(I_n - \\lambda I) = \\det((1 - \\lambda)I_n) = (1 - \\lambda)^n\\).\n   - The eigenvalue \\(\\lambda = 1\\) has an algebraic multiplicity of \\(n\\).\n\n5. **Conclusion**:\n   - Since the characteristic polynomial of an \\( n \\times n \\) matrix is a polynomial of degree \\(n\\), the maximum multiplicity of any eigenvalue is \\(n\\).\n\nThus, the correct answer is \\(\\boxed{A}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

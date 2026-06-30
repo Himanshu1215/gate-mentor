@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q12",
+  "question_seq": 41,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the following regular expressions represents the set of all binary strings with an odd number of 1’s?",
+  "options": {
+    "A": "$( 0 ^ { \\star } 1 0 ^ { \\star } 1 0 ^ { \\star } ) ^ { \\star } 0 ^ { \\star } 1$ $ \\mathrm { ( b ) } 1 0 ^ { \\star } ( 0 ^ { \\star } 1 0 ^ { \\star } 1 0 ^ { \\star } ) ^ { \\star } $",
+    "C": "$( ( 0 + 1 ) ^ { \\star } 1 ( 0 + 1 ) ^ { \\star } 1 ) ^ { \\star } 1 0 ^ { \\star }$ $ \\mathrm { ( d ) } ( 0 ^ { \\star } 1 0 ^ { \\star } 1 0 ^ { \\star } ) ^ { \\star } 1 0 ^ { \\star } $"
+  },
+  "answer": "A",
+  "solution": "To determine which regular expression represents the set of all binary strings with an odd number of 1's, let's analyze each option step by step.\n\n### Option (A): \\((0^*10^*10^*)^*0^*1\\)\n\n1. **Understanding the structure**:\n   - \\(0^*10^*10^*\\) represents a sequence of any number of 0's followed by a 1, followed by any number of 0's, followed by another 1, and then any number of 0's.\n   - \\((0^*10^*10^*)^*\\) means that the sequence \\(0^*10^*10^*\\) can repeat any number of times (including zero times).\n   - \\(0^*1\\) represents any number of 0's followed by a single 1.\n\n2. **Analyzing the number of 1's**:\n   - Each instance of \\(0^*10^*10^*\\) contains exactly 2 ones.\n   - When this sequence is repeated \\(n\\) times, it contains \\(2n\\) ones.\n   - Adding \\(0^*1\\) adds 1 more one.\n   - Therefore, the total number of 1's in the string is \\(2n + 1\\), which is always odd.\n\n3. **Conclusion**:\n   - This regular expression generate all binary strings with an odd number of 1's.\n\n### Option (B): \\(10^*(0^*10^*10^*)^*\\)\n\n1. **Understanding the structure**:\n   - \\(10^*\\) represents a single 1 followed by any number of 0's.\n   - \\((0^*10^*10^*)^*\\) means that the sequence \\(0^*10^*10^*\\) can repeat any number of times (including zero times).\n\n2. **Analyzing the number of 1's**:\n   - \\(10^*\\) contains exactly 1 one.\n   - Each instance of \\(0^*10^*10^*\\) contains exactly 2 ones.\n   - When this sequence is repeated \\(n\\) times, it contains \\(2n\\) ones.\n   - Therefore, the total number of 1's in the string is \\(1 + 2n\\), which is always odd.\n\n3. **Conclusion**:\n   - This regular expression generate all binary strings with an odd number of 1's.\n\n### Option (C): \\(((0+1)^*1(0+1)^*1)^*10^*\\)\n\n1. **Understanding the structure**:\n   - \\((0+1)^*1(0+1)^*1\\) represents a sequence of any number of 0's or 1's followed by a 1, followed by any number of 0's or 1's, followed by another 1.\n   - \\(((0+1)^*1(0+1)^*1)^*\\) means that the sequence \\((0+1)^*1(0+1)^*1\\) can repeat any number of times (including zero times).\n   - \\(10^*\\) represents a single 1 followed by any number of 0's.\n\n2",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

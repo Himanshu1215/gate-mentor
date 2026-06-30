@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q37",
+  "question_seq": 42,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let customers arrive at a departmental store according to a Poisson process with rate 10. Further, suppose that each arriving customer is either a male or a female with probability $\\begin{array} { l } { \\displaystyle { \\frac { 1 } { 2 } } } \\end{array}$ each, independent of all other arrivals. Let $N ( t )$ denote the total number of customers who have arrived by time t. Then which one of the following statements is NOT true?",
+  "options": {
+    "A": "If $S _ { 2 }$ denotes the time of arrival of the second female customer, then $ \\begin{array} { r } { P ( S _ { 2 } \\leq 1 ) = 2 5 \\int _ { 0 } ^ { 1 } s e ^ { - 5 s } d s } \\end{array} $",
+    "B": "If M(t) denotes the number of male customers who have arrived by time t, then $ P \\left( M \\left( { \\textstyle { \\frac { 1 } { 3 } } } \\right) = 0 \\mid M ( 1 ) = 1 \\right) = { \\textstyle { \\frac { 1 } { 3 } } } $",
+    "C": "$E \\left[ ( N ( t ) ) ^ { 2 } \\right] = 1 0 0 t ^ { 2 } + 1 0 t$",
+    "D": "$E [ N ( t ) N ( 2 t ) ] = 2 0 0 t ^ { 2 } + 1 0 t$"
+  },
+  "answer": "B",
+  "solution": "\\- Option (A) is correct. $S _ { 2 }$ is the time of the second female arrival in a Poisson process, and this follows the exponential distribution with rate 5, which leads to the correct probability expression.\n\n\\- Option (B) is incorrect. Given that $M ( 1 ) = 1$ , the probability that $M \\left( { \\frac { 1 } { 3 } } \\right) = 0$ is not $\\frac { 1 } { 3 }$ . The conditional probability is not that simple, and this statement is false.\n\n\\- Option (C) is correct. The expectation $E [ ( N ( t ) ) ^ { 2 } ]$ for a Poisson process with rate 10 is given by $E [ ( N ( t ) ) ^ { 2 } ] = 1 0 0 t ^ { 2 } + 1 0 t$\n\n\\- Option (D) is correct. The expected value $E [ N ( t ) N ( 2 t ) ]$ for a Poisson process with rate 10 is $2 0 0 t ^ { 2 } + 1 0 t$\n\nFinal Answer:\n\n $ \\boxed { P \\left( M \\left( \\frac { 1 } { 3 } \\right) = 0 \\mid M ( 1 ) = 1 \\right) = \\frac { 1 } { 3 } } \\mathrm { { i s ~ N O T ~ t r u e } . } $ \nQuick Tip\n\nIn a Poisson process, conditional probabilities involving the number of arrivals in nonoverlapping intervals can be computed using the memoryless property of the exponential distribution."
+}

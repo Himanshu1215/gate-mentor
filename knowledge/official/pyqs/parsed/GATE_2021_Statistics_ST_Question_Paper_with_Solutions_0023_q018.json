@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q18",
+  "question_seq": 23,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "For $\\alpha > 0 .$ , let $\\{ X _ { n } ^ { ( \\alpha ) } \\} _ { n \\ge 1 }$ be a sequence of independent random variables such that $P ( X _ { n } ^ { ( \\alpha ) } = 1 ) = \\frac { 1 } { n ^ { 2 \\alpha } } = 1 – P ( X _ { n } ^ { ( \\alpha ) }$ Let $S = \\{ \\alpha > 0 : X _ { n } ^ { ( \\alpha ) }$ converges to 0 almost surely as $n \\infty \\}$ Then the infimum of S equals (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "Given that $\\begin{array} { r } { P ( X _ { n } ^ { ( \\alpha ) } = 1 ) = \\frac { 1 } { n ^ { 2 \\alpha } } } \\end{array}$ , the condition for convergence to 0 almost surely is determined by the behavior of the series. Using the criteria for almost sure convergence of independent random variables, we conclude that:\n\n $ \\operatorname* { i n f } S = 0 . 5 0 . $ \n\nThus, the value is 0.50.\nQuick Tip\n\nFor sequences of independent random variables, the infimum for convergence is determined by examining the sum of the probabilities and using convergence criteria."
+}

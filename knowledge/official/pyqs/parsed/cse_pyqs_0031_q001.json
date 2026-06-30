@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q1",
+  "question_seq": 31,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Goods and Services Tax (GST) is an indirect tax introduced in India in 2017 that is imposed on the supply of goods and services, and it subsumes all indirect taxes except few. It is a destination-based tax imposed on goods and services used, and it is not imposed at the point of origin from where goods come. GST also has a few components specific to state governments, central government and Union Territories (UTs). Which one of the following statements can be inferred from the given passage?",
+  "options": {
+    "A": "GST is imposed on the production of goods and services.",
+    "B": "GST does not have a component specific to UT.",
+    "C": "GST is imposed at the point of usage of goods and services.",
+    "D": "GST includes all indirect taxes."
+  },
+  "answer": "C",
+  "solution": "To determine the correct answer, let's analyze the given information step by step:\n\n1. **Understanding the Definition of GST:**\n   - goods and services tax (GST) is an indirect tax introduced in India in 2017.\n   - It is imposed on the supply of goods and services.\n   - It subsumes all indirect taxes except few.\n   - It is a destination-based tax imposed on goods and services used.\n   - It is not imposed at the point of origin from where goods come.\n   - GST also has a few components specific to state governments, central government and Union Territories (UTs).\n\n2. **Analyzing Each Option:**\n   - **Option (A):** \"GST is imposed on the production of goods and services.\"\n     - This statement is incorrect because GST is imposed on the supply of goods and services, not on their production.\n   - **Option (B):** \"GST does not have a component specific to UT.\"\n     - This statement is incorrect becauseGST has components specific to state governments, central government and Union Territories (UTs).\n   - **Option (C):** \"GST is imposed at the point of usage of goods and services.\"\n     - This statement is correct because GST is a destination-based tax imposed on goods and services used.\n   - **Option (D):** \"GST includes all indirect taxes.\"\n     - This statement is incorrect because GST subsumes all indirect taxes except a few.\n\n3. **Conclusion:**\n   - Based on the analysis, the correct statement that can be inferred from the given passage is that GST is imposed at the point of usage of goods and services.\n\nTherefore, the correct answer is: \\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

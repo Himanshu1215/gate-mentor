@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q15",
+  "question_seq": 23,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let p and q be any two propositions. Consider the following propositional statements. $ S _ { 1 } : p \\to q , \\quad S _ { 2 } : \\lnot p \\wedge q , \\quad S _ { 3 } : \\lnot p \\vee q , \\quad S _ { 4 } : \\lnot p \\vee \\lnot q , $ where ∧ denotes conjunction (AND operation), ∨ denotes disjunction (OR operation), and ¬ denotes negation (NOT operation). Which one of the following options is correct? (Note: ≡ denotes logical equivalence) $ S _ { 1 } \\equiv S _ { 3 } $ $ S _ { 2 } \\equiv S _ { 3 } $ $ S _ { 2 } \\equiv S _ { 4 } $ $ S _ { 1 } \\equiv S _ { 4 } $",
+  "options": null,
+  "answer": null,
+  "solution": "To determine which of the given options is correct, we need to analyze the logical equivalence of each pair of statements. We will use truth tables to compare the truth values of each statement for all possible combinations of truth values of \\( p \\) and \\( q \\).\n\nLet's construct the truth table for each statement:\n\n\\[\n\\begin{array}{|c|c|c|c|c|}\n\\hline\np & q & S_1: p \\to q & S_2: \\lnot p \\wedge q & S_3: \\lnot p \\vee q & S_4: \\lnot p \\vee \\lnot q \\\\\n\\hline\nT & T & T & F & T & F \\\\\nT & F & F & F & T & F \\\\\nF & T & T & T & T & T \\\\\nF & F & T & F & T & T \\\\\n\\hline\n\\end{array}\n\\]\n\nNow, let's compare the truth values of each pair of statements:\n\n1. **Comparing \\( S_1 \\) and \\( S_3 \\):**\n   - \\( S_1: p \\to q \\)\n   - \\( S_3: \\lnot p \\vee q \\)\n\n   From the truth table, we can see that the truth values of \\( S_1 \\) and \\( S_3 \\) are identical for all combinations of \\( p \\) and \\( q \\). Therefore, \\( S_1 \\equiv S_3 \\).\n\n2. **Comparing \\( S_2 \\) and \\( S_3 \\):**\n   - \\( S_2: \\lnot p \\wedge q \\)\n   - \\( S_3: \\lnot p \\vee q \\)\n\n   From the truth table, we can see that the truth values of \\( S_2 \\) and \\( S_3 \\) are different for some combinations of \\( p \\) and \\( q \\). Therefore, \\( S_2 \\not\\equiv S_3 \\).\n\n3. **Comparing \\( S_2 \\) and \\( S_4 \\):**\n   - \\( S_2: \\lnot p \\wedge q \\)\n   - \\( S_4: \\lnot p \\vee \\lnot q \\)\n\n   From the truth table, we can see that the truth values of \\( S_2 \\) and \\( S_4 \\) are different for some combinations of \\( p \\) and \\( q \\). Therefore, \\( S_2 \\not\\equiv S_4 \\).\n\n4. **Comparing \\( S_1 \\) and \\( S_4 \\):**\n   - \\( S_1: p \\to q \\)\n   - \\( S_4: \\lnot p \\vee \\lnot q \\)\n\n   From the truth table, we can see that the truth values of \\( S_1 \\) and \\( S_4 \\) are different for some combinations of \\( p \\) and \\( q \\). Therefore, \\( S_1 \\not\\equiv S_4 \\).\n\nBased on the analysis, the correct option is:\n\n\\[\n\\boxed{S_1 \\equiv S_3}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

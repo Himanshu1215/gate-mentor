@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q18",
+  "question_seq": 12,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let T be a complete and sufficient statistic for a family P of distributions and let U be a sufficient statistic for P. If $P _ { f } ( T \\geq 0 ) = 1$ for all $f \\in { \\mathcal { P } }$ , then which one of the following options is NOT necessarily correct?",
+  "options": {
+    "A": "$T ^ { 2 }$ is a complete statistic for P",
+    "B": "$T ^ { 2 }$ is a minimal sufficient statistic for $\\mathcal { P }$",
+    "C": "$T$ is a function of U",
+    "D": "U is a function of T"
+  },
+  "answer": "D",
+  "solution": "Step 1: Understanding the properties of complete and sufficient statistics.   \nA statistic T is complete if for any measurable function g, $E [ g ( T ) ] = 0$ implies   \n$P ( g ( T ) = 0 ) = 1$   \nA statistic T is sufficient for a family of distributions if the conditional distribution of the sample given T does not depend on the parameter f.   \nThe fact that T is complete and sufficient means that it contains all the information about the parameter $f .$ . Moreover, if U is a sufficient statistic, T may or may not be a function of U . Step 2: Analyzing the options. Option (A): $T ^ { 2 }$ is still a complete statistic because   \ncompleteness is preserved under one-to-one transformations.   \nOption (B): $T ^ { 2 }$ is a minimal sufficient statistic because $T$ is minimal, and any one-to-one transformation of a minimal sufficient statistic remains minimal.   \nOption (C): T being a function of U is not necessarily true. While T is complete and sufficient, it is not guaranteed to be a function of another sufficient statistic U.   \nOption (D): U being a function of T is not necessarily true. Since T is complete and sufficient, and U is merely sufficient, U does not have to be a function of T .   \nThus, the correct answer is $\\boxed { ( D ) }$\nQuick Tip\n\nFor sufficient and complete statistics, be cautious in assuming that one statistic must be a function of another. A complete and sufficient statistic often contains all the information about the parameter, but it does not imply that other sufficient statistics are functions of it."
+}

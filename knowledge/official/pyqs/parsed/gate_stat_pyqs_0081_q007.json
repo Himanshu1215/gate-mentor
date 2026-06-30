@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q7",
+  "question_seq": 81,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In a country of 1400 million population, 70% own mobile phones. Among the mobile phone owners, only 294 million access the Internet. Among these Internet users, only half buy goods from e-commerce portals. What is the percentage of these buyers in the country? (A) 10.50 (B) 14.70 (C) 15.00 (D) 50.00",
+  "options": null,
+  "answer": null,
+  "solution": "To determine the percentage of buyers in the country, we need to follow these steps:\n\n1. Calculate the number of mobile phone owners.\n2. Determine the number of Internet users among the mobile phone owners.\n3. Find out how many of these Internet users buy goods from e-commerce portals.\n4. Calculate the percentage of these buyers in the country.\n\nLet's go through each step in detail:\n\n1. **Calculate the number of mobile phone owners:**\n   The country has a population of 1400 million, and 70% of them own mobile phones.\n   \\[\n   \\text{Number of mobile phone owners} = 1400 \\times 0.70 = 980 \\text{ million}\n   \\]\n\n2. **Determine the number of Internet users among the mobile phone owners:**\n   Among the mobile phone owners, only 294 million access the Internet.\n   \\[\n   \\text{Number of Internet users} = 294 \\text{ million}\n   \\]\n\n3. **Find out how many of these Internet users buy goods from e-commerce portals:**\n   Among the Internet users, only half buy goods from e-commerce portals.\n   \\[\n   \\text{Number of buyers} = 294 \\times 0.50 = 147 \\text{ million}\n   \\]\n\n4. **Calculate the percentage of these buyers in the country:**\n   To find the percentage of buyers in the country, we divide the number of buyers by the total population and then multiply by 100.\n   \\[\n   \\text{Percentage of buyers} = \\left( \\frac{147}{1400} \\right) \\times 100 = 10.50\\%\n   \\]\n\nTherefore, the percentage of these buyers in the country is \\boxed{10.50}. The correct choice is \\boxed{A}.",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

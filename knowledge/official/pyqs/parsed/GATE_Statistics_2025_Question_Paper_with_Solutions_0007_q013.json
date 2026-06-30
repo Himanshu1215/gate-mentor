@@ -1,0 +1,18 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q13",
+  "question_seq": 7,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let $S = \\{ ( x , y , z ) \\in \\mathbb { R } ^ { 3 } \\setminus \\{ ( 0 , 0 , 0 ) \\} : z = - ( x + y ) \\}$ . Denote $ S ^ { \\perp } = \\{ ( p , q , r ) \\in \\mathbb { R } ^ { 3 } : p x + q y + r z = 0 { \\mathrm { ~ f o r ~ a l l ~ } } ( x , y , z ) \\in S \\} . $ Then which one of the following options is correct? $( \\mathbf { A } ) \\mathbf { \\nabla } S ^ { \\perp }$ is not a subspace of $\\mathbb { R } ^ { 3 }$",
+  "options": {
+    "B": "$S ^ { \\perp } = \\{ ( 0 , 0 , 0 ) \\}$",
+    "C": "$\\mathrm { d i m } ( S ^ { \\perp } ) = 1$",
+    "D": "$\\mathrm { d i m } ( S ^ { \\perp } ) = 2$"
+  },
+  "answer": "A",
+  "solution": "Step 1: The equation of S is given by $z = - ( x + y )$ , so any point $( x , y , z )$ in $S$ can be written as $( x , y , - ( x + y ) )$ . Thus, the set S is the plane given by the equation $z = - ( x + y )$ $\\mathrm { i n } \\mathbb { R } ^ { 3 }$\n\nStep 2: To find $S ^ { \\perp }$ , we need to find all vectors $( p , q , r )$ such that $p x + q y + r z = 0$ for all points $( x , y , z )$ in S. Using $z = - ( x + y )$ , we substitute into the equation:\n\n $ p x + q y + r ( - ( x + y ) ) = 0 . $ \n\nThis simplifies to:\n\n $ p x + q y - r x - r y = 0 \\Rightarrow ( p - r ) x + ( q - r ) y = 0 . $ \n\nFor this to hold for all values of x and y, we must have:\n\n $ p - r = 0 \\quad { \\mathrm { a n d } } \\quad q - r = 0 . $ \n\nThus, $p = r$ and $q = r$ , so the vector $( p , q , r )$ must be of the form $( r , r , r )$ for some scalar r. Step 3: Therefore, $S ^ { \\perp } = \\{ ( r , r , r ) : r \\in \\mathbb { R } \\}$ , which is a one-dimensional subspace of $\\mathbb { R } ^ { 3 }$ Thus, $\\mathrm { d i m } ( S ^ { \\perp } ) = 1$\nQuick Tip\n\nTo find the orthogonal complement $S ^ { \\perp }$ of a subspace $S ,$ solve the system of equations $p x + q y + r z = 0$ for all points in S. The result will give the set of vectors that are orthogonal to every vector in S."
+}

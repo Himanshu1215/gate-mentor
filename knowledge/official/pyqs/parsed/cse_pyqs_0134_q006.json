@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q6",
+  "question_seq": 134,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $L _ { 1 } , L _ { 2 }$ be two regular languages and $L _ { 3 }$ a language which is not regular. Which of the following statements is/are always TRUE?",
+  "options": {
+    "A": "$L _ { 1 } \\cup L _ { 3 }$ is not regular",
+    "B": "$\\overline { { L _ { 3 } } }$ is not regular",
+    "C": "$L _ { 1 } = L _ { 2 }$ if and only if ${ \\cal L } _ { 1 } \\cap \\overline { { { \\cal L } _ { 3 } } } = \\Phi$",
+    "D": "$\\overline { { L _ { 1 } } } \\cup \\overline { { L _ { 2 } } }$ is regular"
+  },
+  "answer": "B",
+  "solution": "To determine which of the given statements is always true, we need to analyze each statement in the context of the properties of regular and non-regular languages.\n\n(A) \\( L_1 \\cup L_3 \\) is not regular.\nThis statement is not always true. If \\( L_1 \\) is a regular language and \\( L_3 \\) is a non-regular language, the union \\( L_1 \\cup L_3 \\) could still be non-regular. However, if \\( L_1 \\) is the complement of \\( L_3 \\) (i.e., \\( L_1 = \\overline{L_3} \\)), then \\( L_1 \\cup L_3 = \\overline{L_3} \\cup L_3 = \\Sigma^* \\), which is a regular language. Therefore, this statement is not always true.\n\n(B) \\( \\overline{L_3} \\) is not regular.\nThis statement is always true. If \\( L_3 \\) is a non-regular language, then its complement \\( \\overline{L_3} \\) must also be non-regular. This is because the complement of a regular language is always regular. Therefore, if \\( L_3 \\) is not regular, its complement cannot be regular. This statement is always true.\n\n(C) \\( L_1 = L_2 \\) if and only if \\( L_1 \\cap \\overline{L_3} = \\Phi \\).\nThis statement is not always true. The condition \\( L_1 \\cap \\overline{L_3} = \\Phi \\) means that \\( L_1 \\) and \\( \\overline{L_3} \\) have no common elements. This does not necessarily imply that \\( L_1 = L_2 \\). For example, if \\( L_1 = L_2 = L_3 \\), then \\( L_1 \\cap \\overline{L_3} = L_3 \\cap \\overline{L_3} = \\Phi \\), but \\( L_1 = L_2 \\) is true. However, if \\( L_1 = L_2 \\neq L_3 \\), then \\( L_1 \\cap \\overline{L_3} = L_2 \\cap \\overline{L_3} \\neq \\Phi \\) unless \\( L_2 \\subseteq L_3 \\). Therefore, this statement is not always true.\n\n(D) \\( \\overline{L_1} \\cup \\overline{L_2} \\) is regular.\nThis statement is not always true. The union of the complements of two regular languages is not necessarily regular. For example, if \\( L_1 = \\{a^n b^n \\mid n \\geq 0\\} \\) and \\( L_2 = \\{a^n b^{2n} \\mid n \\geq 0\\} \\), then both \\( L_1 \\) and \\( L_2 \\) are context-free languages (and thus regular in a more general sense), but their complements \\( \\overline{L_1} \\) and \\( \\overline{L_2} \\) are not regular. The union \\( \\overline{L_1} \\",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q5",
+  "question_seq": 186,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "'When the teacher is in the room, all students stand silently. If the above statement is true, which one of the following statements is not necessarily true?",
+  "options": {
+    "A": "If any student is not standing silently, then the teacher is not in the room,",
+    "B": "When the teacher is in the room, all students are silent",
+    "C": "If all students are standing, then the teacher is in the room.",
+    "D": "When the teacher is in the room, all students are standing"
+  },
+  "answer": "C",
+  "solution": "To determine which statement is not necessarily true given the initial statement \"When the teacher is in the room, all students stand silent,\" let's analyze each option step by step.\n\nThe initial statement can be written in logical form as:\n\\[ \\text{Teacher is in the room} \\implies \\text{All students stand silent} \\]\n\nThis means that if the teacher is in the room, then all students must stand silent. However, it does not say anything about what happens if the teacher is not in the room. Let's analyze each option:\n\n(A) If any student is not standing silent, then the teacher is not in the room.\nThis is the contrapositive of the initial statement. The contrapositive of \\( P \\implies Q \\) is \\( \\neg Q \\implies \\neg P \\), which is logically equivalent to the original statement. Therefore, this statement is necessarily true.\n\n(B) When the teacher is in the room, all students are silent.\nThis is the same as the initial statement, so it is necessarily true.\n\n(C) If all students are standing, then the teacher is in the room.\nThis is the converse of the initial statement. The converse of \\( P \\implies Q \\) is \\( Q \\implies P \\), which is not necessarily true. Therefore, this statement is not necessarily true.\n\n(D) When the teacher is in the room, all students are standing.\nThis is the same as the initial statement, so it is necessarily true.\n\nBased on the analysis, the statement that is not necessarily true is:\n\\[ \\boxed{C} \\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

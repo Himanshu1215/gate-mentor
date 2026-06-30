@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q6",
+  "question_seq": 80,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Since the last one year, after a 125 basis point reduction in repo rate by the Reserve Bank of India, banking institutions have been making a demand to reduce interest rates on small saving schemes. Finally, the government announced yesterday a reduction in interest rates on small saving schemes to bring them on par with fixed deposit interest rates. Which one of the following statements can be inferred from the given passage?",
+  "options": {
+    "A": "Whenever the Reserve Bank of India reduces the repo rate, the interest rates on small saving schemes are also reduced",
+    "B": "Interest rates on small saving schemes are always maintained on par with fixed deposit interest rates",
+    "C": "The government sometimes takes into consideration the demands of banking institutions before reducing the interest rates on small saving schemes",
+    "D": "A reduction in interest rates on small saving schemes follow only after a reduction in repo rate by the Reserve Bank of India"
+  },
+  "answer": null,
+  "solution": "To solve this problem, let's analyze the given information step by step:\n\n1. **Initial Information**: The last one year, after a 125 basis point reduction in repo rate by the Reserve Bank of India, banking institutions have been making a demand to reduce interest rates on small saving schemes.\n2. **Final Action**: The government announced yesterday a reduction in interest rates on small saving schemes to bring them on par with fixed deposit interest rates.\n\nFrom this information, we can infer the following:\n\n- The reduction in repo rate by the Reserve Bank of India was followed by a reduction in interest rates on small saving schemes.\n- The government's action to reduce interest rates on small saving schemes was aimed at bringing them on par with fixed deposit interest rates.\n\nNow, let's evaluate each option based on this information:\n\n(A) Whenever the Reserve Bank of India reduces the repo rate, the interest rates on small saving schemes are also reduced.\n   - This statement is not necessarily true. While the reduction in repo rate was followed by a reduction in interest rates on small saving schemes, it is not clear if this always happens. The government's action was specifically aimed at bringing small saving schemes on par with fixed deposit interest rates, not just reducing them based on a reduction in repo rate.\n\n(B) Interest rates on small saving schemes are always maintained on par with fixed deposit interest rates.\n   - This statement is not necessarily true. The government's action was to bring small saving schemes on par with fixed deposit interest rates, but it does not mean that they are always maintained on par. There could be other factors affecting the interest rates on small saving schemes.\n\n(C) The government sometimes takes into consideration the demands of banking institutions before reducing the interest rates on small saving schemes.\n   - This statement is true. The government's action to reduce interest rates on small saving schemes was aimed at addressing the demands of banking institutions. It shows that the government considers the demands of banks when making such decisions.\n\n(D) A reduction in interest rates on small saving schemes follow only after a reduction in repo rate by the Reserve Bank of India.\n   - This statement is not necessarily true. While the reduction in repo rate was followed by a reduction in interest rates on small saving schemes, it is not clear if this is the only condition. The government's action was specifically aimed at bringing small saving schemes on par with fixed deposit interest rates, not just after a reduction in repo rate.\n\nBased on the analysis, the correct statement that can be inferred from the given passage is:\n\n\\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

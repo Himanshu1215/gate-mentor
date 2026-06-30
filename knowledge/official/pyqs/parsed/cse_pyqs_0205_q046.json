@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q46",
+  "question_seq": 205,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $f : \\mathbb { R } $ R be defined as follows: $ f ( x ) = \\left( { \\frac { \\left| x \\right| } { 2 } } - x \\right) \\left( x - { \\frac { \\left| x \\right| } { 2 } } \\right) $ Which of the following statements is/are true?",
+  "options": {
+    "A": "f has a local maximum",
+    "B": "f has a local minimum",
+    "C": "f’ continuous over R",
+    "D": "f’ is not differentiable over R"
+  },
+  "answer": "A",
+  "solution": "To determine which statements about the function \\( f(x) = \\left( \\frac{|x|}{2} - x \\right) \\left( x - \\frac{|x|}{2} \\right) \\) are true, we need to analyze the function and its derivative step by step.\n\nFirst, let's rewrite the function \\( f(x) \\) in a piecewise form based on the definition of the absolute value function.\n\nFor \\( x \\geq 0 \\), \\( |x| = x \\), so:\n\\[\nf(x) = \\left( \\frac{x}{2} - x \\right) \\left( x - \\frac{x}{2} \\right) = \\left( -\\frac{x}{2} \\right) \\left( \\frac{x}{2} \\right) = -\\frac{x^2}{4}\n\\]\n\nFor \\( x < 0 \\), \\( |x| = -x \\), so:\n\\[\nf(x) = \\left( \\frac{-x}{2} - x \\right) \\left( x - \\frac{-x}{2} \\right) = \\left( -\\frac{x}{2} - x \\right) \\left( x + \\frac{x}{2} \\right) = \\left( -\\frac{3x}{2} \\right) \\left( \\frac{3x}{2} \\right) = -\\frac{9x^2}{4}\n\\]\n\nThus, the function \\( f(x) \\) can be written as:\n\\[\nf(x) = \\begin{cases} \n-\\frac{x^2}{4} & \\text{if } x \\geq 0 \\\\\n-\\frac{9x^2}{4} & \\text{if } x < 0 \n\\end{cases}\n\\]\n\nNext, we find the derivative \\( f'(x) \\) for each piece.\n\nFor \\( x > 0 \\):\n\\[\nf(x) = -\\frac{x^2}{4} \\implies f'(x) = -\\frac{2x}{4} = -\\frac{x}{2}\n\\]\n\nFor \\( x < 0 \\):\n\\[\nf(x) = -\\frac{9x^2}{4} \\implies f'(x) = -\\frac{18x}{4} = -\\frac{9x}{2}\n\\]\n\nNow, we need to determine the behavior of \\( f'(x) \\) at \\( x = 0 \\). We check the left-hand limit and the right-hand limit of \\( f'(x) \\) as \\( x \\) approaches 0.\n\n\\[\n\\lim_{x \\to 0^+} f'(x) = \\lim_{x \\to 0^+} -\\frac{x}{2} = 0\n\\]\n\\[\n\\lim_{x \\to 0^-} f'(x) = \\lim_{x \\to 0^-} -\\frac{9x}{2} = 0\n\\]\n\nSince both limits are equal, \\( f'(x) \\) is continuous at \\( x = 0 \\). Therefore, \\( f'(x) \\) is continuous over \\( \\mathbb{R} \\).\n\nNext, we find the critical points by setting \\( f",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q38",
+  "question_seq": 38,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let $\\{ x _ { 1 } , x _ { 2 } , \\ldots , x _ { n } \\}$ be a set of linearly independent vectors in $\\mathbb { R } ^ { n }$ . Let the $( i , j )$ -th element of matrix $A \\in \\mathbb { R } ^ { n \\times n }$ be given by $A _ { i j } = x _ { i } ^ { \\top } x _ { j } , 1 \\leq i , j \\leq n$ . Which one of the following statements is correct? (A) A is invertible (B) 0 is a singular value of A (C) Determinant of A is 0 (D) $z ^ { \\top } A z = 0$ for some non-zero z ∈ <sup>Rn</sup>",
+  "options": null,
+  "answer": null,
+  "solution": "To determine which statement is correct, let's analyze the matrix \\( A \\) given by \\( A_{ij} = x_i^\\top x_j \\) for \\( 1 \\leq i, j \\leq n \\). This matrix is known as the outer product of the vectors \\( x_1, x_2, \\ldots, x_n \\).\n\nFirst, let's express \\( A \\) in a more convenient form. We can write \\( A \\) as:\n\\[ A = X X^\\top \\]\nwhere \\( X \\) is the \\( n \\times n \\) matrix whose columns are the vectors \\( x_1, x_2, \\ldots, x_n \\). That is, \\( X = [x_1, x_2, \\ldots, x_n] \\).\n\nNow, let's analyze the properties of \\( A \\):\n\n1. **Invertibility of \\( A \\)**:\n   For \\( A \\) to be invertible, \\( A \\) must be a full-rank matrix. Since \\( A = X X^\\top \\), the rank of \\( A \\) is equal to the rank of \\( X \\). Given that \\( \\{ x_1, x_2, \\ldots, x_n \\} \\) are linearly independent vectors in \\( \\mathbb{R}^n \\), the rank of \\( X \\) is \\( n \\). Therefore, the rank of \\( A \\) is also \\( n \\), which means \\( A \\) is invertible. So, statement (A) is correct.\n\n2. **Singular values of \\( A \\)**:\n   The singular values of \\( A \\) are the square roots of the eigenvalues of \\( A^\\top A \\). Since \\( A = X X^\\top \\), we have \\( A^\\top A = (X X^\\top)^\\top (X X^\\top) = X X^\\top X X^\\top = X (X^\\top X) X^\\top \\). The matrix \\( X^\\top X \\) is a \\( n \\times n \\) symmetric matrix, and since \\( \\{ x_1, x_2, \\ldots, x_n \\} \\) are linearly independent, \\( X^\\top X \\) is positive definite. Therefore, all eigenvalues of \\( X^\\top X \\) are positive, which means all singular values of \\( A \\) are positive. So, statement (B) is incorrect.\n\n3. **Determinant of \\( A \\)**:\n   The determinant of \\( A \\) is the product of its eigenvalues. Since \\( A = X X^\\top \\) and \\( X^\\top X \\) is positive definite, all eigenvalues of \\( A \\) are positive. Therefore, the determinant of \\( A \\) is positive and not zero. So, statement (C) is incorrect.\n\n4. **Condition \\( z^\\top A z = 0 \\) for some non-zero \\( z \\in \\mathbb{R}^n \\)**:\n   Since \\( A = X X^\\top \\), we have \\( z^\\top A z = z^\\top (X X^\\top) z = (z^\\top X) (X^\\top z) \\). This expression is a scalar and is equal to the square of the Euclidean norm of \\(",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

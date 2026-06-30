@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q46",
+  "question_seq": 123,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $Y _ { i } = \\alpha + \\beta x _ { i } + \\epsilon _ { i } .$ where $i = 1 , 2 , 3 , 4 , x _ { i } ^ { \\prime } \\mathrm { s }$ are fixed covariates and $\\epsilon _ { i } ^ { \\prime } \\mathrm { s }$ are independent and identically distributed standard normal random variables. Here, α and $\\beta$ are unknown parameters. Let Φ be the cumulative distribution function of the standard normal distribution and $\\Phi ( 1 . 9 6 ) = 0 . 9 7 5$ . Given the following observations, <table><tr><td rowspan=1 colspan=1> $\\underline { { Y _ { i } } }$ </td><td rowspan=1 colspan=1>3</td><td rowspan=1 colspan=1>-2.5</td><td rowspan=1 colspan=1>5</td><td rowspan=1 colspan=1>-5</td></tr><tr><td rowspan=1 colspan=1> $\\underline { { x } } _ { i }$ </td><td rowspan=1 colspan=1>1</td><td rowspan=1 colspan=1>-2</td><td rowspan=1 colspan=1>3</td><td rowspan=1 colspan=1>-2</td></tr></table> the length (rounded off to two decimal places) of the shortest 95% confidence interval for $\\beta$ based on its least squares estimator is equal to ..",
+  "options": null,
+  "answer": null,
+  "solution": "To find the length of the shortest 95% confidence interval for \\(\\beta\\) based on its least squares estimator, we need to follow these steps:\n\n1. **Calculate the least squares estimator \\(\\hat{\\beta}\\) and its standard error \\(se(\\hat{\\beta})\\).**\n\n   The least squares estimator \\(\\hat{\\beta}\\) is given by:\n   \\[\n   \\hat{\\beta} = \\frac{\\sum_{i=1}^4 (x_i - \\bar{x})(Y_i - \\bar{Y})}{\\sum_{i=1}^4 (x_i - \\bar{x})^2}\n   \\]\n   where \\(\\bar{x}\\) and \\(\\bar{Y}\\) are the sample means of \\(x_i\\) and \\(Y_i\\) respectively.\n\n   First, calculate \\(\\bar{x}\\) and \\(\\bar{Y}\\):\n   \\[\n   \\bar{x} = \\frac{1 + (-2) + 3 + (-2)}{4} = 0\n   \\]\n   \\[\n   \\bar{Y} = \\frac{3 + (-2.5) + 5 + (-5)}{4} = 0.375\n   \\]\n\n   Next, calculate the numerator and the denominator of \\(\\hat{\\beta}\\):\n   \\[\n   \\sum_{i=1}^4 (x_i - \\bar{x})(Y_i - \\bar{Y}) = (1-0)(3-0.375) + (-2-0)(-2.5-0.375) + (3-0)(5-0.375) + (-2-0)(-5-0.375)\n   \\]\n   \\[\n   = 1 \\cdot 2.625 + (-2) \\cdot (-2.875) + 3 \\cdot 4.625 + (-2) \\cdot (-5.375)\n   \\]\n   \\[\n   = 2.625 + 5.75 + 13.875 + 10.75 = 33\n   \\]\n   \\[\n   \\sum_{i=1}^4 (x_i - \\bar{x})^2 = (1-0)^2 + (-2-0)^2 + (3-0)^2 + (-2-0)^2 = 1 + 4 + 9 + 4 = 18\n   \\]\n   Therefore,\n   \\[\n   \\hat{\\beta} = \\frac{33}{18} = \\frac{11}{6} \\approx 1.8333\n   \\]\n\n   The standard error of \\(\\hat{\\beta}\\) is given by:\n   \\[\n   se(\\hat{\\beta}) = \\sqrt{\\frac{\\sum_{i=1}^4 (Y_i - \\hat{Y}_i)^2 / (4-2)}{\\sum_{i=1}^4 (x_i - \\bar{x})^2}}\n   \\]\n   where \\(\\hat{Y}_i = \\hat{\\alpha} + \\hat{\\beta} x_i\\). First, we need to find \\(\\hat{\\alpha}\\",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

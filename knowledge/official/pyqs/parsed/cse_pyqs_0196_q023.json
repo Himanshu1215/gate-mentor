@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q23",
+  "question_seq": 196,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let n be an odd number greater than 100. Consider a binary minheap with n elements stored in an array P whose index starts from 1. Which of the following indices of P do/does NOT correspond to any leaf node of the minheap? (a) $\\frac { n + 1 } { 2 }$ (b) $\\frac { n - 1 } { 2 }$ (c) $\\frac { n - 3 } { 2 }$ (d) n",
+  "options": null,
+  "answer": "B",
+  "solution": "To determine which index of the array \\( P \\) does not correspond to any leaf node of a binary minheap with \\( n \\) elements, we need to understand the structure of a binary minheap. In a binary minheap, the elements are stored in an array such that the parent of the element at index \\( i \\) is at index \\( \\left\\lfloor \\frac{i}{2} \\right\\rfloor \\), and the children of the element at index \\( i \\) are at indices \\( 2i \\) and \\( 2i+1 \\).\n\nThe leaf nodes of the binary minheap are the elements that do not have any children. For an element at index \\( i \\) to be a leaf node, both \\( 2i \\) and \\( 2i+1 \\) must be greater than \\( n \\). This means:\n\\[ 2i > n \\quad \\text{and} \\quad 2i+1 > n \\]\nSimplifying these inequalities, we get:\n\\[ i > \\frac{n}{2} \\quad \\text{and} \\quad i > \\frac{n-1}{2} \\]\nSince \\( i \\) must be an integer, the smallest possible value for \\( i \\) is \\( \\left\\lceil \\frac{n+1}{2} \\right\\rceil \\). This is because \\( \\frac{n+1}{2} \\) is the smallest integer greater than \\( \\frac{n}{2} \\).\n\nNow, let's check each of the given options to see which one does not correspond to a leaf node:\n- Option (a): \\( \\frac{n+1}{2} \\)\n  - Since \\( n \\) is an odd number, \\( \\frac{n+1}{2} \\) is an integer. This is the smallest possible value for \\( i \\), so it corresponds to a leaf node.\n- Option (b): \\( \\frac{n-1}{2} \\)\n  - Since \\( n \\) is an odd number, \\( \\frac{n-1}{2} \\) is an integer. However, \\( \\frac{n-1}{2} \\) is less than \\( \\frac{n+1}{2} \\), so it does not correspond to a leaf node.\n- Option (c): \\( \\frac{n-3}{2} \\)\n  - Since \\( n \\) is an odd number, \\( \\frac{n-3}{2} \\) is an integer. This value is less than \\( \\frac{n+1}{2} \\), so it does not correspond to a leaf node. However, we need to check if it is less than \\( \\frac{n-1}{2} \\) to ensure it is not a valid index. Since \\( \\frac{n-3}{2} < \\frac{n-1}{2} \\), it is not a valid index.\n- Option (d): \\( n \\)\n  - Since \\( n \\) is an odd number, \\( n \\) is an integer. This value is greater than \\( \\frac{n+1}{2} \\), so it corresponds to a leaf node.\n\nFrom the above analysis, we can see that the only option that does not correspond to any leaf node of the binary minheap is \\( \\frac{n-1}{2} \\).\n\nTherefore, the correct answer is",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

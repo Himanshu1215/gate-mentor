@@ -7,8 +7,8 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "GENERAL",
-  "question_text": "Let {Wt}t≥0 be a standard Brownian motion. Then E(W 2 4 |W2 = 2) (in integer) equals:",
+  "question_text": "Let $\\{ \\mathbf { W } _ { t } \\} _ { t \\ge 0 }$ be a standard Brownian motion. Then $E ( W _ { 4 } ^ { 2 } | W _ { 2 } = 2 )$ (in integer) equals:",
   "options": null,
   "answer": "6",
-  "solution": "For standard Brownian motion, we know that the conditional expectation E(W 2\nt |Ws = w) is\ngiven by:\nE(W 2\nt |Ws = w) = w2 + (t −s)\nIn this problem, t = 4, s = 2, and W2 = 2, so we can directly apply the formula:\nE(W 2\n4 |W2 = 2) = 22 + (4 −2) = 4 + 2 = 6\nThus, the correct answer is 6.\nQuick Tip\n- For Brownian motion, the conditional expectation of the square of the process at a\nfuture time t given the value at time s is w2 + (t −s), where w is the value of the process\nat time s."
+  "solution": "For standard Brownian motion, we know that the conditional expectation $E ( W _ { t } ^ { 2 } | W _ { s } = w )$ is given by:\n\n $ E ( W _ { t } ^ { 2 } | W _ { s } = w ) = w ^ { 2 } + ( t - s ) $ \n\nIn this problem, $t = 4 , s = 2$ , and $W _ { 2 } = 2$ , so we can directly apply the formula:\n\n $ E ( W _ { 4 } ^ { 2 } | W _ { 2 } = 2 ) = 2 ^ { 2 } + ( 4 - 2 ) = 4 + 2 = 6 $ \n\nThus, the correct answer is 6.\nQuick Tip\n\n\\- For Brownian motion, the conditional expectation of the square of the process at a future time t given the value at time s is $w ^ { 2 } + ( t - s )$ , where w is the value of the process at time s."
 }

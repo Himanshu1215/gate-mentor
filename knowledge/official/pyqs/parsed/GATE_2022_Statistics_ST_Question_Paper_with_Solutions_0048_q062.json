@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q62",
+  "question_seq": 48,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $Y _ { 1 } < \\cdots < Y _ { n }$ be order statistics from a continuous distribution symmetric about its mean $\\mu .$ Find the smallest $n$ (in integer) such that $P ( Y _ { 1 } < \\mu < Y _ { n } ) \\geq 0 . 9 9$",
+  "options": null,
+  "answer": null,
+  "solution": "By symmetry and continuity, $P ( X \\leq \\mu ) = P ( X \\geq \\mu ) = { \\frac { 1 } { 2 } }$ and ties have probability 0. Thus\n\n $ \\begin{array} { r } { P ( Y _ { 1 } < \\mu < Y _ { n } ) = 1 - P ( \\mathrm { a l l } \\ \\le \\mu ) - P ( \\mathrm { a l l } \\ \\ge \\mu ) = 1 - 2 \\left( \\frac { 1 } { 2 } \\right) ^ { n } = 1 - 2 ^ { 1 - n } . } \\end{array} $ \n\nRequire $1 - 2 ^ { 1 - n } \\geq 0 . 9 9 \\Rightarrow 2 ^ { 1 - n } \\leq 0 . 0 1 \\Rightarrow 2 ^ { n - 1 } \\geq 1 0 0$ . Hence $n - 1 \\geq \\log _ { 2 } { 1 0 0 } \\approx 6 . 6 4 3 8$ so the smallest integer is ${ \\bigg \\lceil } 8 { \\bigg \\rceil } .$\nQuick Tip\n\nFor symmetric continuous distributions, probabilities involving $\\mu$ often reduce to powers of $\\begin{array} { l } { { \\frac { 1 } { 2 } } } \\end{array}$ since observations fall on either side independently with probability $\\begin{array} { l } { { \\frac { 1 } { 2 } } } \\end{array}$ each."
+}

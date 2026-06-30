@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q57",
+  "question_seq": 45,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "In a laboratory experiment, cats choose between foods A and B. If a cat had A, it will prefer A next time with probability 0.7; if it had B, it will prefer A next time with probability 0.5. The experiment is repeated under identical conditions. If 40% cats had A in the first experiment, then the percentage (rounded off to one decimal place) of cats that will prefer A in the third experiment is",
+  "options": null,
+  "answer": null,
+  "solution": "Let $p _ { n }$ be the proportion that choose A in experiment n. Transition (two–state Markov chain):\n\n $ p _ { n + 1 } = 0 . 7 p _ { n } + 0 . 5 ( 1 - p _ { n } ) = 0 . 5 + 0 . 2 p _ { n } . $ \n\nGiven $p _ { 1 } = 0 . 4$\n\n $ p _ { 2 } = 0 . 5 + 0 . 2 ( 0 . 4 ) = 0 . 5 8 , \\qquad p _ { 3 } = 0 . 5 + 0 . 2 ( 0 . 5 8 ) = 0 . 6 1 6 . $ \n\nThus the required percentage is $1 0 0 \\times 0 . 6 1 6 = \\left\\lceil 6 1 . 6 \\% \\right\\rceil .$\nQuick Tip\n\nWith repeated behavior depending only on the previous choice, model the proportions by a two–state Markov chain and iterate the linear recursion."
+}

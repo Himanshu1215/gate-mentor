@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q22",
+  "question_seq": 28,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $\\{ W ( t ) \\} _ { t \\geq 0 }$ be a standard Brownian motion. Which one of the following statements is NOT true?",
+  "options": {
+    "A": "$E [ W ( 7 ) ] = 0$",
+    "B": "$E [ W ( 5 ) W ( 9 ) ] = 7$",
+    "C": "2??(1) is normally distributed with mean 0 and variance 4",
+    "D": "$E [ W ( 5 ) \\mid W ( 3 ) = 3 ] = 3$ Let $X _ { 1 } , X _ { 2 } , X _ { 3 }$ be three independent and identically distributed binomial random variables with number of trials $n = 1 0 0$ and success probability ?? $\\because p < 1 )$ , which is an unknown parameter. Let $T _ { 1 } = ( X _ { 1 } + X _ { 2 } , X _ { 3 } )$ and $T _ { 2 } = X _ { 1 } + X _ { 2 } + X _ { 3 }$ . Consider the following statements: (I) The distribution of $T _ { 2 }$ given $T _ { 1 } = t _ { 1 }$ is independent of $p .$ (II) The distribution of $T _ { 1 }$ given $T _ { 2 } = t _ { 2 }$ is independent of $p .$ Which of the above statements is/are true?"
+  },
+  "answer": null,
+  "solution": "To determine which statement is NOT true, we need to analyze each option given for the standard Brownian motion \\(\\{ W(t) \\}_{t \\geq 0}\\).\n\n**Option (A):** \\(E [ W ( 7 ) ] = 0\\)\n\nFor a standard Brownian motion, the expected value at any time \\(t\\) is 0. Therefore, \\(E [ W ( 7 ) ] = 0\\) is true.\n\n**Option (B):** \\(E [ W ( 5 ) W ( 9 ) ] = 7\\)\n\nThe covariance of a standard Brownian motion \\(W(t)\\) at times \\(s\\) and \\(t\\) is given by \\(\\text{Cov}(W(s), W(t)) = \\min(s, t)\\). Therefore, \\(E [ W ( 5 ) W ( 9 ) ] = \\min(5, 9) = 5\\). So, \\(E [ W ( 5 ) W ( 9 ) ] = 7\\) is false.\n\n**Option (C):** \\(2W(1)\\) is normally distributed with mean 0 and variance 4\n\nFor a standard Brownian motion, \\(W(1)\\) is normally distributed with mean 0 and variance 1. Therefore, \\(2W(1)\\) is normally distributed with mean \\(2 \\cdot 0 = 0\\) and variance \\(2^2 \\cdot 1 = 4\\). So, \\(2W(1)\\) is normally distributed with mean 0 and variance 4 is true.\n\n**Option (D):** \\(E [ W ( 5 ) \\mid W ( 3 ) = 3 ] = 3\\)\n\nFor a standard Brownian motion, the conditional expectation \\(E [ W ( t ) \\mid W ( s ) = w ]\\) for \\(t > s\\) is given by \\(E [ W ( t ) \\mid W ( s ) = w ] = w + \\frac{t-s}{t-s} (W(t) - w) = w\\). Therefore, \\(E [ W ( 5 ) \\mid W ( 3 ) = 3 ] = 3\\) is true.\n\nBased on the analysis, the statement that is NOT true is:\n\n\\(\\boxed{B}\\)",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q41",
+  "question_seq": 119,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let X be a set and $2 ^ { X }$ denote the powerset of X.",
+  "options": {
+    "D": "efine a binary operation ∆ on $2 ^ { X }$ as follows: $ A \\ \\Delta \\ B = ( A - B ) \\cup ( B - A ) $ $ H = ( 2 ^ { X } , \\Delta ) $",
+    "A": "H is a group.",
+    "B": "Every element in H has an inverse, but H is NOT a group.",
+    "C": "For every $A \\in \\mathsf { 2 } ^ { X } ,$ the inverse of A is the complement of A"
+  },
+  "answer": "A",
+  "solution": "To determine why option (A) is correct, we need to verify that \\( H = (2^X, \\Delta) \\) forms a group. A group is a set equipped with a binary operation that satisfies four properties: closure, associativity, identity, and invertibility.\n\n1. **Closure**: For any \\( A, B \\in 2^X \\), the operation \\( A \\Delta B = (A - B) \\cup (B - A) \\) must result in an element that is also in \\( 2^X \\). Since \\( A - B \\) and \\( B - A \\) are both subsets of \\( X \\), their union \\( (A - B) \\cup (B - A) \\) is also a subset of \\( X \\). Therefore, \\( A \\Delta B \\in 2^X \\), and closure is satisfied.\n\n2. **Associativity**: For any \\( A, B, C \\in 2^X \\), we need to show that \\( (A \\Delta B) \\Delta C = A \\Delta (B \\Delta C) \\). Let's compute both sides:\n   \\[\n   (A \\Delta B) \\Delta C = ((A - B) \\cup (B - A)) \\Delta C = ((A - B) \\cup (B - A) - C) \\cup (C - ((A - B) \\cup (B - A)))\n   \\]\n   \\[\n   A \\Delta (B \\Delta C) = A \\Delta ((B - C) \\cup (C - B)) = (A - ((B - C) \\cup (C - B))) \\cup ((B - C) \\cup (C - B) - A)\n   \\]\n   By the properties of set operations, both expressions simplify to the same result, \\( (A \\cap C^c \\cap B^c) \\cup (A^c \\cap C \\cap B^c) \\cup (A^c \\cap C^c \\cap B) \\cup (A \\cap C \\cap B^c) \\cup (A \\cap C^c \\cap B) \\cup (A^c \\cap C \\cap B) \\). Therefore, associativity is satisfied.\n\n3. **Identity**: We need to find an element \\( e \\in 2^X \\) such that for any \\( A \\in 2^X \\), \\( A \\Delta e = A \\). Let's try \\( e = \\emptyset \\):\n   \\[\n   A \\Delta \\emptyset = (A - \\emptyset) \\cup (\\emptyset - A) = A \\cup \\emptyset = A\n   \\]\n   So, \\( \\emptyset \\) is the identity element.\n\n4. **Invertibility**: For each \\( A \\in 2^X \\), we need to find an element \\( B \\in 2^X \\) such that \\( A \\Delta B = \\emptyset \\). Let's try \\( B = A \\):\n   \\[\n   A \\Delta A = (A - A) \\cup (A - A) = \\emptyset \\cup \\emptyset = \\emptyset\n   \\]\n   So, each element is its own inverse.\n\nSince \\( H = (2^X, \\Delta",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

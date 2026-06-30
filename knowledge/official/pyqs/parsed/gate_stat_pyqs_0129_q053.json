@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q53",
+  "question_seq": 129,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The maximum value of $( x - 1 ) ^ { 2 } + ( y - 2 ) ^ { 2 }$ subject to the constraint $x ^ { 2 } + y ^ { 2 } \\leq 4 5$ is equal $\\mathrm { t o . . }$",
+  "options": null,
+  "answer": null,
+  "solution": "To find the maximum value of the function \\( f(x, y) = (x - 1)^2 + (y - 2)^2 \\) subject to the constraint \\( x^2 + y^2 \\leq 45 \\), we can use the method of Lagrange multipliers. The constraint can be written as \\( g(x, y) = x^2 + y^2 - 45 \\leq 0 \\). We will first consider the boundary of the constraint, \\( x^2 + y^2 = 45 \\).\n\nThe method of Lagrange multipliers tells us to solve the system of equations given by:\n\\[\n\\nabla f = \\lambda \\nabla g\n\\]\nand\n\\[\ng(x, y) = 0\n\\]\n\nFirst, we compute the gradients:\n\\[\n\\nabla f = \\left( \\frac{\\partial f}{\\partial x}, \\frac{\\partial f}{\\partial y} \\right) = (2(x - 1), 2(y - 2))\n\\]\n\\[\n\\nabla g = \\left( \\frac{\\partial g}{\\partial x}, \\frac{\\partial g}{\\partial y} \\right) = (2x, 2y)\n\\]\n\nSetting \\(\\nabla f = \\lambda \\nabla g\\), we get:\n\\[\n(2(x - 1), 2(y - 2)) = \\lambda (2x, 2y)\n\\]\n\nThis gives us two equations:\n\\[\n2(x - 1) = 2\\lambda x \\quad \\text{(1)}\n\\]\n\\[\n2(y - 2) = 2\\lambda y \\quad \\text{(2)}\n\\]\n\nSimplifying these equations, we get:\n\\[\nx - 1 = \\lambda x \\quad \\text{(3)}\n\\]\n\\[\ny - 2 = \\lambda y \\quad \\text{(4)}\n\\]\n\nFrom equation (3), we can solve for \\(\\lambda\\):\n\\[\nx - 1 = \\lambda x \\implies \\lambda = 1 - \\frac{1}{x}\n\\]\n\nFrom equation (4), we can solve for \\(\\lambda\\):\n\\[\ny - 2 = \\lambda y \\implies \\lambda = 1 - \\frac{2}{y}\n\\]\n\nSetting the two expressions for \\(\\lambda\\) equal to each other, we get:\n\\[\n1 - \\frac{1}{x} = 1 - \\frac{2}{y} \\implies \\frac{1}{x} = \\frac{2}{y} \\implies y = 2x\n\\]\n\nNow we substitute \\( y = 2x \\) into the constraint \\( x^2 + y^2 = 45 \\):\n\\[\nx^2 + (2x)^2 = 45 \\implies x^2 + 4x^2 = 45 \\implies 5x^2 = 45 \\implies x^2 = 9 \\implies x = \\pm 3\n\\]\n\nIf \\( x = 3 \\), then \\( y = 2(3) = 6 \\). If \\( x = -3 \\), then \\( y = 2(-3)",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

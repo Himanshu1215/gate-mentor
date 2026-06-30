@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q13",
+  "question_seq": 80,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the following statements is TRUE?",
+  "options": {
+    "A": "The LALR(1) parser for a grammar G cannot have reduce-reduce conflict if the LR(1) parser for G does not have reduce-reduce conflict.",
+    "B": "Symbol table is accessed only during the lexical analysis phase.",
+    "C": "Data flow analysis is necessary for run-time memory management.",
+    "D": "LR(1) parsing is sufficient for deterministic context-free languages."
+  },
+  "answer": "D",
+  "solution": "To determine why option (D) is the correct answer, let's analyze each statement one by one.\n\n(A) The LALR(1) parser for a grammar G cannot have reduce-reduce conflict if the LR(1) parser for G does not have reduce-reduce conflict.\n- This statement is false. The LALR(1) parser is a more powerful parsing algorithm than the LR(1) parser. It can handle some context-free languages that the LR(1) parser cannot. Therefore, it is possible for an LALR(1) parser to have reduce-reduce conflict even if the LR(1) parser does not.\n\n(B) Symbol table is accessed only during the lexical analysis phase.\n- This statement is false. The symbol table is accessed during both the lexical analysis phase and the syntax analysis phase. The symbol table contains information about the tokens and their corresponding symbols, which are used during both phases of the parsing process.\n\n(C) Data flow analysis is necessary for run-time memory management.\n- This statement is false. Data flow analysis is a static analysis technique used to determine the flow of data in a program. It is not necessary for run-time memory management. Run-time memory management is handled by dynamic memory分配 algorithms such as garbage collection.\n\n(D) LR(1) parsing is sufficient for deterministic context-free languages.\n- This statement is true. LR(1) parsing is a parsing algorithm that can handle deterministic context-free languages. A deterministic context-free language is a context-free language that can be parsed by a deterministic pushdown automaton. The LR(1) parser is a deterministic pushdown automaton, so it can parse any deterministic context-free language.\n\nTherefore, the correct answer is: D.",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q38",
+  "question_seq": 36,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let ?? be a random variable with probability density function $ f ( x ) = { \\left\\{ \\begin{array} { l l } { 3 } & { { \\mathrm { i f ~ } } - 1 < x < 1 } \\\\ { 8 } & { { \\mathrm { o t h e r w i s e } } . } \\end{array} \\right. } $ If $Y = 1 - X ^ { 2 }$ , then $\\begin{array} { r } { P \\left( Y \\leq \\frac { 3 } { 4 } \\right) } \\end{array}$ equals",
+  "options": {
+    "A": "$\\frac { 1 9 } { 3 2 }$",
+    "B": "$\\frac { 9 } { 1 6 }$",
+    "C": "$\\frac { 1 5 } { 3 2 }$",
+    "D": "$\\frac { 5 } { 8 }$"
+  },
+  "answer": null,
+  "solution": "To find \\( P(Y \\leq \\frac{3}{4}) \\) where \\( Y = 1 - X^2 \\), we need to determine the values of \\( X \\) that satisfy \\( 1 - X^2 \\leq \\frac{3}{4} \\).\n\nFirst, solve the inequality:\n\\[ 1 - X^2 \\leq \\frac{3}{4} \\]\n\\[ -X^2 \\leq \\frac{3}{4} - 1 \\]\n\\[ -X^2 \\leq -\\frac{1}{4} \\]\n\\[ X^2 \\geq \\frac{1}{4} \\]\n\\[ |X| \\geq \\frac{1}{2} \\]\nThis means \\( X \\leq -\\frac{1}{2} \\) or \\( X \\geq \\frac{1}{2} \\).\n\nNext, we need to find the probability that \\( X \\) falls within these ranges. The probability density function \\( f(x) \\) is given by:\n\\[ f(x) = \\begin{cases} \n3 & \\text{if } -1 < x < 1 \\\\\n0 & \\text{otherwise}\n\\end{cases} \\]\n\nThe probability \\( P(X \\leq -\\frac{1}{2}) \\) is the integral of \\( f(x) \\) from \\(-1\\) to \\(-\\frac{1}{2}\\):\n\\[ P(X \\leq -\\frac{1}{2}) = \\int_{-1}^{-\\frac{1}{2}} 3 \\, dx = 3 \\left[ x \\right]_{-1}^{-\\frac{1}{2}} = 3 \\left( -\\frac{1}{2} - (-1) \\right) = 3 \\left( -\\frac{1}{2} + 1 \\right) = 3 \\left( \\frac{1}{2} \\right) = \\frac{3}{2} \\cdot \\frac{1}{2} = \\frac{3}{4} \\cdot \\frac{1}{2} = \\frac{3}{4} \\]\n\nThe probability \\( P(X \\geq \\frac{1}{2}) \\) is the integral of \\( f(x) \\) from \\(\\frac{1}{2}\\) to \\(1\\):\n\\[ P(X \\geq \\frac{1}{2}) = \\int_{\\frac{1}{2}}^{1} 3 \\, dx = 3 \\left[ x \\right]_{\\frac{1}{2}}^{1} = 3 \\left( 1 - \\frac{1}{2} \\right) = 3 \\left( \\frac{1}{2} \\right) = \\frac{3}{2} \\cdot \\frac{1}{2} = \\frac{3}{4} \\cdot \\frac{1}{2} = \\frac{3}{4} \\]\n\nAdding these probabilities together gives:\n\\[ P(Y \\leq \\frac{3}{4}) = P(X \\leq -\\frac{1}{2}) + P(X \\geq \\frac{1}{2}) = \\frac{3}{4} + \\frac{3}{4} = \\frac",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

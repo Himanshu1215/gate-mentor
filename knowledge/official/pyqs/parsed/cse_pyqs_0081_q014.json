@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q14",
+  "question_seq": 81,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In a rela tional data model, which one of the following statements is TRUE?",
+  "options": {
+    "A": "A relation with only two attributes is always in BCNF.",
+    "B": "If all attributes of a relation are prime attributes, then the relation is in BCNF.",
+    "C": "Every relation has at least one non-prime attribute.",
+    "D": "BCNF decompositions preserve functional dependencies."
+  },
+  "answer": "A",
+  "solution": "To determine which statement is true, let's analyze each option step by step.\n\n(A) A relation with only two attributes is always in BCNF.\n- BCNF (BCNF stands for Boyce-Codd normal form) is a normal form in relational DB theory that ensures that every determinant (left-hand side of a functional dependency) is a superkey. In a relation with only two attributes, say \\(A\\) and \\(B\\), the only possible functional dependencies are \\(A \\rightarrow B\\) or \\(B \\rightarrow A\\). In both cases, the determinant (either \\(A\\) or \\(B\\)) is a superkey because it is the only attribute in the relation. Therefore, a relation with only two attributes is always in BCNF.\n- This statement is true.\n\n(B) If all attributes of a relation are prime attributes, then the relation is in BCNF.\n- A prime attribute is an attribute that is part of some key of the relation. If all attributes of a relation are prime attributes, it means that every attribute is part of some key. However, this does not necessarily mean that the relation is in BCNF. For example, consider a relation with attributes \\(A\\), \\(B\\), and \\(C\\) and functional dependencies \\(A \\rightarrow B\\) and \\(B \\rightarrow C\\). Here, \\(A\\), \\(B\\), and \\(C\\) are all prime attributes, but the relation is not in BCNF because the determinant of the functional dependency \\(A \\rightarrow B\\) is not a superkey (it is only a key).\n- This statement is false.\n\n(C) Every relation has at least one non-prime attribute.\n- A non-prime attribute is an attribute that is not part of any key of the relation. If a relation has no non-prime attributes, then every attribute is part of some key, which means the relation is in BCNF. However, not all relations have this property. For example, consider a relation with attributes \\(A\\) and \\(B\\) and functional依赖 \\(A \\rightarrow B\\). Here, \\(A\\) is a prime attribute, but \\(B\\) is not a prime attribute because it is not part of any key (the only key is \\(A\\)).\n- This statement is true.\n\n(D) BCNF decompositions preserve functional dependencies.\n- BCNF decompositions do not necessarily preserve functional dependencies. When a relation is decomposed into BCNF, the functional dependencies in the original relation may not hold in the decomposed relations. For example, consider a relation with attributes \\(A\\), \\(B\\), and \\(C\\) and functional依赖 \\(A \\rightarrow B\\). If we decompose this relation into two relations \\(R_1(A, B)\\) and \\(R_2(B, C)\\), the functional依赖 \\(A \\rightarrow B\\) is not preserved in \\(R_1\\) because \\(A\\) and \\(B\\) are in different relations.\n- This statement is false.\n\nBased on the analysis, the correct answer is:\n\\boxed{A}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

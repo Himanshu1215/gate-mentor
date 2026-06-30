@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q5",
+  "question_seq": 100,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Looking at the surface of a smooth 3-dimensional object from the outside, which one of the following options is TRUE?",
+  "options": {
+    "A": "The surface of the object must be concave everywhere.",
+    "B": "The surface of the object must be convex everywhere.",
+    "C": "The surface of the object may be concave in some places and convex in other places",
+    "D": "The object can have edges, but no corners."
+  },
+  "answer": "C",
+  "solution": "To determine which option is true regarding the surface of a smooth 3-dimensional object, let's analyze each option step by step.\n\n(A) The surface of the object must be concave everywhere.\nThis option states that every point on the surface of the object must be concave. A concave surface means that at any point, the surface curves inward. However, this is not necessarily true for all 3-dimensional objects. For example, a sphere is convex everywhere, and a cylinder can have both convex and concave parts depending on the orientation. Therefore, option (A) is false.\n\n(B) The surface of the object must be convex everywhere.\nThis option states that every point on the surface of the object must be convex. A convex surface means that at any point, the surface curves outward. However, this is not necessarily true for all 3-dimensional objects. For example, a sphere is convex everywhere, but a cylinder can have both convex and concave parts depending on the orientation. Therefore, option (B) is false.\n\n(C) The surface of the object may be concave in some places and convex in other places.\nThis option states that the surface of the object can be concave in some places and convex in other places. This is true for many 3-dimensional objects. For example, a cylinder has both convex and concave parts, and a polyhedron can have both convex and concave faces. Therefore, option (C) is true.\n\n(D) The object can have edges, but no corners.\nThis option states that the object can have edges but no corners. This is not necessarily true for all 3-dimensional objects. For example, a cube has both edges and corners, and a sphere has no edges or corners. Therefore, option (D) is false.\n\nBased on the analysis, the correct answer is:\n\\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

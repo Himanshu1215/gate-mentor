@@ -3,16 +3,13 @@
   "exam": "GATE DA",
   "question_id": "Q20",
   "question_seq": 12,
-  "question_type": "MCQ",
+  "question_type": "NAT",
   "marks": null,
   "difficulty": null,
   "concept_id": "PROB_001",
-  "question_text": "Three fair coins are tossed independently. T is the event that two or more tosses result in heads. S is the event that two or more tosses result in tails. The probability of the event T ∩ S is –",
-  "options": {
-    "A": "0.5",
-    "B": "(C) 0.25",
-    "D": "Sol."
-  },
+  "question_text": "Three fair coins are tossed independently. T is the event that two or more tosses result in heads. S is the event that two or more tosses result in tails. The probability of the event T ∩ S is – (a) 0.5 (b) 0 (c) 0.25 (d) 1 Sol . (b) Example space for tossing three fair coins independently is HHH, HHT, HTT, TTT, TTH, THT, THH, Now, T = {HHT, HHH, HTH, THH} S = {HTT, TTT, TTH, THT} $ \\mathbf { P } ( \\mathrm { T } \\cap \\mathbf { S } ) = { \\frac { \\mathbf { n } \\left( \\mathrm { T } \\cap \\mathbf { S } \\right) } { \\mathbf { n } \\left( \\mathbf { S } \\right) } } $ $ { \\mathrm { T } } \\cap { \\mathrm { } } { \\mathrm { } } { \\mathrm { } } { \\mathrm { } } { \\mathrm { } } = \\phi $ N (T ∩ S) = 0 $ { \\sf P } \\left( { \\sf T } \\cap { \\sf S } \\right) = \\frac { 0 } { 8 } = 0 $ [MCQ]",
+  "options": null,
   "answer": null,
-  "solution": null
+  "solution": "To solve the problem step by step, let's follow the reference solution and ensure we understand each part clearly.\n\n1. **Define the sample space:**\n   When three fair coins are tossed, the sample space \\( S \\) is:\n   \\[\n   S = \\{HHH, HHT, HTT, TTT, TTH, THT, THH, TTT\\}\n   \\]\n   There are 8 possible outcomes.\n\n2. **Define the events T and S:**\n   - Event \\( T \\) is the event that two or more tosses result in heads.\n     \\[\n     T = \\{HHT, HHH, HTH, THH\\}\n     \\]\n     There are 4 outcomes in event \\( T \\).\n   - Event \\( S \\) is the event that two or more tosses result in tails.\n     \\[\n     S = \\{HTT, TTT, TTH, THT\\}\n     \\]\n     There are 4 outcomes in event \\( S \\).\n\n3. **Find the intersection of events T and S:**\n   The intersection \\( T \\cap S \\) is the set of outcomes that are common to both \\( T \\) and \\( S \\).\n   \\[\n   T \\cap S = \\{HHT, HHH, HTH, THH\\} \\cap \\{HTT, TTT, TTH, THT\\}\n   \\]\n   There are no common outcomes between \\( T \\) and \\( S \\).\n   \\[\n   T \\cap S = \\emptyset\n   \\]\n\n4. **Calculate the probability of \\( T \\cap S \\):**\n   The probability \\( P(T \\cap S) \\) is given by the ratio of the number of favorable outcomes to the total number of possible outcomes.\n   \\[\n   P(T \\cap S) = \\frac{n(T \\cap S)}{n(S)}\n   \\]\n   Since \\( T \\cap S = \\emptyset \\), the number of favorable outcomes \\( n(T \\cap S) \\) is 0.\n   \\[\n   n(T \\cap S) = 0\n   \\]\n   The total number of possible outcomes \\( n(S) \\) is 8.\n   \\[\n   n(S) = 8\n   \\]\n   Therefore,\n   \\[\n   P(T \\cap S) = \\frac{0}{8} = 0\n   \\]\n\n5. **State the final answer:**\n   The probability of the event \\( T \\cap S \\) is:\n   \\[\n   \\boxed{0}\n   \\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
 }

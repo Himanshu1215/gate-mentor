@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q9",
+  "question_seq": 57,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "<table><tr><td rowspan=1 colspan=1>Items</td><td rowspan=1 colspan=1>Cost (₹)</td><td rowspan=1 colspan=1>Profit%</td><td rowspan=1 colspan=1>Marked price (₹)</td></tr><tr><td rowspan=1 colspan=1>P</td><td rowspan=1 colspan=1>5400</td><td rowspan=1 colspan=1>一</td><td rowspan=1 colspan=1>5860</td></tr><tr><td rowspan=1 colspan=1>Q</td><td rowspan=1 colspan=1>一</td><td rowspan=1 colspan=1>25</td><td rowspan=1 colspan=1>10000</td></tr></table>",
+  "options": {
+    "D": "etails of prices of two items P and Q are presented in the above table. The ratio of cost of item P to cost of item Q is 3 : 4. Discount is calculated as the difference between the marked price and the selling price. The profit percentage is calculated as the ratio of the difference between selling price and cost, to the cost $ \\left( \\mathsf { P r o f i t \\% } = \\frac { \\mathsf { S e l l i n g \\ p r i c e - C o s t } } { \\mathsf { C o s t } } { \\times } 1 0 0 \\right) . $ The discount on item $\\Omega ,$ as a percentage of its marked price, is.",
+    "A": "25",
+    "C": "5",
+    "B": "10"
+  },
+  "answer": "B",
+  "solution": "To determine the discount on item \\( P \\) as a percentage of its marked price, we need to follow these steps:\n\n1. **Find the cost of item \\( P \\) and item \\( Q \\):**\n   - We are given that the ratio of the cost of item \\( P \\) to the cost of item \\( Q \\) is \\( 3 : 4 \\).\n   - Let the cost of item \\( P \\) be \\( 3x \\) and the cost of item \\( Q \\) be \\( 4x \\).\n   - From the table, we know the cost of item \\( P \\) is \\( 5400 \\) rupees.\n   - Therefore, \\( 3x = 5400 \\).\n   - Solving for \\( x \\):\n     \\[\n     x = \\frac{5400}{3} = 1800\n     \\]\n   - The cost of item \\( Q \\) is:\n     \\[\n     4x = 4 \\times 1800 = 7200 \\text{ rupees}\n     \\]\n\n2. **Calculate the selling price of item \\( P \\):**\n   - The profit percentage for item \\( P \\) is \\( 100\\% \\).\n   - The selling price is given by:\n     \\[\n     \\text{Selling Price} = \\text{Cost} + \\text{Profit}\n     \\]\n   - Since the profit percentage is \\( 100\\% \\), the profit is:\n     \\[\n     \\text{Profit} = 100\\% \\times 5400 = 1 \\times 5400 = 5400 \\text{ rupees}\n     \\]\n   - Therefore, the selling price of item \\( P \\) is:\n     \\[\n     \\text{Selling Price} = 5400 + 5400 = 10800 \\text{ rupees}\n     \\]\n\n3. **Calculate the discount on item \\( P \\):**\n   - The discount is the difference between the marked price and the selling price:\n     \\[\n     \\text{Discount} = \\text{Marked Price} - \\text{Selling Price}\n     \\]\n   - The marked price of item \\( P \\) is \\( 5860 \\) rupees.\n   - Therefore, the discount is:\n     \\[\n     \\text{Discount} = 5860 - 10800 = -400 \\text{ rupees}\n     \\]\n\n4. **Calculate the discount as a percentage of the marked price:**\n   - The discount as a percentage of the marked price is given by:\n     \\[\n     \\text{Discount Percentage} = \\left( \\frac{\\text{Discount}}{\\text{Marked Price}} \\right) \\times 100\n     \\]\n   - Substituting the values:\n     \\[\n     \\text{Discount Percentage} = \\left( \\frac{400}{5860} \\right) \\times 100\n     \\]\n   - Simplifying the fraction:\n     \\[\n     \\text{Discount Percentage} = \\left( \\frac{400}{58",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

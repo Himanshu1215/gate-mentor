@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q44",
+  "question_seq": 39,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X , Y _ { 1 } , Y _ { 2 }$ be independent random variables such that X has the probability density function $ f ( x ) = { \\left\\{ \\begin{array} { l l } { 2 e ^ { - 2 x } } & { { \\mathrm { i f ~ } } x \\geq 0 , } \\\\ { 0 } & { { \\mathrm { o t h e r w i s e , } } } \\end{array} \\right. } $",
+  "options": {
+    "A": "nd $Y _ { 1 }$ and $Y _ { 2 }$ are identically distributed with probability density function $ g ( x ) = { \\left\\{ \\begin{array} { l l } { e ^ { - x } } & { { \\mathrm { i f ~ } } x \\geq 0 , } \\\\ { 0 } & { { \\mathrm { o t h e r w i s e } } . } \\end{array} \\right. } $ For $i = 1 , 2$ , let $R _ { i }$ denote the rank of $Y _ { i }$ among $X , Y _ { 1 } , Y _ { 2 }$ . Then $E ( R _ { 1 } + R _ { 2 } )$ equals:",
+    "B": "$\\frac { 2 2 } { 5 }$",
+    "C": "$\\frac { 2 1 } { 5 }$",
+    "D": "$\\frac { 9 } { 2 }$"
+  },
+  "answer": "A",
+  "solution": "Step 1: Distribution of X and $Y _ { i }$\n\n$X \\sim \\mathrm { E x p } ( 2 )$ (Exponential distribution with rate 2).\n\n$Y _ { 1 } , Y _ { 2 } \\sim \\mathrm { E x p } ( 1 )$ (Exponential distribution with rate 1).\nStep 2: Understanding the Rank Distribution\n\nThe ranks $R _ { 1 }$ and $R _ { 2 }$ are determined by how the random variables compare to each other. Since X has a larger mean (due to rate 2) compared to $Y _ { 1 }$ and $Y _ { 2 }$ (which have rate 1), the ranks will be based on the order of the realizations.\nStep 3: Calculating $E ( R _ { 1 } + R _ { 2 } )$\n\nUsing the properties of ranks for exponential distributions, it can be shown that:\n\n $ E ( R _ { 1 } + R _ { 2 } ) = { \\frac { 1 3 } { 3 } } . $ \n\nThus, the correct answer is ${ \\Bigg [ } { \\frac { 1 3 } { 3 } } { \\Bigg ] } .$\nQuick Tip\n\nFor rank-related problems involving exponential random variables, the expected value is often computed by considering the probabilities of each possible ranking arrangement and integrating over the distributions."
+}

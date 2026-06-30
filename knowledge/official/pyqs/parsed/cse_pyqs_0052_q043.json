@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q43",
+  "question_seq": 52,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Graph is obtained by adding vertex to $K _ { 3 , 4 }$ and making adjacent to every vertex of $K _ { 3 , \\ 4 } .$ The minimum number of colours required to edge-colour is",
+  "options": null,
+  "answer": "D",
+  "solution": "To determine the minimum number of colors required to edge-color the graph obtained by adding a vertex to \\( K_{3,4} \\) and making it adjacent to every vertex of \\( K_{3,4} \\), we need to follow these steps:\n\n1. **Understand the structure of the original graph \\( K_{3,4} \\):**\n   - \\( K_{3,4} \\) is a complete bipartite graph with two sets of vertices: \\( A = \\{a_1, a_2, a_3\\} \\) and \\( B = \\{b_1, b_2, b_3, b_4\\} \\).\n   - Every vertex in set \\( A \\) is connected to every vertex in set \\( B \\).\n\n2. **Add a new vertex \\( v \\) to \\( K_{3,4} \\) and make it adjacent to every vertex in \\( K_{3,4} \\):**\n   - The new graph \\( G \\) now has \\( 7 \\) vertices: \\( A \\cup B \\cup \\{v\\} \\).\n   - Vertex \\( v \\) is connected to all \\( 7 \\) vertices in \\( A \\cup B \\).\n\n3. **Determine the degree of each vertex in \\( G \\):**\n   - Each vertex in \\( A \\) has a degree of \\( 5 \\) (connected to \\( v \\) and the 4 vertices in \\( B \\)).\n   - Each vertex in \\( B \\) has a degree of \\( 4 \\) (connected to \\( v \\) and the 3 vertices in \\( A \\)).\n   - Vertex \\( v \\) has a degree of \\( 7 \\) (connected to all 7 vertices in \\( A \\cup B \\)).\n\n4. **Apply Vizing's Theorem:**\n   - Vizing's Theorem states that the chromatic index \\( \\chi'(G) \\) of a graph \\( G \\) is either \\( \\Delta(G) \\) or \\( \\Delta(G) + 1 \\), where \\( \\Delta(G) \\) is the maximum degree of the vertices in \\( G \\).\n   - In \\( G \\), the maximum degree \\( \\Delta(G) \\) is \\( 7 \\).\n\n5. **Determine the chromatic index \\( \\chi'(G) \\):**\n   - According to Vizing's Theorem, \\( \\chi'(G) \\) is either \\( 7 \\) or \\( 8 \\).\n\n6. **Check if \\( \\chi'(G) = 7 \\) is possible:**\n   - For \\( \\chi'(G) = 7 \\), each edge must be colored with one of 7 colors such that no two adjacent edges share the same color.\n   - Consider the edges incident to vertex \\( v \\). Since \\( v \\) has a degree of \\( 7 \\), it is connected to 7 edges. If we use 7 different colors for these edges, each color will be used exactly once.\n   - Now, consider the edges between vertices in \\( A \\) and \\( B \\). Each vertex in \\( A \\) is connected to 4 vertices in \\( B \\), and each vertex in \\( B \\) is connected to 3 vertices in \\( A \\). Since each edge between \\( A \\",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

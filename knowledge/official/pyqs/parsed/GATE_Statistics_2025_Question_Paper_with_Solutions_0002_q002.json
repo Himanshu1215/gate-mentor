@@ -3,12 +3,17 @@
   "exam": "GATE ST",
   "question_id": "Q2",
   "question_seq": 2,
-  "question_type": "NAT",
+  "question_type": "MCQ",
   "marks": null,
   "difficulty": null,
   "concept_id": "GENERAL",
-  "question_text": "Question Types: The paper consists of 65 questions, divided into: - Statistics: 85 marks",
-  "options": null,
-  "answer": null,
-  "solution": null
+  "question_text": "The President, along with the Council of Ministers, ............. to visit India next week. Select the most appropriate option to complete the above sentence.",
+  "options": {
+    "A": "wish",
+    "B": "wishes",
+    "C": "will wish",
+    "D": "is wishing"
+  },
+  "answer": "B",
+  "solution": "The subject of the sentence is ”The President”, which is singular. The phrase ”along with the Council of Ministers” is a modifying phrase and does not affect the subject-verb agreement.\n\nTherefore, the verb should also be singular.\n\n”wishes” is the singular form of the verb and agrees with the singular subject ”The President”.\n\n”wish” is plural and would be incorrect here.\n\n”will wish” changes the tense unnecessarily.\n\n”is wishing” is awkward and not appropriate in this context.\n\nHence, the correct form is: ”The President, along with the Council of Ministers, wishes to visit India next week.”\nQuick Tip\n\nIgnore interrupting phrases like ”along with”, ”as well as”, etc., when determining subject-verb agreement."
 }

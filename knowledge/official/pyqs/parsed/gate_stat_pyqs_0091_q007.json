@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q7",
+  "question_seq": 91,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , \\dots , X _ { n }$ be a random sample from uniform distribution defined over (0, θ), where $\\theta > 0$ and $n \\geq 2$ . Let $X _ { ( 1 ) } = \\operatorname* { m i n } \\{ X _ { 1 } , \\dots , X _ { n } \\}$ and $X _ { ( n ) } = \\operatorname* { m a x } \\{ X _ { 1 } , \\dots , X _ { n } \\}$ . Then the covariance between $X _ { ( n ) }$ and $X _ { ( 1 ) } / X _ { ( n ) }$ is (A) 0 (B) $n ( n + 1 ) \\theta$ (C) n θ (D) $n ^ { 2 } ( n + 1 ) \\theta$",
+  "options": null,
+  "answer": null,
+  "solution": "To find the covariance between \\(X_{(n)}\\) and \\(X_{(1)}/X_{(n)}\\), we start by recalling the definitions and properties of order statistics from a uniform distribution.\n\nThe probability density function (pdf) of a uniform distribution over \\((0, \\theta)\\) is given by:\n\\[ f(x) = \\frac{1}{\\theta} \\quad \\text{for} \\quad 0 < x < \\theta. \\]\n\nThe cumulative distribution function (cdf) is:\n\\[ F(x) = \\frac{x}{\\theta} \\quad \\text{for} \\quad 0 < x < \\theta. \\]\n\nThe pdf of the maximum order statistic \\(X_{(n)}\\) is:\n\\[ f_{X_{(n)}}(x) = n \\left( \\frac{x}{\\theta} \\right)^{n-1} \\frac{1}{\\theta} = \\frac{n x^{n-1}}{\\theta^n} \\quad \\text{for} \\quad 0 < x < \\theta. \\]\n\nThe pdf of the minimum order statistic \\(X_{(1)}\\) is:\n\\[ f_{X_{(1)}}(x) = n \\left( 1 - \\frac{x}{\\theta} \\right)^{n-1} \\frac{1}{\\theta} = \\frac{n (\\theta - x)^{n-1}}{\\theta^n} \\quad \\text{for} \\quad 0 < x < \\theta. \\]\n\nWe need to find the covariance between \\(X_{(n)}\\) and \\(X_{(1)}/X_{(n)}\\). The covariance is given by:\n\\[ \\text{Cov}(X_{(n)}, X_{(1)}/X_{(n)}) = E\\left[ X_{(n)} \\cdot \\frac{X_{(1)}}{X_{(n)}} \\right] - E[X_{(n)}] E\\left[ \\frac{X_{(1)}}{X_{(n)}} \\right]. \\]\n\nFirst, we calculate \\(E\\left[ X_{(n)} \\cdot \\frac{X_{(1)}}{X_{(n)}} \\right]\\):\n\\[ E\\left[ X_{(n)} \\cdot \\frac{X_{(1)}}{X_{(n)}} \\right] = E[X_{(1)}] = \\int_0^\\theta x \\cdot \\frac{n (\\theta - x)^{n-1}}{\\theta^n} \\, dx. \\]\n\nUsing integration by parts, let \\(u = x\\) and \\(dv = \\frac{n (\\theta - x)^{n-1}}{\\theta^n} \\, dx\\). Then \\(du = dx\\) and \\(v = -\\frac{(\\theta - x)^n}{\\theta^n}\\). Thus,\n\\[ E[X_{(1)}] = \\left[ -\\frac{x (\\theta - x)^n}{\\theta^n} \\right]_0^\\theta + \\int_0^\\theta \\frac{(\\theta - x)^n}{\\theta^n} \\, dx = 0 + \\int_0^\\theta \\frac{(\\theta - x)^n}{\\theta^n} \\, dx = \\int_0^\\",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

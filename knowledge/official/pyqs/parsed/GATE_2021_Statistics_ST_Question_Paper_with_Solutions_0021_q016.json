@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q16",
+  "question_seq": 21,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable having distribution function $ F ( x ) = \\left\\{ \\begin{array} { l l } { 0 , } & { x < 1 , } \\\\ { } & { } \\\\ { a , } & { 1 \\leq x < 2 , } \\\\ { } & { } \\\\ { \\frac { c } { 2 } , } & { 2 \\leq x < 3 , } \\\\ { } & { } \\\\ { \\frac { 6 } { 6 } , } & { x \\geq 3 , } \\end{array} \\right. $ where a and c are appropriate constants. Let $\\begin{array} { r } { A _ { n } = \\left[ 1 + \\frac { 1 } { n } , 3 - \\frac { 1 } { n } \\right] , n \\geq 1 } \\end{array}$ , and $\\begin{array} { r } { A = \\bigcup _ { i = 1 } ^ { \\infty } A _ { i } . I f P ( X \\leq 1 ) = \\frac { 1 } { 2 } } \\end{array}$ and $\\begin{array} { r } { E ( X ) = \\frac { 5 } { 3 } } \\end{array}$ , then $P ( X \\in$ A) equals (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "We are given the distribution function and the probabilities $\\begin{array} { r } { P ( X \\leq 1 ) = \\frac { 1 } { 2 } } \\end{array}$ and $\\begin{array} { r } { E ( X ) = \\frac { 5 } { 3 } } \\end{array}$\n\nFrom the distribution function, we can solve for the values of a and c. Using the properties of\n\nthe cumulative distribution function and the expected value formula, we can determine that:\n\n $ P ( X \\in A ) = 0 . 3 2 . $ \n\nThus, the value is 0.32.\nQuick Tip\n\nTo solve for probabilities in such distribution problems, use the properties of the cumulative distribution function and apply the given information systematically."
+}

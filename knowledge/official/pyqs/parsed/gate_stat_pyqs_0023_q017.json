@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q17",
+  "question_seq": 23,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let ?? be a random variable taking only two values, 1 and 2. Let $M _ { X } ( \\cdot )$ be the moment generating function of ??. If the expectation of ?? is ${ \\frac { 1 0 } { 7 } } ,$ then the fourth derivative of $M _ { X } ( \\cdot )$ evaluated at 0 equals",
+  "options": {
+    "A": "$\\frac { 5 2 } { 7 }$",
+    "B": "$\\frac { 6 7 } { 7 }$",
+    "C": "$\\frac { 4 8 } { 7 }$",
+    "D": "$\\frac { 6 0 } { 7 }$"
+  },
+  "answer": null,
+  "solution": "To solve the problem, we need to determine the fourth derivative of the moment generating function \\( M_X(t) \\) of the random variable \\( X \\) evaluated at \\( t = 0 \\). Given that \\( X \\) takes only two values, 1 and 2, and the expectation of \\( X \\) is \\( \\frac{10}{7} \\), we can start by expressing the probability mass function of \\( X \\).\n\nLet \\( P(X = 1) = p \\) and \\( P(X = 2) = q \\). Since \\( X \\) takes only these two values, we have:\n\\[ p + q = 1. \\]\n\nThe expectation of \\( X \\) is given by:\n\\[ E(X) = 1 \\cdot p + 2 \\cdot q = p + 2q. \\]\nWe know that \\( E(X) = \\frac{10}{7} \\), so:\n\\[ p + 2q = \\frac{10}{7}. \\]\n\nWe now have a system of linear equations:\n1. \\( p + q = 1 \\)\n2. \\( p + 2q = \\frac{10}{7} \\)\n\nSubtracting the first equation from the second, we get:\n\\[ (p + 2q) - (p + q) = \\frac{10}{7} - 1, \\]\n\\[ q = \\frac{10}{7} - \\frac{7}{7}, \\]\n\\[ q = \\frac{3}{7}. \\]\n\nSubstituting \\( q = \\frac{3}{7} \\) back into the first equation, we get:\n\\[ p + \\frac{3}{7} = 1, \\]\n\\[ p = 1 - \\frac{3}{7}, \\]\n\\[ p = \\frac{4}{7}. \\]\n\nSo, the probability mass function is:\n\\[ P(X = 1) = \\frac{4}{7}, \\quad P(X = 2) = \\frac{3}{7}. \\]\n\nThe moment generating function \\( M_X(t) \\) of \\( X \\) is given by:\n\\[ M_X(t) = E(e^{tX}) = \\frac{4}{7} e^t + \\frac{3}{7} e^{2t}. \\]\n\nTo find the fourth derivative of \\( M_X(t) \\) evaluated at \\( t = 0 \\), we first compute the derivatives step by step.\n\nThe first derivative is:\n\\[ M_X'(t) = \\frac{4}{7} e^t + \\frac{3}{7} \\cdot 2 e^{2t} = \\frac{4}{7} e^t + \\frac{6}{7} e^{2t}. \\]\n\nThe second derivative is:\n\\[ M_X''(t) = \\frac{4}{7} e^t + \\frac{6}{7} \\cdot 2 e^{2t} = \\frac{4}{7} e^t + \\frac{12}{7} e^{2t}. \\]\n\nThe third derivative is:\n\\[ M_X'''(t) = \\frac{4}{7} e^t + \\frac{12}{7} \\cdot 2 e^{2t} = \\frac",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

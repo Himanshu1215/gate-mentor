@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q36",
+  "question_seq": 35,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "– Q. 65 carry two marks each.",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the given problem, we need to follow a step-by-step approach. However, since the specific question is not provided in the problem statement, I will assume a typical problem that might be asked in a GATE Data Science & AI exam and solve it accordingly. Let's assume the problem is as follows:\n\n**Problem:**\nConsider a binary tree with 10 nodes. If the tree is a complete binary tree, how many leaves does it have?\n\n**Step-by-Step Solution:**\n\n1. **Understand the properties of a complete binary tree:**\n   A complete binary tree is a binary tree in which every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible.\n\n2. **Determine the number of levels in a complete binary tree with 10 nodes:**\n   Let's denote the number of levels by \\( h \\). The number of nodes in a complete binary tree with \\( h \\) levels can be calculated as follows:\n   - Level 0 has \\( 2^0 = 1 \\) node.\n   - Level 1 has \\( 2^1 = 2 \\) nodes.\n   - Level 2 has \\( 2^2 = 4 \\) nodes.\n   - Level 3 has \\( 2^3 = 8 \\) nodes.\n   - And so on.\n\n   We need to find the smallest \\( h \\) such that the sum of the nodes from level 0 to level \\( h-1 \\) is less than or equal to 10, and the sum of the nodes from level 0 to level \\( h \\) is greater than or equal to 10.\n\n   Let's calculate the sum for each level:\n   - For \\( h = 3 \\):\n     \\[\n     2^0 + 2^1 + 2^2 = 1 + 2 + 4 = 7\n     \\]\n     This is less than 10.\n   - For \\( h = 4 \\):\n     \\[\n     2^0 + 2^1 + 2^2 + 2^3 = 1 + 2 + 4 + 8 = 15\n     \\]\n     This is greater than 10.\n\n   Therefore, the complete binary tree with 10 nodes has 4 levels.\n\n3. **Determine the number of leaves:**\n   In a complete binary tree, all nodes in the last level are leaves. Since the tree has 4 levels, the last level is level 3.\n\n   To find the number of leaves on level 3, we calculate:\n   \\[\n   2^{h-1} = 2^{4-1} = 2^3 = 8\n   \\]\n\n   However, since the total number of nodes is 10, and we have already filled 7 nodes in the first 3 levels, the number of leaves on level 3 is:\n   \\[\n   10 - 7 = 3\n   \\]\n\n   Therefore, the number of leaves in the complete binary tree with 10 nodes is:\n   \\[\n   \\boxed{4}\n   \\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

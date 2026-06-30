@@ -3,12 +3,17 @@
   "exam": "GATE ST",
   "question_id": "Q4",
   "question_seq": 10,
-  "question_type": "NAT",
+  "question_type": "MCQ",
   "marks": null,
   "difficulty": null,
   "concept_id": "GENERAL",
-  "question_text": "Two fair dice, one having red and another having blue color, are tossed independently once. Let A be the event that the die having red colour will show 5 or 6. Let B be the event that the sum of the outcomes will be 7 and let C be the event that the sum of the outcomes will be",
-  "options": null,
-  "answer": null,
-  "solution": null
+  "question_text": "Two fair dice, one having red and another having blue color, are tossed independently once. Let A be the event that the die having red colour will show 5 or 6. Let B be the event that the sum of the outcomes will be 7 and let C be the event that the sum of the outcomes will be 8. Then which one of the following statements is true?",
+  "options": {
+    "A": "A and B are independent as well as A and C are independent",
+    "B": "A and B are independent, but A and C are not independent",
+    "C": "A and C are independent, but A and B are not independent",
+    "D": "Neither A and B are independent, nor A and C are independent"
+  },
+  "answer": "B",
+  "solution": "Step 1: Understand the events.\n\n\\- Event A represents the outcome where the red die shows 5 or 6. Hence, the probability of A is:\n\n $ P ( A ) = P ( { \\mathrm { R e d ~ d i e ~ s h o w s ~ 5 ~ o r ~ 6 } } ) = { \\frac { 2 } { 6 } } = { \\frac { 1 } { 3 } } $ \n\n\\- Event $B$ represents the event that the sum of the outcomes of the two dice is 7. The possible pairs for a sum of $7$ are:\n\n $ ( 1 , 6 ) , ( 2 , 5 ) , ( 3 , 4 ) , ( 4 , 3 ) , ( 5 , 2 ) , ( 6 , 1 ) $ \n\nThere are $6$ outcomes that result in a sum of 7 out of a total of $6 \\times 6 = 3 6$ possible outcomes. Therefore:\n\n $ P ( B ) = { \\frac { 6 } { 3 6 } } = { \\frac { 1 } { 6 } } $ \n\n\\- Event $C$ represents the event that the sum of the outcomes of the two dice is 8. The possible pairs for a sum of 8 are:\n\n $ ( 2 , 6 ) , ( 3 , 5 ) , ( 4 , 4 ) , ( 5 , 3 ) , ( 6 , 2 ) $ \n\nThere are $5$ outcomes that result in a sum of 8 out of 36 total possible outcomes. Therefore:\n\n $ P ( C ) = \\frac { 5 } { 3 6 } $ \nStep 2: Check if events A and B are independent.\n\nTo check if two events are independent, we verify if the following holds:\n\n $ P ( A \\cap B ) = P ( A ) \\cdot P ( B ) $ \n\n$A \\cap B$ is the event where the red die shows 5 or 6 and the sum of the dice is 7. The pairs that satisfy both conditions are:\n\n $ ( 5 , 2 ) , ( 6 , 1 ) $ \n\nThus, there are 2 outcomes that satisfy both A and B, so:\n\n $ P ( A \\cap B ) = { \\frac { 2 } { 3 6 } } = { \\frac { 1 } { 1 8 } } $ \n\nNow, check if $P ( A ) \\cdot P ( B )$ equals $P ( A \\cap B )$\n\n $ P ( A ) \\cdot P ( B ) = { \\frac { 1 } { 3 } } \\times { \\frac { 1 } { 6 } } = { \\frac { 1 } { 1 8 } } $ \n\nSince $P ( A \\cap B ) = P ( A ) \\cdot P ( B )$ , events A and B are independent.\nStep 3: Check if events A and C are independent.\n\nNow, check if $P ( A \\cap C ) = P ( A ) \\cdot P ( C ) . \\ - \\ A \\cap C$ is the event where the red die shows $5$ or 6 and the sum of the dice is 8. The pairs that satisfy both conditions are:\n\n $ ( 5 , 3 ) , ( 6 , 2 ) $ \n\nThus, there are 2 outcomes that satisfy both A and $C ,$ so:\n\n $ P ( A \\cap C ) = { \\frac { 2 } { 3 6 } } = { \\frac { 1 } { 1 8 } } $ \n\nNow, check if $P ( A ) \\cdot P ( C )$ equals $P ( A \\cap C )$\n\n $ P ( A ) \\cdot P ( C ) = { \\frac { 1 } { 3 } } \\times { \\frac { 5 } { 3 6 } } = { \\frac { 5 } { 1 0 8 } } $ \n\nSince $\\begin{array} { r } { P ( A \\cap C ) = \\frac { 1 } { 1 8 } \\neq \\frac { 5 } { 1 0 8 } } \\end{array}$ , events A and $C$ are not independent.\nStep 4: Conclusion.\n\nThe correct statement is (B): A and B are independent, but A and C are not independent.\nQuick Tip\n\nTwo events are independent if and only if $P ( A \\cap B ) = P ( A ) \\cdot P ( B )$ ."
 }

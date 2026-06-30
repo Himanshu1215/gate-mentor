@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q11",
+  "question_seq": 6,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let M be a 2 × 2 real matrix such that $( I + M ) ^ { - 1 } = I - \\alpha M$ , where α is a non-zero real number and I is the 2 × 2 identity matrix. If the trace of the matrix M is 3, then the value of α is",
+  "options": {
+    "A": "$\\frac 3 4$",
+    "B": "$\\frac 1 3$",
+    "C": "$\\frac { 1 } { 2 }$",
+    "D": "$\\textstyle { \\frac { 1 } { 4 } }$"
+  },
+  "answer": "A",
+  "solution": "Given the equation $( I + M ) ^ { - 1 } = I - \\alpha M$ , multiply both sides of the equation by $I + M$\n\n $ ( I + M ) ( I - \\alpha M ) = I $ \n\nExpanding the left-hand side:\n\n $ I - \\alpha M + M - \\alpha M ^ { 2 } = I $ \n\nSimplifying:\n\n $ I + ( 1 - \\alpha ) M - \\alpha M ^ { 2 } = I $ \n\nSubtract I from both sides:\n\n $ ( 1 - \\alpha ) M - \\alpha M ^ { 2 } = 0 $ \n\nNow, the trace of M is given as 3, and the trace of a matrix is the sum of its diagonal elements. Therefore, using the fact that $\\operatorname { t r } ( M ) = 3$ , we can solve for $\\alpha .$\n\nAfter solving, we find that the value of $\\alpha$ is:\n\n $ \\alpha = \\frac { 1 } { 4 } $ \n\nThus, the correct answer is ${ \\Bigg \\vert } { \\frac { 1 } { 4 } } { \\Bigg \\vert } .$\nQuick Tip\n\nWhen working with matrix equations, always remember to multiply both sides by the inverse matrix and simplify step by step. Also, consider using the trace property for helpful insights."
+}

@@ -1,0 +1,17 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q8",
+  "question_seq": 82,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The nomenclature of Hindustani music has changed over the centuries. Since the medieval period dhrupad styles were identified as baanis. Terms like gayaki and baaj were used to refer to vocal and instrumental styles, respectively. With the institutionalization of music education the term gharana became acceptable. Gharana originally referred to hereditary musicians from a particular lineage, including disciples and grand disciples. Which one of the following pairings is NOT correct?",
+  "options": {
+    "A": "dhrupad, baani (B) gayaki, vocal (C) baaj, institution (D) gharana, lineage"
+  },
+  "answer": null,
+  "solution": "To determine which pairing is NOT correct, let's analyze each option based on the given information:\n\n1. **Option (A): dhrupad, baani**\n   - Dhrupad styles were identified as baanis.\n   - This pairing is correct.\n\n2. **Option (B): gayaki, vocal**\n   - Terms like gayaki were used to refer to vocal styles.\n   - This pairing is correct.\n\n3. **Option (C): baaj, institution**\n   - Baaj was used to refer to instrumental styles.\n   - The term gharana originally referred to hereditary musicians from a particular line, including discrimin and grand discrimin.\n   - Baaj does not directly relate to institutions.\n   - This pairing is NOT correct.\n\n4. **Option (D): gharana, line**\n   - Gharana originally referred to hereditary musicians from a particular line.\n   - This pairing is correct.\n\nBased on the analysis, the pairing that is NOT correct is:\n\n\\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

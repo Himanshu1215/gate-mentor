@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q53",
+  "question_seq": 29,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The index node (inode) of a Unix-like file system has 12 direct, one single-indirect and one double-indirect pointers The disk block size is 4 kB and the disk block address is 32-bits long. The maximum possible file size is (rounded off to 1 decimal place) GB.",
+  "options": null,
+  "answer": "4.0",
+  "solution": "To determine the maximum possible file size in the given Unix-like file system, we need to understand the structure of the inode and how it points to disk blocks.\n\n1. **Understanding the Inode Structure:**\n   - The inode has 12 direct pointers.\n   - The inode has 1 single-indirect pointer.\n   - The inode has 1 double(indirect pointer.\n\n2. **Disk Block Size:**\n   - Each disk block is 4 kB.\n\n3. **Disk Block address:**\n   - Each disk block address is 32 bits long.\n\n4. **Calculating the Total Number of Disk Blocks:**\n   - The total number of disk blocks that can be addressable with a 32-bit address is \\(2^{32}\\).\n\n5. **Using the Inode Pointers:**\n   - The 12 direct pointers can point to 12 disk blocks.\n   - The single-indirect pointer can point to 1 disk block, which in turn points to another disk block.\n   - The double(indirect pointer can point to 1 disk block, which in turn points to another disk block, and then to another disk block.\n\n6. **Calculating the Maximum file Size:**\n   - The maximum file size is achieved when the(inode points to the maximum number of disk blocks.\n   - The total number of disk blocks that can be addressable is \\(2^{32}\\).\n   - The maximum file size is the total number of disk blocks multiplied by the size of each disk block.\n\n\\[\n\\text{Maximum file size} = 2^{32} \\times 4 \\text{ GB}\n\\]\n\n7. **Converting to GB:**\n   - \\(2^{32}\\) disk blocks is equal to \\(4294967296\\) disk blocks.\n   - Each disk block is 4 GB.\n\n\\[\n\\text{Maximum file size} = 4294967296 \\times 4 \\text{ GB} = 17179869184 \\text{ GB}\n\\]\n\n8. **Converting to GB:**\n   - \\(17179869184\\) GB is equal to \\(4.0\\) GB when rounded off to 1 decimal place.\n\n\\[\n\\text{Maximum file size} = 4.0 \\text{ GB}\n\\]\n\nTherefore, the maximum possible file size is \\(\\boxed{4.0}\\) GB.",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q1",
+  "question_seq": 19,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "ML_001",
+  "question_text": "The first condition gives the least-squares estimate ${ \\hat { \\boldsymbol { \\beta } } } ,$ which minimizes the sum of squared errors in the linear regression model $y _ { i } = \\beta x _ { i } + \\epsilon _ { i }$ . It is known that the least-squares estimator of $\\beta$ is given by the formula: $ { \\hat { \\beta } } = { \\frac { \\sum _ { i = 1 } ^ { n } x _ { i } y _ { i } } { \\sum _ { i = 1 } ^ { n } x _ { i } ^ { 2 } } } . $ We are given that $\\hat { \\beta } = 1 0$",
+  "options": null,
+  "answer": null,
+  "solution": "To solve for the value of \\(\\beta\\) given the least-squares estimate \\(\\hat{\\beta} = 10\\), we start with the formula for the least-squares estimator of \\(\\beta\\):\n\n\\[\n\\hat{\\beta} = \\frac{\\sum_{i=1}^n x_i y_i}{\\sum_{i=1}^n x_i^2}\n\\]\n\nWe are given that \\(\\hat{\\beta} = 10\\). Therefore, we can substitute 10 for \\(\\hat{\\beta}\\) in the formula:\n\n\\[\n10 = \\frac{\\sum_{i=1}^n x_i y_i}{\\sum_{i=1}^n x_i^2}\n\\]\n\nTo find \\(\\beta\\), we need to understand that \\(\\beta\\) is the true parameter that we are trying to estimate. The least-squares estimate \\(\\hat{\\beta}\\) is an approximation of \\(\\beta\\). However, without additional information about the data points \\(x_i\\) and \\(y_i\\), we cannot determine the exact value of \\(\\beta\\). The given information only tells us that the estimate \\(\\hat{\\beta}\\) is 10.\n\nThus, the final answer is:\n\n\\[\n\\boxed{10}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

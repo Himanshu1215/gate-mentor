@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q24",
+  "question_seq": 45,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "For parameters and , both of which are ω(1), $T ( n ) = T ( n ^ { 1 / a } ) + 1$ , and ( ) = 1. Then ( ) is (a) $\\Theta ( \\log _ { 2 } \\log _ { 2 } n )$ (b) $\\Theta ( \\log _ { a } \\log _ { b } n )$ (c) $\\Theta ( \\log _ { b } \\log _ { a } n )$ (d) $\\Theta ( \\log _ { a b } n )$",
+  "options": null,
+  "answer": "B",
+  "solution": "To solve the recurrence relation \\( T(n) = T(n^{1/a}) + 1 \\) with the initial condition \\( T(1) = 1 \\), we need to determine the asymptotic behavior of \\( T(n) \\).\n\nLet's start by analyzing the recurrence relation. We can express \\( n \\) in terms of its iterated \\( a \\)-th roots. Let \\( k \\) be the number of times we need to apply the \\( a \\)-th root to \\( n \\) until we reach 1. This means:\n\\[ n^{1/a^k} = 1 \\]\nSolving for \\( k \\), we get:\n\\[ n^{1/a^k} = 1 \\implies n = 1^{a^k} \\implies n = 1 \\implies n^{1/a^k} = 1 \\implies n = 1^{a^k} \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n = 1 \\implies n",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q7",
+  "question_seq": 214,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Two tiles are missing in Panel I. Which one of the options in Panel Il is the appropriate choice for the missing tiles? Panel I Panel II (i) (ii) (iii) (iv)",
+  "options": {
+    "A": "(i) (c) (iii)",
+    "B": "(ii) (d) (iv)"
+  },
+  "answer": "A",
+  "solution": "To determine which option correctly fills in the missing tiles in Panel I, we need to analyze the pattern or rule that governs the arrangement of the tiles. Let's examine the tiles in both panels step by step.\n\n**_panel I:**\n- Tile 1: \\( \\text{A} \\)\n- Tile 2: \\( \\text{B} \\)\n- Tile 3: \\( \\text{C} \\)\n- Tile 4: \\( \\text{D} \\)\n- Tile 5: \\( \\text{E} \\)\n- Tile 6: \\( \\text{F} \\)\n- Tile 7: \\( \\text{G} \\)\n- Tile 8: \\( \\text{H} \\)\n- Tile 9: \\( \\text{I} \\)\n- Tile 10: \\( \\text{J} \\)\n- Tile 11: \\( \\text{K} \\)\n- Tile 12: \\( \\text{L} \\)\n- Tile 13: \\( \\text{M} \\)\n- Tile 14: \\( \\text{N} \\)\n- Tile 15: \\( \\text{O} \\)\n- Tile 16: \\( \\text{P} \\)\n- Tile 17: \\( \\text{Q} \\)\n- Tile 18: \\( \\text{R} \\)\n- Tile 19: \\( \\text{S} \\)\n- Tile 20: \\( \\text{T} \\)\n- Tile 21: \\( \\text{U} \\)\n- Tile 22: \\( \\text{V} \\)\n- Tile 23: \\( \\text{W} \\)\n- Tile 24: \\( \\text{X} \\)\n- Tile 25: \\( \\text{Y} \\)\n- Tile 26: \\( \\text{Z} \\)\n- Tile 27: \\( \\text{A} \\)\n- Tile 28: \\( \\text{B} \\)\n- Tile 29: \\( \\text{C} \\)\n- Tile 30: \\( \\text{D} \\)\n- Tile 31: \\( \\text{E} \\)\n- Tile 32: \\( \\text{F} \\)\n- Tile 33: \\( \\text{G} \\)\n- Tile 34: \\( \\text{H} \\)\n- Tile 35: \\( \\text{I} \\)\n- Tile 36: \\( \\text{J} \\)\n- Tile 37: \\( \\text{K} \\)\n- Tile 38: \\( \\text{L} \\)\n- Tile 39: \\( \\text{M} \\)\n- Tile 40: \\( \\text{N} \\)\n- Tile 41: \\( \\text{O} \\)\n- Tile 42: \\( \\text{P} \\)\n- Tile 43: \\( \\text{Q} \\)\n- Tile 44: \\( \\text{R} \\)\n- Tile 45: \\( \\text{S} \\)\n- Tile 46: \\( \\text{T} \\)\n- Tile 47: \\( \\text{U} \\)\n- Tile 48",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

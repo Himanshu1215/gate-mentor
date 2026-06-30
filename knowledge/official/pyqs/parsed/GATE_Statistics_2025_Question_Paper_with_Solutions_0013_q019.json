@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q19",
+  "question_seq": 13,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 }$ be a random sample from $N ( \\theta , 1 )$ distribution, where $\\theta \\in \\mathbb { R }$ . Consider testing $H _ { 0 } : \\theta = 0$ against $H _ { 1 } : \\theta \\neq 0$ . Let $\\phi ( X _ { 1 } , X _ { 2 } )$ be the likelihood ratio test of size 0.05 for testing $H _ { 0 }$ against $H _ { 1 }$ . Then which one of the following options is correct?",
+  "options": {
+    "A": "$\\phi ( X _ { 1 } , X _ { 2 } )$ is a uniformly most powerful test of size 0.05",
+    "B": "$E _ { \\theta } ( \\phi ( X _ { 1 } , X _ { 2 } ) ) \\geq 0 . 0 5 \\forall \\theta \\in \\mathbb { R }$",
+    "C": "There exists a uniformly most powerful test of size 0.05",
+    "D": "$E _ { \\theta = 0 } ( X _ { 1 } \\phi ( X _ { 1 } , X _ { 2 } ) ) = 0 . 0 5$"
+  },
+  "answer": "B",
+  "solution": "The likelihood ratio test is designed to control the size of the test, ensuring that the probability of a type I error (rejecting $H _ { 0 }$ when $\\theta = 0 )$ is no greater than 0.05. Therefore, $E _ { \\theta } ( \\phi ( X _ { 1 } , X _ { 2 } ) )$ should be at least 0.05 for all $\\theta \\in \\mathbb { R }$ , ensuring the test maintains its size. Thus, option (B) is correct.\nQuick Tip\n\nThe likelihood ratio test is designed to ensure the size of the test does not exceed the specified level. In this case, $E _ { \\theta } ( \\varphi ( X _ { 1 } , X _ { 2 } ) ) ~ \\ge ~ 0 . 0 5$ guarantees that the test’s size is properly controlled."
+}

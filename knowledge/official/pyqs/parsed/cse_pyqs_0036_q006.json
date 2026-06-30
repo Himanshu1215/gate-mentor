@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q6",
+  "question_seq": 36,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "There are multiple routes to reach from node 1 to node 2, as shown in the network. The cost of travel on an edge between two nodes is given in rupees. Nodes $\\mathsf { a } ^ { \\prime } \\mathsf { b } ^ { \\prime } , \\mathsf { c } ^ { \\prime }$ $\\because e ^ { \\prime }$ and ‘f’ are toll booths. The toll price at toll booths marked $\\because$ and $^ { \\circ } \\mathsf { C } ^ { \\prime }$ is Rs. 200. and is Rs. 100 for the other toll booths. Which is the cheapest route from node 1 to node 2?",
+  "options": {
+    "A": "$1 - a - C - 2$",
+    "C": "$1 - \\mathsf { f } - \\mathsf { b } - 2$",
+    "B": "$^ { 1 - \\mathrm { b } - 2 }$",
+    "D": "$1 - \\mathsf { f } _ { - \\mathsf { e } - 2 }$"
+  },
+  "answer": "C",
+  "solution": "To determine the cheapest route from node 1 to node 2, we need to calculate the total cost of travel for each given route and compare them. The costs of travel on the edges are as follows:\n- Edge \\(1 \\to a\\): Rs. 100\n- Edge \\(a \\to C\\): Rs. 100\n- Edge \\(C \\to 2\\): Rs. 100\n- Edge \\(1 \\to b\\): Rs. 50\n- Edge \\(b \\to 2\\): Rs. 50\n- Edge \\(1 \\to f\\): Rs. 200\n- Edge \\(f \\to b\\): Rs. 100\n- Edge \\(b \\to e\\): Rs. 100\n- Edge \\(e \\to 2\\): Rs. 100\n\nThe toll prices at the toll booths are:\n- toll booth \\(\\because\\): Rs. 200\n- toll booth \\(\\circ\\): Rs. 100\n- toll booth \\(e\\): Rs. 100\n\nLet's calculate the total cost for each route:\n\n**Route (A): \\(1 - a - C - 2\\)**\n- Cost of edge \\(1 \\to a\\): Rs. 100\n- Cost of edge \\(a \\to C\\): Rs. 100\n- Cost of edge \\(C \\to 2\\): Rs. 100\n- Toll at toll booth \\(C\\): Rs. 200\n- Total cost: \\(100 + 100 + 100 + 200 = 500\\) Rs.\n\n**Route (B): \\(1 - b - 2\\)**\n- Cost of edge \\(1 \\to b\\): Rs. 50\n- Cost of edge \\(b \\to 2\\): Rs. 50\n- Toll at toll booth \\(b\\): Rs. 100\n- Total cost: \\(50 + 50 + 100 = 200\\) Rs.\n\n**Route (C): \\(1 - f - b - 2\\)**\n- Cost of edge \\(1 \\to f\\): Rs. 200\n- Cost of edge \\(f \\to b\\): Rs. 100\n- Cost of edge \\(b \\to 2\\): Rs. 50\n- Toll at toll booth \\(b\\): Rs. 100\n- Total cost: \\(200 + 100 + 50 + 100 = 450\\) Rs.\n\n**Route (D): \\(1 - f - e - 2\\)**\n- Cost of edge \\(1 \\to f\\): Rs. 200\n- Cost of edge \\(f \\to e\\): Rs. 100\n- Cost of edge \\(e \\to 2\\): Rs. 100\n- Toll at toll booth \\(e\\): Rs. 100\n- Total cost: \\(200 + 100 + 100 + 100 = 500\\) Rs.\n\nBy comparing the total costs of the routes:",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q10",
+  "question_seq": 40,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The preorder traversal of a binary search tree is 15, 10. 12, 11, 20, 18, 16, 19. Which one of the following is the postorder traversal of the tree? (a) 20, 19, 18, 16, 15, 12, 11, 10 (b) 10, 11, 12, 15, 16, 18, 19, 20 (c) 19, 16, 18, 20, 11, 12, 10, 15 (d) 11, 12, 10, 16, 19, 18, 20, 15",
+  "options": null,
+  "answer": "D",
+  "solution": "To determine the postorder traversal of the binary search tree given its preorder traversal, we need to understand the structure of the tree. The preorder traversal visits the root first, then the left subtree, and finally the right subtree. The postorder traversal visits the left subtree first, then the right subtree, and finally the root.\n\nGiven the preorder traversal: 15, 10, 12, 11, 20, 18, 16, 19, we can construct the tree step by step.\n\n1. The first element in the preorder traversal is the root of the tree, which is 15.\n2. The next element is 10, which is the left child of the root.\n3. The next element is 12, which is the left child of 10.\n4. The next element is 11, which is the right child of 10.\n5. The next element is 20, which is the right child of the root.\n6. The next element is 18, which is the left child of 20.\n7. The next element is 16, which is the right child of 18.\n8. The next element is 19, which is the right child of 20.\n\nThe tree can be visualized as follows:\n```\n      15\n     /   \\\n    10   20\n   / \\   / \\\n  12 11 18 19\n     / \\\n    16 19\n```\n\nNow, we perform the postorder traversal, which visits the left subtree first, then the right subtree, and finally the root. Starting from the leftmost leaf and moving to the right:\n\n1. 12 (leftmost leaf)\n2. 11 (right child of 12)\n3. 10 (right child of 11)\n4. 16 (leftmost leaf of the right subtree of 10)\n5. 19 (right child of 16)\n6. 18 (right child of 19)\n7. 20 (right child of the root)\n8. 15 (root)\n\nThus, the postorder traversal of the tree is: 12, 11, 10, 16, 19, 18, 20, 15.\n\nTherefore, the correct answer is: \\boxed{D}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q26",
+  "question_seq": 72,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "- Q55 carry two marks each. Q.No. 26 $f \\colon { \\mathbb { R } } \\times { \\mathbb { R } } \\to$ R be defined by $ f ( x , y ) = x ^ { 4 } - 2 x ^ { 3 } y + 1 6 y + 1 7 , $ where R denotes the set of all real numbers. Then",
+  "options": {
+    "A": "f has a local minimum at $\\left( 2 , { \\frac { 4 } { 3 } } \\right)$",
+    "B": "f has a local maximum at $\\left( 2 , { \\frac { 4 } { 3 } } \\right)$",
+    "C": "f has a saddle point at $\\left( 2 , { \\frac { 4 } { 3 } } \\right)$",
+    "D": "f is bounded Q.No. 27 Consider the linear transformation $T \\colon \\mathbb { C } ^ { 3 } \\to \\mathbb { C } ^ { 3 }$ defined by $ T { \\bigl ( } ( x , y , z ) { \\bigr ) } = { \\biggl ( } x , { \\frac { \\sqrt { 3 } } { 2 } } y - { \\frac { 1 } { 2 } } z , { \\frac { 1 } { 2 } } y + { \\frac { \\sqrt { 3 } } { 2 } } z { \\biggr ) } , $ where C is the set of all complex numbers and $\\mathbb { C } ^ { 3 } = \\mathbb { C } \\times \\mathbb { C } \\times \\mathbb { C }$ . Which of the following statements is TRUE?"
+  },
+  "answer": "A",
+  "solution": "To determine the nature of the critical point \\((2, \\frac{4}{3})\\) for the function \\( f(x, y) = x^4 - 2x^3y + 16y + 17 \\), we need to follow these steps:\n\n1. **Find the partial derivatives of \\( f \\):**\n   \\[\n   f_x = \\frac{\\partial f}{\\partial x} = 4x^3 - 6x^2y\n   \\]\n   \\[\n   f_y = \\frac{\\partial f}{\\partial y} = -2x^3 + 16\n   \\]\n\n2. **Set the partial derivatives equal to zero to find the critical points:**\n   \\[\n   f_x = 4x^3 - 6x^2y = 0\n   \\]\n   \\[\n   f_y = -2x^3 + 16 = 0\n   \\]\n\n   From \\( f_y = 0 \\):\n   \\[\n   -2x^3 + 16 = 0 \\implies x^3 = 8 \\implies x = 2\n   \\]\n\n   Substitute \\( x = 2 \\) into \\( f_x = 0 \\):\n   \\[\n   4(2)^3 - 6(2)^2y = 0 \\implies 32 - 24y = 0 \\implies y = \\frac{32}{24} = \\frac{4}{3}\n   \\]\n\n   Thus, the critical point is \\((2, \\frac{4}{3})\\).\n\n3. **Find the second partial derivatives of \\( f \\):**\n   \\[\n   f_{xx} = \\frac{\\partial^2 f}{\\partial x^2} = 12x^2 - 12xy\n   \\]\n   \\[\n   f_{yy} = \\frac{\\partial^2 f}{\\partial y^2} = 16\n   \\]\n   \\[\n   f_{xy} = \\frac{\\partial^2 f}{\\partial x \\partial y} = -6x^2\n   \\]\n\n4. **Evaluate the second partial derivatives at the critical point \\((2, \\frac{4}{3})\\):**\n   \\[\n   f_{xx}\\left(2, \\frac{4}{3}\\right) = 12(2)^2 - 12(2)\\left(\\frac{4}{3}\\right) = 48 - 32 = 16\n   \\]\n   \\[\n   f_{yy}\\left(2, \\frac{4}{3}\\right) = 16\n   \\]\n   \\[\n   f_{xy}\\left(2, \\frac{4}{3}\\right) = -6(2)^2 = -24\n   \\]\n\n5. **Compute the discriminant \\( D \\) at the critical point:**\n   \\[\n   D = f_{xx}f_{yy} - (f_{xy})^2\n   \\]\n   \\[\n   D\\left(2, \\frac{4}{3}\\right) = 16 \\cdot 16 - (-24)^2 = 256 -",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

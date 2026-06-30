@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q2",
+  "question_seq": 11,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Two wizards try to create a spell using all the four elements, water, air, fire, and earth. For this, they decide to mix all these elements in all possible orders. They also decide to work independently. After trying all possible combination of elements, they conclude that the spell does not work. How many attempts does each wizard make before coming to this conclusion, independently?",
+  "options": {
+    "A": "24",
+    "B": "48",
+    "C": "16",
+    "D": "12"
+  },
+  "answer": null,
+  "solution": "To determine how many attempts each wizard makes before coming to the conclusion that the spell does not work, we need to calculate the total number of possible combinations of the four elements (water, air, fire, and earth) and then divide this number by 2 since the wizards work independently.\n\nStep 1: Calculate the total number of permutations of the four elements.\nThe number of permutations of \\( n \\) distinct objects is given by \\( n! \\) (n factorial), which is the product of all positive integers up to \\( n \\).\n\nFor four elements, the number of permutations is:\n\\[\n4! = 4 \\times 3 \\times 2 \\times 1 = 24\n\\]\n\nStep 2: Determine how many attempts each wizard makes.\nSince the wizards work independently, they each try half of the total number of permutations. Therefore, each wizard makes:\n\\[\n\\frac{24}{2} = 12\n\\]\n\nFinal answer:\n\\[\n\\boxed{D}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

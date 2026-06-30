@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q13",
+  "question_seq": 96,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let $( X _ { 1 } , X _ { 2 } , X _ { 3 } )$ be a trivariate normal random vector with mean vector $( - 3 , 1 , 4 )$ and variance-covariance matrix $\\left[ { \\begin{array} { c c c } { 4 } & { 0 } & { 0 } \\\\ { 0 } & { 3 } & { - 3 } \\\\ { 0 } & { - 3 } & { 4 } \\end{array} } \\right]$ . Which of the following statements are true? (i) $X _ { 2 }$ and $X _ { 3 }$ are independent (ii) $X _ { 1 } + X _ { 3 }$ and $X _ { 2 }$ are independent. (iii) $( X _ { 2 } , X _ { 3 } )$ and $X _ { 1 }$ are independent. (iv) ${ \\scriptstyle { \\frac { 1 } { 2 } } } ( X _ { 2 } + X _ { 3 } )$ and $X _ { 1 }$ are independent. (A) (i) and (iii) (B) (ii) and (iii) (C) (i) and (iv) (D) (iii) and (iv)",
+  "options": null,
+  "answer": null,
+  "solution": "To determine which of the given statements are true, we need to analyze the properties of the trivariate normal distribution and the relationships between the random variables \\(X_1\\), \\(X_2\\), and \\(X_3\\).\n\nGiven:\n- Mean vector: \\(\\mu = (-3, 1, 4)\\)\n- Variance-covariance matrix: \\(\\Sigma = \\left[ \\begin{array}{ccc} 4 & 0 & 0 \\\\ 0 & 3 & -3 \\\\ 0 & -3 & 4 \\end{array} \\right]\\)\n\n### Step 1: Check if \\(X_2\\) and \\(X_3\\) are independent\nTwo random variables \\(X_2\\) and \\(X_3\\) are independent if their covariance is zero. From the variance-covariance matrix, we see that:\n\\[\n\\text{Cov}(X_2, X_3) = -3\n\\]\nSince \\(\\text{Cov}(X_2, X_3) \\neq 0\\), \\(X_2\\) and \\(X_3\\) are not independent. Therefore, statement (i) is false.\n\n### Step 2: Check if \\(X_1 + X_3\\) and \\(X_2\\) are independent\nTwo random variables \\(Y = X_1 + X_3\\) and \\(X_2\\) are independent if their covariance is zero. First, we find the covariance between \\(Y\\) and \\(X_2\\):\n\\[\n\\text{Cov}(Y, X_2) = \\text{Cov}(X_1 + X_3, X_2) = \\text{Cov}(X_1, X_2) + \\text{Cov}(X_3, X_2)\n\\]\nFrom the variance-covariance matrix, we have:\n\\[\n\\text{Cov}(X_1, X_2) = 0 \\quad \\text{and} \\quad \\text{Cov}(X_3, X_2) = -3\n\\]\nThus:\n\\[\n\\text{Cov}(Y, X_2) = 0 + (-3) = -3\n\\]\nSince \\(\\text{Cov}(Y, X_2) \\neq 0\\), \\(X_1 + X_3\\) and \\(X_2\\) are not independent. Therefore, statement (ii) is false.\n\n### Step 3: Check if \\((X_2, X_3)\\) and \\(X_1\\) are independent\nTwo random vectors \\((X_2, X_3)\\) and \\(X_1\\) are independent if their cross-covariance matrix is the zero matrix. The cross-covariance matrix between \\((X_2, X_3)\\) and \\(X_1\\) is:\n\\[\n\\text{Cov}((X_2, X_3), X_1) = \\left[ \\begin{array}{cc} \\text{Cov}(X_2, X_1) & \\text{Cov}(X_3, X_1) \\end{array} \\right]\n\\]\nFrom the variance-covariance matrix, we have:\n\\[\n\\text{Cov}(X_",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

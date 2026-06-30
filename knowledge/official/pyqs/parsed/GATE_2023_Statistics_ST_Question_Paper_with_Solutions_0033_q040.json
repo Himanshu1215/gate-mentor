@@ -3,17 +3,12 @@
   "exam": "GATE ST",
   "question_id": "Q40",
   "question_seq": 33,
-  "question_type": "MCQ",
+  "question_type": "NAT",
   "marks": null,
   "difficulty": null,
-  "concept_id": "GENERAL",
-  "question_text": "Let X1, X2, . . . , X10 be a random sample of size 10 from a population having N(0, θ2)",
-  "options": {
-    "D": "istribution, where θ > 0 is an unknown parameter. Let T = 1 P10 i=1 X2 i . If the mean square error of cT (for c > 0), as an estimator of θ2, is minimized at c = c0, then the value of c0 equals",
-    "A": "5",
-    "B": "2",
-    "C": "3"
-  },
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , \\ldots , X _ { 1 0 }$ be a random sample of size 10 from a population having $N ( 0 , \\theta ^ { 2 } )$ distribution, where $\\theta > 0$ is an unknown parameter. Let $\\begin{array} { r } { T = \\frac { 1 } { 1 0 } \\sum _ { i = 1 } ^ { 1 0 } X _ { i } ^ { 2 } } \\end{array}$ . If the mean square error of $c T \\left( \\mathrm { f o r } c > 0 \\right)$ , as an estimator of $\\theta ^ { 2 }$ , is minimized at $c = c _ { 0 }$ , then the value of $c _ { 0 }$ equals $ \\frac { 5 } { 6 } $ $ \\frac { 2 } { 3 } $ $ \\frac { 3 } { 5 } $ $ \\frac { 1 } { 2 } $",
+  "options": null,
   "answer": "A",
-  "solution": "The mean square error (MSE) for an estimator is the sum of the variance and the square of\nthe bias. For the estimator cT, we want to minimize the MSE with respect to the constant c.\nUsing the properties of the variance of T and the bias of cT, we minimize the MSE\nexpression. The optimal value of c that minimizes the MSE is c0 = 5\nThe correct answer is (A) 5\nQuick Tip\n- The mean square error (MSE) is a key measure in the performance of an estimator. It\nis the sum of the variance and the square of the bias.\n- To minimize MSE, we differentiate the MSE expression with respect to the parameter\nand find the value that minimizes it."
+  "solution": "The mean square error (MSE) for an estimator is the sum of the variance and the square of the bias. For the estimator $c T .$ , we want to minimize the MSE with respect to the constant c. Using the properties of the variance of $T$ and the bias of $c T ,$ we minimize the MSE expression. The optimal value of c that minimizes the MSE is $\\begin{array} { r } { c _ { 0 } = \\frac { 5 } { 6 } } \\end{array}$ The correct answer is $\\mathbf { \\left( A \\right) \\Sigma } _ { \\overline { { 6 } } } ^ { \\mathrm { 5 } }$\nQuick Tip\n\n\\- The mean square error (MSE) is a key measure in the performance of an estimator. It is the sum of the variance and the square of the bias.\n\n\\- To minimize MSE, we differentiate the MSE expression with respect to the parameter and find the value that minimizes it."
 }

@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q4",
+  "question_seq": 212,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The values of Stock A and Stock B on a particular day are Rs. 50 and Rs. 80, respectively. An investor invests Rs. 100 in Stock A and Rs. 80 in Stock B. He sells all the stocks the next day when the value of Stock $\\mathsf { A }$ is Rs. 55 and Stock B is Rs. 70. The profit made by the investor is Rs.",
+  "options": {
+    "A": "0",
+    "C": "10",
+    "B": "5",
+    "D": "20"
+  },
+  "answer": "A",
+  "solution": "To determine the profit made by the investor, we need to calculate the total value of the stocks at the time of purchase and the total value of the stocks at the time of sale. The profit is then the difference between the value at the time of sale and the value at the time of purchase.\n\n1. **Calculate the total value of the stocks at the time of purchase:**\n   - The investor invests Rs. 100 in Stock A, and the value of Stock A on the purchase day is Rs. 50. Therefore, the number of shares of Stock A purchased is:\n     \\[\n     \\frac{100}{50} = 2 \\text{ shares}\n     \\]\n   - The investor invests Rs. 80 in Stock B, and the value of Stock B on the purchase day is Rs. 80. Therefore, the number of shares of Stock B purchased is:\n     \\[\n     \\frac{80}{80} = 1 \\text{ share}\n     \\]\n   - The total value of the stocks at the time of purchase is:\n     \\[\n     2 \\times 50 + 1 \\times 80 = 100 + 80 = 180 \\text{ Rs}\n     \\]\n\n2. **Calculate the total value of the stocks at the time of sale:**\n   - The value of Stock A on the sale day is Rs. 55. Therefore, the value of the 2 shares of Stock A sold is:\n     \\[\n     2 \\times 55 = 110 \\text{ Rs}\n     \\]\n   - The value of Stock B on the sale day is Rs. 70. Therefore, the value of the 1 share of Stock B sold is:\n     \\[\n     1 \\times 70 = 70 \\text{ Rs}\n     \\]\n   - The total value of the stocks at the time of sale is:\n     \\[\n     110 + 70 = 180 \\text{ Rs}\n     \\]\n\n3. **Calculate the profit:**\n   - The profit is the difference between the total value of the stocks at the time of sale and the total value of the stocks at the time of purchase:\n     \\[\n     180 - 180 = 0 \\text{ Rs}\n     \\]\n\nTherefore, the profit made by the investor is \\(\\boxed{0}\\). The correct answer is \\(\\boxed{A}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

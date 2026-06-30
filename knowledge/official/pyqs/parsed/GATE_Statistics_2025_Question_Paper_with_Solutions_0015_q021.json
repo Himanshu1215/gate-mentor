@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q21",
+  "question_seq": 15,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable having probability density function $f \\in \\{ f _ { 0 } , f _ { 1 } \\}$ . Let $\\phi$ be a most powerful test of level 0.05 for testing $H _ { 0 } : f = f _ { 0 }$ against $H _ { 1 } : f = f _ { 1 }$ based on X. Then which one of the following options is NOT necessarily correct?",
+  "options": {
+    "A": "ϕ is the unique most powerful test of level 0.05",
+    "B": "$E _ { f _ { 1 } } ( \\phi ( X ) ) \\geq 0 . 0 5$",
+    "C": "$E _ { f _ { 0 } } ( \\phi ( X ) ) \\leq 0 . 0 5$",
+    "D": "For some constant $c \\geq 0 , P _ { f } ( f _ { 1 } ( X ) > c f _ { 0 } ( X ) ) \\leq P _ { f } ( \\phi ( X ) = 1 ) , \\forall f \\in \\{ f _ { 0 } , f _ { 1 } \\}$"
+  },
+  "answer": "A",
+  "solution": "Step 1: Understanding the problem.\n\n$\\phi$ is the most powerful test of level 0.05, meaning that it maximizes the power of the test (the probability of correctly rejecting $H _ { 0 } )$ while maintaining a significance level of 0.05 (the probability of rejecting $H _ { 0 }$ when it is true).\n\nThe Neyman-Pearson Lemma guarantees the existence of a most powerful test for simple hypotheses $H _ { 0 }$ and $H _ { 1 }$ , and the test is unique if we restrict ourselves to simple hypotheses. However, when testing composite hypotheses (which might involve more complex situations), the uniqueness of the test is not guaranteed.\nStep 2: Analyzing the options.\n\nOption (A): The uniqueness of the most powerful test is not guaranteed when the hypotheses are composite. Therefore, $\\phi$ is not necessarily the unique most powerful test of level 0.05 in general. This option is NOT necessarily correct.\n\nOption (B): The power of the test $\\phi$ is $E _ { f _ { 1 } } ( \\phi ( X ) )$ , which is the probability of rejecting $H _ { 0 }$ when $H _ { 1 }$ is true. Since $\\phi$ is the most powerful test, the power must be at least 0.05. This option is correct.\n\nOption (C): The significance level of the test $\\phi$ is $E _ { f _ { 0 } } ( \\phi ( X ) )$ ), which is the probability of rejecting $H _ { 0 }$ when $H _ { 0 }$ is true. By the definition of a level 0.05 test, this probability must be at most 0.05. This option is correct.\n\nOption (D): This condition relates to the likelihood ratio test, where $\\phi$ is defined as the test that rejects $H _ { 0 }$ when the likelihood ratio is sufficiently large. This condition is consistent with the Neyman-Pearson Lemma, which defines the most powerful test in terms of the likelihood ratio. This option is correct.\nStep 3: Conclusion.\n\nThus, the correct answer is $\\boxed { ( A ) } .$ , as it is the statement that is NOT necessarily correct.\nQuick Tip\n\nFor hypothesis testing using the Neyman-Pearson Lemma, remember that the most powerful test is unique for simple hypotheses. However, for composite hypotheses, there might be multiple most powerful tests that satisfy the level constraint."
+}

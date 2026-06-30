@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q14",
+  "question_seq": 63,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In an undirected connected planar graph G, there are eight vertices and five faces. The number of edges in G is",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine the number of edges in the undirected connected planar graph \\( G \\) with eight vertices and five faces, we can use Euler's formula for planar graphs. Euler's formula states that for any connected planar graph:\n\n\\[ V - E + F = 2 \\]\n\nwhere \\( V \\) is the number of vertices, \\( E \\) is the number of edges, and \\( F \\) is the number of faces.\n\nGiven:\n- \\( V = 8 \\) (vertices)\n- \\( F = 5 \\) (faces)\n\nWe need to find \\( E \\) (edges). Plugging the given values into Euler's formula, we get:\n\n\\[ 8 - E + 5 = 2 \\]\n\nFirst, combine the constants on the left side of the equation:\n\n\\[ 13 - E = 2 \\]\n\nNext, isolate \\( E \\) by subtracting 13 from both sides:\n\n\\[ -E = 2 - 13 \\]\n\\[ -E = -11 \\]\n\nFinally, multiply both sides by -1 to solve for \\( E \\):\n\n\\[ E = 11 \\]\n\nThus, the number of edges in the graph \\( G \\) is \\(\\boxed{11}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

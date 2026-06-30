@@ -1,0 +1,18 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q40",
+  "question_seq": 35,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a continuous random variable with probability density function $ f ( x ) = \\frac { 1 } { \\sigma x \\sqrt { 2 \\pi } } \\exp \\left( - \\frac { 1 } { 2 } \\left( \\frac { \\log x - \\mu } { \\sigma } \\right) ^ { 2 } \\right) , \\quad x > 0 , $ where $\\mu \\in \\mathbb { R } , \\sigma > 0$ . If $\\log _ { e } \\left( \\frac { E ( X ^ { 2 } ) } { ( E ( X ) ) ^ { 2 } } \\right) = 4$ , then $\\operatorname { V a r } ( \\log _ { e } X )$ equals: $( \\mathbf { A } ) 2$",
+  "options": {
+    "B": "4",
+    "C": "16",
+    "D": "64"
+  },
+  "answer": "B",
+  "solution": "Step 1: Recognize the distribution.\n\nThe given probability density function suggests that X follows a log-normal distribution. For a log-normal random variable X, if $\\log _ { e } X \\sim N ( \\mu , \\sigma ^ { 2 } )$ , then:\n\n $ \\begin{array} { r } { E ( X ) = \\exp ( \\mu + \\frac { \\sigma ^ { 2 } } { 2 } ) , } \\end{array} $ \n\n $ E ( X ^ { 2 } ) = \\exp ( 2 \\mu + 2 \\sigma ^ { 2 } ) , $ \n\n $ \\operatorname { V a r } ( X ) = \\exp ( 2 \\mu + 2 \\sigma ^ { 2 } ) - \\exp ( 2 \\mu + \\sigma ^ { 2 } ) . $ \nStep 2: Analyze the given condition.\n\nWe are given log<sub>e</sub> $\\left( \\frac { E ( X ^ { 2 } ) } { ( E ( X ) ) ^ { 2 } } \\right) = 4$ . Let’s first compute $\\frac { E ( X ^ { 2 } ) } { ( E ( X ) ) ^ { 2 } }$\n\n $ { \\frac { E ( X ^ { 2 } ) } { ( E ( X ) ) ^ { 2 } } } = { \\frac { \\exp ( 2 \\mu + 2 \\sigma ^ { 2 } ) } { \\left( \\exp ( \\mu + { \\frac { \\sigma ^ { 2 } } { 2 } } ) \\right) ^ { 2 } } } = { \\frac { \\exp ( 2 \\mu + 2 \\sigma ^ { 2 } ) } { \\exp ( 2 \\mu + \\sigma ^ { 2 } ) } } = \\exp ( \\sigma ^ { 2 } ) . $ \n\nThus, $\\log _ { e } ( \\exp ( \\sigma ^ { 2 } ) ) = \\sigma ^ { 2 }$ . Given that this equals 4, we have $\\sigma ^ { 2 } = 4$\n\nStep 3: Find $\\mathbf { V a r } ( \\log _ { e } X )$\n\nSince $\\log _ { e } X \\sim N ( \\mu , \\sigma ^ { 2 } )$ , we know that the variance of $\\log _ { e } X$ is simply $\\sigma ^ { 2 }$ . Therefore,\n\n $ \\operatorname { V a r } ( \\log _ { e } X ) = 4 . $ \n\nThus, the answer is 4 .\nQuick Tip\n\nFor log-normal distributions, the variance of the logarithm of the variable is just $\\sigma ^ { 2 }$ , the variance of the underlying normal distribution."
+}

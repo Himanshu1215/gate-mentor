@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q64",
+  "question_seq": 57,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $( X _ { 1 } , X _ { 2 } , X _ { 3 } ) ^ { T }$ have the following distribution $ N _ { 3 } \\left( { \\binom { 0 } { 0 } } , { \\left( \\begin{array} { l l l } { 1 } & { 0 . 4 } & { 0 } \\\\ { 0 } \\\\ { 0 } \\\\ { 0 } \\end{array} \\right) } , { \\left( \\begin{array} { l l l } { 1 } & { 0 . 4 } & { 0 } \\\\ { 0 . 4 } & { 1 } & { 0 . 6 } \\\\ { 0 } & { 0 . 6 } & { 1 } \\end{array} \\right) } \\right) . $ Then the value of the partial correlation coefficient between $X _ { 1 }$ and $X _ { 2 }$ given $X _ { 3 }$ is (rounded off to two decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Recall the formula for the partial correlation coefficient.\n\nThe partial correlation coefficient between two variables $X _ { 1 }$ and $X _ { 2 } .$ , given a third variable $X _ { 3 }$ , is given by:\n\n $ \\rho _ { X _ { 1 } , X _ { 2 } | X _ { 3 } } = \\frac { \\mathrm { C o v } ( X _ { 1 } , X _ { 2 } ) - \\mathrm { C o v } ( X _ { 1 } , X _ { 3 } ) \\mathrm { C o v } ( X _ { 2 } , X _ { 3 } ) } { \\sqrt { ( \\mathrm { V a r } ( X _ { 1 } ) - \\mathrm { C o v } ( X _ { 1 } , X _ { 3 } ) ^ { 2 } ) ( \\mathrm { V a r } ( X _ { 2 } ) - \\mathrm { C o v } ( X _ { 2 } , X _ { 3 } ) ^ { 2 } ) } } . $ \n\nStep 2: Identify the covariance matrix.\n\nFrom the given covariance matrix, we have:\n\n $ \\operatorname { C o v } ( X _ { 1 } , X _ { 2 } ) = 0 . 4 , \\quad \\operatorname { C o v } ( X _ { 1 } , X _ { 3 } ) = 0 , \\quad \\operatorname { C o v } ( X _ { 2 } , X _ { 3 } ) = 0 . 6 . $ \n\nThe variances are:\n\n $ \\operatorname { V a r } ( X _ { 1 } ) = 1 , \\quad \\operatorname { V a r } ( X _ { 2 } ) = 1 , \\quad \\operatorname { V a r } ( X _ { 3 } ) = 1 . $ \n\nStep 3: Compute the partial correlation.\n\nSubstituting the values into the formula for partial correlation:\n\n $ \\rho _ { X _ { 1 } , X _ { 2 } | X _ { 3 } } = \\frac { 0 . 4 - 0 \\times 0 . 6 } { \\sqrt { ( 1 - 0 ^ { 2 } ) ( 1 - 0 . 6 ^ { 2 } ) } } = \\frac { 0 . 4 } { \\sqrt { ( 1 ) ( 1 - 0 . 3 6 ) } } = \\frac { 0 . 4 } { \\sqrt { 0 . 6 4 } } = \\frac { 0 . 4 } { 0 . 8 } = 0 . 5 . $ \n\nThus, the partial correlation coefficient is 0.50 .\nQuick Tip\n\nPartial correlation coefficients measure the strength of a relationship between two variables after removing the influence of a third variable. Use the covariance matrix to compute them."
+}

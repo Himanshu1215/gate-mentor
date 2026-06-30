@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q55",
+  "question_seq": 181,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Given a computing system with two levels of cache (L1 and L2) and a main memory. The first level (L1) cache access time is 1 nanosecond (ns) and the “hit rate” for L1 cache is 90% while the processor is accessing the data from L1 cache. Whereas, for the second level (L2) cache, the “hit rate” is 80% and the “miss penalty” for transferring data from L2 cache to L1 cache is 10 ns. The “miss penalty” for the data to be transferred from main memory to L2 cache is 100 ns. Then the average memory access time in this system in nanoseconds is (rounded off to one decimal place) [2025 (Set-2): 2 M]",
+  "options": null,
+  "answer": "B",
+  "solution": "To determine the average memory access time in the system, we need to consider all possible scenarios of memory access and their respective probabilities. Let's break it down step by step.\n\n1. **Define the probabilities and times:**\n   - Probability of hitting L1 cache (P(L1 hit)) = 0.90\n   - Probability of missing L1 cache (P(L1 miss)) = 1 - 0.90 = 0.10\n   - Probability of hitting L2 cache given that L1 miss (P(L2 hit | L1 miss)) = 0.80\n   - Probability of missing L2 cache given that L1 miss (P(L2 miss | L1 miss)) = 1 - 0.80 = 0.20\n   - Time to access data from L1 cache (T(L1)) = 1 ns\n   - Time to access data from L2 cache (T(L2)) = 1 ns + 10 ns = 11 ns (including the miss penalty from L2 to L1)\n   - Time to access data from main memory (T(MM)) = 1 ns + 100 ns = 101 ns (including the miss penalty from main memory to L2)\n\n2. **Calculate the average memory access time:**\n   The average memory access time (T) is the sum of the times for each scenario weighted by their respective probabilities.\n   \\[\n   T = P(\\text{L1 hit}) \\cdot T(\\text{L1}) + P(\\text{L1 miss}) \\cdot P(\\text{L2 hit} | \\text{L1 miss}) \\cdot T(\\text{L2}) + P(\\text{L1 miss}) \\cdot P(\\text{L2 miss} | \\text{L1 miss}) \\cdot T(\\text{MM})\n   \\]\n   Substituting the values we have:\n   \\[\n   T = 0.90 \\cdot 1 + 0.10 \\cdot 0.80 \\cdot 11 + 0.10 \\cdot 0.20 \\cdot 101\n   \\]\n   Simplify each term:\n   \\[\n   T = 0.90 + 0.10 \\cdot 8.8 + 0.10 \\cdot 20.2\n   \\]\n   \\[\n   T = 0.90 + 0.88 + 2.02\n   \\]\n   \\[\n   T = 3.80\n   \\]\n\nTherefore, the average memory access time in this system is \\(\\boxed{3.8}\\) nanoseconds.",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

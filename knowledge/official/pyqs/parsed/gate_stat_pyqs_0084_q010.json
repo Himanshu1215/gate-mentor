@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q10",
+  "question_seq": 84,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "“I read somewhere that in ancient times the prestige of a kingdom depended upon the number of taxes that it was able to levy on its people. It was very much like the prestige of a head-hunter in his own community.\"",
+  "options": {
+    "B": "ased on the paragraph above, the prestige of a head-hunter depended upon",
+    "A": "the prestige of the kingdom",
+    "C": "the number of taxes he could levy",
+    "D": "the number of heads he could gather END OF THE QUESTION PAPER"
+  },
+  "answer": null,
+  "solution": "To solve the given question step by step, let's analyze the information provided and identify the correct answer.\n\n1. **Understand the context**: The question states that the prestige of a kingdom in ancient times depend upon the number of taxes it was able to levy on its people. This means that the more taxes a kingdom could levy, the more prestigious it was.\n\n2. **Identify the relevant information**: The correct answer should reflect the relationship between the number of taxes a kingdom could levy and its prestige.\n\n3. **Analyze the options**:\n   - (A) the prestige of the kingdom: This option is a general statement about the prestige of the kingdom, but it does not specify the relationship with the number of taxes.\n   - (B) ased on the paragraph above, the prestige of a head-hunter depends upon: This option is incorrect because it refers to the precision of a head-hunter, not the number of taxes a kingdom could levy.\n   - (C) the number of taxes he could levy: This option correctly states that the number of taxes a kingdom could levy is the factor that determines its prestige.\n   - (D) the number of heads he could gather: This option is incorrect because it refers to the number of heads a head-hunter could gather, not the number of taxes a kingdom could levy.\n\n4. **Conclusion**: The correct answer is (C) the number of taxes he could levy.\n\nTherefore, the final answer is:\n\\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

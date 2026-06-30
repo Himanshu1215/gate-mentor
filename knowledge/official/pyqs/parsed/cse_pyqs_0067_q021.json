@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q21",
+  "question_seq": 67,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In the context of operating systems, which of the following statements is/are correct with respect to paging?",
+  "options": {
+    "A": "Paging incurs memory overheads.",
+    "B": "Multi-level paging is necessary to support pages of different sizes.",
+    "C": "Page size has no impact on internal fragmentation",
+    "D": "Paging helps solve the issue of external fragmentation."
+  },
+  "answer": "A",
+  "solution": "To determine why option (A) is correct, let's analyze each statement in the context of paging in operating systems.\n\n(A) paging incurs memory overheads.\n- paging is a technique used to manage memory in computers by dividing the memory into fixed-sized pages. When a process needs to access a page that is not currently in memory, it must be paged in from disk. This operation requires additional memory to store the page in the frame, which can lead to memory overheads. Therefore, statement (A) is correct.\n\n(B) multi-level paging is necessary to support pages of different sizes.\n- multi-level paging is a technique where pages are divided into smaller pages or segments. This is useful when dealing with large pages or when different processes require pages of different sizes. However, multi-level paging is not strictly necessary to support pages of different sizes. Single-level paging can also be used if all pages are of the same size. Therefore, statement (B) is not necessarily correct.\n\n(C) page size has no impact on internal碎片ation.\n- internal碎片ation occurs when a page is split into smaller pieces due to the use of pages that are smaller than the page size. This can lead to internal碎片ation. Therefore, statement (C) is incorrect.\n\n(D) paging helps solve the issue of external碎片ation.\n- external碎片ation occurs when a page is split into smaller pieces due to the use of pages that are larger than the page size. This can lead to external碎片ation. paging helps solve the issue of external碎片ation by ensuring that all pages are of the same size and by manageable the memory overheads associated with panging. Therefore, statement (D) is correct.\n\nBased on the analysis, the correct answer is:\n\n\\boxed{A}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

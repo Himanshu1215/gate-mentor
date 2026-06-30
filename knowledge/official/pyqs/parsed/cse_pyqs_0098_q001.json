@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q1",
+  "question_seq": 98,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "We reached the station late, and missed the train. (a) near (b) nearly (c) utterly (d) mostly",
+  "options": null,
+  "answer": "B",
+  "solution": "To determine the correct answer to the question \"We reached the station late, and missed the train. (a) near (b) nearly (c) utterly (d) mostly,\" we need to analyze the context and the meaning of each option.\n\n1. **Option (a) near**: This means \"close to\" or \"not too far away.\" If we reached the station late but were still close to the train, it would imply that the train was not far away when we arrived. However, since we missed the train, it suggests that the train was not close to us when we arrived.\n\n2. **Option (b) nearly**: This means \"almost\" or \"just about.\" If we reached the station late but were almost at the train, it would imply that the train was just about to arrive when we arrived. However, since we missed the train, it suggests that the train was not just about to arrive when we arrived.\n\n3. **Option (c) utterly**: This means \"completely\" or \"completely done.\" If we reached the station late but wereutterly late, it would imply that we were extremely late when we arrived. However, since we missed the train, it suggests that we were not completely late when we arrived.\n\n4. **Option (d) mostly**: This means \"most\" or \"the majority.\" If we reached the station late but were most late, it would imply that we were late to a significant extent when we arrived. However, since we missed the train, it suggests that we were not most late when we arrived.\n\nGiven the context that we reached the station late and missed the train, the most logical interpretation is that we were close to the train but not quite there. Therefore, the correct answer is \"nearly.\"\n\nThe final answer is: \\boxed{B}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

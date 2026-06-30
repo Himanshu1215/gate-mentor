@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q24",
+  "question_seq": 87,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let WB and WT be two set associative cache organizations that use LRU algorithm for cache block replacement. WB is a write back cache and WT is a write through cache. Which of the following statements is/are FALSE?",
+  "options": {
+    "A": "Each cache block in WB and WT has a dirty bit.",
+    "B": "Every write hit in WB leads to a data transfer from cache to main memory.",
+    "C": "Eviction of a block from WT will not lead to data transfer from cache to main memory.",
+    "D": "A read miss in WB will never lead to eviction of a dirty block from WB."
+  },
+  "answer": "A",
+  "solution": "To determine which statement is false, let's analyze each statement one by one in the context of write back (WB) and write through (WT) cache organizations.\n\n(A) Each cache block in WB and WT has a dirty bit.\n- In a write back cache (WB), when a block is written to main memory, the dirty bit of that block is set to indicate that it is dirty. This is true.\n- In a write through cache (WT), when a block is written to main memory, the dirty bit of that block is also set to indicate that it is dirty. This is true.\n- Therefore, statement (A) is true.\n\n(B) Every write hit in WB leads to a data transfer from cache to main memory.\n- In a write back cache (WB), when a block is written to main memory, the dirty bit of that block is set, and the block is transferred from the cache to main memory. This is true.\n- Therefore, statement (B) is true.\n\n(C) Eviction of a block from WT will not lead to data transfer from cache to main memory.\n- In a write through cache (WT), when a block is evicted from the cache, the dirty bit of that block is not set, so no data transfer from the cache to main memory is required. This is true.\n- Therefore, statement (C) is true.\n\n(D) A read miss in WB will never lead to eviction of a dirty block from WB.\n- In a write back cache (WB), when a read miss occurs, the block is not found in the cache, so it needs to be evicted from the cache. The dirty bit of the block is set to indicate that it is dirty, and the block is transferred from the cache to main memory. This means that a read miss in WB will lead to the evaporation of a dirty block from WB. Therefore, statement (D) is false.\n\nThe correct answer is: \\boxed{D}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

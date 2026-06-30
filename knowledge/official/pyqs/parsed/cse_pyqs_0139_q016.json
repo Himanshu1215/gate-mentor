@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q16",
+  "question_seq": 139,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following process state transitions is/are NOT possible?",
+  "options": {
+    "A": "Waiting to Running",
+    "C": "Running to Terminated",
+    "B": "Ready to Waiting",
+    "D": "Running to Ready"
+  },
+  "answer": "A",
+  "solution": "To determine which process state transition is NOT possible, let's analyze each option step by step:\n\n1. **Waiting to Running**: This transition is possible. A process can be in the waiting state and then transition to the running state. For example, a process can be waiting for a resource to become available and then start running once the resource is free.\n\n2. **Ready to Waiting**: This transition is possible. A process can be in the ready state and then transition to the waiting state. For example, a process can be ready to be scheduled but then be dropped from the schedule and start waiting.\n\n3. **Running to Terminated**: This transition is possible. A process can be in the running state and then transition to the terminated state. For example, a process can be running and then finish executing, at which point it terminates.\n\n4. **Running to Ready**: This transition is NOT possible. A process cannot transition from the running state to the ready state. Once a process is running, it is in an active state and cannot be dropped from the schedule or ready to be scheduled again without first terminating.\n\nTherefore, the correct answer is \\boxed{A}.",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

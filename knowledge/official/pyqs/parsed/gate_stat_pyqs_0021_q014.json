@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q14",
+  "question_seq": 21,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let ${ \\pmb u } _ { 1 } , { \\pmb u } _ { 2 } , { \\pmb u } _ { 3 } , { \\pmb v } _ { 1 } , { \\pmb v } _ { 2 } , { \\pmb v } _ { 3 }$ be vectors in $\\mathbb { R } ^ { 4 }$ . Let ?? be the span of $\\{ \\pmb { u } _ { 1 } , \\pmb { u } _ { 2 } , \\pmb { u } _ { 3 } \\}$ and let ?? be the span of $\\{ v _ { 1 } , v _ { 2 } , v _ { 3 } \\}$",
+  "options": {
+    "C": "onsider the following statements: (I) If the dimension of ?? ∩ ?? is 2 and the dimension of ?? is 3, then $\\{ v _ { 1 } , v _ { 2 } , v _ { 3 } \\}$ is linearly dependent. (II) If $U + V = \\{ \\pmb { u } + \\pmb { v } : \\pmb { u } \\in U , \\pmb { v } \\in V \\} = \\mathbb { R } ^ { 4 }$ , then either $\\{ \\pmb { u } _ { 1 } , \\pmb { u } _ { 2 } , \\pmb { u } _ { 3 } \\}$ is linearly independent or $\\{ v _ { 1 } , v _ { 2 } , v _ { 3 } \\}$ is linearly independent. Which of the above statements is/are true?",
+    "A": "Only (I)",
+    "B": "Only (II)",
+    "D": "Neither (I) nor (II)"
+  },
+  "answer": null,
+  "solution": "To solve the problem, we need to analyze each statement separately.\n\n**Statement (I): If the dimension of \\( U \\cap V \\) is 2 and the dimension of \\( U \\) is 3, then \\( \\{ v_1, v_2, v_3 \\} \\) is linearly dependent.**\n\nThe dimension of \\( U \\cap V \\) is 2, which means that the intersection of the two subspaces \\( U \\) and \\( V \\) has a basis with 2 vectors. The dimension of \\( U \\) is 3, so the basis of \\( U \\) has 3 vectors. Since \\( U \\cap V \\) is a subspace of \\( U \\), the basis of \\( U \\cap V \\) can be extended to a basis of \\( U \\) by adding one more vector. This means that \\( U \\) can be spanned by the basis of \\( U \\cap V \\) plus one more vector from \\( U \\) that is not in \\( U \\cap V \\).\n\nNow, consider the dimension of \\( V \\). Since \\( U \\cap V \\) has dimension 2, the dimension of \\( V \\) must be at least 2. If the dimension of \\( V \\) is exactly 2, then \\( V = U \\cap V \\), and \\( \\{ v_1, v_2, v_3 \\} \\) must be linearly dependent because they can only span a 2-dimensional space. If the dimension of \\( V \\) is greater than 2, then \\( V \\) must have at least one vector that is not in \\( U \\cap V \\). However, since the dimension of \\( U \\) is 3, and \\( U \\cap V \\) already has 2 vectors, \\( V \\) must have at least one vector that is not in \\( U \\cap V \\), and this vector must be linearly independent of the vectors in \\( U \\cap V \\). Therefore, \\( \\{ v_1, v_2, v_3 \\} \\) must be linearly dependent.\n\nSo, statement (I) is true.\n\n**Statement (II): If \\( U + V = \\{ \\pmb{u} + \\pmb{v} : \\pmb{u} \\in U, \\pmb{v} \\in V \\} = \\mathbb{R}^4 \\), then either \\( \\{ \\pmb{u}_1, \\pmb{u}_2, \\pmb{u}_3 \\} \\) is linearly independent or \\( \\{ v_1, v_2, v_3 \\} \\) is linearly independent.**\n\nThe dimension of \\( U + V \\) is 4, which means that the sum of the dimensions of \\( U \\) and \\( V \\) minus the dimension of their intersection is 4. Let the dimension of \\( U \\) be \\( \\text{dim}(U) = m \\) and the dimension of \\( V \\) be \\( \\text{dim}(V) = n \\). Then we have:\n\\[\n\\text{dim}(U + V) = \\text{dim}(U) + \\text{dim}(V) - \\text{dim}(U \\cap V) =",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

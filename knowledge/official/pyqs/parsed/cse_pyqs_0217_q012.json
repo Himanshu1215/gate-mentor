@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q12",
+  "question_seq": 217,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The set T represents various traversals over binary tree. The set S represents the order of visiting nodes during a traversal. I:Inorder L: left subtree, node, right subtree II: Preorder M: node, left subtree, right subtree III: Postorder N: left subtree, right subtree, node Which one of the following is the correct match from T to S?",
+  "options": {
+    "A": "$| \\mathbf { \\sigma } - \\mathbf { \\sigma } | , \\ | | \\mathbf { \\sigma } - \\mathsf { M } , \\ | | | \\mathbf { \\sigma } - \\mathsf { N }$",
+    "C": "$| \\mathbf { \\Pi } - \\mathsf { N } , \\mathsf { \\Pi } | | \\mathbf { \\Pi } - \\mathsf { M } , \\mathsf { \\Pi } | | \\mathbf { \\Pi } - \\mathsf { L }$",
+    "B": "$| \\mathbf { \\partial } - \\mathsf { M } , \\mathsf { \\Omega } | | \\mathbf { \\partial } - \\mathsf { L } , \\mathsf { \\Omega } | | | \\mathbf { \\partial } - \\mathsf { N }$",
+    "D": "$| \\ - \\ \\mathsf { L } , \\ | | \\ - \\ \\mathsf { N } , \\ | | | \\ - \\ \\mathsf { M }$"
+  },
+  "answer": "A",
+  "solution": "To determine the correct match from the set \\( T \\) to the set \\( S \\), we need to understand the definitions of the traversals in a binary tree:\n\n1. **Inorder (I)**: The root is visited after the left subtree and before the right subtree.\n2. **Preorder (L)**: The root is visited before the left subtree and before the right subtree.\n3. **Postorder (N)**: The root is visited after the left subtree and after the right subtree.\n\nWe are given the options and need to match them to the correct traversals. Let's analyze each option step by step:\n\n**Option (A):** \\( | \\mathbf{ \\sigma } - \\mathbf{ \\sigma } |, \\ | \\mathbf{ \\sigma } - \\mathbf{ M } |, \\ | \\mathbf{ \\sigma } - \\mathbf{ N } \\)\n\n- \\( | \\mathbf{ \\sigma } - \\mathbf{ \\sigma } | \\): This represents the number of elements in the set \\( \\mathbf{ \\sigma } \\) that are not in the set \\( \\mathbf{ \\sigma } \\). This is always 0.\n- \\( | \\mathbf{ \\sigma } - \\mathbf{ M } | \\): This represents the number of elements in the set \\( \\mathbf{ \\sigma } \\) that are not in the set \\( \\mathbf{ M } \\). This is the number of elements in \\( \\mathbf{ \\sigma } \\) that are not in the order of visiting nodes during a preorder traversal.\n- \\( | \\mathbf{ \\sigma } - \\mathbf{ N } | \\): This represents the number of elements in the set \\( \\mathbf{ \\sigma } \\) that are not in the set \\( \\mathbf{ N } \\). This is the number of elements in \\( \\mathbf{ \\sigma } \\) that are not in the order of visiting nodes during a postorder traversal.\n\nSince \\( \\mathbf{ \\sigma } \\) represents the order of visiting nodes during an inorder traversal, \\( | \\mathbf{ \\sigma } - \\mathbf{ \\sigma } | = 0 \\). The other two values represent the number of elements in \\( \\mathbf{ \\sigma } \\) that are not in \\( \\mathbf{ M } \\) and \\( \\mathbf{ N } \\), respectively. This matches the structure of the correct answer.\n\n**Option (B):** \\( | \\mathbf{ \\partial } - \\mathbf{ M } |, \\mathbf{ \\Omega } | | \\mathbf{ \\partial } - \\mathbf{ L } |, \\mathbf{ \\Omega } | | \\mathbf{ \\partial } - \\mathbf{ N } | \\)\n\n- \\( | \\mathbf{ \\partial } - \\mathbf{ M } | \\): This represents the number of elements in the set \\( \\mathbf{ \\partial } \\) that are not in the set \\( \\mathbf{ M } \\). This does not match the structure of the correct answer.\n- \\( \\mathbf{ \\Omega } \\): This is not a valid operation in this context.\n\n**Option (C):** \\( | \\mathbf{ \\Pi } - \\math",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

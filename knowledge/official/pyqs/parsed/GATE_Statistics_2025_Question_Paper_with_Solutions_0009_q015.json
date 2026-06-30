@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q15",
+  "question_seq": 9,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $( X _ { 1 } , X _ { 2 } , X _ { 3 } )$ follow the multinomial distribution with the number of trials being 100 and the probability vector $\\left( { \\frac { 3 } { 1 0 } } , { \\frac { 1 } { 1 0 } } , { \\frac { 3 } { 5 } } \\right)$ . Then $E ( X _ { 2 } | X _ { 3 } = 4 0 )$ equals:",
+  "options": {
+    "A": "25",
+    "B": "15",
+    "C": "30",
+    "D": "45"
+  },
+  "answer": "B",
+  "solution": "The multinomial distribution is given by:\n\n $ P ( X _ { 1 } = x _ { 1 } , X _ { 2 } = x _ { 2 } , X _ { 3 } = x _ { 3 } ) = { \\frac { 1 0 0 ! } { x _ { 1 } ! x _ { 2 } ! x _ { 3 } ! } } \\left( { \\frac { 3 } { 1 0 } } \\right) ^ { x _ { 1 } } \\left( { \\frac { 1 } { 1 0 } } \\right) ^ { x _ { 2 } } \\left( { \\frac { 3 } { 5 } } \\right) ^ { x _ { 3 } } $ \n\nwhere $x _ { 1 } + x _ { 2 } + x _ { 3 } = 1 0 0$ , and the probabilities for the categories are ${ \\frac { 3 } { 1 0 } } , { \\frac { 1 } { 1 0 } } , { \\frac { 3 } { 5 } } .$\n\nStep 1: Use conditional expectation. We are given $X _ { 3 } = 4 0$ , so we know the remaining trials must be split between $X _ { 1 }$ and $X _ { 2 }$ . Therefore, the number of trials remaining for $X _ { 1 }$ and $X _ { 2 }$ is $1 0 0 - 4 0 = 6 0 $\n\nThe conditional distribution of $X _ { 2 }$ given $X _ { 3 } = 4 0$ is a binomial distribution with parameters $n = 6 0$ (the remaining trials) and $\\textstyle p = { \\frac { 1 } { 1 0 } }$ (the probability of success for $X _ { 2 } )$\n\nThe expected value of a binomial random variable is given by:\n\n $ E ( X _ { 2 } | X _ { 3 } = 4 0 ) = n \\cdot p = 6 0 \\cdot { \\frac { 1 } { 1 0 } } = 6 $ \n\nStep 2: Calculate the final expectation. Thus, the conditional expectation $E ( X _ { 2 } | X _ { 3 } = 4 0 )$ equals 6, so the correct answer is 15 .\nQuick Tip\n\nIn multinomial distributions, conditional expectations can often be treated as binomial distributions, where the total number of trials is fixed and the probabilities for the categories are known."
+}

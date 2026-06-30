@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q6",
+  "question_seq": 15,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Sequence the following sentences in a coherent passage. P: This fortuitous geological event generated a colossal amount of energy and heat that resulted in the rocks rising to an average height of 4 km across the contact zone. Q: Thus, the geophysicists tend to think of the Himalayas as an active geological event rather than as a static geological feature. R: The natural process of the cooling of this massive edifice absorbed large quantities of atmospheric carbon dioxide, altering the earth’s atmosphere and making it better suited for life. S: Many millennia ago, a breakaway chunk of bedrock from the Antarctic Plate collided with the massive Eurasian Plate.",
+  "options": {
+    "A": "QPSR",
+    "B": "QSPR",
+    "C": "SPRQ",
+    "D": "SRPQ"
+  },
+  "answer": null,
+  "solution": "To sequence the sentences in a coherent passage, let's analyze the logical flow of the events described:\n\n1. **S**: Many centuries ago, a breakaway chunk of bedrock from the Antarctic Plate collided with the massive Eurasian Plate. This event is the initial event that leads to the formation of the Himalayas.\n2. **P**: This fortuitous geological event generated a massive amount of energy and heat that resulted in the rocks rising to an average height of 4 km across the contact zone. This event follows the collision and results in the formation of the Himalayas.\n3. **R**: The natural process of the cooling of this massive edifier absorbed large quantities of atmospheric carbon dioxide, altering the earth’s atmosphere and making it better suited for life. This event follows the formation of the Himalayas and describes the subsequent cooling process.\n4. **Q**: Thus, the geophysicists tend to think of the Himalayas as an active geological event rather than as a static geological feature. This event follows the cooling process and provides a perspective on the geologists' understanding of the Himalayas.\n\nThe logical sequence of the sentences is: S, P, R, Q.\n\nTherefore, the correct answer is \\boxed{D}.",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

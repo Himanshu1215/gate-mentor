@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q18",
+  "question_seq": 100,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $\\{ X _ { n } \\} _ { n \\geq 1 }$ be a sequence of independent and identically distributed normal random variables with mean 4 and variance 1. Then lim $\\begin{array} { r } { P \\left( \\frac { 1 } { n } \\sum _ { i = 1 } ^ { n } X _ { i } > 4 . 0 0 0 6 \\right) } \\end{array}$ is equal to ... n→∞",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the problem, we need to find the limit of the probability \\( P \\left( \\frac{1}{n} \\sum_{i=1}^n X_i > 4.0006 \\right) \\) as \\( n \\to \\infty \\), where \\( \\{ X_n \\}_{n \\geq 1} \\) is a sequence of independent and identically distributed normal random variables with mean 4 and variance 1.\n\nFirst, let's define the sample mean \\( \\bar{X}_n \\) as:\n\\[\n\\bar{X}_n = \\frac{1}{n} \\sum_{i=1}^n X_i\n\\]\n\nSince \\( X_i \\) are independent and identically distributed normal random variables with mean \\( \\mu = 4 \\) and variance \\( \\sigma^2 = 1 \\), the sample mean \\( \\bar{X}_n \\) is also normally distributed with mean \\( \\mu = 4 \\) and variance \\( \\sigma^2 / n = 1 / n \\). Therefore, we can write:\n\\[\n\\bar{X}_n \\sim N\\left(4, \\frac{1}{n}\\right)\n\\]\n\nWe are interested in the probability:\n\\[\nP\\left( \\bar{X}_n > 4.0006 \\right)\n\\]\n\nTo standardize this probability, we subtract the mean and divide by the standard deviation:\n\\[\nP\\left( \\bar{X}_n > 4.0006 \\right) = P\\left( \\frac{\\bar{X}_n - 4}{\\sqrt{\\frac{1}{n}}} > \\frac{4.0006 - 4}{\\sqrt{\\frac{1}{n}}} \\right)\n\\]\n\nSimplify the right-hand side:\n\\[\nP\\left( \\frac{\\bar{X}_n - 4}{\\sqrt{\\frac{1}{n}}} > \\frac{0.0006}{\\sqrt{\\frac{1}{n}}} \\right) = P\\left( \\frac{\\bar{X}_n - 4}{\\frac{1}{\\sqrt{n}}} > 0.0006 \\sqrt{n} \\right) = P\\left( \\sqrt{n} (\\bar{X}_n - 4) > 0.0006 \\sqrt{n} \\right)\n\\]\n\nLet \\( Z_n = \\sqrt{n} (\\bar{X}_n - 4) \\). Since \\( \\bar{X}_n \\sim N\\left(4, \\frac{1}{n}\\right) \\), \\( Z_n \\) follows a standard normal distribution:\n\\[\nZ_n \\sim N(0, 1)\n\\]\n\nThus, the probability becomes:\n\\[\nP\\left( Z_n > 0.0006 \\sqrt{n} \\right)\n\\]\n\nAs \\( n \\to \\infty \\), \\( 0.0006 \\sqrt{n} \\to \\infty \\). The probability that a standard normal random variable \\( Z_n \\) is greater than a value that approaches infinity is:\n\\[\nP(Z_n > \\infty) = 0\n\\]\n\nTherefore, the limit is:\n\\[",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q49",
+  "question_seq": 38,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable such that $ P \\left( { \\frac { a } { 2 \\pi } } X \\in \\mathbb { Z } \\right) = 1 , \\quad a > 0 , $ where <sup>Z</sup> denotes the set of all integers. If $\\phi _ { X } ( t ) , t \\in \\mathbb { R }$ , denotes the characteristic function of X, then which of the following is/are true?",
+  "options": {
+    "A": "$\\phi _ { X } ( a ) = 1$",
+    "B": "$\\phi _ { X } ( \\cdot )$ is periodic with period a",
+    "C": "$| \\phi _ { X } ( t ) | < 1$ for all $t \\neq a$",
+    "D": "$\\begin{array} { r } { \\int _ { 0 } ^ { 2 \\pi } e ^ { - i t n } \\phi _ { X } ( t ) d t = \\pi P \\left( X = \\frac { 2 \\pi n } { a } \\right) , n \\in \\mathbb { Z } , i = \\sqrt { - 1 } } \\end{array}$"
+  },
+  "answer": "A",
+  "solution": "Step 1: Understanding the given condition.\n\nThe condition\n\n $ P \\left( { \\frac { a } { 2 \\pi } } X \\in \\mathbb { Z } \\right) = 1 $ \n\nmeans that X takes values only at discrete points of the form $\\textstyle X = { \\frac { 2 \\pi n } { a } }$ , where n is an integer. Hence, X is a discrete random variable supported on multiples of $\\frac { 2 \\pi } { a }$\n\nStep 2: Characteristic function definition.\n\nThe characteristic function of X is defined as:\n\n $ \\phi _ { X } ( t ) = E [ e ^ { i t X } ] = \\sum _ { n = - \\infty } ^ { \\infty } p _ { n } e ^ { i t \\frac { 2 \\pi n } { a } } , $ \n\nwhere $\\begin{array} { r } { p _ { n } = P \\left( X = \\frac { 2 \\pi n } { a } \\right) } \\end{array}$\nStep 3: Compute $\\phi _ { X } ( a )$\n\nSubstituting $t = a$ , we get:\n\n $ \\phi _ { X } ( a ) = \\sum _ { n = - \\infty } ^ { \\infty } p _ { n } e ^ { i a \\frac { 2 \\pi n } { a } } = \\sum _ { n = - \\infty } ^ { \\infty } p _ { n } e ^ { i 2 \\pi n } = \\sum _ { n = - \\infty } ^ { \\infty } p _ { n } ( 1 ) = 1 . $ \n\nThus, $\\phi _ { X } ( a ) = 1$ , which makes statement (A) true.\nStep 4: Checking periodicity.\n\nNow, consider:\n\n $ \\phi _ { X } ( t + a ) = \\sum _ { n = - \\infty } ^ { \\infty } p _ { n } e ^ { i ( t + a ) \\frac { 2 \\pi n } { a } } = \\sum _ { n = - \\infty } ^ { \\infty } p _ { n } e ^ { i t \\frac { 2 \\pi n } { a } } e ^ { i 2 \\pi n } = \\sum _ { n = - \\infty } ^ { \\infty } p _ { n } e ^ { i t \\frac { 2 \\pi n } { a } } = \\phi _ { X } ( t ) . $ \n\nThus, $\\phi _ { X } ( t )$ is periodic with period a, proving statement (B) true.\n\nStep 5: Analysis of other options.\n\n(C) $| \\phi _ { X } ( t ) | < 1$ for all $t \\neq a$ is not necessarily true because for a discrete distribution, $\\phi _ { X } ( t )$ may attain 1 at other multiples of $a .$\n\n(D) The integral expression does not hold in this general setting—it is unrelated to the periodicity condition and characteristic function form.\n\nStep 6: Conclusion.\n\nTherefore, both statements (A) and (B) are correct.\nQuick Tip\n\nIf a random variable takes discrete values that are integer multiples of a constant, its characteristic function is periodic with a period equal to the reciprocal of that constant."
+}

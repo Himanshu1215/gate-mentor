@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q17",
+  "question_seq": 11,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $\\{ N ( t ) : t \\geq 0 \\}$ be a homogeneous Poisson process with the intensity/rate $\\lambda = 2 .$ Let $ X = N ( 6 ) - N ( 1 ) , \\quad Y = N ( 5 ) - N ( 3 ) , \\quad W = N ( 6 ) - N ( 5 ) , \\quad Z = N ( 3 ) - N ( 1 ) . $ Then which one of the following options is correct?",
+  "options": {
+    "A": "$ { \\mathbf { C o v } } ( W , Z ) = 2$",
+    "B": "$Y + Z \\sim \\mathbf { P o i s s o n } ( 1 0 )$",
+    "C": "$\\Pr ( Y = Z ) = 1$",
+    "D": "$\\operatorname { C o v } ( X , Y ) = 4$"
+  },
+  "answer": "A",
+  "solution": "The Poisson process has independent increments, meaning that the random variables corresponding to the number of events in disjoint time intervals are independent.\n\nStep 1: Analyzing the increments.\n\nThe increments $X = N ( 6 ) - N ( 1 ) , Y = N ( 5 ) - N ( 3 ) , W = N ( 6 ) - N ( 5 )$ , and $Z = N ( 3 ) - N ( 1 )$ all correspond to the number of events in specific time intervals. X counts the number of events in the interval [1, 6], with length 5.\n\nY counts the number of events in the interval [3, 5], with length 2. W counts the number of events in the interval [5, 6], with length 1. Z counts the number of events in the interval [1, 3], with length 2. Each of these variables follows a Poisson distribution with parameter λ × length of the interval, so:   \nX ∼ Poisson(10)   \nY ∼ Poisson(4)   \nW ∼ Poisson(2)   \nZ ∼ Poisson(4)\n\n $ \\operatorname { C o v } ( X , Y ) = \\lambda \\times \\operatorname { o v e r l a p } \\ \\mathrm { l e n g t h } = 2 \\times 2 = 4 $ \n\n $ \\operatorname* { P r } ( Y = Z ) \\neq 1 $"
+}

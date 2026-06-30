@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q7",
+  "question_seq": 109,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Suppose two hosts are connected by a point-to-point link and they are configured to use Stop-and-Wait protocol for reliable data transfer. Identify in which one of the following scenarios, the utilization of the link is the lowest.",
+  "options": {
+    "A": "Longer link length and lower transmission rate",
+    "B": "Longer link length and higher transmission rate",
+    "C": "Shorter link length and lower transmission rate",
+    "D": "Shorter link length and higher transmission rate"
+  },
+  "answer": "A",
+  "solution": "To determine in which scenario the utilization of the link is the lowest, we need to understand the Stop-and-Wait protocol and how it affects the link utilization. In the Stop-and-Wait protocol, each data frame is sent and then the sender waits for an确认 before sending the next data frame. This means that the link is idle during the confirmations.\n\nLet's analyze each scenario:\n\n(A) Longer link length and lower transmission rate\n- A longer link length means that the data frame size is larger, so each data frame takes more time to send.\n- A lower transmission rate means that the link is slower, so each data frame takes even more time to send.\n- Since each data frame requires a confirmations, the link is idle for a significant amount of time during each data frame.\n- Therefore, the link utilization is low because the link is idle most of the time.\n\n(B) Longer link length and higher transmission rate\n- A longer link length means that each data frame takes more time to send.\n- A higher transmission rate means that the link is faster, so each data frame takes less time to send.\n- Since each data frame requires a confirmations, the link is idle for a significant amount of time during each data frame.\n- However, the link is also 积极 sending data more frequently due to the higher transmission rate.\n- Therefore, the link utilization is higher than in scenario (A).\n\n(C) Shorter link length and lower transmission rate\n- A shorter link length means that each data frame takes less time to send.\n- A lower transmission rate means that the link is slower, so each data frame takes even less time to send.\n- Since each data frame requires a confirmations, the link is idle for a significant amount of time during each data frame.\n- However, the link is also积极 sending data more frequently due to the lower link length.\n- Therefore, the link utilization is higher than in scenario (A).\n\n(D) Shorter link length and higher transmission rate\n- A shorter link length means that each data frame takes less time to send.\n- A higher transmission rate means that the link is faster, so each data frame takes even less time to send.\n- Since each data frame requires a confirmations, the link is idle for a significant amount of time during each data frame.\n- However, the link is also积极 sending data more frequently due to the higher transmission rate.\n- Therefore, the link utilization is higher than in scenario (A).\n\nFrom the analysis, we can see that in scenario (A), the link utilization is the lowest because the link is idle for a significant amount of time during each data frame due to the longer link length and lower transmission rate.\n\nTherefore, the correct answer is: \\boxed{A}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

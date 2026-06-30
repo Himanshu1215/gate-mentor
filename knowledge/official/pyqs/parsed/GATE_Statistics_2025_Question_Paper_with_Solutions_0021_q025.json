@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q25",
+  "question_seq": 21,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $ I = \\pi ^ { 2 } \\int _ { 0 } ^ { 1 } \\int _ { 0 } ^ { 1 } y ^ { 2 } \\cos \\pi ( 1 + x y ) d x d y . $ The value of I is equal to (",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Evaluate the inner integral.\n\nWe first compute the inner integral with respect to x:\n\n $ \\int _ { 0 } ^ { 1 } y ^ { 2 } \\cos \\pi ( 1 + x y ) d x . $ \n\nThis can be simplified as:\n\n $ y ^ { 2 } \\int _ { 0 } ^ { 1 } \\cos ( \\pi ( 1 + x y ) ) d x . $ \n\nUsing the substitution $u = \\pi ( 1 + x y )$ , we get:\n\n $ d u = \\pi y d x \\quad \\Rightarrow \\quad d x = { \\frac { d u } { \\pi y } } . $ \n\nAt $x = 0 , u = \\pi$ , and at $x = 1 , u = \\pi ( 1 + y )$ . Thus, the integral becomes:\n\n $ y ^ { 2 } \\int _ { \\pi } ^ { \\pi ( 1 + y ) } { \\frac { \\cos ( u ) } { \\pi y } } d u = { \\frac { y } { \\pi } } \\int _ { \\pi } ^ { \\pi ( 1 + y ) } \\cos ( u ) d u . $ \n\nThe integral of cos(u) is sin(u), so we have:\n\n $ \\frac { y } { \\pi } [ \\sin ( \\pi ( 1 + y ) ) - \\sin ( \\pi ) ] = \\frac { y } { \\pi } \\sin ( \\pi y ) . $ \nStep 2: Evaluate the outer integral.\n\nNow, we evaluate the outer integral:\n\n $ \\int _ { 0 } ^ { 1 } { \\frac { y } { \\pi } } \\sin ( \\pi y ) d y . $ \n\nThis can be solved by integration by parts or using a standard integral formula:\n\n $ \\int _ { 0 } ^ { 1 } y \\sin ( \\pi y ) d y = { \\frac { 2 } { \\pi ^ { 2 } } } . $ \n\nThus, the value of the inner integral is:\n\n $ \\frac { 1 } { \\pi ^ { 2 } } \\times \\frac { 2 } { \\pi ^ { 2 } } = \\frac { 2 } { \\pi ^ { 4 } } . $ \n\nStep 3: Final calculation.\n\nMultiplying by $\\pi ^ { 2 }$ , we get the value of I:\n\n $ I = \\pi ^ { 2 } \\times \\frac { 2 } { \\pi ^ { 4 } } = \\frac { 2 } { \\pi ^ { 2 } } . $ \n\nThus, the final answer is $\\boxed { 0 } .$\nQuick Tip\n\nWhen evaluating integrals involving trigonometric functions, consider using substitution and properties of standard integrals."
+}

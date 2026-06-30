@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q42",
+  "question_seq": 51,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The number of permutations of the characters in LILAC so that no character appears in its original position, if the two L’s are indistinguishable, is",
+  "options": null,
+  "answer": "C",
+  "solution": "To determine the number of permutations of the characters in \"LILAC\" such that no character appears in its original position, we need to consider the constraints and use combinatorial methods. The word \"LILAC\" consists of 5 letters where the two L's are indistinguishable.\n\nFirst, let's label the positions of the letters as follows: \\(1, 2, 3, 4, 5\\). The original positions of the letters are:\n- L at position 1\n- I at position 2\n- L at position 3\n- A at position 4\n- C at position 5\n\nWe need to find the number of derangements (permutations where no element appears in its original position) of these letters. However, since the two L's are indistinguishable, we need to account for this symmetry in our calculations.\n\n### Step 1: Calculate the total number of derangements of 5 distinct items\nThe formula for the number of derangements \\(D_n\\) of \\(n\\) distinct items is given by:\n\\[\nD_n = n! \\sum_{k=0}^{n} \\frac{(-1)^k}{k!}\n\\]\nFor \\(n = 5\\):\n\\[\nD_5 = 5! \\left( \\frac{(-1)^0}{0!} + \\frac{(-1)^1}{1!} + \\frac{(-1)^2}{2!} + \\frac{(-1)^3}{3!} + \\frac{(-1)^4}{4!} + \\frac{(-1)^5}{5!} \\right)\n\\]\n\\[\nD_5 = 120 \\left( 1 - 1 + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{24} - \\frac{1}{120} \\right)\n\\]\n\\[\nD_5 = 120 \\left( 1 - 1 + 0.5 - 0.1667 + 0.0417 - 0.0083 \\right)\n\\]\n\\[\nD_5 = 120 \\left( 0.3667 \\right)\n\\]\n\\[\nD_5 = 44\n\\]\n\n### Step 2: Adjust for the indistinguishability of the L's\nSince the two L's are indistinguishable, we need to divide the total number of derangements by the number of ways to arrange the two L's among themselves, which is \\(2!\\):\n\\[\n\\text{Number of derangements with indistinguishable L's} = \\frac{D_5}{2!} = \\frac{44}{2} = 22\n\\]\n\nThus, the number of permutations of the characters in \"LILAC\" so that no character appears in its original position is \\(\\boxed{22}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

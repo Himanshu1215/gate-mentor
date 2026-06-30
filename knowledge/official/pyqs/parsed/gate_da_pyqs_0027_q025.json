@@ -1,0 +1,21 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q25",
+  "question_seq": 27,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following statements is/are correct?",
+  "options": {
+    "A": "<sup>Rn</sup> has a unique set of orthonormal basis vectors",
+    "B": "<sup>Rn</sup> does not have a unique set of orthonormal basis vectors",
+    "C": "Linearly independent vectors in $\\mathbb { R } ^ { n }$ are orthonormal",
+    "D": "Orthonormal vectors $\\mathbb { R } ^ { n }$ are linearly independent"
+  },
+  "answer": "A",
+  "solution": "To determine which of the given statements is/are correct, let's analyze each statement one by one.\n\n**Statement (A): <sup>Rn</sup> has a unique set of orthonormal basis vectors.**\n\nAn orthonormal basis for \\(\\mathbb{R}^n\\) is a set of \\(n\\) vectors that are orthogonal to each other and each have a length of 1. However, there are many different sets of orthonormal basis vectors for \\(\\mathbb{R}^n\\). For example, the standard basis vectors \\(\\{e_1, e_2, \\ldots, e_n\\}\\) where \\(e_i\\) is the vector with a 1 in the \\(i\\)-th position and 0s elsewhere, form an orthonormal basis. But we can also form other orthonormal bases by applying an orthogonal transformation to this standard basis. Therefore, statement (A) is false.\n\n**Statement (B): <sup>Rn</sup> does not have a unique set of orthonormal basis vectors.**\n\nAs explained above, there are many different sets of orthonormal basis vectors for \\(\\mathbb{R}^n\\). Therefore, statement (B) is true.\n\n**Statement (C): Linearly independent vectors in \\(\\mathbb{R}^n\\) are orthonormal.**\n\nLinearly independent vectors in \\(\\mathbb{R}^n\\) are vectors that do not lie in the same subspace. However, they do not necessarily have to be orthonormal. For example, the vectors \\(\\{e_1, e_2, \\ldots, e_n\\}\\) are linearly independent and orthonormal, but the vectors \\(\\{e_1, 2e_2, \\ldots, ne_n\\}\\) are linearly independent but not orthonormal. Therefore, statement (C) is false.\n\n**Statement (D): Orthonormal vectors in \\(\\mathbb{R}^n\\) are linearly independent.**\n\nOrthonormal vectors are vectors that are orthogonal to each other and each have a length of 1. If a set of vectors is orthonormal, then they are linearly independent. This is because if a set of vectors is linearly dependent, then one of the vectors can be expressed as a linear combination of the others, which would contradict the orthogonality condition. Therefore, statement (D) is true.\n\nBased on the analysis, the correct statements are (B) and (D). However, since the question asks for a single correct answer in the format \"Final answer: <option or value>\", we will choose the most directly correct statement from the options provided.\n\nThe correct answer is:\n\n\\(\\boxed{D}\\)",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct",
+  "answer_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

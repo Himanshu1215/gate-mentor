@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q36",
+  "question_seq": 24,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In an RSA cryptosystem, the value of the public modulus parameter is 3007. If it is also known that $\\Phi ( n ) = 2 8 8 0$ , where φ( ) denotes Euler’s Totient Function, then the prime factor of which is greater than 50 is",
+  "options": null,
+  "answer": "97",
+  "solution": "To determine the prime factor of the modulus \\( n = 3007 \\) that is greater than 50, we start by using the given information about Euler's Totient Function \\( \\Phi(n) = 2880 \\). For a modulus \\( n \\) that is a product of two distinct prime numbers \\( p \\) and \\( q \\), Euler's Totient Function is given by:\n\n\\[\n\\Phi(n) = (p-1)(q-1)\n\\]\n\nWe know that \\( n = pq = 3007 \\) and \\( \\Phi(n) = (p-1)(q-1) = 2880 \\). We can express \\( (p-1)(q-1) \\) in terms of \\( p \\) and \\( q \\) as follows:\n\n\\[\n(p-1)(q-1) = pq - p - q + 1\n\\]\n\nSubstituting the known values, we get:\n\n\\[\n2880 = 3007 - p - q + 1\n\\]\n\nSimplifying this equation, we find:\n\n\\[\n2880 = 3008 - p - q\n\\]\n\nRearranging terms, we get:\n\n\\[\np + q = 3008 - 2880 = 128\n\\]\n\nNow we have a system of equations:\n\n1. \\( pq = 3007 \\)\n2. \\( p + q = 128 \\)\n\nWe can solve this system by treating it as a quadratic equation. If \\( p \\) and \\( q \\) are the roots of the quadratic equation \\( x^2 - (p+q)x + pq = 0 \\), then we can write:\n\n\\[\nx^2 - 128x + 3007 = 0\n\\]\n\nWe solve this quadratic equation using the quadratic formula \\( x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} \\), where \\( a = 1 \\), \\( b = -128 \\), and \\( c = 3007 \\). Substituting these values in, we get:\n\n\\[\nx = \\frac{128 \\pm \\sqrt{128^2 - 4 \\cdot 1 \\cdot 3007}}{2 \\cdot 1} = \\frac{128 \\pm \\sqrt{16384 - 12028}}{2} = \\frac{128 \\pm \\sqrt{4356}}{2} = \\frac{128 \\pm 66}{2}\n\\]\n\nThis gives us two solutions:\n\n\\[\nx = \\frac{128 + 66}{2} = \\frac{194}{2} = 97\n\\]\n\\[\nx = \\frac{128 - 66}{2} = \\frac{62}{2} = 31\n\\]\n\nTherefore, the prime factors of \\( n = 3007 \\) are \\( p = 97 \\) and \\( q = 31 \\). The prime factor that is greater than 50 is:\n\n\\[\n\\boxed",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

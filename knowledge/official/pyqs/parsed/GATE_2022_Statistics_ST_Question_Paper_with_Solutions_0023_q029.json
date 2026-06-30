@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q29",
+  "question_seq": 23,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable with the probability density function $ f ( x ) = { \\left\\{ \\begin{array} { l l } { c ( x - \\lfloor x \\rfloor ) , } & { 0 < x < 3 , } \\\\ { 0 , } & { { \\mathrm { e l s e w h e r e } } , } \\end{array} \\right. } $ where c is a constant and $\\lfloor x \\rfloor$ denotes the greatest integer less than or equal to x. If $A = \\left[ { \\frac { 1 } { 2 } } , 2 \\right]$ , then $P ( X \\in A )$ (rounded off to two decimal places) is equal to",
+  "options": null,
+  "answer": null,
+  "solution": "First, normalize the probability density function to ensure that it integrates to 1. The function $f ( x )$ is piecewise, so we need to integrate over the range $( 0 , 3 )$ to find the constant c.\n\nFor $0 < x < 3$ , the PDF is $f ( x ) = c ( x - \\lfloor x \\rfloor )$ , and the total integral over the interval $0 < x < 3$ is:\n\n $ \\int _ { 0 } ^ { 3 } c ( x - \\lfloor x \\rfloor ) d x = 1 . $ \n\nBreaking the integral into intervals based on the integer values of $\\lfloor x \\rfloor$ , we compute:\n\n $ \\int _ { 0 } ^ { 1 } c x d x + \\int _ { 1 } ^ { 2 } c ( x - 1 ) d x + \\int _ { 2 } ^ { 3 } c ( x - 2 ) d x . $ \n\nAfter solving this, we find $\\begin{array} { r } { c = \\frac { 1 } { 2 } } \\end{array}$\n\nNext, compute the probability that $X \\in A$ , where $A = \\left[ { \\frac { 1 } { 2 } } , 2 \\right]$ . We integrate the PDF over this range:\n\n $ P \\left( { \\frac { 1 } { 2 } } \\leq X \\leq 2 \\right) = \\int _ { \\frac { 1 } { 2 } } ^ { 2 } { \\frac { 1 } { 2 } } ( x - \\lfloor x \\rfloor ) d x . $ \n\nPerforming the integration gives the result:\n\n $ P \\left( { \\frac { 1 } { 2 } } \\leq X \\leq 2 \\right) \\approx 0 . 5 7 . $ \n\nThus, the value of $P ( X \\in A )$ is 0.59 .\nQuick Tip\n\nFor piecewise probability density functions, break the integral into sections based on the nature of the function and normalize the constant appropriately."
+}

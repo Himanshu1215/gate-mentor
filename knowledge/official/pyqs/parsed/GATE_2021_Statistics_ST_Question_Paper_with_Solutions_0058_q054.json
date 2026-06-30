@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q54",
+  "question_seq": 58,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , \\ldots , X _ { 1 0 }$ be a random sample from a probability density function $ f _ { \\theta } ( x ) = f ( x - \\theta ) , \\quad - \\infty < x < \\infty , $ where − $\\cdot \\infty < \\theta < \\infty$ and $f ( - x ) = f ( x )$ for $- \\infty < x < \\infty$ . For testing $H _ { 0 } : \\theta = 1 . 2$ against $H _ { 1 } : \\theta \\neq 1 . 2 $ , let $T ^ { + }$ denote the Wilcoxon Signed-rank test statistic. If $\\eta$ deno",
+  "options": null,
+  "answer": null,
+  "solution": "The Wilcoxon Signed-rank test statistic $T ^ { + }$ is based on the ranks of the sample values and their signs. To find the value of $\\eta ,$ we calculate the cumulative distribution function (CDF) under $H _ { 0 }$ and use it to find the probability:\n\n $ 3 2 \\eta = 3 1 . 7 0 . $ \n\nThus, the value is 31.70.\nQuick Tip\n\nFor the Wilcoxon Signed-rank test, calculate the ranks and their signs to compute the test statistic, then use the CDF to find the probability."
+}

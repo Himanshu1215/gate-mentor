@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q17",
+  "question_seq": 222,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In C runtime environment, which one of the following is stored in heap?",
+  "options": {
+    "A": "A static variable declared inside a function",
+    "B": "An array of integers declared inside a function",
+    "C": "A dynamically allocated array of integers created using malloc() function cal",
+    "D": "Return address of a function"
+  },
+  "answer": "C",
+  "solution": "To determine which option is stored in heap, let's analyze each option step by step:\n\n(A) A static variable declared inside a function:\n- Static variables are allocated in the stack.\n- They are visible only within the function where they are defined and are deallocated when the function returns.\n- Therefore, a static variable declared inside a function is not stored in heap.\n\n(B) An array of integers declared inside a function:\n- Arrays declared inside a function are also allocated in the stack.\n- They are visible only within the function where they are defined and are deallocated when the function returns.\n- Therefore, an array of integers declared inside a function is not stored in heap.\n\n(C) A dynamically allocated array of integers created using malloc() function cal:\n- dynamically allocated arrays are allocated in the heap.\n- They are visible to all functions in the program and are deallocated when they are deallocated.\n- Therefore, a dynamically allocated array of integers created usingmalloc() function is stored in heap.\n\n(D) Return address of a function:\n- The return address of a function is stored on the stack.\n- It is used to return the program control to the next function or to the main function.\n- Therefore, the return address of a function is not stored in heap.\n\nBased on the analysis, the correct answer is:\n\\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

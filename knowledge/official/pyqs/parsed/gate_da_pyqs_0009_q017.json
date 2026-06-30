@@ -7,13 +7,14 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "GENERAL",
-  "question_text": "M = 3",
+  "question_text": "$\\mathbf { M } = { \\left[ \\begin{array} { l l } { 2 } & { - 1 } \\\\ { 3 } & { 1 } \\end{array} \\right] }$",
   "options": {
     "A": "Eigen values of M are +ve and real",
     "B": "Eigen value of M non-negative and zero",
     "C": "Eigen value of M are complex conjugates pair",
-    "D": "Eigen value of M are negative and real. Sol."
+    "D": "Eigen value of M are negative and real. Sol. (c) $ \\mathbf { M } = { \\left[ \\begin{array} { l l } { 2 } & { - 1 } \\\\ { 3 } & { 1 } \\end{array} \\right] } $"
   },
   "answer": null,
-  "solution": null
+  "solution": "To find the eigenvalues of the matrix \\(\\mathbf{M} = \\begin{pmatrix} 2 & -1 \\\\ 3 & 1 \\end{pmatrix}\\), we need to solve the characteristic equation \\(\\det(\\mathbf{M} - \\lambda \\mathbf{I}) = 0\\), where \\(\\lambda\\) is an eigenvalue and \\(\\mathbf{I}\\) is the identity matrix.\n\nFirst, we compute \\(\\mathbf{M} - \\lambda \\mathbf{I}\\):\n\\[\n\\mathbf{M} - \\lambda \\mathbf{I} = \\begin{pmatrix} 2 & -1 \\\\ 3 & 1 \\end{pmatrix} - \\lambda \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 2 - \\lambda & -1 \\\\ 3 & 1 - \\lambda \\end{pmatrix}\n\\]\n\nNext, we find the determinant of \\(\\mathbf{M} - \\lambda \\mathbf{I}\\):\n\\[\n\\det(\\mathbf{M} - \\lambda \\mathbf{I}) = \\det\\begin{pmatrix} 2 - \\lambda & -1 \\\\ 3 & 1 - \\lambda \\end{pmatrix} = (2 - \\lambda)(1 - \\lambda) - (-1)(3)\n\\]\n\nSimplify the determinant:\n\\[\n(2 - \\lambda)(1 - \\lambda) + 3 = 2 - 2\\lambda - \\lambda + \\lambda^2 + 3 = \\lambda^2 - 3\\lambda + 5\n\\]\n\nSet the determinant equal to zero to find the eigenvalues:\n\\[\n\\lambda^2 - 3\\lambda + 5 = 0\n\\]\n\nThis is a quadratic equation. We solve it using the quadratic formula \\(\\lambda = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\\), where \\(a = 1\\), \\(b = -3\\), and \\(c = 5\\):\n\\[\n\\lambda = \\frac{-(-3) \\pm \\sqrt{(-3)^2 - 4 \\cdot 1 \\cdot 5}}{2 \\cdot 1} = \\frac{3 \\pm \\sqrt{9 - 20}}{2} = \\frac{3 \\pm \\sqrt{-11}}{2} = \\frac{3 \\pm i\\sqrt{11}}{2}\n\\]\n\nThe eigenvalues are \\(\\lambda = \\frac{3 + i\\sqrt{11}}{2}\\) and \\(\\lambda = \\frac{3 - i\\sqrt{11}}{2}\\). These eigenvalues are complex conjugates.\n\nTherefore, the correct answer is:\n\\[\n\\boxed{\\text{C}}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
 }

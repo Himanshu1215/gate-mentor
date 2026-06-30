@@ -1,0 +1,17 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q27",
+  "question_seq": 31,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , \\dots , X _ { n }$ be a random sample of size $n \\left( \\geq 1 1 \\right)$ from a population with continuous and strictly increasing cumulative distribution function $F ( \\cdot )$ with an unknown median ??. To test $H _ { 0 } \\colon M = 1 0$ against $H _ { 1 } \\colon M > 1 0$ at level $\\alpha ,$ let the statistic $T$ denote the number of observations larger than 10. Let $t _ { 0 }$ be the observed value of the test statistic ??. Consider the test which rejects $H _ { 0 }$ if $T \\geq c$ Then the ??-value of the test is",
+  "options": {
+    "A": "$ \\sum _ { i = t _ { 0 } } ^ { n } { \\frac { n ! } { i ! ( n - i ) ! } } ( 0 . 5 ) ^ { n }\\tag{B} $ $ \\sum _ { i = 1 0 } ^ { n } { \\frac { n ! } { i ! ( n - i ) ! } } ( 0 . 5 ) ^ { n }\\tag{C} $ $ \\sum _ { i = 0 } ^ { 1 0 } { \\frac { n ! } { i ! \\left( n - i \\right) ! } } \\left( 0 . 5 \\right) ^ { n }\\tag{D} $ $ \\sum _ { i = 0 } ^ { t _ { 0 } } \\frac { n ! } { i ! \\left( n - i \\right) ! } \\left( 0 . 5 \\right) ^ { n } $"
+  },
+  "answer": null,
+  "solution": "To determine the p-value of the test, we need to understand the distribution of the test statistic \\( T \\) under the null hypothesis \\( H_0: M = 10 \\). Since \\( F(x) \\) is the cumulative distribution function of the population and it is strictly increasing, the probability that any given observation \\( X_i \\) is greater than 10 is \\( P(X_i > 10) = 1 - F(10) = 0.5 \\) under \\( H_0 \\).\n\nThe test statistic \\( T \\) is the number of observations in the sample that are greater than 10. Under \\( H_0 \\), \\( T \\) follows a binomial distribution with parameters \\( n \\) and \\( p = 0.5 \\). The probability mass function of a binomial random variable \\( T \\) is given by:\n\n\\[ P(T = k) = \\binom{n}{k} (0.5)^k (0.5)^{n-k} = \\binom{n}{k} (0.5)^n \\]\n\nThe p-value of the test is the probability of observing a value of \\( T \\) as extreme or more extreme than the observed value \\( t_0 \\) under the null hypothesis. Since the alternative hypothesis \\( H_1: M > 10 \\) is a one-sided test, we reject \\( H_0 \\) if \\( T \\geq t_0 \\). Therefore, the p-value is:\n\n\\[ \\text{p-value} = P(T \\geq t_0) = \\sum_{i=t_0}^n \\binom{n}{i} (0.5)^n \\]\n\nThus, the correct option is:\n\n\\[\n\\boxed{A}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

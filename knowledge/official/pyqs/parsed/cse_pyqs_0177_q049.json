@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q49",
+  "question_seq": 177,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Three floating point numbers $X , ~ Y ,$ and $Z \\mathsf { a r e }$ stored in three registers $R _ { X } , R _ { Y } ,$ and $R _ { Z } ,$ respectively in lEEE 754 single precision format as given below in hexadecimal; $R _ { X } = 0 { \\times } C 1 1 0 0 0 0 0$ $R _ { Y } = 0 { \\times } 4 0 { \\mathsf { C 0 0 0 0 0 } }$ , and $R _ { \\scriptscriptstyle { Z } } = 0 { \\times } 4 1 4 0 0 0 0 0$ Which of the following option(s) is/are CORRECT? (a) $4 ( X + Y ) + Z = 0$ (b) $2 Y - Z = 0$ (c) $4 X + 3 Z = 0$ (d) $X + \\ Y + \\ Z = 0$ [2025 (Set-2): 2 M] [2025 (Set-2):2 M]",
+  "options": null,
+  "answer": "A",
+  "solution": "To solve the problem, we need to convert the hexadecimal representations of the floating-point numbers \\( R_X \\), \\( R_Y \\), and \\( R_Z \\) into their decimal equivalents and then evaluate the given expressions.\n\n### Step 1: Convert \\( R_X \\) to decimal\nThe hexadecimal representation of \\( R_X \\) is \\( 0 \\times C1100000 \\).\n\n- ** sign bit**: \\( 0 \\) (positive)\n- **exponent**: \\( C1 \\) (hexadecimal)\n  - Convert \\( C1 \\) to decimal: \\( C1_{16} = 12 \\times 16 + 1 = 193 \\)\n  - The exponent in decimal is \\( 193 - 127 = 66 \\) (since the exponent is biased by 127)\n- **fraction**: \\( 100000 \\) (hexadecimal)\n  - Convert \\( 100000 \\) to decimal: \\( 100000_{16} = 1 \\times 2^5 + 0 \\times 2^4 + 0 \\times 2^3 + 0 \\times 2^2 + 0 \\times 2^1 + 0 \\times 2^0 = 32 \\)\n\nThus, \\( R_X \\) in decimal is:\n\\[\nR_X = 1 \\times 2^{66} \\times 32 = 2^{66} \\times 2^5 = 2^{71}\n\\]\n\n### Step 2: Convert \\( R_Y \\) to decimal\nThe hexadecimal representation of \\( R_Y \\) is \\( 0 \\times 40C00000 \\).\n\n- ** sign bit**: \\( 0 \\) (positive)\n- **exponent**: \\( 40 \\) (hexadecimal)\n  - Convert \\( 40 \\) to decimal: \\( 40_{16} = 4 \\times 16 + 0 = 64 \\)\n  - The exponent in decimal is \\( 64 - 127 = -63 \\)\n- **fraction**: \\( C00000 \\) (hexadecimal)\n  - Convert \\( C00000 \\) to decimal: \\( C00000_{16} = 12 \\times 2^5 + 0 \\times 2^4 + 0 \\times 2^3 + 0 \\times 2^2 + 0 \\times 2^1 + 0 \\times 2^0 = 384 \\)\n\nThus, \\( R_Y \\) in decimal is:\n\\[\nR_Y = 1 \\times 2^{-63} \\times 384 = 2^{-63} \\times 2^7 \\times 3 = 2^{-56} \\times 3\n\\]\n\n### Step 3: Convert \\( R_Z \\) to decimal\nThe hexadecimal representation of \\( R_Z \\) is \\( 0 \\times 41400000 \\).\n\n- ** sign bit**: \\( 0 \\) (positive)\n- **exponent**: \\( 41 \\)",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

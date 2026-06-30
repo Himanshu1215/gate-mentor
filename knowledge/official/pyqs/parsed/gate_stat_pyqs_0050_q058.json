@@ -1,0 +1,17 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q58",
+  "question_seq": 50,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $( X _ { 1 } , X _ { 2 } , X _ { 3 } )$ have $N _ { 3 } ( { \\pmb \\mu } , { \\pmb \\Sigma } )$ distribution with $\\pmb { \\mu } = \\begin{array} { l } { \\left[ \\begin{array} { l } { 2 } \\\\ { - 3 } \\\\ { 1 } \\end{array} \\right] } \\end{array}$ and $\\Sigma = \\left[ { \\begin{array} { c c c } { 2 5 } & { - 2 } & { 4 } \\\\ { - 2 } & { 4 } & { 1 } \\\\ { 4 } & { 1 } & { 9 } \\end{array} } \\right]$ . For which of the following vectors ??, $X _ { 2 }$ and $X _ { 2 } - \\pmb { a } ^ { T } \\left[ { \\pmb X } _ { 1 } \\right]$ are independent?",
+  "options": {
+    "A": "$ \\pmb { a } = \\left[ \\begin{array} { l } { 0 } \\\\ { 1 } \\end{array} \\right]\\tag{B} $ $ \\pmb { a } = \\left[ - 1 \\atop - 1 \\right]\\tag{C} $ $ \\pmb { a } = \\left[ \\begin{array} { l } { 0 } \\\\ { 2 } \\end{array} \\right]\\tag{D} $ $ \\pmb { a } = \\left[ ^ { 2 } _ { 2 } \\right] $"
+  },
+  "answer": null,
+  "solution": "To determine for which vector \\(\\pmb{a}\\), \\(X_2\\) and \\(X_2 - \\pmb{a}^T \\left[ \\pmod{X_1} \\right]\\) are independent, we need to check the condition for the covariance between \\(X_2\\) and \\(X_2 - \\pmod{X_1}\\). If the covariance is zero, then the two variables are independent.\n\nThe covariance between \\(X_2\\) and \\(X_2 - \\pmod{X_1}\\) is given by:\n\\[\n\\text{Cov}(X_2, X_2 - \\pmod{X_1}) = \\text{Cov}(X_2, X_2) - \\text{Cov}(X_2, \\pmod{X_1})\n\\]\nSince \\(\\text{Cov}(X_2, X_2) = \\text{Var}(X_2)\\), we need to find \\(\\text{Cov}(X_2, \\pmod{X_1})\\). The conditional expectation \\(\\pmod{X_1}\\) is a linear function of \\(X_1\\), so we can write:\n\\[\n\\pmod{X_1} = \\pmod{X_2 \\mid X_1} = \\mu_2 + \\pmod{\\pmod{X_2} - \\mu_2 \\mid X_1}\n\\]\nThe conditional expectation \\(\\pmod{\\pmod{X_2} - \\mu_2 \\mid X_1}\\) is a linear combination of \\(X_1\\), and we can use the formula for the conditional expectation of a multivariate normal distribution:\n\\[\n\\pmod{X_2 \\mid X_1} = \\mu_2 + \\pmod{\\pmod{X_2} - \\mu_2 \\mid X_1} = \\mu_2 + \\Sigma_{21} \\Sigma_{11}^{-1} (X_1 - \\mu_1)\n\\]\nwhere \\(\\Sigma_{21}\\) is the covariance vector between \\(X_2\\) and \\(X_1\\), and \\(\\Sigma_{11}\\) is the variance of \\(X_1\\). From the given covariance matrix \\(\\Sigma\\), we have:\n\\[\n\\mu_1 = \\begin{pmatrix} 2 \\\\ -3 \\\\ 1 \\end{pmatrix}, \\quad \\mu_2 = -3, \\quad \\Sigma_{21} = \\begin{pmatrix} -2 \\\\ 4 \\\\ 1 \\end{pmatrix}, \\quad \\Sigma_{11} = 25\n\\]\nThus,\n\\[\n\\pmod{X_2 \\mid X_1} = -3 + \\frac{1}{25} \\begin{pmatrix} -2 \\\\ 4 \\\\ 1 \\end{pmatrix}^T (X_1 - \\begin{pmatrix} 2 \\\\ -3 \\\\ 1 \\end{pmatrix}) = -3 + \\frac{1}{25} (-2X_1 + 4X_2 + X_3 - 4 + 9 - 1) = -",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

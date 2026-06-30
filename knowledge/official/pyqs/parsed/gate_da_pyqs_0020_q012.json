@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q12",
+  "question_seq": 20,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "The number of additions and multiplications involved in performing Gaussian elimination on any $n \\times n$ upper triangular matrix is of the order (A) $O ( n )$ (B) $O ( n ^ { 2 } )$ (C) $O ( n ^ { 3 } )$ (D) $O ( n ^ { 4 } )$",
+  "options": null,
+  "answer": null,
+  "solution": "To determine the number of additions and multiplications involved in performing Gaussian elimination on an \\( n \\times n \\) upper triangular matrix, we need to analyze the process step by step.\n\nGaussian elimination involves transforming the matrix into an upper triangular form by eliminating the entries below the diagonal. For an upper triangular matrix, all entries below the diagonal are already zero, so we only need to consider the operations on the entries above the diagonal.\n\nLet's break down the process:\n\n1. **First row**: There are no entries below the diagonal in the first row, so no operations are needed.\n2. **Second row**: We need to eliminate the entry below the diagonal in the second row. This requires 1 multiplication (to scale the second row) and 1 addition (to subtract the scaled second row from the third row).\n3. **Third row**: We need to eliminate the entries below the diagonal in the third row. This requires 2 multiplications (to scale the third row) and 2 additions (to subtract the scaled third row from the fourth row).\n4. **Fourth row**: We need to eliminate the entries below the diagonal in the fourth row. This requires 3 multiplications (to scale the fourth row) and 3 additions (to subtract the scaled fourth row from the fifth row).\n5. **General row \\( k \\)**: We need to eliminate the entries below the diagonal in the \\( k \\)-th row. This requires \\( k-1 \\) multiplications (to scale the \\( k \\)-th row) and \\( k-1 \\) additions (to subtract the scaled \\( k \\)-th row from the \\( (k+1) \\)-th row).\n\nNow, let's sum up the total number of operations:\n\n- Total multiplications: \\( 0 + 1 + 2 + \\cdots + (n-1) = \\frac{(n-1)n}{2} \\)\n- Total additions: \\( 0 + 1 + 2 + \\cdots + (n-1) = \\frac{(n-1)n}{2} \\)\n\nThe total number of operations (multiplications and additions) is:\n\\[ \\frac{(n-1)n}{2} + \\frac{(n-1)n}{2} = (n-1)n \\]\n\nSince \\( (n-1)n \\) is of the order \\( O(n^2) \\), the number of additions and multiplications involved in performing Gaussian elimination on any \\( n \\times n \\) upper triangular matrix is of the order \\( O(n^2) \\).\n\nTherefore, the final answer is:\n\\[\n\\boxed{B}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

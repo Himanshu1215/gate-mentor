@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q10",
+  "question_seq": 155,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The diagram below shows a river system consisting of 7 segments, marked P, Q, R, S, T, U, and V. It splits the land into 5 zones, marked Z1, Z2, Z3, Z4, and Z5. We need to connect these zones using the least number of bridges. Out of the following options, which one is correct? Note: The figure shown is representative",
+  "options": {
+    "A": "Bridges on P, Q, and T",
+    "C": "Bridges on Q, R, T, and V",
+    "B": "Bridges on P, Q, S, and T",
+    "D": "Bridges on P, Q, S, U, and V [2025 (Set-2) : 2 M]"
+  },
+  "answer": "C",
+  "solution": "To determine the least number of bridges needed to connect all 5 zones (Z1, Z2, Z3, Z4, and Z5) in the given river system, we need to analyze the connections between the zones and the segments (P, Q, R, S, T, U, and V).\n\nFirst, let's understand the structure of the river system and the connections between the zones:\n- Zone Z1 is connected to Z2 by segment P.\n- Zone Z2 is connected to Z3 by segment Q.\n- Zone Z3 is connected to Z4 by segment R.\n- Zone Z4 is connected to Z5 by segment S.\n- Zone Z2 is connected to Z5 by segment T.\n- Zone Z1 is connected to Z3 by segment U.\n- Zone Z1 is connected to Z5 by segment V.\n\nWe need to find a way to connect all the zones using the minimum number of bridges. Let's analyze each option:\n\n**Option (A): Bridges on P, Q, and T**\n- Bridge on P connects Z1 to Z2.\n- Bridge on Q connects Z2 to Z3.\n- Bridge on T connects Z2 to Z5.\n\nWith these bridges, we can connect Z1 to Z2, Z2 to Z3, and Z2 to Z5. However, we cannot connect Z3 to Z4 or Z4 to Z5 without additional bridges. Therefore, option (A) is not sufficient.\n\n**Option (B): Bridges on P, Q, S, and T**\n- Bridge on P connects Z1 to Z2.\n- Bridge on Q connects Z2 to Z3.\n- Bridge on S connects Z4 to Z5.\n- Bridge on T connects Z2 to Z5.\n\nWith these bridges, we can connect Z1 to Z2, Z2 to Z3, Z2 to Z5, and Z4 to Z5. However, we cannot connect Z3 to Z4 without an additional bridge. Therefore, option (B) is not sufficient.\n\n**Option (C): Bridges on Q, R, T, and V**\n- Bridge on Q connects Z2 to Z3.\n- Bridge on R connects Z3 to Z4.\n- Bridge on T connects Z2 to Z5.\n- Bridge on V connects Z1 to Z5.\n\nWith these bridges, we can connect Z2 to Z3, Z3 to Z4, Z2 to Z5, and Z1 to Z5. This covers all the zones, and we cannot connect any additional zones without additional bridges. Therefore, option (C) is sufficient.\n\n**Option (D): Bridges on P, Q, S, U, and V**\n- Bridge on P connects Z1 to Z2.\n- Bridge on Q connects Z2 to Z3.\n- Bridge on S connects Z4 to Z5.\n- Bridge on U connects Z1 to Z3.\n- Bridge on V connects Z1 to Z5.\n\nWith these bridges, we can connect Z1 to Z2, Z2 to Z3, Z1 to Z3, Z4 to Z5, and Z1 to Z5. However, we cannot connect Z2 to Z5 without an additional bridge. Therefore, option (D) is not sufficient.\n\nBased on the analysis, the correct option is \\boxed{C}.",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

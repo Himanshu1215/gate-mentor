@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q17",
+  "question_seq": 111,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one or more of the following CPU scheduling algorithms can potentially cause starvation?",
+  "options": {
+    "A": "First-in First-Out",
+    "C": "Priority Scheduling",
+    "B": "Round Robin",
+    "D": "Shortest Job First"
+  },
+  "answer": "C",
+  "solution": "To determine which CPU scheduling algorithm can potentially cause starifier, let's analyze each option step by step:\n\n(A) First-in First-out (FIF):\n- In FIF, the process that arrives first is the one that gets execution first.\n- This algorithm does not necessarily cause starifier because it does not prioritize processes based on their needs or size.\n- If all processes arrive at the same time, they will be executed in the order they arrived, and no process will starifier.\n\n(B) Round Robin (RR):\n- In RR, each process is given a fixed time quantum to execute, and then the next process in the ready list is selected.\n- This algorithm does not necessarily cause starifier because it does not prioritize processes based on their needs or size.\n- If all processes have the same execution time, they will be executed in a round-robin manner, and no process will starifier.\n\n(C) Priority Scheduling:\n- In priority scheduling, each process is assigned a priority, and the process with the highest priority is executed next.\n- This algorithm can potentially cause starifier because it prioritizes processes based on their needs.\n- If a process with a low priority arrives just before a process with a high priority, the low priority process may starifier because it will not get执行 before the high priority process.\n\n(D) Shortest Job First (SJF):\n- In SJF, the process with the shortest execution time is executed next.\n- This algorithm does not necessarily cause starifier because it does not prioritize processes based on their needs or size.\n- If all processes have the same execution time, they will be executed in the order they arrived, and no process will starifier.\n\nBased on the analysis, the only algorithm that can potentially cause starifier is priority scheduling.\n\nTherefore, the correct answer is: \\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

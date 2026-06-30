@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q50",
+  "question_seq": 148,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let G be a directed graph and T a depth first search (DFS) spanning tree in G that is rooted at a vertex v. Suppose T is also a breadth first search (BFS) tree in G, rooted at v. Which of the following statements is/are TRUE for every such graph G and tree T? (a) The only edges in G are the edges in T.",
+  "options": {
+    "B": "There are no cross-edges in G with respect to the tree T.",
+    "C": "There are no back-edges in G with respect to the tree T.",
+    "D": "There are no forward-edges in G with respect to the tree T"
+  },
+  "answer": "D",
+  "solution": "To determine which statement is true for every graph \\( G \\) and tree \\( T \\) where \\( T \\) is both a DFS and a BFS spanning tree rooted at a vertex \\( v \\), we need to analyze the properties of DFS and BFS trees.\n\n### Step-by-Step Analysis:\n\n1. **DFC and BFS Trees Properties:**\n   - **DFC Tree:**\n     - Each edge in \\( T \\) is either a tree edge (connecting a vertex to its child), a back edge (connecting a vertex to an already visited vertex), or a cross edge (connecting two vertices that are not in the same tree).\n     - In a DFS tree, the postorder numbers of the vertices follow the order in which they are visited.\n   - **BFS Tree:**\n     - Each edge in \\( T \\) is either a tree edge or a cross edge.\n     - In a BFS tree, the level of each vertex (distance from the root) is the minimum number of edges in any path from the root to that vertex.\n     - The postorder numbers of the vertices in a BFS tree are not necessarily in the order in which they are visited.\n\n2. **Combining DFS and BFS Properties:**\n   - Since \\( T \\) is both a DFS and a BFS tree, it must satisfy the properties of both.\n   - For \\( T \\) to be a BFS tree, it cannot have back edges (as back edges would imply a different level for the same vertex, contradicting the BFS property).\n   - For \\( T \\) to be a DFS tree, it can have back edges, but they must not affect the postorder numbers in a way that contradicts the DFS property.\n\n3. **Analyzing the Statements:**\n   - **(A) The only edges in \\( G \\) are the edges in \\( T \\):**\n     - This is not necessarily true. \\( G \\) can have cross edges that are not in \\( T \\).\n   - **(B) There are no cross-edges in \\( G \\) with respect to the tree \\( T \\):**\n     - This is not necessarily true. \\( G \\) can have cross edges that are not in \\( T \\).\n   - **(C) There are no back-edges in \\( G \\) with respect to the tree \\( T \\):**\n     - This is not necessarily true. \\( T \\) being a BFS tree implies no back edges, but \\( G \\) can have back edges that are not in \\( T \\).\n   - **(D) There are no forward-edges in \\( G \\) with respect to the tree \\( T \\):**\n     - This is true. In a DFS tree, forward edges are not possible because they would create a cycle that contradicts the tree structure. Since \\( T \\) is both a DFS and a BFS tree, it cannot have forward edges.\n\n### Conclusion:\nThe only statement that is true for every graph \\( G \\) and tree \\( T \\) where \\( T \\) is both a DFS and a BFS spanning tree rooted at a vertex \\( v \\) is:\n\n\\[\n\\boxed{D}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

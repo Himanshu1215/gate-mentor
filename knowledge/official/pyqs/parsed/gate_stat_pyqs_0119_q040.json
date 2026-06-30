@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q40",
+  "question_seq": 119,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "The maximum likelihood estimates of the mean vector and the variance-covariance matrix of a bivariate normal distribution based on the realization $\\textstyle \\left\\{ { \\binom { 1 } { 2 } } , { \\binom { 4 } { 4 } } , { \\binom { 4 } { 3 } } \\right\\}$ of a random sample of size 3, are given by (A) $\\binom { 3 } { 3 }$ and $\\left[ { \\begin{array} { r r } { 2 } & { 1 } \\\\ { 1 } & { 2 / 3 } \\end{array} } \\right]$ (B) $\\binom { 3 } { 3 }$ and $\\left[ { \\begin{array} { r r } { 2 } & { 1 } \\\\ { 1 } & { 3 / 2 } \\end{array} } \\right]$ (C) $\\binom { 3 } { 3 }$ and $\\left[ \\begin{array} { l l } { 3 } & { 3 / 2 } \\\\ { 3 / 2 } & { 2 / 3 } \\end{array} \\right]$ (D) $\\binom { 3 } { 3 }$ and $\\left[ \\begin{array} { l l } { 3 } & { 2 / 3 } \\\\ { 2 / 3 } & { 1 } \\end{array} \\right]$",
+  "options": null,
+  "answer": null,
+  "solution": "To find the maximum likelihood estimates of the mean vector and the variance-covariance matrix of a bivariate normal distribution based on the given sample, we will follow these steps:\n\n1. **Calculate the mean vector**:\n   The mean vector \\(\\mathbf{\\mu}\\) is given by the average of the sample vectors.\n   \\[\n   \\mathbf{\\mu} = \\frac{1}{n} \\sum_{i=1}^n \\mathbf{x}_i\n   \\]\n   Here, \\(n = 3\\) and the sample vectors are \\(\\mathbf{x}_1 = \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}\\), \\(\\mathbf{x}_2 = \\begin{pmatrix} 4 \\\\ 4 \\end{pmatrix}\\), and \\(\\mathbf{x}_3 = \\begin{pmatrix} 4 \\\\ 3 \\end{pmatrix}\\).\n   \\[\n   \\mathbf{\\mu} = \\frac{1}{3} \\left( \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix} + \\begin{pmatrix} 4 \\\\ 4 \\end{pmatrix} + \\begin{pmatrix} 4 \\\\ 3 \\end{pmatrix} \\right) = \\frac{1}{3} \\begin{pmatrix} 1+4+4 \\\\ 2+4+3 \\end{pmatrix} = \\frac{1}{3} \\begin{pmatrix} 9 \\\\ 9 \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ 3 \\end{pmatrix}\n   \\]\n\n2. **Calculate the variance-covariance matrix**:\n   The variance-covariance matrix \\(\\mathbf{\\Sigma}\\) is given by:\n   \\[\n   \\mathbf{\\Sigma} = \\frac{1}{n} \\sum_{i=1}^n (\\mathbf{x}_i - \\mathbf{\\mu})(\\mathbf{x}_i - \\mathbf{\\mu})^T\n   \\]\n   First, we find the deviations of each sample vector from the mean vector:\n   \\[\n   \\mathbf{x}_1 - \\mathbf{\\mu} = \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix} - \\begin{pmatrix} 3 \\\\ 3 \\end{pmatrix} = \\begin{pmatrix} -2 \\\\ -1 \\end{pmatrix}\n   \\]\n   \\[\n   \\mathbf{x}_2 - \\mathbf{\\mu} = \\begin{pmatrix} 4 \\\\ 4 \\end{pmatrix} - \\begin{pmatrix} 3 \\\\ 3 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}\n   \\]\n   \\[\n   \\mathbf{x}_3 - \\mathbf{\\mu} = \\begin{pmatrix} 4 \\\\ 3 \\end{pmatrix} - \\begin{pmatrix} 3 \\\\ 3 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}\n   \\]\n   Next, we compute the outer products of these deviations:\n   \\[\n   (\\mathbf{x",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

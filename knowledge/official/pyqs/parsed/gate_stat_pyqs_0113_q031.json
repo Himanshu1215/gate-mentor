@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q31",
+  "question_seq": 113,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , \\dots , X _ { n }$ be a random sample from a population having probability density function $\\begin{array} { r } { f _ { X } ( x ; \\theta ) = \\frac { 2 x } { \\theta ^ { 2 } } , 0 < x < \\theta } \\end{array}$ . Then the method of moments estimator of θ is (A) $\\frac { 3 \\sum _ { i = 1 } ^ { n } { X _ { i } } } { 2 n }$ (B) $\\frac { 3 \\sum _ { i = 1 } ^ { n } X _ { i } ^ { 2 } } { 2 n }$ (C) $\\frac { \\sum _ { i = 1 } ^ { n } X _ { i } } { n }$ (D) $\\frac { 3 \\sum _ { i = 1 } ^ { n } X _ { i } ( X _ { i } - 1 ) } { 2 n }$",
+  "options": null,
+  "answer": null,
+  "solution": "To find the method of moments estimator of \\(\\theta\\) for the given probability density function \\(f_X(x; \\theta) = \\frac{2x}{\\theta^2}\\) for \\(0 < x < \\theta\\), we need to follow these steps:\n\n1. **Identify the population moment**: The first population moment (the mean) is given by:\n   \\[\n   E(X) = \\int_0^\\theta x f_X(x; \\theta) \\, dx = \\int_0^\\theta x \\cdot \\frac{2x}{\\theta^2} \\, dx = \\int_0^\\theta \\frac{2x^2}{\\theta^2} \\, dx\n   \\]\n   Evaluating the integral, we get:\n   \\[\n   E(X) = \\frac{2}{\\theta^2} \\int_0^\\theta x^2 \\, dx = \\frac{2}{\\theta^2} \\left[ \\frac{x^3}{3} \\right]_0^\\theta = \\frac{2}{\\theta^2} \\cdot \\frac{\\theta^3}{3} = \\frac{2\\theta}{3}\n   \\]\n\n2. **Set the sample moment equal to the population moment**: The sample mean \\(\\bar{X}\\) is the first sample moment. According to the method of moments, we set the sample mean equal to the population mean:\n   \\[\n   \\bar{X} = \\frac{2\\theta}{3}\n   \\]\n   Solving for \\(\\theta\\), we get:\n   \\[\n   \\theta = \\frac{3\\bar{X}}{2}\n   \\]\n   Since \\(\\bar{X} = \\frac{1}{n} \\sum_{i=1}^n X_i\\), we can substitute this into the equation for \\(\\theta\\):\n   \\[\n   \\theta = \\frac{3}{2} \\cdot \\frac{1}{n} \\sum_{i=1}^n X_i = \\frac{3 \\sum_{i=1}^n X_i}{2n}\n   \\]\n\nTherefore, the method of moments estimator of \\(\\theta\\) is \\(\\frac{3 \\sum_{i=1}^n X_i}{2n}\\).\n\nThe final answer is:\n\\[\n\\boxed{A}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

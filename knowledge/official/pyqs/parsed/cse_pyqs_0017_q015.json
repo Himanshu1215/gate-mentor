@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q15",
+  "question_seq": 17,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following protocol pairs can be used to send and retrieve e-mails (in that order)? (a) IMAP, SMTP (d) SMTP, MIME (c) IMAP, POP3 (d) SMTP, POP3",
+  "options": null,
+  "answer": "D",
+  "solution": "To determine which protocol pair can be used to send and retrieve e-mails, let's analyze each option step by step:\n\n1. **Option (a): IMAP, SMTP**\n   - **IMAP (Internet Monday Protocol)**: This protocol is used for sending and receiving e-mail. It allows for bothinary and text-based e-mail.\n   - **SMail ( simpl e Monday protocol)**: This protocol is used for sending e-mail. It is not typically used for receiving e-mail.\n   - **Combination**: IMAP can be used to send e-mail, but SMTP is not used to receive e-mail. Therefore, this combination is not correct.\n\n2. **Option (b): SMAP, MIME**\n   - **SMAP ( simpl e Monday protocol)**: This protocol is used for sending e-mail.\n   - **MIME ( Multipurpose Internet Mail不一定)**: This protocol is used for both sending and receiving e-mail, but it is not typically used in a protocol pair for sending and receiving e-mail in the same transaction.\n   - **Combination**: SMAP is used to send e-mail, but MIME is not typically used to receive e-mail in a protocol pair. Therefore, this combination is not correct.\n\n3. **Option (c): IMAP,POP3**\n   - **IMAP ( Internet Monday Protocol)**: This protocol is used for sending and receiving e-mail.\n   - **POP3 ( Point-to-Point protocol)**: This protocol is used for sending e-mail. It is not typically used for receiving e-mail.\n   - **Combination**: IMAP can be used to send e-mail, butPOP3 is not used to receive e-mail. Therefore, this combination is not correct.\n\n4. **Option (d): SMAP,POP3**\n   - **SMAP ( simpl e Monday protocol)**: This protocol is used for sending e-mail.\n   - **POP3 ( Point-to-Point protocol)**: This protocol is used for sending e-mail. It is not typically used for receiving e-mail.\n   - **Combination**: SMAP can be used to send e-mail, andPOP3 is used to receive e-mail. Therefore, this combination is correct.\n\nBased on the analysis, the correct protocol pair that can be used to send and retrieve e-mails is:\n\n\\[\n\\boxed{D}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

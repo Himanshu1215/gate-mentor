@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q22",
+  "question_seq": 68,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "The lifetime of a component of a certain type is a random variable whose probability density function is exponentially distributed with parameter 2. For a randomly picked component of this type, the probability that its lifetime exceeds the expected lifetime (rounded to 2 decimal places) is",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine the probability that the lifetime of a component exceeds the expected lifetime, we need to follow these steps:\n\n1. **Identify the probability density function (pdf) of the exponential distribution:**\n   The pdf of an exponentially distributed random variable \\( X \\) with parameter \\( \\lambda \\) is given by:\n   \\[\n   f(x) = \\lambda e^{-\\lambda x} \\quad \\text{for} \\quad x \\geq 0\n   \\]\n   Here, \\( \\lambda = 2 \\), so the pdf becomes:\n   \\[\n   f(x) = 2 e^{-2x} \\quad \\text{for} \\quad x \\geq 0\n   \\]\n\n2. **Calculate the expected value (mean) of the exponential distribution:**\n   The expected value \\( E(X) \\) of an exponentially distributed random variable with parameter \\( \\lambda \\) is:\n   \\[\n   E(X) = \\frac{1}{\\lambda}\n   \\]\n   Substituting \\( \\lambda = 2 \\):\n   \\[\n   E(X) = \\frac{1}{2} = 0.5\n   \\]\n\n3. **Determine the probability that the lifetime exceeds the expected value:**\n   We need to find \\( P(X > 0.5) \\). This is given by the integral of the pdf from \\( 0.5 \\) to \\( \\infty \\):\n   \\[\n   P(X > 0.5) = \\int_{0.5}^{\\infty} 2 e^{-2x} \\, dx\n   \\]\n\n4. **Evaluate the integral:**\n   To evaluate the integral, we use the substitution \\( u = -2x \\). Then \\( du = -2 \\, dx \\), or \\( dx = -\\frac{1}{2} \\, du \\). When \\( x = 0.5 \\), \\( u = -2 \\cdot 0.5 = -1 \\). When \\( x \\to \\infty \\), \\( u \\to -\\infty \\). The integral becomes:\n   \\[\n   P(X > 0.5) = \\int_{-1}^{-\\infty} 2 e^u \\left( -\\frac{1}{2} \\right) \\, du = \\int_{-\\infty}^{-1} -e^u \\, du = \\int_{-1}^{\\infty} e^u \\, du\n   \\]\n   The integral of \\( e^u \\) from \\( -1 \\) to \\( \\infty \\) is:\n   \\[\n   \\int_{-1}^{\\infty} e^u \\, du = \\left[ e^u \\right]_{-1}^{\\infty} = e^{\\infty} - e^{-1} = 0 - (-e^{-1}) = e^{-1}\n   \\]\n   Therefore:\n   \\[\n   P(X > 0.5) = e^{-1} = \\frac{1}{e}\n   \\]\n\n5. **Convert the result to a decimal and round to two decimal places:**\n   The value of \\( \\frac{1}{e} \\) is approximately 0.367879. Rounding",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

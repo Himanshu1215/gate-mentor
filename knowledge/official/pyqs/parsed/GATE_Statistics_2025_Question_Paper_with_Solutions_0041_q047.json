@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q47",
+  "question_seq": 41,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $\\{ x _ { n } \\} _ { n \\geq 1 }$ be a sequence defined as $ x _ { n } = 1 + { \\frac { 1 } { \\sqrt { 2 } } } + { \\frac { 1 } { \\sqrt { 3 } } } + \\cdots + { \\frac { 1 } { \\sqrt { n } } } - 2 ( { \\sqrt { n } } - 1 ) . $ Then which of the following options is/are correct?",
+  "options": {
+    "A": "The sequence $\\{ x _ { n } \\} _ { n \\geq 1 }$ is unbounded.",
+    "B": "The sequence $\\{ x _ { n } \\} _ { n \\geq 1 }$ is monotonically decreasing.",
+    "C": "The sequence $\\{ x _ { n } \\} _ { n \\geq 1 }$ is bounded but does not converge.",
+    "D": "The sequence $\\{ x _ { n } \\} _ { n \\geq 1 }$ converges."
+  },
+  "answer": "B",
+  "solution": "Step 1: Analyze the sequence. The sequence is given as:\n\n $ x _ { n } = \\sum _ { k = 1 } ^ { n } { \\frac { 1 } { \\sqrt { k } } } - 2 ( { \\sqrt { n } } - 1 ) . $ \n\nThe term $2 ( { \\sqrt { n } } - 1 )$ is a term that grows like $2 \\sqrt { n }$ as n increases, and the sum $\\scriptstyle \\sum _ { k = 1 } ^ { n } { \\frac { 1 } { \\sqrt { k } } }$ grows like $2 \\sqrt { n }$ for large n.\n\nStep 2: Behavior of the sequence for large n. We approximate the sequence for large n:\n\n $ x _ { n } \\sim \\sum _ { k = 1 } ^ { n } { \\frac { 1 } { \\sqrt { k } } } - 2 { \\sqrt { n } } . $ \n\nUsing the asymptotic approximation for the sum, we have:\n\n $ \\sum _ { k = 1 } ^ { n } { \\frac { 1 } { \\sqrt { k } } } \\sim 2 { \\sqrt { n } } - 1 . $ \n\nThus, $x _ { n }$ behaves like:\n\n $ x _ { n } \\sim 2 { \\sqrt { n } } - 1 - 2 { \\sqrt { n } } = - 1 . $ \n\nThis suggests that the sequence is bounded and converges to $- 1$\n\nStep 3: Monotonicity. Given that $x _ { n }$ decreases as n increases, the sequence is monotonically decreasing.\n\nThus, the correct answer is $\\boxed { ( B ) }$\nQuick Tip\n\nWhen analyzing sequences involving sums, compare the growth rates of the terms involved and use asymptotic approximations to predict the sequence’s behavior as $n  \\infty .$"
+}

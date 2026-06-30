@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q34",
+  "question_seq": 23,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let G be any connected, weighted, undirected graph: I. G has a unique minimum spanning tree, if no two edges of G have the same weight. II. G has a unique minimum spanning tree, if for every cut G, there is a unique minimum weight edge crossing the cut. Which of the above two statements is/are TRUE?",
+  "options": {
+    "A": "Neither I nor II (b) I only",
+    "C": "II only (d) Both I and II"
+  },
+  "answer": "D",
+  "solution": "To determine which of the statements I and II are true, we need to analyze each statement in detail.\n\n**Statement I: G has a unique minimum spanning tree, if no two edges of G have the same weight.**\n\nA minimum spanning tree (MST) of a graph is a subset of its edges that forms a tree including all vertices, with the minimum possible total edge weight. If no two edges of the graph have the same weight, then there is a unique way to select the edges to form the MST. This is because at each step of the MST construction (e.g., using Kruskal's or Prim's algorithm), we can always choose the next lightest edge that does not form a cycle. Since all edge weights are distinct, there is no ambiguity in the choice of edges at each step, and thus the MST is unique.\n\n**Statement II: G has a unique minimum spanning tree, if for every cut G, there is a unique minimum weight edge crossing the cut.**\n\nA cut in a graph is a partition of its vertices into two disjoint subsets. The edge crossing the cut is the edge that has one endpoint in each subset. If for every cut in the graph, there is a unique minimum weight edge crossing the cut, then there is a unique way to select the edges to form the MST. This is because at each step of the MST construction, we can always choose the next lightest edge that crosses a cut and does not form a cycle. Since there is a unique minimum weight edge for each cut, there is no ambiguity in the choice of edges at each step, and thus the MST is unique.\n\nBoth statements I and II are true. Therefore, the correct answer is:\n\n\\boxed{D}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

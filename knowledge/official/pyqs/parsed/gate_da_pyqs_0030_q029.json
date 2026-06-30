@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q29",
+  "question_seq": 30,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Suppose that insertion sort is applied to the array [1, 3, 5, 7, 9, 11, x, 15, 13] and it takes exactly two swaps to sort the array. Select all possible values of x. (A) 10 (B) 12 (C) 14 (D) 16 Let $C _ { 1 }$ and $C _ { 2 }$ be two sets of objects. Let $D ( x , y )$ be a measure of dissimilarity between two objects x and $y .$ Consider the following definitions of dissimilarity between $C _ { 1 }$ and $C _ { 2 }$ $ \\mathbf { D I S - 1 } ( C _ { 1 } , C _ { 2 } ) = \\operatorname* { m a x } _ { x \\in C _ { 1 } , y \\in C _ { 2 } } D ( x , y ) $ $ { \\bf D I S - 2 } ( C _ { 1 } , C _ { 2 } ) = \\operatorname* { m i n } _ { x \\in C _ { 1 } , y \\in C _ { 2 } } D ( x , y ) $ Which of the following statements is/are correct?",
+  "options": {
+    "A": "Single Linkage Clustering uses DIS-1",
+    "B": "Single Linkage Clustering uses DIS-2",
+    "C": "Complete Linkage Clustering uses DIS-2",
+    "D": "Complete Linkage Clustering uses DIS-1"
+  },
+  "answer": null,
+  "solution": "To determine the correct values of \\( x \\) for which insertion sort takes exactly two swaps to sort the array \\([1, 3, 5, 7, 9, 11, x, 15, 13]\\), we need to analyze the conditions under which exactly two swaps are required.\n\n### Step-by-Step Analysis\n\n1. **Understanding Insertion Sort**:\n   - Insertion sort works by iterating through the array, starting from the second element.\n   - For each element, it is compared with the elements to its left, and it is swapped with the largest element that is smaller than it.\n\n2. **Identifying the Swaps**:\n   - For exactly two swaps to occur, the element \\( x \\) must be such that it is initially out of order with respect to its adjacent elements and must be swapped twice.\n\n3. **Analyzing the Array**:\n   - The array is \\([1, 3, 5, 7, 9, 11, x, 15, 13]\\).\n   - The element \\( x \\) must be greater than 11 and less than 15 to ensure it is out of order with its adjacent elements.\n\n4. **Possible Values of \\( x \\)**:\n   - The possible values of \\( x \\) are \\( 12 \\) and \\( 14 \\).\n\n5. **Verification**:\n   - If \\( x = 12 \\):\n     - The array becomes \\([1, 3, 5, 7, 9, 11, 12, 15, 13]\\).\n     - Insertion sort will swap \\( 12 \\) with \\( 11 \\) and then with \\( 13 \\).\n     - This results in exactly two swaps.\n   - If \\( x = 14 \\):\n     - The array becomes \\([1, 3, 5, 7, 9, 11, 14, 15, 13]\\).\n     - Insertion sort will swap \\( 14 \\) with \\( 11 \\) and then with \\( 13 \\).\n     - This results in exactly two swaps.\n\n### Conclusion\n\nThe possible values of \\( x \\) are \\( 12 \\) and \\( 14 \\). Therefore, the correct answer is:\n\n\\[\n\\boxed{B \\text{ and } C}\n\\]\n\n### dissimilarity between \\( C_1 \\) and \\( C_2 \\)\n\nTo determine which dissimilarity measure is used in single linkage and complete linkage clustering:\n\n1. **Single Linkage Clustering**:\n   - Single linkage uses the minimum distance (dis sim-2) between any two points in different clusters.\n\n2. **Complete Linkage Clustering**:\n   - Complete linkage uses the maximum distance (dis sim-1) between any two points in different clusters.\n\nThus, the correct statements are:\n\n- Single Linkage Clustering uses DIS-2.\n- Complete Linkage Clustering uses DIS-1.\n\nTherefore, the correct answer is:\n\n\\[\n\\boxed{B \\text{ and } D}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

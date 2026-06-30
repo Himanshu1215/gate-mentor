@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q7",
+  "question_seq": 12,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In 16-bit 2’s complement representation, the decimal number –28 is: (a) 1111 1111 0001 1100 (b) 1111 1111 1110 0100 (c) 0000 0000 1110 0100 (d) 1000 0000 1110 0100",
+  "options": null,
+  "answer": "B",
+  "solution": "To convert the decimal number \\(-28\\) to its 16-bit 2's complement representation, we need to follow these steps:\n\n1. **Convert the absolute value of the number to binary:**\n   The absolute value of \\(-28\\) is \\(28\\). We convert \\(28\\) to binary by repeatedly dividing by \\(2\\) and recording the remainders.\n   \\[\n   28 \\div 2 = 14 \\quad \\text{remainder} \\quad 0\n   \\]\n   \\[\n   14 \\div 2 = 7 \\quad \\text{remainder} \\quad 0\n   \\]\n   \\[\n   7 \\div 2 = 3 \\quad \\text{remainder} \\quad 1\n   \\]\n   \\[\n   3 \\div 2 = 1 \\quad \\text{remainder} \\quad 1\n   \\]\n   \\[\n   1 \\div 2 = 0 \\quad \\text{remainder} \\quad 1\n   \\]\n   Reading the remainders from bottom to top, we get \\(28_{10} = 11100_2\\).\n\n2. **Determine the number of bits needed:**\n   Since we need a 16-bit representation, we need to add \\(16 - 5 = 11\\) leading zeros to the binary number \\(11100_2\\). This gives us \\(00000011100_2\\).\n\n3. **Convert the binary number to 2's complement:**\n   To find the 2's complement of a binary number, we first find the 1's complement by flipping all the bits (changing 1s to 0s and 0s to 1s), and then add 1 to the result.\n   The 1's complement of \\(00000011100_2\\) is \\(11111100011_2\\).\n   Adding 1 to \\(11111100011_2\\) gives us \\(11111100100_2\\).\n\nTherefore, the 16-bit 2's complement representation of \\(-28\\) is \\(11111100100_2\\).\n\nThe correct answer is \\(\\boxed{B}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

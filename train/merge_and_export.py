@@ -93,8 +93,9 @@ def to_gguf(args):
         logger.warning(f"  ./llama-quantize {fp16_gguf} {args.gguf_out} {args.quant}")
         return
 
+    import sys
     logger.info("Converting merged model -> GGUF (f16) ...")
-    subprocess.run(["python", convert, args.merged_dir, "--outfile", fp16_gguf,
+    subprocess.run([sys.executable, convert, args.merged_dir, "--outfile", fp16_gguf,
                     "--outtype", "f16"], check=True)
 
     logger.info(f"Quantizing GGUF -> {args.quant} ...")

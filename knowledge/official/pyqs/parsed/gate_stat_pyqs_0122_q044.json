@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q44",
+  "question_seq": 122,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let S be the solid whose base is the region in the xy-plane bounded by the curves $y = x ^ { 2 }$ and $y = 8 - x ^ { 2 }$ , and whose cross-sections perpendicular to the x-axis are squares. Then the volume of S (rounded off to two decimal places) is ...",
+  "options": null,
+  "answer": null,
+  "solution": "To find the volume of the solid \\( S \\) whose base is the region in the \\( xy \\)-plane bounded by the curves \\( y = x^2 \\) and \\( y = 8 - x^2 \\), and whose cross-sections perpendicular to the \\( x \\)-axis are squares, we can follow these steps:\n\n1. **Determine the points of intersection of the curves:**\n   Set \\( y = x^2 \\) equal to \\( y = 8 - x^2 \\):\n   \\[\n   x^2 = 8 - x^2\n   \\]\n   Add \\( x^2 \\) to both sides:\n   \\[\n   2x^2 = 8\n   \\]\n   Divide by 2:\n   \\[\n   x^2 = 4\n   \\]\n   Take the square root of both sides:\n   \\[\n   x = \\pm 2\n   \\]\n   So, the points of intersection are \\( (-2, 4) \\) and \\( (2, 4) \\).\n\n2. **Find the side length of the square cross-sections:**\n   The side length of the square cross-section at a given \\( x \\) is the difference between the \\( y \\)-values of the two curves at that \\( x \\):\n   \\[\n   \\text{Side length} = (8 - x^2) - x^2 = 8 - 2x^2\n   \\]\n\n3. **Set up the integral for the volume:**\n   The area of the square cross-section at a given \\( x \\) is:\n   \\[\n   \\text{Area} = (\\text{Side length})^2 = (8 - 2x^2)^2\n   \\]\n   The volume \\( V \\) of the solid is the integral of the area of the cross-sections from \\( x = -2 \\) to \\( x = 2 \\):\n   \\[\n   V = \\int_{-2}^{2} (8 - 2x^2)^2 \\, dx\n   \\]\n\n4. **Expand the integrand:**\n   \\[\n   (8 - 2x^2)^2 = 64 - 32x^2 + 4x^4\n   \\]\n   So the integral becomes:\n   \\[\n   V = \\int_{-2}^{2} (64 - 32x^2 + 4x^4) \\, dx\n   \\]\n\n5. **Evaluate the integral:**\n   Integrate each term separately:\n   \\[\n   \\int_{-2}^{2} 64 \\, dx = 64x \\bigg|_{-2}^{2} = 64(2) - 64(-2) = 128 + 128 = 256\n   \\]\n   \\[\n   \\int_{-2}^{2} -32x^2 \\, dx = -32 \\int_{-2}^{2} x^2 \\, dx = -32 \\left( \\frac{x^3}{3} \\bigg|_{-2}^{2} \\right) = -32 \\left( \\frac{2^3}{3} - \\frac",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

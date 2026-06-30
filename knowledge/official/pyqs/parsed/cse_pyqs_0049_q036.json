@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q36",
+  "question_seq": 49,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the following predicate formulae is NOT logically valid? Note that is a predicate formula without any free occurrence of x.",
+  "options": {
+    "A": "$\\exists x ( p ( x ) \\wedge W ) \\equiv \\exists x p ( x ) \\wedge W$",
+    "C": "$\\exists x ( p ( x ) \\to W ) \\equiv \\forall x p ( x ) \\to W$",
+    "B": "$\\forall x ( p ( x ) W ) \\equiv \\forall x p ( x ) W$",
+    "D": "$\\forall x ( p ( x ) \\lor W ) \\equiv \\forall x p ( x ) \\lor W$"
+  },
+  "answer": "B",
+  "solution": "To determine which of the given predicate formulae is NOT logically valid, we need to analyze each option step by step.\n\n**Option (A):** $\\exists x ( p ( x ) \\wedge W ) \\equiv \\exists x p ( x ) \\wedge W$\n\nThis formula states that the existential quantifier applied to the conjunction of $p(x)$ and $W$ is equivalent to the conjunction of the existential quantifier applied to $p(x)$ and $W$. This is not generally true. The left-hand side means there exists an $x$ such that both $p(x)$ and $W$ are true. The right-hand side means that there exists an $x$ such that $p(x)$ is true, and $W$ is true. These two statements are not equivalent because the left-hand side requires that $W$ is true for some $x$, while the right-hand side requires that $W$ is true and there exists an $x$ such that $p(x)$ is true. Therefore, option (A) is not logically valid.\n\n**Option (B):** $\\forall x ( p ( x ) W ) \\equiv \\forall x p ( x ) W$\n\nThis formula states that the universal quantifier applied to the conjunction of $p(x)$ and $W$ is equivalent to the conjunction of the universal quantifier applied to $p(x)$ and $W$. This is not generally true. The left-hand side means that for all $x$, both $p(x)$ and $W$ are true. The right-hand side means that for all $x$, $p(x)$ is true, and $W$ is true. These two statements are not equivalent because the left-hand side requires that $W$ is true for all $x$, while the right-hand side requires that $W$ is true and for all $x$, $p(x)$ is true. Therefore, option (B) is not logically valid.\n\n**Option (C):** $\\exists x ( p ( x ) \\to W ) \\equiv \\forall x p ( x ) \\to W$\n\nThis formula states that the existential quantifier applied to the implication of $p(x)$ and $W$ is equivalent to the implication of the universal quantifier applied to $p(x)$ and $W$. This is not generally true. The left-hand side means that there exists an $x$ such that if $p(x)$ is true, then $W$ is true. The right-hand side means that if for all $x$, $p(x)$ is true, then $W$ is true. These two statements are not equivalent because the left-hand side only requires that there exists an $x$ for which the implication holds, while the right-hand side requires that the implication holds for all $x$. Therefore, option (C) is not logically valid.\n\n**Option (D):** $\\forall x ( p ( x ) \\lor W ) \\equiv \\forall x p ( x ) \\lor W$\n\nThis formula states that the universal quantifier applied to the disjunction of $p(x)$ and $W$ is equivalent to the disjunction of the universal quantifier applied to $p(x)$ and $W$. This is generally true. The left-hand side means that for all $x$, either $p(x)$ is true or $W$ is true. The right-hand side means that either for all $x",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

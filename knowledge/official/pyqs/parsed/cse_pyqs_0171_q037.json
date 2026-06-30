@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q37",
+  "question_seq": 171,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let G be an edge-weighted undirected graph with positive edge weights. Suppose a positive constant α is added to the weight of every edge. Which ONE of the following statements is TRUE about the minimum spanning trees (MSTs) and shortest paths (SPs) in G before and after the edge weight update?",
+  "options": {
+    "A": "Every MST remains an MST, and every ${ \\mathsf { S P } }$ remains an SP",
+    "B": "MSTs need not remain MSTs, and every ${ \\mathsf { S P } }$ remains an SP.",
+    "C": "Every MST remains an MST, and $\\mathsf { S P S }$ need not remain ${ \\tt S P S }$",
+    "D": "MSTs need not remain MSTs, and ${ \\tt S P S }$ need not remain ${ \\mathsf { S P S } } _ { }$ [2025 (Set-2):2 M]"
+  },
+  "answer": "C",
+  "solution": "To determine which statement is true about the minimum spanning trees (MSTs) and shortest paths (SPs) in a graph \\( G \\) after adding a positive constant \\( \\alpha \\) to the weight of every edge, let's analyze each part of the statement step by step.\n\n### Step 1: Analyze the Minimum Spanning Trees (MSTs)\nA minimum spanning tree (MST) of a graph is a subset of its edges that forms a tree including all vertices, with the minimum possible total edge weight.\n\nWhen we add a positive constant \\( \\alpha \\) to the weight of every edge, the weight of each edge \\( e \\) in the graph becomes \\( w(e) + \\alpha \\). The total weight of any spanning tree \\( T \\) in the graph will increase by \\( \\alpha \\times (n-1) \\), where \\( n \\) is the number of vertices in the graph (since a spanning tree has \\( n-1 \\) edges).\n\nSince the weight of every spanning tree increases by the same amount \\( \\alpha \\times (n-1) \\), the relative order of the weights of the spanning trees does not change. Therefore, the minimum spanning tree before the weight update will also be the minimum spanning tree after the weight update.\n\n### Step 2: Analyze the Shortest Paths (SPs)\nA shortest path (SP) between two vertices in a graph is a path with the minimum possible total edge weight.\n\nWhen we add a positive constant \\( \\alpha \\) to the weight of every edge, the weight of each edge \\( e \\) in the graph becomes \\( w(e) + \\alpha \\). The total weight of any path \\( P \\) between two vertices will increase by \\( \\alpha \\times k \\), where \\( k \\) is the number of edges in the path.\n\nSince the weight of every path increases by the same amount \\( \\alpha \\times k \\), the relative order of the weights of the paths does not change. Therefore, the shortest path before the weight update will also be the shortest path after the weight update.\n\n### Conclusion\nBased on the analysis, we can conclude that every minimum spanning tree remains an minimum spanning tree, and every shortest path remains a shortest path after adding a positive constant \\( \\alpha \\) to the weight of every edge.\n\nThus, the correct answer is:\n\\[\n\\boxed{A}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

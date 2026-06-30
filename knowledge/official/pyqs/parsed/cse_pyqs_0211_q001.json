@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q1",
+  "question_seq": 211,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Expedite, Hasten, Hurry, Fill the blank by choosing a word with a meaning similar to that of the words given above.",
+  "options": {
+    "A": "Accelerate",
+    "C": "Provide",
+    "B": "Retard",
+    "D": "Disable"
+  },
+  "answer": "A",
+  "solution": "To determine the correct word to fill in the blank, we need to understand the meaning of the given words: Expedite, Hurry, and Fill the blank by choosing a word with a meaning similar to that of the words given above.\n\n1. **Expedite**: This word means to move or proceed in a definite direction, often in a Hurry.\n2. **Hurry**: This word means to move or proceed in a Hurry.\n3. **Fill the blank**: This word means to fill in the blank with a word that has a similar meaning to the given words.\n\nFrom the above definitions, we can see that the words Expedite, Hurry, and Fill the blank all have a similar meaning of moving or proceed in a Hurry. Therefore, the word that best fits the blank is \"Acceleration\".\n\nHowever, the word \"Acceleration\" does not fit the context of the question. The correct word to fill in the blank is \"Acceleration\".\n\nTherefore, the correct answer is:\n\n\\boxed{A}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

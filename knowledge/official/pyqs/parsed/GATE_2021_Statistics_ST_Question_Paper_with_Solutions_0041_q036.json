@@ -1,0 +1,18 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q36",
+  "question_seq": 41,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $\\{ X _ { n } \\} _ { n \\ge 0 }$ be a time-homogeneous discrete time Markov chain with either finite or countable state space S. Then which one of the following statements is true?",
+  "options": {
+    "A": "There is at least one recurrent state",
+    "B": "If there is an absorbing state, then there exists at least one stationary distribution",
+    "C": "If all the states are positive recurrent, then there exists a unique stationary distribution $ \\{ X _ { n } \\} _ { n \\ge 0 } $ $ S = \\{ 1 , 2 \\} $ $ \\left[ \\pi _ { 1 } \\pi _ { 2 } \\right] $ $ \\begin{array} { r } { \\operatorname* { l i m } _ { n \\to \\infty } P ( X _ { n } = i \\mid X _ { 0 } = i ) = \\pi _ { i } } \\end{array} $"
+  },
+  "answer": "D",
+  "solution": "\\- Option (A) is true because a time-homogeneous Markov chain always has at least one recurrent state.\n\n\\- Option (B) is false because if there is an absorbing state, it does not necessarily guarantee the existence of a stationary distribution.\n\n\\- Option (C) is true because if all states are positive recurrent, a unique stationary distribution exists.\n\n\\- Option (D) is true by the fundamental limit theorem of Markov chains, which states that for an irreducible Markov chain with a stationary distribution, $\\begin{array} { r } { \\operatorname* { l i m } _ { n \\to \\infty } P ( X _ { n } = i \\mid X _ { 0 } = i ) = \\pi _ { i } . } \\end{array}$\nFinal Answer:\n\n(D) If $\\{ X _ { n } \\} _ { n \\ge 0 }$ is irreducible, $S = \\{ 1 , 2 \\}$ and $\\left[ \\pi _ { 1 } \\pi _ { 2 } \\right]$ is a stationary distribution, then lim $P ( X _ { n } = i \\mid X _ { 0 }$ n→∞\nQuick Tip\n\nFor irreducible Markov chains with a stationary distribution, the chain will converge to the stationary distribution as $n  \\infty .$"
+}

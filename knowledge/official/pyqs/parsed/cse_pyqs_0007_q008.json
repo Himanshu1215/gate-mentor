@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q8",
+  "question_seq": 7,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In the given diagram, teachers are represented in the triangle, researchers in the circle and administrators in the rectangle. Out of the total number of the people, the percentage of administrators shall be in the range of",
+  "options": {
+    "B": "0 to 15",
+    "A": "46 to 60",
+    "C": "31 to 45",
+    "D": "16 to 30"
+  },
+  "answer": "C",
+  "solution": "To determine the range of the percentage of administrators out of the total number of people, we need to analyze the given diagram and the information it provides. Let's break it down step by step.\n\n1. **Identify the regions and their relationships:**\n   - The triangle represents teachers.\n   - The circle represents researchers.\n   - The rectangle represents administrators.\n   - The overlapping regions represent people who belong to more than one category.\n\n2. **Define the variables:**\n   - Let \\( T \\) be the number of teachers.\n   - Let \\( R \\) be the number of researchers.\n   - Let \\( A \\) be the number of administrators.\n   - Let \\( x \\) be the number of people who are both teachers and researchers.\n   - Let \\( y \\) be the number of people who are both teachers and administrators.\n   - Let \\( z \\) be the number of people who are both researchers and administrators.\n   - Let \\( w \\) be the number of people who are teachers, researchers, and administrators.\n\n3. **Calculate the total number of people:**\n   The total number of people is given by the principle of inclusion-exclusion for three sets:\n   \\[\n   T + R + A - x - y - z + w\n   \\]\n\n4. **Determine the range of \\( A \\):**\n   - The minimum value of \\( A \\) occurs when the overlapping regions are maximized. This happens when \\( x \\), \\( y \\), and \\( w \\) are as large as possible.\n   - The maximum value of \\( A \\) occurs when the overlapping regions are minimized. This happens when \\( x \\), \\( y \\), and \\( w \\) are as small as possible.\n\n5. **Analyze the given diagram:**\n   - The diagram shows that the rectangle (administrators) overlaps with both the triangle (teachers) and the circle (researchers).\n   - The overlapping regions are not specified, but we can infer that they are non-zero.\n\n6. **Estimate the minimum and maximum values of \\( A \\):**\n   - **Minimum value of \\( A \\):**\n     - If \\( x \\), \\( y \\), and \\( w \\) are all zero, then \\( A \\) is simply the number of people in the rectangle.\n     - However, since there are overlaps, \\( A \\) must be greater than the number of people in the rectangle alone.\n     - From the diagram, we can see that the rectangle is not completely filled, so \\( A \\) is greater than 30.\n     - Let's assume the minimum value of \\( A \\) is approximately 31.\n\n   - **Maximum value of \\( A \\):**\n     - If \\( x \\), \\( y \\), and \\( w \\) are maximized, then \\( A \\) is maximized.\n     - From the diagram, we can see that the rectangle is not completely filled, so \\( A \\) is less than 45.\n     - Let's assume the maximum value of \\( A \\) is approximately 45.\n\n7. **Conclusion:**\n   - The percentage of administrators out of the total number of people is in the range of 31 to 45.\n\nTherefore, the correct answer is:\n\\[\n\\boxed{C}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

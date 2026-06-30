@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q5",
+  "question_seq": 151,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $p _ { \\uparrow }$ and $p _ { 2 }$ denote two arbitrary prime numbers. Which one of the following statements is correct for all values of $p _ { 1 }$ and ${ \\boldsymbol { p } } _ { 2 } ?$ (a) $p _ { 1 } + p _ { 2 }$ is not a prime number. (b) $p _ { 1 } p _ { 2 }$ is not a prime number. (c) $p _ { 1 } + p _ { 2 } + 1$ is a prime number. (d) $p _ { 1 } p _ { 2 } + 1$ is a prime number. [2025 (Set-2) : 1 M]",
+  "options": null,
+  "answer": "B",
+  "solution": "To determine which statement is correct for all values of \\( p_1 \\) and \\( p_2 \\), where \\( p_1 \\) and \\( p_2 \\) are arbitrary prime numbers, we will analyze each option step by step.\n\n**Option (a): \\( p_1 + p_2 \\) is not a prime number.**\n\n- Consider the case when both \\( p_1 \\) and \\( p_2 \\) are odd. The sum of two odd numbers is even. The only even prime number is 2. Therefore, if \\( p_1 \\) and \\( p_2 \\) are both odd, \\( p_1 + p_2 \\) is even and greater than 2, so it is not a prime number.\n- However, if one of \\( p_1 \\) or \\( p_2 \\) is 2 (the only even prime number) and the other is an odd prime, then \\( p_1 + p_2 \\) is odd and greater than 2. For example, if \\( p_1 = 2 \\) and \\( p_2 = 3 \\), then \\( p_1 + p_2 = 5 \\), which is a prime number.\n- Therefore, \\( p_1 + p_2 \\) is not always not a prime number. This statement is false.\n\n**Option (b): \\( p_1 p_2 \\) is not a prime number.**\n\n- If both \\( p_1 \\) and \\( p_2 \\) are prime numbers, then their product \\( p_1 p_2 \\) has exactly four distinct positive divisors: 1, \\( p_1 \\), \\( p_2 \\), and \\( p_1 p_2 \\). A prime number has exactly two distinct positive divisors: 1 and itself.\n- Therefore, \\( p_1 p_2 \\) is not a prime number for any two prime numbers \\( p_1 \\) and \\( p_2 \\).\n- This statement is true.\n\n**Option (c): \\( p_1 + p_2 + 1 \\) is a prime number.**\n\n- Consider the case when both \\( p_1 \\) and \\( p_2 \\) are odd. The sum of two odd numbers is even, so \\( p_1 + p_2 \\) is even. Adding 1 to an even number results in an odd number. For example, if \\( p_1 = 3 \\) and \\( p_2 = 5 \\), then \\( p_1 + p_2 + 1 = 9 \\), which is not a prime number.\n- Therefore, \\( p_1 + p_2 + 1 \\) is not always a prime number. This statement is false.\n\n**Option (d): \\( p_1 p_2 + 1 \\) is a prime number.**\n\n- Consider the case when both \\( p_1 \\) and \\( p_2 \\) are odd. The product of two odd numbers is odd, so \\( p_1 p_2 \\) is odd. Adding 1 to an odd number results in an even number. For example, if \\( p_1 = 3 \\) and \\( p_2 = 5 \\), then \\( p_1 p_2 + 1 =",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

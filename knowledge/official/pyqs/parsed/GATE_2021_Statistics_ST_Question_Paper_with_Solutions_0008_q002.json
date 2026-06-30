@@ -7,8 +7,9 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "GENERAL",
-  "question_text": "+ q2 p2 = 9 −2 = 7 Thus, p2",
+  "question_text": "The increments $W ( t ) - W ( s )$ are independent for $t > s ,$ and $W ( t ) - W ( s ) \\sim { \\mathcal { N } } ( 0 , t - s )$",
   "options": null,
   "answer": null,
-  "solution": null
+  "solution": "To solve the problem, we need to understand the properties of the increments of a Brownian motion. A Brownian motion \\( W(t) \\) is a continuous-time stochastic process with the following properties:\n\n1. \\( W(0) = 0 \\)\n2. The increments \\( W(t) - W(s) \\) are independent for \\( t > s \\)\n3. The increments \\( W(t) - W(s) \\) are normally distributed with mean 0 and variance \\( t - s \\), i.e., \\( W(t) - W(s) \\sim \\mathcal{N}(0, t - s) \\)\n\nGiven these properties, we can directly use the third property to answer the question. The problem asks us to determine the distribution of the increment \\( W(t) - W(s) \\) for \\( t > s \\).\n\nFrom the properties of the Brownian motion, we know that:\n\n\\[ W(t) - W(s) \\sim \\mathcal{N}(0, t - s) \\]\n\nThis means that the increment \\( W(t) - W(s) \\) is a normally distributed random variable with mean 0 and variance \\( t - s \\).\n\nTherefore, the final answer is:\n\n\\[\n\\boxed{\\mathcal{N}(0, t - s)}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
 }

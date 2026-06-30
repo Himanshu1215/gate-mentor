@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q10",
+  "question_seq": 16,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Evaluate the limit: $ \\operatorname* { l i m } _ { n \\to \\infty } { \\frac { ( 2 ^ { n } + n 2 ^ { n } \\sin ^ { 2 } { \\frac { n } { 2 } } ) } { ( 2 n - n \\cos { \\frac { 1 } { n } } ) } } $ The value of the limit is (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "The expression inside the limit is complex, but we can analyze it by considering the behavior of each term as $n \\to \\infty$ . First, look at the asymptotic behavior of each part of the expression:\n\n $ \\operatorname* { l i m } _ { n \\to \\infty } { \\frac { ( 2 ^ { n } + n 2 ^ { n } \\sin ^ { 2 } { \\frac { n } { 2 } } ) } { ( 2 n - n \\cos { \\frac { 1 } { n } } ) } } $ \n\nFor large $n , \\sin ^ { 2 } { \\frac { n } { 2 } }$ oscillates between 0 and 1, and cos $\\textstyle { \\frac { 1 } { n } } \\to 1$ . Hence, the dominant terms will be the powers of $2 ^ { n }$ . The expression simplifies to:\n\n $ { \\frac { 2 ^ { n } ( 1 + n \\sin ^ { 2 } { \\frac { n } { 2 } } ) } { 2 n } } . $ \n\nSince the factor sin $\\boldsymbol { \\mathsf { \\Omega } } ^ { 2 } \\frac { n } { 2 }$ is bounded, the overall limit approaches:\n\n $ { \\frac { 2 ^ { n } } { 2 n } } \\quad { \\mathrm { a s ~ } } n \\to \\infty . $ \n\nThus, the value of the limit approaches a large number, which can be computed more precisely.\nQuick Tip\n\nFor limits involving trigonometric functions with high powers of $n ,$ consider the dominant terms and simplify the expression before evaluating the limit."
+}

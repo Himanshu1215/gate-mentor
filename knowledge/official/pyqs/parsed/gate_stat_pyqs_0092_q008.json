@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q8",
+  "question_seq": 92,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , \\dots , X _ { n }$ be a random sample drawn from a population with probability density function $f ( x ; \\theta ) = \\theta x ^ { \\theta - 1 } , 0 \\leq x \\leq 1 , \\theta > 0$ . Then the maximum likelihood estimator of θ is (A) $\\frac { - n } { \\sum _ { i = 1 } ^ { n } \\log _ { e } X _ { i } }$ (B) $\\frac { - \\sum _ { i = 1 } ^ { n } \\log _ { e } X _ { i } } { n }$ (C) $( \\prod _ { i = 1 } ^ { n } X _ { i } ) ^ { 1 / n }$ (D) $\\scriptstyle { \\frac { \\prod _ { i = 1 } ^ { n } X _ { i } } { n } }$",
+  "options": null,
+  "answer": null,
+  "solution": "To find the maximum likelihood estimator (MLE) of \\(\\theta\\) for the given probability density function \\(f(x; \\theta) = \\theta x^{\\theta - 1}\\) where \\(0 \\leq x \\leq 1\\) and \\(\\theta > 0\\), we need to follow these steps:\n\n1. **Write the likelihood function**: The likelihood function \\(L(\\theta)\\) is the product of the probability density functions of the individual observations \\(X_1, X_2, \\ldots, X_n\\):\n   \\[\n   L(\\theta) = f(X_1; \\theta) \\cdot f(X_2; \\theta) \\cdots f(X_n; \\theta) = \\theta X_1^{\\theta - 1} \\cdot \\theta X_2^{\\theta - 1} \\cdots \\theta X_n^{\\theta - 1} = \\theta^n (X_1 X_2 \\cdots X_n)^{\\theta - 1}\n   \\]\n\n2. **Take the natural logarithm of the likelihood function**: This simplifies the expression and makes it easier to work with. The log-likelihood function \\(\\ell(\\theta)\\) is:\n   \\[\n   \\ell(\\theta) = \\ln L(\\theta) = \\ln \\left( \\theta^n (X_1 X_2 \\cdots X_n)^{\\theta - 1} \\right) = \\ln (\\theta^n) + \\ln \\left( (X_1 X_2 \\cdots X_n)^{\\theta - 1} \\right) = n \\ln \\theta + (\\theta - 1) \\sum_{i=1}^n \\ln X_i\n   \\]\n\n3. **Find the derivative of the log-likelihood function with respect to \\(\\theta\\)**: To find the critical points, we take the derivative of \\(\\ell(\\theta)\\) with respect to \\(\\theta\\) and set it to zero:\n   \\[\n   \\frac{d \\ell(\\theta)}{d \\theta} = \\frac{n}{\\theta} + \\sum_{i=1}^n \\ln X_i\n   \\]\n   Setting the derivative equal to zero gives:\n   \\[\n   \\frac{n}{\\theta} + \\sum_{i=1}^n \\ln X_i = 0\n   \\]\n   Solving for \\(\\theta\\), we get:\n   \\[\n   \\frac{n}{\\theta} = -\\sum_{i=1}^n \\ln X_i \\implies \\theta = -\\frac{n}{\\sum_{i=1}^n \\ln X_i}\n   \\]\n\n4. **Verify that this critical point is a maximum**: To ensure that this critical point is a maximum, we can check the second derivative of \\(\\ell(\\theta)\\):\n   \\[\n   \\frac{d^2 \\ell(\\theta)}{d \\theta^2} = -\\frac{n}{\\theta^2}\n   \\]\n   Since \\(\\theta > 0\\), \\(\\frac{d^2 \\ell(\\theta)}{d \\theta^2} < 0\\), which means that the log-likelihood function is concave down at \\(\\theta = -\\frac{n",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

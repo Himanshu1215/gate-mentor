@@ -1,0 +1,17 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q49",
+  "question_seq": 27,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let Σ be the set of all bijections from $\\{ 1 , . . . , 5 \\} \\mathrm { t o } \\{ 1 , . . . , 5 \\}$ , where id denotes the identity function, i.e. $\\operatorname { i d } ( j ) = j ,$ ∀ . Let <sub>°</sub> denote composition on functions. For a string $x = x _ { 1 } \\ x _ { 2 } \\ \\dots \\ x _ { n } \\in \\ \\Sigma ^ { n } , \\ n \\geq 0 , \\ \\mathsf { l e t } \\ \\pi ( x ) = x _ { 1 } \\circ x _ { 2 } \\circ \\dots \\circ x _ { n } .$",
+  "options": {
+    "C": "onsider the language $L = \\left\\{ x \\in \\Sigma ^ { \\star } \\left| \\pi ( x ) = \\mathrm { i d } \\right. \\right\\}$ . The minimum number of states in any DFA accepting is"
+  },
+  "answer": "D",
+  "solution": "To determine the minimum number of states in any deterministic finite automaton (DFA) that accepts the language \\( L = \\left\\{ x \\in \\Sigma^* \\mid \\pi(x) = \\mathrm{id} \\right\\} \\), we need to understand the structure of the set \\(\\Sigma\\) and the operation of function composition.\n\n1. **Understanding \\(\\Sigma\\)**:\n   - \\(\\Sigma\\) is the set of all bijections from \\(\\{1, 2, 3, 4, 5\\}\\) to itself.\n   - The identity function \\(\\mathrm{id}\\) is a bijection such that \\(\\mathrm{id}(j) = j\\) for all \\(j \\in \\{1, 2, 3, 4, 5\\}\\).\n\n2. **Function Composition**:\n   - Function composition \\(\\circ\\) is an operation on \\(\\Sigma\\) where \\((x_1 \\circ x_2)(j) = x_1(x_2(j))\\) for all \\(j \\in \\{1, 2, 3, 4, 5\\}\\).\n   - The identity function \\(\\mathrm{id}\\) acts as the identity element for function composition, i.e., \\(\\mathrm{id} \\circ x = x \\circ \\mathrm{id} = x\\) for any \\(x \\in \\Sigma\\).\n\n3. **语言 \\(L\\)**:\n   - \\(L\\) consists of all strings \\(x \\in \\Sigma^*\\) such that \\(\\pi(x) = \\mathrm{id}\\).\n   - This means that applying the sequence of bijections in \\(x\\) must result in the identity function.\n\n4. **Determine the Order of \\(\\Sigma\\)**:\n   - The set \\(\\Sigma\\) is the symmetric group \\(S_5\\), which consists of all permutations of 5 elements.\n   - The order of \\(S_5\\) (the number of elements in \\(S_5\\)) is \\(5! = 120\\).\n\n5. **Determine the Periodicity**:\n   - For any \\(x \\in \\Sigma^*\\), \\(\\pi(x)\\) is a permutation.\n   - The order of a permutation \\(\\sigma \\in S_5\\) is the smallest positive integer \\(k\\) such that \\(\\sigma^k = \\mathrm{id}\\).\n   - The order of any permutation in \\(S_5\\) must divide the order of \\(S_5\\), which is 120.\n\n6. **Determine the Minimum Number of States**:\n   - A DFA that accepts \\(L\\) must have at least as many states as the order of the group \\(S_5\\).\n   - This is because each distinct permutation corresponds to a unique state in the DFA, and the DFA must be able to recognize all permutations that result in the identity function.\n\nTherefore, the minimum number of states in any DFA acceptable \\(L\\) is \\(\\boxed{120}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

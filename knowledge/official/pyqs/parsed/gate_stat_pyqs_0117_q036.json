@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q36",
+  "question_seq": 117,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "ML_001",
+  "question_text": "Let (X, Y) be a bivariate random vector with probability density function $f _ { ( X , Y ) } ( x , y ) = { \\left\\{ \\begin{array} { l l } { e ^ { - y } , } \\\\ { 0 , } \\end{array} \\right. }$ $0 < x < y ,$ otherwise. Then the regression of Y on X is given by (A) $X + 1$ (B) $\\frac { X } { 2 }$ (C) $\\frac { Y } { 2 }$ (D) $Y + 1$",
+  "options": null,
+  "answer": null,
+  "solution": "To find the regression of \\( Y \\) on \\( X \\), we need to compute the conditional expectation \\( E(Y \\mid X = x) \\). The conditional expectation is given by:\n\n\\[\nE(Y \\mid X = x) = \\int_{-\\infty}^{\\infty} y f_{Y \\mid X}(y \\mid x) \\, dy\n\\]\n\nFirst, we need to find the conditional probability density function \\( f_{Y \\mid X}(y \\mid x) \\). The conditional density function is given by:\n\n\\[\nf_{Y \\mid X}(y \\mid x) = \\frac{f_{(X, Y)}(x, y)}{f_X(x)}\n\\]\n\nWe already know the joint density function \\( f_{(X, Y)}(x, y) = e^{-y} \\) for \\( 0 < x < y \\) and 0 otherwise. Next, we need to find the marginal density function \\( f_X(x) \\). The marginal density function \\( f_X(x) \\) is obtained by integrating the joint density function with respect to \\( y \\):\n\n\\[\nf_X(x) = \\int_{-\\infty}^{\\infty} f_{(X, Y)}(x, y) \\, dy = \\int_{x}^{\\infty} e^{-y} \\, dy\n\\]\n\nEvaluating the integral, we get:\n\n\\[\nf_X(x) = \\left[ -e^{-y} \\right]_{x}^{\\infty} = 0 - (-e^{-x}) = e^{-x}\n\\]\n\nNow, we can find the conditional density function \\( f_{Y \\mid X}(y \\mid x) \\):\n\n\\[\nf_{Y \\mid X}(y \\mid x) = \\frac{e^{-y}}{e^{-x}} = e^{-(y-x)} = e^{-y+x} = e^x e^{-y}\n\\]\n\nNext, we compute the conditional expectation \\( E(Y \\mid X = x) \\):\n\n\\[\nE(Y \\mid X = x) = \\int_{-\\infty}^{\\infty} y f_{Y \\mid X}(y \\mid x) \\, dy = \\int_{x}^{\\infty} y e^x e^{-y} \\, dy = e^x \\int_{x}^{\\infty} y e^{-y} \\, dy\n\\]\n\nTo evaluate the integral \\( \\int_{x}^{\\infty} y e^{-y} \\, dy \\), we use integration by parts. Let \\( u = y \\) and \\( dv = e^{-y} \\, dy \\). Then \\( du = dy \\) and \\( v = -e^{-y} \\). Using the integration by parts formula \\( \\int u \\, dv = uv - \\int v \\, du \\), we get:\n\n\\[\n\\int_{x}^{\\infty} y e^{-y} \\, dy = \\left[ -y e^{-y} \\right]_{x}^{\\infty} - \\int_{x}^{\\infty} -e^{-y} \\, dy = \\left[ -y e^{-y} \\right]_{x}^{\\infty} + \\",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

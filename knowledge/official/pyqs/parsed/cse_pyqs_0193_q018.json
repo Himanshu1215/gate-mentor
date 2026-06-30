@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q18",
+  "question_seq": 193,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "With respect to a TCP connection between a client and a server, which one of the following statements is true?",
+  "options": {
+    "A": "The client and server use a two-way handshake mechanism before the start of data transmission.",
+    "B": "The server cannot initiate closing of the connection before the client initiates closing of the connection.",
+    "C": "The TCP connection is half-duplex",
+    "D": "The client and server can initiate closing of the connection at the same time."
+  },
+  "answer": "D",
+  "solution": "To determine why option (D) is the correct answer, let's analyze each statement one by one.\n\n(A) The client and server use a two-way handshake mechanism before the start of data transmission.\n- This statement is true. In aTCP connection, both the client and the server need to confirm each other's availability before starting data transmission. This is done through a two-way handshake where each party sends a \" start\" message to the other. However, this statement does not directly address the question of who can initiate closing the connection.\n\n(B) The server cannot initiate closing of the connection before the client initiates closing of the connection.\n- This statement is false. In aTCP connection, both the client and the server can initiate closing the connection at any time. There is no restriction that the server cannot initiate closing before the client.\n\n(C) The TCP connection is half-duplex.\n- This statement is false. ATCP connection is full-duplex, meaning that data can be transmitted in both directions simultaneously. Half-duplex would mean that data can only be transmitted in one direction at a time.\n\n(D) The client and server can initiate closing of the connection at the same time.\n- This statement is true. In aTCP connection, both the client and the server can initiate closing the connection at the same time. There is no restriction that they cannot do so simultaneously.\n\nGiven the analysis, the correct answer is:\n\n\\boxed{D}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

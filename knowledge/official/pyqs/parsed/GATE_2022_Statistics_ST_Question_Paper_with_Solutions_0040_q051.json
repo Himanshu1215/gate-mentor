@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q51",
+  "question_seq": 40,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Two independent random samples, each of size 7, from two populations yield the following values: <table><tr><td rowspan=1 colspan=1>Population 1</td><td rowspan=1 colspan=1>18</td><td rowspan=1 colspan=1>20</td><td rowspan=1 colspan=1>16</td><td rowspan=1 colspan=1>20</td><td rowspan=1 colspan=1>17</td><td rowspan=1 colspan=1>18</td><td rowspan=1 colspan=1>14</td></tr><tr><td rowspan=1 colspan=1>Population 2</td><td rowspan=1 colspan=1>17</td><td rowspan=1 colspan=1>18</td><td rowspan=1 colspan=1>14</td><td rowspan=1 colspan=1>20</td><td rowspan=1 colspan=1>14</td><td rowspan=1 colspan=1>13</td><td rowspan=1 colspan=1>16</td></tr></table> If Mann–Whitney U test is performed at 5% level of significance to test the null hypothesis $H _ { 0 }$ : Distributions of the populations are same, against the alternative hypothesis $H _ { 1 }$ : Distributions of the populations are not same, then the value of the test statistic U (in integer) for the given data, is",
+  "options": null,
+  "answer": null,
+  "solution": "The Mann–Whitney U test is based on the ranks of the combined data from both samples. First, combine all 14 observations from both populations and assign ranks in ascending order:\n\n $ 1 3 , 1 4 , 1 4 , 1 4 , 1 6 , 1 6 , 1 7 , 1 7 , 1 8 , 1 8 , 1 8 , 2 0 , 2 0 , 2 0 $ \n\nAfter assigning average ranks for ties:\n\n $ 1 3 ( 1 ) , 1 4 ( 2 , 3 , 4 ) \\to 3 , 1 6 ( 5 , 6 ) \\to 5 . 5 , 1 7 ( 7 , 8 ) \\to 7 . 5 , 1 8 ( 9 , 1 0 , 1 1 ) \\to 1 0 , 2 0 ( 1 2 , 1 3 , 1 4 ) \\to 1 3 $ \n\nNow, assign ranks to each sample:\n\nPopulation 1: 18(10), 20(13), 16(5.5), 20(13), 17(7.5), 18(10), 14(3) Sum of ranks for\n\nPopulation 1, $R _ { 1 } = 1 0 + 1 3 + 5 . 5 + 1 3 + 7 . 5 + 1 0 + 3 = 6 2$\n\nPopulation 2: 17(7.5), 18(10), 14(3), 20(13), 14(3), 13(1), 16(5.5) Sum of ranks for\n\nPopulation 2, $R _ { 2 } = 4 3$\n\nThe test statistic U is calculated as:\n\n $ U _ { 1 } = n _ { 1 } n _ { 2 } + \\frac { n _ { 1 } ( n _ { 1 } + 1 ) } { 2 } - R _ { 1 } $ \n\n $ U _ { 1 } = 7 ( 7 ) + { \\frac { 7 ( 8 ) } { 2 } } - 6 2 = 4 9 + 2 8 - 6 2 = 1 5 $ \n\nThus, the test statistic U is 15 .\nQuick Tip\n\nFor the Mann–Whitney U test, remember to rank all observations together and use the formula $\\begin{array} { r } { U = n _ { 1 } n _ { 2 } + \\frac { n _ { 1 } ( n _ { 1 } + 1 ) } { 2 } - R _ { 1 } } \\end{array}$"
+}

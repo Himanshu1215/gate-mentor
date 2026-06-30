@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q28",
+  "question_seq": 198,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following statements is/are true?",
+  "options": {
+    "A": "LL(1) parser uses backtracking",
+    "B": "For a grammar to be LL(1), it must be left-recursive",
+    "C": "For a grammar to be LL(1), it must be left-factored",
+    "D": "The LL(1) parsers are more powerful than the SLR parsers"
+  },
+  "answer": "C",
+  "solution": "To determine which of the given statements is true, let's analyze each one step by step.\n\n(A) LL(1) parser uses backtracking.\n- This statement is false. LL(1) parsers do not use backtracking. They use a top-down approach and do not need to backtrack during the parsing process.\n\n(B) For a grammar to be LL(1), it must be left-recursive.\n- This statement is false. Left-递归 is not a necessary condition for a grammar to be LL(1). A grammar can be LL(1) even if it is not left-recursive.\n\n(C) For a grammar to be LL(1), it must be left-factored.\n- This statement is true. For a grammar to be LL(1), it must be left-factored. Left-factoring ensures that the文法 does not have any left-递归 or left-ambiguous rules, which are necessary for an LL(1) parser to work correctly.\n\n(D) The LL(1) parsers are more powerful than the SLR parsers.\n- This statement is false. SLR parsers are more powerful than LL(1) parsers. SLR parsers can handle a larger class of context-free languages than LL(1) parsers.\n\nBased on the analysis, the correct statement is:\n\n\\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

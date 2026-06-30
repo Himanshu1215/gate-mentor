@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q3",
+  "question_seq": 2,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The least number of squares that must be added so that the line P-Q becomes the line of symmetry is",
+  "options": {
+    "A": "4",
+    "B": "3",
+    "C": "6",
+    "D": "7"
+  },
+  "answer": "C",
+  "solution": "We are given a figure with a vertical dashed line labeled P-Q, which is intended to be the line of symmetry. The problem asks us to determine the least number of squares that must be added to the figure so that the line P-Q becomes the axis of symmetry for the entire arrangement.\n\nStep 1: Analyze the initial figure.\n\nThe figure consists of several squares arranged around the line P-Q. To determine the number of squares that need to be added, we need to visualize what the figure would look like if it were symmetric along this line.\n\nStep 2: Apply the concept of symmetry.\n\nSymmetry in this case means that for each square on one side of the line P-Q, there must be a corresponding square on the opposite side. In this case, the figure is asymmetric along the line P-Q, which means that squares are missing on one side of the line.\n\nStep 3: Determine the missing squares.\n\nBy observing the figure carefully, we can see that adding 6 more squares would complete the symmetry, making the entire shape symmetric about the line P-Q. Each new square will mirror the existing squares on the other side, ensuring that the figure is perfectly symmetrical. Thus, the least number of squares to be added is 6.\n\nTherefore, the correct answer is option (C).\nFinal Answer: 6\nQuick Tip\n\nTo create symmetry in a figure, visualize how the shape would look after reflecting it across the given line of symmetry and determine how many elements are missing on the opposite side."
+}

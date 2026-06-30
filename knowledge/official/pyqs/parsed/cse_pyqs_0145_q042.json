@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q42",
+  "question_seq": 145,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let A be any $n \\times m$ matrix, where $m > n .$ Which of the following statements is/are TRUE about the system of linear equations $A x = 0 ?$",
+  "options": {
+    "A": "There exist at least $m - n$ linearly independent solutions to this system",
+    "B": "There exists a solution in which at least n variables are non-zero",
+    "C": "There exists a non-zero solution in which at least $m - n$ variables are 0",
+    "D": "There exist $m - n$ linearly independent vectors such that every solution is a linear combination of these vectors"
+  },
+  "answer": "A",
+  "solution": "To determine which statements are true about the system of linear equations \\( A x = 0 \\) where \\( A \\) is an \\( n \\times m \\) matrix with \\( m > n \\), we need to analyze the properties of the null space of \\( A \\).\n\n### Step-by-Step Solution:\n\n1. ** null space of \\( A \\)**:\n   The null space of \\( A \\), denoted as \\( \\text{null}(A) \\), is the set of all vectors \\( x \\) such that \\( A x = 0 \\). The dimension of the null space is given by the nullity of \\( A \\).\n\n2. ** rank nullity theorem**:\n   The rank nullity theorem states that for any \\( n \\times m \\) matrix \\( A \\),\n   \\[\n   \\text{rank}(A) + \\text{nullity}(A) = m\n   \\]\n   where \\( \\text{rank}(A) \\) is the rank of \\( A \\) (the dimension of the column space of \\( A \\)) and \\( \\text{nullity}(A) \\) is the nullity of \\( A \\) (the dimension of the null space of \\( A \\)).\n\n3. ** Given condition**:\n   Since \\( m > n \\), and the rank of \\( A \\) cannot exceed \\( n \\) (because \\( A \\) has \\( n \\) rows), we have:\n   \\[\n   \\text{rank}(A) \\leq n\n   \\]\n   Using the rank nullity theorem:\n   \\[\n   \\text{nullity}(A) = m - \\text{rank}(A) \\geq m - n\n   \\]\n   This tells us that the dimension of the null space of \\( A \\) is at least \\( m - n \\).\n\n4. ** Analyzing the statements**:\n   - **Statement (A)**: There exist at least \\( m - n \\) linearly independent solutions to this system.\n     Since the dimension of the null space is at least \\( m - n \\), there are at least \\( m - n \\) linearly independent vectors in the null space. Therefore, there exist at least \\( m - n \\) linearly independent solutions to the system \\( A x = 0 \\). This statement is true.\n\n   - **Statement (B)**: There exists a solution in which at least \\( n \\) variables are non-zero.\n     This statement is not necessarily true. Consider a matrix \\( A \\) where the null space vectors have fewer than \\( n \\) non-zero entries. For example, if \\( A \\) is a matrix with linearly independent rows, the null space will have a basis where each vector has at most \\( m - n \\) non-zero entries. Therefore, this statement is false.\n\n   - **Statement (C)**: There exists a non-zero solution in which at least \\( m - n \\) variables are 0.\n     This statement is true. Since the dimension of the null space is at least \\( m - n \\), there exists a non-zero vector in the null space. This vector can have at most \\( n \\) non-zero entries (because \\( m > n \\)), which means at least \\( m - n \\) variables are 0.\n\n   - **Statement (D)**: There exist",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

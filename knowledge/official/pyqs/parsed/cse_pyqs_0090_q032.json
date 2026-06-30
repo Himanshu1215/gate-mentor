@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q32",
+  "question_seq": 90,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The number of arrangements of six identical balls in three identical bins is",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine the number of arrangements of six identical balls in three identical bins, we need to consider the problem as a combinatorial problem where the order of the bins does not matter. This is equivalent to finding the number of ways to partition the number 6 into up to 3 parts, where the parts are non-negative integers and the order of the parts does not matter.\n\nWe can list all the partitions of 6 into up to 3 parts:\n\n1. \\(6 + 0 + 0\\)\n2. \\(5 + 1 + 0\\)\n3. \\(4 + 2 + 0\\)\n4. \\(4 + 1 + 1\\)\n5. \\(3 + 3 + 0\\)\n6. \\(3 + 2 + 1\\)\n7. \\(2 + 2 + 2\\)\n\nEach of these partitions represents a unique way to distribute the six balls into three bins. Let's verify each partition:\n\n- \\(6 + 0 + 0\\) means all six balls are in the first bin, and the other two bins are empty.\n- \\(5 + 1 + 0\\) means five balls are in the first bin, one ball is in the second bin, and the third bin is empty.\n- \\(4 + 2 + 0\\) means four balls are in the first bin, two balls are in the second bin, and the third bin is empty.\n- \\(4 + 1 + 1\\) means four balls are in the first bin, one ball is in the second bin, and one ball is in the third bin.\n- \\(3 + 3 + 0\\) means three balls are in the first bin, three balls are in the second bin, and the third bin is empty.\n- \\(3 + 2 + 1\\) means three balls are in the first bin, two balls are in the second bin, and one ball is in the third bin.\n- \\(2 + 2 + 2\\) means two balls are in each of the three bins.\n\nSince there are 7 unique partitions, the number of arrangements of six identical balls in three identical bins is \\(\\boxed{7}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

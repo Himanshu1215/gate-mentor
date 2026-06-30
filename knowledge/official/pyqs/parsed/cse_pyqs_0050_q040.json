@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q40",
+  "question_seq": 50,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "For $n > 2 ,$ let $a \\in \\{ 0 , 1 \\} ^ { n }$ be a non-zero vector. Suppose that x is chosen uniformly at random from $\\{ 0 , 1 \\} ^ { n } .$ Then, the probability that $\\sum _ { i = 1 } ^ { n } a _ { i } x _ { i }$ is an odd number is",
+  "options": null,
+  "answer": "B",
+  "solution": "To determine the probability that \\(\\sum_{i=1}^n a_i x_i\\) is an odd number, we need to analyze the expression in the context of binary arithmetic. Here, \\(a_i\\) and \\(x_i\\) are either 0 or 1, and the sum is taken modulo 2. This means that \\(\\sum_{i=1}^n a_i x_i\\) is odd if and only if the number of terms \\(a_i x_i\\) that are 1 is odd.\n\nLet's break down the problem step by step:\n\n1. **Identify the possible values of \\(a_i x_i\\):**\n   - If \\(a_i = 0\\), then \\(a_i x_i = 0\\).\n   - If \\(a_i = 1\\), then \\(a_i x_i = x_i\\), which can be either 0 or 1.\n\n2. **Count the number of 1's in \\(a\\):**\n   - Let \\(k\\) be the number of 1's in the vector \\(a\\). Since \\(a\\) is a non-zero vector, \\(1 \\leq k \\leq n\\).\n\n3. **Determine the probability that \\(\\sum_{i=1}^n a_i x_i\\) is odd:**\n   - For \\(\\sum_{i=1}^n a_i x_i\\) to be odd, the number of 1's among \\(a_i x_i\\) must be odd.\n   - The number of 1's among \\(a_i x_i\\) is the same as the number of positions \\(i\\) where \\(a_i = 1\\) and \\(x_i = 1\\). This is a binomial random variable with parameters \\(k\\) and \\(\\frac{1}{2}\\) (since each \\(x_i\\) is chosen uniformly at random from \\(\\{0, 1\\}\\)).\n\n4. **Calculate the probability that a binomial random variable with parameters \\(k\\) and \\(\\frac{1}{2}\\) is odd:**\n   - The probability that a binomial random variable with parameters \\(k\\) and \\(\\frac{1}{2}\\) is odd is \\(\\frac{1}{2}\\) if \\(k\\) is odd, and \\(\\frac{1}{2}\\) if \\(k\\) is even. This is because the binomial distribution with \\(p = \\frac{1}{2}\\) is symmetric.\n\n5. **Combine the probabilities:**\n   - Since the probability that \\(\\sum_{i=1}^n a_i x_i\\) is odd is \\(\\frac{1}{2}\\) regardless of the value of \\(k\\) (whether it is odd or even), the overall probability that \\(\\sum_{i=1}^n a_i x_i\\) is odd is \\(\\frac{1}{2}\\).\n\nTherefore, the probability that \\(\\sum_{i=1}^n a_i x_i\\) is an odd number is \\(\\boxed{\\frac{1}{2}}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

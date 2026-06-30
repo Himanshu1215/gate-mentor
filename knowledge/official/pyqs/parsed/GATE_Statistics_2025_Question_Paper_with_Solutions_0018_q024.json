@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q24",
+  "question_seq": 18,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "For a given data $( x _ { i } , y _ { i } ) , i = 1 , 2 , \\ldots , n ,$ with $\\textstyle \\sum _ { i = 1 } ^ { n } x _ { i } ^ { 2 } > 0 .$ , let $\\hat { \\beta }$ satisfy $ \\sum _ { i = 1 } ^ { n } ( y _ { i } - { \\hat { \\beta } } x _ { i } ) ^ { 2 } = \\operatorname* { i n f } _ { \\beta \\in \\mathbb { R } } \\sum _ { i = 1 } ^ { n } ( y _ { i } - \\beta x _ { i } ) ^ { 2 } . $ Further, let $v _ { j } = y _ { j } - x _ { j }$ and $u _ { j } = 2 x _ { j }$ , for $j = 1 , 2 , \\dots , n$ , and let $\\hat { \\gamma }$ satisfy $ \\sum _ { i = 1 } ^ { n } ( v _ { i } - \\hat { \\gamma } u _ { i } ) ^ { 2 } = \\operatorname* { i n f } _ { \\gamma \\in \\mathbb { R } } \\sum _ { i = 1 } ^ { n } ( v _ { i } - \\gamma u _ { i } ) ^ { 2 } . $ If ${ \\hat { \\beta } } = 1 0$ , then the value of $\\cdot \\hat { \\gamma }$ is:",
+  "options": {
+    "A": "4.5",
+    "B": "5",
+    "C": "10",
+    "D": "9"
+  },
+  "answer": "B",
+  "solution": "The given problem involves two optimization problems for minimizing the sum of squared errors."
+}

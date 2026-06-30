@@ -1,0 +1,15 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q1",
+  "question_seq": 13,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "The distribution of 19S is $W _ { 6 } ( 1 9 , \\Sigma )$ (Wishart distribution of order 6 with 19 degrees of freedom).",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the problem, we need to understand the properties of the Wishart distribution. The Wishart distribution \\( W_p(n, \\Sigma) \\) is a distribution of a \\( p \\times p \\) symmetric matrix, where \\( n \\) is the degrees of freedom and \\( \\Sigma \\) is the scale matrix.\n\nGiven that the distribution of \\( 19S \\) is \\( W_6(19, \\Sigma) \\), we need to determine the distribution of \\( S \\).\n\nThe Wishart distribution has a property that if \\( A \\) is a positive definite matrix and \\( X \\sim W_p(n, \\Sigma) \\), then \\( A^{-1}X \\sim W_p(n, A^{-1}\\Sigma A^{-1}) \\).\n\nIn our case, \\( X = 19S \\) and \\( A = 19I \\), where \\( I \\) is the identity matrix. Therefore, we have:\n\\[ S = 19^{-1}X = \\frac{1}{19}X. \\]\n\nUsing the property of the Wishart distribution, we get:\n\\[ S \\sim W_6\\left(19, \\left(\\frac{1}{19}I\\right)^{-1}\\right). \\]\n\nSince the inverse of \\( \\frac{1}{19}I \\) is \\( 19I \\), we have:\n\\[ S \\sim W_6(19, 19I). \\]\n\nThus, the distribution of \\( S \\) is \\( W_6(19, 19I) \\).\n\nThe final answer is:\n\\[\n\\boxed{W_6(19, 19I)}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

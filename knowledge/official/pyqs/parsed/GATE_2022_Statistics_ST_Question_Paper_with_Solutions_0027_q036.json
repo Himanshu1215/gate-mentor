@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q36",
+  "question_seq": 27,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let M be a $\\mathbf { 3 \\times 3 }$ real symmetric matrix with eigenvalues −1, 1, 2 and the corresponding unit eigenvectors $u , v , w ,$ , respectively. Let x and $y$ be two vectors in $\\mathbb { R } ^ { 3 }$ such that $ M x = u + 2 ( v + w ) \\quad \\mathrm { a n d } \\quad M ^ { 2 } y = u - ( v + 2 w ) . $",
+  "options": {
+    "C": "onsidering the usual inner product in $\\mathbb { R } ^ { 3 }$ , the value of $| x + y | ^ { 2 }$ , where $| x + y |$ is the length of the vector $x + y ,$ is",
+    "A": "1.25",
+    "B": "0.25",
+    "D": "1"
+  },
+  "answer": "A",
+  "solution": "We are given that M is a symmetric matrix with eigenvalues −1, 1, 2, and we are tasked with finding $| x + y | ^ { 2 }$ . First, let’s break down the given equations for Mx and $M ^ { 2 } y$\n\nStep 1: Use the properties of eigenvectors and eigenvalues.\n\nWe know that: - The eigenvectors corresponding to the eigenvalues −1, 1, 2 of the matrix M are u, v, w, respectively. - Thus, Mu = −u, Mv = v, and $M w = 2 w$\n\nStep 2: Find x and y in terms of eigenvectors.\n\nWe are given that $M x = u + 2 ( v + w )$ . Applying the matrix M, we get:\n\n $ M x = M u + 2 ( M v + M w ) = - u + 2 ( v + 2 w ) = - u + 2 v + 4 w $ \n\nThis gives us the expression for $x , \\mathrm { { s o } } x = - u + 2 v + 4 w .$\n\nFor $M ^ { 2 } y = u - ( v + 2 w )$ , since $M ^ { 2 } = M \\times M$ , we apply M to both sides:\n\n $ M ^ { 2 } y = M ( u - v - 2 w ) = M u - M v - 2 M w = - u - v - 4 w $ \n\nThis gives us the expression for y, so $y = - u - v - 4 w$\nStep 3: Compute $| x + y | ^ { 2 }$\n\nNow we compute the square of the length of $x + y \\colon$\n\n $ x + y = ( - u + 2 v + 4 w ) + ( - u - v - 4 w ) = - 2 u + v $ \n\nThus, the squared length of $x + y$ is:\n\n $ | x + y | ^ { 2 } = ( - 2 u + v ) \\cdot ( - 2 u + v ) $ \n\nUsing the properties of the inner product and the fact that $u , v , w$ are unit vectors:\n\n $ | x + y | ^ { 2 } = 4 u \\cdot u - 4 u \\cdot v + v \\cdot v = 4 ( 1 ) - 4 ( 0 ) + ( 1 ) = 4 + 1 = 5 $ \n\nSo, $| x + y | ^ { 2 } = 5$\nQuick Tip\n\nWhen working with eigenvalues and eigenvectors, remember that the matrix operation on an eigenvector results in a scalar multiple of the eigenvector itself, and the dot product of orthogonal vectors is zero."
+}

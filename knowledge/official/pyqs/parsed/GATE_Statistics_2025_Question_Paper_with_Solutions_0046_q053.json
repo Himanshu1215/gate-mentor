@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q53",
+  "question_seq": 46,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let $X = ( X _ { 1 } , X _ { 2 } , X _ { 3 } ) ^ { T }$ be a 3-dimensional random vector having multivariate normal distribution with mean vector $( 0 , 0 , 0 ) ^ { T }$ and covariance matrix $ \\Sigma = \\left( \\begin{array} { l l l } { 4 } & { 0 } & { 0 } \\\\ { 0 } & { 9 } & { 0 } \\\\ { 0 } & { 0 } & { 4 } \\end{array} \\right) . $ Let $\\alpha ^ { T } = ( 2 , 0 , - 1 )$ and $\\beta ^ { T } = ( 1 , 1 , 1 )$ Then which of the following statements is/are correct?",
+  "options": {
+    "A": "$E ( \\mathrm { t r a c e } ( X X ^ { T } \\alpha \\alpha ^ { T } ) ) = 2 0$",
+    "B": "$\\mathrm { V a r } ( \\mathrm { t r a c e } ( X \\alpha ^ { T } ) ) = 2 0$",
+    "C": "$E ( \\mathrm { t r a c e } ( X X ^ { T } ) ) = 1 7$",
+    "D": "$\\mathbf { C o v } ( \\alpha ^ { T } X , \\beta ^ { T } X ) = 3$"
+  },
+  "answer": "A",
+  "solution": "Step 1: Calculation of $E ( \\mathbf { t r a c e } ( X X ^ { T } \\alpha \\alpha ^ { T } ) )$\n\nRecall that $E ( X ) = 0$ and $\\mathbf { C o v } ( X ) = \\Sigma$ . We can use the fact that\n\n$\\mathrm { t r a c e } ( X X ^ { T } \\alpha \\alpha ^ { T } ) = \\alpha ^ { T } ( X X ^ { T } ) \\alpha$ . Given the covariance matrix $\\Sigma ,$ this simplifies to:\n\n $ E ( \\operatorname { t r a c e } ( X X ^ { T } \\alpha \\alpha ^ { T } ) ) = \\alpha ^ { T } \\Sigma \\alpha . $ \n\nSubstituting $\\alpha ^ { T } = ( 2 , 0 , - 1 )$ and $\\Sigma .$ , we get:\n\n $ E ( \\operatorname { t r a c e } ( X X ^ { T } \\alpha \\alpha ^ { T } ) ) = ( 2 , 0 , - 1 ) \\left( { \\begin{array} { l l l } { 4 } & { 0 } & { 0 } \\\\ { 0 } & { 9 } & { 0 } \\\\ { 0 } & { 0 } & { 4 } \\end{array} } \\right) \\left( { \\begin{array} { l } { 2 } \\\\ { 0 } \\\\ { - 1 } \\end{array} } \\right) = 2 0 . $ \n\nThus, Option (A) is correct.\nStep 2: Variance of trace(Xα<sup>T</sup> )\n\nWe need to compute the variance of trace $\\langle X \\alpha ^ { T } ) = \\alpha ^ { T } X$ . Since X has covariance matrix $\\Sigma ,$ we can use the formula for the variance of a linear combination of random variables:\n\n $ \\operatorname { V a r } ( \\alpha ^ { T } X ) = \\alpha ^ { T } \\Sigma \\alpha . $ \n\nSubstituting $\\alpha ^ { T } = ( 2 , 0 , - 1 )$ and $\\Sigma .$ , we get:\n\n $ \\operatorname { V a r } ( \\alpha ^ { T } X ) = ( 2 , 0 , - 1 ) \\left( { \\begin{array} { c c c } { 4 } & { 0 } & { 0 } \\\\ { 0 } & { 9 } & { 0 } \\\\ { 0 } & { 0 } & { 4 } \\end{array} } \\right) \\left( { \\begin{array} { c } { 2 } \\\\ { 0 } \\\\ { - 1 } \\end{array} } \\right) = 2 0 . $ \n\nThus, Option (B) is correct.\n\nStep 3: Calculation of $E ( \\mathbf { t r a c e } ( X X ^ { T } ) )$\n\nThe trace of $X X ^ { T }$ is the sum of the squared components of X. The expected value of the trace is simply the sum of the diagonal elements of the covariance matrix Σ:\n\n $ E ( \\operatorname { t r a c e } ( X X ^ { T } ) ) = E ( X _ { 1 } ^ { 2 } ) + E ( X _ { 2 } ^ { 2 } ) + E ( X _ { 3 } ^ { 2 } ) = 4 + 9 + 4 = 1 7 . $ \n\nThus, Option (C) is correct.\n\nFinal Answer: The correct answers are $\\boxed { A , B , C } .$\nQuick Tip\n\nFor linear combinations of random variables, use the formula for the variance of linear combinations and the trace of quadratic forms to simplify the calculations."
+}

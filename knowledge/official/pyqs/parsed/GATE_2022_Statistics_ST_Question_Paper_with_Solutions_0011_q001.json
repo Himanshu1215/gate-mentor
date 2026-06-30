@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q1",
+  "question_seq": 11,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "The distribution of $T _ { n }$ is the same for all continuous underlying distribution functions $F ( x )$ 2. $D _ { n }$ converges to 0 almost surely, as $n \\to \\infty$ Which one of the following statements is/are true?",
+  "options": {
+    "A": "(I) only",
+    "B": "(II) only",
+    "C": "Both (I) and (II)",
+    "D": "Neither (I) nor (II)"
+  },
+  "answer": "C",
+  "solution": "Step 1: Analyzing Statement (I).\n\nThe Kolmogorov-Smirnov statistic $T _ { n }$ is a measure of the difference between the empirical distribution function $F _ { n } ( x )$ and the true cumulative distribution function $F ( x )$ . For all continuous distributions, the limiting distribution of $T _ { n }$ is the same. Hence, statement (I) is correct.\nStep 2: Analyzing Statement (II).\n\nThe statistic $\\begin{array} { r } { D _ { n } = \\operatorname* { s u p } _ { - \\infty < x < \\infty } | F _ { n } ( x ) - F ( x ) | } \\end{array}$ converges to 0 almost surely as $n \\to \\infty$ . This is a well-known property of the empirical distribution function, and is a result from the Glivenko-Cantelli theorem. Thus, statement (II) is also correct.\n\nStep 3: Conclusion.\n\nBoth statements (I) and (II) are true, so the correct answer is (C).\nQuick Tip\n\nThe Kolmogorov-Smirnov test statistic is based on the maximum difference between the empirical distribution function and the true distribution function. As the sample size increases, this difference tends to zero almost surely."
+}

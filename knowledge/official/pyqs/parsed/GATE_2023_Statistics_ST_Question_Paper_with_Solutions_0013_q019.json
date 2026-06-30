@@ -7,13 +7,13 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "PROB_001",
-  "question_text": "Let (X, Y ) have joint probability density function f(x, y) = 8xy if 0 < x < y < 1 otherwise. If E(X|Y = y0) = 1 2, then y0 equals",
+  "question_text": "Let (X, Y ) have joint probability density function $ f ( x , y ) = { \\left\\{ \\begin{array} { l l } { 8 x y } & { { \\mathrm { i f ~ } } 0 < x < y < 1 } \\\\ { 0 } & { { \\mathrm { o t h e r w i s e . } } } \\end{array} \\right. } $ If $E ( X | Y = y _ { 0 } ) = { \\frac { 1 } { 2 } }$ , then $y _ { 0 }$ equals",
   "options": {
-    "A": "3",
-    "B": "1",
-    "C": "1",
-    "D": "2"
+    "A": "$\\frac 3 4$",
+    "B": "$\\frac { 1 } { 2 }$",
+    "C": "$\\frac 1 3$",
+    "D": "$\\frac { 2 } { 3 }$"
   },
-  "answer": "A",
-  "solution": "1) Understanding the joint probability density function:\nThe joint probability density function is given by:\nf(x, y) = 8xy\nfor\n0 < x < y < 1\nWe need to calculate E(X|Y = y0) and use the given condition that E(X|Y = y0) = 1\n2) Finding the conditional expectation:\nThe conditional probability density function is:\nf(x|y) = f(x, y)\nfY (y) =\n8xy\nfY (y)\nfor\n0 < x < y\nTo find fY (y), we integrate f(x, y) over x from 0 to y:\nfY (y) =\nZ y\n8xy dx = 4y3\nThus, the conditional density function is:\nf(x|y) = 2x\nThe conditional expectation is:\nE(X|Y = y0) =\nZ y0\nx · 2x\ndx = 2\nZ y0\nx2 dx = 2\n· y3\n3 = 1\nSetting E(X|Y = y0) = 1\n2 gives y0 = 3\nQuick Tip\n- Conditional expectation involves integrating the joint distribution with respect to one\nvariable.\n- Be sure to check the limits of integration carefully when finding conditional distribu-\ntions."
+  "answer": "B",
+  "solution": "1) Understanding the joint probability density function:\n\nThe joint probability density function is given by:\n\n $ f ( x , y ) = 8 x y \\quad { \\mathrm { f o r } } \\quad 0 < x < y < 1 $ \n\nWe need to calculate $E ( X | Y = y _ { 0 } )$ and use the given condition that $E ( X | Y = y _ { 0 } ) = { \\frac { 1 } { 2 } }$\n2) Finding the conditional expectation:\n\nThe conditional probability density function is:\n\n $ f ( x | y ) = { \\frac { f ( x , y ) } { f _ { Y } ( y ) } } = { \\frac { 8 x y } { f _ { Y } ( y ) } } \\quad { \\mathrm { f o r } } \\quad 0 < x < y $ \n\nTo find $f _ { Y } ( y )$ , we integrate $f ( x , y )$ over x from 0 to $y \\colon$\n\n $ f _ { Y } ( y ) = \\int _ { 0 } ^ { y } 8 x y d x = 4 y ^ { 3 } $ \n\nThus, the conditional density function is:\n\n $ f ( x | y ) = { \\frac { 2 x } { y ^ { 3 } } } $ \n\nThe conditional expectation is:\n\n $ E ( X | Y = y _ { 0 } ) = \\int _ { 0 } ^ { y _ { 0 } } { x \\cdot { \\frac { 2 x } { y _ { 0 } ^ { 3 } } } d x } = { \\frac { 2 } { y _ { 0 } ^ { 3 } } } \\int _ { 0 } ^ { y _ { 0 } } { x ^ { 2 } d x } = { \\frac { 2 } { y _ { 0 } ^ { 3 } } } \\cdot { \\frac { y _ { 0 } ^ { 3 } } { 3 } } = { \\frac { 1 } { 3 } } $ \n\nSetting $E ( X | Y = y _ { 0 } ) = { \\frac { 1 } { 2 } }$ gives $\\begin{array} { r } { y _ { 0 } = \\frac { 3 } { 4 } . } \\end{array}$\nQuick Tip\n\n\\- Conditional expectation involves integrating the joint distribution with respect to one variable.\n\n\\- Be sure to check the limits of integration carefully when finding conditional distributions."
 }

@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q3",
+  "question_seq": 123,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In the given text, the blanks are numbered (i) - (iv). Select the best match for all the blanks. Steve was advised to keep his head(i)before heading (ii) to bat; for,",
+  "options": {
+    "A": "(i) on (ii) down (iii) for (iv) on",
+    "B": "(i) down (ii) down (iii) on (iv) for",
+    "C": "(i) down (ii) out (iii) for (iv) on",
+    "D": "(i) on (ii) out (iii) on (iv) for"
+  },
+  "answer": "C",
+  "solution": "To determine the correct match for the blanks in the given sentence, let's analyze the context and the options step by step.\n\nThe sentence is: \"Steve was advised to keep his head(i)before heading (ii) to bat; for,\"\n\nWe need to fill in the blanks (i) and (ii) with the appropriate words from the options provided.\n\nLet's look at each option:\n\n(A) (i) on (ii) down (iii) for (iv) on\n(B) (i) down (ii) down (iii) on (iv) for\n(C) (i) down (ii) out (iii) for (iv) on\n(D) (i) on (ii) out (iii) on (iv) for\n\nThe sentence is talking about keeping his head in a certain position before heading to bat. The most logical position to keep his head in before heading to bat is \"down\" because it implies that he is looking down at the ball or the bat.\n\nSo, the correct choice for blank (i) is \"down\".\n\nNext, the sentence says \"for,\" which means that there is a reason or explanation given for keeping his head down. The most logical reason would be that he is looking down at the ball or the bat to hit it.\n\nSo, the correct choice for blank (ii) is \"down\".\n\nTherefore, the correct match for the blanks is:\n\n(C) (i) down (ii) down (iii) for (iv) on\n\nThe final answer is: \\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

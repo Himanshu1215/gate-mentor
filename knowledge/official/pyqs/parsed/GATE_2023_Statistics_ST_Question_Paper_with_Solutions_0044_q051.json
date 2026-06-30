@@ -7,13 +7,13 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "LA_001",
-  "question_text": "Let A be a 3 × 3 real matrix such that  =  ,  =  ,  =  . Then which of the following statements is/are true?",
+  "question_text": "Let A be a $3 \\times 3$ real matrix such that $ A \\left[ 1 \\right] = \\left[ { \\begin{array} { c c c c c c c } { 1 } \\\\ { 0 } \\\\ { 4 } \\\\ { 0 } \\end{array} } \\right] , \\quad A \\left[ 1 \\right] = \\left[ { \\begin{array} { c c c c c c c } { 0 } \\\\ { 0 } \\\\ { 1 } \\\\ { 0 } \\end{array} } \\right] , \\quad A \\left[ 0 \\right] = \\left[ { \\begin{array} { c c c c c c c } { 1 } \\\\ { 0 } \\\\ { 0 } \\\\ { 1 } \\end{array} } \\right] . $ Then which of the following statements is/are true?",
   "options": {
-    "A": "A  =  ",
-    "B": "A  =  ",
-    "C": "A  =  ",
-    "D": "A  =  "
+    "A": "A $ \\left[ 1 \\right] = \\left[ \\begin{array} { l } { 2 } \\\\ { 0 } \\\\ { 0 } \\\\ { - 2 } \\end{array} \\right] \\left[ \\begin{array} { l } { 2 } \\\\ { 2 } \\\\ { - 2 } \\\\ { 0 } \\end{array} \\right] $",
+    "B": "A",
+    "C": "A",
+    "D": ")"
   },
   "answer": "A",
-  "solution": "The given problem provides the results of multiplying matrix A with specific vectors. Based\non this information, we can deduce the matrix A. By using the provided equations, we\nconstruct a system to find the matrix elements.\nA =\n\n\nNow, checking the options:\n(A) We check if multiplying A with\n\ngives\n\n, which it does.\nThus, the correct answer is (A).\nQuick Tip\n- To solve matrix-related problems, first find the matrix elements using the given vectors\nand their corresponding outcomes.\n- Verify each option by performing the matrix multiplication and comparing the results."
+  "solution": "The given problem provides the results of multiplying matrix A with specific vectors. Based on this information, we can deduce the matrix A. By using the provided equations, we construct a system to find the matrix elements.\n\n $ A = { \\left[ \\begin{array} { l l l } { 2 } & { 2 } & { - 2 } \\\\ { 2 } & { - 2 } & { 2 } \\\\ { 8 } & { 4 } & { 0 } \\end{array} \\right] } $ \n\nNow, checking the options:\n\n(A) We check if multiplying A with $\\left[ 1 \\right] \\atop { \\mathrm { g i v e s } } \\left[ \\begin{array} { l } { 2 } \\\\ { 2 } \\\\ { 2 } \\\\ { - 2 } \\end{array} \\right]$ , which it does.   \nThus, the correct answer is (A).\nQuick Tip\n\n\\- To solve matrix-related problems, first find the matrix elements using the given vectors and their corresponding outcomes.\n\n\\- Verify each option by performing the matrix multiplication and comparing the results."
 }

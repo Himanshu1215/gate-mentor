@@ -1,0 +1,17 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q32",
+  "question_seq": 166,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The following two signed 2's complement numbers (multiplicand M and multiplier Q) are",
+  "options": {
+    "B": "eing multiplied using Booth's algorithm: M : 1100 1101 1110 1101 and Q: 1010 0100 1010 1010 The total number of addition and subtraction operations to be performed is -- ("
+  },
+  "answer": "A",
+  "solution": "To determine the total number of addition and subtraction operations to be performed when multiplying the two signed 2's complement numbers \\( M = 1100 1101 1110 1101 \\) and \\( Q = 1010 0100 1010 1010 \\) using Booth's algorithm, we need to follow these steps:\n\n1. **Convert the multiplier \\( Q \\) to its absolute value and determine the sign:**\n   - The multiplier \\( Q = 1010 0100 1010 1010 \\) is a negative number because it starts with a 1.\n   - The absolute value of \\( Q \\) is \\( 0101 0010 1010 1010 \\).\n\n2. **Apply Booth's algorithm:**\n   - Booth's algorithm involves examining pairs of bits in the multiplier \\( Q \\) from right to left, starting with an extra 0 added to the right of the last bit.\n   - For each pair of bits, we perform the following operations:\n     - If the pair is 00, do nothing.\n     - If the pair is 01, add the integrand \\( M \\) to the partial product.\n     - If the pair is 10, subtract the integrand \\( M \\) from the partial product.\n     - If the pair is 11, do nothing.\n\n3. **Count the number of addition and subtraction operations:**\n   - Add 1 to the right of the last bit of \\( Q \\): \\( 0101 0010 1010 1010 0 \\).\n   - Now, examine each pair of bits:\n     - \\( 00 \\) (do nothing)\n     - \\( 01 \\) (add \\( M \\))\n     - \\( 10 \\) (subtract \\( M \\))\n     - \\( 10 \\) (subtract \\( M \\))\n     - \\( 10 \\) (subtract \\( M \\))\n     - \\( 10 \\) (subtract \\( M \\))\n     - \\( 01 \\) (add \\( M \\))\n     - \\( 10 \\) (subtract \\( M \\))\n     - \\( 10 \\) (subtract \\( M \\))\n     - \\( 10 \\) (subtract \\( M \\))\n     - \\( 10 \\) (subtract \\( M \\))\n     - \\( 00 \\) (do nothing)\n     - \\( 00 \\) (do nothing)\n     - \\( 00 \\) (do nothing)\n     - \\( 00 \\) (do nothing)\n     - \\( 00 \\) (do nothing)\n\n   - Count the number of addition operations: 2\n   - Count the number of subtraction operations: 8\n\n4. **Calculate the total number of addition and subtraction operations:**\n   - Total operations = Number of addition operations + Number of subtraction operations\n   - Total operations = 2 + 8 = 10\n\nTherefore, the total number of addition and subtraction operations to be performed is \\(\\boxed{10}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q26",
+  "question_seq": 67,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "– Q.43 Multiple Choice Question (MCQ), carry TWO mark each (for each wrong",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine why the correct answer to the given multiple-choice question is A, we need to analyze the problem step by step. However, since the specific question is not provided in the problem statement, I will assume a common type of question that might fit this context. Let's consider a question about probability, for example:\n\n**Question:**\nA bag contains 5 red balls and 3 blue balls. Two balls are drawn at random without replacement. What is the probability that both balls drawn are red?\n\n**Correct Answer:**\nA. \\(\\frac{5}{8} \\times \\frac{4}{7}\\)\n\n**Step-by-Step Solution:**\n\n1. **Determine the total number of balls:**\n   The bag contains 5 red balls and 3 blue balls, so the total number of balls is:\n   \\[\n   5 + 3 = 8\n   \\]\n\n2. **Calculate the probability of drawing a red ball first:**\n   There are 5 red balls out of 8 total balls, so the probability of drawing a red ball first is:\n   \\[\n   \\frac{5}{8}\n   \\]\n\n3. **Calculate the probability of drawing a red ball second given that the first ball drawn was red:**\n   After drawing one red ball, there are now 4 red balls left and a total of 7 balls remaining. So, the probability of drawing a red ball second is:\n   \\[\n   \\frac{4}{7}\n   \\]\n\n4. **Calculate the probability of both events happening (drawing two red balls in succession):**\n   Since the events are dependent, we multiply the probabilities of each event:\n   \\[\n   \\frac{5}{8} \\times \\frac{4}{7} = \\frac{20}{56} = \\frac{5}{14}\n   \\]\n\nTherefore, the probability that both balls drawn are red is \\(\\frac{5}{14}\\), and the correct answer is:\n\\[\n\\boxed{A}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

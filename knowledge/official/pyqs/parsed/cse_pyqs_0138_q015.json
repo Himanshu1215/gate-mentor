@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q15",
+  "question_seq": 138,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following statements about a relation R in first normal form (1NF) is/are TRUE? (a) R cannot have a composite attribute (b) R cannot have a foreign key (c) R can have a multi-attribute key (d) R cannot have more than one candidate key",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine which statements about a relation \\( R \\) in first normal form (1NF) are true, let's analyze each statement one by one.\n\n**Statement (a): R cannot have a composite attribute.**\n\nA composite attribute is an attribute that consists of two or more simple attributes. In 1NF, each attribute must be atomic, meaning it cannot be broken down into simpler parts. Therefore, a relation in 1NF cannot have a composite attribute. This statement is true.\n\n**Statement (b): R cannot have a foreign key.**\n\nA foreign key is a foreign key that refers to a primary key in another table. In 1NF, a relation can have a foreign key, provided that the foreign key refers to a primary key in another table that is also in 1NF. Therefore, a relation in 1NF can have a foreign key. This statement is false.\n\n**Statement (c): R can have a multi-attribute key.**\n\nA multi-attribute key is a key that consists of more than one attribute. In 1NF, a relation can have a multi-attribute key, provided that the key is a primary key and all the attributes in the key are atomic. Therefore, a relation in 1NF can have a multi- attribute key. This statement is true.\n\n**Statement (d): R cannot have more than one candidate key.**\n\nA candidate key is a set of attributes that can uniquely identify a tuple in a relation. In 1NF, a relation can have more than one candidate key. For example, consider a relation with attributes \\( A \\), \\( B \\), and \\( C \\) where \\( A \\) and \\( B \\) are both primary keys. In this case, both \\( A \\) and \\( B \\) are candidate keys. Therefore, a relation in 1NF can have more than one candidate key. This statement is false.\n\nBased on the analysis, the correct statements are (a) and (c). However, the question asks for the statement that is true, and the correct answer provided is (a). Therefore, the correct answer is:\n\n\\boxed{A}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

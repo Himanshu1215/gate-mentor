@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q19",
+  "question_seq": 24,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $\\{ X _ { n } \\} _ { n \\ge 1 }$ be a sequence of independent and identically distributed random variables each having uniform distribution on [0, 2]. For $n \\geq 1$ , let $ Z _ { n } = - \\log \\left( \\prod _ { i = 1 } ^ { n } \\left( 2 - X _ { i } \\right) \\right) ^ { \\frac { 1 } { n } } . $ Then, as $n \\infty$ , the sequence $\\{ Z _ { n } \\} _ { n \\geq 1 }$ converges almost surely to (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "As $n \\to \\infty$ , the sequence $Z _ { n }$ converges to the expectation of $\\log ( 2 - X _ { i } )$ , where $X _ { i }$ follows a uniform distribution on $[ 0 , 2 ]$\n\nFor a uniform distribution $X \\sim U ( 0 , 2 )$ , the expected value is:\n\n $ E [ \\log ( 2 - X ) ] = \\int _ { 0 } ^ { 2 } \\log ( 2 - x ) \\cdot { \\frac { 1 } { 2 } } d x . $ \n\nThis integral evaluates to approximately 0.27.\n\nThus, $Z _ { n }$ converges almost surely to 0.27.\nQuick Tip\n\nWhen dealing with products of random variables, consider applying the law of large numbers and expectation of logarithms for convergence."
+}

@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q40",
+  "question_seq": 173,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Given a Context-Free Grammar G as follows: S → Aa l bac l dc I bda",
+  "options": {
+    "A": "→ d Which ONE of the following statements is TRUE?",
+    "C": "G is LALR(1), not SLR(1)",
+    "B": "G is CLR(1), not LALR(1)",
+    "D": "G is LALR(1), also SLR(1) [2025 (Set-2) :2 M]"
+  },
+  "answer": "C",
+  "solution": "To determine the correct statement about the given Context-Free Grammar (CFG) \\( G \\), we need to analyze its properties with respect to the classes of grammars: LR(1), LALR(1), and SLR(1). The given CFG is:\n\n\\[ S \\rightarrow Aa \\mid bac \\mid dc \\mid bda \\]\n\n### Step 1: Check if \\( G \\) is SLR(1)\nA grammar is SLR(1) if it can be parsed using a simple left-to-right parsing algorithm with a single look-ahead symbol. To check this, we need to ensure that for any two rules \\( A \\rightarrow \\alpha \\) and \\( B \\rightarrow \\beta \\), if \\( \\alpha \\) and \\( \\beta \\) start with the same terminal symbol, then the follow sets of \\( A \\) and \\( B \\) do not overlap.\n\nLet's find the follow sets for each non terminal symbol:\n- For \\( S \\): The follow set is \\(\\{a, b, c, d\\}\\) because \\( S \\) can derive any of these terminal symbols.\n- For \\( A \\): The follow set is \\(\\{a, b, c, d\\}\\) because \\( A \\) can be followed by any terminal symbol in the rules \\( S \\rightarrow Aa \\), \\( S \\rightarrow bac \\), \\( S \\rightarrow dc \\), or \\( S \\rightarrow bda \\).\n- For \\( B \\): The follow set is \\(\\{a, b, c, d\\}\\) for the same reason.\n- For \\( C \\): The follow set is \\(\\{a, b, c, d\\}\\) for the same reason.\n- For \\( D \\): The follow set is \\(\\{a, b, c, d\\}\\) for the same reason.\n\nSince the follow sets of all non terminal symbols are the same and do not overlap with each other in any way, \\( G \\) is SLR(1).\n\n### Step 2: Check if \\( G \\) is LALR(1)\nA grammar is LALR(1) if it can be parsed using a left-to-right parsing algorithm with a single look-ahead symbol and a leftmost derivation. LALR(1) grammars are a subset of SLR(1) grammars, so if \\( G \\) is SLR(1), it is also LALR(1).\n\n### Step 3: Check if \\( G \\) isclr(1)\nA grammar isclr(1) if it can be parsed using a left-to-right parsing algorithm with a single look-ahead symbol and a rightmost derivation. To check this, we need to ensure that for any two rules \\( A \\rightarrow \\alpha \\) and \\( B \\rightarrow \\beta \\), if \\( \\alpha \\) and \\( \\beta \\) start with the same terminal symbol, then the follow sets of \\( A \\) and \\( B \\) do not overlap.\n\nFrom the follow sets we found earlier, we see that the follow sets of all non terminal symbols are the same and do not overlap with each other in any way. Therefore, \\( G \\) is alsoclr(1).\n\n### Conclusion\nSince \\( G \\) is both LALR(1) and SLR(1), the correct statement is:\n\n\\[ \\",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

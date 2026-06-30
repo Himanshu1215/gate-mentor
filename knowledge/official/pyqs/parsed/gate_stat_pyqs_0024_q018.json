@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q18",
+  "question_seq": 24,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Two fair dice, one having red and another having blue colour, are tossed independently once. Let ?? be the event that the die having red colour will show 5 or 6. Let ?? be the event that the sum of the outcomes will be 7 and let ?? be the event that the sum of the outcomes will be 8. Then which one of the following statements is true?",
+  "options": {
+    "A": "?? and ?? are independent as well as ?? and ?? are independent",
+    "B": "?? and ?? are independent, but ?? and ?? are not independent",
+    "C": "?? and ?? are independent, but ?? and ?? are not independent",
+    "D": "Neither ?? and ?? are independent, nor ?? and ?? are independent"
+  },
+  "answer": null,
+  "solution": "To determine the independence of the events, we need to check if the probability of the intersection of two events is equal to the product of their individual probabilities. Let's define the events and calculate the probabilities step by step.\n\n1. **Define the events:**\n   - Event \\( A \\): The die having red color shows 5 or 6.\n   - Event \\( B \\): The sum of the outcomes is 7.\n   - Event \\( C \\): The sum of the outcomes is 8.\n\n2. **Calculate the probabilities:**\n   - The probability of event \\( A \\) (red die shows 5 or 6) is:\n     \\[\n     P(A) = \\frac{2}{6} = \\frac{1}{3}\n     \\]\n   - The probability of event \\( B \\) (sum of the outcomes is 7) is:\n     \\[\n     P(B) = \\frac{6}{36} = \\frac{1}{6}\n     \\]\n     The pairs that sum to 7 are: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1).\n   - The probability of event \\( C \\) (sum of the outcomes is 8) is:\n     \\[\n     P(C) = \\frac{5}{36}\n     \\]\n     The pairs that sum to 8 are: (2,6), (3,5), (4,4), (5,3), (6,2).\n\n3. **Check the independence of \\( A \\) and \\( B \\):**\n   - The intersection of \\( A \\) and \\( B \\) (red die shows 5 or 6 and the sum is 7) is:\n     \\[\n     A \\cap B = \\{(5,2), (6,1)\\}\n     \\]\n     So, the probability of \\( A \\cap B \\) is:\n     \\[\n     P(A \\cap B) = \\frac{2}{36} = \\frac{1}{18}\n     \\]\n   - The product of the probabilities of \\( A \\) and \\( B \\) is:\n     \\[\n     P(A) \\cdot P(B) = \\frac{1}{3} \\cdot \\frac{1}{6} = \\frac{1}{18}\n     \\]\n   - Since \\( P(A \\cap B) = P(A) \\cdot P(B) \\), events \\( A \\) and \\( B \\) are independent.\n\n4. **Check the independence of \\( A \\) and \\( C \\):**\n   - The intersection of \\( A \\) and \\( C \\) (red die shows 5 or 6 and the sum is 8) is:\n     \\[\n     A \\cap C = \\{(5,3), (6,2)\\}\n     \\]\n     So, the probability of \\( A \\cap C \\) is:\n     \\[\n     P(A \\cap C) = \\frac{2}{36} = \\frac{1}{18}\n     \\]\n   - The product of the probabilities of \\( A \\) and \\( C \\) is:\n     \\[\n     P(A) \\cdot P(C) = \\frac{1}{3} \\cdot \\frac{5}{",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

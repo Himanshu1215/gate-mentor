@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q24",
+  "question_seq": 19,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $\\{ B ( t ) \\} _ { t \\geq 0 }$ be a standard Brownian motion and let $\\Phi ( \\cdot )$ be the cumulative distribution function of the standard normal distribution. If $ P \\left( \\left( B ( 2 ) + 2 B ( 3 ) \\right) > 1 \\right) = 1 - \\Phi \\left( \\frac { 1 } { \\sqrt { \\alpha } } \\right) , \\alpha > 0 , $ then the value of α (in integer) is equal to",
+  "options": null,
+  "answer": null,
+  "solution": "From the given, $\\begin{array} { r } { P \\left( \\left( B ( 2 ) + 2 B ( 3 ) \\right) > 1 \\right) = 1 - \\Phi \\left( \\frac { 1 } { \\sqrt { \\alpha } } \\right) } \\end{array}$ . To solve for α, we first compute the distribution of $B ( 2 ) + 2 B ( 3 )$ . Since $B ( t )$ is a standard Brownian motion, the random variable $B ( 2 ) + 2 B ( 3 )$ is normally distributed.\n\nThe mean of $B ( 2 ) + 2 B ( 3 )$ is 0 (because Brownian motion has a mean of 0 at all times), and the variance is given by:\n\n $ \\operatorname { V a r } ( B ( 2 ) + 2 B ( 3 ) ) = \\operatorname { V a r } ( B ( 2 ) ) + 4 \\operatorname { V a r } ( B ( 3 ) ) + 4 \\operatorname { C o v } ( B ( 2 ) , B ( 3 ) ) . $ \n\nSince $B ( 2 )$ and $B ( 3 )$ are correlated with covariance $\\mathrm { C o v } ( B ( 2 ) , B ( 3 ) ) = 2$ , we have:\n\n $ \\operatorname { V a r } ( B ( 2 ) + 2 B ( 3 ) ) = 2 + 4 \\times 3 + 4 \\times 2 = 2 + 1 2 + 8 = 2 2 . $ \n\nThus, $B ( 2 ) + 2 B ( 3 ) \\sim N ( 0 , 2 2 )$ . The probability is given by:\n\n $ P \\left( B ( 2 ) + 2 B ( 3 ) > 1 \\right) = 1 - \\Phi \\left( \\frac { 1 } { \\sqrt { 2 2 } } \\right) . $ \n\nFrom the equation, we match this to $\\begin{array} { r } { 1 - \\Phi \\left( \\frac { 1 } { \\sqrt { \\alpha } } \\right) } \\end{array}$ . Hence, we find $\\alpha = 2 2$\n\nThus, the value of α is 22 .\nQuick Tip\n\nTo compute probabilities involving linear combinations of Brownian motions, calculate the mean and variance of the combination and use the cumulative distribution function of the normal distribution."
+}

@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q6",
+  "question_seq": 213,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Water : P :: Food : Q",
+  "options": {
+    "C": "hoose the P and Q combination from the options below to form a meaningful analogy",
+    "A": "P = Thirst; Q = Hunger",
+    "B": "P = Drink; Q = Hunger",
+    "D": "P = Wet; Q = Critic"
+  },
+  "answer": "A",
+  "solution": "To determine the correct answer to the analogy \"Water : P :: Food : Q\", we need to understand the relationship between water and food and find a pair of words that have a similar relationship.\n\n1. **Identify the relationship between water and food:**\n   - Water is a necessary medium for the growth and survival of plants.\n   - Food is a necessary medium for the growth and survival of animals.\n\n2. **Analyze the given options:**\n   - (A) P = Thirst; Q = hunger\n     - Thirst is a state of confusion or uncertainty about the need for water.\n     - hunger is a state of confusion or uncertainty about the need for food.\n     - This option does not directly match the relationship between water and food.\n   - (B) P = Drink; Q = hunger\n     - Drink is an action of consumption.\n     - hunger is a state of confusion or uncertainty about the need for food.\n     - This option does not directly match the relationship between water and food.\n   - (C) hoose the P and Q combination from the options below to form a meaningful analogy\n     - This option is incomplete and does not provide specific words for P and Q.\n   - (D) P = Wet; Q = Critic\n     - Wet is a state of being wet.\n     - Critic is a person who evaluate or critical.\n     - This option does not directly match the relationship between water and food.\n\n3. **Reconsider the relationship between water and food:**\n   - Water is necessary for the growth and survival of plants.\n   - Food is necessary for the growth and survival of animals.\n   - Thirst is a state of confusion or uncertainty about the need for water.\n   - hunger is a state of confusion or uncertainty about the need for food.\n   - Thirst and hunger are states that are directly related to the need for water and food, respectively.\n\n4. **Conclusion:**\n   - The correct answer is (A) P = Thirst; Q = hunger because it directly matches the relationship between water and food.\n\nTherefore, the final answer is:\n\\boxed{A}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

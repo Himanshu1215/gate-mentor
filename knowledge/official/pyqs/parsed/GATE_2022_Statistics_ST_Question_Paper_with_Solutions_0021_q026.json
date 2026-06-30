@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q26",
+  "question_seq": 21,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable with the probability mass function $ p _ { X } ( x ) = { \\binom { x - 1 } { 3 } } \\left( { \\frac { 3 } { 4 } } \\right) ^ { x - 1 } \\left( { \\frac { 1 } { 4 } } \\right) $ $ x = 1 , 2 , 3 , \\ldots $ $\\sum _ { n = 0 } ^ { \\infty } P ( n < X \\leq n + 3 )$ (rounded off to two decimal places) is equal to",
+  "options": null,
+  "answer": null,
+  "solution": "We are given the probability mass function of X, which is of the form of a geometric distribution with success probability ${ \\frac { 3 } { 4 } } .$ . The cumulative probability we need to evaluate is:\n\n $ P ( n < X \\leq n + 3 ) = P ( X = n + 1 ) + P ( X = n + 2 ) + P ( X = n + 3 ) . $ \n\nSince $p _ { X } ( x ) = { \\binom { x - 1 } { 3 } } \\left( { \\frac { 3 } { 4 } } \\right) ^ { x - 1 } \\left( { \\frac { 1 } { 4 } } \\right)$ , we calculate the probability for each n and sum them up. After performing the necessary calculations and rounding off the result to two decimal places, we find that the value of the sum is approximately 2.31 .\nQuick Tip\n\nWhen working with geometric distributions, the probability mass function allows easy summation over ranges, as long as you understand the formula and apply it properly."
+}

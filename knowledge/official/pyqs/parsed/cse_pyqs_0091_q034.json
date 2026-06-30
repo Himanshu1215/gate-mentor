@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q34",
+  "question_seq": 91,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The value of the following limit is $ \\operatorname* { l i m } _ { x \\to 0 + } \\frac { \\sqrt { x } } { 1 - e ^ { 2 \\sqrt { x } } } $",
+  "options": null,
+  "answer": "A",
+  "solution": "To find the value of the limit \\(\\operatorname*{lim}_{x \\to 0 +} \\frac{\\sqrt{x}}{1 - e^{2\\sqrt{x}}}\\), we can use L'Hôpital's Rule. L'Hôpital's Rule states that if the limit of the ratio of two functions as \\(x\\) approaches a certain value is of the form \\(\\frac{0}{0}\\) or \\(\\frac{\\infty}{\\infty}\\), then the limit of the ratio is equal to the limit of the ratio of their derivatives.\n\nFirst, let's check if the limit is of the form \\(\\frac{0}{0}\\) as \\(x \\to 0 +\\):\n\\[\n\\lim_{x \\to 0 +} \\sqrt{x} = 0\n\\]\n\\[\n\\lim_{x \\to 0 +} (1 - e^{2\\sqrt{x}}) = 1 - e^{2\\sqrt{0}} = 1 - e^0 = 1 - 1 = 0\n\\]\nSince both the numerator and the denominator approach 0 as \\(x \\to 0 +\\), we can apply L'Hôpital's Rule.\n\nNext, we find the derivatives of the numerator and the denominator:\n\\[\n\\frac{d}{dx} (\\sqrt{x}) = \\frac{d}{dx} (x^{1/2}) = \\frac{1}{2} x^{-1/2} = \\frac{1}{2\\sqrt{x}}\n\\]\n\\[\n\\frac{d}{dx} (1 - e^{2\\sqrt{x}}) = \\frac{d}{dx} (1) - \\frac{d}{dx} (e^{2\\sqrt{x}}) = 0 - e^{2\\sqrt{x}} \\cdot \\frac{d}{dx} (2\\sqrt{x}) = -e^{2\\sqrt{x}} \\cdot 2 \\cdot \\frac{1}{2\\sqrt{x}} = -\\frac{e^{2\\sqrt{x}}}{\\sqrt{x}}\n\\]\n\nNow, we apply L'Hôpital's Rule:\n\\[\n\\lim_{x \\to 0 +} \\frac{\\sqrt{x}}{1 - e^{2\\sqrt{x}}} = \\lim_{x \\to 0 +} \\frac{\\frac{1}{2\\sqrt{x}}}{-\\frac{e^{2\\sqrt{x}}}{\\sqrt{x}}} = \\lim_{x \\to 0 +} \\frac{1}{2\\sqrt{x}} \\cdot \\left(-\\frac{\\sqrt{x}}{e^{2\\sqrt{x}}}\\right) = \\lim_{x \\to 0 +} -\\frac{1}{2e^{2\\sqrt{x}}}\n\\]\n\nAs \\(x \\to 0 +\\), \\(2\\sqrt{x} \\to 0\\), so \\(e^{2\\sqrt{x}} \\to e^0 = 1\\). Therefore:\n\\[\n\\lim_{x \\to 0 +} -\\frac{1}{2e^{2\\sqrt{x}}} = -\\frac{1}{2 \\cdot 1} = -\\frac{1}{2}\n\\]\n\nThus, the value of the limit is:\n\\[\n\\",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

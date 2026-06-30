@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q6",
+  "question_seq": 125,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "If →’denotes increasing order of intensity, then the meaning of the words [dry → arid → parched] is analogous to [diet → fast → \\_]. Which one of the given options is appropriate to fill the blank? (a) reject (b) feast (c) deny (d) starve",
+  "options": null,
+  "answer": "D",
+  "solution": "To determine the correct answer, we need to analyze the relationship between the words in the given sequences and find the word that fits the pattern.\n\n1. **Identify the pattern in the first sequence:**\n   - [dry → arid → parched]\n   - \"Dry\" means free from water.\n   - \"Arid\" means free from water and also arid, which implies a higher degree of dryness.\n   - \"Parched\" means free from water and also arid, which implies an even higher degree of dryness.\n   - The sequence is in increasing order of intensity of dryness.\n\n2. **Identify the pattern in the second sequence:**\n   - [diet → fast → \\_]\n   - \"Diet\" means a plan for weight loss or weight gain.\n   - \"Fast\" means to move quickly or to do something quickly.\n   - We need to find a word that fits the pattern of increasing intensity.\n\n3. **Analyze the options:**\n   - (a) reject: This means to refuse or reject something.\n   - (b) feast: This means to eat or have a meal.\n   - (c) deny: This means to refuse or reject something.\n   - (d) starve: This means to starve or be starved.\n\n4. **Determine the correct word:**\n   - \"Starve\" means to starve or be starved, which implies a higher degree of hunger or thirst.\n   - The sequence [diet → fast → starve] is in increasing order of intensity of hunger or thirst.\n\nTherefore, the correct answer is:\n\\boxed{D}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

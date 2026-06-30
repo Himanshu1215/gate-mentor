@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q52",
+  "question_seq": 95,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Which of the properties hold for the adjacency matrix of a simple undirected unweighted graph having vertices?",
+  "options": {
+    "A": "The diagonal entries of $A ^ { 2 }$ are the degrees of the vertices of the graph.",
+    "B": "If the graph is connected, then none of the entries of $A ^ { n - 1 } + I _ { n }$ can be zero.",
+    "C": "If the sum of all the elements of is at most $2 ( n - 1 )$ , then the graph must be acyclic.",
+    "D": "If there is at least a 1 in each of ’s rows and columns, then the graph must be connected."
+  },
+  "answer": "A",
+  "solution": "To determine which property holds for the adjacency matrix of a simple undirected unweighted graph having vertices, let's analyze each option step by step.\n\n**Option (A): The diagonal entries of \\( A^2 \\) are the degrees of the vertices of the graph.**\n\nThe adjacency matrix \\( A \\) of a graph is a square matrix where the entry \\( A_{ij} \\) is 1 if there is an edge between vertices \\( i \\) and \\( j \\), and 0 otherwise. The matrix \\( A^2 \\) is the matrix product of \\( A \\) with itself. The entry \\( (A^2)_{ii} \\) is given by:\n\n\\[\n(A^2)_{ii} = \\sum_{k=1}^n A_{ik} A_{ki}\n\\]\n\nSince \\( A \\) is symmetric (because the graph is undirected), \\( A_{ik} = A_{ki} \\). Therefore, the sum \\( \\sum_{k=1}^n A_{ik} A_{ki} \\) counts the number of edges incident to vertex \\( i \\), which is the degree of vertex \\( i \\). Hence, the diagonal entries of \\( A^2 \\) are the degrees of the vertices of the graph. This property is correct.\n\n**Option (B): If the graph is connected, then none of the entries of \\( A^{n-1} + I_n \\) can be zero.**\n\nThe matrix \\( A^{n-1} \\) represents the number of walks of length \\( n-1 \\) between any two vertices. If the graph is connected, there exists a path of length at most \\( n-1 \\) between any two vertices. Therefore, \\( (A^{n-1})_{ij} \\) is non-zero for all \\( i \\) and \\( j \\). Adding the identity matrix \\( I_n \\) ensures that the diagonal entries of \\( A^{n-1} + I_n \\) are 1, which are non-zero. However, it does not guarantee that all off-diagonal entries are non-zero. For example, consider a path graph with \\( n \\) vertices. The matrix \\( A^{n-1} \\) will have zeros in the off-diagonal entries corresponding to the edges not in the path. Therefore, this property is not necessarily true.\n\n**Option (C): If the sum of all the elements of \\( A \\) is at most \\( 2(n-1) \\), then the graph must be acyclic.**\n\nThe sum of all the elements of \\( A \\) is equal to twice the number of edges in the graph (since each edge contributes 1 to the sum for both its endpoints). If the sum of all the elements of \\( A \\) is at most \\( 2(n-1) \\), then the number of edges in the graph is at most \\( n-1 \\). A graph with \\( n-1 \\) edges is a tree, which is acyclic. Therefore, this property is correct.\n\n**Option (D): If there is at least a 1 in each of \\( A \\)'s rows and columns, then the graph must be connected.**\n\nIf there is at least a 1 in each row and column of \\( A \\), it means that each vertex is connected to at least one other vertex. However, this",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

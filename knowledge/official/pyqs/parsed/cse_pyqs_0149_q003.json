@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q3",
+  "question_seq": 149,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "If $P e ^ { x } = Q e ^ { - x }$ for all real values of x, which one of the following statements is true? (a) $P = Q = 0$ (b) $P = Q = 1$ (c) $P = 1 ; Q = - 1$ (d) ${ \\frac { P } { Q } } = 0$ [2025 (Set-2) : 1 M]",
+  "options": null,
+  "answer": "A",
+  "solution": "To solve the equation \\( P e^x = Q e^{-x} \\) for all real values of \\( x \\), we need to analyze the equation and determine the values of \\( P \\) and \\( Q \\) that satisfy it.\n\n1. **Rewrite the equation:**\n   \\[\n   P e^x = Q e^{-x}\n   \\]\n\n2. **Multiply both sides by \\( e^x \\) to eliminate the exponential term on the right-hand side:**\n   \\[\n   P e^x \\cdot e^x = Q e^{-x} \\cdot e^x\n   \\]\n   Simplifying the exponents, we get:\n   \\[\n   P e^{2x} = Q\n   \\]\n\n3. **Rearrange the equation to solve for \\( Q \\):**\n   \\[\n   Q = P e^{2x}\n   \\]\n\n4. **Analyze the equation \\( Q = P e^{2x} \\):**\n   - For \\( Q \\) to be constant for all real values of \\( x \\), \\( P e^{2x} \\) must also be constant.\n   - The function \\( e^{2x} \\) is not constant for all real values of \\( x \\) unless \\( P = 0 \\).\n\n5. **If \\( P = 0 \\):**\n   \\[\n   Q = 0 e^{2x} = 0\n   \\]\n\n6. **Conclusion:**\n   - The only values of \\( P \\) and \\( Q \\) that satisfy the equation \\( P e^x = Q e^{-x} \\) for all real values of \\( x \\) are \\( P = 0 \\) and \\( Q = 0 \\).\n\nTherefore, the correct answer is:\n\\[\n\\boxed{A}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

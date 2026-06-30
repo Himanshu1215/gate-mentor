@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q16",
+  "question_seq": 192,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the following dependencies among the register operands of different instructions can cause a data hazard in a pipelined processor? (a) Read-after-read (b) Read-after-write (c) Write-after-read (d) Write-after-write",
+  "options": null,
+  "answer": "B",
+  "solution": "To determine which dependency among the register operands of different instructions can cause a data hazard in a pipelined processor, let's analyze each option step by step.\n\n### Option (a): Read_after_read\n- **Definition**: This means that a read operation follows another read operation.\n- **Implication**: In a pipelined processor, if a read operation follows another read operation, there is no data hazard because both reads will be performed on the same data store, and there is no need to wait for the first read to complete before the second read can start.\n\n### Option (b): Read_after_write\n- **Definition**: This means that a read operation follows a write operation.\n- **Implication**: In a pipelined processor, if a read operation follows a write operation, there can be a data hazard because the write operation may have written to the data store before the read operation can complete. This means that the read operation may read an old value instead of the new value written by the write operation.\n\n### Option (c): Write_after_read\n- **Definition**: This means that a write operation follows a read operation.\n- **Implication**: In a pipelined processor, if a write operation follows a read operation, there is no data hazard because the write operation will be performed on the data store after the read operation has completed, and the read operation will have already read the data.\n\n### Option (d): Write_after_write\n- **Definition**: This means that a write operation follows another write operation.\n- **Implication**: In a pipelined processor, if a write operation follows another write operation, there is no data hazard because both writes will be performed on the same data store, and there is no need to wait for the first write to complete before the second write can start.\n\nBased on the analysis, the only option that can cause a data hazard in a pipelined processor is **Option (b): Read_after_write**.\n\nTherefore, the correct answer is: \\boxed{B}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q1",
+  "question_seq": 69,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "- Q5 carry one mark each. Q.No.1 Rajiv Gandhi Khel Ratna Award was conferred Mary Kom, a six-time world champion in boxing, recently in a ceremonythe Rashtrapati Bhawan (the President's official residence) in New Delhi.",
+  "options": {
+    "A": "with, at",
+    "B": "on, in",
+    "C": "on, at",
+    "D": "to, at Q.No. 2 Despite a string of poor performances, the chances of K. L. Rahul's selection in the team are"
+  },
+  "answer": null,
+  "solution": "To solve the given questions step by step, let's analyze each one carefully.\n\n**Question No. 1:**\nThe sentence is: \"Rajiv Gandhi Khel Ratna Award was conferred Mary Kom, a six-time world champion in boxing, recently in a ceremonythe Rashtrapati Bhavan (the President's official residence) in New Delhi.\"\n\nWe need to determine the correct conjunctions to fill in the blanks.\n\n1. \"Rajiv Gandhi Khel Ratna Award was conferred Mary Kom\" - This part of the sentence is correct as it states that the award was given to Mary Kom.\n2. \"recently in a ceremonythe Rashtrapati Bhavan\" - Here, we need to determine if \"in\" or \"at\" is the correct conjunction.\n\n- \"in\" is used to indicate a place or time.\n- \"at\" is used to indicate a specific event or action.\n\nSince the sentence is talking about a specific ceremony taking place at the Rashtrapati Bhavan, we should use \"at\".\n\nTherefore, the correct conjunctions are \"on\" and \"at\".\n\nThe answer is: \\boxed{C}\n\n**Question No. 2:**\nThe sentence is: \"Despite a string of poor performances, the chances of K. L. Rahul's selection in the team are\"\n\nWe need to determine the correct conjunction to fill in the blank.\n\n1. \"Done\" is a common phrase used to indicate a series of events or actions.\n2. \" candies\" is a common phrase used to indicate a series of events or actions.\n\nSince the sentence is talking about a string of poor performances, we should use \"to\" to indicate a series of events.\n\nTherefore, the correct conjunction is \"to\".\n\nThe answer is: \\boxed{D}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

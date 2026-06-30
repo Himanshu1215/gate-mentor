@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q40",
+  "question_seq": 30,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "If the line $y = \\alpha x , \\alpha \\geq { \\sqrt { 2 } } ,$ divides the area of the region $ R : = \\{ ( x , y ) \\in \\mathbb { R } ^ { 2 } \\mid 0 \\leq x \\leq \\sqrt { y } , 0 \\leq y \\leq 2 \\} $ into two equal parts, then the value of α is equal to",
+  "options": {
+    "A": "$\\frac { 3 } { \\sqrt { 2 } }$",
+    "B": "$2 \\sqrt { 2 }$",
+    "C": "$\\sqrt { 2 }$",
+    "D": "$\\frac { 5 } { 2 { \\sqrt { 2 } } }$"
+  },
+  "answer": "A",
+  "solution": "Step 1: Understand the region R\n\nThe region R is defined by $0 \\leq x \\leq \\sqrt { y }$ and $0 \\le y \\le 2$ . This implies that for a fixed value of y, the value of x ranges from 0 to $\\sqrt { y }$\nStep 2: Area of region R\n\nThe total area of the region R can be computed as:\n\n $ \\operatorname { A r e a } \\operatorname { o f } R = \\int _ { 0 } ^ { 2 } \\int _ { 0 } ^ { \\sqrt { y } } d x d y . $ \n\nThe inner integral with respect to x gives:\n\n $ \\int _ { 0 } ^ { \\sqrt { y } } d x = \\sqrt { y } . $ \n\nNow, integrating with respect to $y \\colon$\n\n $ { \\mathrm { A r e a ~ o f ~ } } R = \\int _ { 0 } ^ { 2 } { \\sqrt { y } } d y = \\left[ { \\frac { 2 } { 3 } } y ^ { 3 / 2 } \\right] _ { 0 } ^ { 2 } = { \\frac { 2 } { 3 } } ( 2 ^ { 3 / 2 } ) = { \\frac { 2 } { 3 } } \\times 2 { \\sqrt { 2 } } = { \\frac { 4 { \\sqrt { 2 } } } { 3 } } . $ \nStep 3: Area division by the line $y = \\alpha x$\n\nThe line $y = \\alpha x$ divides the region R into two parts. To find $\\alpha .$ , we require that the area under the line $y = \\alpha x$ (within the region R) be half of the total area.\n\nFor the region under the line $y = \\alpha x$ , the value of x ranges from 0 to $\\textstyle { \\frac { y } { \\alpha } }$ for each $y .$ The area under the line is:\n\n $ \\mathrm { A r e a \\ u n d e r \\ t h e \\ l i n e } = \\int _ { 0 } ^ { 2 } \\int _ { 0 } ^ { y / \\alpha } d x d y = \\int _ { 0 } ^ { 2 } { \\frac { y } { \\alpha } } d y = { \\frac { 1 } { \\alpha } } \\int _ { 0 } ^ { 2 } y d y = { \\frac { 1 } { \\alpha } } \\left[ { \\frac { y ^ { 2 } } { 2 } } \\right] _ { 0 } ^ { 2 } = { \\frac { 1 } { \\alpha } } \\times { \\frac { 4 } { 2 } } = { \\frac { 2 } { \\alpha } } . $ \nStep 4: Set the areas equal\n\nTo divide the area into two equal parts, we set the area under the line equal to half the total area:\n\n $ { \\frac { 2 } { \\alpha } } = { \\frac { 1 } { 2 } } \\times { \\frac { 4 { \\sqrt { 2 } } } { 3 } } . $ \n\nSolving for α:\n\n $ { \\frac { 2 } { \\alpha } } = { \\frac { 2 { \\sqrt { 2 } } } { 3 } } \\quad \\Rightarrow \\quad \\alpha = { \\frac { 3 } { \\sqrt { 2 } } } . $ \nStep 5: Conclusion\n\nThus, the value of α is $\\frac { 3 } { \\sqrt { 2 } }$ , and the correct answer is $( \\mathsf { A } )$ .\nQuick Tip\n\nWhen dividing a region into two equal areas using a line, set the area under the line equal to half of the total area and solve for the line’s equation parameters."
+}

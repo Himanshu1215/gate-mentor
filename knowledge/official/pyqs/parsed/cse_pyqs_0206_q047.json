@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q47",
+  "question_seq": 206,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $G ( V , E )$ be a simple, undirected graph. A vertex cover of G is a subset $V ^ { \\prime } \\subseteq V$ such that for every $( U , ~ V ) \\in ~ E , ~ { \\cal U } \\in ~ V ~ \\circ r ~ V \\in ~ V ^ { \\prime }$ . Let the size of the smallest vertex cover in G be k. Let S be any vertex cover of size $k .$ For a vertex $V \\in ~ V ,$ which of the following constraints will always ensure that $V \\in \\ S ?$ (a) The degree of v is at least $k + 1$",
+  "options": {
+    "B": "The vertex v is on a path of length $k + ~ 1$",
+    "C": "The vertex v is on a cycle of length $k + 1$",
+    "D": "The vertex v is a part of a clique of size k"
+  },
+  "answer": "A",
+  "solution": "To determine which constraint will always ensure that a vertex \\( V \\in S \\), where \\( S \\) is a vertex cover of size \\( k \\) in a graph \\( G \\), we need to analyze each option carefully.\n\n### Option (A): The degree of \\( V \\) is at least \\( k + 1 \\)\n- **Definition of Vertex Cover**: A vertex cover \\( S \\) is a subset of vertices such that every edge in the graph is incident to at least one vertex in \\( S \\).\n- **Implication of Degree**: If the degree of a vertex \\( V \\) is at least \\( k + 1 \\), it means \\( V \\) is connected to at least \\( k + 1 \\) other vertices.\n- ** ensures \\( V \\in S \\)**: If \\( V \\) has a degree of at least \\( k + 1 \\), it must be connected to more vertices than the size of the smallest vertex cover \\( k \\). Therefore, \\( V \\) cannot be excluded from \\( S \\) without leaving at least one edge uncovered. Hence, \\( V \\) must be in \\( S \\).\n\n### Option (B): The vertex \\( V \\) is on a path of length \\( k + 1 \\)\n- **Path Length**: A path of length \\( k + 1 \\) consists of \\( k + 2 \\) vertices connected in a sequence.\n- ** ensures \\( V \\in S \\)**: If \\( V \\) is on a path of length \\( k + 1 \\), it is connected to at least two other vertices in the path. However, this does not necessarily mean \\( V \\) must be in \\( S \\). For example, consider a path \\( V_1, V_2, \\ldots, V_{k+2} \\). If \\( V_2, V_3, \\ldots, V_{k+1} \\) are all in \\( S \\), then \\( V_1 \\) and \\( V_{k+2} \\) can be excluded from \\( S \\) without leaving any edge uncovered. Therefore, \\( V \\) does not necessarily have to be in \\( S \\).\n\n### Option (C): The vertex \\( V \\) is on a cycle of length \\( k + 1 \\)\n- **Cycle Length**: A cycle of length \\( k + 1 \\) consists of \\( k + 1 \\) vertices connected in a circular sequence.\n- ** ensures \\( V \\in S \\)**: If \\( V \\) is on a cycle of length \\( k + 1 \\), it is connected to two other vertices in the cycle. However, this does not necessarily mean \\( V \\) must be in \\( S \\). For example, consider a cycle \\( V_1, V_2, \\ldots, V_{k+1} \\). If \\( V_2, V_3, \\ldots, V_k \\) are all in \\( S \\), then \\( V_1 \\) and \\( V_{k+1} \\) can be excluded from \\( S \\) without leaving any edge uncovered. Therefore, \\( V \\) does not necessarily have to be in \\( S \\).\n\n### Option (D): The vertex \\( V \\) is a part of a clique of size \\( k \\)\n- **Clique Size**:",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q62",
+  "question_seq": 55,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 }$ be a random sample from a population having probability density function $ f _ { \\theta } ( x ) = { \\left\\{ \\begin{array} { l l } { e ^ { ( x - \\theta ) } } & { { \\mathrm { i f ~ } } - \\infty < x \\leq \\theta , } \\\\ { 0 } & { { \\mathrm { o t h e r w i s e , } } } \\end{array} \\right. } $ where $\\theta \\in \\mathbb { R }$ is an unknown parameter. Consider testing $H _ { 0 } : \\theta \\geq 0$ against $H _ { 1 } : \\theta < 0$ at level $\\alpha = 0 . 0 9$ . Let $\\beta ( \\theta )$ denote the power function of a uniformly most powerful test. Then $\\beta ( \\log _ { e } 0 . 3 6 )$ equals (rounded off to two decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "We are given a probability density function and are asked to find the power function $\\beta ( \\log _ { e } 0 . 3 6 )$ of a uniformly most powerful test.\n\nStep 1: Understanding the Power Function\n\nThe power function $\\beta ( \\theta )$ represents the probability of rejecting $H _ { 0 }$ when $\\theta$ is the true parameter. For a uniformly most powerful test, we use the likelihood ratio test.\n\nThe likelihood ratio test statistic is:\n\n $ \\Lambda = \\frac { L ( \\theta _ { 0 } ) } { L ( \\theta ) } = \\frac { \\prod _ { i = 1 } ^ { 2 } e ^ { ( X _ { i } - \\theta _ { 0 } ) } } { \\prod _ { i = 1 } ^ { 2 } e ^ { ( X _ { i } - \\theta ) } } . $ \n\nHere $\\theta _ { 0 } = 0$ , and the rejection region is determined by comparing Λ to a threshold that corresponds to the level $\\alpha = 0 . 0 9$\nStep 2: Calculating the Power Function at $\\log _ { e } 0 . 3 6$\n\nWe are asked to find $\\beta ( \\log _ { e } 0 . 3 6 )$ . Using the likelihood ratio test and the critical region determined by the level $\\alpha = 0 . 0 9$ , we calculate the power function.\n\nAfter performing the necessary calculations (which may involve numerical methods or integration), we find:\n\n $ \\beta ( \\log _ { e } 0 . 3 6 ) \\approx 0 . 7 2 . $ \n\nFinal Answer:\n\nThe value of $\\beta ( \\log _ { e } 0 . 3 6 )$ is approximately 0.72 .\nQuick Tip\n\nThe power function of a test gives the probability of correctly rejecting the null hypothesis for each possible value of the parameter. Use the likelihood ratio test for uniformly most powerful tests."
+}

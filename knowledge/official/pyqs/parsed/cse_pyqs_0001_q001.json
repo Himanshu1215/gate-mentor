@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q1",
+  "question_seq": 1,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Two cars start at the same time from the same location and go in the same direction. The speed of the first car is 50 km/h and the speed of the second car is 60 km/h. The number of hours it takes for the distance between the two cars to be 20 km is (a) 1 (b) 2 (c) 3 (d) 6",
+  "options": null,
+  "answer": "B",
+  "solution": "To determine the number of hours it takes for the distance between the two cars to be 20 km, we need to analyze the relative speed of the cars and how it affects the distance between them over time.\n\n1. **Identify the speeds of the cars:**\n   - Speed of the first car: \\(50 \\text{ km/h}\\)\n   - Speed of the second car: \\(60 \\text{ km/h}\\)\n\n2. **Calculate the relative speed:**\n   Since both cars are moving in the same direction, the relative speed is the difference in their speeds:\n   \\[\n   \\text{Relative speed} = 60 \\text{ km/h} - 50 \\text{ km/h} = 10 \\text{ km/h}\n   \\]\n   This means that the second car is gaining on the first car at a rate of 10 km per hour.\n\n3. **Determine the time it takes for the distance to be 20 km:**\n   We need to find the time \\(t\\) it takes for the second car to be 20 km ahead of the first car. Using the formula for distance (distance = speed × time), we can set up the equation:\n   \\[\n   \\text{Distance} = \\text{Relative speed} \\times t\n   \\]\n   Substituting the known values:\n   \\[\n   20 \\text{ km} = 10 \\text{ km/h} \\times t\n   \\]\n   Solving for \\(t\\):\n   \\[\n   t = \\frac{20 \\text{ km}}{10 \\text{ km/h}} = 2 \\text{ hours}\n   \\]\n\nTherefore, the number of hours it takes for the distance between the two cars to be 20 km is \\(\\boxed{2}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

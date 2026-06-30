@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q39",
+  "question_seq": 172,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "For a direct-mapped cache, 4 bits are used for the tag field and 12 bits are used to index into a cache block. The size of each cache block is one byte. Assume that there is no other information stored for each cache block Which ONE of the following is the CORRECT option for the sizes of the main memory",
+  "options": {
+    "A": "nd the cache memory in this system (byte addressable), respectively?",
+    "C": "64 KB and 8 KB (d) 128 KB and 6 KB [2025 (Set-2) : 2 M]"
+  },
+  "answer": "A",
+  "solution": "To determine the sizes of the main memory and the cache memory in this system, we need to analyze the given information step by step.\n\n1. **Determine the size of each cache block:**\n   - Each cache block is given to be one byte.\n   - Therefore, the size of each cache block is \\(1 \\text{ byte}\\).\n\n2. **Determine the total number of cache blocks:**\n   - The index field uses 12 bits.\n   - The number of possible indices is \\(2^{12}\\).\n   - Therefore, the total number of cache blocks is \\(2^{12} = 4096\\).\n\n3. **Calculate the size of the cache memory:**\n   - Each cache block is 1 byte.\n   - The total number of cache blocks is 4096.\n   - Therefore, the size of the cache memory is \\(4096 \\text{ bytes} = 4 \\text{ kilobytes} = 4 \\text{ KB}\\).\n\n4. **Determine the total number of main memory addresses:**\n   - The tag field uses 4 bits.\n   - The index field uses 12 bits.\n   - The total number of bits used for the tag and index is \\(4 + 12 = 16\\) bits.\n   - The number of possible addresses is \\(2^{16}\\).\n   - Therefore, the total number of main memory addresses is \\(2^{16} = 65536\\).\n\n5. **Calculate the size of the main memory:**\n   - Each main memory address corresponds to 1 byte.\n   - The total number of main memory addresses is 65536.\n   - Therefore, the size of the main memory is \\(65536 \\text{ bytes} = 64 \\text{ kilobytes} = 64 \\text{ KB}\\).\n\nThus, the sizes of the main memory and the cache memory in this system are \\(64 \\text{ KB}\\) and \\(4 \\text{ KB}\\), respectively.\n\nThe correct option is \\(\\boxed{A}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

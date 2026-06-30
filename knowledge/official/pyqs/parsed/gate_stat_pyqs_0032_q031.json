@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q31",
+  "question_seq": 32,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let ?? be a random variable having Poisson distribution with mean $\\lambda > 0$ such that $P ( X = 4 ) = 2 ~ P ( X = 5 ) . \\mathrm { I f } \\mathrm { ~ } p _ { k } = P ( X = k ) , ~ k = 0 , 1 , 2 , . . . ,$ and $p _ { \\alpha } = \\operatorname* { m a x } _ { k } { p _ { k } }$ , then ?? equals (in integer). Let $X _ { 1 } , X _ { 2 } , X _ { 3 }$ be independent and identically distributed random variables with common probability density function $ f ( x ) = { \\left\\{ \\begin{array} { l l } { 2 x } & { { \\mathrm { i f ~ } } 0 < x < 1 } \\\\ { 0 } & { { \\mathrm { o t h e r w i s e . } } } \\end{array} \\right. } $ Then $P ( \\operatorname* { m i n } \\{ X _ { 1 } , \\ X _ { 2 } , \\ X _ { 3 } \\} \\geq E ( X _ { 1 } ) )$ equals (rounded off to two decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the given problem, we need to address each part separately.\n\n### Part 1: Finding \\(\\lambda\\) for the Poisson distribution\n\nGiven:\n\\[ P(X = 4) = 2 P(X = 5) \\]\n\nFor a Poisson distribution with mean \\(\\lambda\\), the probability mass function is:\n\\[ P(X = k) = \\frac{e^{-\\lambda} \\lambda^k}{k!} \\]\n\nSubstitute \\(k = 4\\) and \\(k = 5\\) into the probability mass function:\n\\[ P(X = 4) = \\frac{e^{-\\lambda} \\lambda^4}{4!} \\]\n\\[ P(X = 5) = \\frac{e^{-\\lambda} \\lambda^5}{5!} \\]\n\nAccording to the given condition:\n\\[ \\frac{e^{-\\lambda} \\lambda^4}{4!} = 2 \\cdot \\frac{e^{-\\lambda} \\lambda^5}{5!} \\]\n\nSimplify the equation by canceling out \\(e^{-\\lambda}\\) from both sides:\n\\[ \\frac{\\lambda^4}{4!} = 2 \\cdot \\frac{\\lambda^5}{5!} \\]\n\nRecall that \\(5! = 5 \\cdot 4!\\), so:\n\\[ \\frac{\\lambda^4}{4!} = 2 \\cdot \\frac{\\lambda^5}{5 \\cdot 4!} \\]\n\nCancel out \\(4!\\) from both sides:\n\\[ \\lambda^4 = 2 \\cdot \\frac{\\lambda^5}{5} \\]\n\nMultiply both sides by 5:\n\\[ 5 \\lambda^4 = 2 \\lambda^5 \\]\n\nDivide both sides by \\(\\lambda^4\\) (assuming \\(\\lambda \\neq 0\\)):\n\\[ 5 = 2 \\lambda \\]\n\nSolve for \\(\\lambda\\):\n\\[ \\lambda = \\frac{5}{2} = 2.5 \\]\n\n### Part 2: Finding \\(p_{\\alpha}\\)\n\nThe probability mass function for \\(X\\) with \\(\\lambda = 2.5\\) is:\n\\[ p_k = P(X = k) = \\frac{e^{-2.5} (2.5)^k}{k!} \\]\n\nWe need to find \\(p_{\\alpha} = \\max_k p_k\\). To do this, we compare \\(p_k\\) for different values of \\(k\\).\n\nCalculate \\(p_k\\) for \\(k = 0, 1, 2, 3, 4\\):\n\\[ p_0 = \\frac{e^{-2.5} (2.5)^0}{0!} = e^{-2.5} \\approx 0.0821 \\]\n\\[ p_1 = \\frac{e^{-2.5} (2.5)^1}{1!} = 2.5 e^{-2.5} \\approx 0.2052 \\]\n\\[ p_2 = \\frac{e^{-2.5} (2.5)^2}{2!} = \\frac{6.25 e^{-2.5}}{2} \\approx 0.2565 \\]\n\\[ p_3 = \\frac{e^{-2.5}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

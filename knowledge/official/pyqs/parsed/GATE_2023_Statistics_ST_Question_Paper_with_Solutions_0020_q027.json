@@ -7,13 +7,13 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "PROB_001",
-  "question_text": "Suppose that X1, X2, . . . , Xn are independent and identically distributed random variables each having probability density function f(·) and median θ. We want to test H0 : θ = θ0",
+  "question_text": "Suppose that $X _ { 1 } , X _ { 2 } , \\ldots , X _ { n }$ are independent and identically distributed random variables each having probability density function $f ( \\cdot )$ and median θ. We want to test $ H _ { 0 } : \\theta = \\theta _ { 0 } \\quad \\mathrm { a g a i n s t } \\quad H _ { 1 } : \\theta > \\theta _ { 0 } . $",
   "options": {
-    "A": "gainst H1 : θ > θ0.",
-    "C": "onsider a test that rejects H0 if S > c for some c depending on the size of the test, where S is the cardinality of the set {i : Xi > θ0, 1 ≤i ≤n}. Then which one of the following statements is true?",
-    "B": "Under H1, the distribution of S does not depend on f(·)",
+    "C": "onsider a test that rejects $H _ { 0 } \\mathbf { i f } \\ S > c$ for some c depending on the size of the test, where $S$ is the cardinality of the set $\\{ i : X _ { i } > \\theta _ { 0 } , 1 \\le i \\le n \\}$ . Then which one of the following statements is true?",
+    "A": "Under $H _ { 0 } ,$ , the distribution of S depends on $f ( \\cdot )$",
+    "B": "Under $H _ { 1 }$ , the distribution of S does not depend on $f ( \\cdot )$",
     "D": "The power function does not depend on θ"
   },
   "answer": "C",
-  "solution": "1) Understanding the power function:\nThe power function of a test is defined as the probability of rejecting H0 when the true\nparameter is θ, i.e., β(θ) = P(Rejecting H0 | θ). The power function depends on how the test\nbehaves under different values of θ.\n2) Analysis:\n- The test uses the statistic S, the number of Xi greater than θ0. Under H0, this statistic\nfollows a binomial distribution with parameters n and the probability P(Xi > θ0). - The\ndistribution of S is affected by the value of θ, and so is the power of the test. Hence, the\npower function depends on θ.\nThus, the correct answer is (C).\nQuick Tip\n- The power function of a hypothesis test depends on how the test behaves for different\nvalues of the parameter θ under consideration.\n- A test’s power increases as the distance between the null hypothesis and alternative\nhypothesis increases."
+  "solution": "1) Understanding the power function:\n\nThe power function of a test is defined as the probability of rejecting $H _ { 0 }$ when the true parameter is $\\theta , { \\mathrm { i . e . , ~ } } \\beta ( \\theta ) = P ( \\operatorname { R e j e c t i n g } H _ { 0 } \\mid \\theta )$ . The power function depends on how the test behaves under different values of θ.\n2) Analysis:\n\n\\- The test uses the statistic $S ,$ the number of $X _ { i }$ greater than $\\theta _ { 0 }$ . Under $H _ { 0 }$ , this statistic follows a binomial distribution with parameters n and the probability $P ( X _ { i } > \\theta _ { 0 } )$ . - The distribution of S is affected by the value of $\\theta ,$ and so is the power of the test. Hence, the power function depends on θ.\n\nThus, the correct answer is (C).\nQuick Tip\n\n\\- The power function of a hypothesis test depends on how the test behaves for different values of the parameter θ under consideration.\n\n\\- A test’s power increases as the distance between the null hypothesis and alternative hypothesis increases."
 }

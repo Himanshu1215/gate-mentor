@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q63",
+  "question_seq": 236,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_002",
+  "question_text": "Suppose an unbiased coin is tossed 6 times. Each coin toss is independent of all previous coin tosses. Let $E _ { 1 }$ be the event that among the second, fourth, and sixth coin tosses, there are at least two heads. Let $E _ { 2 }$ be the event that among the first, second third, and fifth coin tosses, there are equal number of heads and tails. The conditional probability $P ( E _ { 1 } | E _ { 2 } )$ is equal to \\_. (rounded off to one decimal place)",
+  "options": null,
+  "answer": "A",
+  "solution": "To find the conditional probability \\( P(E_1 | E_2) \\), we need to use the definition of conditional probability:\n\\[\nP(E_1 | E_2) = \\frac{P(E_1 \\cap E_2)}{P(E_2)}\n\\]\n\n### Step 1: Calculate \\( P(E_2) \\)\nEvent \\( E_2 \\) is the event that among the first, second, third, and fifth coin tosses, there are equal number of heads and tails. This means there must be 2 heads and 2 tails in these 4 tosses.\n\nThe number of ways to choose 2 heads out of 4 tosses is given by the binomial coefficient:\n\\[\n\\binom{4}{2} = \\frac{4!}{2!2!} = 6\n\\]\n\nEach specific sequence of 2 heads and 2 tails has a probability of:\n\\[\n\\left(\\frac{1}{2}\\right)^4 = \\frac{1}{16}\n\\]\n\nTherefore, the total probability \\( P(E_2) \\) is:\n\\[\nP(E_2) = 6 \\times \\frac{1}{16} = \\frac{6}{16} = \\frac{3}{8}\n\\]\n\n### Step 2: Calculate \\( P(E_1 \\cap E_2) \\)\nEvent \\( E_1 \\cap E_2 \\) is the event that among the second, fourth, and sixth coin tosses, there are at least two heads, and among the first, second, third, and fifth coin tosses, there are equal number of heads and tails.\n\nFirst, consider the possible outcomes for the first, second, third, and fifth coin tosses:\n- There are 6 sequences with 2 heads and 2 tails.\n\nFor each of these sequences, we need to determine the probability that among the second, fourth, and sixth coin tosses, there are at least two heads.\n\n#### Case 1: Exactly 2 heads in the second, fourth, and sixth tosses\n- There are 3 positions (second, fourth, sixth) and we need exactly 2 heads.\n- The number of ways to choose 2 heads out of 3 tosses is:\n\\[\n\\binom{3}{2} = 3\n\\]\n- Each specific sequence of 2 heads and 1 tail has a probability of:\n\\[\n\\left(\\frac{1}{2}\\right)^3 = \\frac{1}{8}\n\\]\n- Therefore, the total probability for exactly 2 heads in the second, fourth, and sixth tosses is:\n\\[\n3 \\times \\frac{1}{8} = \\frac{3}{8}\n\\]\n\n#### Case 2: Exactly 3 heads in the second, fourth, and sixth tosses\n- There is only 1 way to have all 3 heads.\n- Each specific sequence of 3 heads has a probability of:\n\\[\n\\left(\\frac{1}{2}\\right)^3 = \\frac{1}{8}\n\\]\n- Therefore, the total probability for exactly 3 heads in the second, fourth, and sixth tosses is:\n\\[\n1 \\times \\frac{1}{8} = \\frac{1}{8}\n\\]\n\nAdding the probabilities from both",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

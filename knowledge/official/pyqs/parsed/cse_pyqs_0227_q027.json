@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q27",
+  "question_seq": 227,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "For a real number a, let $I ( a ) = \\int _ { - 1 } ^ { 1 } ( 3 x ^ { 2 } - a x + 1 ) d x$ . Which of the following statements is/are true?",
+  "options": {
+    "A": "The value of I(a) is independent of the value of a",
+    "B": "The value of I(a) can vary with the value of a",
+    "C": "There exists $a \\in ( - \\infty , + \\infty )$ such that I(a) is a positive real number",
+    "D": "There exists $a \\in \\ ( - \\infty , \\ + \\infty )$ such that I(a) is a negative real number"
+  },
+  "answer": "A",
+  "solution": "To determine which statement is true, we need to evaluate the integral \\( I(a) = \\int_{-1}^{1} (3x^2 - ax + 1) \\, dx \\) and analyze its properties.\n\nFirst, let's compute the integral step by step:\n\n\\[\nI(a) = \\int_{-1}^{1} (3x^2 - ax + 1) \\, dx\n\\]\n\nWe can split this integral into three separate integrals:\n\n\\[\nI(a) = \\int_{-1}^{1} 3x^2 \\, dx - \\int_{-1}^{1} ax \\, dx + \\int_{-1}^{1} 1 \\, dx\n\\]\n\nNow, we evaluate each integral individually.\n\n1. **Integral of \\( 3x^2 \\):**\n\n\\[\n\\int_{-1}^{1} 3x^2 \\, dx = 3 \\int_{-1}^{1} x^2 \\, dx\n\\]\n\nThe integral of \\( x^2 \\) from \\(-1\\) to \\(1\\) is:\n\n\\[\n\\int_{-1}^{1} x^2 \\, dx = \\left[ \\frac{x^3}{3} \\right]_{-1}^{1} = \\frac{1^3}{3} - \\frac{(-1)^3}{3} = \\frac{1}{3} - \\left(-\\frac{1}{3}\\right) = \\frac{1}{3} + \\frac{1}{3} = \\frac{2}{3}\n\\]\n\nThus,\n\n\\[\n3 \\int_{-1}^{1} x^2 \\, dx = 3 \\cdot \\frac{2}{3} = 2\n\\]\n\n2. **Integral of \\( ax \\):**\n\n\\[\n\\int_{-1}^{1} ax \\, dx = a \\int_{-1}^{1} x \\, dx\n\\]\n\nThe integral of \\( x \\) from \\(-1\\) to \\(1\\) is:\n\n\\[\n\\int_{-1}^{1} x \\, dx = \\left[ \\frac{x^2}{2} \\right]_{-1}^{1} = \\frac{1^2}{2} - \\frac{(-1)^2}{2} = \\frac{1}{2} - \\frac{1}{2} = 0\n\\]\n\nThus,\n\n\\[\na \\int_{-1}^{1} x \\, dx = a \\cdot 0 = 0\n\\]\n\n3. **Integral of \\( 1 \\):**\n\n\\[\n\\int_{-1}^{1} 1 \\, dx = \\left[ x \\right]_{-1}^{1} = 1 - (-1) = 1 + 1 = 2\n\\]\n\nNow, we combine the results of the three integrals:\n\n\\[\nI(a) = 2 - 0 + 2 = 4\n\\]\n\nThe value of \\( I(a) \\) is \\( 4 \\), which is a constant and does not depend on the value of \\( a \\).\n\nTherefore, the correct statement is:\n\n\\[\n\\boxed{A}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

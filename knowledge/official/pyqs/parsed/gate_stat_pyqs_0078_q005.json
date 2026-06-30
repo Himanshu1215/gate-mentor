@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q5",
+  "question_seq": 78,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Until Iran came along, India had never been in kabaddi. (A) defeated (B) defeating (C) defeat (D) defeatist",
+  "options": null,
+  "answer": null,
+  "solution": "To determine the correct answer to the question \"Until Iran came along, India had never been in kabaddi,\" we need to analyze the grammatical structure and the logical context of the sentence.\n\n1. Identify the subject and the verb in the sentence:\n   - The subject is \"India.\"\n   - The verb is \"be in kabaddi.\"\n\n2. Determine the correct form of the verb \"be in kabaddi\" in the past perfect tense:\n   - The past perfect tense of \"be in\" is \" had been in.\"\n\n3. Check the options provided:\n   - (A) defeated: This is not the correct form because \"defeated\" does not fit the context of \"be in.\"\n   - (B) defeating: This is not the correct form because \"defeating\" does not fit the context of \"be in.\"\n   - (C) defeat: This is not the correct form because \"defeat\" does not fit the context of \"be in.\"\n   - (D) defeatist: This is not the correct form because \"defeatist\" does not fit the context of \"be in.\"\n\n4. Re-evaluate the options and correct the analysis:\n   - The correct form should be \" had been in kabaddi\" but not directly given in the options.\n\n re-e re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re re",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

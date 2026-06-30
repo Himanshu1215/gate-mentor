@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q27",
+  "question_seq": 32,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $f : [ 0 , \\infty ) \\to { \\mathbb R }$ be a function, where <sup>R</sup> denotes the set of all real numbers. Then which one of the following statements is true?",
+  "options": {
+    "A": "If f is bounded and continuous, then f is uniformly continuous",
+    "B": "If f is uniformly continuous, then $\\scriptstyle \\operatorname* { l i m } _ { x \\to \\infty } f ( x )$ exists",
+    "C": "If f is uniformly continuous, then the function $g ( x ) = f ( x )$ sin x is also uniformly continuous",
+    "D": "If f is continuous and $\\scriptstyle \\operatorname* { l i m } _ { x \\to \\infty } f ( x )$ is finite, then f is uniformly continuous"
+  },
+  "answer": "D",
+  "solution": "Let us analyze the given statements one by one:\n\nStep 1: Bounded and continuous implies uniform continuity.\n\nIf f is bounded and continuous on $[ 0 , \\infty )$ , this does not guarantee uniform continuity.\n\nUniform continuity requires the behavior of f to be controlled uniformly for all points in the domain, which is not guaranteed by just boundedness and continuity.\n\nStep 2: Uniform continuity does not imply a limit at infinity.\n\nThe fact that f is uniformly continuous does not necessarily imply that $\\scriptstyle \\operatorname* { l i m } _ { x \\to \\infty } f ( x )$ exists. A function can be uniformly continuous without having a limit as $x \\to \\infty$\n\nStep 3: Uniform continuity does not guarantee uniform continuity of $g ( x ) = f ( x )$ sin x.\n\nWhile f is uniformly continuous, multiplying by sin x, which oscillates, can cause $g ( x )$ to fail to be uniformly continuous because the oscillations may disrupt the uniformity.\n\nStep 4: Continuity and a finite limit at infinity imply uniform continuity.\n\nIf f is continuous on $[ 0 , \\infty )$ and lim $\\operatorname { 1 } _ { x \\to \\infty } f ( x )$ is finite, then $f$ must be uniformly continuous because the behavior of $f ( x )$ becomes stable as x grows larger, ensuring the function remains controlled.\nFinal Answer:\n\n(D) If f is continuous and $\\operatorname* { l i m } _ { x \\to \\infty } f ( x )$ is finite, then f is uniformly continuous\nQuick Tip\n\nUniform continuity can often be ensured by limiting the behavior of the function at infinity or by restricting the domain to a compact set."
+}

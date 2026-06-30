@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q45",
+  "question_seq": 120,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let G be a simple, finite, undirected graph with vertex set $\\{ V _ { 1 } , \\ldots , V _ { n } \\}$ . Let ∆(G) denote the maximum degree of G and let $N = \\{ 1 , 2 , \\ldots \\}$ denote the set of all possible colors Color the vertices of G using the following greedy strategy: for $i = 1 , . . . , n$ $\\mathsf { c o l o r } ( v _ { i } ) \\gets \\mathsf { m i n } \\{ j \\in \\mathsf { \\Gamma } N$ : no neighbour of $V _ { i }$ is colored $j \\}$ Which of the following statements is/are TRUE?",
+  "options": {
+    "A": "This procedure results in a proper vertex coloring of G.",
+    "B": "The number of colors used is at most $\\Delta ( G ) + 1 ,$",
+    "C": "The number of colors used is at most $\\Delta ( G ) .$",
+    "D": "The number of colors used is equal to the chromatic number of G."
+  },
+  "answer": "A",
+  "solution": "To determine which statements are true regarding the given greedy coloring strategy, let's analyze the process step by step.\n\n### Step 1: Understanding the Greedy Coloring Strategy\nThe greedy coloring strategy works as follows:\n1. Start with the first vertex \\( V_1 \\) and assign it the smallest color available (which is 1).\n2. For each subsequent vertex \\( V_i \\) (where \\( i = 2, 3, \\ldots, n \\)), assign it the smallest color that has not been used by any of its neighbors.\n\n### Step 2: Proper Vertex Coloring\nA proper vertex coloring is a coloring where no two adjacent vertices share the same color. Let's verify if the greedy coloring strategy ensures this:\n- When \\( V_1 \\) is colored, it has no neighbors.\n- For \\( V_2 \\), it is colored with the smallest color not used by its neighbors, which is 1 if \\( V_2 \\) is not adjacent to \\( V_1 \\), or 2 if it is adjacent to \\( V_1 \\).\n- For \\( V_3 \\), it is colored with the smallest color not used by its neighbors, which could be 1, 2, or 3, depending on its adjacency to \\( V_1 \\) and \\( V_2 \\).\n- This process continues, ensuring that each vertex is colored with the smallest color not used by its neighbors.\n\nSince each vertex is assigned a color that is not used by any of its neighbors, the greedy coloring strategy results in a proper vertex coloring. Therefore, statement (A) is true.\n\n### Step 3: Number of Colors Used\nNext, we need to determine the maximum number of colors used by the greedy coloring strategy.\n- The maximum degree of the graph \\( \\Delta(G) \\) is the highest number of edges incident to any single vertex.\n- When coloring a vertex \\( V_i \\), the smallest color it can be assigned is the smallest color not used by its neighbors. Since \\( V_i \\) has at most \\( \\Delta(G) \\) neighbors, it needs at most \\( \\Delta(G) + 1 \\) colors to ensure it is different from all its neighbors.\n\nThus, the number of colors used by the greedy coloring strategy is at most \\( \\Delta(G) + 1 \\). Therefore, statement (B) is true.\n\n### Step 4: Number of Colors Used compared to Chromatic Number\nThe chromatic number of a graph \\( G \\), denoted \\( \\chi(G) \\), is the minimum number of colors needed to properly color \\( G \\). The greedy coloring strategy uses at most \\( \\Delta(G) + 1 \\) colors, but it does not necessarily use the minimum number of colors. Therefore, the number of colors used by the greedy coloring strategy is not necessarily equal to the chromatic number of \\( G \\). Thus, statement (D) is false.\n\n### Step 5: Number of Colors Used compared to Maximum Degree\nThe number of colors used by the greedy coloring strategy is at most \\( \\Delta(G) + 1 \\), but it is not necessarily at most \\( \\Delta(G) \\). For example, consider a complete graph \\( K_{\\Delta(G)+1} \\), which requires \\( \\Delta(G) + 1 \\) colors to be properly colored. Therefore, statement (C) is false",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

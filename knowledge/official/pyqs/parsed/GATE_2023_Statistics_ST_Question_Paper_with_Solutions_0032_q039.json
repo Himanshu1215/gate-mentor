@@ -7,13 +7,13 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "PROB_001",
-  "question_text": "Let X1, X2, . . . , Xn be a random sample of size n from a population having probability",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , \\ldots , X _ { n }$ be a random sample of size $n$ from a population having probability density function $ f ( x ; \\mu ) = { \\left\\{ \\begin{array} { l l } { e ^ { - ( x - \\mu ) } } & { { \\mathrm { i f ~ } } \\mu \\leq x < \\infty } \\\\ { 0 } & { { \\mathrm { o t h e r w i s e } } } \\end{array} \\right. } $ where $\\mu \\in \\mathbb { R }$ is an unknown parameter. If $\\hat { M }$ is the maximum likelihood estimator of the median of $X _ { 1 }$ , then which one of the following statements is true?",
   "options": {
-    "D": "ensity function f(x; µ) = e−(x−µ) if µ ≤x < ∞ otherwise where µ ∈R is an unknown parameter. If ˆ M is the maximum likelihood estimator of the median of X1, then which one of the following statements is true?",
-    "A": "P( ˆ M ≤2) = 1 −e−n(1−log 2) if µ = 1",
-    "B": "P( ˆ M ≤1) = 1 −e−n log 2 if µ = 1",
-    "C": "P( ˆ M ≤3) = 1 −e−n(1−log 2) if µ = 1"
+    "A": "$P ( { \\hat { M } } \\leq 2 ) = 1 - e ^ { - n ( 1 - \\log 2 ) } { \\mathrm { i f ~ } } \\mu = 1$",
+    "B": "$P ( \\hat { M } \\leq 1 ) = 1 - e ^ { - n \\log 2 } \\operatorname { i f } \\mu = 1$",
+    "C": "$P ( { \\hat { M } } \\leq 3 ) = 1 - e ^ { - n ( 1 - \\log 2 ) } { \\mathrm { i f ~ } } \\mu = 1$",
+    "D": "$P ( \\hat { M } \\leq 4 ) = 1 - e ^ { - n ( 2 \\log e 2 - 1 ) } \\operatorname { i f } \\mu = 1$"
   },
   "answer": "A",
-  "solution": "The maximum likelihood estimator for the median of the exponential distribution is derived\nby maximizing the likelihood function for the given probability density function. By\ncalculating the cumulative distribution function and solving the likelihood equation, we find\nthat the maximum likelihood estimator for the median satisfies the given relation, leading to\nthe correct answer. The probability expression in option (A) corresponds to the proper form\nof the likelihood equation for ˆ\nThe correct answer is (A) P( ˆ\nM ≤2) = 1 −e−n(1−log 2).\nQuick Tip\n- Maximum likelihood estimation (MLE) is used to find the most likely parameter esti-\nmates based on observed data.\n- In this case, we estimate the median of the exponential distribution using MLE."
+  "solution": "The maximum likelihood estimator for the median of the exponential distribution is derived by maximizing the likelihood function for the given probability density function. By calculating the cumulative distribution function and solving the likelihood equation, we find that the maximum likelihood estimator for the median satisfies the given relation, leading to the correct answer. The probability expression in option (A) corresponds to the proper form of the likelihood equation for $\\hat { M }$\n\nThe correct answer is (A) $P ( \\hat { M } \\leq 2 ) = 1 - e ^ { - n ( 1 - \\log 2 ) }$\nQuick Tip\n\n\\- Maximum likelihood estimation (MLE) is used to find the most likely parameter estimates based on observed data.\n\n\\- In this case, we estimate the median of the exponential distribution using MLE."
 }

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q17",
+  "question_seq": 83,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the following facilitates transfer of bulk data from hard disk to main memory with the highest throughput? (a) DMA based I/O transfer (b) Interrupt driven I/O transfer (c) Polling based I/O transfer (d) Programmed I/O transfer",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine which method facilitate the transfer of bulk data from a hard disk to main memory with the highest through put, let's analyze each option step by step:\n\n1. ** DMA based I/O transfer:**\n   - DMA ( direct memory access) is a bus-based bus capture and bus capture bus configuration that allows the bus to be used for both data transfer and bus capture bus capture bus configurations.\n   - In DMA-based I/O transfer, the bus is used to directly transfer data from the hard disk to main memory without involving the CPU.\n   - This method is highly efficient because it reduces the number of bus cycles required for data transfer, resulting in a high through put.\n\n2. ** Interrupt driven I/O transfer:**\n   - Interrupt driven I/O transfer involves the CPU generate an interrupt when data is ready to be transferred from the hard disk to main memory.\n   - The CPU then handled the interrupt by writing the data to main memory.\n   - While this method is efficient, it is generally slower than DMA-based I/O transfer because it requires the CPU to handle the interrupt, which adds additional overhead.\n\n3. ** Polling based I/O transfer:**\n   - Polling based I/O transfer involves the CPU periodic check the hard disk to see if data is ready to be transferred.\n   - If data is ready, the CPU writes it to main memory.\n   - This method is less efficient than DMA-based I/O transfer because it requires the CPU to spends time polling the hard disk, which adds additional overhead.\n\n4. ** Programmed I/O transfer:**\n   - Programmed I/O transfer involves the CPU explicitly program the hard disk to transfer data to main memory.\n   - This method is less efficient than DMA-based I/O transfer because it requires the CPU to spends time programming the hard disk, which adds additional overhead.\n\nBased on the analysis, the method that facilitate the transfer of bulk data from a hard disk to main memory with the highest through put is DMA based I/O transfer.\n\nTherefore, the final answer is:\n\\boxed{A}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

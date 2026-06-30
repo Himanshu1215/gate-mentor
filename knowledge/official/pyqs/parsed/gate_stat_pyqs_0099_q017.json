@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q17",
+  "question_seq": 99,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "The probability density function of the random vector (X, Y) is given by $ f _ { X , Y } ( x , y ) = \\left\\{ { \\begin{array} { l l } { c , \\quad } & { 0 < x < y < 1 } \\\\ { 0 , \\quad } & { o t h e r w i s e . } \\end{array} } \\right. $ Then the value of c is equal to....",
+  "options": null,
+  "answer": null,
+  "solution": "To find the value of \\( c \\) in the given probability density function \\( f_{X,Y}(x,y) \\), we need to ensure that the total probability over the entire domain is equal to 1. This means we need to integrate the density function over the region where it is non-zero and set the result equal to 1.\n\nThe density function is given by:\n\\[ f_{X,Y}(x,y) = \\begin{cases} \nc & \\text{if } 0 < x < y < 1 \\\\\n0 & \\text{otherwise}\n\\end{cases} \\]\n\nThe region where the density function is non-zero is the area in the unit square where \\( x \\) is less than \\( y \\). This region can be described as:\n\\[ 0 < x < 1 \\quad \\text{and} \\quad x < y < 1 \\]\n\nTo find the value of \\( c \\), we need to integrate \\( f_{X,Y}(x,y) \\) over this region:\n\\[ \\int_{0}^{1} \\int_{x}^{1} c \\, dy \\, dx \\]\n\nFirst, we integrate with respect to \\( y \\):\n\\[ \\int_{x}^{1} c \\, dy = c \\left[ y \\right]_{x}^{1} = c (1 - x) \\]\n\nNext, we integrate the result with respect to \\( x \\):\n\\[ \\int_{0}^{1} c (1 - x) \\, dx = c \\int_{0}^{1} (1 - x) \\, dx \\]\n\nWe can split the integral into two parts:\n\\[ c \\int_{0}^{1} 1 \\, dx - c \\int_{0}^{1} x \\, dx \\]\n\nEvaluating these integrals, we get:\n\\[ c \\left[ x \\right]_{0}^{1} - c \\left[ \\frac{x^2}{2} \\right]_{0}^{1} = c (1 - 0) - c \\left( \\frac{1^2}{2} - 0 \\right) = c - \\frac{c}{2} = \\frac{c}{2} \\]\n\nWe set this equal to 1 to find \\( c \\):\n\\[ \\frac{c}{2} = 1 \\]\n\nSolving for \\( c \\), we get:\n\\[ c = 2 \\]\n\nTherefore, the value of \\( c \\) is:\n\\[ \\boxed{2} \\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q4",
+  "question_seq": 77,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Five numbers 10, 7, 5, 4 and 2 are to be arranged in a sequence from left to right following the directions given below: 1. No two odd or even numbers are next to each other. 2. The second number from the left is exactly half of the left-most number. 3. The middle number is exactly twice the right-most number Which is the second number from the right? (A)2 (B) 4 (C) 7 (D) 10",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the problem, we need to arrange the numbers 10, 7, 5, 4, and 2 in a sequence that satisfies all the given conditions. Let's go through the conditions step by step.\n\n1. **No two odd or even numbers are next to each other.**\n   This means the sequence must alternate between odd and even numbers.\n\n2. **The second number from the left is exactly half of the left-most number.**\n   Let's denote the left-most number by \\(a_1\\). Then the second number \\(a_2\\) must be \\(a_1 / 2\\).\n\n3. **The middle number is exactly twice the right-most number.**\n   Let's denote the right-most number by \\(a_5\\). Then the middle number \\(a_3\\) must be \\(2a_5\\).\n\nGiven the numbers 10, 7, 5, 4, and 2, we need to find a sequence that satisfies all these conditions.\n\n### Step-by-Step Solution:\n\n1. **Determine the odd and even numbers:**\n   - Odd numbers: 7, 5\n   - Even numbers: 10, 4, 2\n\n2. **Apply the second condition:**\n   - \\(a_2 = a_1 / 2\\)\n   - Since \\(a_2\\) must be an integer, \\(a_1\\) must be even.\n   - Possible choices for \\(a_1\\) are 10, 4, or 2.\n\n3. **Apply the third condition:**\n   - \\(a_3 = 2a_5\\)\n   - Since \\(a_3\\) must be an odd number (as it alternates with \\(a_4\\)), \\(a_5\\) must be an odd number.\n   - Possible choices for \\(a_5\\) are 7 or 5.\n\n4. **Combine the conditions:**\n   - If \\(a_1 = 10\\), then \\(a_2 = 10 / 2 = 5\\). This is not possible because \\(a_2\\) must be even.\n   - If \\(a_1 = 4\\), then \\(a_2 = 4 / 2 = 2\\). This is possible.\n   - If \\(a_1 = 2\\), then \\(a_2 = 2 / 2 = 1\\). This is not possible because 1 is not in the given set.\n\n   Therefore, \\(a_1 = 4\\) and \\(a_2 = 2\\).\n\n5. **Determine \\(a_5\\):**\n   - If \\(a_5 = 7\\), then \\(a_3 = 2 \\times 7 = 14\\). This is not possible because 14 is not in the given set.\n   - If \\(a_5 = 5\\), then \\(a_3 = 2 \\times 5 = 10\\). This is possible.\n\n   Therefore, \\(a_5 = 5\\) and \\(a_3 = 10\\).\n\n6. **Determine \\(a_4\\):**\n   - Since \\(a_4\\) must be even and different from \\(a_2\\) and \\(a_5\\), \\(a_",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

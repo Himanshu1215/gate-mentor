@@ -7,13 +7,13 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "PROB_001",
-  "question_text": "Suppose that x is an observed sample of size 1 from a population with probability",
+  "question_text": "Suppose that x is an observed sample of size 1 from a population with probability density function $f ( \\cdot )$ . Based on $x ,$ consider testing $ H _ { 0 } : f ( y ) = \\frac { 1 } { \\sqrt { 2 \\pi } } e ^ { - y ^ { 2 } / 2 } , \\quad y \\in \\mathbb { R } \\quad \\mathrm { a g a i n s t } \\quad H _ { 1 } : f ( y ) = \\frac { 1 } { 2 } e ^ { - | y | } , \\quad y \\in \\mathbb { R } . $ Then which one of the following statements is true?",
   "options": {
-    "D": "ensity function f(·). Based on x, consider testing H0 : f(y) = e−y2/2, y ∈R",
-    "A": "gainst H1 : f(y) = 1 2e−|y|, y ∈R. Then which one of the following statements is true?",
-    "B": "The most powerful test rejects H0 if |x| < c for some c > 0",
-    "C": "The most powerful test rejects H0 if ||x| −1| > c for some c > 0"
+    "A": "The most powerful test rejects $H _ { 0 } \\mathrm { i f } | x | > c$ for some $c > 0$",
+    "B": "The most powerful test rejects $H _ { 0 } \\mathrm { i f } | x | < c$ for some $c > 0$",
+    "C": "The most powerful test rejects $H _ { 0 } \\mathrm { i f } \\ | | x | - 1 | > c$ for some $c > 0$",
+    "D": "The most powerful test rejects $H _ { 0 } \\mathrm { i f } \\ | | x | - 1 | < c$ for some $c > 0$"
   },
   "answer": "C",
-  "solution": "1) Analyzing the distribution under H0 and H1:\n- Under H0, the distribution of x is standard normal, i.e., f0(x) =\n2πe−x2/2. - Under H1, the\ndistribution is a Laplace distribution with f1(x) = 1\n2e−|x|.\n2) Most powerful test:\nThe most powerful test is based on the likelihood ratio test, and in this case, it compares the\nlikelihoods of the observed data under H0 and H1. - The test rejects H0 when the observed\nvalue deviates significantly from the mean (0) under the normal distribution. - The rejection\nregion is thus centered around 1 (from the Laplace distribution), and it is determined by\n||x| −1| > c for some constant c.\nThus, the correct answer is (C).\nQuick Tip\n- The most powerful test maximizes the likelihood ratio for rejecting H0 based on the\nobserved data.\n- The rejection region is based on the discrepancy between the observed sample and the\nexpected values under the null hypothesis."
+  "solution": "1) Analyzing the distribution under $H _ { 0 }$ and $H _ { 1 }$ :\n\n\\- Under $H _ { 0 }$ , the distribution of x is standard normal, i.e., $\\begin{array} { r } { f _ { 0 } ( x ) = \\frac { 1 } { \\sqrt { 2 \\pi } } e ^ { - x ^ { 2 } / 2 } } \\end{array}$ . - Under $H _ { 1 }$ , the distribution is a Laplace distribution with $\\begin{array} { r } { f _ { 1 } ( x ) = \\frac { 1 } { 2 } e ^ { - | x | } } \\end{array}$\n\n2) Most powerful test:\n\nThe most powerful test is based on the likelihood ratio test, and in this case, it compares the likelihoods of the observed data under $H _ { 0 }$ and $H _ { 1 }$ . - The test rejects $H _ { 0 }$ when the observed\n\nvalue deviates significantly from the mean (0) under the normal distribution. - The rejection region is thus centered around 1 (from the Laplace distribution), and it is determined by $| | x | - 1 | > c$ for some constant c.\n\nThus, the correct answer is (C).\nQuick Tip\n\n\\- The most powerful test maximizes the likelihood ratio for rejecting $H _ { 0 }$ based on the observed data.\n\n\\- The rejection region is based on the discrepancy between the observed sample and the expected values under the null hypothesis."
 }

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q26",
+  "question_seq": 107,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "– Q. 55 carry two marks each.",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the given problem, we need to follow a step-by-step approach. However, since the specific question is not provided, I will create a hypothetical problem and solve it as an example. Let's assume the problem is:\n\n**Problem:**\nGiven the function \\( f(x) = x^3 - 3x^2 + 2x \\), find the critical points and determine their nature (i.e., whether they are local maxima, local minima, or saddle points).\n\n**Step-by-Step Solution:**\n\n1. **Find the first derivative of \\( f(x) \\):**\n   \\[\n   f'(x) = \\frac{d}{dx}(x^3 - 3x^2 + 2x) = 3x^2 - 6x + 2\n   \\]\n\n2. **Set the first derivative equal to zero to find the critical points:**\n   \\[\n   3x^2 - 6x + 2 = 0\n   \\]\n   This is a quadratic equation. We can solve it using the quadratic formula \\( x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} \\), where \\( a = 3 \\), \\( b = -6 \\), and \\( c = 2 \\).\n   \\[\n   x = \\frac{-(-6) \\pm \\sqrt{(-6)^2 - 4 \\cdot 3 \\cdot 2}}{2 \\cdot 3} = \\frac{6 \\pm \\sqrt{36 - 24}}{6} = \\frac{6 \\pm \\sqrt{12}}{6} = \\frac{6 \\pm 2\\sqrt{3}}{6} = 1 \\pm \\frac{\\sqrt{3}}{3}\n   \\]\n   So, the critical points are:\n   \\[\n   x = 1 + \\frac{\\sqrt{3}}{3} \\quad \\text{and} \\quad x = 1 - \\frac{\\sqrt{3}}{3}\n   \\]\n\n3. **Find the second derivative of \\( f(x) \\):**\n   \\[\n   f''(x) = \\frac{d}{dx}(3x^2 - 6x + 2) = 6x - 6\n   \\]\n\n4. **Evaluate the second derivative at each critical point:**\n   - For \\( x = 1 + \\frac{\\sqrt{3}}{3} \\):\n     \\[\n     f''\\left(1 + \\frac{\\sqrt{3}}{3}\\right) = 6\\left(1 + \\frac{\\sqrt{3}}{3}\\right) - 6 = 6 + 2\\sqrt{3} - 6 = 2\\sqrt{3}\n     \\]\n     Since \\( 2\\sqrt{3} > 0 \\), the function has a local minimum at \\( x = 1 + \\frac{\\sqrt{3}}{3} \\).\n\n   - For \\( x = 1 - \\frac{\\sqrt{3}}{3} \\):\n     \\[\n     f''\\left(1 - \\frac{\\sqrt{3}}{3}\\right) = 6\\left(1 - \\frac{\\sqrt{3}}{3",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q34",
+  "question_seq": 116,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , \\dots , X _ { 1 0 }$ be a random sample from a population with probability density function $f ( x ; \\theta ) = { \\frac { e ^ { - | x - \\theta | } } { 2 } } , - \\infty < x < \\infty , - \\infty < \\theta < \\infty .$ Then the maximum likelihood estimator of θ (A) does not exist. (B) is not unique. (C) is the sample mean. (D) is the smallest observation.",
+  "options": null,
+  "answer": null,
+  "solution": "To find the maximum likelihood estimator (MLE) of \\(\\theta\\) for the given probability density function \\(f(x; \\theta) = \\frac{e^{-|x - \\theta|}}{2}\\), we need to follow these steps:\n\n1. **Write the likelihood function**: The likelihood function \\(L(\\theta)\\) is the product of the probability density functions of the individual observations \\(X_1, X_2, \\ldots, X_{10}\\):\n   \\[\n   L(\\theta) = \\prod_{i=1}^{10} f(X_i; \\theta) = \\prod_{i=1}^{10} \\frac{e^{-|X_i - \\theta|}}{2} = \\frac{1}{2^{10}} e^{-\\sum_{i=1}^{10} |X_i - \\theta|}\n   \\]\n\n2. **Take the natural logarithm of the likelihood function**: To simplify the maximization process, we take the natural logarithm of the likelihood function:\n   \\[\n   \\ln L(\\theta) = \\ln \\left( \\frac{1}{2^{10}} e^{-\\sum_{i=1}^{10} |X_i - \\theta|} \\right) = -10 \\ln 2 - \\sum_{i=1}^{10} |X_i - \\theta|\n   \\]\n\n3. **Minimize the negative log-likelihood**: Since the natural logarithm is a monotonically increasing function, maximizing the likelihood function is equivalent to minimizing the negative log-likelihood function. Therefore, we need to minimize the sum \\(\\sum_{i=1}^{10} |X_i - \\theta|\\).\n\n4. **Find the value of \\(\\theta\\) that minimizes the sum**: The sum \\(\\sum_{i=1}^{10} |X_i - \\theta|\\) is minimized when \\(\\theta\\) is the median of the observations \\(X_1, X_2, \\ldots, X_{10}\\). This is because the median is the value that minimizes the sum of absolute deviations from a set of numbers.\n\n5. **Conclusion**: The maximum likelihood estimator of \\(\\theta\\) is the median of the sample. Since the sample size is 10, which is even, the median is the average of the 5th and 6th smallest observations.\n\nTherefore, the maximum likelihood estimator of \\(\\theta\\) is the smallest observation if we consider the options given. However, the correct interpretation is that the MLE is the median, which is not necessarily the smallest observation. The correct answer is:\n\n\\(\\boxed{\\text{C}}\\)",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

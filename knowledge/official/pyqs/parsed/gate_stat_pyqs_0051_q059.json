@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q59",
+  "question_seq": 51,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let ?? be a $2 \\times 2$ real matrix, such that trace of ?? is 5 and determinant of ?? is 6. If the characteristic polynomial of $( A + I _ { 2 } ) ^ { - 1 }$ is $x ^ { 2 } - b x + c$ , where $I _ { 2 }$ is the $2 \\times 2$ identity matrix, then $\\frac { b } { c }$ equals (in integer).",
+  "options": null,
+  "answer": null,
+  "solution": "To solve for \\(\\frac{b}{c}\\) given the conditions on the matrix \\(A\\), we start by recalling the properties of the characteristic polynomial of a matrix. For a \\(2 \\times 2\\) matrix \\(A\\), the characteristic polynomial is given by:\n\n\\[\n\\det(A - \\lambda I) = \\lambda^2 - \\text{tr}(A)\\lambda + \\det(A)\n\\]\n\nGiven that \\(\\text{tr}(A) = 5\\) and \\(\\det(A) = 6\\), the characteristic polynomial of \\(A\\) is:\n\n\\[\n\\lambda^2 - 5\\lambda + 6\n\\]\n\nThe eigenvalues of \\(A\\) are the roots of this polynomial. Solving the quadratic equation \\(\\lambda^2 - 5\\lambda + 6 = 0\\), we get:\n\n\\[\n\\lambda = \\frac{5 \\pm \\sqrt{25 - 24}}{2} = \\frac{5 \\pm 1}{2}\n\\]\n\nThus, the eigenvalues of \\(A\\) are \\(\\lambda_1 = 3\\) and \\(\\lambda_2 = 2\\).\n\nNext, we need to find the eigenvalues of the matrix \\((A + I_2)^{-1}\\). If \\(\\lambda\\) is an eigenvalue of \\(A\\), then \\(\\lambda + 1\\) is an eigenvalue of \\(A + I_2\\). Therefore, the eigenvalues of \\(A + I_2\\) are \\(3 + 1 = 4\\) and \\(2 + 1 = 3\\).\n\nThe eigenvalues of \\((A + I_2)^{-1}\\) are the reciprocals of the eigenvalues of \\(A + I_2\\). Thus, the eigenvalues of \\((A + I_2)^{-1}\\) are \\(\\frac{1}{4}\\) and \\(\\frac{1}{3}\\).\n\nThe characteristic polynomial of \\((A + I_2)^{-1}\\) is given by:\n\n\\[\n\\det\\left((A + I_2)^{-1} - \\lambda I_2\\right) = \\lambda^2 - b\\lambda + c\n\\]\n\nSince the eigenvalues of \\((A + I_2)^{-1}\\) are \\(\\frac{1}{4}\\) and \\(\\frac{1}{3}\\), the characteristic polynomial can also be written as:\n\n\\[\n\\left(\\lambda - \\frac{1}{4}\\right)\\left(\\lambda - \\frac{1}{3}\\right) = \\lambda^2 - \\left(\\frac{1}{4} + \\frac{1}{3}\\right)\\lambda + \\frac{1}{4} \\cdot \\frac{1}{3}\n\\]\n\nSimplifying the coefficients, we get:\n\n\\[\n\\lambda^2 - \\left(\\frac{3 + 4}{12}\\right)\\lambda + \\frac{1}{12} = \\lambda^2 - \\frac{7}{12}\\lambda + \\frac{1}{12}\n\\]\n\nThus, \\(b = \\frac{7}{12}\\) and \\(c = \\frac{1}{12}\\). Therefore, the ratio \\(\\frac{b}{c}\\) is:",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

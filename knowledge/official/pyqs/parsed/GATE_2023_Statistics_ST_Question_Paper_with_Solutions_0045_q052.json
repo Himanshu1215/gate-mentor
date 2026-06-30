@@ -7,13 +7,13 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "PROB_001",
-  "question_text": "Let X be a positive valued continuous random variable with finite mean. If Y = ⌊X⌋, the largest integer less than or equal to X, then which of the following statements is/are true?",
+  "question_text": "Let X be a positive valued continuous random variable with finite mean. If $Y = \\lfloor X \\rfloor$ , the largest integer less than or equal to X, then which of the following statements is/are true?",
   "options": {
-    "A": "P(Y ≤u) ≤P(X ≤u) for all u ≥0",
-    "B": "P(Y ≥u) ≤P(X ≥u) for all u ≥0",
-    "C": "E(Y ) < E(X)",
-    "D": "E(X) > E(Y )"
+    "A": "$P ( Y \\leq u ) \\leq P ( X \\leq u )$ for all $u \\geq 0$",
+    "B": "$P ( Y \\geq u ) \\leq P ( X \\geq u )$ for all $u \\geq 0$",
+    "C": "$E ( Y ) < E ( X )$",
+    "D": "$E ( X ) > E ( Y )$"
   },
   "answer": "B",
-  "solution": "For the problem, we know that Y = ⌊X⌋, the greatest integer less than or equal to X. This\nmeans that Y is always less than or equal to X, which affects the cumulative distribution\nfunction and the expected values.\n(A) P(Y ≤u) ≤P(X ≤u): This is not true because Y is the greatest integer less than or\nequal to X, so the probability P(Y ≤u) is generally less than or equal to P(X ≤u).\n(B) P(Y ≥u) ≤P(X ≥u): This is true because the integer part of X is less than or equal to\nX, so the probability that Y ≥u is always less than or equal to the probability that X ≥u.\n(C) E(Y ) < E(X): This is true because the expected value of Y , being the greatest integer\nless than or equal to X, is less than the expected value of X.\n(D) E(X) > E(Y ): This is true because E(X) is always greater than E(Y ) due to the\ntruncation of the continuous variable X.\nThus, the correct answer is (B) and (D).\nQuick Tip\n- For continuous random variables, truncating the variable (e.g., using the floor function)\ngenerally results in a lower expected value for the truncated variable.\n- The cumulative distribution function for the truncated variable is also generally smaller\nthan for the original continuous variable."
+  "solution": "For the problem, we know that $Y = \\lfloor X \\rfloor$ , the greatest integer less than or equal to X. This means that Y is always less than or equal to X, which affects the cumulative distribution function and the expected values.\n\n(A) $P ( Y \\leq u ) \\leq P ( X \\leq u )$ : This is not true because Y is the greatest integer less than or equal to X, so the probability $P ( Y \\leq u )$ is generally less than or equal to $P ( X \\leq u )$\n\n(B) $P ( Y \\geq u ) \\leq P ( X \\geq u )$ : This is true because the integer part of X is less than or equal to X, so the probability that $Y \\geq u$ is always less than or equal to the probability that $X \\geq u$ (C) $E ( Y ) < E ( X )$ : This is true because the expected value of Y , being the greatest integer less than or equal to X, is less than the expected value of X.\n\n(D) $E ( X ) > E ( Y )$ : This is true because $E ( X )$ is always greater than $E ( Y )$ due to the truncation of the continuous variable X.\n\nThus, the correct answer is (B) and (D).\nQuick Tip\n\n\\- For continuous random variables, truncating the variable (e.g., using the floor function) generally results in a lower expected value for the truncated variable.\n\n\\- The cumulative distribution function for the truncated variable is also generally smaller than for the original continuous variable."
 }

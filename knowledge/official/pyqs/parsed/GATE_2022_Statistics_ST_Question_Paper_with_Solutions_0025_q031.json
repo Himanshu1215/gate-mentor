@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q31",
+  "question_seq": 25,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { i } , i = 1 , 2 , \\ldots , n .$ , be i.i.d. random variables with the probability density function $ f _ { X } ( x ) = { \\left\\{ \\begin{array} { l l } { { \\frac { 1 } { \\sqrt { 2 \\Gamma { \\big ( } { \\frac { 1 } { 6 } } \\big ) } } } x ^ { - { \\frac { 5 } { 6 } } } e ^ { - { \\frac { x } { 8 } } } , } & { 0 < x < \\infty , } \\\\ { 0 , } & { { \\mathrm { e l s e w h e r e } } , } \\end{array} \\right. } $ where $\\Gamma ( \\cdot )$ denotes the gamma function. Also, let $\\begin{array} { r } { \\bar { X } _ { n } = \\frac { 1 } { n } ( X _ { 1 } + X _ { 2 } + \\cdot \\cdot \\cdot + X _ { n } ) } \\end{array}$ . If $ { \\sqrt { n } } \\left( { \\bar { X } } _ { n } - \\mathbb { E } [ { \\bar { X } } _ { n } ] \\right) { \\xrightarrow { d } } N ( 0 , \\sigma ^ { 2 } ) , $ then $\\sigma ^ { 2 }$ (rounded off to two decimal places) is equal to",
+  "options": null,
+  "answer": null,
+  "solution": "Given the probability density function (PDF) of X, we first find the mean and variance of X. The first moment (mean) and second moment (for variance) of X can be computed by integrating x and $x ^ { 2 }$ times the PDF over the range $0 < x < \\infty$\n\nAfter calculating these moments, the variance of ${ \\bar { X } } _ { n } .$ , the sample mean, is $\\frac { \\sigma ^ { 2 } } { n }$ , where $\\sigma ^ { 2 }$ is the variance of the individual $X _ { i } { } ^ { \\ ' } \\mathbf { s }$\n\nUsing the given distribution, we calculate the value of $\\sigma ^ { 2 }$ . The integral yields $\\sigma ^ { 2 } \\approx 1 . 1 8 .$ rounded to two decimal places.\n\nThus, $\\sigma ^ { 2 }$ is 1.19 .\nQuick Tip\n\nFor i.i.d. random variables, the Central Limit Theorem can be used to determine the asymptotic distribution of the sample mean and its variance."
+}

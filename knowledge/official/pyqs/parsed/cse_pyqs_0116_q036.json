@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q36",
+  "question_seq": 116,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let A be a priority queue for maintaining a set of elements. Suppose A is implemented using a max-heap data structure. The operation Extract-Max(A) extracts and deletes the maximum element from A. The operation Insert(A, key) inserts a new element key in A. The properties of a max-heap are preserved at the end of each of these operations. When A contains n elements, which one of the following statements about the worst case running time of these two operations is TRUE? (a) Both Extract-Max(A) and Insert(A, key) run in O(1). (b) Both Extract-Max(A) and Insert(A, key) run in O(log(n)). (c) Extract-Max(A) runs in O(1) whereas Insert(A, key) runs in O(n). (d) Extract-Max(A) runs in O(1) whereas Insert(A, key) runs in O(log(n)).",
+  "options": null,
+  "answer": "B",
+  "solution": "To determine the worst-case running time of the operations Extract-Max(A) and Insert(A, key) in a max-heap data structure, let's analyze each operation step by step.\n\n### Extract-Max(A)\n1. **Finding the Maximum Element**: In a max-heap, the maximum element is always at the root of the tree. Therefore, finding the maximum element takes O(1) time.\n2. **甲iting the Maximum Element**: After finding the maximum element, we need to remove it from the root of the tree. This operation requires replacing the root with the last element in the heap and then sifting down to maintain the max-heap property. The height of a max-heap with n elements is O(log(n)). Therefore, sifting down takes O(log(n)) time.\n\nCombining these steps, the worst-case running time of Extract-Max(A) is O(log(n)).\n\n### Insert(A, key)\n1. **Adding a New Element**: To insert a new element key into the max-heap, we add it to the end of the heap and then shift it up to maintain the max-heap property. The height of the max-heap with n elements is O(log(n)). Therefore, shifting up takes O(log(n)) time.\n\nCombining these steps, the worst-case running time of Insert(A, key) is O(log(n)).\n\n### Conclusion\nBoth Extract-Max(A) and Insert(A, key) run in O(log(n)) in the worst case. Therefore, the correct answer is:\n\n\\boxed{B}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

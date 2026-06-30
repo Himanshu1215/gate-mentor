@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q13",
+  "question_seq": 19,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let A be the ${ \\bf \\nabla } ^ { 2 \\times 2 }$ real matrix having eigenvalues 1 and -1, with corresponding eigenvectors $\\left[ \\begin{array} { c } { { \\sqrt { 3 } } } \\\\ { { 2 } } \\\\ { { \\frac { 1 } { 2 } } } \\end{array} \\right]$ and $\\left\\lceil \\begin{array} { l } { \\frac { - 1 } { 2 } } \\\\ { \\frac { \\sqrt { 3 } } { 2 } } \\end{array} \\right\\rceil$ , respectively. If $A ^ { 2 0 2 1 } = { \\left[ \\begin{array} { l l } { a } & { b } \\\\ { c } & { d } \\end{array} \\right] }$ , then $a + b + c + d$ equals (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Use the property of eigenvalues and eigenvectors. Given that A has eigenvalues 1 and −1, the matrix $A ^ { 2 0 2 1 }$ will have eigenvalues $1 ^ { 2 0 2 1 } = 1$ and $( - 1 ) ^ { 2 0 2 1 } = - 1$\n\nStep 2: Find the powers of the matrix. Since A has eigenvalues 1 and −1, we conclude that:\n\nTherefore, $A ^ { 2 0 2 1 } = { \\left[ \\begin{array} { l l } { a } & { b } \\\\ { c } & { d } \\end{array} \\right] } = A .$\n\n $ A ^ { 2 0 2 1 } = A . $ \n\nStep 3: Calculate $a { \\bar { + } } b + c { \\bar { + } } d .$ . For A, the matrix is:\n\n $ A = \\left[ \\begin{array} { c c } { { \\frac { \\sqrt { 3 } } { 2 } } } & { { \\frac { - 1 } { 2 } } } \\\\ { { \\frac { 1 } { 2 } } } & { { \\frac { \\sqrt { 3 } } { 2 } } } \\end{array} \\right] . $ \n\nThus,\n\n $ a + b + c + d = { \\frac { \\sqrt { 3 } } { 2 } } + { \\frac { - 1 } { 2 } } + { \\frac { 1 } { 2 } } + { \\frac { \\sqrt { 3 } } { 2 } } = { \\sqrt { 3 } } . $ \n\nApproximating ${ \\sqrt { 3 } } \\approx 1 . 7 3 2$ , we round it to 1.70.\n\nThus, $a + b + c + d = 1 . 7 0$\nQuick Tip\n\nFor matrix powers with integer exponents, the eigenvalues raised to those powers can be used to determine the resulting matrix’s behavior."
+}

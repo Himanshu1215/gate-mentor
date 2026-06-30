@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q38",
+  "question_seq": 202,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The size of the physical address space of a processor is 232 bytes. The capacity of a cache memory unit is $2 ^ { 2 3 }$ bytes. The cache block size is 128 bytes. The cache memory unit can be built as a direct mapped cache or as a K-way set-associative cache, where K = 2 and L ∈ {1, 2, 3}. Let the length of the TAG field be M bits for the direct mapped cache, and N bits for the set-associative cache Which one of the following options is true?",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine the length of the TAG field for both the direct mapped cache and the set-associative cache, we need to follow these steps:\n\n1. **Calculate the number of cache blocks:**\n   - The total size of the cache memory unit is \\(2^{23}\\) bytes.\n   - The cache block size is 128 bytes.\n   - Therefore, the number of cache blocks is:\n     \\[\n     \\frac{2^{23}}{128} = \\frac{2^{23}}{2^7} = 2^{23-7} = 2^{16}\n     \\]\n\n2. **Determine the length of the TAG field for the direct mapped cache:**\n   - In a direct mapped cache, each cache block corresponds to a unique physical address.\n   - The total number of physical addresses is \\(2^{32}\\) (since the size of the physical address space is 232 bytes).\n   - The number of cache blocks is \\(2^{16}\\).\n   - The TAG field is used to point to the specific physical address within the set of cache blocks.\n   - The length of the TAG field \\(M\\) is the number of bits needed to represent \\(2^{32} / 2^{16} = 2^{16}\\) physical addresses.\n   - Therefore, \\(M\\) is:\n     \\[\n     \\log_2(2^{16}) = 16\n     \\]\n\n3. **Determine the length of the TAG field for the set-associative cache:**\n   - In a set-associative cache with \\(K = 2\\) and \\(L \\in \\{1, 2, 3\\}\\), each set contains \\(K = 2\\) blocks.\n   - The total number of sets is:\n     \\[\n     \\frac{2^{16}}{2} = 2^{15}\n     \\]\n   - The TAG field is used to point to the specific physical address within the set of cache blocks.\n   - The length of the TAG field \\(N\\) is the number of bits needed to represent \\(2^{16}\\) physical addresses.\n   - Therefore, \\(N\\) is:\n     \\[\n     \\log_2(2^{16}) = 16\n     \\]\n\n4. **Conclusion:**\n   - The length of the TAG field for both the direct mapped cache and the set-associative cache is 16 bits.\n   - Therefore, the correct option is:\n     \\[\n     \\boxed{A}\n     \\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

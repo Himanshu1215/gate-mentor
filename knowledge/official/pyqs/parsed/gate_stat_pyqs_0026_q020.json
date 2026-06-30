@@ -1,0 +1,21 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q20",
+  "question_seq": 26,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let ?? and ?? be two random variables with cumulative distribution functions $F _ { X } ( \\cdot )$ and $F _ { Y } ( \\cdot )$ respectively. Then which one of the following statements is NOT true?",
+  "options": {
+    "A": "There exist ?? and ?? such that $F _ { X } ( u ) = F _ { Y } ( u )$ for all $u \\in \\mathbb { R }$ , and $P ( X \\neq Y ) > 0$",
+    "B": "There exist ?? and ?? such that $F _ { X } ( u ) = F _ { Y } ( u )$ for all $u \\in \\mathbb { R }$ , and $P ( X = Y ) = 0$",
+    "C": "If ?? and ?? are independent then $X ^ { 2 }$ and $Y ^ { 2 }$ are also independent",
+    "D": "If $X ^ { 2 }$ and $Y ^ { 2 }$ are independent then ?? and ?? are also independent"
+  },
+  "answer": "B",
+  "solution": "To determine which statement is NOT true, let's analyze each option step by step.\n\n**Option (A): There exist \\(X\\) and \\(Y\\) such that \\(F_X(u) = F_Y(u)\\) for all \\(u \\in \\mathbb{R}\\), and \\(P(X \\neq Y) > 0\\)**\n\nIf \\(F_X(u) = F_Y(u)\\) for all \\(u \\in \\mathbb{R}\\), then \\(X\\) and \\(Y\\) have the same distribution. However, it is possible for two random variables to have the same distribution but not be equal with probability 1. For example, consider two independent random variables \\(X\\) and \\(Y\\) both uniformly distributed on the interval \\([0, 1]\\). Here, \\(F_X(u) = F_Y(u) = u\\) for \\(u \\in [0, 1]\\), but \\(P(X \\neq Y) = 1\\) because they are independent and continuous. Therefore, option (A) is true.\n\n**Option (B): There exist \\(X\\) and \\(Y\\) such that \\(F_X(u) = F_Y(u)\\) for all \\(u \\in \\mathbb{R}\\), and \\(P(X = Y) = 0\\)**\n\nIf \\(F_X(u) = F_Y(u)\\) for all \\(u \\in \\mathbb{R}\\), then \\(X\\) and \\(Y\\) have the same distribution. It is also possible for two random variables to have the same distribution and be equal with probability 0. For example, consider two dependent random variables \\(X\\) and \\(Y\\) such that \\(Y = X\\) with probability 0. Here, \\(F_X(u) = F_Y(u)\\) for all \\(u \\in \\mathbb{R}\\), but \\(P(X = Y) = 0\\). Therefore, option (B) is true.\n\n**Option (C): If \\(X\\) and \\(Y\\) are independent then \\(X^2\\) and \\(Y^2\\) are also independent**\n\nIf \\(X\\) and \\(Y\\) are independent, then for any functions \\(g\\) and \\(h\\), \\(g(X)\\) and \\(h(Y)\\) are also independent. In particular, if \\(g(x) = x^2\\) and \\(h(y) = y^2\\), then \\(X^2\\) and \\(Y^2\\) are independent. Therefore, option (C) is true.\n\n**Option (D): If \\(X^2\\) and \\(Y^2\\) are independent then \\(X\\) and \\(Y\\) are also independent**\n\nIf \\(X^2\\) and \\(Y^2\\) are independent, it does not necessarily mean that \\(X\\) and \\(Y\\) are independent. For example, consider \\(X\\) and \\(Y\\) such that \\(X = Y\\) if \\(X\\) and \\(Y\\) are both even or both odd, and \\(X = -Y\\) if \\(X\\) and \\(Y\\) are of different parity. Here, \\(X^2 = Y^2\\) always, so \\(X^2\\) and \\(Y^2\\) are independent, but \\(X\\) and \\(Y\\) are not independent. Therefore, option (D) is false.\n\nThe final answer is \\(\\boxed{D}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct",
+  "answer_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

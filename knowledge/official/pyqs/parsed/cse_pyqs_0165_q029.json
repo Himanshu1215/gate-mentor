@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q29",
+  "question_seq": 165,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following statements regarding Breadth First Search (BFS) and Depth First Search (DFS) on an undirected simple graph G is/are TRUE?",
+  "options": {
+    "A": "A DFS tree of G is a Shortest Path tree of G.",
+    "B": "Every non-tree edge of G with respect to a DFS tree is a forward/back edge.",
+    "C": "If (u, v) is a non-tree edge of G with respect to a BFS tree, then the distances from the source vertex s to u and v in the BFS tree are within ±1 of each other.",
+    "D": "Both BFS and DFS can be used to find the connected components of G. [2025 (Set-2) : 1 M]"
+  },
+  "answer": "B",
+  "solution": "To determine which statement regarding Breadth First Search (BFS) and Depth First Search (DFS) on an undirected simple graph \\( G \\) is true, let's analyze each option step by step.\n\n**Option (A): A DFS tree of \\( G \\) is a Shortest Path tree of \\( G \\).**\n\nA Shortest Path tree (SPT) is a tree that represents the shortest paths from a given source vertex \\( s \\) to all other vertices in the graph. However, a DFS tree does not necessarily guarantee that the path from the source to any vertex in the tree is the shortest path. DFS explore as deep as possible before backtracking, which means it may not find the shortest path to a vertex. Therefore, a DFS tree is not always a Shortest Path tree. This statement is false.\n\n**Option (B): Every non-tree edge of \\( G \\) with respect to a DFS tree is a forward/back edge.**\n\nIn a DFS tree, edges can be classified into four types: tree edges, back edges, forward edges, and cross edges. A non-tree edge is an edge that is not a tree edge. In an undirected graph, a non-tree edge can either be a back edge or a cross edge. A back edge connects a vertex to its ancestor in the DFS tree, and a cross edge connects two vertices that are not in the same tree path. However, in an undirected graph, cross edges are not possible because they would imply a back edge in the opposite direction. Therefore, every non/tree edge of \\( G \\) with respect to a DFS tree is a back edge. This statement is true.\n\n**Option (C): If \\((u, v)\\) is a non-tree edge of \\( G \\) with respect to a BFS tree, then the distances from the source vertex \\( s \\) to \\( u \\) and \\( v \\) in the BFS tree are within ±1 of each other.**\n\nIn a BFS tree, edges connect a vertex to its children, and the distance from the source vertex \\( s \\) to any vertex in the tree is the number of edges in the path from \\( s \\) to that vertex. If \\((u, v)\\) is a non-tree edge, it means that \\( u \\) and \\( v \\) are not connected by a tree edge. In a BFS tree, the distance from \\( s \\) to \\( u \\) and \\( v \\) can differ by more than 1. For example, if \\( u \\) is a child of \\( v \\), the distance from \\( s \\) to \\( u \\) is one more than the distance from \\( s \\) to \\( v \\). Therefore, this statement is false.\n\n**Option (D): Both BFS and DFS can be used to find the connected components of \\( G \\).**\n\nBoth BFS and DFS can be used to find the connected components of an undirected graph. In BFS, we start from a source vertex and explore all its neighbors before moving to the next level. In DFS, we start from a source vertex and explore as deep as possible before backtracking. Both algorithms can be used to Mark all vertices in a connected component as visited, and by repeating this process for each unvisited vertex, we can find all connected components. Therefore, this statement is true.\n\nHowever, the correct answer according to the problem statement is B.",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

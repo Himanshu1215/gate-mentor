@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q36",
+  "question_seq": 92,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the following is the closed form for the generating function of the sequence $\\{ a _ { n } \\} _ { n \\geq 0 }$ defined below? $ a _ { n } = { \\left\\{ \\begin{array} { l l } { n + 1 , } & { n { \\mathrm { ~ i s ~ o d d } } } \\\\ { 1 , } & { { \\mathrm { o t h e r w i s e } } } \\end{array} \\right. } $",
+  "options": {
+    "A": "$\\frac { x ( 1 + x ^ { 2 } ) } { ( 1 - x ^ { 2 } ) ^ { 2 } } + \\frac { 1 } { 1 - x }$",
+    "C": "$\\frac { 2 x } { ( 1 - x ^ { 2 } ) ^ { 2 } } + \\frac { 1 } { 1 - x }$",
+    "B": "$\\frac { x ( 3 - x ^ { 2 } ) } { ( 1 - x ^ { 2 } ) ^ { 2 } } + \\frac { 1 } { 1 - x }$ $ ( \\mathsf { d } ) \\ \\frac { x } { ( 1 - x ^ { 2 } ) ^ { 2 } } + \\frac { 1 } { 1 - x } $"
+  },
+  "answer": "A",
+  "solution": "To find the closed form for the generating function of the sequence \\(\\{ a_n \\}_{n \\geq 0}\\) defined by \\(a_n = \\begin{cases} n + 1 & \\text{if } n \\text{ is odd} \\\\ 1 & \\text{if } n \\text{ is even} \\end{cases}\\), we start by expressing the generating function \\(G(x)\\) as follows:\n\n\\[ G(x) = \\sum_{n=0}^{\\infty} a_n x^n. \\]\n\nWe can split this sum into two parts: one for the odd-indexed terms and one for the even-indexed terms. The even-indexed terms are \\(a_{2k} = 1\\) for \\(k = 0, 1, 2, \\ldots\\), and the odd-indexed terms are \\(a_{2k+1} = 2k + 2\\) for \\(k = 0, 1, 2, \\ldots\\). Therefore, we can write:\n\n\\[ G(x) = \\sum_{k=0}^{\\infty} a_{2k} x^{2k} + \\sum_{k=0}^{\\infty} a_{2k+1} x^{2k+1}. \\]\n\nSubstituting the values of \\(a_{2k}\\) and \\(a_{2k+1}\\), we get:\n\n\\[ G(x) = \\sum_{k=0}^{\\infty} 1 \\cdot x^{2k} + \\sum_{k=0}^{\\infty} (2k+2) x^{2k+1}. \\]\n\nThe first sum is a geometric series:\n\n\\[ \\sum_{k=0}^{\\infty} x^{2k} = \\frac{1}{1 - x^2}. \\]\n\nThe second sum can be simplified by factoring out the common term:\n\n\\[ \\sum_{k=0}^{\\infty} (2k+2) x^{2k+1} = 2 \\sum_{k=0}^{\\infty} (k+1) x^{2k+1}. \\]\n\nWe can use the formula for the sum of the series \\(\\sum_{k=0}^{\\infty} (k+1) y^k = \\frac{1}{(1-y)^2}\\) with \\(y = x^2\\):\n\n\\[ \\sum_{k=0}^{\\infty} (k+1) x^{2k+1} = x \\sum_{k=0}^{\\infty} (k+1) (x^2)^k = x \\cdot \\frac{1}{(1-x^2)^2} = \\frac{x}{(1-x^2)^2}. \\]\n\nTherefore, the second sum is:\n\n\\[ 2 \\sum_{k=0}^{\\infty} (k+1) x^{2k+1} = 2 \\cdot \\frac{x}{(1-x^2)^2} = \\frac{2x}{(1-x^2)^2}. \\]\n\nCombining both parts, we get:\n\n\\[ G(x) = \\frac{1}{1 - x^2} + \\frac{2",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

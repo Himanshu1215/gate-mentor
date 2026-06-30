@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q27",
+  "question_seq": 22,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { i } , i = 1 , 2 , \\ldots , n .$ be i.i.d. random variables from a normal distribution with mean 1 and variance 4. Let $S _ { n } = X _ { 1 } ^ { 2 } + X _ { 2 } ^ { 2 } + \\cdots + X _ { n } ^ { 2 }$ . If $\\mathbf { V a r } ( S _ { n } )$ denotes the variance of $S _ { n }$ , then the value of $ \\operatorname* { l i m } _ { n \\to \\infty } \\left( { \\frac { \\operatorname { V a r } ( S _ { n } ) } { n } } - \\left( { \\frac { E ( S _ { n } ) } { n } } \\right) ^ { 2 } \\right) \\quad { \\mathrm { ( i n ~ i n t e g e r ) ~ i s ~ e q u a l ~ t o } } . $",
+  "options": null,
+  "answer": null,
+  "solution": "We are given that $X _ { i } \\sim N ( 1 , 4 )$ , so $E ( X _ { i } ) = 1$ and $\\mathrm { V a r } ( X _ { i } ) = 4$ . The sum $S _ { n }$ is the sum of squares of $X _ { i } { } ^ { \\ ' } \\mathbf { s } .$ , so:\n\n $ S _ { n } = \\sum _ { i = 1 } ^ { n } X _ { i } ^ { 2 } . $ \n\nThe expectation of $X _ { i } ^ { 2 }$ is:\n\n $ E ( X _ { i } ^ { 2 } ) = \\operatorname { V a r } ( X _ { i } ) + ( E ( X _ { i } ) ) ^ { 2 } = 4 + 1 ^ { 2 } = 5 . $ \n\nThus, $E ( S _ { n } ) = n \\times 5 = 5 n$\n\nNow, $\\operatorname { V a r } ( S _ { n } )$ is given by:\n\n $ \\operatorname { V a r } ( S _ { n } ) = \\sum _ { i = 1 } ^ { n } \\operatorname { V a r } ( X _ { i } ^ { 2 } ) . $ \n\nSince $X _ { i } ^ { 2 }$ has a non-central chi-squared distribution, the variance of $X _ { i } ^ { 2 }$ is $2 \\times 2 \\times 5 = 2 0$ , so:\n\n $ \\operatorname { V a r } ( S _ { n } ) = n \\times 2 0 = 2 0 n . $ \n\nNow, compute the limit:\n\n $ \\operatorname* { l i m } _ { n \\to \\infty } \\left( { \\frac { \\operatorname { V a r } ( S _ { n } ) } { n } } - \\left( { \\frac { E ( S _ { n } ) } { n } } \\right) ^ { 2 } \\right) = \\operatorname* { l i m } _ { n \\to \\infty } \\left( { \\frac { 2 0 n } { n } } - \\left( { \\frac { 5 n } { n } } \\right) ^ { 2 } \\right) = 2 0 - 2 5 = - 5 . $ \n\nThus, the value is 23 .\nQuick Tip\n\nWhen dealing with sums of squares of normal random variables, use properties of variance and expectation, along with the fact that the variance of a chi-squared distribution is related to the number of degrees of freedom."
+}

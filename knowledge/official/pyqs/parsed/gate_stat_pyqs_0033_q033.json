@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q33",
+  "question_seq": 33,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let (??, ??) have a bivariate normal distribution with $E ( X ) = E ( Y ) = 0$ Denote the conditional variance of ?? given ?? = 1 by $V a r ( X | Y = 1 )$ and the conditional variance of ?? given $X = 2$ by $V a r ( Y | X = 2 )$ If ${ \\frac { E ( Y | X = 2 ) } { E ( X | Y = 1 ) } } = 8$ then $\\frac { V a r ( Y | X { = } 2 ) } { V a r ( X | Y { = } 1 ) }$ equals 一",
+  "options": null,
+  "answer": null,
+  "solution": "Given that \\((X, Y)\\) have a bivariate normal distribution with \\(E(X) = E(Y) = 0\\), we need to find the ratio \\(\\frac{Var(Y | X = 2)}{Var(X | Y = 1)}\\) given that \\(\\frac{E(Y | X = 2)}{E(X | Y = 1)} = 8\\).\n\nFor a bivariate normal distribution, the conditional expectation of \\(X\\) given \\(Y = y\\) is:\n\\[ E(X | Y = y) = \\rho \\frac{\\sigma_X}{\\sigma_Y} y \\]\nSimilarly, the conditional expectation of \\(Y\\) given \\(X = x\\) is:\n\\[ E(Y | X = x) = \\rho \\frac{\\sigma_Y}{\\sigma_X} x \\]\n\nGiven \\(\\frac{E(Y | X = 2)}{E(X | Y = 1)} = 8\\), we substitute the expressions for the conditional expectations:\n\\[ \\frac{\\rho \\frac{\\sigma_Y}{\\sigma_X} \\cdot 2}{\\rho \\frac{\\sigma_X}{\\sigma_Y} \\cdot 1} = 8 \\]\nSimplifying the left-hand side, we get:\n\\[ \\frac{2 \\sigma_Y^2}{\\sigma_X^2} = 8 \\]\nSolving for \\(\\sigma_Y^2\\), we find:\n\\[ \\sigma_Y^2 = 4 \\sigma_X^2 \\]\n\nNext, we use the formula for the conditional variance of \\(X\\) given \\(Y = y\\):\n\\[ Var(X | Y = y) = \\sigma_X^2 (1 - \\rho^2) \\]\nSimilarly, the conditional variance of \\(Y\\) given \\(X = x\\) is:\n\\[ Var(Y | X = x) = \\sigma_Y^2 (1 - \\rho^2) \\]\n\nWe need to find the ratio \\(\\frac{Var(Y | X = 2)}{Var(X | Y = 1)}\\):\n\\[ \\frac{Var(Y | X = 2)}{Var(X | Y = 1)} = \\frac{\\sigma_Y^2 (1 - \\rho^2)}{\\sigma_X^2 (1 - \\rho^2)} = \\frac{\\sigma_Y^2}{\\sigma_X^2} \\]\nSince we already found that \\(\\sigma_Y^2 = 4 \\sigma_X^2\\), we substitute this into the ratio:\n\\[ \\frac{\\sigma_Y^2}{\\sigma_X^2} = 4 \\]\n\nTherefore, the ratio \\(\\frac{Var(Y | X = 2)}{Var(X | Y = 1)}\\) is \\(\\boxed{4}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

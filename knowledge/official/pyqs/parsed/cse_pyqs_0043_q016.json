@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q16",
+  "question_seq": 43,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "If there are input lines and n output lines for a decoder that is used to uniquely address a byte addressable 1 KB RAM, then the minimum value of $m + n$ is",
+  "options": null,
+  "answer": "D",
+  "solution": "To determine the minimum value of \\( m + n \\) for a decoder that uniquely addresses a byte addressable 1 KB RAM, we need to understand the relationship between the number of input lines \\( m \\), the number of output lines \\( n \\), and the total number of unique addresses.\n\n1. **Determine the total number of unique addresses:**\n   - A 1 KB RAM has \\( 1024 \\) addresses (since \\( 1 \\text{ KB} = 1024 \\text{ bytes} \\)).\n\n2. **Understand the role of the decoder:**\n   - A decoder with \\( m \\) input lines can generate \\( 2^m \\) unique combinations of output lines.\n   - To uniquely address all 1024 addresses, we need \\( 2^m \\geq 1024 \\).\n\n3. **Find the minimum value of \\( m \\):**\n   - We solve the inequality \\( 2^m \\geq 1024 \\).\n   - We know that \\( 1024 = 2^{10} \\).\n   - Therefore, \\( m \\geq 10 \\).\n   - The minimum value of \\( m \\) is \\( 10 \\).\n\n4. **Determine the minimum value of \\( n \\):**\n   - Since each address is uniquely addressable by a combination of output lines, and we have \\( 2^m \\) unique combinations, we need \\( n = 2^m \\).\n   - For \\( m = 10 \\), \\( n = 2^{10} = 1024 \\).\n\n5. **Calculate the minimum value of \\( m + n \\):**\n   - \\( m + n = 10 + 1024 = 1034 \\).\n\nThus, the minimum value of \\( m + n \\) is \\(\\boxed{1034}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

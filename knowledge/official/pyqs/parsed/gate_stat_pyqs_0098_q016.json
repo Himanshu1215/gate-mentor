@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q16",
+  "question_seq": 98,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "For $k = 1 , 2 , \\ldots , 1 0$ , let the probability density function of the random variable $X _ { k }$ be $ f _ { X _ { k } } ( x ) = \\left\\{ \\frac { e ^ { - \\frac { x } { k } } } { k } , ~ x > 0 \\right. $ Then $\\textstyle E ( \\sum _ { k = 1 } ^ { 1 0 } k X _ { k } )$ is equal to ...",
+  "options": null,
+  "answer": null,
+  "solution": "To find the expected value \\( E \\left( \\sum_{k=1}^{10} k X_k \\right) \\), we can use the linearity of expectation. The linearity of expectation states that for any random variables \\( Y_1, Y_2, \\ldots, Y_n \\),\n\n\\[ E(Y_1 + Y_2 + \\cdots + Y_n) = E(Y_1) + E(Y_2) + \\cdots + E(Y_n). \\]\n\nIn this problem, we have \\( Y_k = k X_k \\). Therefore,\n\n\\[ E \\left( \\sum_{k=1}^{10} k X_k \\right) = \\sum_{k=1}^{10} E(k X_k). \\]\n\nNext, we use the property of expectation that for any constant \\( c \\) and random variable \\( X \\),\n\n\\[ E(c X) = c E(X). \\]\n\nSo,\n\n\\[ E(k X_k) = k E(X_k). \\]\n\nNow, we need to find \\( E(X_k) \\). The probability density function of \\( X_k \\) is given by\n\n\\[ f_{X_k}(x) = \\frac{e^{-\\frac{x}{k}}}{k} \\quad \\text{for} \\quad x > 0. \\]\n\nThe expected value \\( E(X_k) \\) is calculated as\n\n\\[ E(X_k) = \\int_{0}^{\\infty} x f_{X_k}(x) \\, dx = \\int_{0}^{\\infty} x \\cdot \\frac{e^{-\\frac{x}{k}}}{k} \\, dx. \\]\n\nWe can factor out the constant \\( \\frac{1}{k} \\):\n\n\\[ E(X_k) = \\frac{1}{k} \\int_{0}^{\\infty} x e^{-\\frac{x}{k}} \\, dx. \\]\n\nTo evaluate the integral, we use the substitution \\( u = \\frac{x}{k} \\). Then \\( du = \\frac{1}{k} dx \\) and \\( x = ku \\). When \\( x = 0 \\), \\( u = 0 \\), and when \\( x \\to \\infty \\), \\( u \\to \\infty \\). So the integral becomes\n\n\\[ \\int_{0}^{\\infty} x e^{-\\frac{x}{k}} \\, dx = \\int_{0}^{\\infty} (ku) e^{-u} \\cdot k \\, du = k^2 \\int_{0}^{\\infty} u e^{-u} \\, du. \\]\n\nThe integral \\( \\int_{0}^{\\infty} u e^{-u} \\, du \\) is a known integral and equals \\( \\Gamma(2) = 1! = 1 \\). Therefore,\n\n\\[ \\int_{0}^{\\infty} u e^{-u} \\, du = 1. \\]\n\nSo,\n\n\\[ \\int_{0}^{\\infty} x e^{-\\frac{x}{k}} \\, dx = k^2 \\cdot 1 = k^2. \\]\n\nThus,\n\n\\[ E(X_k) = \\frac{1}{k} \\cdot k^2 = k. \\]\n\nNow",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

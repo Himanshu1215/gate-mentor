@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q2",
+  "question_seq": 10,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let be an undirected complete graph, on vertices, where $n > 2 .$ Then, the number of different Hamiltonian cycles in is equal to (a) ! (b) $( n - 1 ) !$ (c) 1 (d) $\\frac { ( n - 1 ) ! } { 2 }$",
+  "options": null,
+  "answer": "D",
+  "solution": "To determine the number of different Hamiltonian cycles in a complete graph \\( K_n \\) with \\( n \\) vertices, we need to follow these steps:\n\n1. **Understand the structure of a Hamiltonian cycle**: A Hamiltonian cycle is a cycle that visits each vertex exactly once and returns to the starting vertex. In a complete graph \\( K_n \\), every pair of vertices is connected by an edge, so there are many possible Hamiltonian cycles.\n\n2. **Count the total number of permutations of the vertices**: If we consider all possible permutations of the \\( n \\) vertices, there are \\( n! \\) (n factorial) such permutations. However, not all permutations correspond to a Hamiltonian cycle because a Hamiltonian cycle must return to the starting vertex.\n\n3. **Account for the cyclic nature of the cycle**: Since a Hamiltonian cycle is cyclic, any rotation of a given cycle is considered the same cycle. For example, the cycle \\( (1, 2, 3, \\ldots, n, 1) \\) is the same as \\( (2, 3, \\ldots, n, 1, 2) \\). Therefore, we need to divide by \\( n \\) to account for these rotations.\n\n4. **Account for the direction of the cycle**: A Hamiltonian cycle can be traversed in two directions (clockwise or counterclockwise), so we need to divide by 2 to account for these two directions.\n\nCombining these steps, the number of different Hamiltonian cycles in a complete graph \\( K_n \\) is given by:\n\\[\n\\frac{n!}{n \\cdot 2} = \\frac{(n-1)!}{2}\n\\]\n\nThus, the correct answer is \\(\\boxed{\\frac{(n-1)!}{2}}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q20",
+  "question_seq": 102,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , \\dots , X _ { n }$ be a random sample from normal distribution with mean $\\mu$ and variance 1. Let Φ be the cumulative distribution function of the standard normal distribution. Given $\\Phi ( 1 . 9 6 ) = 0 . 9 7 5$ , the minimum sample size required such that the length of the 95% confidence interval for $\\mu$ does NOT exceed 2 is ...",
+  "options": null,
+  "answer": null,
+  "solution": "To determine the minimum sample size \\( n \\) required such that the length of the 95% confidence interval for \\(\\mu\\) does not exceed 2, we start by recalling the formula for the length of a confidence interval for the mean of a normal distribution with known variance. The 95% confidence interval for \\(\\mu\\) is given by:\n\n\\[\n\\left( \\bar{X} - z_{\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}}, \\bar{X} + z_{\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}} \\right)\n\\]\n\nwhere \\(\\bar{X}\\) is the sample mean, \\(z_{\\alpha/2}\\) is the critical value from the standard normal distribution corresponding to a two-tailed test with significance level \\(\\alpha\\), and \\(\\sigma\\) is the population standard deviation. For a 95% confidence interval, \\(\\alpha = 0.05\\), so \\(\\alpha/2 = 0.025\\). Given that \\(\\Phi(1.96) = 0.975\\), we have \\(z_{0.025} = 1.96\\). The population standard deviation \\(\\sigma\\) is given as 1. Therefore, the length of the confidence interval is:\n\n\\[\n2 \\cdot z_{\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}} = 2 \\cdot 1.96 \\cdot \\frac{1}{\\sqrt{n}} = \\frac{3.92}{\\sqrt{n}}\n\\]\n\nWe want this length to be no more than 2, so we set up the inequality:\n\n\\[\n\\frac{3.92}{\\sqrt{n}} \\leq 2\n\\]\n\nTo solve for \\( n \\), we first isolate \\(\\sqrt{n}\\) by multiplying both sides of the inequality by \\(\\sqrt{n}\\) and then dividing both sides by 2:\n\n\\[\n3.92 \\leq 2\\sqrt{n} \\implies \\frac{3.92}{2} \\leq \\sqrt{n} \\implies 1.96 \\leq \\sqrt{n}\n\\]\n\nNext, we square both sides of the inequality to solve for \\( n \\):\n\n\\[\n1.96^2 \\leq n \\implies 3.8416 \\leq n\n\\]\n\nSince \\( n \\) must be an integer, we round up to the next whole number. Therefore, the minimum sample size required is:\n\n\\[\nn = 4\n\\]\n\nThe final answer is:\n\n\\[\n\\boxed{4}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

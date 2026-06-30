@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q1",
+  "question_seq": 74,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The fishermen, the flood victims owed their lives, were rewarded by the government. (A) whom (B) to which (C) to whom (D) that",
+  "options": null,
+  "answer": null,
+  "solution": "To determine the correct answer to the question \"The fishermen, the flood victims owed their lives, were rewarded by the government. (A) whom (B) to which (C) to whom (D) that,\" we need to analyze the grammatical structure of the sentence.\n\nThe sentence is: \"The fishermen, the flood victims owed their lives, were rewarded by the government.\"\n\nHere, \"the fishermen\" and \"the flood victims\" are the subjects of the sentence, and \" were rewarded by the government\" is the verb phrase. The phrase \"to whom\" is a preposition that indicates the object of the verb \" were rewarded.\"\n\nLet's break it down step by step:\n\n1. Identify the subject of the sentence: \"The fishermen, the flood victims.\"\n2. Identify the verb phrase: \" were rewarded by the government.\"\n3. Determine the object of the verb \" were rewarded\": \"to whom.\"\n\nTherefore, the correct answer is \"to whom.\"\n\nThe final answer is: \\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

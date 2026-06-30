@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q23",
+  "question_seq": 105,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let f be a continuous and positive real valued function on [0, 1]. Then $\\int _ { 0 } ^ { \\pi } f ( \\sin x )$ cos x dx is equal to ..",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the integral \\(\\int_{0}^{\\pi} f(\\sin x) \\cos x \\, dx\\), we can use a substitution to simplify the integrand. Let's set \\(u = \\sin x\\). Then, the differential \\(du\\) can be found by differentiating \\(u\\) with respect to \\(x\\):\n\n\\[\ndu = \\cos x \\, dx\n\\]\n\nNow, we need to change the limits of integration according to the substitution. When \\(x = 0\\), we have:\n\n\\[\nu = \\sin 0 = 0\n\\]\n\nWhen \\(x = \\pi\\), we have:\n\n\\[\nu = \\sin \\pi = 0\n\\]\n\nHowever, we need to be careful because the function \\(\\cos x\\) changes sign at \\(x = \\pi/2\\). Therefore, we can split the integral into two parts:\n\n\\[\n\\int_{0}^{\\pi} f(\\sin x) \\cos x \\, dx = \\int_{0}^{\\pi/2} f(\\sin x) \\cos x \\, dx + \\int_{\\pi/2}^{\\pi} f(\\sin x) \\cos x \\, dx\n\\]\n\nFor the first integral, when \\(x\\) goes from \\(0\\) to \\(\\pi/2\\), \\(u\\) goes from \\(0\\) to \\(1\\). For the second integral, when \\(x\\) goes from \\(\\pi/2\\) to \\(\\pi\\), \\(u\\) goes from \\(1\\) to \\(0\\). Also, \\(\\cos x\\) is positive in the first interval and negative in the second interval. Therefore, we can rewrite the integrals as:\n\n\\[\n\\int_{0}^{\\pi/2} f(\\sin x) \\cos x \\, dx = \\int_{0}^{1} f(u) \\, du\n\\]\n\\[\n\\int_{\\pi/2}^{\\pi} f(\\sin x) \\cos x \\, dx = \\int_{1}^{0} f(u) (-du) = \\int_{0}^{1} f(u) \\, du\n\\]\n\nAdding these two integrals together, we get:\n\n\\[\n\\int_{0}^{\\pi} f(\\sin x) \\cos x \\, dx = \\int_{0}^{1} f(u) \\, du + \\int_{0}^{1} f(u) \\, du = 2 \\int_{0}^{1} f(u) \\, du\n\\]\n\nSince \\(u\\) is just a placeholder, we can replace it with \\(x\\) in the final answer:\n\n\\[\n\\int_{0}^{\\pi} f(\\sin x) \\cos x \\, dx = 2 \\int_{0}^{1} f(x) \\, dx\n\\]\n\nTherefore, the final answer is:\n\n\\[\n\\boxed{2 \\int_{0}^{1} f(x) \\, dx}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

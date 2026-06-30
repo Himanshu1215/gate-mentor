@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q11",
+  "question_seq": 6,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $f : [ 0 , \\infty ) \\to [ 0 , \\infty )$ be a differentiable function with $f ( x ) > 0$ for all $x > 0 .$ , and $f ( 0 ) = 0$ . Further, f satisfies $ ( f ( x ) ) ^ { 2 } = \\int _ { 0 } ^ { x } { \\bigl ( } ( f ( t ) ) ^ { 2 } + f ( t ) { \\bigr ) } \\ d t , x > 0 . $ Then which one of the following options is correct?",
+  "options": {
+    "A": "$0 < f ( 2 ) \\leq 1$",
+    "B": "$1 < f ( 2 ) \\le 2$",
+    "C": "$2 < f ( 2 ) \\le 3$",
+    "D": "$3 < f ( 2 ) \\le 4$"
+  },
+  "answer": "B",
+  "solution": "Step 1: We start with the given functional equation\n\n $ ( f ( x ) ) ^ { 2 } = \\int _ { 0 } ^ { x } { \\bigl ( } ( f ( t ) ) ^ { 2 } + f ( t ) { \\bigr ) } \\ d t . $ \n\nDifferentiate both sides with respect to x:\n\n $ 2 f ( x ) \\cdot f ^ { \\prime } ( x ) = ( f ( x ) ) ^ { 2 } + f ( x ) . $ \n\nSimplifying, we get\n\n $ 2 f ( x ) \\cdot f ^ { \\prime } ( x ) = f ( x ) \\left( f ( x ) + 1 \\right) . $ \n\nDividing both sides by $f ( x )$ (since $f ( x ) > 0$ for $x > 0 )$ :\n\n $ 2 f ^ { \\prime } ( x ) = f ( x ) + 1 . $ \n\nThus,\n\n $ f ^ { \\prime } ( x ) = { \\frac { f ( x ) + 1 } { 2 } } . $ \n\nStep 2: To solve this differential equation, we separate the variables:\n\n $ { \\frac { f ^ { \\prime } ( x ) } { f ( x ) + 1 } } = { \\frac { 1 } { 2 } } . $ \n\nIntegrating both sides:\n\n $ \\int { \\frac { 1 } { f ( x ) + 1 } } d f ( x ) = { \\frac { 1 } { 2 } } \\int d x . $ \n\nThis gives\n\n $ \\ln | f ( x ) + 1 | = { \\frac { x } { 2 } } + C . $ \n\nExponentiating both sides:\n\n $ f ( x ) + 1 = e ^ { \\frac { x } { 2 } + C } = A e ^ { \\frac { x } { 2 } } , $ \n\nwhere $A = e ^ { C }$ . Thus,\n\n $ f ( x ) = A e ^ { \\frac { x } { 2 } } - 1 . $ \n\nStep 3: Use the initial condition $f ( 0 ) = 0$ to find A. Substitute $x = 0$ into the solution:\n\n $ f ( 0 ) = A e ^ { 0 } - 1 = A - 1 = 0 , $ \n\nso $A = 1$ . Therefore,\n\n $ f ( x ) = e ^ { \\frac { x } { 2 } } - 1 . $ \n\nStep 4: Now, evaluate $f ( 2 )$ :\n\n $ f ( 2 ) = e ^ { \\frac { 2 } { 2 } } - 1 = e - 1 . $ \n\nSince $e \\approx 2 . 7 1 8$ , we have\n\n $ f ( 2 ) \\approx 2 . 7 1 8 - 1 = 1 . 7 1 8 . $ \n\nThus, $1 < f ( 2 ) \\le 2$ , which corresponds to option (B).\nQuick Tip\n\nTo solve differential equations of the form $\\begin{array} { r } { f ^ { \\prime } ( x ) = \\frac { f ( x ) + 1 } { 2 } } \\end{array}$ , try separating the variables and using integration. Also, use initial conditions to find the constant of integration."
+}

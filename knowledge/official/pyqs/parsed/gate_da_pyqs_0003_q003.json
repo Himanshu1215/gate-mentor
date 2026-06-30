@@ -3,15 +3,13 @@
   "exam": "GATE DA",
   "question_id": "Q3",
   "question_seq": 3,
-  "question_type": "MCQ",
+  "question_type": "NAT",
   "marks": null,
   "difficulty": null,
   "concept_id": "GENERAL",
-  "question_text": "Let ln (x 1)cosx Lim Sol. (1/2) 1 cos lim Putting x → 0 in the above part we get ( )",
-  "options": {
-    "C": "os from Thus, using L-hospital Rule there ( ) lim f n g n So, differentiating it we get-",
-    "D": "ATA SCIENCE & ARTIFICIAL INTELLIGENCE sin"
-  },
+  "question_text": "Let $\\operatorname { L i m } _ { \\mathbf { x } \\to 0 } { \\frac { \\ln \\left( ( \\mathbf { x } ^ { 2 } + 1 ) \\cos \\mathbf { x } \\right) } { \\mathbf { x } ^ { 2 } } }$ Sol. (1/2) $\\operatorname * { l i m } _ { x \\to 0 } { \\frac { l n \\left[ { \\Big ( } x ^ { 2 } + 1 { \\Big ) } \\cos x \\right] } { x ^ { 2 } } }$ Putting $\\mathbf x \\to 0$ in the above part we get $\\frac { l n \\big \\{ ( 1 ) \\times \\cos x \\big \\} } { 0 } { = } \\frac { 0 } { 0 } f r o m$ Thus, using L-hospital Rule there $\\operatorname* { l i m } _ { x \\to a } { \\frac { f ( n ) } { g \\left( n \\right) } } { = } \\operatorname* { l i m } _ { x \\to a } { \\frac { f ^ { * } ( n ) } { g ^ { * } ( n ) } }$ So, differentiating it we get- $ \\frac { 1 } { \\cdot { \\frac { \\left( x ^ { 2 } + 1 \\right) \\cdot \\cos x } { 2 x } } ^ { \\left[ \\cos x \\cdot 2 x + \\left( x ^ { 2 } + 1 \\right) - \\sin x \\right] } } $ $ \\Rightarrow { \\frac { { \\frac { 2 x } { x ^ { 2 } + 1 } } - { \\frac { \\sin x } { \\cos x } } } { 2 x } } $ $ \\Rightarrow { \\frac { 1 } { x ^ { 2 } + 1 } } - { \\frac { \\sin x } { 2 x \\cdot \\cos x } } $ Thus, $\\operatorname* { l i m } _ { x \\to 0 } { \\frac { l n \\left\\{ \\left( x ^ { 2 } + 1 \\right) \\cos x \\right\\} } { x ^ { 2 } } } = \\operatorname* { l i m } _ { x \\to 0 } \\left\\{ { \\frac { 1 } { x ^ { 2 } + 1 } } - \\frac { \\sin x } { 2 x \\cos \\right\\} }$ $ 1 - { \\frac { 1 } { 2 } } \\operatorname* { l i m } _ { x \\to 0 } { \\frac { \\sin x } { x } } \\times { \\frac { 1 } { \\cos x } } $ $ 1 - \\frac { 1 } { 2 } { \\times } 1 { \\times } 1 $ $ 1 - \\frac { 1 } { 2 } = \\frac { 1 } { 2 } $ [NAT]",
+  "options": null,
   "answer": null,
-  "solution": null
+  "solution": "To solve the limit \\(\\operatorname { L i m } _ { \\mathbf { x } \\to 0 } { \\frac { \\ln \\left( ( \\mathbf { x } ^ { 2 } + 1 ) \\cos \\mathbf { x } \\right) } { \\mathbf { x } ^ { 2 } } }\\), we start by recognizing that the expression evaluates to an indeterminate form \\(\\frac{0}{0}\\) when \\(x \\to 0\\). Therefore, we can apply L'Hôpital's Rule, which states that if \\(\\lim_{x \\to a} \\frac{f(x)}{g(x)}\\) is of the form \\(\\frac{0}{0}\\) or \\(\\frac{\\infty}{\\infty}\\), then \\(\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\lim_{x \\to a} \\frac{f'(x)}{g'(x)}\\).\n\nHere, \\(f(x) = \\ln((x^2 + 1) \\cos x)\\) and \\(g(x) = x^2\\). We need to find the derivatives of \\(f(x)\\) and \\(g(x)\\).\n\nFirst, let's find \\(f'(x)\\):\n\\[ f(x) = \\ln((x^2 + 1) \\cos x) \\]\nUsing the chain rule, we get:\n\\[ f'(x) = \\frac{1}{(x^2 + 1) \\cos x} \\cdot \\frac{d}{dx}[(x^2 + 1) \\cos x] \\]\nThe derivative of \\((x^2 + 1) \\cos x\\) is found using the product rule:\n\\[ \\frac{d}{dx}[(x^2 + 1) \\cos x] = (x^2 + 1) \\cdot (-\\sin x) + \\cos x \\cdot 2x = - (x^2 + 1) \\sin x + 2x \\cos x \\]\nSo,\n\\[ f'(x) = \\frac{- (x^2 + 1) \\sin x + 2x \\cos x}{(x^2 + 1) \\cos x} = \\frac{- (x^2 + 1) \\sin x}{(x^2 + 1) \\cos x} + \\frac{2x \\cos x}{(x^2 + 1) \\cos x} = -\\frac{\\sin x}{\\cos x} + \\frac{2x}{x^2 + 1} = -\\tan x + \\frac{2x}{x^2 + 1} \\]\n\nNext, let's find \\(g'(x)\\):\n\\[ g(x) = x^2 \\]\n\\[ g'(x) = 2x \\]\n\nNow, we apply L'Hôpital's Rule:\n\\[ \\operatorname { L i m } _ { x \\to 0 } { \\frac { \\ln \\left( ( \\mathbf { x } ^ { 2 } + 1 ) \\cos \\mathbf { x } \\right) } { \\mathbf { x } ^ { 2 } } } = \\operatorname { L i",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
 }

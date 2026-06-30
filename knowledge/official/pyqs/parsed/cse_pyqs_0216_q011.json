@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q11",
+  "question_seq": 216,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "For two different persons x and y, the predicate M(x, y) denotes that x knows y. Consider the following statement. There is a person who does not know anyone else, but that person is known by everyone else. Which one of the following expressions represents the above statement?",
+  "options": {
+    "A": "(∃y) $\\forall x ) \\left( ( x \\neq y ) \\right) \\to \\left( M ( x , y ) \\land \\neg M ( y , x ) \\right)$",
+    "B": "$\\left( \\forall y \\right) \\left( \\exists x \\right) \\left( \\left( x \\neq y \\right) \\right) \\to \\left( M ( x , y ) \\land \\lnot M ( y , x ) \\right)$",
+    "C": "$\\left( \\exists y \\right) ( \\exists x ) \\left( \\left( x \\neq y \\right) \\right) \\to \\left( M ( x , y ) \\land \\neg M ( y , x ) \\right)$",
+    "D": "$( \\forall y ) ( \\forall x ) ( ( x \\neq y ) ) ( M ( x , y ) \\land \\lnot M ( y , x ) )$"
+  },
+  "answer": "A",
+  "solution": "To determine which expression correctly represents the statement \"There is a person who does not know anyone else, but that person is known by everyone else,\" let's break down the statement and analyze each option step by step.\n\n1. **Understanding the statement:**\n   - There exists a person \\( y \\) who does not know anyone else.\n   - This person \\( y \\) is known by everyone else.\n\n2. **Expressing the statement in logical terms:**\n   - \"There exists a person \\( y \\) who does not know anyone else\" can be written as:\n     \\[\n     \\exists y \\left( \\forall x (x \\neq y) \\to \\neg M(x, y) \\right)\n     \\]\n     This means there exists a \\( y \\) such that for all \\( x \\) (where \\( x \\neq y \\)), \\( x \\) does not know \\( y \\).\n\n   - \"This person \\( y \\) is known by everyone else\" can be written as:\n     \\[\n     \\forall x (x \\neq y) \\to M(y, x)\n     \\]\n     This means for all \\( x \\) (where \\( x \\neq y \\)), \\( y \\) knows \\( x \\).\n\n3. **Combining the two parts:**\n   - We need to combine these two parts into a single logical expression. The correct way to do this is to use the existential quantifier for the first part and the universal quantifier for the second part:\n     \\[\n     \\exists y \\left( \\forall x (x \\neq y) \\to \\neg M(x, y) \\right) \\land \\forall x (x \\neq y) \\to M(y, x)\n     \\]\n\n4. **Analyzing the given options:**\n   - **Option (A):**\n     \\[\n     (\\exists y) \\forall x \\left( (x \\neq y) \\to (M(x, y) \\land \\neg M(y, x)) \\right)\n     \\]\n     This option states that there exists a \\( y \\) such that for all \\( x \\) (where \\( x \\neq y \\)), \\( x \\) knows \\( y \\) and \\( y \\) does not know \\( x \\). This is not correct because it implies that \\( y \\) knows \\( x \\) and \\( x \\) knows \\( y \\), which contradicts the statement.\n\n   - **Option (B):**\n     \\[\n     \\left( \\forall y \\right) \\left( \\exists x \\right) \\left( (x \\neq y) \\to (M(x, y) \\land \\neg M(y, x)) \\right)\n     \\]\n     This option states that for all \\( y \\), there exists an \\( x \\) (where \\( x \\neq y \\)) such that \\( x \\) knows \\( y \\) and \\( y \\) does not know \\( x \\). This is not correct because it implies that there is always someone who knows \\( y \\) and \\( y \\) does not know that person, which does not necessarily mean there is a person who knows everyone else.\n\n   - **Option (C):**\n     \\[\n     \\left( \\exists y \\right) ( \\exists x ) \\left",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

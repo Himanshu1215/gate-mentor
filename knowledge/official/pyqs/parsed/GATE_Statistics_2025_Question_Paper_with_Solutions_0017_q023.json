@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q23",
+  "question_seq": 17,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $( X , Y ) ^ { T }$ follow a bivariate normal distribution with $ E ( X ) = 3 , \\quad E ( Y ) = 4 , \\quad \\mathrm { { V a r } } ( X ) = 2 5 , \\quad \\mathrm { { V a r } } ( Y ) = 1 0 0 , \\quad \\mathrm { { C o v } } ( X , Y ) = 5 0 \\rho , $ where $\\rho \\in ( - 1 , 1 )$ . If $E ( Y | X = 5 ) = 4 . 3 2$ , then $\\rho$ equals:",
+  "options": {
+    "A": "0.08",
+    "B": "0.8",
+    "C": "0.32",
+    "D": "0.5"
+  },
+  "answer": "A",
+  "solution": "For a bivariate normal distribution, the conditional expectation of $Y$ given $X = x$ is given by the formula:\n\n $ E ( Y | X = x ) = E ( Y ) + { \\frac { \\mathbf { C o v } ( X , Y ) } { \\mathbf { V a r } ( X ) } } ( x - E ( X ) ) . $ \n\nSubstitute the given values:\n\n $ E ( Y | X = x ) = 4 + { \\frac { 5 0 \\rho } { 2 5 } } ( x - 3 ) . $ \n\nGiven that $E ( Y | X = 5 ) = 4 . 3 2$ , we substitute $X = 5$ into the equation:\n\n $ 4 . 3 2 = 4 + { \\frac { 5 0 \\rho } { 2 5 } } ( 5 - 3 ) . $ \n\nSimplifying the equation:\n\n $ 4 . 3 2 = 4 + 4 \\rho . $ \n\nSolving for $\\rho \\colon$\n\n $ 4 . 3 2 - 4 = 4 \\rho \\quad \\Rightarrow \\quad 0 . 3 2 = 4 \\rho \\quad \\Rightarrow \\quad \\rho = \\frac { 0 . 3 2 } { 4 } = 0 . 0 8 . $ \n\nThus, $\\rho = 0 . 0 8$\nQuick Tip\n\nFor conditional expectation in bivariate normal distributions, use the formula:\n\n $ E ( Y | X = x ) = E ( Y ) + { \\frac { \\mathbf { C o v } ( X , Y ) } { \\mathbf { V a r } ( X ) } } ( x - E ( X ) ) . $"
+}

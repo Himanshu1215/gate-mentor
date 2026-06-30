@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q16",
+  "question_seq": 22,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let $A = { \\binom { a _ { 1 } } { b _ { 1 } } } \\quad { \\begin{array} { l l } { a _ { 2 } } & { a _ { 3 } } \\\\ { b _ { 2 } } & { b _ { 3 } } \\end{array} }$ be a $2 \\times 3$ real matrix, where $( a _ { 1 } , a _ { 2 } , a _ { 3 } ) \\neq ( 0 , 0 , 0 )$ and $( b _ { 1 } , b _ { 2 } , b _ { 3 } ) \\neq ( 0 , 0 , 0 )$ . Assume that the rank of ?? is 1. Define the subspaces $W = \\left\\{ \\pmb { x } = \\left[ \\pmb { x } _ { 1 } \\right] \\in \\mathbb { R } ^ { 3 } \\colon A \\pmb { x } = \\pmb { 0 } \\right\\} ,$ $ W _ { 1 } = \\left\\{ x = { \\left[ \\begin{array} { l } { \\lambda _ { 1 } } \\\\ { \\lambda _ { 2 } } \\\\ { \\lambda _ { 3 } } \\end{array} \\right] } \\ \\in \\ \\mathbb { R } ^ { 3 } \\colon a _ { 1 } x _ { 1 } + a _ { 2 } x _ { 2 } + a _ { 3 } x _ { 3 } = 0 \\right\\} { \\mathrm { ~ a n d ~ } } $ $ W _ { 2 } = \\left\\{ \\pmb { x } = \\left[ \\begin{array} { c } { x _ { 1 } } \\\\ { x _ { 2 } } \\\\ { x _ { 3 } } \\end{array} \\right] \\in \\mathbb { R } ^ { 3 } { : } b _ { 1 } x _ { 1 } + b _ { 2 } x _ { 2 } + b _ { 3 } x _ { 3 } = 0 \\right\\} . $",
+  "options": {
+    "C": "onsider the following statements: (I) $W = W _ { 1 } \\cap W _ { 2 }$ (II) $W _ { 1 } = W _ { 2 }$ Which of the above statements is/are true?",
+    "A": "Only (I)",
+    "B": "Only (II)",
+    "D": "Neither (I) nor (II)"
+  },
+  "answer": null,
+  "solution": "To solve the problem, we need to analyze the given matrix \\( A \\) and the subspaces \\( W \\), \\( W_1 \\), and \\( W_2 \\).\n\nGiven:\n\\[ A = \\begin{pmatrix} a_1 & b_1 \\\\ a_2 & b_2 \\\\ a_3 & b_3 \\end{pmatrix} \\]\nwith \\((a_1, a_2, a_3) \\neq (0, 0, 0)\\) and \\((b_1, b_2, b_3) \\neq (0, 0, 0)\\), and the rank of \\( A \\) is 1.\n\n### Step 1: Understanding the Rank of \\( A \\)\nSince the rank of \\( A \\) is 1, the rows of \\( A \\) are linearly dependent. This means there exists a non-zero scalar \\( k \\) such that:\n\\[ \\begin{pmatrix} a_2 \\\\ b_2 \\\\ b_3 \\end{pmatrix} = k \\begin{pmatrix} a_1 \\\\ b_1 \\\\ b_3 \\end{pmatrix} \\]\n\n### Step 2: Expressing \\( W \\)\nThe subspace \\( W \\) is defined as:\n\\[ W = \\left\\{ \\pmb{x} = \\begin{pmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{pmatrix} \\in \\mathbb{R}^3 \\mid A \\pmb{x} = \\pmb{0} \\right\\} \\]\n\nThis means:\n\\[ \\begin{pmatrix} a_1 & b_1 \\\\ a_2 & b_2 \\\\ a_3 & b_3 \\end{pmatrix} \\begin{pmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 0 \\\\ 0 \\end{pmatrix} \\]\n\nUsing the linear dependence of the rows, we can substitute \\( a_2 = k a_1 \\) and \\( b_2 = k b_1 \\):\n\\[ \\begin{pmatrix} a_1 & b_1 \\\\ k a_1 & k b_1 \\\\ a_3 & b_3 \\end{pmatrix} \\begin{pmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{pmatrix} = \\begin{pmatrix} a_1 x_1 + b_1 x_2 \\\\ k a_1 x_1 + k b_1 x_2 \\\\ a_3 x_1 + b_3 x_2 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 0 \\\\ 0 \\end{pmatrix} \\]\n\nThis simplifies to:\n\\[ a_1 x_1 + b_1 x_2 = 0 \\]\n\\[ k (a_1 x_1 + b_1 x_2) = 0 \\]\n\\[ a_3 x_1 + b_3 x_2 = 0 \\]\n\nSince \\( a_1 x_1 + b_1 x_2 = 0 \\) is already satisfied by the second equation, we only need:\n\\[ a_1 x",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

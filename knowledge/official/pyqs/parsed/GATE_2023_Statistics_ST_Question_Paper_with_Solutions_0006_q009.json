@@ -7,13 +7,13 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "GENERAL",
-  "question_text": "Let a = 30!, b = 50!, and c = 100!. Consider the following numbers: loga c, logc a, logb a, loga b Which one of the following inequalities is CORRECT?",
+  "question_text": "Let $a = 3 0 ! , b = 5 0 !$ , and c = 100!. Consider the following numbers: $\\log _ { a } c , \\log _ { c } a .$ log<sub>b</sub> a, log<sub>a</sub> b Which one of the following inequalities is CORRECT?",
   "options": {
-    "A": "loga c < loga b < logb a < loga c",
-    "B": "logc a < loga b < logb a < logb c",
-    "C": "logc a < loga b < loga c < logb a",
-    "D": "logb a < logc a < loga b < loga c"
+    "A": "$\\log _ { a } c < \\log _ { a } b < \\log _ { b } a < \\log _ { a } c$",
+    "B": "$\\log _ { c } a < \\log _ { a } b < \\log _ { b } a < \\log _ { b } c$",
+    "C": "$\\log _ { c } a < \\log _ { a } b < \\log _ { a } c < \\log _ { b } a$",
+    "D": "$\\log _ { b } a < \\log _ { c } a < \\log _ { a } b < \\log _ { a } c$"
   },
   "answer": "A",
-  "solution": "Step 1: Understanding the values of a, b, and c.\n- a = 30!, a very large number.\n- b = 50!, a larger number than a.\n- c = 100!, which is even larger than b.\nStep 2: Evaluate logarithmic relations.\n- loga c measures how many times you need to multiply a to get c, which will be small, since\nc = 100! is much larger than a = 30!.\n- logc a is the inverse, and it will be much smaller than loga c.\n- logb a and loga b reflect the relationship between b = 50! and a = 30!. Since b is larger, loga b\nwill be larger than logb a.\nStep 3: Compare the inequalities.\n- loga c is the smallest.\n- loga b is the next in order.\n- logb a is larger than both.\n- loga c is the largest.\nThus, the correct inequality is:\nloga c < loga b < logb a < loga c\nThe correct inequality is (A).\nQuick Tip\nIn logarithms, when comparing values of large factorials, smaller bases yield smaller\nlogarithms. For factorials like a = 30!, b = 50!, and c = 100!, loga c will be the smallest."
+  "solution": "Step 1: Understanding the values of $a , b ,$ and $c _ { \\bullet }$\n\n$\\bar { \\mathbf { \\nabla } } a = 3 0 !$ , a very large number.\n\n$\\begin{array} { r } { - \\ b = 5 0 ! } \\end{array}$ , a larger number than a.\n\n$\\begin{array} { r } { - c = 1 0 0 ! . } \\end{array}$ , which is even larger than b.\n\nStep 2: Evaluate logarithmic relations.\n\n$\\mathrm { ~ - ~ } \\log _ { a } c$ measures how many times you need to multiply a to get c, which will be small, since $c = 1 0 0 !$ is much larger than $a = 3 0 !$\n\n$\\cdot \\log _ { c } a$ is the inverse, and it will be much smaller than $\\log _ { a } c .$\n\n$\\mathrm { - \\log } _ { b } a$ and $\\log _ { a }$ b reflect the relationship between $b = 5 0 !$ and $a = 3 0 !$ . Since b is larger, $\\log _ { a } b$ will be larger than $\\log _ { b } a$\n\nStep 3: Compare the inequalities.\n\n$\\log _ { a }$ c is the smallest.\n\n$\\log _ { a } b$ is the next in order.\n\n$\\log _ { b } a$ is larger than both.\n\n$\\log _ { a } c$ is the largest.\n\nThus, the correct inequality is:\n\n $ \\log _ { a } c < \\log _ { a } b < \\log _ { b } a < \\log _ { a } c $ \n\nThe correct inequality is $( \\mathsf { A } )$\nQuick Tip\n\nIn logarithms, when comparing values of large factorials, smaller bases yield smaller logarithms. For factorials like $a = 3 0 ! , b = 5 0 !$ , and $c = 1 0 0 ! , \\log _ { a } c$ will be the smallest."
 }

@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q43",
+  "question_seq": 73,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The following relation records the age of 500 employees of a company, where empNo (indicating the employee number) is the key empAge(empNo, age)",
+  "options": {
+    "C": "onsider the following relational algebra expression: ΠempNo (empAge (age > age1) PempNo1, age1 (empAge)) What does the above expression generate?",
+    "A": "Employee numbers of all employees whose age is not the minimum",
+    "B": "Employee numbers of all employees whose age is the minimum",
+    "D": "Employee numbers of only those employees whose age is more than the age of exactly one other employee."
+  },
+  "answer": "A",
+  "solution": "To determine the correct answer, let's analyze the given relational algebra expression step by step.\n\nThe expression is:\n\\[ \\Pi_{\\text{empNo}} (\\text{empAge} \\mid (\\text{age} > \\text{age1}) \\land (\\text{PempNo1}, \\text{age1}) (\\text{empAge})) \\]\n\n1. **Understanding the inner join**: The inner join condition is \\((\\text{age} > \\text{age1}) \\land (\\text{PempNo1}, \\text{age1}) (\\text{empAge})\\). This means we are joining the table `empAge` with itself ( self-join) on the condition that the age of the first employee is greater than the age of the second employee.\n\n2. **Result of the inner join**: After the inner join, we have a table where each row consists of two employee numbers and their respective ages, with the condition that the age of the first employee is greater than the age of the second employee.\n\n3. **Projection operation**: The projection operation \\(\\Pi_{\\text{empNo}}\\) is applied to the result of the inner join. This operation selects only the employee numbers from the table.\n\n4. **Final result**: The final result of the projection operation will be a list of employee numbers where each employee number appears if there is at least one other employee with a lower age. This means that the list will include all employee numbers except those whose age is the minimum (since there is no employee with a lower age for them).\n\nTherefore, the expression generates the employee numbers of all employees whose age is not the minimum.\n\nThe correct answer is:\n\\[\n\\boxed{A}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

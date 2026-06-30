@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q54",
+  "question_seq": 48,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , \\dots , X _ { n }$ be a random sample of size ?? $( \\geq 2 )$ from a population having Poisson distribution with mean ??, where $\\lambda > 0$ is an unknown parameter. If $T _ { 1 } = { \\bar { X } }$ and $\\begin{array} { r } { T _ { 2 } = \\sqrt { \\frac { 1 } { n - 1 } } \\sum _ { i = 1 } ^ { n } ( X _ { i } - \\bar { X } ) ^ { 2 } } \\end{array}$ , where $\\textstyle { \\bar { X } } = { \\frac { 1 } { n } } \\sum _ { i = 1 } ^ { n } X _ { i }$ , then which of the following statements is/are true?",
+  "options": {
+    "A": "$T _ { 1 }$ is an unbiased estimator of ??",
+    "B": "$T _ { 2 }$ is an unbiased estimator of $\\sqrt { \\lambda }$",
+    "C": "$T _ { 2 } ^ { 2 }$ is an unbiased estimator of ??",
+    "D": "Both $T _ { 1 }$ and $T _ { 2 }$ are estimators of ?? as well as $\\lambda ^ { 2 }$"
+  },
+  "answer": null,
+  "solution": "To determine which of the given statements are true, we need to analyze the properties of the estimators \\( T_1 \\) and \\( T_2 \\) for the parameter \\( \\lambda \\) of a Poisson distribution.\n\n### Step 1: Analyze \\( T_1 \\)\nThe estimator \\( T_1 \\) is given by:\n\\[ T_1 = \\bar{X} = \\frac{1}{n} \\sum_{i=1}^n X_i \\]\n\n#### Unbiasedness of \\( T_1 \\)\nFor \\( T_1 \\) to be an unbiased estimator of \\( \\lambda \\), the expected value \\( E(T_1) \\) must equal \\( \\lambda \\).\n\nSince \\( X_i \\) are i.i.d. Poisson random variables with mean \\( \\lambda \\):\n\\[ E(X_i) = \\lambda \\]\n\nThe expected value of the sample mean \\( \\bar{X} \\) is:\n\\[ E(\\bar{X}) = E\\left( \\frac{1}{n} \\sum_{i=1}^n X_i \\right) = \\frac{1}{n} \\sum_{i=1}^n E(X_i) = \\frac{1}{n} \\sum_{i=1}^n \\lambda = \\frac{1}{n} \\cdot n \\lambda = \\lambda \\]\n\nThus, \\( T_1 \\) is an unbiased estimator of \\( \\lambda \\).\n\n### Step 2: Analyze \\( T_2 \\)\nThe estimator \\( T_2 \\) is given by:\n\\[ T_2 = \\sqrt{\\frac{1}{n-1} \\sum_{i=1}^n (X_i - \\bar{X})^2} \\]\n\n#### Unbiasedness of \\( T_2 \\)\nFor \\( T_2 \\) to be an unbiased estimator of \\( \\sqrt{\\lambda} \\), the expected value \\( E(T_2) \\) must equal \\( \\sqrt{\\lambda} \\).\n\nThe term \\( \\sum_{i=1}^n (X_i - \\bar{X})^2 \\) is the sample variance \\( S^2 \\) of the \\( X_i \\)'s. For a Poisson distribution, the variance \\( \\text{Var}(X_i) \\) is also \\( \\lambda \\).\n\nThe expected value of the sample variance \\( S^2 \\) is:\n\\[ E(S^2) = E\\left( \\frac{1}{n-1} \\sum_{i=1}^n (X_i - \\bar{X})^2 \\right) = \\frac{1}{n-1} E\\left( \\sum_{i=1}^n (X_i - \\bar{X})^2 \\right) = \\frac{1}{n-1} \\cdot (n-1) \\lambda = \\lambda \\]\n\nHowever, \\( T_2 \\) is the square root of \\( S^2 \\), and the square root of an unbiased estimator is not necessarily an unbiased estimator of the square root of the parameter. Therefore, \\( T_2 \\) is not an unbiased estimator of \\( \\sqrt{\\lambda} \\).\n\n#### Unbiasedness of \\( T_2^2 \\)\nFor \\( T_2^2 \\) to",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

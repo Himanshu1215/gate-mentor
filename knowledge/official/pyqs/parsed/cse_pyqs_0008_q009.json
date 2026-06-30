@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q9",
+  "question_seq": 8,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Three of the five students allocated to a hostel put in special requests to the warden. Given the floor plan of the vacant rooms, select the allocation plan that will accommodate all their requests. Request by X : Due to pollen allergy. I want to avoid a wing next to the garden. Request by Y : 1 want to live as far from the washrooms as possible, since I am very sensitive to smell. Request by Z : I believe in Vaastu and so want to stay in the South-West wing. The shaded rooms are already occupied. WR is washroom.",
+  "options": {
+    "A": "(b)",
+    "C": "(D)"
+  },
+  "answer": "C",
+  "solution": "To determine the correct allocation plan for the three students based on their requests, let's analyze each request step by step and see which option satisfies all the conditions.\n\n1. ** Request by X: Due to pollen allergy. I want to avoid a wing next to the garden.**\n   - The garden is located in the North-East wing.\n   - Therefore, X should not be allocated to the North-East wing or any wing adjacent to it.\n   - This eliminates options (A) and (D) because both have X in the North-East wing or a wing adjacent to it.\n\n2. ** Request by Y: I want to live as far from the washrooms as possible, since I am very sensitive to smell.**\n   - The washroom (WR) is located in the South-West wing.\n   - Therefore, Y should not be allocated to the South-West wing or any wing adjacent to it.\n   - This eliminates option (B) because Y is in the South-West wing.\n\n3. ** Request by Z: I believe in Vaastu and so want to stay in the South-West wing.**\n   - The South-West wing is already occupied by Z.\n   - Therefore, Z should not be allocated to the South-West wing.\n   - This eliminates option (B) because Z is already in the South-West wing.\n\nAfter applying all the conditions, the only option left is (C). Let's verify that option (C) satisfies all the requests:\n\n- **Option (C):**\n  - X is in the North-West wing (not next to the garden).\n  - Y is in the North-East wing (not adjacent to the washroom).\n  - Z is in the South-East wing (not in the South-West wing).\n\nSince option (C) satisfies all the requests, the correct answer is:\n\\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

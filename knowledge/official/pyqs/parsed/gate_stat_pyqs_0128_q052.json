@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q52",
+  "question_seq": 128,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $f \\colon { \\mathbb { R } } \\to { \\mathbb { R } }$ be defined by $f ( x ) = ( 3 x ^ { 2 } + 4 )$ cos x. Then $\\operatorname* { l i m } _ { h \\to 0 } { \\frac { f ( h ) + f ( - h ) - 8 } { h ^ { 2 } } }$ is equal to ...",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the given limit, we start by substituting the function \\( f(x) = (3x^2 + 4) \\cos x \\) into the expression \\(\\frac{f(h) + f(-h) - 8}{h^2}\\).\n\nFirst, compute \\( f(h) \\) and \\( f(-h) \\):\n\\[\nf(h) = (3h^2 + 4) \\cos h\n\\]\n\\[\nf(-h) = (3(-h)^2 + 4) \\cos(-h) = (3h^2 + 4) \\cos h\n\\]\nSince \\(\\cos(-h) = \\cos h\\), we have:\n\\[\nf(h) + f(-h) = (3h^2 + 4) \\cos h + (3h^2 + 4) \\cos h = 2(3h^2 + 4) \\cos h\n\\]\nNext, substitute \\( f(h) + f(-h) \\) into the limit expression:\n\\[\n\\frac{f(h) + f(-h) - 8}{h^2} = \\frac{2(3h^2 + 4) \\cos h - 8}{h^2}\n\\]\nSimplify the numerator:\n\\[\n2(3h^2 + 4) \\cos h - 8 = 6h^2 \\cos h + 8 \\cos h - 8\n\\]\nSo the expression becomes:\n\\[\n\\frac{6h^2 \\cos h + 8 \\cos h - 8}{h^2} = \\frac{6h^2 \\cos h}{h^2} + \\frac{8 \\cos h}{h^2} - \\frac{8}{h^2} = 6 \\cos h + \\frac{8 \\cos h - 8}{h^2}\n\\]\nWe can further simplify the second term:\n\\[\n\\frac{8 \\cos h - 8}{h^2} = \\frac{8(\\cos h - 1)}{h^2}\n\\]\nThus, the expression is:\n\\[\n6 \\cos h + \\frac{8(\\cos h - 1)}{h^2}\n\\]\nNow, we take the limit as \\( h \\to 0 \\):\n\\[\n\\lim_{h \\to 0} \\left( 6 \\cos h + \\frac{8(\\cos h - 1)}{h^2} \\right)\n\\]\nWe know that \\(\\lim_{h \\to 0} \\cos h = 1\\), so:\n\\[\n\\lim_{h \\to 0} 6 \\cos h = 6 \\cdot 1 = 6\n\\]\nNext, we need to evaluate \\(\\lim_{h \\to 0} \\frac{8(\\cos h - 1)}{h^2}\\). We use the known limit \\(\\lim_{h \\to 0} \\frac{\\cos h - 1}{h^2} = -\\frac{1}{2}\\):\n\\[\n\\lim_{h \\to 0} \\frac{8(\\cos h - 1)}{h^2} = 8 \\cdot \\left( -\\frac{",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

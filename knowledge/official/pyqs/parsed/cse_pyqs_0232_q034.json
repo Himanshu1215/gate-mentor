@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q34",
+  "question_seq": 232,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The 32-bit IEEE 754 single precision representation of a number is 0xC2710000. The number in decimal representation is . (rounded off to two decimal places)",
+  "options": null,
+  "answer": "A",
+  "solution": "To convert the 32-bit IEEE 754 single precision representation \\(0x C2710000\\) to its decimal representation, we need to follow these steps:\n\n1. **Identify the components of the floating-point number:**\n   - ** sign bit:** The first bit (from the left) is \\(0\\), which indicates a positive number.\n   - **exponent field:** The next 8 bits are \\(C271\\). To convert \\(C271\\) from hexadecimal to decimal:\n     \\[\n     C271_{16} = C \\cdot 16^3 + 2 \\cdot 16^2 + 7 \\cdot 16^1 + 1 \\cdot 16^0\n     \\]\n     \\[\n     C = 12, \\quad 2 = 2, \\quad 7 = 7, \\quad 1 = 1\n     \\]\n     \\[\n     C271_{16} = 12 \\cdot 4096 + 2 \\cdot 256 + 7 \\cdot 16 + 1 \\cdot 1\n     \\]\n     \\[\n     C271_{16} = 49152 + 512 + 112 + 1\n     \\]\n     \\[\n     C271_{16} = 49777_{10}\n     \\]\n   - **fraction field:** The remaining 23 bits are \\(00000000000000000000000\\).\n\n2. **Determine the exponent in decimal:**\n   - The exponent field \\(49777_{10}\\) is already in decimal form.\n   - However, in floating-point representation, the exponent is biased by \\(127\\). Therefore, we subtract \\(127\\) from \\(49777\\):\n     \\[\n     \\text{Exponent} = 49777 - 127 = 49650\n     \\]\n\n3. **Convert the fraction to decimal:**\n   - The fraction field \\(00000000000000000000000\\) represents \\(0\\) in decimal.\n\n4. **Combine the sign, exponent, and fraction:**\n   - The floating-point number is \\(1 \\times 2^{49650} \\times 0\\).\n\n5. ** handle the special case:**\n   - Since the fraction is \\(0\\), the number is \\(0\\).\n\n6. **Convert to decimal representation:**\n   - The decimal representation of \\(0\\) is \\(0\\).\n\nTherefore, the decimal representation of \\(0x C2710000\\) is \\(\\boxed{0}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

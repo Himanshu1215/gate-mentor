@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q60",
+  "question_seq": 52,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let $\\{ X _ { n } \\} _ { n \\geq 1 }$ be a time homogeneous discrete time Markov chain with state space {0, 1, 2} and transition probability matrix ${ \\left[ \\begin{array} { l l l } { 0 } & { { \\frac { 1 } { 2 } } } & { { \\frac { 1 } { 2 } } } \\\\ { { \\frac { 1 } { 2 } } } & { { \\frac { 1 } { 4 } } } & { { \\frac { 1 } { 4 } } } \\\\ { { \\frac { 1 } { 2 } } } & { { \\frac { 1 } { 4 } } } & { { \\frac { 1 } { 4 } } } \\end{array} \\right] } .$ If $\\begin{array} { r } { P ( X _ { 0 } = 0 ) = P ( X _ { 0 } = 1 ) = \\frac { 1 } { 4 } } \\end{array}$ , then $3 2 E ( X _ { 2 } )$ equals (in integer).",
+  "options": null,
+  "answer": null,
+  "solution": "To find \\(32 E(X_2)\\), we need to determine the expected value of \\(X_2\\) given the initial distribution and the transition probability matrix. Let's proceed step by step.\n\n1. **Initial Distribution:**\n   \\[\n   P(X_0 = 0) = \\frac{1}{4}, \\quad P(X_0 = 1) = \\frac{1}{4}, \\quad P(X_0 = 2) = \\frac{1}{2}\n   \\]\n   This can be written as a row vector:\n   \\[\n   \\mathbf{p}_0 = \\begin{pmatrix} \\frac{1}{4} & \\frac{1}{4} & \\frac{1}{2} \\end{pmatrix}\n   \\]\n\n2. **Transition Probability Matrix:**\n   \\[\n   P = \\begin{pmatrix}\n   0 & \\frac{1}{2} & \\frac{1}{2} \\\\\n   \\frac{1}{2} & \\frac{1}{4} & \\frac{1}{4} \\\\\n   \\frac{1}{2} & \\frac{1}{4} & \\frac{1}{4}\n   \\end{pmatrix}\n   \\]\n\n3. **Finding \\(P(X_1)\\):**\n   The distribution at time \\(t = 1\\) is given by multiplying the initial distribution by the transition matrix:\n   \\[\n   \\mathbf{p}_1 = \\mathbf{p}_0 P\n   \\]\n   \\[\n   \\mathbf{p}_1 = \\begin{pmatrix} \\frac{1}{4} & \\frac{1}{4} & \\frac{1}{2} \\end{pmatrix} \\begin{pmatrix}\n   0 & \\frac{1}{2} & \\frac{1}{2} \\\\\n   \\frac{1}{2} & \\frac{1}{4} & \\frac{1}{4} \\\\\n   \\frac{1}{2} & \\frac{1}{4} & \\frac{1}{4}\n   \\end{pmatrix}\n   \\]\n   Perform the matrix multiplication:\n   \\[\n   \\mathbf{p}_1 = \\begin{pmatrix}\n   \\frac{1}{4} \\cdot 0 + \\frac{1}{4} \\cdot \\frac{1}{2} + \\frac{1}{2} \\cdot \\frac{1}{2} & \\frac{1}{4} \\cdot \\frac{1}{2} + \\frac{1}{4} \\cdot \\frac{1}{4} + \\frac{1}{2} \\cdot \\frac{1}{4} & \\frac{1}{4} \\cdot \\frac{1}{2} + \\frac{1}{4} \\cdot \\frac{1}{4} + \\frac{1}{2} \\cdot \\frac{1}{4}\n   \\end{pmatrix}\n   \\]\n   Simplify each element:\n   \\[\n   \\mathbf{p}_1 = \\begin{pmatrix}\n   0 + \\frac{1}{8} + \\frac{1}{4} & \\frac{1}{8} + \\frac{1}{16} +",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q62",
+  "question_seq": 210,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The following sequence corresponds to the preorder traversal of a binary search tree: 50, 25, 13, 40, 30, 47, 75, 60, 70, 80, 77 The position of the element 60 in the postorder traversal of Tis \\_. (",
+  "options": null,
+  "answer": "B",
+  "solution": "To determine the position of the element 60 in the postorder traversal of the binary search tree, we need to first understand the structure of the tree based on the given preorder traversal: 50, 25, 13, 40, 30, 47, 75, 60, 70, 80, 77.\n\nIn a binary search tree, the root is the first element in the preorder traversal. So, the root of the tree is 50. The left child of the root is the next element in the traversal, which is 25. The left child of 25 is 13, and the left child of 13 is 40. The right child of 13 is 30. The left child of 40 is 47. The right child of 25 is 75. The left child of 75 is 60, the right child of 75 is 70. The right child of 70 is 80. The right child of 75 is also 77.\n\nSo, the structure of the tree is as follows:\n```\n      50\n     /   \\\n    25   75\n   /   \\   \\\n  13   40  70\n /   \\   \\   \\\n47   30  80  77\n```\n\nIn a binary search tree, the postorder traversal visits the left subtree, then the right subtree, and finally the root. So, we need to perform the postorder traversal on the tree.\n\nStarting from the leftmost leaf and moving to the right, the postorder traversal is:\n47, 13, 40, 30, 70, 80, 77, 75, 60, 25, 50.\n\nFrom the postorder traversal, we can see that the element 60 is in the 9th position.\n\nTherefore, the position of the element 60 in the postorder traversal of the tree is \\boxed{9}.",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

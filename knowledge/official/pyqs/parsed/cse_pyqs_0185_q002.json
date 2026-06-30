@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q2",
+  "question_seq": 185,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The figure shows two 4-tile patterns. Either one or both of the patterns can be used any number of times and in any orientation to construct a new pattern. Which one of the options below cannot be constructed by using only these two 4-tile patterns assuming there are no overlaps among them?",
+  "options": {
+    "A": "(b)",
+    "C": ")"
+  },
+  "answer": "C",
+  "solution": "To determine which pattern cannot be constructed using only the two given 4-tile patterns, we need to analyze the properties of the patterns and the possible combinations they can form.\n\nLet's denote the two given patterns as follows:\n- Pattern A:\n  ```\n  X X\n  X X\n  ```\n- Pattern B:\n  ```\n  X\n  X X\n  X\n  ```\n\nWe need to check if each of the given options can be constructed using these patterns.\n\n**Option (A):**\n```\nX X X X\nX X X X\n```\nThis pattern can be constructed by placing two Pattern A's side by side:\n```\nX X   X X\nX X   X X\n```\nSo, Option (A) can be constructed.\n\n**Option (B):**\n```\nX X X X\nX X X X\n```\nThis pattern is the same as Option (A), so it can also be constructed by placing two Pattern A's side by side:\n```\nX X   X X\nX X   X X\n```\nSo, Option (B) can be constructed.\n\n**Option (C):**\n```\nX X X X\nX X X X\n```\nThis pattern cannot be constructed using only Pattern A and Pattern B. Let's analyze why:\n\n- Pattern A consists of four X's arranged in a 2x2 grid.\n- Pattern B consists of four X's arranged in a T-shape.\n\nTo form a 4x4 grid with all X's, we need to use a combination of Pattern A and Pattern B such that all positions are filled without any overlaps. However, no matter how we combine Pattern A and Pattern B, we cannot fill a 4x4 grid with all X's without leaving some positions empty or overlapping.\n\nLet's try to place Pattern A and Pattern B in a 4x4 grid:\n- If we place Pattern A in the top-left corner, we have:\n  ```\n  X X   X X\n  X X   X X\n  ```\n  This leaves the bottom two rows empty.\n- If we place Pattern B in the top-left corner, we have:\n  ```\n  X\n  X X\n  X\n  ```\n  This leaves the bottom two rows and the bottom-left corner empty.\n\nNo matter how we place Pattern A and Pattern B, we cannot fill all four rows and all four columns without leaving some positions empty or overlapping. Therefore, Option (C) cannot be constructed using only Pattern A and Pattern B.\n\nThe correct answer is: \\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

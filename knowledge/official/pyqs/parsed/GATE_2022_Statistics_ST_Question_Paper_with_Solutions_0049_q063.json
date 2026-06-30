@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q63",
+  "question_seq": 49,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "If $P ( x , y , z )$ is the point nearest to the origin lying on the intersection of the surfaces $z = x y + 5$ and $x + y + z = 1$ , then the distance (in integer) between the origin and $P$ is",
+  "options": null,
+  "answer": null,
+  "solution": "Minimize $f ( x , y , z ) = x ^ { 2 } + y ^ { 2 } + z ^ { 2 }$ subject to\n\n $ g _ { 1 } ( x , y , z ) = z - x y - 5 = 0 , \\qquad g _ { 2 } ( x , y , z ) = x + y + z - 1 = 0 . $ \n\nUse Lagrange multipliers: $\\nabla f = \\lambda \\nabla g _ { 1 } + \\mu \\nabla g _ { 2 }$\n\n $ ( 2 x , 2 y , 2 z ) = \\lambda ( - y , - x , 1 ) + \\mu ( 1 , 1 , 1 ) . $ \n\nFrom the first two coordinates,\n\n $ 2 x + \\lambda y = \\mu , \\qquad 2 y + \\lambda x = \\mu \\Rightarrow ( 2 - \\lambda ) ( x - y ) = 0 . $ \n\nIf $x = y ,$ then from constraints $z = 1 - 2 x$ and $z = x ^ { 2 } + 5$ give $x ^ { 2 } + 2 x + 4 = 0$ , impossible; hence $\\lambda = 2$ . Then from the third coordinate $2 z = \\lambda + \\mu = 2 + \\mu \\Rightarrow \\mu = 2 z - 2$ . Using $2 x + 2 y = \\mu$ gives $x + y = z - 1$ . With $x + y + z = 1$ we get z = 1 and $x + y = 0$ . Using $z = x y + 5$ yields $x y = - 4 ;$ together with $y = - x { \\mathrm { ~ g i v e s ~ } } x = \\pm 2 , y = \\mp 2$\n\nThus P is (2, −2, 1) or (−2, 2, 1) and\n\n $ \\| O P \\| = { \\sqrt { 2 ^ { 2 } + ( - 2 ) ^ { 2 } + 1 ^ { 2 } } } = { \\sqrt { 9 } } = { \\sqrt { 3 } } . $ \nQuick Tip\n\nOn intersections of smooth surfaces, minimize $\\| { \\boldsymbol { x } } \\| ^ { 2 }$ with Lagrange multipliers. Symmetry checks can quickly rule out candidate cases."
+}

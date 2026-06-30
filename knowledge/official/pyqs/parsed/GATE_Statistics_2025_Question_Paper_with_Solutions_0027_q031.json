@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q31",
+  "question_seq": 27,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $\\{ W ( t ) : t \\geq 0 \\}$ be a standard Brownian motion. Then $ E \\left( \\left( W ( 2 ) + W ( 3 ) \\right) ^ { 2 } \\right) $ equals (",
+  "options": null,
+  "answer": null,
+  "solution": "We use the properties of Brownian motion to solve the problem. Specifically, for a standard Brownian motion:\n\n$E ( W ( t ) ) = 0$ for all t.\n\n$\\operatorname { V a r } ( W ( t ) ) = t$ for all t.\n\nCov(W (t), W (s)) = min(t, s) for $t , s \\geq 0 .$\n\nWe need to find $E \\left( \\left( W ( 2 ) + W ( 3 ) \\right) ^ { 2 } \\right)$ . Expanding the square:\n\n $ E \\left( \\left( W ( 2 ) + W ( 3 ) \\right) ^ { 2 } \\right) = E ( W ( 2 ) ^ { 2 } ) + E ( W ( 3 ) ^ { 2 } ) + 2 E ( W ( 2 ) W ( 3 ) ) . $ \n\nUsing the properties of Brownian motion:\n\n $ E ( W ( 2 ) ^ { 2 } ) = \\operatorname { V a r } ( W ( 2 ) ) = 2 , $ \n\n $ E ( W ( 3 ) ^ { 2 } ) = \\mathrm { V a r } ( W ( 3 ) ) = 3 , $ \n\n $ E ( W ( 2 ) W ( 3 ) ) = \\mathbf { C o v } ( W ( 2 ) , W ( 3 ) ) = \\operatorname* { m i n } ( 2 , 3 ) = 2 . $ \n\nThus:\n\n $ E \\left( ( W ( 2 ) + W ( 3 ) ) ^ { 2 } \\right) = 2 + 3 + 2 \\times 2 = 2 + 3 + 4 = 9 . $ \n\nThus, the answer $\\mathbf { i s } \\boxed { 9 }$\nQuick Tip\n\nFor Brownian motion, use the properties $E ( W ( t ) ) ~ = ~ 0 , ~ \\mathrm { V a r } ( W ( t ) ) ~ = ~ t ,$ and Cov $( W ( t ) , W ( s ) ) = \\operatorname* { m i n } ( t , s )$ to compute expectations and variances of linear combinations of Brownian motions."
+}

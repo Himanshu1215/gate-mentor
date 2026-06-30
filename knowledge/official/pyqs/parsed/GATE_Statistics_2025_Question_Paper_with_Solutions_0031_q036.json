@@ -1,0 +1,18 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q36",
+  "question_seq": 31,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $\\mathcal { F } = \\{ f : [ a , b ] \\to \\mathbb { R } \\mid f$ is continuous on $[ a , b ]$ and differentiable on $( a , b ) ]$ }. Which one of the following options is correct?",
+  "options": {
+    "A": "There exists a non-constant $f \\in { \\mathcal { F } }$ such that $| f ( x ) - f ( y ) | \\leq | x - y | ^ { 2 }$ for all $x , y \\in [ a , b ]$ (B) If $f \\in { \\mathcal { F } }$ and $x _ { 0 } \\in ( a , b )$ , then there exist distinct $x _ { 1 } , x _ { 2 } \\in [ a , b ]$ such that $ { \\frac { f ( x _ { 1 } ) - f ( x _ { 2 } ) } { x _ { 1 } - x _ { 2 } } } = f ^ { \\prime } ( x _ { 0 } ) $",
+    "C": "Let $f \\in { \\mathcal { F } }$ and $f ^ { \\prime } ( x ) \\geq 0$ for all $x \\in ( a , b )$ . If $f ^ { \\prime }$ is zero only at two distinct points, then $f$ is strictly increasing.",
+    "D": "Let $f \\in { \\mathcal { F } }$ . If $f ^ { \\prime } ( x _ { 1 } ) < c < f ^ { \\prime } ( x _ { 2 } )$ for some $x _ { 1 } , x _ { 2 } \\in ( a , b )$ , then there may NOT exist an $x _ { 0 } \\in ( x _ { 1 } , x _ { 2 } )$ such that $f ^ { \\prime } ( x _ { 0 } ) = c .$"
+  },
+  "answer": "C",
+  "solution": "Step 1: Analyzing option (A).\n\nThe condition $| f ( x ) - f ( y ) | \\leq | x - y | ^ { 2 }$ implies that f must be a function that grows slower than linearly with respect to the difference $| x - y |$ , i.e., f must be of the form $f ( x ) = k x ^ { 2 }$ for some constant k, which is a valid option. However, it is not necessarily true for every non-constant function in F. Hence, option (A) is not universally valid.\nStep 2: Analyzing option (B).\n\nThis option is correct. The Mean Value Theorem tells us that for a function f continuous on the closed interval $[ a , b ]$ and differentiable on the open interval $( a , b )$ , there exists a point $c \\in ( a , b )$ such that:\n\n $ { \\frac { f ( x _ { 1 } ) - f ( x _ { 2 } ) } { x _ { 1 } - x _ { 2 } } } = f ^ { \\prime } ( c ) . $ \n\nThus, for $x _ { 1 } , x _ { 2 } \\in [ a , b ]$ with $x _ { 1 } \\neq x _ { 2 }$ , there exist points $x _ { 1 }$ and $x _ { 2 }$ where the Mean Value Theorem applies, ensuring that ${ \\frac { f ( x _ { 1 } ) - f ( x _ { 2 } ) } { x _ { 1 } - x _ { 2 } } } = f ^ { \\prime } ( x _ { 0 } )$\nStep 3: Analyzing option (C).\n\nIf $f ^ { \\prime } ( x ) \\geq 0$ for all $x \\in ( a , b )$ , and $f ^ { \\prime }$ is zero only at two distinct points, then $f$ is non-decreasing, but it is not necessarily strictly increasing. For $f$ to be strictly increasing, $f ^ { \\prime } ( x )$ must be strictly positive for all x except at isolated points. Hence, option (C) is incorrect as it overstates the conclusion.\nStep 4: Analyzing option (D).\n\nIf $f ^ { \\prime } ( x _ { 1 } ) < c < f ^ { \\prime } ( x _ { 2 } )$ , by the Intermediate Value Theorem, there must exist some $x _ { 0 } \\in ( x _ { 1 } , x _ { 2 } )$ such that $f ^ { \\prime } ( x _ { 0 } ) = c$ . Hence, option (D) is incorrect.\n\nThus, the correct answer is $\\boxed { ( C ) }$\nQuick Tip\n\nThe Mean Value Theorem guarantees the existence of a point where the average rate of change equals the instantaneous rate of change. Use this to answer questions involving the relationship between function values and derivatives."
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q54",
+  "question_seq": 130,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , \\dots , X _ { 1 0 }$ be independent and identically distributed normal random variables with mean 0 and variance 2. Then $E \\left( { \\frac { X _ { 1 } ^ { 2 } } { X _ { 1 } ^ { 2 } + \\cdots + X _ { 1 0 } ^ { 2 } } } \\right)$ is equal to ...",
+  "options": null,
+  "answer": null,
+  "solution": "To find the expected value \\( E \\left( \\frac{X_1^2}{X_1^2 + \\cdots + X_{10}^2} \\right) \\), we start by noting that \\( X_1, X_2, \\ldots, X_{10} \\) are independent and identically distributed (i.i.d.) normal random variables with mean 0 and variance 2. This means that each \\( X_i \\) follows a normal distribution \\( N(0, 2) \\).\n\nFirst, we consider the sum of the squares of these random variables:\n\\[ S = X_1^2 + X_2^2 + \\cdots + X_{10}^2. \\]\nSince each \\( X_i \\) is normally distributed with mean 0 and variance 2, \\( \\frac{X_i^2}{2} \\) follows a chi-squared distribution with 1 degree of freedom. Therefore, \\( S \\) follows a chi-squared distribution with 10 degrees of freedom, scaled by 2:\n\\[ S \\sim 2 \\chi^2_{10}. \\]\n\nWe are interested in finding the expected value of \\( \\frac{X_1^2}{S} \\). To do this, we use the property of the chi-squared distribution and the fact that the \\( X_i \\)'s are identically distributed. Specifically, we can use the symmetry of the problem. Since the \\( X_i \\)'s are identically distributed, the expected value of \\( \\frac{X_i^2}{S} \\) is the same for all \\( i \\). Therefore, we have:\n\\[ E \\left( \\frac{X_1^2}{S} \\right) = E \\left( \\frac{X_2^2}{S} \\right) = \\cdots = E \\left( \\frac{X_{10}^2}{S} \\right). \\]\n\nLet \\( E \\left( \\frac{X_1^2}{S} \\right) = E \\left( \\frac{X_2^2}{S} \\right) = \\cdots = E \\left( \\frac{X_{10}^2}{S} \\right) = E \\left( \\frac{X_1^2}{X_1^2 + \\cdots + X_{10}^2} \\right) = x \\). Then, we can write:\n\\[ E \\left( \\frac{X_1^2}{S} \\right) + E \\left( \\frac{X_2^2}{S} \\right) + \\cdots + E \\left( \\frac{X_{10}^2}{S} \\right) = E \\left( \\frac{X_1^2 + X_2^2 + \\cdots + X_{10}^2}{S} \\right) = E(1) = 1. \\]\nSince there are 10 terms in the sum, we have:\n\\[ 10x = 1. \\]\nSolving for \\( x \\), we get:\n\\[ x = \\frac{1}{10}. \\]\n\nTherefore, the expected value is:\n\\[ E \\left( \\frac{X_",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

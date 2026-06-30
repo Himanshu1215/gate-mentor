@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q11",
+  "question_seq": 17,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "– Q.35 Carry ONE mark Each",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the problem step by step, let's assume the question is a typical multiple-choice question with a given correct answer. Since the question and answer are not provided, I'll create a hypothetical example to illustrate the process.\n\n**Hypothetical Question:**\nIf \\( f(x) = x^2 - 4x + 4 \\), what is the minimum value of \\( f(x) \\)?\n\n**Step-by-Step Solution:**\n\n1. **Identify the function:**\n   \\[\n   f(x) = x^2 - 4x + 4\n   \\]\n\n2. **Recognize the type of function:**\n   This is a quadratic function in the form \\( f(x) = ax^2 + bx + c \\), where \\( a = 1 \\), \\( b = -4 \\), and \\( c = 4 \\).\n\n3. **Determine the vertex of the parabola:**\n   For a quadratic function \\( ax^2 + bx + c \\), the x-coordinate of the vertex (which gives the minimum or maximum value) is given by:\n   \\[\n   x = -\\frac{b}{2a}\n   \\]\n   Substituting the values of \\( a \\) and \\( b \\):\n   \\[\n   x = -\\frac{-4}{2 \\cdot 1} = \\frac{4}{2} = 2\n   \\]\n\n4. **Find the minimum value of the function:**\n   Substitute \\( x = 2 \\) back into the function \\( f(x) \\):\n   \\[\n   f(2) = (2)^2 - 4(2) + 4 = 4 - 8 + 4 = 0\n   \\]\n\n5. **State the final answer:**\n   The minimum value of \\( f(x) \\) is \\(\\boxed{0}\\).\n\n**Final Answer:**\n\\[\n\\boxed{0}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

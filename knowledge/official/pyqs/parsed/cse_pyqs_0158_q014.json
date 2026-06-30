@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q14",
+  "question_seq": 158,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let L, M, and N be non-singular matrices of order 3 satisfying the equations $L ^ { 2 } = L ^ { - 1 } , M = L ^ { 8 }$ and $N = \\ L ^ { 2 } .$ Which ONE of the following is the value of the determinant of $( M - N ) ?$",
+  "options": {
+    "A": "0",
+    "B": "1",
+    "C": "2",
+    "D": "3 [2025 (Set-2) : 1 M]"
+  },
+  "answer": "A",
+  "solution": "To determine the value of the determinant of \\( M - N \\), we start by analyzing the given equations involving the matrices \\( L \\), \\( M \\), and \\( N \\).\n\n1. **Given Equations:**\n   \\[\n   L^2 = L^{-1}\n   \\]\n   \\[\n   M = L^8\n   \\]\n   \\[\n   N = L^2\n   \\]\n\n2. **Find \\( L^4 \\):**\n   Using the equation \\( L^2 = L^{-1} \\), we can square both sides:\n   \\[\n   (L^2)^2 = (L^{-1})^2\n   \\]\n   Simplifying, we get:\n   \\[\n   L^4 = L^{-2}\n   \\]\n\n3. **Find \\( L^8 \\):**\n   Using the equation \\( L^4 = L^{-2} \\), we square both sides again:\n   \\[\n   (L^4)^2 = (L^{-2})^2\n   \\]\n   Simplifying, we get:\n   \\[\n   L^8 = L^{-4}\n   \\]\n\n4. **Substitute \\( L^8 \\) into \\( M \\):**\n   From the given equation \\( M = L^8 \\), we substitute \\( L^8 \\) with \\( L^{-4} \\):\n   \\[\n   M = L^{-4}\n   \\]\n\n5. **Express \\( M - N \\):**\n   Now, we substitute \\( M = L^{-4} \\) and \\( N = L^2 \\) into \\( M - N \\):\n   \\[\n   M - N = L^{-4} - L^2\n   \\]\n\n6. **Factor \\( L^{-4} - L^2 \\):**\n   Factor out \\( L^{-2} \\) from the expression:\n   \\[\n   L^{-4} - L^2 = L^{-2}(L^{-2} - L^4)\n   \\]\n\n7. **Simplify \\( L^{-2} - L^4 \\):**\n   Using the equation \\( L^4 = L^{-2} \\), we substitute \\( L^4 \\) with \\( L^{-2} \\):\n   \\[\n   L^{-2} - L^4 = L^{-2} - L^{-2} = 0\n   \\]\n\n8. **Substitute back into the factored form:**\n   \\[\n   L^{-4} - L^2 = L^{-2} \\cdot 0 = 0\n   \\]\n\n9. **Determine the determinant:**\n   The determinant of the zero matrix is 0. Therefore:\n   \\[\n   \\det(M - N) = \\det(0) = 0\n   \\]\n\nThus, the value of the determinant of \\( M - N \\) is \\(\\boxed{A}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

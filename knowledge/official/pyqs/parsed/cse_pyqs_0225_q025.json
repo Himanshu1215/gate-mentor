@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q25",
+  "question_seq": 225,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following can be recurrence relation(s) corresponding to an algorithm with time complexity $\\Theta ( n ) ?$ (a) $T ( n ) = \\ T ( n - 1 ) \\ + \\ 1 , \\quad \\ T ( 1 ) = \\ 1$ (b) $T ( n ) = 2 T \\left( { \\frac { n } { 2 } } \\right) + 1 , T ( 1 ) = 1$ (c) $T ( n ) = 2 T \\left( { \\frac { n } { 2 } } \\right) + n , T ( 1 ) = 1$ (d) $T ( n ) = \\ T ( n - 1 ) \\ + \\ n , \\quad \\ T ( 1 ) = 1$",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine which recurrence relation corresponds to an algorithm with time complexity \\(\\Theta(n)\\), we need to analyze each recurrence relation and determine its time complexity.\n\n### Option (a): \\(T(n) = T(n-1) + 1\\), \\(T(1) = 1\\)\n\nThis recurrence relation is a simple linear recurrence. We can expand it as follows:\n\\[\nT(n) = T(n-1) + 1 = T(n-2) + 1 + 1 = \\cdots = T(1) + 1 + 1 + \\cdots + 1 = 1 + (n-1) = n\n\\]\nSo, \\(T(n) = n\\). This means the time complexity is \\(\\Theta(n)\\).\n\n### Option (b): \\(T(n) = 2T\\left(\\frac{n}{2}\\right) + 1\\), \\(T(1) = 1\\)\n\nThis recurrence relation is a form of the divide-and-conquer recurrence. We can use the Master Theorem to solve it. The Master Theorem states that for a recurrence of the form \\(T(n) = aT\\left(\\frac{n}{b}\\right) + f(n)\\), where \\(a \\geq 1\\), \\(b > 1\\), and \\(f(n)\\) is an asymptotically positive function, the time complexity is:\n- \\(\\Theta(n^{\\log_b a})\\) if \\(f(n) = O(n^{\\log_b a - \\epsilon})\\) for some \\(\\epsilon > 0\\)\n- \\(\\Theta(n^{\\log_b a} \\log n)\\) if \\(f(n) = \\Theta(n^{\\log_b a})\\)\n- \\(\\Theta(f(n))\\) if \\(f(n) = \\Omega(n^{\\log_b a + \\epsilon})\\) for some \\(\\epsilon > 0\\)\n\nFor the given recurrence relation, \\(a = 2\\), \\(b = 2\\), and \\(f(n) = 1\\). Since \\(f(n) = \\Theta(n^0)\\) and \\(n^{\\log_2 2} = n^1 = n\\), we have \\(f(n) = O(n^{\\log_2 2 - \\epsilon})\\) for any \\(\\epsilon > 0\\). Therefore, the time complexity is \\(\\Theta(n)\\).\n\n### Option (c): \\(T(n) = 2T\\left(\\frac{n}{2}\\right) + n\\), \\(T(1) = 1\\)\n\nThis recurrence relation is also a form of the divide-and-conquer recurrence. Using the Master Theorem, we have \\(a = 2\\), \\(b = 2\\), and \\(f(n) = n\\). Since \\(f(n) = \\Theta(n^{\\log_2 2}) = \\Theta(n)\\), the time complexity is \\(\\Theta(n \\log n)\\).\n\n### Option (d): \\(T(n) = T(n-1) + n\\), \\(T(1) = 1\\)\n\nThis recurrence relation is a simple linear recurrence. We can expand it as follows:\n\\[\nT(n) = T(n-1) + n = T(n-2) + n + (n-1)",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

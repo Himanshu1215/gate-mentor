@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q30",
+  "question_seq": 112,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Suppose that $P _ { 1 }$ and $P _ { 2 }$ are two populations with equal prior probabilities having bivariate normal distributions with mean vectors (2, 3) and (1, 1), respectively. The variancecovariance matrix of both the distributions is the identity matrix. Let $z _ { 1 } = ( 2 . 5 , 2 )$ and $z _ { 2 } = ( 2 , 1 . 5 )$ be two new observations. According to Fisher's linear discriminant rule, (A) $z _ { 1 }$ is assigned to $P _ { 1 } { \\mathrm { . } }$ , and $z _ { 2 }$ is assigned to $P _ { 2 }$ (B) $z _ { 1 }$ is assigned to $P _ { 2 }$ , and $z _ { 2 }$ is assigned to $P _ { 1 }$ (C) $z _ { 1 }$ is assigned to $P _ { 1 : }$ , and $z _ { 2 }$ is assigned to $P _ { 1 }$ (D) $z _ { 1 }$ is assigned to $P _ { 2 }$ , and $z _ { 2 }$ is assigned to $P _ { 2 }$",
+  "options": null,
+  "answer": null,
+  "solution": "To determine the assignments of the observations \\( z_1 = (2.5, 2) \\) and \\( z_2 = (2, 1.5) \\) to the populations \\( P_1 \\) and \\( P_2 \\) using Fisher's linear discriminant rule, we need to follow these steps:\n\n1. **Calculate the discriminant function for each population:**\n\n   The discriminant function for a multivariate normal distribution with mean vector \\(\\mu\\) and variance-covariance matrix \\(\\Sigma\\) is given by:\n   \\[\n   d(x) = -\\frac{1}{2} (x - \\mu)^T \\Sigma^{-1} (x - \\mu) + \\log P(\\pi)\n   \\]\n   where \\( P(\\pi) \\) is the prior probability of the population.\n\n   Given:\n   - Mean vectors: \\(\\mu_1 = (2, 3)\\) and \\(\\mu_2 = (1, 1)\\)\n   - Variance-covariance matrix: \\(\\Sigma = I\\) (identity matrix)\n   - prior probabilities: \\( P(\\pi_1) = P(\\pi_2) = 0.5 \\)\n\n   Since \\(\\Sigma = I\\), \\(\\Sigma^{-1} = I\\). Therefore, the discriminant function simplifies to:\n   \\[\n   d(x) = -\\frac{1}{2} (x - \\mu)^T (x - \\mu) + \\log 0.5\n   \\]\n\n2. **Calculate the discriminant function for \\( P_1 \\) and \\( P_2 \\):**\n\n   For \\( P_1 \\):\n   \\[\n   d_1(z) = -\\frac{1}{2} (z - \\mu_1)^T (z - \\mu_1) + \\log 0.5\n   \\]\n\n   For \\( P_2 \\):\n   \\[\n   d_2(z) = -\\frac{1}{2} (z - \\mu_2)^T (z - \\mu_2) + \\log 0.5\n   \\]\n\n3. **Evaluate the discriminant functions for \\( z_1 \\) and \\( z_2 \\):**\n\n   For \\( z_1 = (2.5, 2) \\):\n   \\[\n   d_1(z_1) = -\\frac{1}{2} ((2.5, 2) - (2, 3))^T ((2.5, 2) - (2, 3)) + \\log 0.5\n   \\]\n   \\[\n   = -\\frac{1}{2} (0.5, -1)^T (0.5, -1) + \\log 0.5\n   \\]\n   \\[\n   = -\\frac{1}{2} (0.5^2 + (-1)^2) + \\log 0.5\n   \\]\n   \\[\n   = -\\frac{1}{2} (0.25 + 1) + \\log 0.5\n   \\]\n   \\[\n   = -\\frac{1}{2} \\times 1.25 + \\log 0.5\n   \\]\n   \\",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

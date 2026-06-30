@@ -1,0 +1,16 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q47",
+  "question_seq": 36,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let M be any $3 \\times 3$ symmetric matrix with eigenvalues 1, 2, 3. Let N be any $3 \\times 3$ matrix with real eigenvalues such that $M N + N ^ { T } M = 3 I$ , where I is the $3 \\times 3$ identity matrix. Which of the following cannot be eigenvalue(s) of the matrix N?",
+  "options": {
+    "A": "(B) $\\begin{array} { c } { { \\frac { 4 } { 3 } } } \\\\ { { \\overline { { { \\vphantom { \\frac { 4 } { 3 } } } } } } } \\end{array}$ 4 (C) $\\frac { 1 } { 2 }$ (D) $\\frac { 7 } { 4 }$"
+  },
+  "answer": "A",
+  "solution": "Step 1: Diagonalize M.\n\nSince M is symmetric, there is an orthogonal $Q$ with $Q ^ { T } M Q = D = \\mathrm { d i a g } ( 1 , 2 , 3 )$ . Put $\\tilde { N } = Q ^ { T } N Q$ . The condition becomes $D \\tilde { N } + \\tilde { N } ^ { T } D = 3 I$ . Similarity preserves eigenvalues, so $\\tilde { N }$ and N have the same eigenvalues.\nStep 2: Rayleigh identity for a real eigenpair.\n\nLet $\\tilde { N } v = \\lambda v$ with real λ and $v \\neq 0$ . Then\n\n $ v ^ { T } ( D \\tilde { N } + \\tilde { N } ^ { T } D ) v = 3 v ^ { T } v . $ \n\nThe left side equals $v ^ { T } D ( \\lambda v ) + ( \\lambda v ) ^ { T } D v = 2 \\lambda v ^ { T } D v$ . Hence $2 \\lambda v ^ { T } D v = 3 v ^ { T } v \\implies \\lambda = \\frac { 3 } { 2 } \\frac { v ^ { T } v } { v ^ { T } D v } .$\n\nStep 3: Bound the quotient.\n\nFor $D = \\mathrm { d i a g } ( 1 , 2 , 3 )$ , its eigenvalues satisfy $1 \\leq \\frac { v ^ { T } D v } { v ^ { T } v } \\leq 3$ . Therefore\n\n $ \\frac { 1 } { 3 } \\leq \\frac { v ^ { T } v } { v ^ { T } D v } \\leq 1 \\implies \\frac { 1 } { 2 } \\leq \\lambda \\leq \\frac { 3 } { 2 } . $ \n\nStep 4: Decide feasible options.\n\nEvery real eigenvalue of N must lie in $[ 1 / 2 , 3 / 2 ]$ . Thus $\\textstyle { \\frac { 1 } { 4 } }$ and $\\frac { 7 } { 4 }$ are impossible, while $\\frac { 1 } { 2 }$ and $\\frac 3 4$\n\nare attainable (e.g., by taking v along the D-eigenvectors with eigenvalues 3 and 2, respectively).\nQuick Tip\n\nFor equations of the form $A X + X ^ { T } A = c I$ with $A \\succ 0 .$ , testing a real eigenpair $X v = \\lambda v$ and forming $v ^ { T } ( \\cdot ) v$ often yields tight bounds on λ via Rayleigh quotients."
+}

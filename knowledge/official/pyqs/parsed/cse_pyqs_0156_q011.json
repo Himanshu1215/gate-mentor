@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q11",
+  "question_seq": 156,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "If $\\mathsf { A } = \\left( \\begin{array} { l l } { 1 } & { 2 } \\\\ { 2 } & { - 1 } \\end{array} \\right)$ , then which ONE of the following is $A ^ { 8 } ~ ?$",
+  "options": {
+    "A": "$\\left( \\begin{array} { c c } { { 2 5 } } & { { 0 } } \\\\ { { 0 } } & { { 2 5 } } \\end{array} \\right)$",
+    "C": "$\\left( \\begin{array} { c c } { { 6 2 5 } } & { { 0 } } \\\\ { { 0 } } & { { 6 2 5 } } \\end{array} \\right)$",
+    "B": "$\\left( { \\begin{array} { c c } { 1 2 5 } & { 0 } \\\\ { 0 } & { 1 2 5 } \\end{array} } \\right)$",
+    "D": "$\\left( \\begin{array} { c c } { { 3 1 2 5 } } & { { 0 } } \\\\ { { 0 } } & { { 3 1 2 5 } } \\end{array} \\right)$ [2025 (Set-2) : 1 M]"
+  },
+  "answer": "C",
+  "solution": "To determine \\( A^8 \\) for the matrix \\( A = \\left( \\begin{array} { l l } { 1 } & { 2 } \\\\ { 2 } & { - 1 } \\end{array} \\right) \\), we can use the fact that \\( A \\) is a diagonalizable matrix. First, we find the eigenvalues and eigenvectors of \\( A \\).\n\nThe characteristic polynomial of \\( A \\) is given by:\n\\[\n\\det(A - \\lambda I) = \\det \\left( \\begin{array} { l l } { 1 - \\lambda } & { 2 } \\\\ { 2 } & { -1 - \\lambda } \\end{array} \\right) = (1 - \\lambda)(-1 - \\lambda) - 4 = \\lambda^2 - 5\n\\]\nSetting the characteristic polynomial equal to zero, we get:\n\\[\n\\lambda^2 - 5 = 0 \\implies \\lambda = \\pm \\sqrt{5}\n\\]\nSo, the eigenvalues of \\( A \\) are \\( \\lambda_1 = \\sqrt{5} \\) and \\( \\lambda_2 = -\\sqrt{5} \\).\n\nNext, we find the eigenvectors corresponding to these eigenvalues. For \\( \\lambda_1 = \\sqrt{5} \\), we solve:\n\\[\n(A - \\sqrt{5} I) \\mathbf{v} = \\left( \\begin{array} { l l } { 1 - \\sqrt{5} } & { 2 } \\\\ { 2 } & { -1 - \\sqrt{5} } \\end{array} \\right) \\left( \\begin{array} { l } { x } \\\\ { y } \\end{array} \\right) = \\left( \\begin{array} { l } { 0 } \\\\ { 0 } \\end{array} \\right)\n\\]\nThis gives us the system of equations:\n\\[\n(1 - \\sqrt{5})x + 2y = 0 \\implies y = \\frac{\\sqrt{5} - 1}{2} x\n\\]\nSo, an eigenvector corresponding to \\( \\lambda_1 = \\sqrt{5} \\) is \\( \\mathbf{v}_1 = \\left( \\begin{array} { l } { 2 } \\\\ { \\sqrt{5} - 1 } \\end{array} \\right) \\).\n\nFor \\( \\lambda_2 = -\\sqrt{5} \\), we solve:\n\\[\n(A + \\sqrt{5} I) \\mathbf{v} = \\left( \\begin{array} { l l } { 1 + \\sqrt{5} } & { 2 } \\\\ { 2 } & { -1 + \\sqrt{5} } \\end{array} \\right) \\left( \\begin{array} { l } { x } \\\\ { y } \\end{array} \\right) = \\left( \\begin{array} { l } { 0 } \\\\ { 0 } \\end{array} \\right)\n\\]\nThis gives us the system of equations:\n\\[\n(1 + \\sqrt{5})x + 2",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

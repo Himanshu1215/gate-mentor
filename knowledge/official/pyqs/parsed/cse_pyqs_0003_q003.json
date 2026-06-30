@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q3",
+  "question_seq": 3,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Ten friends planned to share equally the cost of buying a gift for their teacher. When two of them decided not to contribute, each of the other friends had to pay Rs. 150 more. The cost of the gift was Rs. (a) 12000 (b) 6000 (c) 3000 (d) 666",
+  "options": null,
+  "answer": "B",
+  "solution": "Let's denote the total cost of the gift by \\( C \\) and the initial number of friends by \\( n = 10 \\). Initially, each friend was supposed to pay \\( \\frac{C}{10} \\).\n\nWhen two friends decided not to contribute, the number of friends left is \\( 10 - 2 = 8 \\). Now, each of the remaining friends has to pay \\( \\frac{C}{8} \\). According to the problem, each of the remaining friends has to pay Rs. 150 more than they were initially supposed to pay. Therefore, we can write the equation:\n\n\\[\n\\frac{C}{8} = \\frac{C}{10} + 150\n\\]\n\nTo eliminate the fractions, we find the least common multiple of 8 and 10, which is 40. We multiply every term in the equation by 40:\n\n\\[\n40 \\cdot \\frac{C}{8} = 40 \\cdot \\frac{C}{10} + 40 \\cdot 150\n\\]\n\nSimplifying each term, we get:\n\n\\[\n5C = 4C + 6000\n\\]\n\nNext, we isolate \\( C \\) by subtracting \\( 4C \\) from both sides of the equation:\n\n\\[\n5C - 4C = 6000\n\\]\n\nThis simplifies to:\n\n\\[\nC = 6000\n\\]\n\nTherefore, the cost of the gift is \\(\\boxed{6000}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

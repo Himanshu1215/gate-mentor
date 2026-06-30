@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q33",
+  "question_seq": 38,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $\\Omega = \\{ 1 , 2 , 3 , \\dots \\}$ represent the collection of all possible outcomes of a random experiment with probabilities $P ( \\{ n \\} ) = a _ { n }$ for $n \\in \\Omega$ . Then which one of the following statements is NOT true?",
+  "options": {
+    "A": "$\\scriptstyle \\operatorname* { l i m } _ { n \\to \\infty } a _ { n } = 0$",
+    "B": "$\\textstyle \\sum _ { n = 1 } ^ { \\infty } { \\sqrt { a _ { n } } }$ converges",
+    "C": "For any positive integer k, there exist k disjoint events $A _ { 1 } , A _ { 2 } , \\ldots , A _ { k }$ such that $ P \\left( \\bigcup _ { i = 1 } ^ { k } A _ { i } \\right) < 0 . 0 0 1 $",
+    "D": "There exists a sequence $\\{ A _ { i } \\} _ { i \\ge 1 }$ of strictly increasing events such that $ P \\left( \\bigcup _ { i = 1 } ^ { \\infty } A _ { i } \\right) < 0 . 0 0 1 $"
+  },
+  "answer": "B",
+  "solution": "We are given a random experiment with probabilities $P ( \\{ n \\} ) = a _ { n }$ for $n \\in \\Omega$ . The statements deal with the convergence of sums of probabilities and events.\n\nStep 1: Analyze each option.\n\n\\- Option (A) is correct because for a probability distribution, the individual probabilities $a _ { n }$ must tend to zero as $n \\to \\infty$\n\n\\- Option (B) is incorrect because the series $\\textstyle \\sum _ { n = 1 } ^ { \\infty } { \\sqrt { a _ { n } } }$ cannot always be assumed to converge for all probability distributions.\n\n\\- Option (C) is correct because for any k, we can always find disjoint events whose union has a probability less than 0.001, given that the probabilities $a _ { n }$ are small.\n\n\\- Option (D) is correct because it is possible to construct a sequence of events such that the probability of their union is less than 0.001.\n\nFinal Answer:\n\n$\\sum _ { n = 1 } ^ { \\infty } \\sqrt { a _ { n } }$ does not always converge\nQuick Tip\n\nFor infinite series of probabilities, check the behavior of individual terms and ensure that the series converges based on the given conditions."
+}

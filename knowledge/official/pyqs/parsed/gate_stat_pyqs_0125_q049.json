@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q49",
+  "question_seq": 125,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable with characteristic function $\\phi _ { X } ( \\cdot )$ such that $\\phi _ { X } ( 2 \\pi ) = 1 $ . Let Z denote the set of integers. Then $P ( X \\in \\mathbb { Z } )$ is equal to ...",
+  "options": null,
+  "answer": null,
+  "solution": "To solve for \\( P(X \\in \\mathbb{Z}) \\) given that the characteristic function \\(\\phi_X(2\\pi) = 1\\), we start by recalling the definition of the characteristic function of a random variable \\(X\\):\n\n\\[\n\\phi_X(t) = \\mathbb{E}[e^{itX}]\n\\]\n\nGiven that \\(\\phi_X(2\\pi) = 1\\), we substitute \\(t = 2\\pi\\) into the characteristic function:\n\n\\[\n\\phi_X(2\\pi) = \\mathbb{E}[e^{i \\cdot 2\\pi X}] = 1\n\\]\n\nThe expression \\(e^{i \\cdot 2\\pi X}\\) is a complex exponential function, which can be rewritten using Euler's formula:\n\n\\[\ne^{i \\cdot 2\\pi X} = \\cos(2\\pi X) + i \\sin(2\\pi X)\n\\]\n\nThus, the characteristic function becomes:\n\n\\[\n\\phi_X(2\\pi) = \\mathbb{E}[\\cos(2\\pi X) + i \\sin(2\\pi X)]\n\\]\n\nBy linearity of expectation, we can split this into two separate expectations:\n\n\\[\n\\phi_X(2\\pi) = \\mathbb{E}[\\cos(2\\pi X)] + i \\mathbb{E}[\\sin(2\\pi X)]\n\\]\n\nGiven that \\(\\phi_X(2\\pi) = 1\\), we equate the real and imaginary parts:\n\n\\[\n\\mathbb{E}[\\cos(2\\pi X)] + i \\mathbb{E}[\\sin(2\\pi X)] = 1 + 0i\n\\]\n\nThis gives us two equations:\n\n1. \\(\\mathbb{E}[\\cos(2\\pi X)] = 1\\)\n2. \\(\\mathbb{E}[\\sin(2\\pi X)] = 0\\)\n\nNext, we interpret these equations in terms of the distribution of \\(X\\). The expected value \\(\\mathbb{E}[\\cos(2\\pi X)] = 1\\) implies that \\(\\cos(2\\pi X)\\) is always equal to 1. This is because the cosine function \\(\\cos(2\\pi x)\\) equals 1 only when \\(x\\) is an integer. Therefore, \\(X\\) must be an integer almost surely.\n\nSimilarly, \\(\\mathbb{E}[\\sin(2\\pi X)] = 0\\) implies that \\(\\sin(2\\pi X)\\) is always equal to 0. This is because the sine function \\(\\sin(2\\pi x)\\) equals 0 for all integers \\(x\\).\n\nSince \\(X\\) must be an integer almost surely, the probability that \\(X\\) is an integer is:\n\n\\[\nP(X \\in \\mathbb{Z}) = 1\n\\]\n\nThus, the final answer is:\n\n\\[\n\\boxed{1}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

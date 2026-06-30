@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q28",
+  "question_seq": 110,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X and Y be two independent random variables with $\\chi _ { m } ^ { 2 }$ and $\\chi _ { n } ^ { 2 }$ distributions, respectively, where m and n are positive integers. Then which of the following statements is true? (A) For $m < n , P ( X > a ) \\geq P ( Y > a )$ for all $a \\in \\mathbb { R }$ (B) For $m > n , P ( X > a ) \\geq P ( Y > a )$ for all $a \\in \\mathbb { R }$ (C) For $m < n , P ( X > a ) = P ( Y > a )$ for all $a \\in \\mathbb { R } .$ (D) None of the above.",
+  "options": null,
+  "answer": null,
+  "solution": "To determine which statement is true, we need to understand the properties of the chi-squared distribution. The chi-squared distribution with \\( k \\) degrees of freedom, denoted as \\( \\chi_k^2 \\), has a probability density function (pdf) that is right skew and depends on the degrees of freedom \\( k \\). As \\( k \\) increases, the distribution becomes less skew and more like a normal distribution.\n\n Specifically, for two independent random variables \\( X \\) and \\( Y \\) with \\( \\chi_m^2 \\) and \\( \\chi_n^2 \\) distributions respectively, the following holds:\n\n- If \\( m < n \\), the distribution of \\( X \\) is more spread out than the distribution of \\( Y \\). This means that for any given value \\( a \\), the probability that \\( X \\) is greater than \\( a \\) is greater than the probability that \\( Y \\) is greater than \\( a \\). Mathematically, this is expressed as \\( P(X > a) > P(Y > a) \\) for all \\( a \\in \\mathbb{R} \\).\n- If \\( m > n \\), the distribution of \\( X \\) is less spread out than the distribution of \\( Y \\). This means that for any given value \\( a \\), the probability that \\( X \\) is greater than \\( a \\) is less than the probability that \\( Y \\) is greater than \\( a \\). Mathematically, this is expressed as \\( P(X > a) < P(Y > a) \\) for all \\( a \\in \\mathbb{R} \\).\n- If \\( m = n \\), the distributions of \\( X \\) and \\( Y \\) are identical. This means that for any given value \\( a \\), the probability that \\( X \\) is greater than \\( a \\) is equal to the probability that \\( Y \\) is greater than \\( a \\). Mathematically, this is expressed as \\( P(X > a) = P(Y > a) \\) for all \\( a \\in \\mathbb{R} \\).\n\nGiven these properties, we can see that the correct statement is:\n\nFor \\( m < n \\), \\( P(X > a) > P(Y > a) \\) for all \\( a \\in \\mathbb{R} \\).\n\nTherefore, the correct answer is \\(\\boxed{\\text{D}}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

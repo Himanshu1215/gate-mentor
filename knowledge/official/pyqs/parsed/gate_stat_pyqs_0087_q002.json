@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q2",
+  "question_seq": 87,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let ${ \\vec { F } } = ( x - y + z ) ( { \\vec { \\imath } } + { \\vec { \\jmath } } )$ be a vector field on ${ \\mathbb { R } } ^ { 3 }$ . The line integral $\\int _ { c } \\vec { F } \\cdot d \\vec { r }$ , where C is the triangle with vertices (0,0,0), (5,0,0) and (5,5,0) traversed in that order is (A) -25 (B) 25 (C) 50 (D) 5",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the line integral \\(\\int_C \\vec{F} \\cdot d\\vec{r}\\) where \\(\\vec{F} = (x - y + z)(\\vec{\\imath} + \\vec{\\jmath})\\) and \\(C\\) is the triangle with vertices \\((0,0,0)\\), \\((5,0,0)\\), and \\((5,5,0)\\) traversed in that order, we need to break the integral into three parts corresponding to the three sides of the triangle.\n\n### Step 1: Parametrize the sides of the triangle\n\n1. **Side 1: From \\((0,0,0)\\) to \\((5,0,0)\\)**\n   - Parametric equations: \\(x = t\\), \\(y = 0\\), \\(z = 0\\) for \\(0 \\leq t \\leq 5\\)\n   - Differential: \\(d\\vec{r} = \\vec{\\imath} \\, dt\\)\n\n2. **Side 2: From \\((5,0,0)\\) to \\((5,5,0)\\)**\n   - Parametric equations: \\(x = 5\\), \\(y = t\\), \\(z = 0\\) for \\(0 \\leq t \\leq 5\\)\n   - Differential: \\(d\\vec{r} = \\vec{\\jmath} \\, dt\\)\n\n3. **Side 3: From \\((5,5,0)\\) to \\((0,0,0)\\)**\n   - Parametric equations: \\(x = 5 - t\\), \\(y = 5 - t\\), \\(z = 0\\) for \\(0 \\leq t \\leq 5\\)\n   - Differential: \\(d\\vec{r} = -\\vec{\\imath} - \\vec{\\jmath} \\, dt\\)\n\n### Step 2: Compute the line integral for each side\n\n1. **Side 1:**\n   \\[\n   \\int_{C_1} \\vec{F} \\cdot d\\vec{r} = \\int_0^5 (t - 0 + 0)(\\vec{\\imath} + \\vec{\\jmath}) \\cdot \\vec{\\imath} \\, dt = \\int_0^5 t \\, dt = \\left[ \\frac{t^2}{2} \\right]_0^5 = \\frac{25}{2}\n   \\]\n\n2. **Side 2:**\n   \\[\n   \\int_{C_2} \\vec{F} \\cdot d\\vec{r} = \\int_0^5 (5 - t - t + 0)(\\vec{\\imath} + \\vec{\\jmath}) \\cdot \\vec{\\jmath} \\, dt = \\int_0^5 (5 - 2t) \\, dt = \\left[ 5t - t^2 \\right]_0^5 = 25 - 25 = 0\n   \\]\n\n3. **Side 3:**\n   \\[\n   \\int_{C_3} \\vec{F} \\cdot d\\vec{r} = \\int_0^5 (",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

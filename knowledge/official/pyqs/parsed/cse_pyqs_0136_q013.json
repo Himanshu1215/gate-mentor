@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q13",
+  "question_seq": 136,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "TCP client P successfully establishes a connection to TCP server Q. Let $N _ { P }$ denote the sequence number in the SYN sent from P to Q. Let $N _ { Q }$ denote the acknowledgement number in the SYN ACK from Qto P. Which of the following statements is/are CORRECT?",
+  "options": {
+    "A": "The acknowledgement number $N _ { Q }$ is equal to $N _ { P }$",
+    "B": "The sequence number $N _ { Q }$ is always 0 for a new connection",
+    "C": "The acknowledgement number $N _ { Q }$ is equal to $N _ { P } + 1$",
+    "D": "The sequence number $N _ { P }$ is chosen randomly by $P$"
+  },
+  "answer": "C",
+  "solution": "To determine which statement is correct, let's analyze the process of建立 a conection between a TCP client \\( P \\) and a TCP server \\( Q \\).\n\n1. **Synmetry Protocol**:\n   - When client \\( P \\) starts a connection to server \\( Q \\), it sends a SYN message with a sequence number \\( N_P \\).\n   - Server \\( Q \\) receives the_SYN message and sends a SYN ACK message with an acknowledging sequence number \\( N_Q \\).\n\n2. ** sequence numbers**:\n   - The sequence number \\( N_P \\) is the unique number assigned to the_SYN message sent by client \\( P \\).\n   - The sequence number \\( N_Q \\) is the unique number assigned to the_SYN ACK message sent by server \\( Q \\).\n\n3. **Relationship between \\( N_P \\) and \\( N_Q \\)**:\n   - According to the TCP synometry protocol, the sequence number \\( N_Q \\) in the SYN ACK message is always one more than the sequence number \\( N_P \\) in the_SYN message. This is because the_SYN ACK message is a response to the_SYN message and indicates that the server has received and processed the SYN message.\n\nTherefore, the correct relationship is:\n\\[ N_Q = N_P + 1 \\]\n\nNow, let's evaluate each statement:\n\n(A) The acknowledgement number \\( N_Q \\) is equal to \\( N_P \\):\n   - This is incorrect because \\( N_Q \\) is always one more than \\( N_P \\).\n\n(B) The sequence number \\( N_Q \\) is always 0 for a new connection:\n   - This is incorrect because \\( N_Q \\) is not necessarily 0. It depends on the initial sequence number \\( N_P \\) sent by the client.\n\n(C) The acknowledgement number \\( N_Q \\) is equal to \\( N_P + 1 \\):\n   - This is correct based on the TCP synometry protocol.\n\n(D) The sequence number \\( N_P \\) is chosen randomly by \\( P \\):\n   - This is incorrect because \\( N_P \\) is not chosen randomly. It is a unique number assigned to the_SYN message.\n\nBased on the analysis, the correct statement is:\n\\[\n\\boxed{C}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

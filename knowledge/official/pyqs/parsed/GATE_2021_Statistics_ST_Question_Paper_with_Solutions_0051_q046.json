@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q46",
+  "question_seq": 51,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_002",
+  "question_text": "Let $ A = \\left[ a \\quad u _ { 1 } \\quad u _ { 2 } \\quad u _ { 3 } \\right] , \\quad B = \\left[ b \\quad u _ { 1 } \\quad u _ { 2 } \\quad u _ { 3 } \\right] , \\quad C = \\left[ u _ { 2 } \\quad u _ { 3 } \\quad u _ { 1 } \\quad a + b \\right] . $ Let det(A), det(B), det(C) denote the determinants of the matrices A, B, and $C ,$ respectively. If $ \\operatorname * { d e t } ( A ) = 6 , \\quad \\operatorname * { d e t } ( B ) = 2 , \\quad \\operatorname { t h e n } \\ \\operatorname * { d e t } ( A + B ) - \\operatorname * { d e t } ( C ) = . . . . . . . . . . $",
+  "options": null,
+  "answer": null,
+  "solution": "Given the determinants of A and B, we can use properties of determinants to simplify the expression det $( A + B ) - \\operatorname* { d e t } ( C )$ . Calculating gives:\n\n $ \\operatorname* { d e t } ( A + B ) - \\operatorname* { d e t } ( C ) = 7 . $ \n\nThus, the value is 7.\nQuick Tip\n\nWhen working with determinants of sums, use properties of determinants and matrix operations to simplify the calculations."
+}

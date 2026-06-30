@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q42",
+  "question_seq": 39,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , \\dots , X _ { n }$ be independent and identically distributed random variables having $N ( \\mu , \\sigma ^ { 2 } )$ distribution, where $\\mu \\in \\mathbb { R }$ and $\\sigma > 0$ . Consider the following statements: (I) I $\\begin{array} { r } { \\mathrm { ~ f ~ } \\frac { \\sqrt { 5 } } { \\sigma ( 2 n + 1 ) } \\sum _ { i = 1 } ^ { n } i \\left( X _ { i } - \\mu \\right) } \\end{array}$ has $N ( 0 , 1 )$ distribution, then $n = 2$ (II) $\\begin{array} { r } { E \\left( \\left( - \\log _ { e } { \\left( \\Phi \\left( \\frac { X _ { 1 } - \\mu } { \\sigma } \\right) \\right) } \\right) ^ { 3 } \\right) = 6 } \\end{array}$ , where (⋅) denotes the cumulative distribution function of ??(0,1) random variable. Which of the above statements is/are true?",
+  "options": {
+    "A": "Only (I)",
+    "B": "Only (II)",
+    "C": "Both (I) and (II)",
+    "D": "Neither (I) nor (II) Let $\\{ X _ { n } \\} _ { n \\geq 1 }$ be a sequence of independent and identically distributed random variables having probability density function $ f ( x ) = { \\left\\{ \\begin{array} { l l } { e ^ { - ( x - \\theta ) } } & { { \\mathrm { i f ~ } } x \\geq \\theta } \\\\ { 0 } & { { \\mathrm { o t h e r w i s e } } , } \\end{array} \\right. } $ where $\\theta > 0$ . Consider the following statements: (I) $\\textstyle { \\frac { 1 } { n } } \\sum _ { i = 1 } ^ { n } X _ { i }$ converges in probability to $\\frac { \\theta + 1 } { 2 }$ , as $n \\to \\infty$ (II) $\\operatorname* { l i m } _ { n \\to \\infty } E ( \\operatorname* { m i n } \\{ X _ { 1 } , X _ { 2 } , \\dots , X _ { n } \\} ) = \\theta .$ Which of the above statements is/are true?"
+  },
+  "answer": null,
+  "solution": "To solve the given problem, we need to analyze each statement separately.\n\n**Statement (I):**\nWe are given that \\(\\frac{\\sqrt{5}}{\\sigma(2n+1)} \\sum_{i=1}^n i (X_i - \\mu)\\) has a \\(N(0,1)\\) distribution. We need to determine if this implies that \\(n = 2\\).\n\nFirst, let's find the mean and variance of \\(\\sum_{i=1}^n i (X_i - \\mu)\\).\n\nThe mean of \\(X_i\\) is \\(\\mu\\), so the mean of \\(X_i - \\mu\\) is \\(0\\). Therefore, the mean of \\(\\sum_{i=1}^n i (X_i - \\mu)\\) is:\n\\[\nE\\left[\\sum_{i=1}^n i (X_i - \\mu)\\right] = \\sum_{i=1}^n i E[X_i - \\mu] = \\sum_{i=1}^n i \\cdot 0 = 0.\n\\]\n\nNext, we find the variance of \\(\\sum_{i=1}^n i (X_i - \\mu)\\). Since the \\(X_i\\) are independent, the variance of the sum is the sum of the variances:\n\\[\n\\text{Var}\\left[\\sum_{i=1}^n i (X_i - \\mu)\\right] = \\sum_{i=1}^n i^2 \\text{Var}[X_i - \\mu] = \\sum_{i=1}^n i^2 \\sigma^2 = \\sigma^2 \\sum_{i=1}^n i^2.\n\\]\n\nThe sum of the squares of the first \\(n\\) natural numbers is given by:\n\\[\n\\sum_{i=1}^n i^2 = \\frac{n(n+1)(2n+1)}{6}.\n\\]\n\nTherefore, the variance of \\(\\sum_{i=1}^n i (X_i - \\mu)\\) is:\n\\[\n\\sigma^2 \\cdot \\frac{n(n+1)(2n+1)}{6}.\n\\]\n\nNow, we consider the random variable \\(\\frac{\\sqrt{5}}{\\sigma(2n+1)} \\sum_{i=1}^n i (X_i - \\mu)\\). The mean of this random variable is:\n\\[\nE\\left[\\frac{\\sqrt{5}}{\\sigma(2n+1)} \\sum_{i=1}^n i (X_i - \\mu)\\right] = \\frac{\\sqrt{5}}{\\sigma(2n+1)} \\cdot 0 = 0.\n\\]\n\nThe variance of this random variable is:\n\\[\n\\text{Var}\\left[\\frac{\\sqrt{5}}{\\sigma(2n+1)} \\sum_{i=1}^n i (X_i - \\mu)\\right] = \\left(\\frac{\\sqrt{5}}{\\sigma(2n+1)}\\right)^2 \\cdot \\sigma^2 \\cdot \\frac{n(n+1)(2n+1)}{6} = \\frac{5}{\\sigma^2 (2n+1)^2} \\cdot \\sigma^",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

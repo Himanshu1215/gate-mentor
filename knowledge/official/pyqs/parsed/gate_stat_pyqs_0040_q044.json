@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q44",
+  "question_seq": 40,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $\\{ X _ { n } \\} _ { n \\geq 1 }$ be a sequence of independent random variables such that $X _ { n }$ has Poisson distribution with mean $\\lambda _ { n }$ , where $\\textstyle \\lambda _ { n } = \\lambda + { \\frac { 1 } { 2 ^ { n } } } , n \\geq 1$ , and $\\lambda > 0$ is an unknown parameter. Which one of the following statements is true?",
+  "options": {
+    "A": "$\\scriptstyle { \\frac { 1 } { n } } \\sum _ { i = 1 } ^ { n } X _ { i }$ is an unbiased estimator of ??",
+    "B": "$\\scriptstyle { \\frac { 1 } { n } } \\sum _ { i = 1 } ^ { n } X _ { i }$ is a consistent estimator of ??",
+    "C": "$\\textstyle \\sum _ { i = 1 } ^ { n } X _ { i }$ is a consistent estimator of ??",
+    "D": "$\\scriptstyle { \\frac { 1 } { n ^ { 2 } } } \\sum _ { i = 1 } ^ { n } X _ { i }$ is an unbiased estimator of ??"
+  },
+  "answer": null,
+  "solution": "To determine which statement is true, we need to analyze the properties of the given sequence of random variables and their sums.\n\nFirst, recall that the expected value of a Poisson random variable \\(X_n\\) with mean \\(\\lambda_n\\) is \\(\\lambda_n\\). Therefore, the expected value of \\(X_n\\) is:\n\\[\nE[X_n] = \\lambda + \\frac{1}{2^n}\n\\]\n\n### Step 1: Check if \\(\\frac{1}{n} \\sum_{i=1}^n X_i\\) is an unbiased estimator of \\(\\lambda\\)\n\nThe expected value of the sample mean \\(\\frac{1}{n} \\sum_{i=1}^n X_i\\) is:\n\\[\nE\\left[\\frac{1}{n} \\sum_{i=1}^n X_i\\right] = \\frac{1}{n} \\sum_{i=1}^n E[X_i] = \\frac{1}{n} \\sum_{i=1}^n \\left(\\lambda + \\frac{1}{2^i}\\right) = \\frac{1}{n} \\left(n\\lambda + \\sum_{i=1}^n \\frac{1}{2^i}\\right) = \\lambda + \\frac{1}{n} \\sum_{i=1}^n \\frac{1}{2^i}\n\\]\n\nThe sum \\(\\sum_{i=1}^n \\frac{1}{2^i}\\) is a geometric series with the first term \\(\\frac{1}{2}\\) and common ratio \\(\\frac{1}{2}\\), so it sums to:\n\\[\n\\sum_{i=1}^n \\frac{1}{2^i} = \\frac{\\frac{1}{2}(1 - \\left(\\frac{1}{2}\\right)^n)}{1 - \\frac{1}{2}} = 1 - \\frac{1}{2^n}\n\\]\n\nTherefore, the expected value of the sample mean is:\n\\[\nE\\left[\\frac{1}{n} \\sum_{i=1}^n X_i\\right] = \\lambda + \\frac{1}{n} \\left(1 - \\frac{1}{2^n}\\right) = \\lambda + \\frac{1}{n} - \\frac{1}{n2^n}\n\\]\n\nSince \\(\\frac{1}{n} - \\frac{1}{n2^n} \\neq 0\\), \\(\\frac{1}{n} \\sum_{i=1}^n X_i\\) is not an unbiased estimator of \\(\\lambda\\). So, option (A) is false.\n\n### Step 2: Check if \\(\\frac{1}{n} \\sum_{i=1}^n X_i\\) is a consistent estimator of \\(\\lambda\\)\n\nAn estimator is consistent if it converges in probability to the true parameter as the sample size increases. We need to check if:\n\\[\n\\frac{1}{n} \\sum_{i=1}^n X_i \\xrightarrow{P} \\lambda\n\\]\n\nThe variance of the sample mean is:\n\\[\n\\text{Var}\\left(\\frac{1}{n} \\sum_{i=1}^",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

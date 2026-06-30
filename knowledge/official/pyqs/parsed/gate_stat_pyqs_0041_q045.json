@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q45",
+  "question_seq": 41,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , \\ldots , X _ { 2 5 }$ be a random sample of size 25 from a population having $N _ { 3 } ( { \\pmb \\mu } , { \\pmb \\Sigma } )$ distribution, where ?? and non-singular Σ are unknown parameters. Let $\\begin{array} { r } { \\boldsymbol { S } = \\frac { 1 } { 2 4 } \\sum _ { j = 1 } ^ { 2 5 } \\bigl ( \\boldsymbol { X } _ { j } - \\boldsymbol { \\overline { { X } } } \\bigr ) \\bigl ( \\boldsymbol { X } _ { j } - \\boldsymbol { \\overline { { X } } } \\bigr ) ^ { T } } \\end{array}$ , where $\\begin{array} { r } { \\overline { { \\pmb { X } } } = \\frac { 1 } { 2 5 } \\sum _ { j = 1 } ^ { 2 5 } { \\pmb { X } } _ { j } } \\end{array}$ , and $B = \\left[ { \\begin{array} { l l l } { 1 } & { 2 } & { 3 } \\\\ { - 1 } & { 0 } & { 1 } \\end{array} } \\right]$ . Then which one of the following statements is true?",
+  "options": {
+    "A": "24 $B S B ^ { T }$ follows a Wishart distribution of order 3 with 24 degrees of freedom",
+    "B": "24 $B S B ^ { T }$ follows a Wishart distribution of order 2 with 25 degrees of freedom",
+    "C": "24 $B S B ^ { T }$ follows a Wishart distribution of order 2 with 24 degrees of freedom",
+    "D": "$2 4 \\ : B S B ^ { T }$ follows a Wishart distribution of order 3 with 25 degrees of freedom"
+  },
+  "answer": null,
+  "solution": "To determine the distribution of \\(24 B S B^T\\), we need to understand the properties of the sample covariance matrix \\(S\\) and how it transforms under a linear transformation.\n\nGiven:\n- \\(X_1, X_2, \\ldots, X_{25}\\) is a random sample from a multivariate normal distribution \\(N_3(\\boldsymbol{\\mu}, \\boldsymbol{\\Sigma})\\).\n- \\(S = \\frac{1}{24} \\sum_{j=1}^{25} (\\boldsymbol{X}_j - \\overline{\\boldsymbol{X}})(\\boldsymbol{X}_j - \\overline{\\boldsymbol{X}})^T\\), where \\(\\overline{\\boldsymbol{X}} = \\frac{1}{25} \\sum_{j=1}^{25} \\boldsymbol{X}_j\\).\n- \\(B = \\left[ \\begin{array}{lll} 1 & 2 & 3 \\\\ -1 & 0 & 1 \\end{array} \\right]\\).\n\nWe need to find the distribution of \\(24 B S B^T\\).\n\n### Step 1: Distribution of \\(S\\)\nThe matrix \\(S\\) is the sample covariance matrix of a random sample from a multivariate normal distribution. It is known that:\n\\[\n(n-1)S \\sim W_p(\\boldsymbol{\\Sigma}, n-1)\n\\]\nwhere \\(W_p(\\boldsymbol{\\Sigma}, n-1)\\) denotes a Wishart distribution with scale matrix \\(\\boldsymbol{\\Sigma}\\) and \\(n-1\\) degrees of freedom. Here, \\(n = 25\\), so:\n\\[\n24S \\sim W_3(\\boldsymbol{\\Sigma}, 24)\n\\]\n\n### Step 2: Transformation of \\(S\\)\nWe need to find the distribution of \\(24 B S B^T\\). The transformation \\(B\\) is a \\(2 \\times 3\\) matrix. For a random matrix \\(A\\) that follows a Wishart distribution \\(W_p(\\boldsymbol{\\Sigma}, n)\\), the matrix \\(B A B^T\\) follows a Wishart distribution \\(W_q(B \\boldsymbol{\\Sigma} B^T, n)\\), where \\(q\\) is the rank of \\(B\\).\n\n### Step 3: Rank of \\(B\\)\nTo determine the rank of \\(B\\), we compute its determinant:\n\\[\n\\det(B) = \\det\\left( \\begin{array}{lll} 1 & 2 & 3 \\\\ -1 & 0 & 1 \\end{array} \\right)\n\\]\nSince \\(B\\) is a \\(2 \\times 3\\) matrix, it cannot have a determinant. Instead, we find the rank by row reduction:\n\\[\nB = \\left[ \\begin{array}{lll} 1 & 2 & 3 \\\\ -1 & 0 & 1 \\end{array} \\right]\n\\]\nAdd the first row to the second row:\n\\[\n\\left[ \\begin{array}{lll} 1 & 2 & 3 \\\\ 0 & 2 & 4 \\end{array} \\right]\n\\]\nDivide the second row by 2:\n\\[",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q7",
+  "question_seq": 14,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "Let the joint distribution of (X, Y ) be bivariate normal with mean vector $\\binom { 0 } { 0 }$ and variance-covariance matrix $\\left( \\begin{array} { l l } { 1 } & { \\rho } \\\\ { \\rho } & { 1 } \\end{array} \\right)$ , where $- 1 < \\rho < 1$ . Let $\\Phi _ { \\rho } ( 0 , 0 ) = P ( X \\leq 0 , Y \\leq 0 )$ Then the Kendall’s τ coefficient between X and Y equals",
+  "options": {
+    "A": "$4 \\Phi _ { \\rho } ( 0 , 0 ) - 1$",
+    "B": "$4 \\Phi _ { \\rho } ( 0 , 0 )$",
+    "C": "$4 \\Phi _ { \\rho } ( 0 , 0 ) + 1$",
+    "D": "$\\Phi _ { \\rho } ( 0 , 0 )$"
+  },
+  "answer": "A",
+  "solution": "The Kendall’s τ coefficient is a measure of the ordinal association between two variables, and it can be related to the joint distribution of X and Y in the bivariate normal case. For bivariate\n\nnormal variables with correlation $\\rho ,$ the Kendall’s $\\tau$ coefficient is given by the formula:\n\n $ \\tau = 4 \\Phi _ { \\rho } ( 0 , 0 ) - 1 , $ \n\nwhere $\\Phi _ { \\rho } ( 0 , 0 )$ is the bivariate normal cumulative distribution function evaluated at $( 0 , 0 )$ Since the joint distribution is bivariate normal, the formula above applies directly, and hence the Kendall’s $\\tau$ coefficient is $4 \\Phi _ { \\rho } ( 0 , 0 ) - 1$\n\nFinal Answer:\n\n $ \\boxed { ( \\mathbf { A } ) 4 \\Phi _ { \\rho } ( 0 , 0 ) - 1 } . $ \nQuick Tip\n\nIn the bivariate normal case, the Kendall’s τ coefficient can be computed using the joint distribution function $\\Phi _ { \\rho } ( 0 , 0 )$ , which captures the probability of both variables being less than or equal to $0 .$"
+}

@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q5",
+  "question_seq": 107,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The Lucas sequence $L _ { n }$ is defined by the recurrence relation: ${ \\cal L } _ { n } = { \\cal L } _ { n - 1 } + { \\cal L } _ { n - 2 } ,$ for $n \\geq 3 ,$ with $L _ { 1 } = 1$ and $L _ { 2 } = 3$ Which one of the options given is TRUE? $ L _ { n } = \\left( { \\frac { 1 + { \\sqrt { 5 } } } { 2 } } \\right) ^ { n } + \\left( { \\frac { 1 - { \\sqrt { 5 } } } { 2 } } \\right) ^ { n } \\quad\\tag{a} $",
+  "options": {
+    "B": "$L _ { n } = \\left( { \\frac { 1 + { \\sqrt { 5 } } } { 2 } } \\right) ^ { n } - \\left( { \\frac { 1 - { \\sqrt { 5 } } } { 3 } } \\right) ^ { n }$ $ ( \\mathrm { c } ) L _ { n } = \\left( { \\frac { 1 + { \\sqrt { 5 } } } { 2 } } \\right) ^ { n } + \\left( { \\frac { 1 - { \\sqrt { 5 } } } { 3 } } \\right) ^ { n } $",
+    "D": "$L _ { n } = \\left( { \\frac { 1 + { \\sqrt { 5 } } } { 2 } } \\right) ^ { n } - \\left( { \\frac { 1 - { \\sqrt { 5 } } } { 2 } } \\right) ^ { n }$"
+  },
+  "answer": "A",
+  "solution": "To determine which option is correct for the Lucas sequence \\( L_n \\), we start by recalling the general solution to a linear homogeneous recurrence relation with constant coefficients. The recurrence relation given is:\n\n\\[ L_n = L_{n-1} + L_{n-2} \\]\n\nwith initial conditions:\n\n\\[ L_1 = 1 \\]\n\\[ L_2 = 3 \\]\n\nThe characteristic equation associated with the recurrence relation is:\n\n\\[ r^2 = r + 1 \\]\n\nSolving this quadratic equation, we get:\n\n\\[ r^2 - r - 1 = 0 \\]\n\nUsing the quadratic formula \\( r = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} \\), where \\( a = 1 \\), \\( b = -1 \\), and \\( c = -1 \\), we find:\n\n\\[ r = \\frac{1 \\pm \\sqrt{1 + 4}}{2} = \\frac{1 \\pm \\sqrt{5}}{2} \\]\n\nThus, the roots are:\n\n\\[ r_1 = \\frac{1 + \\sqrt{5}}{2} \\]\n\\[ r_2 = \\frac{1 - \\sqrt{5}}{2} \\]\n\nThe general solution to the recurrence relation is:\n\n\\[ L_n = A \\left( \\frac{1 + \\sqrt{5}}{2} \\right)^n + B \\left( \\frac{1 - \\sqrt{5}}{2} \\right)^n \\]\n\nWe need to determine the constants \\( A \\) and \\( B \\) using the initial conditions. Using \\( L_1 = 1 \\):\n\n\\[ A \\left( \\frac{1 + \\sqrt{5}}{2} \\right) + B \\left( \\frac{1 - \\sqrt{5}}{2} \\right) = 1 \\]\n\nUsing \\( L_2 = 3 \\):\n\n\\[ A \\left( \\frac{1 + \\sqrt{5}}{2} \\right)^2 + B \\left( \\frac{1 - \\sqrt{5}}{2} \\right)^2 = 3 \\]\n\nFirst, simplify \\( \\left( \\frac{1 + \\sqrt{5}}{2} \\right)^2 \\) and \\( \\left( \\frac{1 - \\sqrt{5}}{2} \\right)^2 \\):\n\n\\[ \\left( \\frac{1 + \\sqrt{5}}{2} \\right)^2 = \\frac{(1 + \\sqrt{5})^2}{4} = \\frac{1 + 2\\sqrt{5} + 5}{4} = \\frac{6 + 2\\sqrt{5}}{4} = \\frac{3 + \\sqrt{5}}{2} \\]\n\n\\[ \\left( \\frac{1 - \\sqrt{5}}{2} \\right)^2 = \\frac{(1 - \\sqrt{5})^2}{4} = \\frac{1 - 2\\sqrt{5} + 5}{4} = \\frac{6 - 2\\sqrt{5}}{4} = \\frac{3 - \\sqrt{5}}{2} \\]\n\nSubstitute these into the second initial condition:\n\n\\[ A \\left( \\frac{3",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

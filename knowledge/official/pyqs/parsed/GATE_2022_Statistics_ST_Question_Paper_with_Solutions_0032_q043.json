@@ -1,0 +1,17 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q43",
+  "question_seq": 32,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , \\ldots , X _ { 7 }$ be a random sample from a normal population with mean 0 and variance $\\theta > 0$ . Let $ K = { \\frac { X _ { 1 } ^ { 2 } + X _ { 2 } ^ { 2 } + \\cdot \\cdot \\cdot + X _ { 7 } ^ { 2 } } { X _ { 1 } ^ { 2 } + X _ { 2 } ^ { 2 } + \\cdot \\cdot \\cdot + X _ { 7 } ^ { 2 } } } . $",
+  "options": {
+    "C": "onsider the following statements:"
+  },
+  "answer": null,
+  "solution": "To solve the problem, we need to understand the properties of the given random variables and the expression for \\( K \\).\n\nGiven:\n- \\( X_1, X_2, \\ldots, X_7 \\) are a random sample from a normal population with mean 0 and variance \\( \\theta > 0 \\).\n- \\( K = \\frac{X_1^2 + X_2^2 + \\cdots + X_7^2}{X_1^2 + X_2^2 + \\cdots + X_7^2} \\).\n\nFirst, let's simplify the expression for \\( K \\):\n\\[ K = \\frac{X_1^2 + X_2^2 + \\cdots + X_7^2}{X_1^2 + X_2^2 + \\cdots + X_7^2} = 1. \\]\n\nThis simplification shows that \\( K \\) is always equal to 1, regardless of the values of \\( X_1, X_2, \\ldots, X_7 \\).\n\nTherefore, the final answer is:\n\\[ \\boxed{1} \\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

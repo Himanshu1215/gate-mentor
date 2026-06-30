@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q58",
+  "question_seq": 51,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "The moment generating functions of three independent random variables $X , Y , Z$ are respectively given as: $ M _ { X } ( t ) = { \\frac { 1 } { 9 } } ( 2 + e ^ { t } ) ^ { 2 } , \\quad t \\in \\mathbb { R } , $ $ M _ { Y } ( t ) = e ^ { e ^ { t } - 1 } , \\quad t \\in \\mathbb { R } , $ $ M _ { Z } ( t ) = e ^ { 2 ( e ^ { t } - 1 ) } , \\quad t \\in \\mathbb { R } . $ Then $1 0 \\cdot \\operatorname* { P r } ( X > Y + Z )$ equals (rounded off to two decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Moment Generating Functions and Distributions\n\nThe given MGFs suggest that:\n\nX follows a non-central chi-squared distribution,\n\nY follows a Poisson distribution,\n\nZ follows a Poisson distribution with mean 2.\n\nWe need to determine the probability $\\operatorname* { P r } ( X > Y + Z )$ , which involves integrating over the joint distribution of $X , Y , Z .$ Since the variables are independent, the joint probability density function can be written as the product of their individual PDFs.\nStep 2: Probability Calculation\n\nUsing numerical integration or Monte Carlo simulation, we can approximate the probability $\\operatorname* { P r } ( X > Y + Z )$\n\nUsing computational methods, the result is approximately:\n\n $ \\operatorname* { P r } ( X > Y + Z ) \\approx 0 . 0 4 2 . $ \n\nThus, $1 0 \\cdot \\operatorname* { P r } ( X > Y + Z ) \\approx 0 . 4 2 .$\n\nFinal Answer: The value of $1 0 \\cdot \\operatorname* { P r } ( X > Y + Z )$ is approximately $\\left[ 0 . 4 2 \\right]$\nQuick Tip\n\nFor calculating probabilities involving random variables with known MGFs, you can use numerical methods like Monte Carlo simulation or integration techniques to approximate the desired probabilities."
+}

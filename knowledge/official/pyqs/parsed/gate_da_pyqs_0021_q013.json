@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q13",
+  "question_seq": 21,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The sum of the elements in each row of $A \\in \\mathbb { R } ^ { n \\times n }$ is 1. If $B = A ^ { 3 } - 2 A ^ { 2 } + A$ , which one of the following statements is correct $( \\mathrm { f o r } x \\in \\mathbb { R } ^ { n } ) ?$ (A) The equation $B x = 0$ has no solution (B) The equation Bx = 0 has exactly two solutions (C) The equation Bx = 0 has infinitely many solutions (D) The equation $B x = 0$ has a unique solution",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the problem, we need to analyze the matrix \\( B = A^3 - 2A^2 + A \\) given that the sum of the elements in each row of \\( A \\in \\mathbb{R}^{n \\times n} \\) is 1. This implies that \\( A \\mathbf{1} = \\mathbf{1} \\), where \\( \\mathbf{1} \\) is the column vector of all ones.\n\nFirst, let's substitute \\( A \\mathbf{1} = \\mathbf{1} \\) into the expression for \\( B \\):\n\n\\[\nB \\mathbf{1} = (A^3 - 2A^2 + A) \\mathbf{1}\n\\]\n\nUsing the distributive property of matrix multiplication, we can break this down into three separate multiplications:\n\n\\[\nB \\mathbf{1} = A^3 \\mathbf{1} - 2A^2 \\mathbf{1} + A \\mathbf{1}\n\\]\n\nSince \\( A \\mathbf{1} = \\mathbf{1} \\), we can substitute \\( \\mathbf{1} \\) for \\( A \\mathbf{1} \\) in each term:\n\n\\[\nA^3 \\mathbf{1} = A (A^2 \\mathbf{1}) = A \\mathbf{1} = \\mathbf{1}\n\\]\n\\[\nA^2 \\mathbf{1} = A (A \\mathbf{1}) = A \\mathbf{1} = \\mathbf{1}\n\\]\n\\[\nA \\mathbf{1} = \\mathbf{1}\n\\]\n\nSubstituting these results back into the expression for \\( B \\mathbf{1} \\), we get:\n\n\\[\nB \\mathbf{1} = \\mathbf{1} - 2\\mathbf{1} + \\mathbf{1} = (1 - 2 + 1) \\mathbf{1} = 0 \\mathbf{1} = \\mathbf{0}\n\\]\n\nThis tells us that \\( B \\mathbf{1} = \\mathbf{0} \\), which means that \\( \\mathbf{1} \\) is a solution to the equation \\( Bx = 0 \\).\n\nNext, we need to determine if there are any other solutions to \\( Bx = 0 \\). To do this, we need to find the nullity of \\( B \\). The nullity of \\( B \\) is the dimension of the null space of \\( B \\), which is the set of all vectors \\( x \\) such that \\( Bx = 0 \\).\n\nSince \\( B = A^3 - 2A^2 + A \\), we can factor \\( B \\) as follows:\n\n\\[\nB = A(A^2 - 2A + I)\n\\]\n\nThe matrix \\( A^2 - 2A + I \\) can be rewritten as:\n\n\\[\nA^2 - 2A + I = (A - I)^2\n\\]\n\nThus, we have:\n\n\\[\nB = A(A - I)^2\n\\]\n\nThe matrix \\( (A - I)^2 \\) is a square matrix of size \\( n \\times n \\",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q25",
+  "question_seq": 20,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X and Y be two independent exponential random variables with $\\begin{array} { r } { E ( X ^ { 2 } ) = \\frac { 1 } { 2 } } \\end{array}$ and $\\begin{array} { r } { E ( Y ^ { 2 } ) = \\frac { 2 } { 9 } } \\end{array}$ . Then $P ( X < 2 Y )$ (rounded off to two decimal places) is equal to",
+  "options": null,
+  "answer": null,
+  "solution": "Let $X \\sim \\mathrm { E x p } ( \\lambda _ { 1 } )$ and $Y \\sim \\mathrm { E x p } ( \\lambda _ { 2 } )$ be independent exponential random variables. The mean and variance of an exponential random variable are related to the rate parameter as follows:\n\n $ E ( X ) = { \\frac { 1 } { \\lambda _ { 1 } } } , \\quad E ( X ^ { 2 } ) = { \\frac { 2 } { \\lambda _ { 1 } ^ { 2 } } } , $ \n\n $ E ( Y ) = { \\frac { 1 } { \\lambda _ { 2 } } } , \\quad E ( Y ^ { 2 } ) = { \\frac { 2 } { \\lambda _ { 2 } ^ { 2 } } } . $ \n\nWe are given $\\begin{array} { r } { E ( X ^ { 2 } ) = \\frac { 1 } { 2 } } \\end{array}$ and $\\begin{array} { r } { E ( Y ^ { 2 } ) = \\frac { 2 } { 9 } } \\end{array}$ , which gives:\n\n $ \\frac { 2 } { \\lambda _ { 1 } ^ { 2 } } = \\frac { 1 } { 2 } \\quad \\Rightarrow \\quad \\lambda _ { 1 } = 2 , $ \n\n $ { \\frac { 2 } { \\lambda _ { 2 } ^ { 2 } } } = { \\frac { 2 } { 9 } } \\quad \\Rightarrow \\quad \\lambda _ { 2 } = 3 . $ \n\nNow, we need to compute $P ( X < 2 Y )$ . Since X and $Y$ are independent, the probability can be computed as:\n\n $ P ( X < 2 Y ) = \\int _ { 0 } ^ { \\infty } P ( X < 2 y ) f _ { Y } ( y ) d y . $ \n\nFor $X \\sim \\mathrm { E x p } ( 2 )$ and $Y \\sim \\mathrm { E x p } ( 3 )$ , the cumulative distribution function (CDF) of X is $F _ { X } ( x ) = 1 - e ^ { - 2 x }$ , and the PDF of Y is $f _ { Y } ( y ) = 3 e ^ { - 3 y }$\n\nThus, the integral becomes:\n\n $ P ( X < 2 Y ) = \\int _ { 0 } ^ { \\infty } ( 1 - e ^ { - 4 y } ) 3 e ^ { - 3 y } d y . $ \n\nAfter solving the integral, we find that $P ( X < 2 Y ) \\approx 0 . 5 5$\n\nThus, $P ( X < 2 Y )$ is approximately 0.59 .\n\nQuick Tip   \nWhen dealing with independent exponential random variables, use their respective   \nCDFs and PDFs to compute probabilities involving linear combinations."
+}

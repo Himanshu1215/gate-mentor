@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q43",
+  "question_seq": 175,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Given the following Karnaugh Map for a Boolean function $F ( w , x , y , z ) ;$ <table><tr><td rowspan=1 colspan=1>1</td><td rowspan=1 colspan=1>0</td><td rowspan=1 colspan=1>0</td><td rowspan=1 colspan=1>1</td></tr><tr><td rowspan=1 colspan=1>0</td><td rowspan=1 colspan=1>1</td><td rowspan=1 colspan=1>1</td><td rowspan=1 colspan=1>0</td></tr><tr><td rowspan=1 colspan=1>0</td><td rowspan=1 colspan=1>1</td><td rowspan=1 colspan=1>1</td><td rowspan=1 colspan=1>0</td></tr><tr><td rowspan=1 colspan=1>1</td><td rowspan=1 colspan=1>0</td><td rowspan=1 colspan=1>0</td><td rowspan=1 colspan=1>1</td></tr></table> Which one or more of the following Boolean expression(s) represent(s) F?",
+  "options": {
+    "A": "$\\overline { { { W } } } \\overline { { { x } } } \\overline { { { y } } } \\overline { { { Z } } } + W \\overline { { { x } } } \\overline { { { y } } } \\overline { { { Z } } } + \\overline { { { W } } } \\overline { { { x } } } y \\overline { { { Z } } } + W \\overline { { { x } } } y \\overline { { { Z } } } + x Z$",
+    "B": "$\\overline { { { W } } } \\overline { { { x } } } \\overline { { { y } } } \\overline { { { Z } } } + \\overline { { { W } } } \\overline { { { x } } } y \\overline { { { Z } } } + W \\overline { { { x } } } y \\overline { { { Z } } } + X Z$",
+    "C": "$\\overline { { { W } } } \\overline { { { x } } } \\overline { { { y } } } \\overline { { { Z } } } + W \\overline { { { x } } } \\overline { { { y } } } \\overline { { { Z } } } + W \\overline { { { x } } } \\overline { { { y } } } \\overline { { { Z } } } + x Z$",
+    "D": "${ \\overline { { x } } } \\equiv { \\overline { { z } } } + x z$ [2025 (Set-2) : 2 M]"
+  },
+  "answer": "A",
+  "solution": "To determine which of the given Boolean expressions represents the given Karnaough Map, we need to analyze the map and identify the minterms that correspond to the 1s in the map. The Karnaough Map is as follows:\n\n\\[\n\\begin{array}{|c|c|c|c|}\n\\hline\n1 & 0 & 0 & 1 \\\\\n\\hline\n0 & 1 & 1 & 0 \\\\\n\\hline\n0 & 1 & 1 & 0 \\\\\n\\hline\n1 & 0 & 0 & 1 \\\\\n\\hline\n\\end{array}\n\\]\n\nThe minterms corresponding to the 1s are:\n- \\( w'x'y'z' \\) (top-left corner)\n- \\( w'x'y'z \\) (top-right corner)\n- \\( w'x'yz \\) (bottom-left corner)\n- \\( w'x'yz' \\) (bottom-right corner)\n- \\( wx'yz \\) (top-right corner)\n- \\( wx'yz' \\) (bottom-right corner)\n\nWe can group these minterms to find the prime implicants. Notice that the minterms \\( w'x'y'z \\) and \\( w'x'yz \\) can be grouped together to form \\( w'x'z \\), and the minterms \\( w'x'yz' \\) and \\( wx'yz' \\) can be grouped together to form \\( xz' \\). The minterm \\( w'x'y'z' \\) and \\( wx'yz \\) cannot be grouped further.\n\nThus, the prime implicants are:\n- \\( w'x'z \\)\n- \\( xz' \\)\n- \\( w'x'z' \\)\n\nHowever, we need to check if there are any other prime implicants that can be formed. Notice that the minterms \\( w'x'y'z' \\) and \\( w'x'z' \\) can be combined to form \\( w'x' \\), and the minterms \\( w'x'z \\) and \\( wx'z \\) can be combined to form \\( xz \\). But these combinations do not cover all the 1s in the map.\n\nTherefore, the correct prime implicants are:\n- \\( w'x'z \\)\n- \\( xz' \\)\n- \\( w'x'z' \\)\n\nHowever, we need to check if there are any other prime implicants that can be formed. Notice that the minterms \\( w'x'y'z' \\) and \\( w'x'z' \\) can be combined to form \\( w'x' \\), and the minterms \\( w'x'z \\) and \\( wx'z \\) can be combined to form \\( xz \\). But these combinations do not cover all the 1s in the map.\n\nTherefore, the correct prime implicants are:\n- \\( w'x'z \\)\n- \\( xz' \\)\n- \\( w'x'z' \\)\n\nTherefore, the correct prime implicants are:\n- \\( w'x'z \\)\n- \\( xz' \\)\n- \\( w'x'z' \\)\n\nTherefore, the correct prime implicants are:\n- \\( w'",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

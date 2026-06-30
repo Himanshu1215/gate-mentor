@@ -1,0 +1,18 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q27",
+  "question_seq": 21,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let the set of functional dependencies $\\mathsf { F } = \\{ \\mathsf { Q } \\mathsf { R } \\to \\mathsf { S } , \\mathsf { R } \\to \\mathsf { P } , \\mathsf { S } \\to \\mathsf { Q } \\}$ hold on a relation schema ${ \\sf X } = ( { \\sf P Q R S } )$ . X is not in BCNF. Suppose X is decomposed into two schemas Y and Z where ${ \\sf Y } = ( { \\sf P } { \\sf R } )$ and $Z = ( \\mathrm { Q R S } )$",
+  "options": {
+    "C": "onsider the two statements given below: I. Both Y and Z are in BCNF II. Decomposition of X into Y and Z is dependency preserving and lossless Which of the above statements is/are correct?",
+    "A": "I only (b) Neither I nor II"
+  },
+  "answer": "D",
+  "solution": "To determine which statements are correct, we need to analyze the given functional dependencies and the decomposition of the relation schema \\(X\\) into \\(Y\\) and \\(Z\\).\n\nFirst, let's recall the definition of BCNF (Big boys normal form). A relation is in BCNF if for every functional dependency \\(A \\to B\\), \\(A\\) is a superkey (i.e., \\(A\\) contains all the prime factors of the relation).\n\nGiven the functional dependencies:\n\\[\n\\mathbf{F} = \\{ \\mathbf{QR} \\to \\mathbf{S}, \\mathbf{R} \\to \\mathbf{P}, \\mathbf{S} \\to \\mathbf{Q} \\}\n\\]\nand the relation schema \\(X = (P, Q, R, S)\\), we need to check if the decomposition into \\(Y = (P, R)\\) and \\(Z = (Q, R, S)\\) results in both \\(Y\\) and \\(Z\\) being in BCNF.\n\n### Analyzing \\(Y = (P, R)\\)\nThe functional dependencies involving \\(P\\) and \\(R\\) are:\n\\[\n\\mathbf{R} \\to \\mathbf{P}\n\\]\nFor \\(Y\\) to be in BCNF, \\(\\mathbf{R}\\) must be a superkey. However, \\(\\mathbf{R}\\) does not contain all the prime factors of \\(X\\) (it does not include \\(Q\\) or \\(S\\)). Therefore, \\(Y\\) is not in BCNF.\n\n### Analyzing \\(Z = (Q, R, S)\\)\nThe functional dependencies involving \\(Q\\), \\(R\\), and \\(S\\) are:\n\\[\n\\mathbf{QR} \\to \\mathbf{S}, \\mathbf{S} \\to \\mathbf{Q}\n\\]\nFor \\(Z\\) to be in BCNF, both \\(\\mathbf{QR}\\) and \\(\\mathbf{S}\\) must be superkeys. However, \\(\\mathbf{S}\\) does not contain all the prime factors of \\(X\\) (it does not include \\(P\\) or \\(R\\)). Therefore, \\(Z\\) is not in BCNF.\n\nSince neither \\(Y\\) nor \\(Z\\) is in BCNF, statement I is false.\n\n### Checking if the decomposition is dependency preserving and lossless\nA decomposition is dependency preserving if all the functional dependencies in \\(\\mathbf{F}\\) can be expressed using the functional dependencies in the decomposedschemas. A decomposition is lossless if the natural join of the decomposedschemas is equal to the original relation.\n\n#### Dependency preserve\nThe functional dependencies in \\(\\mathbf{F}\\) are:\n1. \\(\\mathbf{QR} \\to \\mathbf{S}\\)\n2. \\(\\mathbf{R} \\to \\mathbf{P}\\)\n3. \\(\\mathbf{S} \\to \\mathbf{Q}\\)\n\nIn \\(Y = (P, R)\\), we have \\(\\mathbf{R} \\to \\mathbf{P}\\).\nIn \\(Z = (Q, R, S)\\), we have \\(\\mathbf{QR} \\to \\mathbf{S}\\) and \\(\\mathbf{S} \\to \\mathbf{Q}\\).\n\nSince",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

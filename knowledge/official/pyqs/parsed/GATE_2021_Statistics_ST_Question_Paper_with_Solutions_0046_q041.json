@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q41",
+  "question_seq": 46,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $\\{ X _ { n } \\} _ { n \\ge 1 }$ be a sequence of independent and identically distributed random variables having common distribution function $F ( x )$ . Let $a < b$ be two real numbers such that $F ( x ) = 0$ for all $x \\leq a , 0 < F ( x ) < 1$ for all $a < x < b ,$ and $F ( x ) = 1$ for all $x \\geq b .$ Let $S _ { n } ( x )$ be the empirical distribution function at x based on $X _ { 1 } , X _ { 2 } , \\ldots , X _ { n } , n \\geq 1$ Then which one of the following statements is NOT true?",
+  "options": {
+    "A": "$\\begin{array} { r } { P \\left( \\operatorname* { l i m } _ { n \\to \\infty } \\operatorname* { s u p } _ { - \\infty < x < \\infty } | S _ { n } ( x ) - F ( x ) | = 0 \\right) = 1 } \\end{array}$",
+    "B": "For fixed $x \\in ( a , b )$ and $\\begin{array} { r } { t \\in ( - \\infty , \\infty ) , P ( \\operatorname* { l i m } _ { n \\infty } \\sqrt { n } | S _ { n } ( x ) - F ( x ) | \\leq t ) = P ( Z \\leq t ) } \\end{array}$ where Z is the standard normal random variable.",
+    "C": "The covariance between $S _ { n } ( x )$ and $S _ { n } ( y )$ equals ${ \\frac { 1 } { n } } F ( x ) ( 1 - F ( y ) )$ for all $n \\geq 2$ and for fixed $- \\infty < x , y < \\infty$",
+    "D": "If $Y _ { n } = \\operatorname* { s u p } _ { - \\infty < x < \\infty } ( S _ { n } ( x ) - F ( x ) ) ^ { 2 }$ , then $\\{ n Y _ { n } \\} _ { n \\ge 1 }$ converges in distribution to a central chi-square random variable with 2 degrees of freedom."
+  },
+  "answer": "D",
+  "solution": "We are given a sequence of independent and identically distributed random variables with common distribution function $F ( x )$ . We need to analyze the given options.\nStep 1: Analyzing option A.\n\nThis statement is correct. By the Glivenko-Cantelli theorem, the empirical distribution function $S _ { n } ( x )$ converges uniformly to the true distribution function $F ( x )$ almost surely as $n \\to \\infty$\nStep 2: Analyzing option B.\n\nThis statement is correct. It represents the central limit theorem for the empirical distribution function, where ${ \\sqrt { n } } | S _ { n } ( x ) - F ( x ) |$ converges in distribution to a normal distribution.\nStep 3: Analyzing option C.\n\nThis statement is correct. The covariance between $S _ { n } ( x )$ and $S _ { n } ( y )$ is given by the expression ${ \\frac { 1 } { n } } F ( x ) ( 1 - F ( y ) )$ , which is a standard result for empirical distribution functions.\nStep 4: Analyzing option D.\n\nThis statement is incorrect. The sequence $\\{ n Y _ { n } \\} _ { n \\ge 1 }$ does not converge to a chi-square\n\ndistribution with 2 degrees of freedom. Instead, the limiting distribution is a different form, so this option is not true.\n\nStep 5: Conclusion.\n\nThe correct answer is (D) as it is the statement that is not true.\n\nFinal Answer: $\\boxed { ( D ) }$\nQuick Tip\n\nIn empirical distribution functions, the Glivenko-Cantelli theorem guarantees uniform convergence, while the central limit theorem describes the asymptotic distribution of the differences between $S _ { n } ( x )$ and $F ( x )$"
+}

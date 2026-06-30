@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q3",
+  "question_seq": 88,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let {1,2,3,4} represent the outcomes of a random experiment, and $P ( \\{ 1 \\} ) = P ( \\{ 2 \\} ) =$ $P ( \\{ 3 \\} ) = P ( \\{ 4 \\} ) = 1 / 4$ . Suppose that $A _ { 1 } = \\{ 1 , 2 \\} , \\ A _ { 2 } = \\{ 2 , 3 \\} , \\ A _ { 3 } = \\{ 3 , 4 \\}$ , and $A _ { 4 } =$ {1,2,3}. Then which of the following statements is true? (A) $A _ { 1 }$ and $A _ { 2 }$ are not independent. (B) $A _ { 3 }$ and $A _ { 4 }$ are independent. (C) $A _ { 1 }$ and $A _ { 4 }$ are not independent. (D) $A _ { 2 }$ and $A _ { 4 }$ are independent.",
+  "options": null,
+  "answer": null,
+  "solution": "To determine which of the given statements is true, we need to check the independence of each pair of events. Two events \\(A\\) and \\(B\\) are independent if and only if \\(P(A \\cap B) = P(A) \\cdot P(B)\\).\n\nFirst, let's find the probabilities of each event:\n- \\(P(A_1) = P(\\{1, 2\\}) = P(\\{1\\}) + P(\\{2\\}) = \\frac{1}{4} + \\frac{1}{4} = \\frac{1}{2}\\)\n- \\(P(A_2) = P(\\{2, 3\\}) = P(\\{2\\}) + P(\\{3\\}) = \\frac{1}{4} + \\frac{1}{4} = \\frac{1}{2}\\)\n- \\(P(A_3) = P(\\{3, 4\\}) = P(\\{3\\}) + P(\\{4\\}) = \\frac{1}{4} + \\frac{1}{4} = \\frac{1}{2}\\)\n- \\(P(A_4) = P(\\{1, 2, 3\\}) = P(\\{1\\}) + P(\\{2\\}) + P(\\{3\\}) = \\frac{1}{4} + \\frac{1}{4} + \\frac{1}{4} = \\frac{3}{4}\\)\n\nNext, we calculate the probabilities of the intersections of each pair of events:\n- \\(P(A_1 \\cap A_2) = P(\\{1, 2\\} \\cap \\{2, 3\\}) = P(\\{2\\}) = \\frac{1}{4}\\)\n- \\(P(A_1 \\cap A_4) = P(\\{1, 2\\} \\cap \\{1, 2, 3\\}) = P(\\{1, 2\\}) = \\frac{1}{2}\\)\n- \\(P(A_2 \\cap A_3) = P(\\{2, 3\\} \\cap \\{3, 4\\}) = P(\\{3\\}) = \\frac{1}{4}\\)\n- \\(P(A_3 \\cap A_4) = P(\\{3, 4\\} \\cap \\{1, 2, 3\\}) = P(\\{3\\}) = \\frac{1}{4}\\)\n\nNow, we check the independence of each pair:\n- For \\(A_1\\) and \\(A_2\\):\n  \\[\n  P(A_1 \\cap A_2) = \\frac{1}{4} \\quad \\text{and} \\quad P(A_1) \\cdot P(A_2) = \\frac{1}{2} \\cdot \\frac{1}{2} = \\frac{1}{4}\n  \\]\n  Since \\(P(A_1 \\cap A_2) = P(A_1) \\cdot P(A_2)\\), \\(A_1\\) and \\(A_2\\) are independent.\n\n- For \\(A_1\\) and \\(A_4\\):\n  \\[\n  P(A_1 \\cap A_4) = \\frac{1}{2} \\quad \\text{",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

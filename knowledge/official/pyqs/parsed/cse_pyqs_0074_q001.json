@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q1",
+  "question_seq": 74,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The \\_\\_\\_\\_\\_ \\_\\_ is too high for it to be considered",
+  "options": {
+    "A": "fair / fare",
+    "C": "fare / fare",
+    "B": "faer / fair"
+  },
+  "answer": "D",
+  "solution": "To determine the correct answer, let's analyze the given options and the context of the sentence: \"The \\_\\_\\_\\_\\_ \\_\\_ is too high for it to be considered.\"\n\n1. **Option (A): fair / fare**\n   - \"fair\" is an adjective meaning just or reasonable.\n   - \"fare\" is a noun meaning the amount paid or received in exchange for something.\n   - Using \"fair\" and \"fare\" together does not make sense in the context of the sentence.\n\n2. **Option (B): faer / fair**\n   - \"faer\" is not a standard English word.\n   - \"fair\" is an adjective meaning just or reasonable.\n   - Using \"faer\" and \"fair\" together does not make sense in the context of the sentence.\n\n3. **Option (C): fare / fare**\n   - \"fare\" is a noun meaning the amount paid or received in exchange for something.\n   - Using \"fare\" and \"fare\" together does not make sense in the context of the sentence.\n\n4. **Option (D): fare**\n   - \"fare\" is a noun meaning the amount paid or received in exchange for something.\n   - In the context of the sentence, \"The fare is too high for it to be considered\" makes sense because \"fare\" refers to the amount paid, which is being compared to what is considered reasonable or just.\n\nTherefore, the correct answer is \\boxed{D}.",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

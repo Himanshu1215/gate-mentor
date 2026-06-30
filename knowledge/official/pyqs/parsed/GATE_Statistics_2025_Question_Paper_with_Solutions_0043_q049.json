@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q49",
+  "question_seq": 43,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , X _ { 3 }$ be independent standard normal random variables, and let $ Y _ { 1 } = X _ { 1 } - X _ { 2 } , \\quad Y _ { 2 } = X _ { 1 } + X _ { 2 } - 2 X _ { 3 } , \\quad Y _ { 3 } = X _ { 1 } + X _ { 2 } + X _ { 3 } . $ Then which of the following options is/are correct?",
+  "options": {
+    "A": "$Y _ { 1 } , Y _ { 2 } , Y _ { 3 }$ are independently distributed",
+    "B": "$Y _ { 1 } ^ { 2 } + Y _ { 2 } ^ { 2 } + Y _ { 3 } ^ { 2 } \\sim \\chi _ { 3 } ^ { 2 }$",
+    "C": "$\\begin{array} { r } { \\frac { 2 Y _ { 3 } } { \\sqrt { 3 Y _ { 1 } ^ { 2 } + Y _ { 2 } ^ { 2 } } } \\sim t _ { 2 } } \\end{array}$",
+    "D": "$\\frac { 3 Y _ { 1 } ^ { 2 } + 2 Y _ { 3 } ^ { 2 } } { 2 Y _ { 2 } ^ { 2 } } \\sim F _ { 1 , 1 }$"
+  },
+  "answer": "A",
+  "solution": "Step 1: Checking the Independence of $Y _ { 1 } , Y _ { 2 } , Y _ { 3 }$ The random variables $Y _ { 1 } , Y _ { 2 } , Y _ { 3 }$\n\nare linear combinations of $X _ { 1 } , X _ { 2 } , X _ { 3 }$ . Since $X _ { 1 } , X _ { 2 } , X _ { 3 }$ are independent, it follows that $Y _ { 1 } , Y _ { 2 } , Y _ { 3 }$ are also independent.\n\nThus, Option (A) is correct.\n\nStep 2: Distribution of $Y _ { 1 } ^ { 2 } + Y _ { 2 } ^ { 2 } + Y _ { 3 } ^ { 2 }$\n\nSince $Y _ { 1 } , Y _ { 2 } , Y _ { 3 }$ are linear combinations of independent normal random variables, the sum of their squares follows a chi-squared distribution with 3 degrees of freedom.\n\nThus, Option (B) is incorrect because the sum of squares does follow $\\chi _ { 3 } ^ { 2 } .$ , but this was not required.\n\nStep 3: Distribution of $\\frac { 2 Y _ { 3 } } { \\sqrt { 3 Y _ { 1 } ^ { 2 } + Y _ { 2 } ^ { 2 } } }$\n\nThis expression involves the ratio of quadratic forms in normal variables, which results in a t-distribution with 2 degrees of freedom.\n\nThus, Option (C) is correct.\n\nStep 4: Distribution of $\\frac { 3 Y _ { 1 } ^ { 2 } + 2 Y _ { 3 } ^ { 2 } } { 2 Y _ { 2 } ^ { 2 } }$\n\nThis expression does not result in an F -distribution with 1 and 1 degrees of freedom, so\n\nOption (D) is incorrect.\n\nFinal Answer:\n\nThe correct answers are $\\boxed { A \\mathrm { ~ a n d ~ } C }$\nQuick Tip\n\nFor sums of squares and ratios of quadratic forms in normal variables, the resulting distributions often follow chi-squared or t-distributions. Carefully analyze the dependencies and relationships between the variables involved."
+}

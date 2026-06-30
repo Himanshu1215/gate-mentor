@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q48",
+  "question_seq": 124,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Suppose customers arrive at an ATM facility according to a Poisson process with rate 5 customers per hour. The probability (rounded off to two decimal places) that no customer arrives at the ATM facility from 1:00 pm to 1:18 pm is ..",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the problem, we need to use the properties of the Poisson process. The Poisson process describes the number of events (in this case, customer arrivals) in a fixed interval of time. The probability of \\( k \\) events occurring in a time interval of length \\( t \\) is given by the formula:\n\n\\[ P(X = k) = \\frac{e^{-\\lambda t} (\\lambda t)^k}{k!} \\]\n\nwhere \\( \\lambda \\) is the rate of events per unit time, and \\( t \\) is the length of the time interval.\n\nIn this problem, the rate of customer arrivals is \\( \\lambda = 5 \\) customers per hour. We need to find the probability that no customer arrives from 1:00 pm to 1:18 pm. The length of the time interval is \\( t = 18 \\) minutes. Since the rate is given in customers per hour, we need to convert the time interval from minutes to hours:\n\n\\[ t = \\frac{18}{60} = 0.3 \\text{ hours} \\]\n\nNow, we substitute \\( \\lambda = 5 \\) and \\( t = 0.3 \\) into the Poisson probability formula for \\( k = 0 \\):\n\n\\[ P(X = 0) = \\frac{e^{-5 \\cdot 0.3} (5 \\cdot 0.3)^0}{0!} \\]\n\nSimplify the expression step by step:\n\n1. Calculate \\( \\lambda t \\):\n   \\[ \\lambda t = 5 \\cdot 0.3 = 1.5 \\]\n\n2. Substitute \\( \\lambda t = 1.5 \\) into the formula:\n   \\[ P(X = 0) = \\frac{e^{-1.5} (1.5)^0}{0!} \\]\n\n3. Simplify the powers and factorials:\n   \\[ (1.5)^0 = 1 \\]\n   \\[ 0! = 1 \\]\n   So the formula becomes:\n   \\[ P(X = 0) = \\frac{e^{-1.5} \\cdot 1}{1} = e^{-1.5} \\]\n\n4. Calculate \\( e^{-1.5} \\):\n   \\[ e^{-1.5} \\approx 0.2231 \\]\n\nRounding \\( 0.2231 \\) to two decimal places, we get:\n\n\\[ P(X = 0) \\approx 0.22 \\]\n\nTherefore, the probability that no customer arrives at the ATM facility from 1:00 pm to 1:18 pm is:\n\n\\[ \\boxed{0.22} \\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

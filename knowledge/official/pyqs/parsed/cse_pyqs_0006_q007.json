@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q7",
+  "question_seq": 6,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The police arrested four criminals – P, Q, R and S. The criminals knew each other. They made the following statements: P says “Q committed the crime.” Q says “S committed the crime.” R says “I did not do it.” S says “What Q said about me is false.” Assume only one of the arrested four committed the crime and only one of the statements made above is true. Who committed the crime? (a) R (b) P (c) S (d) Q",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine who committed the crime, we need to analyze the statements made by P, Q, R, and S, given that only one of the statements is true and only one of the arrested four committed the crime. Let's analyze each case step by step.\n\n1. **Assume P committed the crime:**\n   - P says “Q committed the crime” (False)\n   - Q says “S committed the crime” (False)\n   - R says “I did not do it” (True)\n   - S says “What Q said about me is false” (True)\n   - This scenario has two true statements (R and S), which contradicts the condition that only one statement is true. Therefore, P did not commit the crime.\n\n2. **Assume Q committed the crime:**\n   - P says “Q committed the crime” (True)\n   - Q says “S committed the crime” (False)\n   - R says “I did not do it” (True)\n   - S says “What Q said about me is false” (True)\n   - This scenario has three true statements (P, R, and S), which contradicts the condition that only one statement is true. Therefore, Q did not commit the crime.\n\n3. **Assume R committed the crime:**\n   - P says “Q committed the crime” (False)\n   - Q says “S committed the crime” (False)\n   - R says “I did not do it” (False)\n   - S says “What Q said about me is false” (True)\n   - This scenario has one true statement (S), which satisfies the condition that only one statement is true. Therefore, R could have committed the crime.\n\n4. **Assume S committed the crime:**\n   - P says “Q committed the crime” (False)\n   - Q says “S committed the crime” (True)\n   - R says “I did not do it” (True)\n   - S says “What Q said about me is false” (False)\n   - This scenario has two true statements (Q and R), which contradicts the condition that only one statement is true. Therefore, S did not commit the crime.\n\nFrom the analysis above, the only scenario that satisfies the condition that only one statement is true is when R committed the crime. Therefore, the answer is:\n\n\\boxed{A}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

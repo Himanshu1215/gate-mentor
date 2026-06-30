@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q6",
+  "question_seq": 5,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "In a college, there are three student clubs. Sixty students are only in the Drama club. 80 students are only in the Dance club, 30 students are only in the Maths club. 40 students are in both Drama and Dance clubs. 12 students are in both Dance and Maths clubs, 7 students are in both Drama and Maths clubs, and 2 students are in all the clubs. If 75% of the students in the college are not in any of these clubs, then the total number of students in the college is (a) 225 (b) 1000 (c) 975 (d) 900",
+  "options": null,
+  "answer": "D",
+  "solution": "To determine the total number of students in the college, we need to use the principle of inclusion-exclusion for three sets. Let's define the sets as follows:\n- \\( D \\) is the set of students in the Drama club.\n- \\( A \\) is the set of students in the Dance club.\n- \\( M \\) is the set of students in the Maths club.\n\nWe are given the following information:\n- The number of students only in the Drama club is 60.\n- The number of students only in the Dance club is 80.\n- The number of students only in the Maths club is 30.\n- The number of students in both Drama and Dance clubs is 40.\n- The number of students in both Dance and Maths clubs is 12.\n- The number of students in both Drama and Maths clubs is 7.\n- The number of students in all three clubs is 2.\n- 75% of the students in the college are not in any of these clubs.\n\nFirst, we calculate the total number of students in at least one of the clubs using the principle of inclusion-exclusion:\n\\[\n|D \\cup A \\cup M| = |D| + |A| + |M| - |D \\cap A| - |A \\cap M| - |D \\cap M| + |D \\cap A \\cap M|\n\\]\n\nWe need to find \\( |D| \\), \\( |A| \\), and \\( |M| \\). We can do this by adding the number of students in each club and then subtracting the overlaps:\n\\[\n|D| = 60 + 40 + 7 - 2 = 105\n\\]\n\\[\n|A| = 80 + 40 + 12 - 2 = 130\n\\]\n\\[\n|M| = 30 + 12 + 7 - 2 = 47\n\\]\n\nNow, substitute these values into the inclusion-exclusion formula:\n\\[\n|D \\cup A \\cup M| = 105 + 130 + 47 - 40 - 12 - 7 + 2 = 225\n\\]\n\nSo, 225 students are in at least one of the clubs. Since 75% of the students are not in any of the clubs, the remaining 25% are in at least one club. Let \\( N \\) be the total number of students in the college. Then:\n\\[\n0.25N = 225\n\\]\n\nSolving for \\( N \\):\n\\[\nN = \\frac{225}{0.25} = 900\n\\]\n\nTherefore, the total number of students in the college is \\(\\boxed{900}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

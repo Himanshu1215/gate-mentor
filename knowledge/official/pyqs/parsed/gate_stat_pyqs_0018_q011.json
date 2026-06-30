@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q11",
+  "question_seq": 18,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let ?? be the region bounded by the line $y = x$ and the parabola $y = 4 x - x ^ { 2 }$ Then $\\iint _ { D } x$ ???? ???? equals",
+  "options": {
+    "A": "$\\frac { 2 7 } { 4 }$",
+    "B": "$\\frac { 2 9 } { 4 }$",
+    "C": "7",
+    "D": "6"
+  },
+  "answer": null,
+  "solution": "To solve the problem, we need to find the double integral of \\( x \\) over the region \\( D \\) bounded by the line \\( y = x \\) and the parabola \\( y = 4x - x^2 \\). Let's proceed step by step.\n\n### Step 1: Determine the points of intersection\nFirst, we find the points where the line \\( y = x \\) intersects the parabola \\( y = 4x - x^2 \\).\n\nSet the equations equal to each other:\n\\[\nx = 4x - x^2\n\\]\n\nRearrange the equation to form a standard quadratic equation:\n\\[\nx^2 - 3x = 0\n\\]\n\nFactor the quadratic equation:\n\\[\nx(x - 3) = 0\n\\]\n\nSolve for \\( x \\):\n\\[\nx = 0 \\quad \\text{or} \\quad x = 3\n\\]\n\n corresponding \\( y \\)-values are:\n\\[\ny = 0 \\quad \\text{and} \\quad y = 3\n\\]\n\nThus, the points of intersection are \\( (0, 0) \\) and \\( (3, 3) \\).\n\n### Step 2: Set up the double integral\nThe region \\( D \\) is bounded by \\( y = x \\) and \\( y = 4x - x^2 \\) from \\( x = 0 \\) to \\( x = 3 \\). Therefore, the double integral can be set up as follows:\n\\[\n\\iint_D x \\, dA = \\int_{0}^{3} \\int_{x}^{4x - x^2} x \\, dy \\, dx\n\\]\n\n### Step 3: Integrate with respect to \\( y \\)\nFirst, integrate the inner integral with respect to \\( y \\):\n\\[\n\\int_{x}^{4x - x^2} x \\, dy = x \\left[ y \\right]_{x}^{4x - x^2}\n\\]\n\nEvaluate the antiderivative at the bounds:\n\\[\nx \\left( (4x - x^2) - x \\right) = x (3x - x^2) = 3x^2 - x^3\n\\]\n\n### Step 4: Integrate with respect to \\( x \\)\nNow, integrate the result with respect to \\( x \\):\n\\[\n\\int_{0}^{3} (3x^2 - x^3) \\, dx\n\\]\n\nIntegrate each term separately:\n\\[\n\\int_{0}^{3} 3x^2 \\, dx - \\int_{0}^{3} x^3 \\, dx\n\\]\n\nEvaluate each integral:\n\\[\n3 \\int_{0}^{3} x^2 \\, dx = 3 \\left[ \\frac{x^3}{3} \\right]_{0}^{3} = \\left[ x^3 \\right]_{0}^{3} = 3^3 - 0^3 = 27\n\\]\n\n\\[\n\\int_{0}^{3} x^3 \\, dx = \\left[ \\frac{x^4}{4} \\right]_{0}^{3} = \\frac{3^4}{4",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q34",
+  "question_seq": 143,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The symbol → indicates functional dependency in the context of a relational database. Which of the following options is/are TRUE? (a) (X → Y and Y → Z) implies $X Z$ (b) (X, Y) → (Z, W) implies X → (Z, W) (c) ((X, Y) → Z and W → Y) implies $( X , \\ W ) \\to Z$ (d) (X, Y) → (Z, W) implies (X, Y) → Z",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine which of the given options is true, we need to understand the concept of functional dependency in the context of relational databases. A functional dependency \\(X \\rightarrow Y\\) means that if two tuples in a relation have the same value for theAttribute \\(X\\), they must also have the same value for theAttribute \\(Y\\).\n\nLet's analyze each option step by step:\n\n**Option (a): (X → Y and Y → Z) implies \\(X \\rightarrow Z\\)**\n\nThis is true. If \\(X \\rightarrow Y\\) and \\(Y \\rightarrow Z\\), then by the transitive property of functional dependencies, \\(X \\rightarrow Z\\). This means that if two tuples have the same value for \\(X\\), they must also have the same value for \\(Y\\) (because \\(X \\rightarrow Y\\)), and if they have the same value for \\(Y\\), they must also have the same value for \\(Z\\) (because \\(Y \\rightarrow Z\\)). Therefore, if they have the same value for \\(X\\), they must also have the same value for \\(Z\\).\n\n**Option (b): (X, Y) → (Z, W) implies X → (Z, W)**\n\nThis is false. If \\((X, Y) \\rightarrow (Z, W)\\), it means that if two tuples have the same values for \\(X\\) and \\(Y\\), they must also have the same values for \\(Z\\) and \\(W\\). However, this does not necessarily mean that \\(X \\rightarrow (Z, W)\\). For example, consider the tuples \\((a, b, c, d)\\) and \\((a, b, e, f)\\). If \\((a, b, c, d) = (a, b, e, f)\\), then \\(X = a\\) and \\(Y = b\\), and \\(Z = c\\) and \\(W = d\\), so \\((X, Y) \\rightarrow (Z, W)\\) is true. But \\(X = a\\) does not necessarily imply \\(Z = c\\) or \\(W = d\\), so \\(X \\rightarrow (Z, W)\\) is false.\n\n**Option (c): ((X, Y) → Z and W → Y) implies \\((X, W) \\rightarrow Z\\)**\n\nThis is false. If \\((X, Y) \\rightarrow Z\\) and \\(W \\rightarrow Y\\), it means that if two tuples have the same values for \\(X\\) and \\(Y\\), they must also have the same value for \\(Z\\), and if two tuples have the same value for \\(W\\), they must also have the same value for \\(Y\\). However, this does not necessarily mean that \\((X, W) \\rightarrow Z\\). For example, consider the tuples \\((a, b, c)\\) and \\((a, b, d)\\). If \\((a, b, c) = (a, b, d)\\), then \\(X = a\\) and \\(Y = b\\), so \\((X, Y) \\rightarrow Z\\) is true, and \\(W = c\\) and \\(Y = b\\), so \\(W \\rightarrow Y\\) is true. But \\(X = a\\) and \\(W = c\\) do not necessarily imply \\(Z = c\\), so",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

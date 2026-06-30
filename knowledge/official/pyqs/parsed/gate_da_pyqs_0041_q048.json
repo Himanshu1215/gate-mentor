@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q48",
+  "question_seq": 41,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following statements is/are correct about the rectified linear unit (ReLU) activation function defined as Re $\\mathbf { \\boldsymbol { \\mathbf { \\mathit { U } } } } ( x ) = \\operatorname* { m a x } ( x , 0 )$ , where $x \\in \\mathbb { R } ?$",
+  "options": {
+    "A": "ReLU is continuous everywhere",
+    "B": "ReLU is differentiable everywhere",
+    "C": "ReLU is not differentiable at $x = 0$",
+    "D": "${ \\mathrm { R e L U } } ( x ) = { \\mathrm { R e L U } } ( a x )$ , for all $a \\in \\mathbb { R }$"
+  },
+  "answer": null,
+  "solution": "To determine which statements about the rectified linear unit ( ReL U) activation function are correct, we need to analyze its properties step by step.\n\nThe ReL U function is defined as:\n\\[ \\text{ ReL U}(x) = \\max(x, 0) \\]\n\n### Step 1: Continuity\nA function is continuous at a point if the limit of the function as \\( x \\) approaches that point exists and is equal to the value of the function at that point.\n\nFor \\( \\text{ ReL U}(x) \\):\n- For \\( x > 0 \\), \\( \\text{ ReL U}(x) = x \\), which is a linear function and continuous.\n- For \\( x < 0 \\), \\( \\text{ ReL U}(x) = 0 \\), which is a constant function and continuous.\n- At \\( x = 0 \\), we need to check the left-hand limit and the right-hand limit:\n  \\[ \\lim_{x \\to 0^+} \\text{ ReL U}(x) = \\lim_{x \\to 0^+} x = 0 \\]\n  \\[ \\lim_{x \\to 0^-} \\text{ ReL U}(x) = \\lim_{x \\to 0^-} 0 = 0 \\]\n  \\[ \\text{ ReL U}(0) = 0 \\]\n\nSince the left-hand limit, right-hand limit, and the value of the function at \\( x = 0 \\) are all equal, \\( \\text{ ReL U}(x) \\) is continuous at \\( x = 0 \\).\n\nTherefore, ReL U is continuous everywhere.\n\n### Step 2: Differentiability\nA function is differentiable at a point if the derivative exists at that point.\n\nFor \\( \\text{ ReL U}(x) \\):\n- For \\( x > 0 \\), \\( \\text{ ReL U}(x) = x \\), and the derivative is:\n  \\[ \\frac{d}{dx} \\text{ ReL U}(x) = 1 \\]\n- For \\( x < 0 \\), \\( \\text{ ReL U}(x) = 0 \\), and the derivative is:\n  \\[ \\frac{d}{dx} \\text{ ReL U}(x) = 0 \\]\n- At \\( x = 0 \\), we need to check the left-hand derivative and the right-hand derivative:\n  \\[ \\lim_{h \\to 0^+} \\frac{\\text{ ReL U}(0 + h) - \\text{ ReL U}(0)}{h} = \\lim_{h \\to 0^+} \\frac{h - 0}{h} = 1 \\]\n  \\[ \\lim_{h \\to 0^-} \\frac{\\text{ ReL U}(0 + h) - \\text{ ReL U}(0)}{h} = \\lim_{h \\to 0^-} \\frac{0 - 0}{h} = 0 \\]\n\nSince the left-hand derivative and the right-hand derivative at \\( x = 0 \\) are not equal, \\( \\text{ ReL U}(x) \\) is not differentiable at \\( x = 0 \\",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

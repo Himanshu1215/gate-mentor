@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q7",
+  "question_seq": 4,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "For the clock shown in the figure, if O = O Q S Z P R T, and X = X Z P W Y O Q, then which one among the given options is most appropriate for P?",
+  "options": {
+    "A": "P U W R T V X",
+    "B": "P R T O Q S U",
+    "C": "P T V Q S U W",
+    "D": "P S U P R T V"
+  },
+  "answer": "B",
+  "solution": "We are given two sequences of letters representing paths around a circular clock-like figure.\n\nEach sequence starts from a reference letter and continues in a specific order:\n\n\\- O = O Q S Z P R T - X = X Z P W Y O Q\n\nThese sequences follow a clockwise path on the circle. To find P, we need to start from P and trace a similar clockwise pattern.\n\nLooking at the clock diagram, starting from P and moving clockwise gives the sequence:\n\n $ P R T O Q S U $ \n\nThis matches option (B).\n\nTo verify, count each step from P in the figure: P → R → T → O → Q → S → U – all in clockwise direction, and all letters are unique with no repetitions, matching the style of the given sequences.\nQuick Tip\n\nFor circular reasoning questions, sketch or trace the path visually on the diagram and ensure you’re moving in a consistent direction (clockwise or counter-clockwise)."
+}

@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q49",
+  "question_seq": 44,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following statements is/are true?",
+  "options": {
+    "A": "If ?? is a $3 \\times 3$ real matrix with 3 distinct eigenvalues, then ?? is diagonalizable",
+    "B": "If ?? is a $3 \\times 3$ real matrix such that $A ^ { 2 }$ is diagonalizable, then ?? is diagonalizable",
+    "C": "$\\left[ { \\begin{array} { l l l } { 0 } & { a } & { b } \\\\ { 0 } & { 0 } & { c } \\\\ { 0 } & { 0 } & { 0 } \\end{array} } \\right]$ For real numbers $a , b , c .$ , if is diagonalizable, then $a = b = c = 0$",
+    "D": "$A = { \\left[ \\begin{array} { l l l } { a } & { b } & { c } \\\\ { 0 } & { d } & { e } \\\\ { 0 } & { 0 } & { f } \\end{array} \\right] }$ For real numbers $a , b , c , d , e , f ,$ , if is diagonalizable, then $A A ^ { T } = A ^ { T } A$"
+  },
+  "answer": null,
+  "solution": "To determine which of the given statements are true, we will analyze each statement one by one.\n\n**Statement (A): If \\( A \\) is a \\( 3 \\times 3 \\) real matrix with 3 distinct eigenvalues, then \\( A \\) is diagonalizable.**\n\nA matrix is diagonalizable if it has a complete set of linearly independent eigenvectors. If a matrix has 3 distinct eigenvalues, then it must have 3 linearly independent eigenvectors (one for each eigenvalue). Therefore, \\( A \\) is diagonalizable. This statement is true.\n\n**Statement (B): If \\( A \\) is a \\( 3 \\times 3 \\) real matrix such that \\( A^2 \\) is diagonalizable, then \\( A \\) is diagonalizable.**\n\nA matrix \\( A^2 \\) is diagonalizable if it has a complete set of linearly independent eigenvectors. However, this does not necessarily mean that \\( A \\) itself has a complete set of linearly independent eigenvectors. For example, consider the matrix \\( A = \\begin{pmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ 1 & 0 & 0 \\end{pmatrix} \\). The matrix \\( A^2 = I \\) (the identity matrix), which is diagonalizable, but \\( A \\) is not diagonalizable because it does not have 3 linearly independent eigenvectors. Therefore, this statement is false.\n\n**Statement (C): For real numbers \\( a, b, c \\), if \\( A = \\begin{pmatrix} 0 & a & b \\\\ 0 & 0 & c \\\\ 0 & 0 & 0 \\end{pmatrix} \\) is diagonalizable, then \\( a = b = c = 0 \\).**\n\nA matrix \\( A \\) is diagonalizable if it has a complete set of linearly independent eigenvectors. The matrix \\( A \\) given is an upper triangular matrix with all eigenvalues equal to 0. If \\( A \\) is diagonalizable, then it must be similar to the zero matrix, which means \\( A \\) itself must be the zero matrix. Therefore, \\( a = b = c = 0 \\). This statement is true.\n\n**Statement (D): For real numbers \\( a, b, c, d, e, f \\), if \\( A = \\begin{pmatrix} a & b & c \\\\ 0 & d & e \\\\ 0 & 0 & f \\end{pmatrix} \\) is diagonalizable, then \\( A A^T = A^T A \\).**\n\nA matrix \\( A \\) is diagonalizable if it has a complete set of linearly independent eigenvectors. If \\( A \\) is diagonalizable, then it is similar to a diagonal matrix. However, this does not necessarily mean that \\( A A^T = A^T A \\). For example, consider the matrix \\( A = \\begin{pmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 1 \\end{pmatrix} \\). The matrix \\( A \\) is diagonalizable (it is similar to the identity matrix), but \\( A A^T = \\begin{",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

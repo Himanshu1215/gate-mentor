@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q27",
+  "question_seq": 23,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $T : \\mathbb { R } ^ { 3 } \\mathbb { R } ^ { 3 }$ be a linear map defined by $ T ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = ( 3 x _ { 1 } + 5 x _ { 2 } + x _ { 3 } , x _ { 3 } , 2 x _ { 1 } + 2 x _ { 3 } ) . $ Then the rank of $T$ is equal to (",
+  "options": null,
+  "answer": null,
+  "solution": "To find the rank of the linear map $T _ { \\ast }$ we need to determine the number of linearly independent rows in the matrix representation of $T$ . The map T is given by the following\n\ntransformation:\n\n $ T ( x _ { 1 } , x _ { 2 } , x _ { 3 } ) = { \\left( \\begin{array} { l l l } { 3 } & { 5 } & { 1 } \\\\ { 0 } & { 0 } & { 1 } \\\\ { 2 } & { 0 } & { 2 } \\end{array} \\right) } { \\left( \\begin{array} { l } { x _ { 1 } } \\\\ { x _ { 2 } } \\\\ { x _ { 3 } } \\end{array} \\right) } ~ . $ \n\nThus, the matrix representation of $T$ is:\n\n $ A = { \\left( \\begin{array} { l l l } { 3 } & { 5 } & { 1 } \\\\ { 0 } & { 0 } & { 1 } \\\\ { 2 } & { 0 } & { 2 } \\end{array} \\right) } ~ . $ \n\nNow, we find the rank of this matrix by reducing it to row echelon form (REF). First, use row operations to simplify the matrix:\n\nSubtract $\\frac { 2 } { 3 }$ of the first row from the third row to make the element in the third row, first column, zero:\n\n $ \\left( 3 \\quad 5 \\quad 1 \\right) $ \n\nMultiply the third row by $- \\frac { 3 } { 1 0 }$ to make the second column entry of the third row equal to 1:\n\n $ \\left( { \\begin{array} { r r r } { 3 } & { 5 } & { 1 } \\\\ { 0 } & { 0 } & { 1 } \\\\ { 0 } & { 1 } & { - { \\frac { 2 } { 5 } } } \\end{array} } \\right) ~ . $ \n\n\\- Finally, we can easily see that the first and second rows are linearly independent, and the third row is also linearly independent from the others.\n\nThus, the matrix has 3 non-zero rows, so the rank of $T$ is $3$\n\nRank of $T$ is: $\\boxed { 3 }$\nQuick Tip\n\nTo find the rank of a matrix, reduce it to row echelon form and count the number of non-zero rows. The rank is equal to the number of linearly independent rows."
+}

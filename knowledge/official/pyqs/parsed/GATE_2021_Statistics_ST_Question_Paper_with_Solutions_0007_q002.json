@@ -3,12 +3,17 @@
   "exam": "GATE ST",
   "question_id": "Q2",
   "question_seq": 7,
-  "question_type": "NAT",
+  "question_type": "MCQ",
   "marks": null,
   "difficulty": null,
   "concept_id": "GENERAL",
-  "question_text": "+ 2 + q2 p2 = 9",
-  "options": null,
-  "answer": null,
-  "solution": null
+  "question_text": "Let $W ( t )$ be a standard Brownian motion. Then the variance of $W ( 1 ) W ( 2 )$ equals",
+  "options": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4"
+  },
+  "answer": "C",
+  "solution": "We are asked to find the variance of $W ( 1 ) W ( 2 )$ , where $W ( t )$ is a standard Brownian motion.\nStep 1: Understanding the properties of Brownian motion.\n\nA standard Brownian motion $W ( t )$ has the following properties:\n\n1. $W ( 0 ) = 0 .$"
 }

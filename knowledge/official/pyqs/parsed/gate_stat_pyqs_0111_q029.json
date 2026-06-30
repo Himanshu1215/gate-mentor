@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q29",
+  "question_seq": 111,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "The matrix $\\left[ { \\begin{array} { l l l } { 1 } & { x } & { z } \\\\ { 0 } & { 2 } & { y } \\\\ { 0 } & { 0 } & { 1 } \\end{array} } \\right]$ is diagonalizable when $( x , y , z )$ equals (A) (0,0,1) (B) (1,1,0) (C) $( { \\sqrt { 2 } } , { \\sqrt { 2 } } , 2 )$ (D) $( { \\sqrt { 2 } } , { \\sqrt { 2 } } , { \\sqrt { 2 } } )$",
+  "options": null,
+  "answer": null,
+  "solution": "To determine when the matrix \\( A = \\left[ { \\begin{array} { l l l } { 1 } & { x } & { z } \\\\ { 0 } & { 2 } & { y } \\\\ { 0 } & { 0 } & { 1 } \\end{array} } \\right] \\) is diagonalizable, we need to check if it has a complete set of linearly independent eigenvectors. A matrix is diagonalizable if and only if it has \\( n \\) linearly independent eigenvectors, where \\( n \\) is the size of the matrix.\n\nFirst, we find the eigenvalues of \\( A \\) by solving the characteristic equation \\( \\det(A - \\lambda I) = 0 \\).\n\nThe matrix \\( A - \\lambda I \\) is:\n\\[ A - \\lambda I = \\left[ { \\begin{array} { l l l } { 1 - \\lambda } & { x } & { z } \\\\ { 0 } & { 2 - \\lambda } & { y } \\\\ { 0 } & { 0 } & { 1 - \\lambda } \\end{array} } \\right] \\]\n\nThe determinant of this matrix is:\n\\[ \\det(A - \\lambda I) = (1 - \\lambda) \\left[ (2 - \\lambda)(1 - \\lambda) - 0 \\right] = (1 - \\lambda)^2 (2 - \\lambda) \\]\n\nSetting the determinant equal to zero gives us the eigenvalues:\n\\[ (1 - \\lambda)^2 (2 - \\lambda) = 0 \\]\n\\[ \\lambda = 1 \\text{ (with algebraic multiplicity 2)}, \\lambda = 2 \\text{ (with algebraic multiplicity 1)} \\]\n\nFor the matrix to be diagonalizable, the geometric multiplicity of each eigenvalue must equal its algebraic multiplicity. The geometric multiplicity of an eigenvalue is the dimension of its eigenspace.\n\n1. **Eigenspace for \\(\\lambda = 1\\):**\n   We solve the system \\((A - I)\\mathbf{v} = 0\\):\n   \\[ A - I = \\left[ { \\begin{array} { l l l } { 0 } & { x } & { z } \\\\ { 0 } & { 1 } & { y } \\\\ { 0 } & { 0 } & { 0 } \\end{array} } \\right] \\]\n   The system of equations is:\n   \\[ 0 \\cdot v_1 + x v_2 + z v_3 = 0 \\]\n   \\[ 0 \\cdot v_1 + 1 \\cdot v_2 + y \\cdot v_3 = 0 \\]\n   \\[ 0 \\cdot v_1 + 0 \\cdot v_2 + 0 \\cdot v_3 = 0 \\]\n   This simplifies to:\n   \\[ x v_2 + z v_3 = 0 \\]\n   \\[ v_2 + y v_3 = 0 \\]\n   From the second equation, we get \\( v_2 = -y v_3 \\). Substituting \\( v_2 = -y v_3 \\",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

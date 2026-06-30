@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q26",
+  "question_seq": 88,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following statements is/are TRUE with respect to deadlocks?",
+  "options": {
+    "A": "Circular wait is a necessary condition for the formation of deadlock.",
+    "B": "In a system where each resource has more than one instance, a cycle in its waitfor graph indicates the presence of a deadlock.",
+    "C": "If the current allocation of resources to processes leads the system to unsafe state, then deadlock will necessarily occur.",
+    "D": "In the resource-allocation graph of a system, if every edge is an assignment edge, then the system is not in deadlock state."
+  },
+  "answer": "A",
+  "solution": "To determine which statements are true with respect to deadlocks, let's analyze each option step by step.\n\n**Option (A): Circular wait is a necessary condition for the formation of deadlock.**\n\nA deadlock occurs when no process can proceed because each process is waiting for a resource that is being used by another process. This situation can be visualized using a waitfor graph, where each process is a node and each edge represents a wait for a resource. A circular wait corresponds to a cycle in the waitfor graph. Therefore, a cycle in the waitfor graph is a necessary condition for the formation of a deadlock. This statement is true.\n\n**Option (B): In a system where each resource has more than one instance, a cycle in its waitfor graph indicates the presence of a deadlock.**\n\nA cycle in the waitfor graph indicates a circular wait, which is a necessary condition for a deadlock. However, it does not guarantee that a deadlock will occur. For example, consider a system with two resources, each having two instances, and two processes. If each process waits for both instances of a different resource, there will be a cycle in the waitfor graph, but the system may still be in a safe state if the processes can be released in a certain order. Therefore, a cycle in the waitfor graph does not necessarily indicate the presence of a deadlock. This statement is false.\n\n**Option (C): If the current allocation of resources to processes leads the system to unsafe state, then deadlock will necessarily occur.**\n\nAn unsafe state means that there is no way to release resources such that all processes can proceed. This situation can lead to a deadlock, but it is not guaranteed. For example, consider a system with two resources and two processes. If each process holds one instance of a different resource and there are no other instances available, the system is in an unsafe state, but it does not necessarily mean that a deadlock will occur if the processes can be released in a certain order. Therefore, an unsafe state does not necessarily lead to a deadlock. This statement is false.\n\n**Option (D): In the resource-allocation graph of a system, if every edge is an assignment edge, then the system is not in deadlock state.**\n\nAn assignment edge in a resource-allocation graph indicates that a process has been assigned a resource. If every edge is an assignment edge, it means that every process has been assigned a resource. However, this does not guarantee that the system is not in a deadlock state. For example, consider a system with two resources and two processes, where each process holds one instance of a different resource. If both processes wait for the same resource, the system will be in a deadlock state even though every edge is an assignment edge. Therefore, if every edge is an assignment edge, the system is not necessarily not in a deadlock state. This statement is false.\n\nBased on the analysis, the correct answer is:\n\n\\boxed{A}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

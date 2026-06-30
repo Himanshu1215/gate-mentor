@@ -1,0 +1,14 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q53",
+  "question_seq": 41,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Suppose a random sample of size 3 is taken from a distribution with the probability density function $ f ( x ) = \\left\\{ { \\begin{array} { l l } { 2 x , } & { 0 < x < 1 , } \\\\ { 0 , } & { { \\mathrm { e l s e w h e r e } } . } \\end{array} } \\right. $ $\\mathbf { I f } \\ p$ is the probability that the largest sample observation is at least twice the smallest sample observation, then the value of $p$ (rounded off to three decimal places) is",
+  "options": null,
+  "answer": null,
+  "solution": "We are given $f ( x ) = 2 x , 0 < x < 1$ , and $n = 3$ . Let the order statistics be $X _ { ( 1 ) } \\leq X _ { ( 2 ) } \\leq X _ { ( 3 ) }$ We need to find:\n\n $ p = P ( X _ { ( 3 ) } \\geq 2 X _ { ( 1 ) } ) . $ \n\nThe joint pdf of $X _ { ( 1 ) }$ and $X _ { ( 3 ) }$ for a sample of size $n = 3$ is:\n\n $ f _ { X _ { ( 1 ) } , X _ { ( 3 ) } } ( x _ { 1 } , x _ { 3 } ) = 6 [ F ( x _ { 3 } ) - F ( x _ { 1 } ) ] ^ { 1 } f ( x _ { 1 } ) f ( x _ { 3 } ) , \\quad 0 < x _ { 1 } < x _ { 3 } < 1 . $ \n\nSince $F ( x ) = x ^ { 2 }$ and $f ( x ) = 2 x$ , we get:\n\n $ f _ { X _ { ( 1 ) } , X _ { ( 3 ) } } ( x _ { 1 } , x _ { 3 } ) = 6 [ x _ { 3 } ^ { 2 } - x _ { 1 } ^ { 2 } ] ( 2 x _ { 1 } ) ( 2 x _ { 3 } ) = 2 4 x _ { 1 } x _ { 3 } ( x _ { 3 } ^ { 2 } - x _ { 1 } ^ { 2 } ) . $ \n\nNow, the required probability is:\n\n $ p = \\int _ { 0 } ^ { 0 . 5 } \\int _ { 2 x _ { 1 } } ^ { 1 } 2 4 x _ { 1 } x _ { 3 } ( x _ { 3 } ^ { 2 } - x _ { 1 } ^ { 2 } ) d x _ { 3 } d x _ { 1 } . $ \n\nEvaluating this integral gives approximately:\n\n $ p = 0 . 4 3 7 7 . $ \n\nThus, the value of $p \\mathrm { i s } { \\boxed { 0 . 4 3 8 } }$\nQuick Tip\n\nFor problems involving order statistics, use the joint pdf of the smallest and largest observations. Ensure limits match the condition given $( \\mathbf { e . g . } , X _ { ( 3 ) } \\geq 2 X _ { ( 1 ) } )$"
+}

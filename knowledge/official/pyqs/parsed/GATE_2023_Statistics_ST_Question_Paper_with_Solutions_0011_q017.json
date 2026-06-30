@@ -7,13 +7,13 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "PROB_001",
-  "question_text": "Let X be a random variable having Poisson distribution with mean λ > 0. Then E \u00001 X+1 | X > 0\u0001 equals:",
+  "question_text": "Let X be a random variable having Poisson distribution with mean $\\lambda > 0$ . Then $\\textstyle E \\left( { \\frac { 1 } { X + 1 } } \\mid X > 0 \\right)$ equals:",
   "options": {
-    "A": "1−e−λ−λe−λ λ(1−e−λ)",
-    "B": "1−e−λ",
-    "C": "1−e−λ−λe−λ",
-    "D": "1−e−λ λ+1"
+    "A": "$\\frac { 1 - e ^ { - \\lambda } - \\lambda e ^ { - \\lambda } } { \\lambda ( 1 - e ^ { - \\lambda } ) }$",
+    "B": "$\\frac { 1 - e ^ { - \\lambda } } { \\lambda }$",
+    "C": "$\\frac { 1 - e ^ { - \\lambda } - \\lambda e ^ { - \\lambda } } { \\lambda }$",
+    "D": "$\\frac { 1 - e ^ { - \\lambda } } { \\lambda + 1 }$"
   },
   "answer": "A",
-  "solution": "1) Using the definition of expectation:\nFor a random variable X with a Poisson distribution, the expected value is given by:\nX + 1 | X > 0\nx=1\nx+1P(X = x)\nP(X > 0)\nSince X ∼Poisson(λ), the probability mass function (PMF) is:\nP(X = x) = λxe−λ\nThus, the sum becomes:\nX + 1 | X > 0\nx=1\nx+1\nλxe−λ\n1 −e−λ\n2) Simplifying the sum:\nThe sum can be evaluated using known series expansions, and simplifying yields the correct\nresult:\nX + 1 | X > 0\n= 1 −e−λ −λe−λ\nλ(1 −e−λ)\nQuick Tip\n- For Poisson distribution, use the PMF to compute the expected value.\n- Conditional expectations can be computed by modifying the PMF and normalizing\nover the desired condition."
+  "solution": "1) Using the definition of expectation:\n\nFor a random variable X with a Poisson distribution, the expected value is given by:\n\n $ E \\left( { \\frac { 1 } { X + 1 } } \\mid X > 0 \\right) = { \\frac { \\sum _ { x = 1 } ^ { \\infty } { \\frac { 1 } { x + 1 } } P ( X = x ) } { P ( X > 0 ) } } $ \n\nSince $X \\sim \\mathrm { P o i s s o n } ( \\lambda )$ , the probability mass function (PMF) is:\n\n $ P ( X = x ) = { \\frac { \\lambda ^ { x } e ^ { - \\lambda } } { x ! } } $ \n\nThus, the sum becomes:\n\n $ E \\left( { \\frac { 1 } { X + 1 } } \\mid X > 0 \\right) = { \\frac { \\sum _ { x = 1 } ^ { \\infty } { \\frac { 1 } { x + 1 } } { \\frac { \\lambda ^ { x } e ^ { - \\lambda } } { x ! } } } { 1 - e ^ { - \\lambda } } } $ \n2) Simplifying the sum:\n\n $ E \\left( { \\frac { 1 } { X + 1 } } \\mid X > 0 \\right) = { \\frac { 1 - e ^ { - \\lambda } - \\lambda e ^ { - \\lambda } } { \\lambda ( 1 - e ^ { - \\lambda } ) } } $ \nQuick Tip\n\n\\- For Poisson distribution, use the PMF to compute the expected value.\n\n\\- Conditional expectations can be computed by modifying the PMF and normalizing over the desired condition."
 }

@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q17",
+  "question_seq": 64,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let p and q be two propositions. Consider the following two formulae in prepositional logic. $ \\pmb { S } _ { 1 } : ( \\neg p \\land ( p \\lor q ) ) p $ $ \\pmb { S } _ { 2 } : q ( \\neg p \\land ( p \\lor q ) ) $ Which one of the following choices is correct?",
+  "options": {
+    "A": "Neither $S _ { \\uparrow }$ nor $S _ { 2 }$ is a tautology.",
+    "B": "Both $S _ { \\imath }$ and $S _ { 2 }$ are tautologies.",
+    "C": "$S _ { 1 }$ is a tautology but $S _ { 2 }$ is not a tautology.",
+    "D": "$S _ { 1 }$ is not a tautology but $S _ { 2 }$ is a tautology."
+  },
+  "answer": "C",
+  "solution": "To determine which of the given formulae \\( S_1 \\) and \\( S_2 \\) is a tautology, we need to analyze their truth values for all possible combinations of truth values of the propositions \\( p \\) and \\( q \\).\n\nLet's start with \\( S_1 \\):\n\\[ S_1: (\\neg p \\land (p \\lor q)) p \\]\n\nWe will construct a truth table for \\( S_1 \\):\n\n\\[\n\\begin{array}{cc|c|c|c}\np & q & \\neg p & p \\lor q & \\neg p \\land (p \\lor q) & (\\neg p \\land (p \\lor q)) p \\\\\n\\hline\nT & T & F & T & F & F \\\\\nT & F & F & T & F & F \\\\\nF & T & T & T & T & F \\\\\nF & F & T & F & F & F \\\\\n\\end{array}\n\\]\n\nFrom the truth table, we can see that \\( S_1 \\) is false for all possible combinations of \\( p \\) and \\( q \\). Therefore, \\( S_1 \\) is not a tautology.\n\nNext, let's analyze \\( S_2 \\):\n\\[ S_2: q (\\neg p \\land (p \\lor q)) \\]\n\nWe will construct a truth table for \\( S_2 \\):\n\n\\[\n\\begin{array}{cc|c|c|c}\np & q & \\neg p & p \\lor q & \\neg p \\land (p \\lor q) & q (\\neg p \\land (p \\lor q)) \\\\\n\\hline\nT & T & F & T & F & F \\\\\nT & F & F & T & F & F \\\\\nF & T & T & T & T & T \\\\\nF & F & T & F & F & F \\\\\n\\end{array}\n\\]\n\nFrom the truth table, we can see that \\( S_2 \\) is true only when \\( p \\) is false and \\( q \\) is true. However, it is not true for all possible combinations of \\( p \\) and \\( q \\). Therefore, \\( S_2 \\) is not a tautology.\n\nBased on the analysis, we can conclude that neither \\( S_1 \\) nor \\( S_2 \\) is a tautology.\n\nThus, the correct answer is:\n\\[\n\\boxed{A}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

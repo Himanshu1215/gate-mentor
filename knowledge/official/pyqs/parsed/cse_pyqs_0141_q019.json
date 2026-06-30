@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q19",
+  "question_seq": 141,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which of the following fields is/are modified in the IP header of a packet going out of a network address translation (NAT) device from an internal network to an externa network? (a) Total Length (b) Source IP (c) Destination IP (d) Header Checksum",
+  "options": null,
+  "answer": "B",
+  "solution": "To determine which field is modified in the IP header of a packet going out of a network address translation (NAT) device from an internal network to an external network, let's analyze each option step by step.\n\n1. **Total Length**: The Total Length field in an IP首 indicates the total length of the data in the packet, including the首 and the data field. When a packet goes through a NAT device, the data field remains unchanged, so the Total Length field also remains unchanged.\n\n2. ** Source IP**: The Source IP field indicates the IP address of the source of the packet. When a packet goes through a NAT device, the source IP address is translated to a different IP address (the external IP address). Therefore, the Source IP field is modified.\n\n3. **Destination IP**: The Destination IP field indicates the IP address of the destination of the packet. When a packet goes through a NAT device, the destination IP address remains the same (the external IP address). Therefore, the Destination IP field remains unchanged.\n\n4. **Header Checksum**: TheHeader Checksum field is a calculated value based on the data in the packet, including the首, the data field, and theHeader Checksum field itself. When a packet goes through a NAT device, the data field remains unchanged, so theHeader Checksum field also remains unchanged.\n\nBased on the analysis, the only field that is modified in the IP header of a packet going out of a NAT device from an internal network to an external network is the Source IP field.\n\nTherefore, the correct answer is: \\boxed{B}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

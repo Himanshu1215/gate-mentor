@@ -7,13 +7,13 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "GENERAL",
-  "question_text": "Eject : Insert :: Advance :",
+  "question_text": "Eject : Insert :: Advance : (By word meaning)",
   "options": {
-    "B": "y word meaning)",
     "A": "Advent",
+    "B": "Progress",
     "C": "Retreat",
     "D": "Loan"
   },
   "answer": "C",
-  "solution": "Step 1: Identify the relationship in the first pair.\n”Eject” means to throw out or expel, while ”Insert” means to put in.\nThese two are antonyms (opposites).\nStep 2: Apply the same relationship to the second pair.\nWe need a word that is the opposite of ”Advance.”\n- Advance = move forward, proceed.\n- The opposite (antonym) ⇒Retreat = moveback, withdraw.\nStep 3: Eliminate the options.\n(A) Advent = arrival/beginning (not opposite of advance).\n(B) Progress = move forward (synonym of advance).\n(C) Retreat = move back/withdraw ⇒correctantonym.\n(D) Loan = lending of money (irrelevant meaning).\nRetreat\nQuick Tip\nLook for the type of relation first (synonym, antonym, cause–effect, part–whole). Here,\nsince eject : insert are opposites, apply the same antonym logic to the second pair."
+  "solution": "Step 1: Identify the relationship in the first pair.\n\n”Eject” means to throw out or expel, while ”Insert” means to put in.\n\nThese two are antonyms (opposites).\n\nStep 2: Apply the same relationship to the second pair.\n\nWe need a word that is the opposite of ”Advance.”\n\n\\- Advance = move forward, proceed.\n\n\\- The opposite (antonym) ⇒ Retreat = moveback, withdraw.\n\nStep 3: Eliminate the options.\n\n(A) Advent = arrival/beginning (not opposite of advance).\n\n(B) Progress = move forward (synonym of advance).\n\n(C) Retreat = move back/withdraw ⇒ correctantonym.\n\n(D) Loan = lending of money (irrelevant meaning).\n\nRetreat\nQuick Tip\n\nLook for the type of relation first (synonym, antonym, cause–effect, part–whole). Here, since eject : insert are opposites, apply the same antonym logic to the second pair."
 }

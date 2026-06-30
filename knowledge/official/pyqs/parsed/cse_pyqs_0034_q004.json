@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q4",
+  "question_seq": 34,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Two straight lines are drawn perpendicular to each other in X-Y plane. If α and β are the acute angles the straight lines make with the X-axis, then ${ \\mathfrak { Q } } \\ + \\ { \\beta }$ is (a) $1 8 0 ^ { \\circ }$ (b) $1 2 0 ^ { \\circ }$ (c) $9 0 ^ { \\circ }$ (d) $6 0 ^ { \\circ }$",
+  "options": null,
+  "answer": "C",
+  "solution": "To determine the sum of the acute angles \\(\\alpha\\) and \\(\\beta\\) that two perpendicular straight lines make with the X-axis, we can follow these steps:\n\n1. **Understand the Geometry**: When two lines are perpendicular to each other, they form a right angle (90 degrees) at their intersection. The angles \\(\\alpha\\) and \\(\\beta\\) are the angles that these lines make with the X-axis.\n\n2. **Visualize the Lines**: Imagine the X-axis as a horizontal line. If one line makes an angle \\(\\alpha\\) with the X-axis, it means that the line is inclined at \\(\\alpha\\) degrees above or below the X-axis. Similarly, if the other line is perpendicular to the first line, it will make an angle \\(\\beta\\) with the X-axis such that the sum of \\(\\alpha\\) and \\(\\beta\\) is 90 degrees.\n\n3. **Use Trigonometry**: The tangent of an angle is the ratio of the opposite side to the adjacent side in a right triangle. For two perpendicular lines, the slopes of the lines are negative reciprocals of each other. If the slope of the first line is \\(\\tan \\alpha\\), then the slope of the second line is \\(-\\cot \\alpha\\). Since \\(\\cot \\alpha = \\tan (90^\\circ - \\alpha)\\), the angle \\(\\beta\\) must be \\(90^\\circ - \\alpha\\).\n\n4. **Sum of the Angles**: Therefore, the sum of the angles \\(\\alpha\\) and \\(\\beta\\) is:\n   \\[\n   \\alpha + \\beta = \\alpha + (90^\\circ - \\alpha) = 90^\\circ\n   \\]\n\nSo, the correct answer is \\(\\boxed{90^\\circ}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

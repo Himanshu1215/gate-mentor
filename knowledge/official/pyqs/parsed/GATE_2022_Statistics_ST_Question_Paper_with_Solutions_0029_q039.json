@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q39",
+  "question_seq": 29,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $X = { \\left( \\begin{array} { l } { X _ { 1 } } \\\\ { X _ { 2 } } \\\\ { X _ { 3 } } \\end{array} \\right) }$ follow $N _ { 3 } ( \\mu , \\Sigma )$ with $\\mu = { \\left( \\begin{array} { l } { 2 } \\\\ { - 3 } \\\\ { 2 } \\end{array} \\right) }$ and $\\Sigma = \\left( \\begin{array} { l l l } { 4 } & { - 1 } & { 1 } \\\\ { - 1 } & { 2 } & { a } \\\\ { 1 } & { a } & { 2 } \\end{array} \\right)$ , where $a \\in \\mathbb { R }$ . Suppose that the partial correlation coefficient between $X _ { 2 }$ and $X _ { 3 } ,$ keeping $X _ { 1 }$ fixed, is $\\frac { 5 } { 7 }$ . Then a is equal to",
+  "options": {
+    "A": "1",
+    "B": "$\\frac { 3 } { 2 }$",
+    "C": "3",
+    "D": "2"
+  },
+  "answer": "C",
+  "solution": "Step 1: Understanding the Partial Correlation.\n\nThe partial correlation coefficient between two variables, keeping another variable fixed, can be computed using the formula for partial correlation in terms of the covariance matrix Σ. The formula for the partial correlation between $X _ { 2 }$ and $X _ { 3 }$ , with $X _ { 1 }$ held constant, is given by:\n\n $ \\rho _ { 2 3 \\cdot 1 } = \\frac { \\Sigma _ { 2 3 } - \\Sigma _ { 2 1 } \\Sigma _ { 1 1 } ^ { - 1 } \\Sigma _ { 1 3 } } { \\sqrt { ( \\Sigma _ { 2 2 } - \\Sigma _ { 2 1 } \\Sigma _ { 1 1 } ^ { - 1 } \\Sigma _ { 1 2 } ) ( \\Sigma _ { 3 3 } - \\Sigma _ { 1 3 } \\Sigma _ { 1 1 } ^ { - 1 } \\Sigma _ { 3 1 } ) } } . $ \n\nWhere $\\Sigma _ { i j }$ represents the element in the i-th row and j-th column of the covariance matrix $\\Sigma .$ Step 2: Using the covariance matrix.\n\nGiven the covariance matrix Σ, we can extract the necessary values:\n\n $ \\Sigma = \\left( \\begin{array} { l l l } { 4 } & { - 1 } & { 1 } \\\\ { - 1 } & { 2 } & { a } \\\\ { 1 } & { a } & { 2 } \\end{array} \\right) $ \n\nWe are given that the partial correlation coefficient $\\textstyle \\rho _ { 2 3 \\cdot 1 } = { \\frac { 5 } { 7 } }$ . Substituting the values into the formula and solving for a, we find that:\n\n $ a = 3 . $ \n\nStep 3: Conclusion.\n\nTherefore, the value of a is 3, and the correct answer is (C).\nQuick Tip\n\nPartial correlation coefficients can be computed using the elements of the covariance matrix. The formula involves the inverse of the covariance matrix and requires careful matrix algebra."
+}

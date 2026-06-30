@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q6",
+  "question_seq": 108,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the options given below refers to the degree (or arity) of a relation in relational database systems?",
+  "options": {
+    "A": "Number of attributes of its relation schema,",
+    "B": "Number of tuples stored in the relation.",
+    "C": "Number of entries in the relation,",
+    "D": "Number of distinct domains of its relation schema."
+  },
+  "answer": "A",
+  "solution": "To determine the degree (orarity) of a relation in relational database systems, we need to understand the definition of degree in the context of relational DBs. The degree of a relation is the number of attributes (or columns) in its relation schema. Let's break this down step by step:\n\n1. **Understanding the Relation Schema**: A relation schema is a definition of a relation in a relational database. It specifies the name of the relation and the attributes (or columns) it contains. For example, if we have a relation schema ` employees ` with attributes ` name`, ` age`, and ` department`, then the degree of this relation is 3 because there are 3 attributes.\n\n2. **Understanding the Options**:\n   - **Option (A)**: Number of attributes of its relation schema. This is the correct definition of the degree of a relation.\n   - **Option (B)**: Number of tuples stored in the relation. This refers to the number of rows in the relation, not the number of attributes.\n   - **Option (C)**: Number of entries in the relation. This is similar to the number of tuples, which is the number of rows in the relation, not the number of attributes.\n   - **Option (D)**: Number of distinct domains of its relation schema. This refers to the number of unique values that can appear in each attribute, not the number of attributes.\n\n3. **Conclusion**: Based on the definition and the options provided, the correct answer is (A) because the degree of a relation is the number of attributes in its relation schema.\n\nTherefore, the final answer is:\n\\boxed{A}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

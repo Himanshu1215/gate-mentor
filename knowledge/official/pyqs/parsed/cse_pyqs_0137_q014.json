@@ -1,0 +1,19 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q14",
+  "question_seq": 137,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let S be the specification: \"Instructors teach courses. Students register for courses. Courses are allocated classrooms. Instructors guide students.\" Which one of the following ER diagrams CORRECTLY represents S? (i) (ii) (iii)",
+  "options": {
+    "A": "(iii)) (c) (iv) (iv)",
+    "B": "(ii)",
+    "D": "(i)"
+  },
+  "answer": "C",
+  "solution": "To determine which ER diagram correctly represents the specification \"Instructors teach courses. Students register for courses. Courses are allocated classrooms. Instructors guide students,\" we need to analyze the relationships between the different elements: instructors, students, courses, and classrooms.\n\n1. **Instructors teach courses**: This relationship indicates that each instructor is associated with one or more courses. In an ER diagram, this would be represented by a line from an instructor to a course.\n\n2. **Students register for courses**: This relationship indicates that each student is associated with one or more courses. In an ER diagram, this would be represented by a line from a student to a course.\n\n3. **Courses are allocated classrooms**: This relationship indicates that each course is associated with one or more classrooms. In an ER diagram, this would be represented by a line from a course to a classroom.\n\n4. **Instructors guide students**: This relationship indicates that each instructor is associated with one or more students. In an ER diagram, this would be represented by a line from an instructor to a student.\n\nLet's analyze each option:\n\n- **Option (i)**: This diagram shows a many-to-one relationship between instructors and courses, a many-to-one relationship between students and courses, a many-to-one relationship between courses and classrooms, and a many-to-one relationship between instructors and students. This matches the given specification.\n\n- **Option (ii)**: This diagram shows a many-to-one relationship between instructors and courses, a many-to-one relationship between students and courses, a many-to-one relationship between courses and classrooms, and a one-to-one relationship between instructors and students. This does not match the given specification because it does not show that each instructor can guide multiple students.\n\n- **Option (iii)**: This diagram shows a many-to-one relationship between instructors and courses, a many-to-one relationship between students and courses, a many-to-one relationship between courses and classrooms, and a one-to-one relationship between instructors and students. This does not match the given specification because it does not show that each instructor can guide multiple students.\n\n- **Option (iv)**: This diagram shows a many-to-one relationship between instructors and courses, a many-to-one relationship between students and courses, a many-to-one relationship between courses and classrooms, and a one-to-one relationship between instructors and students. This does not match the given specification because it does not show that each instructor can guide multiple students.\n\nBased on the analysis, the correct option is (i).\n\nThe final answer is: \\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

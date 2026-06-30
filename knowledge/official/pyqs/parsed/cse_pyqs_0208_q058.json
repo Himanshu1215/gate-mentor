@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q58",
+  "question_seq": 208,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable which takes values in the set {1, 2, 3, 4, 5, 6, 7, 8}. Further, $\\mathsf { P r } ( X = 1 ) = \\mathsf { P r } ( X = 2 ) = \\mathsf { P r } ( X = 5 ) = \\mathsf { P r } ( X = 7 ) = { \\frac { 1 } { 6 } }$ and $\\mathsf { P r } ( X = 3 ) = \\mathsf { P r } ( X = 4 )$ $ \\ = \\mathsf { P r } ( X = \\mathsf { G } ) = \\mathsf { P r } ( X = \\mathsf { 8 } ) = \\frac { 1 } { 1 2 } . $ The expected value of X, denoted by E[X], is equal to . (rounded off to two decimal places)",
+  "options": null,
+  "answer": "A",
+  "solution": "To find the expected value \\( E[X] \\) of the random variable \\( X \\), we use the formula for the expected value of a discrete random variable:\n\n\\[\nE[X] = \\sum_{x \\in S} x \\cdot P(X = x)\n\\]\n\nwhere \\( S \\) is the set of all possible values that \\( X \\) can take. In this problem, \\( S = \\{1, 2, 3, 4, 5, 6, 7, 8\\} \\).\n\nGiven the probabilities:\n\\[\nP(X = 1) = P(X = 2) = P(X = 5) = P(X = 7) = \\frac{1}{6}\n\\]\n\\[\nP(X = 3) = P(X = 4) = P(X = 6) = P(X = 8) = \\frac{1}{12}\n\\]\n\nWe substitute these values into the expected value formula:\n\n\\[\nE[X] = 1 \\cdot \\frac{1}{6} + 2 \\cdot \\frac{1}{6} + 3 \\cdot \\frac{1}{12} + 4 \\cdot \\frac{1}{12} + 5 \\cdot \\frac{1}{6} + 6 \\cdot \\frac{1}{12} + 7 \\cdot \\frac{1}{6} + 8 \\cdot \\frac{1}{12}\n\\]\n\nNext, we calculate each term:\n\n\\[\n1 \\cdot \\frac{1}{6} = \\frac{1}{6}\n\\]\n\\[\n2 \\cdot \\frac{1}{6} = \\frac{2}{6} = \\frac{1}{3}\n\\]\n\\[\n3 \\cdot \\frac{1}{12} = \\frac{3}{12} = \\frac{1}{4}\n\\]\n\\[\n4 \\cdot \\frac{1}{12} = \\frac{4}{12} = \\frac{1}{3}\n\\]\n\\[\n5 \\cdot \\frac{1}{6} = \\frac{5}{6}\n\\]\n\\[\n6 \\cdot \\frac{1}{12} = \\frac{6}{12} = \\frac{1}{2}\n\\]\n\\[\n7 \\cdot \\frac{1}{6} = \\frac{7}{6}\n\\]\n\\[\n8 \\cdot \\frac{1}{12} = \\frac{8}{12} = \\frac{2}{3}\n\\]\n\nNow, we sum these fractions. To do this, we need a common denominator. The least common multiple of 6, 3, 4, and 2 is 12. We convert each fraction to have a denominator of 12:\n\n\\[\n\\frac{1}{6} = \\frac{2}{12}\n\\]\n\\[\n\\frac{1}{3} = \\frac{4}{12}\n\\]\n\\[\n\\frac{1}{4} = \\frac{3}{12}\n\\]\n\\[\n\\frac{1}{3} = \\frac{4}{12}\n\\]\n\\[\n\\frac{5}{6} = \\frac{10}{12}\n\\]\n\\[\n\\frac",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

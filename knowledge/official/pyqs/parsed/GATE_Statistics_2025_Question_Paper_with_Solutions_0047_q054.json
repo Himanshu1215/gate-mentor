@@ -1,0 +1,18 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q54",
+  "question_seq": 47,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "ML_001",
+  "question_text": "For $Y \\in \\mathbb { R } ^ { n } , X \\in \\mathbb { R } ^ { n \\times p }$ , and $\\beta \\in \\mathbb { R } ^ { p }$ , consider a regression model $ \\begin{array} { r } { Y = X \\beta + \\epsilon , } \\end{array} $ where ϵ has an n-dimensional multivariate normal distribution with zero mean vector and identity covariance matrix. Let $I _ { p }$ denote the identity matrix of order $p .$ For $\\lambda > 0 .$ let $ \\begin{array} { r } { \\hat { \\beta } _ { n } = ( X ^ { T } X + \\lambda I _ { p } ) ^ { - 1 } X ^ { T } Y , } \\end{array} $",
+  "options": {
+    "B": "e an estimator of $\\beta .$ Then which of the following options is/are correct? $\\left( \\mathbf { A } \\right) { \\hat { \\beta } } _ { n }$ is an unbiased estimator of $\\beta$",
+    "C": "$\\hat { \\beta } _ { n }$ has a multivariate normal distribution",
+    "D": "$\\operatorname { V a r } ( { \\hat { \\beta } } _ { n } ) = ( X ^ { T } X + \\lambda I _ { p } ) ^ { - 1 }$"
+  },
+  "answer": "B",
+  "solution": "Step 1: Unbiasedness of ${ \\hat { \\beta } } _ { n }$ The estimator $\\hat { \\beta } _ { n } = ( X ^ { T } X + \\lambda I _ { p } ) ^ { - 1 } X ^ { T } Y$ is biased because the regularization term $\\lambda I _ { p }$ adds bias. Therefore, $\\hat { \\beta } _ { n }$ is not an unbiased estimator of $\\beta .$\n\nThus, Option (A) is incorrect.\n\nStep 2: Positive Definiteness of $X ^ { T } X + \\lambda I _ { p }$\n\nSince $X ^ { T } X$ is positive semi-definite and $\\lambda I _ { p }$ is a positive definite matrix for $\\lambda > 0$ , the matrix $X ^ { T } X + \\lambda I _ { p }$ is positive definite.\n\nThus, Option (B) is correct.\n\nStep 3: Distribution of $\\hat { \\beta } _ { n }$\n\nSince $\\epsilon \\sim \\mathcal { N } ( 0 , I _ { n } )$ , the estimator $\\hat { \\beta } _ { n }$ is a linear function of the normally distributed vector $Y ,$ and hence ${ \\hat { \\beta } } _ { n }$ follows a multivariate normal distribution.\n\nThus, Option (C) is correct.\n\nStep 4: Variance of $\\hat { \\beta } _ { n }$\n\nThe variance of ${ \\hat { \\beta } } _ { n }$ is given by:\n\n $ \\operatorname { V a r } ( { \\hat { \\beta } } _ { n } ) = ( X ^ { T } X + \\lambda I _ { p } ) ^ { - 1 } . $ \n\nThus, Option (D) is correct.\n\nFinal Answer:\n\nThe correct answers are $\\left\\lceil B , C \\right\\rceil$\nQuick Tip\n\nRidge regression (regularized regression) adds a regularization term to the least squares estimator to make the matrix invertible, and it results in a biased but more stable estimator."
+}

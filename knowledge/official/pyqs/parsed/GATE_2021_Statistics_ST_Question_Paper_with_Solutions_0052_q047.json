@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q47",
+  "question_seq": 52,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let X be a random variable having the moment generating function $ M ( t ) = \\frac { e ^ { t } - 1 } { t ( 1 - t ) } , \\quad t < 1 . $ Then $ P ( X > 1 ) = { \\mathrm { ~ } } _ { \\mathrm { -- } \\mathrm { ~ } \\mathrm { ~ } \\mathrm { ~ } \\mathrm { ~ } \\mathrm { ~ } } ( \\mathrm { r o u n d ~ o f f ~ t o ~ } 2 \\mathrm { ~ d e c i m a l ~ p l a c e s } ) . $",
+  "options": null,
+  "answer": null,
+  "solution": "To find $P ( X > 1 )$ , we use the moment generating function to first find the probability distribution of X. After calculating the appropriate probabilities, we get:\n\n $ P ( X > 1 ) \\approx 0 . 7 2 . $ \n\nThus, the value is 0.72.\nQuick Tip\n\nUse the moment generating function to find the distribution of a random variable and then compute the desired probabilities."
+}

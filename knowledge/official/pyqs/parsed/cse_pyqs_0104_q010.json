@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q10",
+  "question_seq": 104,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Which one of the options best describes the transformation of the 2-dimensional figure $P$ to Q, and then to $R ,$ as shown? P Q",
+  "options": {
+    "A": "Operation $1 \\colon \\mathsf { A }$ clockwise rotation by $9 0 ^ { \\circ }$ about an axis perpendicular to the plane of the figure Operation 2: A reflection along a horizontal line",
+    "B": "Operation 1: A counter clockwise rotation by $9 0 ^ { \\mathrm { { o } } }$ about an axis perpendicular to the plane of the figure Operation 2: A reflection along a horizontal line",
+    "C": "Operation $1 \\colon \\mathsf { A }$ clockwise rotation by $9 0 ^ { \\circ }$ about an axis perpendicular to the plane of the figure Operation 2: A reflection along a vertical line",
+    "D": "Operation 1: A counter clockwise rotation by 180° about an axis perpendicular to the plane of the figure Operation 2: A reflection along a vertical line Operation 2: A reflection along a vertical line"
+  },
+  "answer": "A",
+  "solution": "To determine the correct transformation sequence that transforms figure \\( P \\) to \\( Q \\) and then to \\( R \\), let's analyze each step carefully.\n\n1. **Transformation from \\( P \\) to \\( Q \\):**\n   - When we look at the transformation from \\( P \\) to \\( Q \\), we observe that \\( Q \\) is a 90-degree clockwise rotation of \\( P \\) about an axis perpendicular to the plane of the figure. This means that each point in \\( P \\) is moved 90 degrees clockwise around a vertical axis.\n   \n2. **Transformation from \\( Q \\) to \\( R \\):**\n   - Next, we look at the transformation from \\( Q \\) to \\( R \\). We observe that \\( R \\) is a reflection of \\( Q \\) along a horizontal line. This means that each point in \\( Q \\) is flipped over a horizontal axis.\n\nBased on these observations, the correct sequence of operations is:\n- Operation 1: A clockwise rotation by 90 degrees about an axis perpendicular to the plane of the figure.\n- Operation 2: A reflection along a horizontal line.\n\nTherefore, the correct answer is \\(\\boxed{A}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

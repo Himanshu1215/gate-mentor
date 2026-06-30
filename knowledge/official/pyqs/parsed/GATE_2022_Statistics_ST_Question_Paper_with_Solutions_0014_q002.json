@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q2",
+  "question_seq": 14,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "The distribution of $( X _ { 3 } - \\mu ) ^ { T } S ^ { - 1 } ( X _ { 3 } - \\mu ) { \\mathrm { i s } } \\ \\chi _ { 6 } ^ { 2 }$ (Chi-square distribution with 6 degrees of freedom). Then which of the above statements is/are true?",
+  "options": {
+    "A": "(I) only",
+    "B": "(II) only",
+    "C": "Both (I) and (II)",
+    "D": "Neither (I) nor (II)"
+  },
+  "answer": "C",
+  "solution": "Step 1: Analyzing Statement (I).\n\nThe Wishart distribution $W _ { p } ( n , \\Sigma )$ is the distribution of the sample covariance matrix S for a random sample from a multivariate normal distribution. Since $X _ { 1 } , X _ { 2 } , \\ldots , X _ { 2 0 }$ are from a $N _ { 6 } ( \\mu , \\Sigma )$ distribution, the distribution of 19S will indeed be $W _ { 6 } ( 1 9 , \\Sigma )$ , where the order is 6 and the degrees of freedom are 19. This makes statement (I) true.\nStep 2: Analyzing Statement (II).\n\nThe quantity $( X _ { 3 } - \\mu ) ^ { T } S ^ { - 1 } ( X _ { 3 } - \\mu )$ follows a $\\chi ^ { 2 }$ distribution with degrees of freedom equal to the number of variables, which is 6 in this case. Therefore, statement (II) is also true.\nStep 3: Conclusion.\n\nBoth statements (I) and (II) are true, so the correct answer is (C).\nQuick Tip\n\nIn a multivariate normal distribution, the sample covariance matrix S follows a Wishart distribution. For a normal sample, linear combinations like $( X - \\mu ) ^ { T } S ^ { - 1 } ( X - \\mu )$ follow a Chi-square distribution with degrees of freedom equal to the dimension of the data."
+}

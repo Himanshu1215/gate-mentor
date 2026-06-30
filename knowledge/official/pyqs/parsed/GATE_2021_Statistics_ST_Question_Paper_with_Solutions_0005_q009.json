@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q9",
+  "question_seq": 5,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "The number of minutes spent by two students, X and Y, exercising every day in a given week are shown in the bar chart above. The number of days in the given week in which one of the students spent a minimum of 10% more than the other student, on a given day, is",
+  "options": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7"
+  },
+  "answer": "C",
+  "solution": "From the bar chart, we compare the minutes spent by students X and Y on each day. We need to find the days where one student spent at least 10% more time than the other. For each day, we calculate the percentage difference using the formula:\n\n $ { \\mathrm { P e r c e n t a g e ~ D i f f e r e n c e } } = \\left| { \\frac { \\mathrm { M i n u t e s ~ o f ~ X - M i n u t e s ~ o f ~ Y } } { \\mathrm { M i n u t e s ~ o f ~ Y } } } \\right| \\times 1 0 0 $ \n\n\\- For Monday: $| 7 0 - 4 5 | / 4 5 \\times 1 0 0 = 5 5 . 5 6 \\%$ (X spent more)\n\n\\- For Tuesday: $6 0 - 5 5 | / 5 5 \\times 1 0 0 = 9 . 0 9 \\%$ (No 10% difference)\n\n\\- For Wednesday: $( 6 5 - 6 0 | / 6 0 \\times 1 0 0 = 8 . 3 3 \\%$ (No 10% difference)\n\n\\- For Thursday: $6 0 - 5 5 | / 5 5 \\times 1 0 0 = 9 . 0 9 \\%$ (No 10% difference)\n\n\\- For Friday: $| 5 0 - 3 5 | / 3 5 \\times 1 0 0 = 4 2 . 8 6 \\%$ (X spent more)\n\n\\- For Saturday: $| 5 5 - 5 0 | / 5 0 \\times 1 0 0 = 1 0 \\%$ (No 10% difference)\n\n\\- For Sunday: $( 6 5 - 5 5 | / 5 5 \\times 1 0 0 = 1 8 . 1 8 \\%$ (X spent more)\n\nThe number of days with at least 10% more time spent by one student is 6 days: Monday, Friday, and Sunday.\n\nThus, the correct answer is (C) 6.\n\nFinal Answer: (C) 6\nQuick Tip\n\nTo find the percentage difference in time spent, use the formula $\\frac { \\mathrm { T i m e ~ o f ~ X \\mathrm { - } T i m e ~ o f ~ Y } } { \\mathrm { T i m e ~ o f ~ Y } } \\Big | \\times 1 0 0$ and check if it exceeds 10%."
+}

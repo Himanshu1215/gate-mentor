@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q42",
+  "question_seq": 47,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let the joint distribution of random variables $X _ { 1 } , X _ { 2 } , X _ { 3 }$ and $X _ { 4 }$ be $N _ { 4 } ( \\mu , \\Sigma )$ , where $ \\mu = \\left( \\begin{array} { c } { { 1 } } \\\\ { { 0 } } \\\\ { { 0 } } \\\\ { { 1 } } \\end{array} \\right) \\quad \\mathrm { a n d } \\quad \\Sigma = \\left( \\begin{array} { c c c c } { { 1 } } & { { 0 . 2 } } & { { 0 } } & { { 0 } } \\\\ { { 0 . 2 } } & { { 2 } } & { { 0 } } & { { 0 } } \\\\ { { 0 } } & { { 0 } } & { { 2 } } & { { 0 . 2 } } \\\\ { { 0 } } & { { 0 } } & { { 0 . 2 } } & { { 1 } } \\end{array} \\right) . $ Then which one of the following statements is true?",
+  "options": {
+    "A": "${ \\begin{array} { c } { { \\frac { 5 } { 1 7 } } } \\end{array} } \\left[ ( X _ { 1 } + X _ { 2 } ) ^ { 2 } + ( X _ { 3 } + X _ { 4 } - 1 ) ^ { 2 } \\right]$ follows a central chi-square distribution with 2 degrees of freedom",
+    "B": "${ \\begin{array} { l } { { \\frac { 1 } { 3 } } \\left[ ( X _ { 1 } + X _ { 3 } - 1 ) ^ { 2 } + ( X _ { 2 } + X _ { 4 } - 1 ) ^ { 2 } \\right] } \\end{array} }$ follows a central chi-square distribution with 2 degrees of freedom",
+    "C": "$E \\left\\lceil \\frac { | X _ { 1 } + X _ { 2 } - 1 | } { X _ { 3 } + X _ { 4 } - 1 } \\right\\rceil$ is NOT finite",
+    "D": "$E \\left[ \\frac { | X _ { 1 } + X _ { 2 } + X _ { 3 } + X _ { 4 } - 2 | } { X _ { 1 } + X _ { 2 } - X _ { 3 } - X _ { 4 } } \\right]$ is NOT finite"
+  },
+  "answer": "D",
+  "solution": "We are given a joint distribution of random variables $X _ { 1 } , X _ { 2 } , X _ { 3 }$ , and $X _ { 4 }$ from a multivariate normal distribution with mean vector $\\mu$ and covariance matrix Σ. The problem requires us to analyze the expectations of various expressions and identify which of the options is true.\nStep 1: Understanding the problem.\n\nWe are asked to consider the expected values of the given expressions. The expectation $E \\left[ \\frac { | X _ { 1 } + X _ { 2 } + X _ { 3 } + X _ { 4 } - 2 | } { X _ { 1 } + X _ { 2 } - X _ { 3 } - X _ { 4 } } \\right]$ in option (D) is not finite because the denominator $X _ { 1 } + X _ { 2 } - X _ { 3 } - X _ { 4 }$ could be very small or zero, leading to a division by zero or undefined value. This makes the expected value infinite or undefined, which confirms option (D).\nStep 2: Analyzing other options.\n\nThe expressions in options (A), (B), and (C) involve sums of squared terms that are expected to follow chi-square distributions. The chi-square distribution arises naturally from sums of squares of standard normal variables or linear combinations of such variables. Option (D) stands out as the only case where the expectation is not finite.\nStep 3: Conclusion.\n\nThe correct answer is (D), as it correctly identifies the case where the expected value is not finite.\n\nFinal Answer:\n\n $ \\boxed { ( D ) E \\left[ \\frac { \\big | X _ { 1 } + X _ { 2 } + X _ { 3 } + X _ { 4 } - 2 \\big | } { X _ { 1 } + X _ { 2 } - X _ { 3 } - X _ { 4 } } \\right] \\mathrm { i s N O T f i n i t e } . } $ \nQuick Tip\n\nWhen calculating expectations, be cautious of terms where the denominator may approach zero, leading to undefined or infinite values. This often occurs when dividing by variables with small values or variances."
+}

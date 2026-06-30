@@ -7,13 +7,12 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "GENERAL",
-  "question_text": "Match the items in column 1 with the item in column 2 in the following table.",
+  "question_text": "Match the items in column 1 with the item in column 2 in the following table. <table><tr><td rowspan=1 colspan=2>Column 1</td><td rowspan=1 colspan=2>Column 2</td></tr><tr><td rowspan=1 colspan=1>(p)</td><td rowspan=1 colspan=1>First In First out</td><td rowspan=1 colspan=1>(i)</td><td rowspan=1 colspan=1>Stacks</td></tr><tr><td rowspan=1 colspan=1>(q)</td><td rowspan=1 colspan=1>Lookup Operation</td><td rowspan=1 colspan=1>(ii)</td><td rowspan=1 colspan=1>Queues</td></tr><tr><td rowspan=1 colspan=1>(r)</td><td rowspan=1 colspan=1>Last in First out</td><td rowspan=1 colspan=1>(iii)</td><td rowspan=1 colspan=1>Hash table</td></tr></table>",
   "options": {
-    "C": "olumn 1",
-    "A": "p-(i), q-(ii), r-(iii)",
-    "B": "p-(iii), q-(ii), r-(i)",
-    "D": "p-(iii), q-(i), r-(ii) Sol."
+    "A": "p-(i), q-(ii), r-(iii) (b) p-(iii), q-(ii), r-(i)",
+    "C": "p-(ii), q-(iii), r-(i) (d) p-(iii), q-(i), r-(ii) Sol. (c) (i) Stacks : Stacks follow last in first out. (ii) Queues : Queues follow first in first out (iii) Hash table : Lookup Operation performed on hash table. [MSQ]"
   },
   "answer": null,
-  "solution": null
+  "solution": "To solve the problem, we need to match each item in column 1 with the corresponding item in column 2. Let's analyze each item step by step.\n\n1. **Column 1: (p)**\n   - This item corresponds to \"First In First out\" (FIFO).\n   - From column 2, the item that matches \"First In First out\" is \"Queues\".\n\n2. **Column 1: (q)**\n   - This item corresponds to \"_lookup operation\".\n   - From column 2, the item that matches \" lookup operation\" is \"Hash table\".\n\n3. **Column 1: (r)**\n   - This item corresponds to \"Last In First out\" (LIFO).\n   - From column 2, the item that matches \"Last In First out\" is \" Stacks\".\n\nNow, let's match the items correctly:\n- (p) matches with (ii) \"Queues\"\n- (q) matches with (iii) \"Hash table\"\n- (r) matches with (i) \" Stacks\"\n\nTherefore, the correct answer is:\n\\[\n\\boxed{C}\n\\]",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
 }

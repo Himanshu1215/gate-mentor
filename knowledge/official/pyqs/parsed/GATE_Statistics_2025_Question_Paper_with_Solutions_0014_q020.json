@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q20",
+  "question_seq": 14,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let a random variable X follow a distribution with density $f \\in \\{ f _ { 0 } , f _ { 1 } \\}$ , where $ f _ { 0 } ( x ) = { \\left\\{ \\begin{array} { l l } { 1 } & { { \\mathrm { i f ~ } } 0 \\leq x \\leq 1 } \\\\ { 0 } & { { \\mathrm { o t h e r w i s e , } } } \\end{array} \\right. } $ $ f _ { 1 } ( x ) = { \\left\\{ \\begin{array} { l l } { 1 } & { { \\mathrm { i f ~ } } 1 \\leq x \\leq 2 } \\\\ { 0 } & { { \\mathrm { o t h e r w i s e } } . } \\end{array} \\right. } $ Let $\\phi$ be a most powerful test of level 0.05 for testing $H _ { 0 } : f = f _ { 0 }$ against $H _ { 1 } : f = f _ { 1 }$",
+  "options": {
+    "B": "ased on X. Then which one of the following options is necessarily correct?",
+    "A": "$E _ { f _ { 0 } } ( \\phi ( X ) ) = 0 . 0 5$",
+    "C": "$P _ { f } ( \\phi ( X ) = 1 ) = P _ { f } ( X > 1 ) , \\forall f \\in \\{ f _ { 0 } , f _ { 1 } \\}$",
+    "D": "$P _ { f _ { 1 } } ( \\phi ( X ) = 1 ) < 1$"
+  },
+  "answer": "B",
+  "solution": "For the most powerful test, the power of the test should be maximized under the alternative hypothesis. Since the test is most powerful for $f _ { 1 }$ , it should reject $H _ { 0 }$ with probability 1 under $f _ { 1 }$ , ensuring maximum power. Therefore, $E _ { f _ { 1 } } ( \\phi ( X ) ) = 1$ , which corresponds to option (B).\nQuick Tip\n\nIn a most powerful test, the test’s power is maximized under the alternative hypothesis, which often results in a power of 1 under the alternative distribution."
+}

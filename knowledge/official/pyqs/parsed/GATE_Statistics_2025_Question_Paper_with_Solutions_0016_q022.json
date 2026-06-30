@@ -1,0 +1,19 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q22",
+  "question_seq": 16,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $\\{ X _ { n } \\} _ { n \\ge 1 }$ be a sequence of i.i.d. random variables with common distribution function $F ,$ and let $F _ { n }$ be the empirical distribution function based on $\\{ X _ { 1 } , X _ { 2 } , \\ldots , X _ { n } \\}$ Then, for each fixed $x \\in ( - \\infty , \\infty )$ , which one of the following options is correct?",
+  "options": {
+    "A": "${ \\sqrt { n } } ( F _ { n } ( x ) - F ( x ) ) { \\xrightarrow { P } } 0 { \\mathrm { ~ a s ~ } } n \\to \\infty$",
+    "B": "${ \\frac { n ( F _ { n } ( x ) - F ( x ) ) } { \\sqrt { F ( x ) ( 1 - F ( x ) ) } } } \\stackrel { d } { \\to } Z$ as $n \\to \\infty$ , where $Z \\sim N ( 0 , 1 )$",
+    "C": "$F _ { n } ( x ) \\xrightarrow { a . s . } F ( x )$ as $n \\to \\infty$",
+    "D": "$\\begin{array} { r } { \\operatorname* { l i m } _ { n \\to \\infty } n \\mathbf { V a r } ( F _ { n } ( x ) ) = 0 } \\end{array}$"
+  },
+  "answer": "C",
+  "solution": "Step 1: Understanding the empirical distribution function.\n\nThe empirical distribution function $F _ { n } ( x )$ is the proportion of data points in the sample $\\{ X _ { 1 } , X _ { 2 } , \\ldots , X _ { n } \\}$ that are less than or equal to x, i.e.,\n\n $ F _ { n } ( x ) = { \\frac { 1 } { n } } \\sum _ { i = 1 } ^ { n } \\mathbf { 1 } _ { \\{ X _ { i } \\leq x \\} } . $ \n\nSince the $X _ { i } { } ^ { \\ ' } \\mathbf { s }$ are i.i.d., $F _ { n } ( x )$ is a consistent estimator for $F ( x )$ , meaning $F _ { n } ( x ) \\xrightarrow { a . s . } F ( x )$ as $n \\to \\infty$ (option (C)).\nStep 2: Analyzing the asymptotic behavior.\n\nBy the Central Limit Theorem (CLT), the difference ${ \\sqrt { n } } ( F _ { n } ( x ) - F ( x ) )$ converges in distribution to a normal distribution with mean 0 and variance $F ( x ) ( 1 - F ( x ) )$ . This corresponds to option (B), but we are asked for the correct statement for fixed $x ,$ so this is not the best choice.\nStep 3: Verifying other options.\n\nOption (A) is incorrect because ${ \\sqrt { n } } ( F _ { n } ( x ) - F ( x ) )$ converges in distribution, not in probability.\n\nOption (C) is correct as $F _ { n } ( x )$ converges almost surely to $F ( x )$ by the Glivenko-Cantelli theorem, a fundamental result in empirical process theory.\n\nOption (D) is incorrect because the variance of $F _ { n } ( x )$ does not tend to zero as $n \\to \\infty$ Thus, the correct answer is $\\boxed { ( C ) }$\nQuick Tip\n\nThe empirical distribution function $F _ { n } ( x )$ converges almost surely to the true distribution function $F ( x )$ , and the Central Limit Theorem provides the asymptotic normality of the difference between $F _ { n } ( x )$ and $F ( x )$"
+}

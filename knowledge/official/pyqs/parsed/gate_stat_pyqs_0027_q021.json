@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q21",
+  "question_seq": 27,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $\\{ F _ { n } \\} _ { n \\geq 1 }$ be a sequence of cumulative distribution functions given by $ F _ { n } ( x ) = \\left\\{ \\begin{array} { c c } { 0 \\quad } & { \\mathrm { i f } x < - n } \\\\ { \\quad } \\\\ { \\frac { x + n } { 2 n } \\quad } & { \\mathrm { i f } - n \\leq x < n } \\\\ { \\quad } \\\\ { 1 \\quad } & { \\mathrm { i f } x \\geq n . } \\end{array} \\right. $ Which one of the following statements is true?",
+  "options": {
+    "A": "$F _ { n } ( x )$ converges for all $x \\in \\mathbb { R }$ and the limiting function is a cumulative distribution function",
+    "B": "$F _ { n } ( x )$ converges for all $x \\in \\mathbb { R }$ , but the limiting function is not a cumulative distribution function",
+    "C": "$F _ { n } ( x )$ does not converge for any $x \\in \\mathbb { R }$",
+    "D": "There exist $x , y \\in \\mathbb { R }$ such that $F _ { n } ( x )$ converges but $F _ { n } ( y )$ does not converge"
+  },
+  "answer": null,
+  "solution": "To determine the behavior of the sequence of cumulative distribution functions \\( \\{ F_n(x) \\}_{n \\geq 1} \\) as \\( n \\to \\infty \\), we need to analyze the limit of \\( F_n(x) \\) for different values of \\( x \\).\n\nThe given cumulative distribution function is:\n\\[ F_n(x) = \\begin{cases} \n0 & \\text{if } x < -n, \\\\\n\\frac{x + n}{2n} & \\text{if } -n \\leq x < n, \\\\\n1 & \\text{if } x \\geq n.\n\\end{cases} \\]\n\nLet's consider the limit of \\( F_n(x) \\) as \\( n \\to \\infty \\) for different ranges of \\( x \\).\n\n1. **For \\( x < 0 \\):**\n   - If \\( x < -n \\), then \\( F_n(x) = 0 \\).\n   - As \\( n \\to \\infty \\), \\( -n \\to -\\infty \\), so for any fixed \\( x < 0 \\), there exists an \\( N \\) such that \\( x < -N \\). Therefore, \\( F_n(x) = 0 \\) for all \\( n \\geq N \\).\n   - Hence, \\( \\lim_{n \\to \\infty} F_n(x) = 0 \\).\n\n2. **For \\( x = 0 \\):**\n   - If \\( -n \\leq 0 < n \\), then \\( F_n(0) = \\frac{0 + n}{2n} = \\frac{1}{2} \\).\n   - As \\( n \\to \\infty \\), \\( F_n(0) = \\frac{1}{2} \\) for all \\( n \\).\n   - Hence, \\( \\lim_{n \\to \\infty} F_n(0) = \\frac{1}{2} \\).\n\n3. **For \\( x > 0 \\):**\n   - If \\( x \\geq n \\), then \\( F_n(x) = 1 \\).\n   - As \\( n \\to \\infty \\), \\( n \\to \\infty \\), so for any fixed \\( x > 0 \\), there exists an \\( N \\) such that \\( x \\geq N \\). Therefore, \\( F_n(x) = 1 \\) for all \\( n \\geq N \\).\n   - Hence, \\( \\lim_{n \\to \\infty} F_n(x) = 1 \\).\n\nCombining these results, we have:\n\\[ \\lim_{n \\to \\infty} F_n(x) = \\begin{cases} \n0 & \\text{if } x < 0, \\\\\n\\frac{1}{2} & \\text{if } x = 0, \\\\\n1 & \\text{if } x > 0.\n\\end{cases} \\]\n\nWe need to check if this limiting function is a cumulative distribution function. A function \\( F(x) \\) is a cumulative distribution function if it is non-decreasing, right-continuous, and satisfies \\( F(-\\infty) = 0 \\) and \\( F(\\infty) = 1 \\).\n\n- The limiting function is non-decreasing because",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

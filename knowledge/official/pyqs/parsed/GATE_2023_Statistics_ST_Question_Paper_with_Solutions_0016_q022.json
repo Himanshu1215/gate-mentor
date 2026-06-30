@@ -7,13 +7,13 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "PROB_001",
-  "question_text": "Let X be a random variable with probability density function f(x; λ) = λe−x if x > 0 otherwise where λ > 0 is an unknown parameter. Let Y1, Y2, . . . , Yn be a random sample of size n from",
+  "question_text": "Let X be a random variable with probability density function $ f ( x ; \\lambda ) = { \\left\\{ \\begin{array} { l l } { { \\frac { 1 } { \\lambda } } e ^ { - { \\frac { x } { \\lambda } } } } & { { \\mathrm { i f ~ } } x > 0 } \\\\ { 0 } & { { \\mathrm { o t h e r w i s e } } } \\end{array} \\right. } $ where $\\lambda > 0$ is an unknown parameter. Let $Y _ { 1 } , Y _ { 2 } , \\dots , Y _ { n }$ be a random sample of size n from a population having the same distribution as $X ^ { 2 }$ . If $\\begin{array} { r } { \\overline { { Y } } = \\frac { 1 } { n } \\sum _ { i = 1 } ^ { n } Y _ { i } } \\end{array}$ , then which one of the following statements is true?",
   "options": {
-    "A": "population having the same distribution as X2. If Y = 1 i=1 Yi, then which one of the following statements is true?",
-    "B": "Y is a method of moments estimator of λ",
-    "C": "1 Y is a method of moments estimator of λ",
-    "D": "2 Y is a method of moments estimator of λ"
+    "A": "$\\sqrt { \\overline { { Y } } / 2 }$ is a method of moments estimator of λ",
+    "B": "$\\sqrt { \\overline { { Y } } }$ is a method of moments estimator of λ",
+    "C": "$\\scriptstyle { \\frac { 1 } { 2 } } { \\sqrt { \\overline { { Y } } } }$ is a method of moments estimator of λ",
+    "D": "$2 \\sqrt { \\overline { { Y } } }$ is a method of moments estimator of λ"
   },
   "answer": "A",
-  "solution": "1) Understanding the distribution of X:\nThe given probability density function is for an exponential distribution with rate parameter\nλ. The expected value E(X) is λ. Since Yi = X2, the expected value of Yi is E(Yi) = E(X2).\nFor an exponential random variable X, we have:\nE(X2) = λ2 + λ2 = 2λ2\n2) Applying the method of moments:\nThe method of moments estimator is found by equating the sample moments to the\npopulation moments. The first moment of Y is 2λ2. Hence, the method of moments estimator\nfor λ is:\nˆλ =\nQuick Tip\n- The method of moments estimator is obtained by equating sample moments to popu-\nlation moments.\n- For exponential distributions, E(X2) = 2λ2, which helps in estimating λ."
+  "solution": "1) Understanding the distribution of X:\n\nThe given probability density function is for an exponential distribution with rate parameter λ. The expected value $E ( X )$ is λ. Since $Y _ { i } = X ^ { 2 }$ , the expected value of $Y _ { i }$ is $E ( Y _ { i } ) = E ( X ^ { 2 } )$ . For an exponential random variable X, we have:\n\n $ E ( X ^ { 2 } ) = \\lambda ^ { 2 } + \\lambda ^ { 2 } = 2 \\lambda ^ { 2 } $ \n\n2) Applying the method of moments:\n\nThe method of moments estimator is found by equating the sample moments to the population moments. The first moment of Y is $2 \\lambda ^ { 2 }$ . Hence, the method of moments estimator for λ is:\n\n $ { \\hat { \\lambda } } = { \\sqrt { \\frac { Y } { 2 } } } $ \nQuick Tip\n\n\\- The method of moments estimator is obtained by equating sample moments to population moments.\n\n\\- For exponential distributions, $E ( X ^ { 2 } ) = 2 \\lambda ^ { 2 }$ , which helps in estimating λ."
 }

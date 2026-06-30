@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q12",
+  "question_seq": 7,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $\\{ X ( t ) \\} _ { t \\geq 0 }$ be a linear pure death process with death rate $\\mu _ { i } = 5 i , i = 0 , 1 , \\ldots , N ,$ $N \\geq 1$ . Suppose that $p _ { i } ( t ) = P ( X ( t ) = i )$ . Then the system of forward Kolmogorov’s equations is",
+  "options": {
+    "A": "$\\begin{array} { r } { \\frac { d p _ { i } ( t ) } { d t } = - \\mu _ { i } p _ { i } ( t ) + \\mu _ { i + 1 } p _ { i + 1 } ( t ) } \\end{array}$",
+    "B": "$\\begin{array} { r } { \\frac { d p _ { i } ( t ) } { d t } = - \\mu _ { i } p _ { i } ( t ) + \\mu _ { i - 1 } p _ { i - 1 } ( t ) } \\end{array}$",
+    "C": "$\\begin{array} { r } { \\frac { d p _ { i } ( t ) } { d t } = - \\mu _ { i } p _ { i } ( t ) + \\mu _ { i + 1 } p _ { i + 1 } ( t ) + \\mu _ { i - 1 } p _ { i - 1 } ( t ) } \\end{array}$",
+    "D": "$\\begin{array} { r } { \\frac { d p _ { i } ( t ) } { d t } = - \\mu _ { i } p _ { i } ( t ) + \\mu _ { i - 1 } p _ { i - 1 } ( t ) } \\end{array}$"
+  },
+  "answer": "B",
+  "solution": "In a linear pure death process, the rate of change of the probability $p _ { i } ( t )$ of being in state i is given by the difference between the rate of death from state i and the rate of transition to state i from the previous state $i - 1$ . The Kolmogorov forward equations for such a process are:\n\n $ \\frac { d p _ { i } ( t ) } { d t } = - \\mu _ { i } p _ { i } ( t ) + \\mu _ { i - 1 } p _ { i - 1 } ( t ) $ \n\nThis equation represents the probability of being in state i, considering both the death rate and the transition probabilities from the previous state $i - 1$\n\nThus, the correct answer is option (B).\nQuick Tip\n\nIn pure death processes, the forward Kolmogorov equations relate the rate of change of the probabilities to the death rates and the transition probabilities from neighboring states."
+}

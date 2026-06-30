@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q2",
+  "question_seq": 75,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Some students were not involved in the strike. If the above statement is true, which of the following conclusions is/are logically necessary? 1. Some who were involved in the strike were students. 2. No student was involved in the strike. 3. At least one student was involved in the strike. 4. Some who were not involved in the strike were students. (A) 1 and 2 (B) 3 (C) 4 (D) 2 and 3",
+  "options": null,
+  "answer": null,
+  "solution": "To determine which conclusions are logically necessary based on the statement \"Some students were not involved in the strike,\" let's analyze each option step by step.\n\n1. **Some who were involved in the strike were students.**\n   - This conclusion is not necessarily true. The statement only tells us that some students were not involved in the strike. It does not provide any information about the students who were involved in the strike. Therefore, we cannot conclude that some who were involved in the strike were students.\n\n2. **No student was involved in the strike.**\n   - This conclusion is not necessarily true. The statement only tells us that some students were not involved in the strike. It does not rule out the possibility that some students were involved in the strike. Therefore, we cannot conclude that no student was involved in the strike.\n\n3. **At least one student was involved in the strike.**\n   - This conclusion is not necessarily true. The statement only tells us that some students were not involved in the strike. It does not provide any information about the number of students who were involved in the strike. Therefore, we cannot conclude that at least one student was involved in the strike.\n\n4. **Some who were not involved in the strike were students.**\n   - This conclusion is necessarily true. The statement explicitly states that some students were not involved in the strike. Therefore, we can conclude that some who were not involved in the strike were students.\n\nBased on the analysis, the only conclusion that is logically necessary is conclusion 4.\n\nThe final answer is: \\boxed{C}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

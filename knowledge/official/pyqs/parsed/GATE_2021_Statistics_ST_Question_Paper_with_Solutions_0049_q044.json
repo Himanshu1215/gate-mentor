@@ -1,0 +1,14 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q44",
+  "question_seq": 49,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let (X, Y ) have a bivariate normal distribution with the joint probability density function $ f _ { X , Y } ( x , y ) = { \\frac { 1 } { \\pi } } e ^ { \\left( { \\frac { 3 } { 2 } } x y - { \\frac { 2 5 } { 3 2 } } x ^ { 2 } - 2 y ^ { 2 } \\right) } $ Then E(XY ) = (round off to 2 decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "For a bivariate normal distribution, the expectation $E ( X Y )$ is given by the covariance between X and $Y ,$ which is zero in the case of independent variables. Therefore, we calculate the covariance from the given joint distribution, which simplifies to:\n\n $ E ( X Y ) = 3 . $ \n\nThus, the value is 3.\nQuick Tip\n\nIn bivariate normal distributions, if X and $Y$ are independent, the covariance $E ( X Y )$ is zero."
+}

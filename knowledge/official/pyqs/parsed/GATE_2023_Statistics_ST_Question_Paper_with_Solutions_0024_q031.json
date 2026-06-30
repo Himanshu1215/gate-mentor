@@ -7,13 +7,13 @@
   "marks": null,
   "difficulty": null,
   "concept_id": "GENERAL",
-  "question_text": "Two defective bulbs are present in a set of five bulbs. To remove the two defective",
+  "question_text": "Two defective bulbs are present in a set of five bulbs. To remove the two defective bulbs, the bulbs are chosen randomly one by one and tested. If X denotes the minimum number of bulbs that must be tested to find out the two defective bulbs, then $P ( X = 3 )$ (rounded off to two decimal places) equals:",
   "options": {
-    "B": "ulbs, the bulbs are chosen randomly one by one and tested. If X denotes the minimum number of bulbs that must be tested to find out the two defective bulbs, then P(X = 3) (rounded off to two decimal places) equals:",
     "A": "0.28 to 0.32",
+    "B": "0.15 to 0.20",
     "C": "0.35 to 0.40",
     "D": "0.45 to 0.50"
   },
   "answer": "A",
-  "solution": "1) Understanding the problem:\nThe problem involves a set of five bulbs, two of which are defective. We need to find the\nprobability that exactly three bulbs must be tested to find both defective bulbs. This implies\nthat in the first two bulbs tested, one must be defective and the other must be non-defective,\nand the third bulb must also be defective.\n2) Calculating the probability:\nThe total number of ways to select 3 bulbs out of 5 is:\n= 10\nThe number of ways to select 1 defective and 2 non-defective bulbs in the first three\nselections is:\n= 2 × 3 = 6\nTherefore, the probability is:\nP(X = 3) = 6\n10 = 0.6\nAfter rounding to two decimal places, the final probability is 0.28 to 0.32.\nQuick Tip\n- For problems involving selection and arrangement, use combinations to calculate pos-\nsible outcomes.\n- When selecting defective and non-defective items, ensure that the selection process\nsatisfies the given conditions."
+  "solution": "1) Understanding the problem:\n\nThe problem involves a set of five bulbs, two of which are defective. We need to find the probability that exactly three bulbs must be tested to find both defective bulbs. This implies that in the first two bulbs tested, one must be defective and the other must be non-defective, and the third bulb must also be defective.\n2) Calculating the probability:\n\nThe total number of ways to select 3 bulbs out of $5$ is:\n\n $ { \\binom { 5 } { 3 } } = 1 0 $ \n\nThe number of ways to select 1 defective and 2 non-defective bulbs in the first three selections is:\n\n $ { \\binom { 2 } { 1 } } \\times { \\binom { 3 } { 2 } } = 2 \\times 3 = 6 $ \n\nTherefore, the probability is:\n\n $ P ( X = 3 ) = { \\frac { 6 } { 1 0 } } = 0 . 6 $ \n\nAfter rounding to two decimal places, the final probability is 0.28 to 0.32.\nQuick Tip\n\n\\- For problems involving selection and arrangement, use combinations to calculate possible outcomes.\n\n\\- When selecting defective and non-defective items, ensure that the selection process satisfies the given conditions."
 }

@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q35",
+  "question_seq": 40,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , X _ { 3 }$ be three uncorrelated random variables with common variance $\\sigma ^ { 2 } < \\infty$ . Let $Y _ { 1 } = 2 X _ { 1 } + X _ { 2 } + X _ { 3 } , Y _ { 2 } = X _ { 1 } + 2 X _ { 2 } + X _ { 3 } .$ , and $Y _ { 3 } = X _ { 1 } + X _ { 2 } + 2 X _ { 3 }$ . Then which of the following statements is/are true?",
+  "options": {
+    "A": "P : The sum of eigenvalues of the variance-covariance matrix of $( Y _ { 1 } , Y _ { 2 } , Y _ { 3 } )$ is $1 8 \\sigma ^ { 2 }$",
+    "B": "Q : The correlation coefficient between $Y _ { 1 }$ and $Y _ { 2 }$ equals that between $Y _ { 2 }$ and $Y _ { 3 }$",
+    "C": "Both P and Q",
+    "D": "Neither P nor Q"
+  },
+  "answer": "C",
+  "solution": "We are given three uncorrelated random variables $X _ { 1 } , X _ { 2 } , X _ { 3 }$ with the same variance $\\sigma ^ { 2 }$ , and the linear combinations $Y _ { 1 } , Y _ { 2 } , Y _ { 3 }$ . Let’s examine the statements.\n\nStep 1: Find the sum of eigenvalues of the variance-covariance matrix of $( Y _ { 1 } , Y _ { 2 } , Y _ { 3 } )$ The variance-covariance matrix of $( Y _ { 1 } , Y _ { 2 } , Y _ { 3 } )$ can be computed using the covariance matrix of the random variables $X _ { 1 } , X _ { 2 } , X _ { 3 }$ and the coefficients in the linear combinations. The sum of the eigenvalues of the variance-covariance matrix of $( Y _ { 1 } , Y _ { 2 } , Y _ { 3 } )$ is indeed $1 8 \\sigma ^ { 2 }$ , so statement P is true.\n\nStep 2: Analyze the correlation coefficient between $Y _ { 1 }$ and $Y _ { 2 }$ and that between $Y _ { 2 }$ and $Y _ { 3 } ,$\n\nThe correlation coefficients between $Y _ { 1 }$ and $Y _ { 2 }$ , and between $Y _ { 2 }$ and $Y _ { 3 }$ , are the same because the linear combinations of the uncorrelated random variables have symmetric coefficients. Therefore, statement Q is also true.\nFinal Answer:\n\n(C) Both P and Q are true\nQuick Tip\n\nWhen working with linear combinations of random variables, the covariance and correlation coefficients can be computed from the coefficients of the linear combinations and the covariance matrix of the underlying random variables."
+}

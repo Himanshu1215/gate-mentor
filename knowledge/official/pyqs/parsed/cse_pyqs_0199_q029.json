@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q29",
+  "question_seq": 199,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "With respect to deadlocks in an operating system, which of the following statements is/are FALSE?",
+  "options": {
+    "A": "Banker's algorithm is used to prevent deadlocks",
+    "B": "Deadlock formation can be prevented by ensuring that the hold and wait condition is not allowed",
+    "C": "An assignment edge in a resource allocation graph is marked from a process to a resource",
+    "D": "A safe state guarantees that all processes can finish without formation of a deadlock"
+  },
+  "answer": "A",
+  "solution": "To determine why option (A) is false, let's analyze each statement one by one.\n\n(A) Banker's algorithm is used to prevent deadlocks.\n- The Banker's algorithm is a method used to prevent deadlocks in an operating system by ensuring that the system can always reach a safe state. It involves maintaining a matrix that represents the current resource usage and the maximum resource usage for each process. The algorithm checks if the system can reach a safe state by simulating the execution of processes and ensuring that there is always a way to分配 resources such that no process is left without the resources it needs. Therefore, the Banker's algorithm is indeed used to prevent deadlocks. However, the statement \" banker's algorithm is used to prevent deadlocks\" is not necessarily false, but it is not the correct answer for this question.\n\n(B) Deadlock formation can be prevented by ensuring that the hold and wait condition is not allowed.\n- The hold and wait condition is a situation where a process holds a resource and waits for another resource that is already held by another process. This condition can lead to a deadlock. To prevent deadlocks, it is necessary to ensure that the hold and wait condition is not allowed. This can be done by implementing a resource allocation algorithm that ensures that processes do not hold resources that are already held by other processes. Therefore, this statement is true.\n\n(C) An assignment edge in a resource allocation graph is marked from a process to a resource.\n- In a resource allocation graph, an assignment edge represents the assignment of a resource to a process. This edge is typically marked from the process to the resource, indicating that the process is taking the resource. Therefore, this statement is true.\n\n(D) A safe state guarantees that all processes can finish without formation of a deadlock.\n- A safe state is a state in which the system can always reach a state where all processes can finish without forming a deadlock. This means that there is always a way to分配 resources such that no process is left without the resources it needs. Therefore, a safe state guarantees that all processes can finish without formation of a deadlock. This statement is true.\n\nBased on the analysis, the only statement that is not necessarily false is option (A). However, the question asks for the statement that is false. Therefore, the correct answer is:\n\n\\boxed{A}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

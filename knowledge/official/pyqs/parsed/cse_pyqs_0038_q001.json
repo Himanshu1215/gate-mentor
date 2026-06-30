@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q1",
+  "question_seq": 38,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let be the set of all binary relations on the set {1, 2, 3}. Suppose a relation is chosen from at random. The probability that the chosen relation is reflexive (round off to 3 decimal places) is",
+  "options": null,
+  "answer": "A",
+  "solution": "To determine the probability that a randomly chosen binary relation on the set \\(\\{1, 2, 3\\}\\) is reflexive, we need to follow these steps:\n\n1. **Calculate the total number of binary relations on the set \\(\\{1, 2, 3\\}\\):**\n\n   A binary relation on a set \\(A\\) is a subset of \\(A \\times A\\). For the set \\(\\{1, 2, 3\\}\\), the Cartesian product \\(A \\times A\\) is:\n   \\[\n   \\{1, 2, 3\\} \\times \\{1, 2, 3\\} = \\{(1,1), (1,2), (1,3), (2,1), (2,2), (2,3), (3,1), (3,2), (3,3)\\}\n   \\]\n   This set has 9 elements. Therefore, the total number of binary relations on \\(\\{1, 2, 3\\}\\) is:\n   \\[\n   2^9 = 512\n   \\]\n\n2. **Determine the number of reflexive binary relations on the set \\(\\{1, 2, 3\\}\\):**\n\n   A binary relation \\(R\\) on a set \\(A\\) is reflexive if for every element \\(a \\in A\\), the pair \\((a, a)\\) is in \\(R\\). For the set \\(\\{1, 2, 3\\}\\), this means that the pairs \\((1,1)\\), \\((2,2)\\), and \\((3,3)\\) must be included in \\(R\\). Therefore, a reflexive binary relation is a subset of the set:\n   \\[\n   \\{(1,1), (2,2), (3,3)\\} \\cup \\{(1,2), (1,3), (2,1), (2,3), (3,1), (3,2)\\}\n   \\]\n   The set \\(\\{(1,2), (1,3), (2,1), (2,3), (3,1), (3,2)\\}\\) has 6 elements. Therefore, the number of reflexive binary relations is:\n   \\[\n   2^6 = 64\n   \\]\n\n3. **Calculate the probability that a randomly chosen binary relation is reflexive:**\n\n   The probability \\(P\\) that a randomly chosen binary relation is reflexive is the ratio of the number of reflexive binary relations to the total number of binary relations:\n   \\[\n   P = \\frac{64}{512} = \\frac{1}{8} = 0.125\n   \\]\n\nTherefore, the probability that the chosen relation is reflexive is \\(\\boxed{0.125}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

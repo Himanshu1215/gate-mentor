@@ -1,0 +1,14 @@
+{
+  "year": 2025,
+  "exam": "GATE ST",
+  "question_id": "Q34",
+  "question_seq": 30,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let (1, 3), (2, 4), (7, 8) be three independent observations. Then the sample Spearman rank correlation coefficient based on the above observations is (rounded off to two decimal places).",
+  "options": null,
+  "answer": null,
+  "solution": "Step 1: Rank the data.\n\nWe have three observations: (1, 3), (2, 4), and (7, 8). We rank the x-values and the y-values separately:\n\nx-values: 1, 2, 7 → ranks: 1, 2, 3\n\ny-values: 3, 4, 8 → ranks: 1, 2, 3\n\n$\\mathrm { S o } .$ the ranked data is:\n\nRanks for x : (1, 2, 3), Ranks for $y : ( 1 , 2 , 3 )$\n\nStep 2: Compute the differences in ranks.\n\nThe rank differences $d _ { i }$ for each observation are:\n\n $ d _ { 1 } = 1 - 1 = 0 , \\quad d _ { 2 } = 2 - 2 = 0 , \\quad d _ { 3 } = 3 - 3 = 0 . $ \nStep 3: Compute the Spearman rank correlation coefficient.\n\nThe Spearman rank correlation coefficient $\\rho$ is given by:\n\n $ \\rho = 1 - \\frac { 6 \\sum _ { i = 1 } ^ { n } d _ { i } ^ { 2 } } { n ( n ^ { 2 } - 1 ) } , $ \n\nwhere $n = 3$ is the number of observations.\n\nSince all $d _ { i } = 0$ , the sum of squared rank differences is $\\sum d _ { i } ^ { 2 } = 0$ . Therefore:\n\n $ \\rho = 1 - \\frac { 6 \\times 0 } { 3 ( 9 - 1 ) } = 1 . $ \n\nThus, the sample Spearman rank correlation coefficient is 1.00 .\nQuick Tip\n\nFor Spearman’s rank correlation, rank the data and compute the differences in ranks. If the ranks are perfectly correlated, the coefficient will be 1."
+}

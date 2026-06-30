@@ -1,0 +1,20 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q52",
+  "question_seq": 179,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $\\Sigma = \\{ a ,$ b, c}. For $x \\in \\Sigma ^ { \\star }$ and $\\alpha \\in { \\Sigma } ,$ let $\\# _ { \\alpha } ( x )$ denote the number of occurrences of a in x. Which one or more of the following option(s) define(s) regular language(s)?",
+  "options": {
+    "A": "$\\{ a ^ { m } b ^ { n } | m , n \\geq 0 \\}$",
+    "B": "$\\{ a , \\ b \\} ^ { \\star } \\cap \\{ a ^ { m } b ^ { n } c ^ { m - n } | m \\geq n \\geq 0 \\}$",
+    "C": "{w| $W \\in \\{ a , b \\} ^ { \\star } , \\# _ { a } ( w ) \\equiv 2$ (mod 7), and $\\# _ { b } ( w ) \\equiv 3$ (mod 9)}",
+    "D": "{w| $W \\in \\{ a , b \\} ^ { \\star } , \\# _ { a } ( w ) \\equiv 2 ( \\mathsf { m o d } 7 )$ and $\\# _ { a } ( w ) = \\# _ { b } ( w ) \\}$ [2025 (Set-2) : 2 M]"
+  },
+  "answer": "A",
+  "solution": "To determine which of the given options define regular languages, we need to analyze each option and check if it can be recognized by a finite state machine (FSM).\n\n**Option (A):** \\(\\{ a^m b^n | m, n \\geq 0 \\}\\)\n\nThis language consists of all strings that have any number of \\(a\\)'s followed by any number of \\(b\\)'s. This language can be recognized by an FSM with two states: one state for the \\(a\\)'s and one state for the \\(b\\)'s. Therefore, this language is regular.\n\n**Option (B):** \\(\\{ a, b \\}^* \\cap \\{ a^m b^n c^{m-n} | m \\geq n \\geq 0 \\}\\)\n\nThis language consists of all strings that are in both \\(\\{ a, b \\}^*\\) and \\(\\{ a^m b^n c^{m-n} | m \\geq n \\geq 0 \\}\\). The language \\(\\{ a^m b^n c^{m-n} | m \\geq n \\geq 0 \\}\\) requires counting the number of \\(a\\)'s, \\(b\\)'s, and \\(c\\)'s and ensuring that the number of \\(c\\)'s is equal to the difference between the number of \\(a\\)'s and \\(b\\)'s. This language cannot be recognized by an FSM because it requires infinite memory to count the number of \\(a\\)'s and \\(b\\)'s and then compare them. Therefore, this language is not regular.\n\n**Option (C):** \\(\\{ w | w \\in \\{ a, b \\}^* \\text{ and } \\#_a(w) \\equiv 2 \\pmod{7} \\text{ and } \\#_b(w) \\equiv 3 \\pmod{9} \\}\\)\n\nThis language consists of all strings where the number of \\(a\\)'s is congruent to 2 modulo 7 and the number of \\(b\\)'s is congruent to 3 modulo 9. This language can be recognized by an FSM with 7 states for the \\(a\\)'s and 9 states for the \\(b\\)'s, making a total of \\(7 \\times 9 = 63\\) states. Therefore, this language is regular.\n\n**Option (D):** \\(\\{ w | w \\in \\{ a, b \\}^* \\text{ and } \\#_a(w) \\equiv 2 \\pmod{7} \\text{ and } \\#_a(w) = \\#_b(w) \\}\\)\n\nThis language consists of all strings where the number of \\(a\\)'s is congruent to 2 modulo 7 and the number of \\(a\\)'s is equal to the number of \\(b\\)'s. This language cannot be recognized by an FSM because it requires infinite memory to count the number of \\(a\\)'s and \\(b\\)'s and then compare them. Therefore, this language is not regular.\n\nBased on the analysis, the correct answer is:\n\n\\(\\boxed{A}\\)",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

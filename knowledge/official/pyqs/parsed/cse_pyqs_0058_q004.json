@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q4",
+  "question_seq": 58,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Three processes arrive at time zero with CPU bursts of 16, 20 and 10 milliseconds. If the scheduler has prior knowledge about the length of the CPU bursts, the minimum achievable average waiting time for these three processes in a non-preemptive scheduler (round to nearest integer) is milliseconds.",
+  "options": null,
+  "answer": "A",
+  "solution": "To find the minimum achievable average waiting time for three processes with CPU burst times of 16, 20, and 10 milliseconds in a nonpreemptive scheduler, we need to consider the order in which the processes are scheduled. The optimal schedule is to schedule the processes in ascending order of their CPU burst times. This is because the process with the shortest burst time will have the least waiting time, and the process with the longest burst time will have the most waiting time. By scheduling the processes in ascending order, we minimize the total waiting time.\n\nLet's denote the CPU burst times of the processes as \\(a = 10\\), \\(b = 16\\), and \\(c = 20\\). If we schedule the processes in the order \\(a\\), \\(b\\), and \\(c\\), the waiting times for each process will be as follows:\n- The first process \\(a\\) has a waiting time of 0 milliseconds.\n- The second process \\(b\\) has a waiting time of \\(a = 10\\) milliseconds.\n- The third process \\(c\\) has a waiting time of \\(a + b = 10 + 16 = 26\\) milliseconds.\n\nThe total waiting time for all three processes is:\n\\[0 + 10 + 26 = 36 \\text{ milliseconds}\\]\n\nThe average waiting time is the total waiting time divided by the number of processes:\n\\[\\text{Average waiting time} = \\frac{36}{3} = 12 \\text{ milliseconds}\\]\n\nTherefore, the minimum achievable average waiting time for these three processes in a nonpreemptive scheduler is \\(\\boxed{12}\\).",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

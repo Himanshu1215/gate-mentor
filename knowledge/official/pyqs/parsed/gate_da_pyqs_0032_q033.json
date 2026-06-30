@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE DA",
+  "question_id": "Q33",
+  "question_seq": 32,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "On a relation named Loan of a bank: <table><tr><td rowspan=1 colspan=3>Loan</td></tr><tr><td rowspan=1 colspan=1>loan_number</td><td rowspan=1 colspan=1>branch_name</td><td rowspan=1 colspan=1>amount</td></tr><tr><td rowspan=1 colspan=1>L11</td><td rowspan=1 colspan=1>Banjara Hills</td><td rowspan=1 colspan=1>90000</td></tr><tr><td rowspan=1 colspan=1>L14</td><td rowspan=1 colspan=1>Kondapur</td><td rowspan=1 colspan=1>50000</td></tr><tr><td rowspan=1 colspan=1>L15</td><td rowspan=1 colspan=1>SR Nagar</td><td rowspan=1 colspan=1>40000</td></tr><tr><td rowspan=1 colspan=1>L22</td><td rowspan=1 colspan=1>SR Nagar</td><td rowspan=1 colspan=1>25000</td></tr><tr><td rowspan=1 colspan=1>L23</td><td rowspan=1 colspan=1>Balanagar</td><td rowspan=1 colspan=1>80000</td></tr><tr><td rowspan=1 colspan=1>L25</td><td rowspan=1 colspan=1>Kondapur</td><td rowspan=1 colspan=1>70000</td></tr><tr><td rowspan=1 colspan=1>L19</td><td rowspan=1 colspan=1>SR Nagar</td><td rowspan=1 colspan=1>65000</td></tr></table> the following SQL query is executed. SELECT L1.loan number FROM Loan L1 WHERE L1.amount > (SELECT MAX (L2.amount) FROM Loan L2 WHERE L2.branch name = ’SR Nagar’); The number of rows returned by the query is (",
+  "options": null,
+  "answer": null,
+  "solution": "To solve the given SQL query step by step, we need to follow these steps:\n\n1. Identify the maximum amount of loans from the branch \"SR Nagar\".\n2. Filter the loans from the table \"Loan\" where the amount is greater than the maximum amount from \"SR Nagar\".\n3. Count the number of rows returned by the filter.\n\nLet's start with the first step:\n\n1. Identify the maximum amount of loans from the branch \"SR Nagar\":\n   - From the table, we can see that the loans from \"SR Nagar\" are L15, L22, and L19.\n   - The amounts for these loans are 40000, 25000, and 65000 respectively.\n   - The maximum amount is 65000.\n\n2. Filter the loans from the table \"Loan\" where the amount is greater than 65000:\n   - We need to check each loan in the table to see if its amount is greater than 65000.\n   - L11: 90000 (greater than 65000)\n   - L14: 50000 (not greater than 65000)\n   - L15: 40000 (not greater than 65000)\n   - L22: 25000 (not greater than 65000)\n   - L23: 80000 (greater than 65000)\n   - L25: 70000 (greater than 65000)\n   - L19: 65000 (not greater than 65000)\n\n   The loans that satisfy the condition are L11, L23, and L25.\n\n3. Count the number of rows returned by the filter:\n   - There are 3 rows returned.\n\nTherefore, the number of rows returned by the query is \\boxed{3}.",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

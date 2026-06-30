@@ -1,0 +1,19 @@
+{
+  "year": 2021,
+  "exam": "GATE ST",
+  "question_id": "Q40",
+  "question_seq": 45,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $X _ { 1 } , X _ { 2 } , \\ldots , X _ { n }$ be a random sample of size $n ( \\geq 2 )$ from a uniform distribution on $[ - \\theta , \\theta ]$ , where $\\theta \\in ( 0 , \\infty )$ . Let $X _ { ( 1 ) } = \\operatorname* { m i n } \\{ X _ { 1 } , X _ { 2 } , \\dots , X _ { n } \\}$ and $X _ { ( n ) } = \\operatorname* { m a x } \\{ X _ { 1 } , X _ { 2 } , \\ldots , X _ { n } \\}$ . Then which of the following statements is/are true?",
+  "options": {
+    "A": "P only",
+    "B": "Q only",
+    "C": "Both P and Q",
+    "D": "Neither P nor Q"
+  },
+  "answer": "C",
+  "solution": "We are given a random sample $X _ { 1 } , X _ { 2 } , \\ldots , X _ { n }$ from a uniform distribution. We need to analyze the two statements P and Q.\nStep 1: Analyzing statement P.\n\nStatement P asserts that $( X _ { ( 1 ) } , X _ { ( n ) } )$ is a complete statistic. A statistic is complete if the only function of the statistic that has an expected value of zero for all values of the parameter is the zero function. In this case, $X _ { ( 1 ) }$ and $X _ { ( n ) }$ together form a complete statistic for θ, since they exhaust all the information about θ in the sample.\nStep 2: Analyzing statement Q.\n\nStatement Q asserts that $X _ { ( n ) } - X _ { ( 1 ) }$ is an ancillary statistic. An ancillary statistic is a statistic whose distribution does not depend on the parameter being estimated. Since $X _ { ( n ) } - X _ { ( 1 ) }$ depends only on the sample and not on θ, it is indeed an ancillary statistic.\n\nStep 3: Conclusion.\n\nBoth statements P and Q are correct, so the correct answer is (C) Both P and Q.\n\nFinal Answer: $\\boxed { ( C ) B o t h P a n d Q }$\nQuick Tip\n\nWhen analyzing statistics, recall that a complete statistic provides all the information about the parameter, while an ancillary statistic has a distribution independent of the parameter."
+}

@@ -1,0 +1,19 @@
+{
+  "year": 2022,
+  "exam": "GATE ST",
+  "question_id": "Q13",
+  "question_seq": 8,
+  "question_type": "MCQ",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "GENERAL",
+  "question_text": "Let $S ^ { 2 }$ be the variance of a random sample of size $n > 1$ from a normal population with an unknown mean $\\mu$ and an unknown finite variance $\\sigma ^ { 2 } > 0$ . Consider the following statements: (I) $S ^ { 2 }$ is an unbiased estimator of $\\sigma ^ { 2 }$ , and S is an unbiased estimator of $\\sigma$ (II) $\\textstyle { \\frac { n - 1 } { n } } S ^ { 2 }$ is a maximum likelihood estimator of $\\sigma ^ { 2 }$ , and ${ \\sqrt { \\frac { n - 1 } { n } } } S$ is a maximum likelihood estimator of σ. Which of the above statements is/are true?",
+  "options": {
+    "A": "(I) only",
+    "B": "(II) only",
+    "C": "Both (I) and (II)",
+    "D": "Neither (I) nor (II)"
+  },
+  "answer": "B",
+  "solution": "\\- Statement (I): $S ^ { 2 }$ is indeed an unbiased estimator of $\\sigma ^ { 2 }$ , meaning $E ( S ^ { 2 } ) = \\sigma ^ { 2 }$ . However, S is not an unbiased estimator of $\\sigma ,$ , since E(S) is not equal to $\\sigma$ for a sample from a normal distribution.\n\n\\- Statement (II): $\\textstyle { \\frac { n - 1 } { n } } S ^ { 2 }$ is the maximum likelihood estimator (MLE) for $\\sigma ^ { 2 }$ , and ${ \\sqrt { \\frac { n - 1 } { n } } } S$ is the MLE for $\\sigma$ when the sample is from a normal distribution.\n\nThus, statement (II) is true while statement (I) is false. Therefore, the correct answer is (B) (II) only.\n\nQuick Tip\n\nFor MLE estimators, the correction factor $\\textstyle { \\frac { n - 1 } { n } }$ is used to account for the bias in the sample variance."
+}

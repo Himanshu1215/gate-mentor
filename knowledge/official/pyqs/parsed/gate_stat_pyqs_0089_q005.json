@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q5",
+  "question_seq": 89,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "LA_001",
+  "question_text": "The dimension of the vector space of $7 \\times 7$ real symmetric matrices with trace zero and the sum of the off-diagonal elements zero is (A) 47 (B) 28 (C) 27 (D) 26",
+  "options": null,
+  "answer": null,
+  "solution": "To determine the dimension of the vector space of \\(7 \\times 7\\) real symmetric matrices with trace zero and the sum of the off-diagonal elements zero, we need to analyze the constraints imposed by these conditions.\n\n### Step 1: General Form of a Symmetric Matrix\nA \\(7 \\times 7\\) symmetric matrix \\(A\\) has the property that \\(A = A^T\\). This means that the element in the \\(i\\)-th row and \\(j\\)-th column is equal to the element in the \\(j\\)-th row and \\(i\\)-th column. Therefore, the matrix can be written as:\n\\[\nA = \\begin{pmatrix}\na_{11} & a_{12} & a_{13} & a_{14} & a_{15} & a_{16} & a_{17} \\\\\na_{12} & a_{22} & a_{23} & a_{24} & a_{25} & a_{26} & a_{27} \\\\\na_{13} & a_{23} & a_{33} & a_{34} & a_{35} & a_{36} & a_{37} \\\\\na_{14} & a_{24} & a_{34} & a_{44} & a_{45} & a_{46} & a_{47} \\\\\na_{15} & a_{25} & a_{35} & a_{45} & a_{55} & a_{56} & a_{57} \\\\\na_{16} & a_{26} & a_{36} & a_{46} & a_{56} & a_{66} & a_{67} \\\\\na_{17} & a_{27} & a_{37} & a_{47} & a_{57} & a_{67} & a_{77}\n\\end{pmatrix}\n\\]\n\n### Step 2: Counting the Number of Independent Elements\nIn a symmetric matrix, the elements on the diagonal are independent, and the off-diagonal elements are symmetric. Therefore, we can count the number of independent elements as follows:\n- There are 7 diagonal elements.\n- For the off-diagonal elements, we only need to count the elements in the upper triangle (or lower triangle) because the lower triangle is determined by the upper triangle due to symmetry. The number of elements in the upper triangle of a \\(7 \\times 7\\) matrix is:\n\\[\n\\frac{7 \\times (7-1)}{2} = \\frac{7 \\times 6}{2} = 21\n\\]\nThus, the total number of independent elements in a \\(7 \\times 7\\) symmetric matrix is:\n\\[\n7 + 21 = 28\n\\]\n\n### Step 3: Applying the Constraints\nWe are given two additional constraints:\n1. The trace of the matrix is zero.\n2. The sum of the off-diagonal elements is zero.\n\n#### Constraint 1: Trace is Zero\nThe trace of a matrix is the sum of its diagonal elements. Therefore, we have:\n\\[\na_{11}",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}

@@ -1,0 +1,15 @@
+{
+  "year": 2024,
+  "exam": "GATE ST",
+  "question_id": "Q51",
+  "question_seq": 127,
+  "question_type": "NAT",
+  "marks": null,
+  "difficulty": null,
+  "concept_id": "PROB_001",
+  "question_text": "Let $Y _ { i } = \\beta _ { 0 } + \\beta _ { 1 } x _ { i } + \\epsilon _ { i } , i = 1 , \\dots , n ,$ ,where $x _ { i } ^ { \\prime } \\mathrm { s }$ are fixed covariates, and $\\epsilon _ { i } ^ { \\prime } \\mathrm { s }$ are uncorrelated random variables with mean zero and constant variance. Suppose that $\\hat { \\beta } _ { 0 }$ and $\\hat { \\beta } _ { 1 }$ are the least squares estimators of the unknown parameters $\\beta _ { 0 }$ and $\\beta _ { 1 }$ , respectively. If $\\scriptstyle \\sum _ { i = 1 } ^ { n } x _ { i } = 0$ , then the correlation between $\\hat { \\beta } _ { 0 }$ and $\\hat { \\beta } _ { 1 }$ is equal to ...",
+  "options": null,
+  "answer": null,
+  "solution": "To find the correlation between the least squares estimators \\(\\hat{\\beta}_0\\) and \\(\\hat{\\beta}_1\\) in the linear regression model \\(Y_i = \\beta_0 + \\beta_1 x_i + \\epsilon_i\\), we start by recalling the formulas for the least squares estimates:\n\n\\[\n\\hat{\\beta}_1 = \\frac{\\sum_{i=1}^n (x_i - \\bar{x})(Y_i - \\bar{Y})}{\\sum_{i=1}^n (x_i - \\bar{x})^2}\n\\]\n\\[\n\\hat{\\beta}_0 = \\bar{Y} - \\hat{\\beta}_1 \\bar{x}\n\\]\n\nGiven that \\(\\sum_{i=1}^n x_i = 0\\), it follows that \\(\\bar{x} = \\frac{1}{n} \\sum_{i=1}^n x_i = 0\\). Therefore, the least squares estimates simplify to:\n\n\\[\n\\hat{\\beta}_1 = \\frac{\\sum_{i=1}^n x_i Y_i}{\\sum_{i=1}^n x_i^2}\n\\]\n\\[\n\\hat{\\beta}_0 = \\bar{Y}\n\\]\n\nNext, we need to find the covariance between \\(\\hat{\\beta}_0\\) and \\(\\hat{\\beta}_1\\). The covariance is given by:\n\n\\[\n\\text{Cov}(\\hat{\\beta}_0, \\hat{\\beta}_1) = \\text{Cov}(\\bar{Y}, \\hat{\\beta}_1)\n\\]\n\nSince \\(\\bar{Y} = \\frac{1}{n} \\sum_{i=1}^n Y_i\\), we can use the linearity of covariance:\n\n\\[\n\\text{Cov}(\\bar{Y}, \\hat{\\beta}_1) = \\text{Cov}\\left(\\frac{1}{n} \\sum_{i=1}^n Y_i, \\frac{\\sum_{j=1}^n x_j Y_j}{\\sum_{j=1}^n x_j^2}\\right) = \\frac{1}{n} \\frac{1}{\\sum_{j=1}^n x_j^2} \\sum_{i=1}^n \\text{Cov}(Y_i, \\sum_{j=1}^n x_j Y_j)\n\\]\n\nUsing the property of covariance that \\(\\text{Cov}(Y_i, Y_j) = \\text{Cov}(Y_j, Y_i)\\) and the fact that \\(\\epsilon_i\\) are uncorrelated with mean zero and constant variance, we have:\n\n\\[\n\\text{Cov}(Y_i, \\sum_{j=1}^n x_j Y_j) = \\sum_{j=1}^n x_j \\text{Cov}(Y_i, Y_j) = x_i \\text{Cov}(Y_i, Y_i) = x_i \\sigma^2\n\\]\n\nTherefore, the covariance becomes:\n\n\\[\n\\text{Cov}(\\bar{Y}, \\hat{\\beta}_1) = \\frac{1}{n} \\frac{1}{\\sum_{j=1}^n x",
+  "solution_source": "distilled:Qwen/Qwen2.5-Math-7B-Instruct"
+}
