@@ -233,11 +233,33 @@ def explainer_node(state: ChatState) -> ChatState:
     query = state.get("query", "")
     context_chunks = state.get("context", [])
     persona = state.get("persona", "Professor")
+    messages = state.get("messages", [])
     
     from learning.ai_reasoner import AIReasoningEngine
     reasoner = AIReasoningEngine()
     
-    reply = reasoner.generate_explanation(query, context_chunks, persona=persona)
+    import sqlite3
+    DB_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "gate_mentor.db")
+    profile_summary = ""
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        conn.row_factory = sqlite3.Row
+        user = conn.execute("SELECT * FROM user_profile WHERE id=1").fetchone()
+        if user:
+            profile_summary += f"Student Target AIR: {user['target_air'] or 'N/A'}, Exam Date: {user['exam_date'] or 'N/A'}\n"
+        
+        weak = conn.execute("SELECT c.topic, m.state_level FROM mastery_states m JOIN concepts c ON m.concept_id=c.concept_id WHERE m.state_level <= 3 LIMIT 5").fetchall()
+        if weak:
+            profile_summary += "Student's Weak Concepts (Level 1-3 out of 8): " + ", ".join([f"{r['topic']} (L{r['state_level']})" for r in weak]) + "\n"
+            
+        strong = conn.execute("SELECT c.topic, m.state_level FROM mastery_states m JOIN concepts c ON m.concept_id=c.concept_id WHERE m.state_level >= 7 LIMIT 5").fetchall()
+        if strong:
+            profile_summary += "Student's Strong Concepts (Level 7-8 out of 8): " + ", ".join([f"{r['topic']} (L{r['state_level']})" for r in strong]) + "\n"
+        conn.close()
+    except Exception as e:
+        logger.error(f"Error fetching profile context: {e}")
+    
+    reply = reasoner.generate_chat_reply(query, messages, context_chunks, persona, profile_summary)
     citations = list({chunk["metadata"].get("source", "Unknown") for chunk in context_chunks})
     
     state["reply"] = reply

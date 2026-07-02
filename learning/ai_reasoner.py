@@ -69,16 +69,11 @@ class AIReasoningEngine:
     # ------------------------------------------------------------------
     # Internal helper: call the local LLM
     # ------------------------------------------------------------------
-    def _call_llm(self, system_prompt: str, user_prompt: str, max_tokens: int = 512) -> str:
-        """Send a chat prompt using whatever chat template the GGUF declares
-        (works for Phi-4, Qwen2.5, Llama, etc.). Falls back to a raw Phi-style
-        prompt for older llama-cpp builds or GGUFs without template metadata."""
+    def _call_llm(self, messages: List[Dict[str, str]], max_tokens: int = 512) -> str:
+        """Send a chat prompt using whatever chat template the GGUF declares."""
         try:
             output = self.llm.create_chat_completion(
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt},
-                ],
+                messages=messages,
                 max_tokens=max_tokens,
                 temperature=0.2,
                 top_p=0.95,
@@ -86,11 +81,10 @@ class AIReasoningEngine:
             return output["choices"][0]["message"]["content"].strip()
         except Exception as e:
             logger.warning(f"create_chat_completion failed ({e}); using raw prompt fallback.")
-            prompt = (
-                f"<|system|>\n{system_prompt}<|end|>\n"
-                f"<|user|>\n{user_prompt}<|end|>\n"
-                f"<|assistant|>\n"
-            )
+            prompt = ""
+            for m in messages:
+                prompt += f"<|{m['role']}|>\n{m['content']}<|end|>\n"
+            prompt += "<|assistant|>\n"
             output = self.llm(prompt, max_tokens=max_tokens, temperature=0.2,
                               top_p=0.95, stop=["<|end|>", "<|user|>"], echo=False)
             return output["choices"][0]["text"].strip()
@@ -127,7 +121,10 @@ class AIReasoningEngine:
 
         if self.llm:
             try:
-                return self._call_llm(system_prompt, user_prompt, max_tokens=512)
+                return self._call_llm([
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt}
+                ], max_tokens=512)
             except Exception as e:
                 logger.error(f"LLM generation failed: {e}")
                 return "Error generating response from the local LLM."
@@ -136,6 +133,46 @@ class AIReasoningEngine:
         return (
             f"Local model not installed — run scripts/download_models.py"
         )
+
+    def generate_chat_reply(
+        self,
+        query: str,
+        history: List[Dict[str, str]],
+        context_chunks: List[Dict[str, str]],
+        persona: str = "Professor",
+        profile_summary: str = "",
+    ) -> str:
+        system_prompt = (
+            f"You are a GATE DA AI Mentor with the persona of a '{persona}'. "
+            f"Here is the student's profile context:\n{profile_summary}\n\n"
+            "Answer the student's question using the provided context if applicable. "
+            "Be concise, precise, and GATE-exam focused. "
+            "Always cite the source at the end. "
+            "If the context lacks the answer, say: 'I cannot find this in the trusted sources.'"
+        )
+
+        context_str = "\n---\n".join(
+            [
+                f"Source: {chunk['metadata'].get('source', 'Unknown')}\n"
+                f"Content: {chunk['content']}"
+                for chunk in context_chunks
+            ]
+        )
+        user_prompt = f"Context:\n{context_str}\n\nQuestion: {query}" if context_chunks else query
+
+        messages = [{"role": "system", "content": system_prompt}]
+        for msg in history:
+            messages.append({"role": msg.get("role", "user"), "content": msg.get("content", "")})
+        messages.append({"role": "user", "content": user_prompt})
+
+        if self.llm:
+            try:
+                return self._call_llm(messages, max_tokens=512)
+            except Exception as e:
+                logger.error(f"LLM generation failed: {e}")
+                return "Error generating response from the local LLM."
+
+        return "Local model not installed — run scripts/download_models.py"
 
     def generate_quiz_question(
         self,
@@ -167,7 +204,10 @@ class AIReasoningEngine:
 
         if self.llm:
             try:
-                raw = self._call_llm(system_prompt, user_prompt, max_tokens=300)
+                raw = self._call_llm([
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt}
+                ], max_tokens=300)
                 # Extract JSON from model output
                 start = raw.find("{")
                 end   = raw.rfind("}") + 1

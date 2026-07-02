@@ -392,3 +392,9 @@ h2 { font-weight: 650; font-size: 1.2rem; margin-bottom: 0.9rem; }
     .detail-score { text-align: left; }
     .file-item { align-items: flex-start; flex-direction: column; }
 }
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}

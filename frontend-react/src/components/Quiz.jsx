@@ -39,47 +39,62 @@ function Ring({ progress, size = 160, stroke = 12, children }) {
 }
 
 export default function Quiz({ params, navigate }) {
-  const { refreshGamification } = useApp();
-  const [phase, setPhase] = useState('select'); // select | active | summary
-  const [mode, setMode] = useState(null);
-  const [conceptId, setConceptId] = useState(null);
-  const [topicLabel, setTopicLabel] = useState('');
-  const [sessionId] = useState(() => 'q-' + Math.random().toString(36).slice(2, 9));
+  const { refreshGamification, quizState, setQuizState } = useApp();
 
-  const [q, setQ] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [selected, setSelected] = useState('');
-  const [natInput, setNatInput] = useState('');
-  const [confidence, setConfidence] = useState(3);
-  const [answered, setAnswered] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(false);
+  const updateState = (updates) => {
+    setQuizState(prev => ({ ...prev, ...updates }));
+  };
 
-  const [count, setCount] = useState(0);
-  const [correct, setCorrect] = useState(0);
-  const [askedIds, setAskedIds] = useState([]);
-  const [missedQuestions, setMissedQuestions] = useState([]);
-  const [qStartTime, setQStartTime] = useState(Date.now());
-  const [error, setError] = useState(null);
+  const phase = quizState?.phase || 'select'; // select | active | summary
+  const mode = quizState?.mode || null;
+  const conceptId = quizState?.conceptId || null;
+  const topicLabel = quizState?.topicLabel || '';
+  const sessionId = quizState?.sessionId || '';
+
+  const q = quizState?.q || null;
+  const loading = quizState?.loading || false;
+  const selected = quizState?.selected || '';
+  const natInput = quizState?.natInput || '';
+  const confidence = quizState?.confidence || 3;
+  const answered = quizState?.answered || false;
+  const isCorrect = quizState?.isCorrect || false;
+
+  const count = quizState?.count || 0;
+  const correct = quizState?.correct || 0;
+  const askedIds = quizState?.askedIds || [];
+  const missedQuestions = quizState?.missedQuestions || [];
+  const overconfidentCount = quizState?.overconfidentCount || 0;
+  const reflection = quizState?.reflection || '';
+  const reflectionSubmitted = quizState?.reflectionSubmitted || false;
+  const qStartTime = quizState?.qStartTime || Date.now();
+  const error = quizState?.error || null;
 
   const fetchQuestion = useCallback(async (m, cid, exclude) => {
-    setLoading(true); setError(null);
+    updateState({ loading: true, error: null });
     try {
       const data = await api.quizNext({ mode: m, concept_id: cid, exclude: exclude.join(',') });
-      setQ(data);
-      setQStartTime(Date.now());
-      setSelected(''); setNatInput(''); setConfidence(3); setAnswered(false); setIsCorrect(false);
+      updateState({
+        q: data, qStartTime: Date.now(),
+        selected: '', natInput: '', confidence: 3, answered: false, isCorrect: false,
+        loading: false
+      });
     } catch (e) {
-      setError(e.message);
-    } finally {
-      setLoading(false);
+      updateState({ error: e.message, loading: false });
     }
-  }, []);
+  }, [setQuizState]);
 
-  const start = useCallback((m, cid = null, label = '') => {
-    setMode(m); setConceptId(cid); setTopicLabel(label);
-    setPhase('active'); setCount(0); setCorrect(0); setAskedIds([]); setMissedQuestions([]);
+  const start = useCallback(async (m, cid = null, label = '') => {
+    updateState({
+      mode: m, conceptId: cid, topicLabel: label,
+      phase: 'active', count: 0, correct: 0, askedIds: [], missedQuestions: [],
+      overconfidentCount: 0, reflection: '', reflectionSubmitted: false
+    });
+    try {
+      const { session_id } = await api.startSession(`Quiz mode: ${m}`);
+      updateState({ sessionId: session_id });
+    } catch (e) {}
     fetchQuestion(m, cid, []);
-  }, [fetchQuestion]);
+  }, [fetchQuestion, setQuizState]);
 
   // Deep-link from Topics / Dashboard ("Quiz this concept")
   useEffect(() => {
@@ -93,11 +108,23 @@ export default function Quiz({ params, navigate }) {
     const userAns = q.options && Object.keys(q.options).length ? selected : natInput;
     if (!userAns) return;
     const ok = compareAnswer(userAns, q.answer);
-    if (!ok) setMissedQuestions((mq) => [...mq, { ...q, userAns }]);
-    setIsCorrect(ok); setAnswered(true);
-    setCount((c) => c + 1);
-    if (ok) setCorrect((c) => c + 1);
-    setAskedIds((ids) => [...ids, q.pyq_id]);
+    
+    let newMissed = missedQuestions;
+    let newOver = overconfidentCount;
+    if (!ok) {
+      newMissed = [...missedQuestions, { ...q, userAns }];
+      if (confidence >= 4) newOver++;
+    }
+    
+    updateState({
+      missedQuestions: newMissed,
+      overconfidentCount: newOver,
+      isCorrect: ok,
+      answered: true,
+      count: count + 1,
+      correct: ok ? correct + 1 : correct,
+      askedIds: [...askedIds, q.pyq_id]
+    });
     
     const tSec = (Date.now() - qStartTime) / 1000;
     
@@ -117,7 +144,7 @@ export default function Quiz({ params, navigate }) {
   };
 
   const next = () => {
-    if (count >= QUIZ_LENGTH) { setPhase('summary'); return; }
+    if (count >= QUIZ_LENGTH) { updateState({ phase: 'summary' }); return; }
     fetchQuestion(mode, conceptId, askedIds);
   };
 
@@ -128,6 +155,14 @@ export default function Quiz({ params, navigate }) {
         <header className="page-header">
           <div><h1>Quiz Center</h1><p className="subtitle">Practice with real GATE questions. Build mastery, earn XP.</p></div>
         </header>
+        {quizState?.phase === 'active' && (
+          <div className="card" style={{ maxWidth: 560, marginBottom: '1rem', borderLeft: '4px solid var(--primary)' }}>
+            <h2>Quiz in Progress</h2>
+            <p style={{ color: 'var(--text-secondary)' }}>You have a quiz currently running.</p>
+            <button className="btn-primary" style={{ marginTop: '1rem' }} onClick={() => updateState({ phase: 'active' })}>Resume quiz</button>
+            <button className="btn-secondary" style={{ marginTop: '1rem', marginLeft: '1rem' }} onClick={() => setQuizState(null)}>Abandon quiz</button>
+          </div>
+        )}
         <div className="quiz-modes">
           {MODES.map((m) => (
             <button className="mode-card card" key={m.id}
@@ -150,7 +185,19 @@ export default function Quiz({ params, navigate }) {
         <h1>Quiz complete! 🎉</h1>
         <Ring progress={acc}><div className="sr-label"><b>{Math.round(acc * 100)}%</b><small>accuracy</small></div></Ring>
         <p style={{ fontSize: '1.1rem' }}>You got <b style={{ color: 'var(--success)' }}>{correct}</b> of <b>{count}</b> correct.</p>
+        {overconfidentCount > 0 && <p style={{ color: 'var(--danger)', fontSize: '0.9rem', marginTop: '-0.5rem', marginBottom: '1rem' }}>⚠ Overconfident on {overconfidentCount} question(s).</p>}
         
+        {!reflectionSubmitted ? (
+          <div style={{ width: '100%', maxWidth: '600px', margin: '2rem auto', textAlign: 'left', padding: '1rem', background: 'var(--bg-inset)', borderRadius: '8px' }}>
+             <h3 style={{ marginTop: 0, fontSize: '1rem' }}>Session Reflection</h3>
+             <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>What tripped you up today? Write a quick reflection to close the session.</p>
+             <textarea className="app-input" style={{ width: '100%', minHeight: '60px' }} value={reflection} onChange={e => updateState({ reflection: e.target.value })} placeholder="E.g. Kept messing up sign errors in linear algebra..." />
+             <button className="btn-primary" style={{ marginTop: '0.8rem' }} onClick={() => { api.endSession(sessionId, reflection); updateState({ reflectionSubmitted: true }); }}>Save reflection</button>
+          </div>
+        ) : (
+          <div style={{ margin: '2rem auto', color: 'var(--success)' }}>✅ Reflection saved. Session closed.</div>
+        )}
+
         {missedQuestions.length > 0 && (
           <div style={{ width: '100%', maxWidth: '600px', margin: '2rem auto', textAlign: 'left' }}>
             <h2 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>Questions you missed</h2>
@@ -170,7 +217,7 @@ export default function Quiz({ params, navigate }) {
         )}
 
         <div style={{ display: 'flex', gap: '0.6rem', justifyContent: 'center', marginTop: '1.4rem' }}>
-          <button className="btn-secondary" onClick={() => setPhase('select')}>Back to modes</button>
+          <button className="btn-secondary" onClick={() => setQuizState(null)}>Back to modes</button>
           <button className="btn-primary" onClick={() => start(mode, conceptId, topicLabel)}>Practice again</button>
         </div>
       </div>
@@ -187,7 +234,7 @@ export default function Quiz({ params, navigate }) {
       </div>
 
       {loading && <div className="loading"><span className="spinner" /> Loading question…</div>}
-      {error && <div className="empty">Couldn't load a question: {error}<br /><button className="btn-secondary" style={{ marginTop: '1rem' }} onClick={() => setPhase('select')}>Back</button></div>}
+      {error && <div className="empty">Couldn't load a question: {error}<br /><button className="btn-secondary" style={{ marginTop: '1rem' }} onClick={() => setQuizState(null)}>Back</button></div>}
 
       {q && !loading && (
         <div className="card">
@@ -209,7 +256,7 @@ export default function Quiz({ params, navigate }) {
                   else if (k === selected) cls += ' wrong';
                 } else if (k === selected) cls += ' selected';
                 return (
-                  <button key={k} className={cls} disabled={answered} onClick={() => setSelected(k)}>
+                  <button key={k} className={cls} disabled={answered} onClick={() => updateState({ selected: k })}>
                     <span className="opt-key">{k}</span><span><MathText>{v}</MathText></span>
                   </button>
                 );
@@ -218,7 +265,7 @@ export default function Quiz({ params, navigate }) {
           ) : (
             <div className="field">
               <label>Your answer (numerical)</label>
-              <input value={natInput} disabled={answered} onChange={(e) => setNatInput(e.target.value)}
+              <input value={natInput} disabled={answered} onChange={(e) => updateState({ natInput: e.target.value })}
                 placeholder="Type a number" onKeyDown={(e) => e.key === 'Enter' && submit()} />
             </div>
           )}
@@ -228,7 +275,7 @@ export default function Quiz({ params, navigate }) {
               <div className="conf-label">How confident are you?</div>
               <div className="conf-btns">
                 {[1, 2, 3, 4, 5].map((n) => (
-                  <button key={n} className={`conf-btn ${confidence === n ? 'active' : ''}`} onClick={() => setConfidence(n)}>{n}</button>
+                  <button key={n} className={`conf-btn ${confidence === n ? 'active' : ''}`} onClick={() => updateState({ confidence: n })}>{n}</button>
                 ))}
               </div>
             </div>
@@ -237,12 +284,22 @@ export default function Quiz({ params, navigate }) {
           {answered && (
             <div className={`quiz-feedback ${isCorrect ? 'correct' : 'wrong'}`}>
               <div className="fb-title">{isCorrect ? '✅ Correct!' : `❌ Incorrect — answer is ${q.answer}`}</div>
+              {confidence >= 4 && !isCorrect && (
+                <div style={{ background: 'var(--danger-alpha)', color: 'var(--danger)', padding: '0.5rem', borderRadius: '4px', marginTop: '0.5rem', fontSize: '0.9rem' }}>
+                  ⚠ Overconfident — under GATE negative marking this costs you marks. Slow down.
+                </div>
+              )}
+              {confidence <= 2 && isCorrect && (
+                <div style={{ background: 'var(--success-alpha)', color: 'var(--success)', padding: '0.5rem', borderRadius: '4px', marginTop: '0.5rem', fontSize: '0.9rem' }}>
+                  ✅ You knew this — trust your instincts.
+                </div>
+              )}
               {q.solution && <div className="fb-sol"><MathText>{q.solution}</MathText></div>}
             </div>
           )}
 
           <div className="quiz-actions">
-            <button className="btn-secondary" onClick={() => setPhase('summary')}>End quiz</button>
+            <button className="btn-secondary" onClick={() => updateState({ phase: 'summary' })}>End quiz</button>
             {!answered
               ? <button className="btn-primary" onClick={submit} disabled={hasOptions ? !selected : !natInput}>Submit</button>
               : <button className="btn-primary" onClick={next}>{count >= QUIZ_LENGTH ? 'See results' : 'Next question →'}</button>}

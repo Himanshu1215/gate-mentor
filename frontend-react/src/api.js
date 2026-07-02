@@ -43,6 +43,8 @@ export const api = {
   // chat / tutor
   chat: (query, sessionId, persona) =>
     request('/api/chat', { method: 'POST', body: { session_id: sessionId, query, persona } }),
+  getChatSessions: () => request('/api/chat/sessions'),
+  getChatHistory: (sessionId) => request(`/api/chat/history/${sessionId}`),
 
   // concepts / topics
   getConcepts: () => request('/api/concepts'),
@@ -99,6 +101,8 @@ export const api = {
     request('/api/mock/grade', { method: 'POST', body: { exam_id: examId, answers } }),
 
   // dashboard / coach / gamification / profile / analytics
+  startSession: (goals) => request('/api/session/start', { method: 'POST', body: { goals } }),
+  endSession: (sessionId, reflection) => request('/api/session/end', { method: 'POST', body: { session_id: sessionId, reflection } }),
   dashboardStats: () => request('/api/dashboard/stats'),
   scheduleToday: () => request('/api/schedule/today'),
   curriculumNext: () => request('/api/curriculum/next'),

@@ -154,12 +154,21 @@ def init_db():
 
     # Phase 4: Chat messages
     cursor.execute("""
+    CREATE TABLE IF NOT EXISTS chat_sessions (
+      session_id TEXT PRIMARY KEY,
+      title TEXT NOT NULL,
+      updated_at TEXT DEFAULT (datetime('now'))
+    )
+    """)
+
+    cursor.execute("""
     CREATE TABLE IF NOT EXISTS chat_messages (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       session_id TEXT NOT NULL,
       role TEXT NOT NULL CHECK(role IN ('user','assistant')),
       content TEXT NOT NULL,
-      timestamp TEXT DEFAULT (datetime('now'))
+      timestamp TEXT DEFAULT (datetime('now')),
+      FOREIGN KEY (session_id) REFERENCES chat_sessions(session_id)
     )
     """)
     cursor.execute("CREATE INDEX IF NOT EXISTS idx_chat_session ON chat_messages(session_id, id)")

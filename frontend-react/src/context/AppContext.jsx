@@ -8,6 +8,24 @@ export function AppProvider({ children }) {
   const [gamification, setGamification] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const [mockState, setMockStateRaw] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('gate_mock_inprogress')); } catch(e) { return null; }
+  });
+  const setMockState = useCallback((s) => {
+    setMockStateRaw(s);
+    if (s) localStorage.setItem('gate_mock_inprogress', JSON.stringify(s));
+    else localStorage.removeItem('gate_mock_inprogress');
+  }, []);
+
+  const [quizState, setQuizStateRaw] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('gate_quiz_inprogress')); } catch(e) { return null; }
+  });
+  const setQuizState = useCallback((s) => {
+    setQuizStateRaw(s);
+    if (s) localStorage.setItem('gate_quiz_inprogress', JSON.stringify(s));
+    else localStorage.removeItem('gate_quiz_inprogress');
+  }, []);
+
   const refreshGamification = useCallback(async () => {
     try {
       setGamification(await api.gamification());
@@ -42,7 +60,7 @@ export function AppProvider({ children }) {
     })();
   }, [refresh]);
 
-  const value = { profile, gamification, loading, refresh, refreshGamification, saveProfile };
+  const value = { profile, gamification, loading, refresh, refreshGamification, saveProfile, mockState, setMockState, quizState, setQuizState };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
 

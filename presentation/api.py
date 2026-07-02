@@ -67,6 +67,10 @@ class SessionStartRequest(BaseModel):
 class SessionStartResponse(BaseModel):
     session_id: str
 
+class SessionEndRequest(BaseModel):
+    session_id: str
+    reflection: Optional[str] = ""
+
 class CurriculumNextResponse(BaseModel):
     concept_id: str
     topic: str
@@ -89,6 +93,7 @@ class DashboardStatsResponse(BaseModel):
     active_days_last_week: int
     projected_air: int
     risk_level: str
+    biggest_lever: Optional[Dict[str, Any]] = None
 
 class UploadResponse(BaseModel):
     success: bool
@@ -117,6 +122,21 @@ async def session_start_endpoint(request: SessionStartRequest, authorization: Op
     asyncio.create_task(bus.publish(Events.SESSION_STARTED, {"session_id": session_id}))
     
     return SessionStartResponse(session_id=session_id)
+
+@app.post("/api/session/end")
+async def session_end_endpoint(request: SessionEndRequest, authorization: Optional[str] = Header(None)):
+    """Ends a learning session and stores reflection."""
+    if not authorization:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+        
+    from learning.session_manager import SessionManager
+    from core.event_bus import bus, Events
+    import asyncio
+    
+    SessionManager.end_session(request.session_id, request.reflection)
+    asyncio.create_task(bus.publish(Events.SESSION_ENDED, {"session_id": request.session_id, "reflection": request.reflection}))
+    
+    return {"success": True}
 
 @app.get("/api/curriculum/next", response_model=CurriculumNextResponse)
 async def curriculum_next_endpoint(authorization: Optional[str] = Header(None)):
@@ -177,13 +197,23 @@ async def chat_endpoint(request: ChatRequest, authorization: Optional[str] = Hea
     if not authorization:
         raise HTTPException(status_code=401, detail="Unauthorized")
 
+    from infrastructure.database import get_db_connection
+    conn = get_db_connection()
+    history_rows = conn.execute("SELECT role, content FROM chat_messages WHERE session_id = ? ORDER BY id ASC LIMIT 10", (request.session_id,)).fetchall()
+    messages = [{"role": r["role"], "content": r["content"]} for r in history_rows]
+    
+    conn.execute("INSERT OR IGNORE INTO chat_sessions (session_id, title) VALUES (?, ?)", (request.session_id, request.query[:50]))
+    conn.execute("INSERT INTO chat_messages (session_id, role, content) VALUES (?, ?, ?)", (request.session_id, "user", request.query))
+    conn.commit()
+    conn.close()
+
     from learning.langgraph_agent import agent
 
     state_input = {
         "query": request.query,
         "session_id": request.session_id,
         "persona": request.persona or "Professor",
-        "messages": [],
+        "messages": messages,
         "context": [],
         "reply": "",
         "citations": [],
@@ -196,7 +226,6 @@ async def chat_endpoint(request: ChatRequest, authorization: Optional[str] = Hea
         citations = result.get("citations", [])
     except Exception as e:
         logging.error(f"Error executing LangGraph agent: {e}")
-        # Standard fallback logic in case of graph failure
         from knowledge.ingestor import KnowledgeIngestor
         retriever = KnowledgeIngestor()
         context_chunks = retriever.query(request.query, top_k=5)
@@ -208,7 +237,35 @@ async def chat_endpoint(request: ChatRequest, authorization: Optional[str] = Hea
         reply = reasoner.generate_explanation(request.query, context_chunks, persona=request.persona or "Professor")
         citations = list({chunk["metadata"].get("source", "Unknown") for chunk in context_chunks})
 
+    conn = get_db_connection()
+    conn.execute("INSERT INTO chat_messages (session_id, role, content) VALUES (?, ?, ?)", (request.session_id, "assistant", reply))
+    conn.execute("UPDATE chat_sessions SET updated_at = datetime('now') WHERE session_id = ?", (request.session_id,))
+    conn.commit()
+    conn.close()
+
     return ChatResponse(reply=reply, citations=citations)
+
+@app.get("/api/chat/sessions")
+async def chat_sessions(authorization: Optional[str] = Header(None)):
+    """Get list of recent chat sessions."""
+    if not authorization:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+    from infrastructure.database import get_db_connection
+    conn = get_db_connection()
+    rows = conn.execute("SELECT session_id, title, updated_at FROM chat_sessions ORDER BY updated_at DESC LIMIT 20").fetchall()
+    conn.close()
+    return {"sessions": [dict(r) for r in rows]}
+
+@app.get("/api/chat/history/{session_id}")
+async def chat_history(session_id: str, authorization: Optional[str] = Header(None)):
+    """Get chat history for a session."""
+    if not authorization:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+    from infrastructure.database import get_db_connection
+    conn = get_db_connection()
+    rows = conn.execute("SELECT role, content, timestamp FROM chat_messages WHERE session_id = ? ORDER BY id ASC", (session_id,)).fetchall()
+    conn.close()
+    return {"messages": [dict(r) for r in rows]}
 
 @app.post("/api/quiz/submit", response_model=QuizSubmitResponse)
 async def quiz_submit_endpoint(request: QuizSubmitRequest, authorization: Optional[str] = Header(None)):
@@ -295,7 +352,8 @@ async def dashboard_stats_endpoint(authorization: Optional[str] = Header(None)):
         total_quizzes=stats["total_quizzes"],
         active_days_last_week=stats["active_days_last_week"],
         projected_air=projection["projected_air"],
-        risk_level=projection["risk_level"]
+        risk_level=projection["risk_level"],
+        biggest_lever=projection.get("biggest_lever")
     )
 
 @app.post("/api/upload", response_model=UploadResponse)

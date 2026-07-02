@@ -75,9 +75,9 @@ export default function Dashboard({ navigate }) {
         <div className="card">
           <h2>Your numbers</h2>
           <div className="stat-grid">
-            <div className="stat-card">
+            <div className="stat-card" onClick={() => navigate('quiz', { mode: 'weak' })} style={{ cursor: 'pointer' }}>
               <span className="value good">{stats ? `${stats.readiness_percentage}%` : '—'}</span>
-              <span className="label">Readiness</span>
+              <span className="label">Readiness (click to practice)</span>
             </div>
             <div className="stat-card">
               <span className="value">{stats ? `${stats.mastered_concepts}/${stats.total_concepts}` : '—'}</span>
@@ -86,6 +86,11 @@ export default function Dashboard({ navigate }) {
             <div className="stat-card">
               <span className="value warn">{stats ? `#${stats.projected_air}` : '—'}</span>
               <span className="label">Projected AIR</span>
+              {stats?.biggest_lever && (
+                <div style={{ marginTop: '0.8rem', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+                  Biggest lever: <a style={{ color: 'var(--primary)', cursor: 'pointer', textDecoration: 'underline' }} onClick={() => navigate('topics', { conceptId: stats.biggest_lever.concept_id })}>{stats.biggest_lever.topic}</a>
+                </div>
+              )}
             </div>
             <div className="stat-card">
               <span className="value">{stats ? stats.total_quizzes : '—'}</span>

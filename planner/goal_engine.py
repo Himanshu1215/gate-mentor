@@ -16,6 +16,13 @@ class GoalEngine:
         # Get overall accuracy and mastery
         cursor.execute("SELECT AVG(state_level), AVG(accuracy) FROM mastery_states")
         row = cursor.fetchone()
+
+        cursor.execute("""
+            SELECT c.concept_id, c.topic, c.importance_weight, COALESCE(m.state_level, 1) as state_level
+            FROM concepts c
+            LEFT JOIN mastery_states m ON c.concept_id = m.concept_id
+        """)
+        lever_rows = cursor.fetchall()
         conn.close()
         
         avg_mastery = row[0] if row and row[0] is not None else 1.0
@@ -41,12 +48,22 @@ class GoalEngine:
             
         projected_air = max(1, projected_air)
         
+        biggest_lever = None
+        if lever_rows:
+            best_impact = -1
+            for cid, topic, weight, lvl in lever_rows:
+                impact = (weight or 1.0) * (8.0 - lvl)
+                if impact > best_impact:
+                    best_impact = impact
+                    biggest_lever = {"concept_id": cid, "topic": topic, "impact": round(impact, 2)}
+        
         return {
             "avg_mastery_level": round(avg_mastery, 2),
             "avg_accuracy": round(avg_accuracy, 2),
             "projected_score": round(projected_score, 1),
             "projected_air": projected_air,
-            "risk_level": "High" if projected_air > 1000 else "Medium" if projected_air > 100 else "Low"
+            "risk_level": "High" if projected_air > 1000 else "Medium" if projected_air > 100 else "Low",
+            "biggest_lever": biggest_lever
         }
 
 if __name__ == "__main__":

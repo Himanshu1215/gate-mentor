@@ -51,11 +51,21 @@ function TopBar() {
 }
 
 export default function App() {
-  const { profile, loading } = useApp();
+  const { profile, loading, mockState, quizState } = useApp();
   const [activeView, setActiveView] = useState('dashboard');
   const [params, setParams] = useState({});
 
   const navigate = (view, payload = {}) => {
+    if (activeView === 'mock' && view !== 'mock' && mockState && mockState.phase === 'running') {
+      if (!window.confirm("You have a mock test in progress. Are you sure you want to leave? The timer will continue.")) {
+        return;
+      }
+    }
+    if (activeView === 'quiz' && view !== 'quiz' && quizState && quizState.phase === 'active') {
+      if (!window.confirm("You have a quiz in progress. Are you sure you want to leave?")) {
+        return;
+      }
+    }
     setParams(payload);
     setActiveView(view);
   };
@@ -102,7 +112,7 @@ export default function App() {
       <main className="main-content">
         <TopBar />
         <div className="scroll-area">
-          <div className="view-container" key={activeView}>
+          <div className="view-container">
             {renderView()}
           </div>
         </div>

@@ -20,7 +20,7 @@ function Card({ title, children, empty }) {
   );
 }
 
-export default function Analytics() {
+export default function Analytics({ navigate }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
@@ -75,7 +75,7 @@ export default function Analytics() {
             <XAxis type="number" domain={[0, 100]} {...AXIS} unit="%" />
             <YAxis type="category" dataKey="subject" width={150} tick={{ fill: '#93a1bd', fontSize: 10 }} />
             <Tooltip contentStyle={tooltipStyle} />
-            <Bar dataKey="readiness" radius={[0, 6, 6, 0]} fill="#00f0ff" />
+            <Bar dataKey="readiness" radius={[0, 6, 6, 0]} fill="#00f0ff" onClick={() => navigate('quiz', { mode: 'weak' })} style={{ cursor: 'pointer' }} />
           </BarChart>
         </Card>
 
@@ -85,7 +85,7 @@ export default function Analytics() {
             <XAxis dataKey="confidence" {...AXIS} label={{ value: 'confidence', position: 'insideBottom', offset: -2, fill: '#5b6783', fontSize: 11 }} />
             <YAxis domain={[0, 100]} {...AXIS} unit="%" />
             <Tooltip contentStyle={tooltipStyle} />
-            <Bar dataKey="accuracy" radius={[6, 6, 0, 0]}>
+            <Bar dataKey="accuracy" radius={[6, 6, 0, 0]} onClick={() => navigate('quiz', { mode: 'weak' })} style={{ cursor: 'pointer' }}>
               {calib.map((e, i) => (
                 <Cell key={i} fill={e.confidence >= 4 && e.accuracy < 60 ? '#ff4d5e' : '#2ed573'} />
               ))}

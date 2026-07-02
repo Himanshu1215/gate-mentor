@@ -25,25 +25,43 @@ function Ring({ progress, size = 160, stroke = 12, children }) {
   );
 }
 
-export default function MockTest() {
-  const { refresh } = useApp();
-  const [phase, setPhase] = useState('intro'); // intro | running | report
-  const [exam, setExam] = useState(null);
-  const [idx, setIdx] = useState(0);
-  const [answers, setAnswers] = useState({});
-  const [review, setReview] = useState(new Set());
-  const [secondsLeft, setSecondsLeft] = useState(0);
-  const [report, setReport] = useState(null);
+export default function MockTest({ navigate }) {
+  const { refresh, mockState, setMockState } = useApp();
+  
+  // Local state for UI only
   const [loading, setLoading] = useState(false);
+  const [reflection, setReflection] = useState('');
+  const [reflectionSubmitted, setReflectionSubmitted] = useState(false);
+  const [sessionId, setSessionId] = useState('');
   const timerRef = useRef(null);
+
+  // Sync variables from mockState or defaults
+  const phase = mockState?.phase || 'intro';
+  const exam = mockState?.exam || null;
+  const idx = mockState?.idx || 0;
+  const answers = mockState?.answers || {};
+  const review = new Set(mockState?.review || []);
+  const secondsLeft = mockState?.secondsLeft || 0;
+  const report = mockState?.report || null;
+
+  const updateState = (updates) => {
+    setMockState(prev => ({ ...prev, ...updates }));
+  };
 
   const start = async () => {
     setLoading(true);
     try {
       const e = await api.mockGenerate();
-      setExam(e); setIdx(0); setAnswers({}); setReview(new Set());
-      setSecondsLeft((e.duration_mins || 180) * 60);
-      setPhase('running');
+      updateState({
+        exam: e, idx: 0, answers: {}, review: [],
+        secondsLeft: (e.duration_mins || 180) * 60,
+        phase: 'running', report: null
+      });
+      setReflection(''); setReflectionSubmitted(false);
+      try {
+        const { session_id } = await api.startSession(`Mock Test: ${e.exam_id}`);
+        setSessionId(session_id);
+      } catch (err) {}
     } catch (err) { alert('Could not start mock: ' + err.message); }
     finally { setLoading(false); }
   };
@@ -53,28 +71,43 @@ export default function MockTest() {
     setLoading(true);
     try {
       const r = await api.mockGrade(exam.exam_id, answers);
-      setReport(r); setPhase('report');
+      updateState({ report: r, phase: 'report' });
       refresh();
     } catch (err) { alert('Grading failed: ' + err.message); }
     finally { setLoading(false); }
-  }, [exam, answers, refresh]);
+  }, [exam, answers, refresh, setMockState]);
 
   useEffect(() => {
     if (phase !== 'running') return;
     timerRef.current = setInterval(() => {
-      setSecondsLeft((s) => {
-        if (s <= 1) { clearInterval(timerRef.current); submit(); return 0; }
-        return s - 1;
+      let isDone = false;
+      setMockState(prev => {
+        if (!prev || prev.phase !== 'running') return prev;
+        const s = prev.secondsLeft;
+        if (s <= 1) { isDone = true; return { ...prev, secondsLeft: 0 }; }
+        return { ...prev, secondsLeft: s - 1 };
       });
+      if (isDone) {
+        clearInterval(timerRef.current);
+        submit();
+      }
     }, 1000);
     return () => clearInterval(timerRef.current);
-  }, [phase, submit]);
+  }, [phase, submit, setMockState]);
 
   // ── intro ──────────────────────────────────────────────────────────────────
   if (phase === 'intro') {
     return (
       <div>
         <header className="page-header"><div><h1>Mock Test</h1><p className="subtitle">Full GATE-pattern paper from the real PYQ bank.</p></div></header>
+        {mockState?.phase === 'running' && (
+          <div className="card" style={{ maxWidth: 560, marginBottom: '1rem', borderLeft: '4px solid var(--primary)' }}>
+            <h2>Mock in Progress</h2>
+            <p style={{ color: 'var(--text-secondary)' }}>You have a mock exam currently running ({fmt(secondsLeft)} remaining).</p>
+            <button className="btn-primary" style={{ marginTop: '1rem' }} onClick={() => updateState({ phase: 'running' })}>Resume mock</button>
+            <button className="btn-secondary" style={{ marginTop: '1rem', marginLeft: '1rem' }} onClick={() => setMockState(null)}>Abandon mock</button>
+          </div>
+        )}
         <div className="card" style={{ maxWidth: 560 }}>
           <h2>GATE DA — Full Mock</h2>
           <ul style={{ color: 'var(--text-secondary)', lineHeight: 2, listStyle: 'none' }}>
@@ -83,8 +116,8 @@ export default function MockTest() {
             <li>➖ Negative marking on MCQs (GATE rules)</li>
             <li>🏁 Score report with per-subject breakdown</li>
           </ul>
-          <button className="btn-primary" style={{ marginTop: '1rem' }} onClick={start} disabled={loading}>
-            {loading ? 'Preparing…' : 'Begin mock test'}
+          <button className="btn-primary" style={{ marginTop: '1rem' }} onClick={start} disabled={loading || mockState?.phase === 'running'}>
+            {loading ? 'Preparing…' : 'Begin new mock test'}
           </button>
         </div>
       </div>
@@ -97,7 +130,7 @@ export default function MockTest() {
     return (
       <div>
         <header className="page-header"><div><h1>Mock Result</h1><p className="subtitle">Here's how you did.</p></div>
-          <button className="btn-primary" onClick={() => setPhase('intro')}>Take another</button>
+          <button className="btn-primary" onClick={() => setMockState(null)}>Take another</button>
         </header>
         <div className="quiz-summary">
           <Ring progress={pct}><div className="sr-label"><b>{report.total_score}</b><small>/ {report.max_score}</small></div></Ring>
@@ -122,6 +155,17 @@ export default function MockTest() {
             );
           })}
         </div>
+
+        {!reflectionSubmitted ? (
+          <div style={{ width: '100%', maxWidth: '600px', margin: '2rem auto', textAlign: 'left', padding: '1rem', background: 'var(--bg-inset)', borderRadius: '8px' }}>
+             <h3 style={{ marginTop: 0, fontSize: '1rem' }}>Session Reflection</h3>
+             <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>What tripped you up today? Write a quick reflection to close the session.</p>
+             <textarea className="app-input" style={{ width: '100%', minHeight: '60px' }} value={reflection} onChange={e => setReflection(e.target.value)} placeholder="E.g. Time management was poor in the maths section..." />
+             <button className="btn-primary" style={{ marginTop: '0.8rem' }} onClick={() => { api.endSession(sessionId, reflection); setReflectionSubmitted(true); }}>Save reflection</button>
+          </div>
+        ) : (
+          <div style={{ margin: '2rem auto', color: 'var(--success)', textAlign: 'center' }}>✅ Reflection saved. Session closed.</div>
+        )}
       </div>
     );
   }
@@ -130,8 +174,12 @@ export default function MockTest() {
   const q = exam.questions[idx];
   const hasOptions = q.options && Object.keys(q.options).length > 0;
   const answeredCount = Object.keys(answers).length;
-  const setAnswer = (val) => setAnswers((a) => ({ ...a, [q.q_id]: val }));
-  const toggleReview = () => setReview((r) => { const n = new Set(r); n.has(q.q_id) ? n.delete(q.q_id) : n.add(q.q_id); return n; });
+  const setAnswer = (val) => updateState({ answers: { ...answers, [q.q_id]: val } });
+  const toggleReview = () => {
+    const n = new Set(review);
+    n.has(q.q_id) ? n.delete(q.q_id) : n.add(q.q_id);
+    updateState({ review: Array.from(n) });
+  };
 
   return (
     <div>
@@ -167,13 +215,13 @@ export default function MockTest() {
           )}
 
           <div className="mock-nav">
-            <button className="btn-secondary" disabled={idx === 0} onClick={() => setIdx((i) => i - 1)}>← Prev</button>
+            <button className="btn-secondary" disabled={idx === 0} onClick={() => updateState({ idx: idx - 1 })}>← Prev</button>
             <div style={{ display: 'flex', gap: '0.5rem' }}>
               <button className="btn-secondary" onClick={toggleReview}>{review.has(q.q_id) ? '✓ Marked' : '⚑ Mark for review'}</button>
-              {answers[q.q_id] && <button className="btn-secondary" onClick={() => setAnswers((a) => { const n = { ...a }; delete n[q.q_id]; return n; })}>Clear</button>}
+              {answers[q.q_id] && <button className="btn-secondary" onClick={() => { const n = { ...answers }; delete n[q.q_id]; updateState({ answers: n }); }}>Clear</button>}
             </div>
             {idx < exam.questions.length - 1
-              ? <button className="btn-primary" onClick={() => setIdx((i) => i + 1)}>Next →</button>
+              ? <button className="btn-primary" onClick={() => updateState({ idx: idx + 1 })}>Next →</button>
               : <button className="btn-primary" onClick={submit} disabled={loading}>Submit test</button>}
           </div>
         </div>
@@ -186,7 +234,7 @@ export default function MockTest() {
               if (review.has(qq.q_id)) cls += ' review';
               else if (answers[qq.q_id]) cls += ' answered';
               if (i === idx) cls += ' current';
-              return <button key={qq.q_id} className={cls} onClick={() => setIdx(i)}>{i + 1}</button>;
+              return <button key={qq.q_id} className={cls} onClick={() => updateState({ idx: i })}>{i + 1}</button>;
             })}
           </div>
           <button className="btn-primary" style={{ width: '100%', marginTop: '1rem' }} onClick={submit} disabled={loading}>

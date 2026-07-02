@@ -1,87 +1,13 @@
-# Environment files
-.env
-.env.*
-!.env.example
-..env.example
-
-# Python
-__pycache__/
-*.py[cod]
-*.pyd
-*.pyo
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-coverage.xml
-htmlcov/
-.tox/
-.nox/
-.venv/
+node_modules/
 venv/
-env/
-build/
+__pycache__/
 dist/
-*.egg-info/
-
-# FastAPI / local app data
-*.db
-*.sqlite
-*.sqlite3
-data/*.db
-data/*.sqlite
-data/*.sqlite3
-data/chroma_db/
-chroma_store/
-*.log
-test_log.txt
-
-# Model / embedding caches
-.cache/
-*.bin
-*.pt
-*.onnx
-*.gguf
-*.safetensors
-models/llm/
-models/embeddings/
-
-# Raw / large data — keep OUT of git (transfer via scp/rsync/object storage)
-# Source PDFs and the text extracted from them:
+chroma_db/
+.env
+data/
 *.pdf
-knowledge/**/*.txt
-# Training artifacts (multi-GB merged model + checkpoints):
-train/out/
-train/data/*.jsonl
-# NOTE: reviewed structured questions ARE committed on purpose:
-!knowledge/official/pyqs/**/*.json
-!knowledge/official/answer_keys/**/*.json
-
-# Frontend
-frontend-react/node_modules/
-frontend-react/dist/
-frontend-react/.vite/
-frontend-react/.env
-frontend-react/.env.*
-!frontend-react/.env.example
-
-# OS / editor
-.DS_Store
-Thumbs.db
-desktop.ini
-.vscode/
-.idea/
-
-# Misc
-nul
-.aider*
-
-# AI-agent session scaffolding / local-only docs
-.agents/
-..agents/
-.claude/
-0
-ORIGINAL_REQUEST.md
-TEST_INFRA.md
-TEST_READY.md
-scripts/append_langgraph.py
+*.txt
+*.gguf
+app.log
+*.tar.gz
+models/
