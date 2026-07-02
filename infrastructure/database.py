@@ -115,7 +115,8 @@ def init_db():
 def get_db_connection() -> sqlite3.Connection:
     """Returns a SQLite connection with row_factory for dict-like row access."""
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(DB_PATH, timeout=30.0)
+    conn.execute("PRAGMA journal_mode=WAL;")
     conn.row_factory = sqlite3.Row  # access columns by name
     return conn
 

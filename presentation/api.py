@@ -155,27 +155,42 @@ async def coach_alerts_endpoint(authorization: Optional[str] = Header(None)):
 @app.post("/api/chat", response_model=ChatResponse)
 async def chat_endpoint(request: ChatRequest, authorization: Optional[str] = Header(None)):
     """
-    AI Tutor chat endpoint with real RAG retrieval from ChromaDB.
-    Retrieves top-5 relevant chunks using BAAI/bge-base-en-v1.5 embeddings,
-    then generates a grounded explanation via local Phi-4-mini LLM.
+    AI Tutor chat endpoint driven by the LangGraph agent.
+    Routes queries through a structured state graph using local LLM, ChromaDB, and PYQ repository.
     """
     if not authorization:
         raise HTTPException(status_code=401, detail="Unauthorized")
 
-    # --- Real RAG Retrieval ---
-    from knowledge.ingestor import KnowledgeIngestor
-    retriever = KnowledgeIngestor()
-    context_chunks = retriever.query(request.query, top_k=5)
+    from learning.langgraph_agent import agent
 
-    # Fallback: if knowledge base is empty, return helpful message
-    if not context_chunks:
-        context_chunks = [{
-            "content": "Knowledge base is empty. Please ingest GATE content first via /api/upload or scripts/ingest_content.py.",
-            "metadata": {"source": "System"}
-        }]
+    state_input = {
+        "query": request.query,
+        "session_id": request.session_id,
+        "persona": request.persona or "Professor",
+        "messages": [],
+        "context": [],
+        "reply": "",
+        "citations": [],
+        "next_node": ""
+    }
 
-    reply = reasoner.generate_explanation(request.query, context_chunks, persona=request.persona or "Professor")
-    citations = list({chunk["metadata"].get("source", "Unknown") for chunk in context_chunks})
+    try:
+        result = agent.invoke(state_input)
+        reply = result.get("reply", "No response generated.")
+        citations = result.get("citations", [])
+    except Exception as e:
+        logging.error(f"Error executing LangGraph agent: {e}")
+        # Standard fallback logic in case of graph failure
+        from knowledge.ingestor import KnowledgeIngestor
+        retriever = KnowledgeIngestor()
+        context_chunks = retriever.query(request.query, top_k=5)
+        if not context_chunks:
+            context_chunks = [{
+                "content": "Knowledge base is empty. Please ingest GATE content first.",
+                "metadata": {"source": "System"}
+            }]
+        reply = reasoner.generate_explanation(request.query, context_chunks, persona=request.persona or "Professor")
+        citations = list({chunk["metadata"].get("source", "Unknown") for chunk in context_chunks})
 
     return ChatResponse(reply=reply, citations=citations)
 
@@ -266,6 +281,10 @@ async def upload_file_endpoint(
     is_pdf = filename.lower().endswith(".pdf")
     file_type = os.path.splitext(filename)[1].lower().lstrip(".") or "file"
 
+    MAX_FILE_SIZE = 10 * 1024 * 1024
+    if hasattr(file, "size") and file.size is not None and file.size > MAX_FILE_SIZE:
+        raise HTTPException(status_code=413, detail="Payload Too Large")
+
     # Save uploaded file to a temporary location
     knowledge_dir = os.path.join(os.path.dirname(__file__), "..", "knowledge", "personal", "notes")
     os.makedirs(knowledge_dir, exist_ok=True)
@@ -273,9 +292,13 @@ async def upload_file_endpoint(
     dest_path = os.path.join(knowledge_dir, safe_name)
 
     try:
+        content = await file.read()
+        if len(content) > MAX_FILE_SIZE:
+            raise HTTPException(status_code=413, detail="Payload Too Large")
         with open(dest_path, "wb") as f:
-            content = await file.read()
             f.write(content)
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to save file: {str(e)}")
 

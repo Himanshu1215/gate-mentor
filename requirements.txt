@@ -29,3 +29,5 @@ pytest==8.2.2
 
 # Model download helper
 huggingface_hub==0.24.0
+
+langgraph
