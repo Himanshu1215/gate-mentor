@@ -26,6 +26,43 @@ export default function PYQs({ params, navigate }) {
   const [expanded, setExpanded] = useState(null);
   const [bookmarks, setBookmarks] = useState(loadBookmarks);
   const [loading, setLoading] = useState(false);
+  
+  const [answers, setAnswers] = useState({});
+  const [revealed, setRevealed] = useState(new Set());
+  const [qStarts, setQStarts] = useState({});
+
+  const handleExpand = (pId) => {
+    if (expanded === pId) {
+      setExpanded(null);
+    } else {
+      setExpanded(pId);
+      if (!revealed.has(pId) && !qStarts[pId]) {
+        setQStarts(s => ({...s, [pId]: Date.now()}));
+      }
+    }
+  };
+
+  const submitAttempt = async (p, userAns) => {
+    const isCorrect = userAns && p.answer && String(p.answer).toUpperCase() === String(userAns).toUpperCase();
+    const tSec = qStarts[p.id] ? (Date.now() - qStarts[p.id]) / 1000 : 5;
+    
+    setAnswers(a => ({...a, [p.id]: userAns}));
+    setRevealed(r => { const n = new Set(r); n.add(p.id); return n; });
+    
+    try {
+      await api.submitQuiz({
+        session_id: 'pyq-' + Math.random().toString(36).slice(2,9),
+        concept_id: p.concept_id || 'GENERAL',
+        is_correct: !!isCorrect,
+        confidence: 3,
+        question_id: p.id,
+        user_answer: userAns,
+        correct_answer: p.answer,
+        time_taken_sec: tSec,
+        source: 'pyq'
+      });
+    } catch(e) {}
+  };
 
   useEffect(() => { api.getPyqFilters().then(setFilters).catch(() => {}); }, []);
 
@@ -119,7 +156,7 @@ export default function PYQs({ params, navigate }) {
                 {p.has_solution && <span className="tag" style={{ color: 'var(--success)' }}>solution</span>}
               </div>
               <div className="pyq-q">
-                <div className="q-body" onClick={() => setExpanded(open ? null : p.id)} style={{ cursor: 'pointer' }}>
+                <div className="q-body" onClick={() => handleExpand(p.id)} style={{ cursor: 'pointer' }}>
                   <MathText>{p.question_text}</MathText>
                 </div>
                 <button className={`pyq-star ${marked ? 'on' : ''}`} title="Bookmark" onClick={() => toggleBookmark(p.id)}>
@@ -129,22 +166,55 @@ export default function PYQs({ params, navigate }) {
 
               {open && (
                 <div className="pyq-detail">
-                  {p.options && Object.keys(p.options).length > 0 && (
+                  {p.options && Object.keys(p.options).length > 0 ? (
                     <div className="pyq-options">
-                      {Object.entries(p.options).map(([k, v]) => (
-                        <div key={k} className={`pyq-opt ${p.answer && String(p.answer).toUpperCase() === k ? 'ans' : ''}`}>
-                          <b>{k})</b> <MathText>{v}</MathText>
-                        </div>
-                      ))}
+                      {Object.entries(p.options).map(([k, v]) => {
+                        const isRev = revealed.has(p.id);
+                        let cls = 'pyq-opt';
+                        if (isRev) {
+                           if (p.answer && String(p.answer).toUpperCase() === k) cls += ' ans';
+                           else if (answers[p.id] === k) cls += ' wrong';
+                        }
+                        const click = () => { if (!isRev) submitAttempt(p, k); };
+                        
+                        return (
+                          <div key={k} className={cls} onClick={click} style={{ cursor: isRev ? 'default' : 'pointer', ...(cls.includes('wrong') ? {borderColor: 'var(--danger)', background: 'rgba(239,68,68,0.1)'} : {}) }}>
+                            <b>{k})</b> <MathText>{v}</MathText>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <div className="field" style={{ marginTop: '1rem' }}>
+                      <label>Your answer (numerical)</label>
+                      <input 
+                         disabled={revealed.has(p.id)} 
+                         placeholder="Type a number and press Enter" 
+                         onKeyDown={(e) => {
+                           if (e.key === 'Enter' && !revealed.has(p.id) && e.target.value) {
+                             submitAttempt(p, e.target.value);
+                           }
+                         }} 
+                      />
+                      {revealed.has(p.id) && <div style={{marginTop: '0.5rem'}}><b>Your Answer:</b> {answers[p.id] || '(Blank)'}</div>}
                     </div>
                   )}
-                  {p.answer && <p style={{ marginBottom: '0.7rem' }}><b>Answer:</b> <span style={{ color: 'var(--success)' }}>{p.answer}</span></p>}
-                  {p.solution
-                    ? <div className="solution"><MathText>{p.solution}</MathText></div>
-                    : <p className="subtitle">No worked solution on file for this question.</p>}
-                  <div className="action-toolbar" style={{ marginTop: '0.8rem' }}>
-                    <button className="chip" onClick={() => navigate('tutor', { prefill: `Explain this GATE question:\n\n${p.question_text}` })}>🤖 Ask tutor</button>
-                  </div>
+
+                  {!revealed.has(p.id) && (
+                     <button className="btn-secondary" style={{ marginTop: '1rem' }} onClick={() => submitAttempt(p, null)}>Show answer</button>
+                  )}
+
+                  {revealed.has(p.id) && (
+                    <div style={{ marginTop: '1.2rem' }}>
+                      {p.answer && <p style={{ marginBottom: '0.7rem' }}><b>Correct Answer:</b> <span style={{ color: 'var(--success)' }}>{p.answer}</span></p>}
+                      {p.solution
+                        ? <div className="solution"><MathText>{p.solution}</MathText></div>
+                        : <p className="subtitle">No worked solution on file for this question.</p>}
+                      <div className="action-toolbar" style={{ marginTop: '0.8rem' }}>
+                        <button className="chip" onClick={() => navigate('tutor', { prefill: `Explain this GATE question:\n\n${p.question_text}` })}>🤖 Ask tutor</button>
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
             </div>

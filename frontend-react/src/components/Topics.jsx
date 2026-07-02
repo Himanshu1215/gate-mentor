@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import api from '../api';
+import MathText from './MathText';
 
 function ProgressBar({ value }) {
   const pct = Math.max(0, Math.min(100, Number(value) || 0));
@@ -74,6 +75,10 @@ export default function Topics({ navigate }) {
   const [files, setFiles] = useState([]);
   const [uploadStatus, setUploadStatus] = useState('');
   const [revisionStatus, setRevisionStatus] = useState('');
+  
+  const [testQuestions, setTestQuestions] = useState({});
+  const [testAnswers, setTestAnswers] = useState({});
+  const [testRevealed, setTestRevealed] = useState(new Set());
 
   const subjects = payload?.subjects || [];
   const allConcepts = useMemo(() => flattenConcepts(subjects), [subjects]);
@@ -133,6 +138,16 @@ Include:
 Keep it exam-focused.`;
       const res = await api.chat(prompt, `syllabus-${selected.concept_id}`, 'Professor');
       setAiNotes((prev) => ({ ...prev, [selected.concept_id]: res.reply }));
+      
+      try {
+        const q1 = await api.quizNext('topic', selected.concept_id, '');
+        const qs = [q1];
+        try { 
+           const q2 = await api.quizNext('topic', selected.concept_id, q1.pyq_id); 
+           if (q2 && q2.pyq_id !== q1.pyq_id) qs.push(q2);
+        } catch(e) {}
+        setTestQuestions(p => ({...p, [selected.concept_id]: qs}));
+      } catch(e) {}
     } catch (e) {
       setAiError(e.message);
     } finally {
@@ -236,6 +251,75 @@ Keep it exam-focused.`;
             {aiError && <div className="empty compact">AI notes failed: {aiError}</div>}
             {!notes && !aiLoading && <p className="subtitle">Generate exam-focused notes for this topic using the tutor.</p>}
             {notes && <div className="notes-output">{notes}</div>}
+            
+            {notes && testQuestions[selected.concept_id] && testQuestions[selected.concept_id].length > 0 && (
+              <div style={{ marginTop: '1.5rem', borderTop: '1px solid var(--border)', paddingTop: '1.5rem' }}>
+                <h3 style={{ marginBottom: '1rem' }}>Test Yourself</h3>
+                {testQuestions[selected.concept_id].map((q) => {
+                   const qKey = `${selected.concept_id}_${q.pyq_id}`;
+                   const isRev = testRevealed.has(qKey);
+                   const clickAns = async (k) => {
+                      if (isRev) return;
+                      setTestAnswers(p => ({...p, [qKey]: k}));
+                      setTestRevealed(s => { const n = new Set(s); n.add(qKey); return n; });
+                      const isCorrect = k && q.answer && String(q.answer).toUpperCase() === String(k).toUpperCase();
+                      try {
+                        await api.submitQuiz({
+                          session_id: 'test-' + Math.random().toString(36).slice(2,9),
+                          concept_id: selected.concept_id,
+                          is_correct: !!isCorrect,
+                          confidence: 3,
+                          question_id: q.pyq_id,
+                          user_answer: k,
+                          correct_answer: q.answer,
+                          time_taken_sec: 15,
+                          source: 'quiz'
+                        });
+                      } catch(e) {}
+                   };
+                   
+                   return (
+                     <div key={q.pyq_id} style={{ marginBottom: '1.2rem', padding: '1rem', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: '6px' }}>
+                       <div style={{ marginBottom: '0.8rem' }}><MathText>{q.question_text}</MathText></div>
+                       {q.options && Object.keys(q.options).length > 0 ? (
+                         <div className="pyq-options">
+                           {Object.entries(q.options).map(([k, v]) => {
+                              let cls = 'pyq-opt';
+                              if (isRev) {
+                                 if (q.answer && String(q.answer).toUpperCase() === k) cls += ' ans';
+                                 else if (testAnswers[qKey] === k) cls += ' wrong';
+                              }
+                              return (
+                                <div key={k} className={cls} onClick={() => clickAns(k)} style={{ cursor: isRev ? 'default' : 'pointer', ...(cls.includes('wrong') ? {borderColor: 'var(--danger)', background: 'rgba(239,68,68,0.1)'} : {}) }}>
+                                  <b>{k})</b> <MathText>{v}</MathText>
+                                </div>
+                              );
+                           })}
+                         </div>
+                       ) : (
+                         <div className="field">
+                           <input disabled={isRev} placeholder="Numerical answer and press Enter" onKeyDown={(e) => {
+                             if (e.key === 'Enter' && e.target.value) clickAns(e.target.value);
+                           }} />
+                           {isRev && <div style={{marginTop:'0.5rem'}}><b>Your Answer:</b> {testAnswers[qKey] || '(Blank)'}</div>}
+                         </div>
+                       )}
+                       
+                       {!isRev && <button className="btn-secondary" style={{ marginTop: '0.8rem' }} onClick={() => clickAns(null)}>Show answer</button>}
+                       
+                       {isRev && (
+                         <div style={{ marginTop: '1rem', fontSize: '0.95rem' }}>
+                           <div><b>Correct Answer:</b> <span style={{ color: 'var(--success)' }}>{q.answer || 'N/A'}</span></div>
+                           <div style={{ marginTop: '0.5rem', background: 'rgba(0,0,0,0.2)', padding: '0.8rem', borderRadius: '4px' }}>
+                              <MathText>{q.solution || 'No explanation available.'}</MathText>
+                           </div>
+                         </div>
+                       )}
+                     </div>
+                   );
+                })}
+              </div>
+            )}
           </section>
 
           <section className="card uploaded-notes-panel">

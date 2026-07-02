@@ -176,9 +176,16 @@ def format_pyq_fallback(pyq: Dict[str, Any]) -> str:
 # ---------------------------------------------------------------------------
 # State Graph Nodes
 # ---------------------------------------------------------------------------
+_PENDING_QUIZ_STATES = {}
+
 def router_node(state: ChatState) -> ChatState:
     """Identifies the user's intent and updates the next node state."""
     query = state.get("query", "")
+    session_id = state.get("session_id", "")
+    
+    if session_id and session_id in _PENDING_QUIZ_STATES:
+        state["next_node"] = "QuizGrade"
+        return state
     
     # 1. GGUF Model absence check for offline/mock fallback
     if not is_gguf_model_present():
@@ -240,50 +247,92 @@ def explainer_node(state: ChatState) -> ChatState:
 def quiz_node(state: ChatState) -> ChatState:
     """Generates or fetches quiz questions for a concept."""
     query = state.get("query", "")
+    session_id = state.get("session_id", "")
     
     from knowledge.pyq_repository import get_repository
     repo = get_repository()
     
-    # Extract concept ID if present
     concept_id = "ML_NB_001"
     match = re.search(r'[A-Z]{2,4}_[A-Z0-9]+_\d+', query)
     if match:
         concept_id = match.group(0)
         
-    if is_gguf_model_present():
-        from learning.ai_reasoner import AIReasoningEngine
-        reasoner = AIReasoningEngine()
-        from knowledge.ingestor import KnowledgeIngestor
-        retriever = KnowledgeIngestor()
-        context_chunks = retriever.query(query, top_k=3)
-        try:
-            quiz_data = reasoner.generate_quiz_question(concept_id, context_chunks)
-            reply = f"Here is a quiz question on {concept_id}:\n\n{quiz_data.get('question')}\n\nOptions:\n"
-            for opt in quiz_data.get("options", []):
-                reply += f"{opt}\n"
-            reply += f"\nCorrect answer: {quiz_data.get('answer')}\nExplanation: {quiz_data.get('explanation')}"
-            citations = list({chunk["metadata"].get("source", "System") for chunk in context_chunks})
-        except Exception:
-            q = repo.random_question(concept_id=concept_id) or repo.random_question()
-            reply = f"Quiz Question:\n{q.get('question_text')}\n\nOptions:\n"
-            for k, v in (q.get("options") or {}).items():
-                reply += f"{k}) {v}\n"
-            reply += f"\nCorrect answer: {q.get('answer')}\nExplanation: {q.get('solution')}"
-            citations = [q.get("id")]
+    q = repo.random_question(concept_id=concept_id) or repo.random_question()
+    if q:
+        reply = f"Quiz Question:\n{q.get('question_text')}\n\nOptions:\n"
+        for k, v in (q.get("options") or {}).items():
+            reply += f"{k}) {v}\n"
+        reply += "\n*Reply with your answer (e.g. A, B, C, D) to check it!*"
+        
+        _PENDING_QUIZ_STATES[session_id] = {
+            "question_id": q.get("id"),
+            "concept_id": q.get("concept_id") or concept_id,
+            "correct_answer": q.get("answer", ""),
+            "solution": q.get("solution", ""),
+            "citations": [q.get("id")]
+        }
+        citations = [q.get("id")]
     else:
-        q = repo.random_question(concept_id=concept_id) or repo.random_question()
-        if q:
-            reply = f"Quiz Question:\n{q.get('question_text')}\n\nOptions:\n"
-            for k, v in (q.get("options") or {}).items():
-                reply += f"{k}) {v}\n"
-            reply += f"\nCorrect answer: {q.get('answer')}\nExplanation: {q.get('solution')}"
-            citations = [q.get("id")]
-        else:
-            reply = "No quiz questions available."
-            citations = []
+        reply = "No quiz questions available."
+        citations = []
             
     state["reply"] = reply
     state["citations"] = citations
+    return state
+
+def quiz_grade_node(state: ChatState) -> ChatState:
+    session_id = state.get("session_id", "")
+    query = state.get("query", "").strip()
+    
+    pending = _PENDING_QUIZ_STATES.pop(session_id, None)
+    if not pending:
+        state["reply"] = "Quiz session expired."
+        state["citations"] = []
+        return state
+        
+    user_ans = query.upper()
+    correct_ans = str(pending["correct_answer"]).upper()
+    
+    is_correct = (user_ans == correct_ans) or (len(user_ans) > 0 and user_ans in correct_ans)
+    
+    import sqlite3
+    DB_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "gate_mentor.db")
+    conn = sqlite3.connect(DB_PATH)
+    try:
+        conn.execute("""
+            INSERT INTO attempt_items
+            (session_id, source, question_id, concept_id, user_answer, correct_answer, is_correct, confidence, time_taken_sec)
+            VALUES (?, 'quiz', ?, ?, ?, ?, ?, ?, ?)
+        """, (
+            session_id, pending["question_id"], pending["concept_id"],
+            query, pending["correct_answer"], 1 if is_correct else 0, 3, 10
+        ))
+        if not is_correct:
+            conn.execute("""
+                INSERT INTO revision_queue_items (question_id, concept_id, interval_days, due_at, lapses)
+                VALUES (?, ?, 1, datetime('now', '+1 day'), 1)
+                ON CONFLICT(question_id) DO UPDATE SET interval_days = 1, due_at = datetime('now', '+1 day'), lapses = lapses + 1
+            """, (pending["question_id"], pending["concept_id"]))
+        else:
+            row = conn.execute("SELECT interval_days FROM revision_queue_items WHERE question_id = ?", (pending["question_id"],)).fetchone()
+            if row:
+                curr_interval = row[0]
+                next_interval = {1: 3, 3: 7, 7: 14}.get(curr_interval, 14)
+                if curr_interval >= 14:
+                    conn.execute("DELETE FROM revision_queue_items WHERE question_id = ?", (pending["question_id"],))
+                else:
+                    conn.execute("UPDATE revision_queue_items SET interval_days = ?, due_at = datetime('now', '+' || ? || ' days') WHERE question_id = ?", (next_interval, next_interval, pending["question_id"]))
+        conn.commit()
+    except Exception as e:
+        logger.error(f"Failed to record quiz grade: {e}")
+    finally:
+        conn.close()
+        
+    reply = "✅ **Correct!**\n\n" if is_correct else f"❌ **Incorrect.** The correct answer was **{pending['correct_answer']}**.\n\n"
+    reply += f"**Explanation:**\n{pending.get('solution')}"
+    
+    state["reply"] = reply
+    state["citations"] = pending.get("citations", [])
     return state
 
 def pyq_node(state: ChatState) -> ChatState:
@@ -338,6 +387,8 @@ def get_agent():
     workflow.add_node("Quiz", quiz_node)
     workflow.add_node("PYQ", pyq_node)
     
+    workflow.add_node("QuizGrade", quiz_grade_node)
+    
     workflow.set_entry_point("Router")
     
     def route_decision(state: ChatState) -> str:
@@ -349,6 +400,7 @@ def get_agent():
         {
             "Retrieve": "Retrieve",
             "Quiz": "Quiz",
+            "QuizGrade": "QuizGrade",
             "PYQ": "PYQ"
         }
     )
@@ -356,6 +408,7 @@ def get_agent():
     workflow.add_edge("Retrieve", "Explainer")
     workflow.add_edge("Explainer", END)
     workflow.add_edge("Quiz", END)
+    workflow.add_edge("QuizGrade", END)
     workflow.add_edge("PYQ", END)
     
     return workflow.compile()

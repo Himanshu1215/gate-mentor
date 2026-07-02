@@ -55,6 +55,7 @@ class QuizSubmitRequest(BaseModel):
     user_answer: Optional[str] = None
     correct_answer: Optional[str] = None
     time_taken_sec: Optional[float] = None
+    source: Optional[str] = "quiz"
 
 class QuizSubmitResponse(BaseModel):
     success: bool
@@ -232,9 +233,10 @@ async def quiz_submit_endpoint(request: QuizSubmitRequest, authorization: Option
             conn.execute("""
                 INSERT INTO attempt_items
                 (session_id, source, question_id, concept_id, user_answer, correct_answer, is_correct, confidence, time_taken_sec)
-                VALUES (?, 'quiz', ?, ?, ?, ?, ?, ?, ?)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
                 request.session_id,
+                request.source,
                 request.question_id,
                 request.concept_id,
                 request.user_answer,
