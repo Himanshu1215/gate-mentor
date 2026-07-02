@@ -250,3 +250,4 @@ Offline script in the style of `scripts/data/distill_solutions.py`: for each of 
 6. Tutor: ask for an explanation (grounded, cites sources), "quiz me" (two-turn grade), refresh page → history persists, "explain my last mistake" references the actual mistake.
 7. Analytics: click a weak bar → targeted quiz.
 8. Mid-mock sidebar click → warning; resume works.
+wht

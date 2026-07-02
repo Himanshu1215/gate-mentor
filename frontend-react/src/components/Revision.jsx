@@ -26,8 +26,8 @@ export default function Revision({ navigate }) {
           <h1>Revision</h1>
           <p className="subtitle">Spaced repetition from quiz progress and topics you manually add from Syllabus.</p>
         </div>
-        {data?.due_count > 0 && (
-          <button className="btn-primary" onClick={() => navigate('quiz', { mode: 'revision' })}>Revise now ({data.due_count})</button>
+        {(data?.due_count > 0 || data?.due_items_count > 0) && (
+          <button className="btn-primary" onClick={() => navigate('quiz', { mode: 'revision' })}>Revise now</button>
         )}
       </header>
 
@@ -36,7 +36,7 @@ export default function Revision({ navigate }) {
           <div className={`day-cell ${i === 0 ? 'today' : ''}`} key={i}>
             <div className="dc-day">{WEEKDAYS[d.getDay()]}</div>
             <div className="dc-num">{d.getDate()}</div>
-            {(i === 0 && data?.due_count > 0) || dueInDays.has(i) ? <div className="dc-dot" /> : null}
+            {(i === 0 && (data?.due_count > 0 || data?.due_items_count > 0)) || dueInDays.has(i) ? <div className="dc-dot" /> : null}
           </div>
         ))}
       </div>
@@ -46,8 +46,16 @@ export default function Revision({ navigate }) {
 
       {data && (
         <>
-          <h2>Due today {data.due.length > 0 && <span className="tag gold">{data.due.length}</span>}</h2>
-          {data.due.length === 0 && (
+          <h2>Due today 
+            {(data.due.length > 0 || data.due_items_count > 0) && (
+              <span className="tag gold" style={{marginLeft: '8px', textTransform: 'none'}}>
+                {data.due_items_count > 0 ? `${data.due_items_count} failed questions` : ''}
+                {data.due_items_count > 0 && data.due.length > 0 ? ' + ' : ''}
+                {data.due.length > 0 ? `${data.due.length} concepts` : ''}
+              </span>
+            )}
+          </h2>
+          {(data.due.length === 0 && data.due_items_count === 0) && (
             <div className="empty">
               No topics are due today. Revision is created automatically after quizzes, or you can add any topic from Syllabus.
               <br />

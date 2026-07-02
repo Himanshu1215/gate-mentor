@@ -20,6 +20,8 @@ async def lifespan(app: FastAPI):
     from infrastructure.database import init_db
     init_db()
     _ensure_learning_tables()
+    from learning.concept_drift import ConceptDriftEngine
+    ConceptDriftEngine.apply_drift_if_needed()
     yield
 
 app = FastAPI(title="GATE DA Mentor API", version="1.0.0", lifespan=lifespan)
@@ -241,6 +243,22 @@ async def quiz_submit_endpoint(request: QuizSubmitRequest, authorization: Option
                 request.confidence,
                 request.time_taken_sec
             ))
+            if not request.is_correct:
+                conn.execute("""
+                    INSERT INTO revision_queue_items (question_id, concept_id, interval_days, due_at, lapses)
+                    VALUES (?, ?, 1, datetime('now', '+1 day'), 1)
+                    ON CONFLICT(question_id) DO UPDATE SET
+                        interval_days = 1, due_at = datetime('now', '+1 day'), lapses = lapses + 1
+                """, (request.question_id, request.concept_id))
+            else:
+                row = conn.execute("SELECT interval_days FROM revision_queue_items WHERE question_id = ?", (request.question_id,)).fetchone()
+                if row:
+                    curr_interval = row["interval_days"]
+                    next_interval = {1: 3, 3: 7, 7: 14}.get(curr_interval, 14)
+                    if curr_interval >= 14:
+                        conn.execute("DELETE FROM revision_queue_items WHERE question_id = ?", (request.question_id,))
+                    else:
+                        conn.execute("UPDATE revision_queue_items SET interval_days = ?, due_at = datetime('now', '+' || ? || ' days') WHERE question_id = ?", (next_interval, next_interval, request.question_id))
         conn.commit()
         conn.close()
     except Exception as e:
@@ -773,20 +791,27 @@ async def quiz_next(
             question = repo.random_question(exclude_ids=exclude_ids, subject=subj)
     elif mode in ("weak", "revision"):
         conn = get_db_connection()
-        order = "state_level ASC" if mode == "weak" else "last_revised ASC"
-        rows = conn.execute(
-            f"SELECT concept_id FROM mastery_states WHERE state_level BETWEEN 2 AND 7 "
-            f"ORDER BY {order} LIMIT 8"
-        ).fetchall()
+        if mode == "revision":
+            due_row = conn.execute("SELECT question_id, concept_id FROM revision_queue_items WHERE due_at <= datetime('now')").fetchone()
+            if due_row:
+                track = due_row["concept_id"]
+                question = repo.get(due_row["question_id"])
+                
+        if not question:
+            order = "state_level ASC" if mode == "weak" else "last_revised ASC"
+            rows = conn.execute(
+                f"SELECT concept_id FROM mastery_states WHERE state_level BETWEEN 2 AND 7 "
+                f"ORDER BY {order} LIMIT 8"
+            ).fetchall()
+            for r in rows:
+                cid = r["concept_id"]
+                subj = _PREFIX_SUBJECT.get(cid.split("_")[0].upper())
+                question = (repo.random_question(exclude_ids=exclude_ids, concept_id=cid)
+                            or repo.random_question(exclude_ids=exclude_ids, subject=subj))
+                if question:
+                    track = cid
+                    break
         conn.close()
-        for r in rows:
-            cid = r["concept_id"]
-            subj = _PREFIX_SUBJECT.get(cid.split("_")[0].upper())
-            question = (repo.random_question(exclude_ids=exclude_ids, concept_id=cid)
-                        or repo.random_question(exclude_ids=exclude_ids, subject=subj))
-            if question:
-                track = cid
-                break
 
     if not question:  # mixed / final fallback
         question = repo.random_question(exclude_ids=exclude_ids)
@@ -818,15 +843,12 @@ async def revision_due(authorization: Optional[str] = Header(None)):
     _auth(authorization)
     import datetime
     from infrastructure.database import get_db_connection
+    from learning.concept_drift import ConceptDriftEngine
 
     _ensure_learning_tables()
-    thresholds = [(3, 3), (5, 7), (7, 14), (8, 30)]  # (max_level, days)
 
     def threshold_for(level):
-        for max_lvl, days in thresholds:
-            if level <= max_lvl:
-                return days
-        return 30
+        return ConceptDriftEngine.get_threshold(level)
 
     conn = get_db_connection()
     rows = conn.execute("""
@@ -881,7 +903,28 @@ async def revision_due(authorization: Optional[str] = Header(None)):
 
     due.sort(key=lambda x: x["days_since"], reverse=True)
     upcoming.sort(key=lambda x: x["due_in_days"])
-    return {"due": due, "upcoming": upcoming[:10], "due_count": len(due)}
+    
+    due_items_count = conn.execute("SELECT COUNT(*) as c FROM revision_queue_items WHERE due_at <= datetime('now')").fetchone()["c"]
+    
+    return {"due": due, "upcoming": upcoming[:10], "due_count": len(due), "due_items_count": due_items_count}
+
+
+@app.get("/api/schedule/today")
+async def get_schedule_today(authorization: Optional[str] = Header(None)):
+    """Generate adaptive daily schedule with revision and new concepts."""
+    _auth(authorization)
+    from infrastructure.database import get_db_connection
+    from planner.adaptive_scheduler import AdaptiveScheduler
+    
+    conn = get_db_connection()
+    user = conn.execute("SELECT daily_goal FROM user_profile WHERE id = 1").fetchone()
+    conn.close()
+    
+    daily_goal = user["daily_goal"] if user and user["daily_goal"] else 10
+    minutes = daily_goal * 3  # estimate 3 mins per question mapped to time
+    
+    plan = AdaptiveScheduler.generate_daily_schedule(minutes)
+    return plan
 
 
 @app.post("/api/revision/schedule")
@@ -898,9 +941,10 @@ async def revision_schedule(request: RevisionScheduleRequest, authorization: Opt
     conn = get_db_connection()
     if request.question_id:
         conn.execute("""
-            INSERT INTO revision_queue_items (item_type, item_id, due_at, repetition_number, easiness_factor, interval_days)
-            VALUES ('pyq', ?, ?, 0, 2.5, ?)
-        """, (request.question_id, due_at, due_in_days))
+            INSERT INTO revision_queue_items (question_id, concept_id, interval_days, due_at, lapses)
+            VALUES (?, ?, ?, ?, 0)
+            ON CONFLICT(question_id) DO UPDATE SET due_at = excluded.due_at
+        """, (request.question_id, request.concept_id, due_in_days, due_at.isoformat()))
     else:
         concept = conn.execute("SELECT subject, topic, subtopic FROM concepts WHERE concept_id = ?", (request.concept_id,)).fetchone()
         if not concept:
@@ -1003,6 +1047,14 @@ async def mock_grade(request: MockGradeRequest, authorization: Optional[str] = H
                     is_correct,
                     marks_awarded
                 ))
+                
+                if not is_correct and rev.get("your_answer") is not None:
+                    conn.execute("""
+                        INSERT INTO revision_queue_items (question_id, concept_id, interval_days, due_at, lapses)
+                        VALUES (?, ?, 1, datetime('now', '+1 day'), 1)
+                        ON CONFLICT(question_id) DO UPDATE SET
+                            interval_days = 1, due_at = datetime('now', '+1 day'), lapses = lapses + 1
+                    """, (q["pyq_id"], q.get("concept_id")))
 
         conn.commit()
         conn.close()

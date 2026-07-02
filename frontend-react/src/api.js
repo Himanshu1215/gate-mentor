@@ -100,6 +100,7 @@ export const api = {
 
   // dashboard / coach / gamification / profile / analytics
   dashboardStats: () => request('/api/dashboard/stats'),
+  scheduleToday: () => request('/api/schedule/today'),
   curriculumNext: () => request('/api/curriculum/next'),
   coachAlerts: () => request('/api/coach/alerts'),
   gamification: () => request('/api/gamification'),

@@ -9,20 +9,45 @@ class ConceptDriftEngine:
     """Calculates memory decay (drift) and degrades mastery state if revision is ignored."""
     
     @staticmethod
-    def apply_drift() -> List[str]:
-        """
-        Scans all concepts. If a concept hasn't been revised in X days (based on its mastery level),
-        it degrades the mastery level and logs it as drifted.
-        Returns a list of concept_ids that degraded.
-        """
+    def get_threshold(state_level: int) -> int:
+        if state_level <= 3: return 3
+        if state_level <= 5: return 7
+        if state_level <= 7: return 14
+        return 30
+        
+    @staticmethod
+    def apply_drift_if_needed() -> None:
         conn = sqlite3.connect(DB_PATH)
         cursor = conn.cursor()
+        try:
+            cursor.execute("ALTER TABLE user_profile ADD COLUMN last_drift_run TEXT")
+            conn.commit()
+        except sqlite3.OperationalError:
+            pass
+            
+        cursor.execute("SELECT last_drift_run FROM user_profile WHERE id = 1")
+        row = cursor.fetchone()
+        now = datetime.datetime.now()
+        should_run = True
         
-        # Drift rules:
-        # Level 2-3: degrade after 3 days
-        # Level 4-5: degrade after 7 days
-        # Level 6-7: degrade after 14 days
-        # Level 8: degrades after 30 days
+        if row and row[0]:
+            try:
+                last_run = datetime.datetime.fromisoformat(row[0])
+                if (now - last_run).total_seconds() < 86400:
+                    should_run = False
+            except:
+                pass
+                
+        if should_run:
+            ConceptDriftEngine.apply_drift()
+            cursor.execute("UPDATE user_profile SET last_drift_run = ? WHERE id = 1", (now.isoformat(),))
+            conn.commit()
+        conn.close()
+
+    @staticmethod
+    def apply_drift() -> List[str]:
+        conn = sqlite3.connect(DB_PATH)
+        cursor = conn.cursor()
         
         now = datetime.datetime.now()
         degraded_concepts = []
@@ -38,15 +63,8 @@ class ConceptDriftEngine:
             last_revised = datetime.datetime.fromisoformat(last_revised_str)
             days_since = (now - last_revised).days
             
-            should_degrade = False
-            if state_level <= 3 and days_since >= 3:
-                should_degrade = True
-            elif state_level <= 5 and days_since >= 7:
-                should_degrade = True
-            elif state_level <= 7 and days_since >= 14:
-                should_degrade = True
-            elif state_level == 8 and days_since >= 30:
-                should_degrade = True
+            threshold = ConceptDriftEngine.get_threshold(state_level)
+            should_degrade = days_since >= threshold
                 
             if should_degrade:
                 new_state = max(1, state_level - 1)

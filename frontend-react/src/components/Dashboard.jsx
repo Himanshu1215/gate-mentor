@@ -29,14 +29,14 @@ export default function Dashboard({ navigate }) {
   const { gamification, profile } = useApp();
   const [stats, setStats] = useState(null);
   const [alerts, setAlerts] = useState([]);
-  const [next, setNext] = useState(null);
+  const [schedule, setSchedule] = useState(null);
   const [due, setDue] = useState([]);
   const [pastMocks, setPastMocks] = useState([]);
 
   useEffect(() => {
     api.dashboardStats().then(setStats).catch(() => {});
     api.coachAlerts().then((d) => setAlerts(d.alerts || [])).catch(() => {});
-    api.curriculumNext().then(setNext).catch(() => {});
+    api.scheduleToday().then(setSchedule).catch(() => {});
     api.revisionDue().then((d) => setDue(d.due || [])).catch(() => {});
     api.getMockAttempts().then(setPastMocks).catch(() => {});
   }, []);
@@ -107,16 +107,39 @@ export default function Dashboard({ navigate }) {
               </div>
             </div>
           ))}
-          {next && next.concept_id !== 'ALL_DONE' && (
+          {schedule && (
             <div style={{ marginTop: '1rem' }}>
-              <h2>Next up</h2>
-              <div className="list-row">
-                <div>
-                  <div style={{ fontWeight: 600 }}>{next.topic}</div>
-                  <div className="lr-sub">{next.action === 'TEACH' ? 'Learn this next' : 'Time to review'}</div>
-                </div>
-                <button className="btn-secondary" onClick={() => navigate('quiz', { mode: 'topic', conceptId: next.concept_id, topic: next.topic })}>Practice →</button>
-              </div>
+              <h2>Today's Plan</h2>
+              {(schedule.revision_tasks.length === 0 && schedule.learning_tasks.length === 0) && (
+                <div className="empty">No tasks scheduled for today.</div>
+              )}
+              {schedule.revision_tasks.map((rt) => (
+                 <div className="list-row" key={'rev-' + rt.concept_id}>
+                    <div>
+                       <div style={{ fontWeight: 600 }}>{rt.topic}</div>
+                       <div className="lr-sub">Revision required</div>
+                    </div>
+                    <button className="btn-secondary" onClick={() => navigate('quiz', { mode: 'revision', conceptId: rt.concept_id, topic: rt.topic })}>Review →</button>
+                 </div>
+              ))}
+              {schedule.learning_tasks.map((lt) => (
+                 <div className="list-row" key={'lrn-' + lt.concept_id}>
+                    <div>
+                       <div style={{ fontWeight: 600 }}>{lt.topic}</div>
+                       <div className="lr-sub">Learn this next</div>
+                    </div>
+                    <button className="btn-secondary" onClick={() => navigate('topics', { conceptId: lt.concept_id })}>Learn →</button>
+                 </div>
+              ))}
+              {g.daily_goal_done < g.daily_goal && (
+                 <div className="list-row" key="goal-tasks">
+                    <div>
+                       <div style={{ fontWeight: 600 }}>{g.daily_goal - g.daily_goal_done} questions to hit today's goal</div>
+                       <div className="lr-sub">Target weak areas</div>
+                    </div>
+                    <button className="btn-secondary" onClick={() => navigate('quiz', { mode: 'weak' })}>Practice →</button>
+                 </div>
+              )}
             </div>
           )}
         </div>
