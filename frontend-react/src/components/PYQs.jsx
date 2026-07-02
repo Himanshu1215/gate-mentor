@@ -154,6 +154,9 @@ export default function PYQs({ params, navigate }) {
                 {p.marks && <span className="tag gold">{p.marks}m</span>}
                 {p.subject && <span className="tag">{p.subject}</span>}
                 {p.has_solution && <span className="tag" style={{ color: 'var(--success)' }}>solution</span>}
+                {p.has_answer && (p.answer_verified
+                  ? <span className="tag" style={{ color: 'var(--success)' }}>✓ verified</span>
+                  : <span className="tag" style={{ color: 'var(--warning)' }} title="Answer not yet human/LLM-verified">⚠ unverified</span>)}
               </div>
               <div className="pyq-q">
                 <div className="q-body" onClick={() => handleExpand(p.id)} style={{ cursor: 'pointer' }}>

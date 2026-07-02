@@ -638,13 +638,7 @@ def _concepts_payload():
     }
 
 
-# prefix -> subject (mirrors knowledge/pyq_repository + seed_syllabus)
-_PREFIX_SUBJECT = {
-    "PROB": "Probability and Statistics", "LA": "Linear Algebra",
-    "CALC": "Calculus and Optimization", "DSA": "Programming, DS & Algorithms",
-    "DB": "Database Management and Warehousing", "ML": "Machine Learning",
-    "AI": "Artificial Intelligence",
-}
+from core.subject_map import PREFIX_SUBJECT as _PREFIX_SUBJECT
 
 
 @app.get("/api/concepts")
@@ -894,6 +888,7 @@ async def quiz_next(
         "options": question.get("options") or {},
         "answer": question.get("answer"),
         "solution": question.get("solution"),
+        "answer_verified": question.get("answer_verified", False),
     }
 
 

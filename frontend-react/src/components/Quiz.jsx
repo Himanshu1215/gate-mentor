@@ -243,6 +243,9 @@ export default function Quiz({ params, navigate }) {
             <span className="tag accent">{q.question_type || 'MCQ'}</span>
             {q.marks && <span className="tag gold">{q.marks} mark{q.marks > 1 ? 's' : ''}</span>}
             {q.subject && <span className="tag">{q.subject}</span>}
+            {q.answer && (q.answer_verified
+              ? <span className="tag" style={{ color: 'var(--success)' }}>✓ verified</span>
+              : <span className="tag" style={{ color: 'var(--warning)' }} title="Answer not yet human/LLM-verified">⚠ unverified</span>)}
           </div>
 
           <div className="q-text"><MathText>{q.question_text}</MathText></div>

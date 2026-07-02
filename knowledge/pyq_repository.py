@@ -1,11 +1,16 @@
 """
 knowledge/pyq_repository.py
 ───────────────────────────
-In-memory repository over the parsed PYQ JSONs in
-knowledge/official/pyqs/parsed/*.json (~754 small files). Loaded once at import
-and reused by the /api/pyqs, /api/quiz/next and /api/mock/* endpoints.
+In-memory repository over the PYQ bank. Loaded once at import and reused by
+the /api/pyqs, /api/quiz/next and /api/mock/* endpoints.
 
-Each PYQ JSON looks like:
+Two data sources, chosen automatically:
+  - knowledge/official/pyqs/cleaned/*.json  (preferred, once the Gemini
+    cleaning pipeline in scripts/gemini/ has published a verified bank)
+  - knowledge/official/pyqs/parsed/*.json   (pre-migration fallback — raw,
+    regex-extracted, unverified questions; ~754 small files)
+
+Each PYQ record looks like:
     {"year": 2024, "exam": "GATE DA", "question_id": "Q45", "question_seq": 399,
      "question_type": "MCQ", "marks": 2, "difficulty": 8, "concept_id": "PROB_003",
      "question_text": "...", "options": {"A": "...", ...}, "answer": "A",
@@ -23,60 +28,21 @@ import random
 import logging
 from typing import Dict, List, Optional, Any
 
+from core.subject_map import PREFIX_SUBJECT, SUBJECT_KEYWORDS
+
 logger = logging.getLogger(__name__)
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 PARSED_DIR = os.path.join(ROOT, "knowledge", "official", "pyqs", "parsed")
-
-# concept_id prefix -> subject (matches scripts/seed_syllabus.py)
-PREFIX_SUBJECT = {
-    "PROB": "Probability and Statistics",
-    "LA": "Linear Algebra",
-    "CALC": "Calculus and Optimization",
-    "DSA": "Programming, DS & Algorithms",
-    "DB": "Database Management and Warehousing",
-    "ML": "Machine Learning",
-    "AI": "Artificial Intelligence",
-}
-
-# Fallback keyword -> subject for questions tagged GENERAL / unmapped.
-SUBJECT_KEYWORDS = [
-    ("bayes", "Probability and Statistics"),
-    ("probability", "Probability and Statistics"),
-    ("random variable", "Probability and Statistics"),
-    ("distribution", "Probability and Statistics"),
-    ("variance", "Probability and Statistics"),
-    ("expectation", "Probability and Statistics"),
-    ("hypothesis", "Probability and Statistics"),
-    ("eigen", "Linear Algebra"),
-    ("matrix", "Linear Algebra"),
-    ("determinant", "Linear Algebra"),
-    ("vector", "Linear Algebra"),
-    ("derivative", "Calculus and Optimization"),
-    ("integral", "Calculus and Optimization"),
-    ("gradient", "Calculus and Optimization"),
-    ("maxima", "Calculus and Optimization"),
-    ("algorithm", "Programming, DS & Algorithms"),
-    ("array", "Programming, DS & Algorithms"),
-    ("sorting", "Programming, DS & Algorithms"),
-    ("graph", "Programming, DS & Algorithms"),
-    ("complexity", "Programming, DS & Algorithms"),
-    ("sql", "Database Management and Warehousing"),
-    ("relation", "Database Management and Warehousing"),
-    ("normal form", "Database Management and Warehousing"),
-    ("regression", "Machine Learning"),
-    ("classifier", "Machine Learning"),
-    ("clustering", "Machine Learning"),
-    ("neural", "Machine Learning"),
-    ("gradient descent", "Machine Learning"),
-    ("heuristic", "Artificial Intelligence"),
-    ("search", "Artificial Intelligence"),
-    ("logic", "Artificial Intelligence"),
-]
+CLEANED_DIR = os.path.join(ROOT, "knowledge", "official", "pyqs", "cleaned")
 
 
 def subject_for(concept_id: Optional[str], question_text: str = "") -> str:
-    """Derive a subject from concept_id prefix, else keyword-match the text."""
+    """Derive a subject from concept_id prefix, else keyword-match the text.
+
+    Only used for the pre-migration `parsed/` fallback path — the cleaned
+    bank always carries a verified subject from the Gemini agent.
+    """
     if concept_id and concept_id != "GENERAL":
         prefix = concept_id.split("_")[0].upper()
         if prefix in PREFIX_SUBJECT:
@@ -110,15 +76,58 @@ def _quality(rec) -> str:
 
 
 class PYQRepository:
-    """Loads and queries the parsed PYQ bank."""
+    """Loads and queries the PYQ bank (cleaned/ if published, else parsed/)."""
 
-    def __init__(self, parsed_dir: str = PARSED_DIR):
+    def __init__(self, parsed_dir: str = PARSED_DIR, cleaned_dir: str = CLEANED_DIR):
         self.parsed_dir = parsed_dir
+        self.cleaned_dir = cleaned_dir
         self._items: List[Dict[str, Any]] = []
         self._by_id: Dict[str, Dict[str, Any]] = {}
+        self.source = "parsed"
         self._load()
 
+    def _cleaned_files(self) -> List[str]:
+        return sorted(
+            p for p in glob.glob(os.path.join(self.cleaned_dir, "*.json"))
+            if os.path.basename(p) != "_manifest.json"
+        )
+
     def _load(self):
+        cleaned_files = self._cleaned_files()
+        if cleaned_files:
+            self.source = "cleaned"
+            self._load_cleaned(cleaned_files)
+        else:
+            self.source = "parsed"
+            self._load_parsed()
+        logger.info(
+            f"PYQRepository loaded {len(self._items)} questions from '{self.source}' "
+            f"({sum(i['has_answer'] for i in self._items)} answerable, "
+            f"{sum(i['has_solution'] for i in self._items)} with solutions)."
+        )
+
+    def _load_cleaned(self, files: List[str]):
+        """Load the Gemini-verified bank. Subject comes straight from the
+        file — no keyword guessing — and `explanation` is exposed as
+        `solution` so existing endpoints/frontend fields keep working."""
+        for path in files:
+            try:
+                with open(path, encoding="utf-8") as f:
+                    rec = json.load(f)
+            except Exception as e:
+                logger.warning(f"Skipping unreadable cleaned PYQ {path}: {e}")
+                continue
+            stem = os.path.splitext(os.path.basename(path))[0]
+            rec["id"] = rec.get("id") or stem
+            rec["solution"] = rec.get("explanation")
+            rec["has_answer"] = bool(rec.get("answer"))
+            rec["has_solution"] = bool(rec.get("solution"))
+            rec["answer_verified"] = bool(rec.get("answer_verified"))
+            rec["quality"] = "ok"
+            self._items.append(rec)
+            self._by_id[rec["id"]] = rec
+
+    def _load_parsed(self):
         files = sorted(glob.glob(os.path.join(self.parsed_dir, "*.json")))
         for path in files:
             try:
@@ -132,14 +141,10 @@ class PYQRepository:
             rec["subject"] = subject_for(rec.get("concept_id"), rec.get("question_text", ""))
             rec["has_answer"] = bool(rec.get("answer"))
             rec["has_solution"] = bool(rec.get("solution"))
+            rec["answer_verified"] = False
             rec["quality"] = _quality(rec)
             self._items.append(rec)
             self._by_id[stem] = rec
-        logger.info(
-            f"PYQRepository loaded {len(self._items)} questions "
-            f"({sum(i['has_answer'] for i in self._items)} answerable, "
-            f"{sum(i['has_solution'] for i in self._items)} with solutions)."
-        )
 
     # ── lookups ──────────────────────────────────────────────────────────────
     def get(self, pyq_id: str) -> Optional[Dict[str, Any]]:
@@ -214,7 +219,12 @@ class PYQRepository:
     def answerable(self, **filters) -> List[Dict[str, Any]]:
         filters["has_answer"] = True
         filters.setdefault("quality", "ok")  # never serve junk to quiz/mock
-        return self.filter(**filters)
+        pool = self.filter(**filters)
+        if self.source == "cleaned":
+            verified = [p for p in pool if p.get("answer_verified")]
+            if len(verified) >= 10:
+                return verified
+        return pool
 
     def random_question(self, exclude_ids=None, **filters) -> Optional[Dict[str, Any]]:
         pool = self.answerable(**filters)

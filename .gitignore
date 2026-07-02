@@ -11,3 +11,8 @@ data/
 app.log
 *.tar.gz
 models/
+*.md
+!README.md
+!knowledge/notes/*.md
+!knowledge/textbooks/**/extracted/**/*.md
+work/
