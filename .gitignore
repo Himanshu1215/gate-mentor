@@ -75,3 +75,13 @@ desktop.ini
 # Misc
 nul
 .aider*
+
+# AI-agent session scaffolding / local-only docs
+.agents/
+..agents/
+.claude/
+0
+ORIGINAL_REQUEST.md
+TEST_INFRA.md
+TEST_READY.md
+scripts/append_langgraph.py
