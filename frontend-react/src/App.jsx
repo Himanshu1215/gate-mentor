@@ -5,6 +5,8 @@ import Topics from './components/Topics';
 import Quiz from './components/Quiz';
 import PYQs from './components/PYQs';
 import Revision from './components/Revision';
+import Mistakes from './components/Mistakes';
+import MockReview from './components/MockReview';
 import Analytics from './components/Analytics';
 import MockTest from './components/MockTest';
 import Onboarding from './components/Onboarding';
@@ -18,6 +20,7 @@ const NAV = [
   { id: 'mock', label: 'Mock Test', ico: '⏱️' },
   { id: 'pyqs', label: 'PYQ Explorer', ico: '📄' },
   { id: 'revision', label: 'Revision', ico: '🔁' },
+  { id: 'mistakes', label: 'Mistakes', ico: '❌' },
   { id: 'analytics', label: 'Analytics', ico: '📊' },
 ];
 
@@ -63,9 +66,11 @@ export default function App() {
       case 'tutor': return <AITutor params={params} />;
       case 'topics': return <Topics navigate={navigate} />;
       case 'quiz': return <Quiz params={params} navigate={navigate} />;
-      case 'mock': return <MockTest />;
+      case 'mock': return <MockTest navigate={navigate} />;
+      case 'mock_review': return <MockReview navigate={navigate} params={params} />;
       case 'pyqs': return <PYQs params={params} navigate={navigate} />;
       case 'revision': return <Revision navigate={navigate} />;
+      case 'mistakes': return <Mistakes navigate={navigate} params={params} />;
       case 'analytics': return <Analytics />;
       default: return <Dashboard navigate={navigate} />;
     }

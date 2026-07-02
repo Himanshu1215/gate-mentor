@@ -80,12 +80,17 @@ export const api = {
   quizNext: (params) => request('/api/quiz/next', { params }),
   submitQuiz: (payload) => request('/api/quiz/submit', { method: 'POST', body: payload }),
 
+  // mistakes & mock review
+  getMistakes: (params) => request('/api/mistakes', { params }),
+  getMockAttempts: () => request('/api/mock/attempts'),
+  getMockReview: (examId) => request(`/api/mock/attempts/${examId}/review`),
+
   // revision
   revisionDue: () => request('/api/revision/due'),
-  scheduleRevision: (conceptId, dueInDays = 1) =>
+  scheduleRevision: (conceptId, dueInDays = 1, questionId = null) =>
     request('/api/revision/schedule', {
       method: 'POST',
-      body: { concept_id: conceptId, due_in_days: dueInDays },
+      body: { concept_id: conceptId || "", due_in_days: dueInDays, question_id: questionId },
     }),
 
   // mock

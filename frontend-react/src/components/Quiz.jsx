@@ -57,6 +57,8 @@ export default function Quiz({ params, navigate }) {
   const [count, setCount] = useState(0);
   const [correct, setCorrect] = useState(0);
   const [askedIds, setAskedIds] = useState([]);
+  const [missedQuestions, setMissedQuestions] = useState([]);
+  const [qStartTime, setQStartTime] = useState(Date.now());
   const [error, setError] = useState(null);
 
   const fetchQuestion = useCallback(async (m, cid, exclude) => {
@@ -64,6 +66,7 @@ export default function Quiz({ params, navigate }) {
     try {
       const data = await api.quizNext({ mode: m, concept_id: cid, exclude: exclude.join(',') });
       setQ(data);
+      setQStartTime(Date.now());
       setSelected(''); setNatInput(''); setConfidence(3); setAnswered(false); setIsCorrect(false);
     } catch (e) {
       setError(e.message);
@@ -74,7 +77,7 @@ export default function Quiz({ params, navigate }) {
 
   const start = useCallback((m, cid = null, label = '') => {
     setMode(m); setConceptId(cid); setTopicLabel(label);
-    setPhase('active'); setCount(0); setCorrect(0); setAskedIds([]);
+    setPhase('active'); setCount(0); setCorrect(0); setAskedIds([]); setMissedQuestions([]);
     fetchQuestion(m, cid, []);
   }, [fetchQuestion]);
 
@@ -90,16 +93,24 @@ export default function Quiz({ params, navigate }) {
     const userAns = q.options && Object.keys(q.options).length ? selected : natInput;
     if (!userAns) return;
     const ok = compareAnswer(userAns, q.answer);
+    if (!ok) setMissedQuestions((mq) => [...mq, { ...q, userAns }]);
     setIsCorrect(ok); setAnswered(true);
     setCount((c) => c + 1);
     if (ok) setCorrect((c) => c + 1);
     setAskedIds((ids) => [...ids, q.pyq_id]);
+    
+    const tSec = (Date.now() - qStartTime) / 1000;
+    
     try {
       await api.submitQuiz({
         session_id: sessionId,
         concept_id: q.track_concept_id || q.concept_id || 'GENERAL',
         is_correct: ok,
         confidence,
+        question_id: q.pyq_id,
+        user_answer: userAns,
+        correct_answer: String(q.answer),
+        time_taken_sec: tSec,
       });
       refreshGamification();
     } catch (e) { /* non-fatal */ }
@@ -139,6 +150,25 @@ export default function Quiz({ params, navigate }) {
         <h1>Quiz complete! 🎉</h1>
         <Ring progress={acc}><div className="sr-label"><b>{Math.round(acc * 100)}%</b><small>accuracy</small></div></Ring>
         <p style={{ fontSize: '1.1rem' }}>You got <b style={{ color: 'var(--success)' }}>{correct}</b> of <b>{count}</b> correct.</p>
+        
+        {missedQuestions.length > 0 && (
+          <div style={{ width: '100%', maxWidth: '600px', margin: '2rem auto', textAlign: 'left' }}>
+            <h2 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>Questions you missed</h2>
+            <div className="pyq-list">
+              {missedQuestions.map((m, i) => (
+                 <div className="pyq-card card" key={m.pyq_id}>
+                    <div className="q-text"><MathText>{m.question_text}</MathText></div>
+                    <div style={{ marginTop: '1rem', padding: '0.8rem', background: 'var(--bg-inset)', borderRadius: '8px' }}>
+                      <p style={{ margin: 0, marginBottom: '0.4rem' }}><b>Your Answer:</b> <span style={{ color: 'var(--danger)' }}>{m.userAns || '(Blank)'}</span></p>
+                      <p style={{ margin: 0 }}><b>Correct Answer:</b> <span style={{ color: 'var(--success)' }}>{m.answer}</span></p>
+                    </div>
+                    {m.solution && <div className="solution" style={{ marginTop: '0.8rem' }}><MathText>{m.solution}</MathText></div>}
+                 </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div style={{ display: 'flex', gap: '0.6rem', justifyContent: 'center', marginTop: '1.4rem' }}>
           <button className="btn-secondary" onClick={() => setPhase('select')}>Back to modes</button>
           <button className="btn-primary" onClick={() => start(mode, conceptId, topicLabel)}>Practice again</button>

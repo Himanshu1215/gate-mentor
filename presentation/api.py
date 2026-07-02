@@ -49,6 +49,10 @@ class QuizSubmitRequest(BaseModel):
     concept_id: str
     is_correct: bool
     confidence: int
+    question_id: Optional[str] = None
+    user_answer: Optional[str] = None
+    correct_answer: Optional[str] = None
+    time_taken_sec: Optional[float] = None
 
 class QuizSubmitResponse(BaseModel):
     success: bool
@@ -94,6 +98,7 @@ class ConceptNoteRequest(BaseModel):
 class RevisionScheduleRequest(BaseModel):
     concept_id: str
     due_in_days: int = 1
+    question_id: Optional[str] = None
 
 @app.post("/api/session/start", response_model=SessionStartResponse)
 async def session_start_endpoint(request: SessionStartRequest, authorization: Optional[str] = Header(None)):
@@ -221,6 +226,21 @@ async def quiz_submit_endpoint(request: QuizSubmitRequest, authorization: Option
             (uuid.uuid4().hex, request.session_id, request.concept_id,
              1 if request.is_correct else 0, request.confidence),
         )
+        if request.question_id:
+            conn.execute("""
+                INSERT INTO attempt_items
+                (session_id, source, question_id, concept_id, user_answer, correct_answer, is_correct, confidence, time_taken_sec)
+                VALUES (?, 'quiz', ?, ?, ?, ?, ?, ?, ?)
+            """, (
+                request.session_id,
+                request.question_id,
+                request.concept_id,
+                request.user_answer,
+                request.correct_answer,
+                1 if request.is_correct else 0,
+                request.confidence,
+                request.time_taken_sec
+            ))
         conn.commit()
         conn.close()
     except Exception as e:
@@ -876,17 +896,27 @@ async def revision_schedule(request: RevisionScheduleRequest, authorization: Opt
     due_at = (datetime.datetime.now() + datetime.timedelta(days=due_in_days)).replace(microsecond=0)
 
     conn = get_db_connection()
-    concept = conn.execute("SELECT subject, topic, subtopic FROM concepts WHERE concept_id = ?", (request.concept_id,)).fetchone()
-    if not concept:
-        conn.close()
-        raise HTTPException(status_code=404, detail="Concept not found")
-    conn.execute("""
-        INSERT INTO manual_revision_items (concept_id, due_at, created_at)
-        VALUES (?, ?, CURRENT_TIMESTAMP)
-        ON CONFLICT(concept_id) DO UPDATE SET
-            due_at=excluded.due_at,
-            created_at=CURRENT_TIMESTAMP
-    """, (request.concept_id, due_at.isoformat()))
+    if request.question_id:
+        conn.execute("""
+            INSERT INTO revision_queue_items (item_type, item_id, due_at, repetition_number, easiness_factor, interval_days)
+            VALUES ('pyq', ?, ?, 0, 2.5, ?)
+        """, (request.question_id, due_at, due_in_days))
+    else:
+        concept = conn.execute("SELECT subject, topic, subtopic FROM concepts WHERE concept_id = ?", (request.concept_id,)).fetchone()
+        if not concept:
+            conn.close()
+            raise HTTPException(status_code=404, detail="Concept not found")
+            
+        conn.execute("""
+            INSERT INTO manual_revision_items (concept_id, due_at) VALUES (?, ?)
+            ON CONFLICT(concept_id) DO UPDATE SET due_at = ?
+        """, (request.concept_id, due_at, due_at))
+        
+        conn.execute("""
+            INSERT INTO revision_queue_items (item_type, item_id, due_at, repetition_number, easiness_factor, interval_days)
+            VALUES ('concept', ?, ?, 0, 2.5, ?)
+        """, (request.concept_id, due_at, due_in_days))
+    
     conn.commit()
     conn.close()
     return {
@@ -917,8 +947,9 @@ class MockGradeRequest(BaseModel):
 async def mock_grade(request: MockGradeRequest, authorization: Optional[str] = Header(None)):
     """Grade a previously generated mock and bump mocks_completed."""
     _auth(authorization)
-    from assessment.simulation_engine import SimulationEngine
+    from assessment.simulation_engine import SimulationEngine, _MOCK_CACHE
     from infrastructure.database import get_db_connection
+    import json
     try:
         result = SimulationEngine.grade_mock_exam(request.exam_id, request.answers)
     except KeyError:
@@ -930,11 +961,122 @@ async def mock_grade(request: MockGradeRequest, authorization: Optional[str] = H
             INSERT INTO user_profile (id, mocks_completed) VALUES (1, 1)
             ON CONFLICT(id) DO UPDATE SET mocks_completed = COALESCE(mocks_completed, 0) + 1
         """)
+        
+        conn.execute("""
+            INSERT INTO mock_attempts (exam_id, score, max_score, correct, incorrect, unattempted, subject_breakdown)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+        """, (
+            request.exam_id,
+            result.get("total_score", 0),
+            result.get("max_score", 100),
+            result.get("correct_answers", 0),
+            result.get("incorrect_answers", 0),
+            result.get("unattempted", 0),
+            json.dumps(result.get("per_subject", {}))
+        ))
+        
+        cached = _MOCK_CACHE.get(request.exam_id)
+        if cached:
+            paper_questions = {q["q_id"]: q for q in cached["paper"]["questions"]}
+            for rev in result.get("review", []):
+                q = paper_questions.get(rev["q_id"])
+                if not q: continue
+                marks_awarded = 0.0
+                is_correct = 0
+                if rev["verdict"] == "correct":
+                    marks_awarded = q.get("marks_if_correct", 1)
+                    is_correct = 1
+                elif rev["verdict"] == "incorrect":
+                    marks_awarded = q.get("negative_marks", 0)
+                
+                conn.execute("""
+                    INSERT INTO attempt_items (
+                        session_id, source, exam_id, question_id, concept_id, user_answer, correct_answer, is_correct, marks_awarded
+                    ) VALUES (?, 'mock', ?, ?, ?, ?, ?, ?, ?)
+                """, (
+                    None,
+                    request.exam_id,
+                    q["pyq_id"],
+                    q.get("concept_id"),
+                    rev.get("your_answer"),
+                    rev.get("correct_answer"),
+                    is_correct,
+                    marks_awarded
+                ))
+
         conn.commit()
         conn.close()
     except Exception as e:
-        logging.warning(f"Could not bump mocks_completed: {e}")
+        logging.warning(f"Could not persist mock attempt: {e}")
     return result
+
+@app.get("/api/mistakes")
+async def get_mistakes(
+    subject: str = Query(""), source: str = Query(""), since: str = Query(""),
+    limit: int = 50, offset: int = 0, authorization: Optional[str] = Header(None)
+):
+    _auth(authorization)
+    from infrastructure.database import get_db_connection
+    from knowledge.pyq_repository import get_repository
+    repo = get_repository()
+    
+    query = "SELECT * FROM attempt_items WHERE is_correct = 0 AND user_answer IS NOT NULL"
+    params = []
+    if source:
+        query += " AND source = ?"
+        params.append(source)
+    if since:
+        query += " AND timestamp >= ?"
+        params.append(since)
+    
+    query += " ORDER BY timestamp DESC"
+    
+    conn = get_db_connection()
+    rows = conn.execute(query, params).fetchall()
+    conn.close()
+    
+    mistakes = []
+    for r in rows:
+        q_detail = repo.get(r["question_id"])
+        if not q_detail: continue
+        if subject and q_detail.get("subject") != subject: continue
+        
+        mistakes.append({
+            "attempt": dict(r),
+            "question": q_detail
+        })
+    
+    return mistakes[offset:offset+limit]
+
+@app.get("/api/mock/attempts")
+async def get_mock_attempts(authorization: Optional[str] = Header(None)):
+    _auth(authorization)
+    from infrastructure.database import get_db_connection
+    conn = get_db_connection()
+    rows = conn.execute("SELECT * FROM mock_attempts ORDER BY taken_at DESC").fetchall()
+    conn.close()
+    return [dict(r) for r in rows]
+
+@app.get("/api/mock/attempts/{exam_id}/review")
+async def review_mock_attempt(exam_id: str, authorization: Optional[str] = Header(None)):
+    _auth(authorization)
+    from infrastructure.database import get_db_connection
+    from knowledge.pyq_repository import get_repository
+    repo = get_repository()
+    
+    conn = get_db_connection()
+    rows = conn.execute("SELECT * FROM attempt_items WHERE exam_id = ? ORDER BY item_id ASC", (exam_id,)).fetchall()
+    conn.close()
+    
+    review = []
+    for r in rows:
+        q_detail = repo.get(r["question_id"])
+        if not q_detail: continue
+        review.append({
+            "attempt": dict(r),
+            "question": q_detail
+        })
+    return review
 
 
 class ProfileRequest(BaseModel):

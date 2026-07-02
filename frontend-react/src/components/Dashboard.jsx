@@ -31,12 +31,14 @@ export default function Dashboard({ navigate }) {
   const [alerts, setAlerts] = useState([]);
   const [next, setNext] = useState(null);
   const [due, setDue] = useState([]);
+  const [pastMocks, setPastMocks] = useState([]);
 
   useEffect(() => {
     api.dashboardStats().then(setStats).catch(() => {});
     api.coachAlerts().then((d) => setAlerts(d.alerts || [])).catch(() => {});
     api.curriculumNext().then(setNext).catch(() => {});
     api.revisionDue().then((d) => setDue(d.due || [])).catch(() => {});
+    api.getMockAttempts().then(setPastMocks).catch(() => {});
   }, []);
 
   const g = gamification || {};
@@ -136,6 +138,20 @@ export default function Dashboard({ navigate }) {
               Go to revision →
             </button>
           )}
+        </div>
+
+        <div className="card">
+          <h2>Past Mocks {pastMocks.length > 0 && <span className="tag gold">{pastMocks.length}</span>}</h2>
+          {pastMocks.length === 0 && <div className="empty">No past mocks yet. Take one!</div>}
+          {pastMocks.slice(0, 5).map((m) => (
+            <div className="list-row" key={m.exam_id}>
+              <div>
+                <div style={{ fontWeight: 600 }}>Mock {new Date(m.taken_at).toLocaleDateString()}</div>
+                <div className="lr-sub">Score: {m.score}/{m.max_score} · {m.accuracy}% accuracy</div>
+              </div>
+              <button className="btn-secondary" onClick={() => navigate('mock_review', { examId: m.exam_id })}>Review →</button>
+            </div>
+          ))}
         </div>
       </div>
 
