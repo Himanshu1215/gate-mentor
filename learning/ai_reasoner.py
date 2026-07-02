@@ -133,17 +133,8 @@ class AIReasoningEngine:
                 return "Error generating response from the local LLM."
 
         # ── Mock fallback ──────────────────────────────────────────────
-        if context_chunks:
-            snippet = context_chunks[0]["content"][:200]
-            source  = context_chunks[0]["metadata"].get("source", "Unknown")
-            return (
-                f"[MOCK] Based on the retrieved context:\n\n"
-                f"{snippet}...\n\n"
-                f"[Citation: {source}]"
-            )
         return (
-            f"[MOCK] No context retrieved for query: '{query}'. "
-            "Please ingest GATE content first."
+            f"Local model not installed — run scripts/download_models.py"
         )
 
     def generate_quiz_question(

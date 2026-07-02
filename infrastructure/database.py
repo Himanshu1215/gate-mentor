@@ -108,6 +108,62 @@ def init_db():
     )
     """)
 
+    # Phase 1: Attempt items
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS attempt_items (
+      item_id      INTEGER PRIMARY KEY AUTOINCREMENT,
+      session_id   TEXT,
+      source       TEXT NOT NULL CHECK(source IN ('quiz','mock','pyq')),
+      exam_id      TEXT,
+      question_id  TEXT NOT NULL,
+      concept_id   TEXT,
+      user_answer  TEXT,
+      correct_answer TEXT,
+      is_correct   INTEGER NOT NULL,
+      confidence   INTEGER,
+      time_taken_sec REAL,
+      marks_awarded REAL,
+      timestamp    TEXT DEFAULT (datetime('now'))
+    )
+    """)
+    cursor.execute("CREATE INDEX IF NOT EXISTS idx_attempt_items_wrong ON attempt_items(is_correct, timestamp)")
+    cursor.execute("CREATE INDEX IF NOT EXISTS idx_attempt_items_exam ON attempt_items(exam_id)")
+
+    # Phase 1: Mock attempts
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS mock_attempts (
+      exam_id     TEXT PRIMARY KEY,
+      taken_at    TEXT DEFAULT (datetime('now')),
+      score REAL, max_score REAL,
+      correct INTEGER, incorrect INTEGER, unattempted INTEGER,
+      subject_breakdown TEXT
+    )
+    """)
+
+    # Phase 2: Revision queue items
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS revision_queue_items (
+      question_id  TEXT PRIMARY KEY,
+      concept_id   TEXT,
+      interval_days INTEGER DEFAULT 1,
+      due_at       TEXT NOT NULL,
+      lapses       INTEGER DEFAULT 1,
+      created_at   TEXT DEFAULT (datetime('now'))
+    )
+    """)
+
+    # Phase 4: Chat messages
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS chat_messages (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      session_id TEXT NOT NULL,
+      role TEXT NOT NULL CHECK(role IN ('user','assistant')),
+      content TEXT NOT NULL,
+      timestamp TEXT DEFAULT (datetime('now'))
+    )
+    """)
+    cursor.execute("CREATE INDEX IF NOT EXISTS idx_chat_session ON chat_messages(session_id, id)")
+
     conn.commit()
     conn.close()
 

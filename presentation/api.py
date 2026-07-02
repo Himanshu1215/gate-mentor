@@ -5,6 +5,7 @@ import tempfile
 import shutil
 
 try:
+    from contextlib import asynccontextmanager
     from fastapi import FastAPI, HTTPException, Header, UploadFile, File, Form, Query
     from fastapi.middleware.cors import CORSMiddleware
     from fastapi.responses import FileResponse
@@ -14,7 +15,14 @@ except ImportError:
 
 from learning.ai_reasoner import AIReasoningEngine
 
-app = FastAPI(title="GATE DA Mentor API", version="1.0.0")
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    from infrastructure.database import init_db
+    init_db()
+    _ensure_learning_tables()
+    yield
+
+app = FastAPI(title="GATE DA Mentor API", version="1.0.0", lifespan=lifespan)
 
 # Add CORS Middleware to allow requests from the frontend
 app.add_middleware(
@@ -376,6 +384,54 @@ def _ensure_learning_tables():
             FOREIGN KEY (concept_id) REFERENCES concepts(concept_id)
         )
     """)
+    conn.execute("""
+    CREATE TABLE IF NOT EXISTS attempt_items (
+      item_id      INTEGER PRIMARY KEY AUTOINCREMENT,
+      session_id   TEXT,
+      source       TEXT NOT NULL CHECK(source IN ('quiz','mock','pyq')),
+      exam_id      TEXT,
+      question_id  TEXT NOT NULL,
+      concept_id   TEXT,
+      user_answer  TEXT,
+      correct_answer TEXT,
+      is_correct   INTEGER NOT NULL,
+      confidence   INTEGER,
+      time_taken_sec REAL,
+      marks_awarded REAL,
+      timestamp    TEXT DEFAULT (datetime('now'))
+    )
+    """)
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_attempt_items_wrong ON attempt_items(is_correct, timestamp)")
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_attempt_items_exam ON attempt_items(exam_id)")
+    conn.execute("""
+    CREATE TABLE IF NOT EXISTS mock_attempts (
+      exam_id     TEXT PRIMARY KEY,
+      taken_at    TEXT DEFAULT (datetime('now')),
+      score REAL, max_score REAL,
+      correct INTEGER, incorrect INTEGER, unattempted INTEGER,
+      subject_breakdown TEXT
+    )
+    """)
+    conn.execute("""
+    CREATE TABLE IF NOT EXISTS revision_queue_items (
+      question_id  TEXT PRIMARY KEY,
+      concept_id   TEXT,
+      interval_days INTEGER DEFAULT 1,
+      due_at       TEXT NOT NULL,
+      lapses       INTEGER DEFAULT 1,
+      created_at   TEXT DEFAULT (datetime('now'))
+    )
+    """)
+    conn.execute("""
+    CREATE TABLE IF NOT EXISTS chat_messages (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      session_id TEXT NOT NULL,
+      role TEXT NOT NULL CHECK(role IN ('user','assistant')),
+      content TEXT NOT NULL,
+      timestamp TEXT DEFAULT (datetime('now'))
+    )
+    """)
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_chat_session ON chat_messages(session_id, id)")
     conn.commit()
     conn.close()
 
