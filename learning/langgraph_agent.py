@@ -28,6 +28,7 @@ class ChatState(TypedDict):
     reply: str
     citations: List[str]
     next_node: str
+    concept_id: Optional[str]
 
 # ---------------------------------------------------------------------------
 # CompiledMockGraph Fallback when langgraph is not installed
@@ -178,53 +179,66 @@ def format_pyq_fallback(pyq: Dict[str, Any]) -> str:
 # ---------------------------------------------------------------------------
 _PENDING_QUIZ_STATES = {}
 
+_EXPLAIN_KEYWORDS = ("notes", "explain", "what is", "derive", "study", "teach")
+_QUIZ_KEYWORDS = ("quiz", "test")
+_PYQ_KEYWORDS = ("pyq", "previous year", "gate question")
+
+
 def router_node(state: ChatState) -> ChatState:
-    """Identifies the user's intent and updates the next node state."""
+    """Identifies the user's intent and updates the next node state.
+
+    Intent-first: explanatory queries (notes/explain/what is/derive/study/
+    teach) ALWAYS go to Retrieve, even in mock/offline mode. Previously, a
+    mock-mode Jaccard PYQ match ran before intent classification and could
+    hijack a "explain eigenvalues"-style query into a raw PYQ dump just
+    because it happened to overlap with a stored question. That fuzzy match
+    is now scoped inside the PYQ branch (see pyq_node), so it only ever
+    fires once intent has already resolved to PYQ.
+    """
     query = state.get("query", "")
     session_id = state.get("session_id", "")
-    
+
     if session_id and session_id in _PENDING_QUIZ_STATES:
         state["next_node"] = "QuizGrade"
         return state
-    
-    # 1. GGUF Model absence check for offline/mock fallback
-    if not is_gguf_model_present():
-        from knowledge.pyq_repository import get_repository
-        repo = get_repository()
-        matched = find_matching_pyq(query, repo)
-        if matched:
-            state["next_node"] = "PYQ"
-            state["context"] = [{
-                "content": matched.get("question_text", ""),
-                "metadata": {"source": matched.get("id", "Unknown")}
-            }]
-            return state
 
-    # 2. Intent-based routing
     query_lower = query.lower()
-    if "quiz" in query_lower or "test" in query_lower:
+    if any(kw in query_lower for kw in _EXPLAIN_KEYWORDS):
+        state["next_node"] = "Retrieve"
+    elif any(kw in query_lower for kw in _QUIZ_KEYWORDS):
         state["next_node"] = "Quiz"
-    elif "pyq" in query_lower or "previous year" in query_lower or "gate question" in query_lower:
+    elif any(kw in query_lower for kw in _PYQ_KEYWORDS):
         state["next_node"] = "PYQ"
     else:
         state["next_node"] = "Retrieve"
-        
+
     return state
 
 def retrieve_node(state: ChatState) -> ChatState:
-    """Retrieves top relevant knowledge chunks from ChromaDB."""
+    """Retrieves top relevant knowledge chunks from ChromaDB.
+
+    Filters by explicit concept_id when the caller supplied one (e.g. from
+    the Topics page); otherwise best-effort classifies a subject from the
+    query text so retrieval stays scoped to the right corner of the corpus.
+    """
     query = state.get("query", "")
+    concept_id = state.get("concept_id")
     from knowledge.ingestor import KnowledgeIngestor
-    
+
+    subject = None
+    if not concept_id:
+        from core.subject_map import classify_query_subject
+        subject = classify_query_subject(query)
+
     retriever = KnowledgeIngestor()
-    context_chunks = retriever.query(query, top_k=5)
-    
+    context_chunks = retriever.query(query, concept_id=concept_id, subject=subject, top_k=5)
+
     if not context_chunks:
         context_chunks = [{
             "content": "Knowledge base is empty. Please ingest GATE content first via /api/upload or scripts/ingest_content.py.",
             "metadata": {"source": "System"}
         }]
-        
+
     state["context"] = context_chunks
     return state
 

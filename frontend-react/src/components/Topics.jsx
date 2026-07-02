@@ -242,7 +242,7 @@ export default function Topics({ navigate }) {
               <div className="empty compact">
                 Notes not generated yet for this concept.
                 <div style={{ marginTop: '0.6rem' }}>
-                  <button className="btn-secondary" onClick={() => navigate('tutor', { prefill: `Explain ${selected.subtopic} from ${selected.subject} for GATE DA with examples.` })}>Ask tutor</button>
+                  <button className="btn-secondary" onClick={() => navigate('tutor', { prefill: `Explain ${selected.subtopic} from ${selected.subject} for GATE DA with examples.`, conceptId: selected.concept_id })}>Ask tutor</button>
                 </div>
               </div>
             )}
@@ -353,7 +353,7 @@ export default function Topics({ navigate }) {
             <button className="btn-primary" onClick={saveNotes}>Save notes</button>
             <button className="btn-secondary" onClick={() => navigate('quiz', { mode: 'topic', conceptId: selected.concept_id, topic: selected.subtopic })}>Practice questions</button>
             <button className="btn-secondary" onClick={() => navigate('pyqs', { concept_id: selected.concept_id })}>Solve PYQs</button>
-            <button className="btn-secondary" onClick={() => navigate('tutor', { prefill: `Explain ${selected.subtopic} from ${selected.subject} for GATE DA with examples.` })}>Ask tutor</button>
+            <button className="btn-secondary" onClick={() => navigate('tutor', { prefill: `Explain ${selected.subtopic} from ${selected.subject} for GATE DA with examples.`, conceptId: selected.concept_id })}>Ask tutor</button>
             <button className="btn-secondary" onClick={scheduleRevision}>Add to revision</button>
             {revisionStatus && <span className="save-status">{revisionStatus}</span>}
           </div>

@@ -1,0 +1,19 @@
+{
+  "_comment": "glob -> subject rules consumed by scripts/rebuild_rag.py. Globs are relative to the repo root and matched with Python glob(..., recursive=True).",
+  "textbook_rules": [
+    {"glob": "knowledge/textbooks/probability/extracted/**/*.md", "subject": "Probability and Statistics"},
+    {"glob": "knowledge/textbooks/linear_algebra/extracted/**/*.md", "subject": "Linear Algebra"},
+    {"glob": "knowledge/textbooks/calculus/extracted/**/*.md", "subject": "Calculus and Optimization"},
+    {"glob": "knowledge/textbooks/dsa/extracted/**/*.md", "subject": "Programming, DS & Algorithms"},
+    {"glob": "knowledge/textbooks/dbms/extracted/**/*.md", "subject": "Database Management and Warehousing"},
+    {"glob": "knowledge/textbooks/machine_learning/extracted/**/*.md", "subject": "Machine Learning"},
+    {"glob": "knowledge/textbooks/ai/extracted/**/*.md", "subject": "Artificial Intelligence"}
+  ],
+  "notes_glob": "knowledge/notes/*.md",
+  "cleaned_pyqs_glob": "knowledge/official/pyqs/cleaned/*.json",
+  "exclude_globs": [
+    "knowledge/official/pyqs/*.txt",
+    "knowledge/official/pyqs/parsed/**",
+    "knowledge/personal/**"
+  ]
+}

@@ -96,12 +96,14 @@ class KnowledgeIngestor:
         if "syllabus"  in lower: return "Syllabus"
         return "Personal"
 
-    def _generate_metadata(self, file_path: str, concept_id: str, chunk_index: int) -> dict:
-        source_type = self._determine_source_type(file_path)
+    def _generate_metadata(self, file_path: str, concept_id: str, chunk_index: int,
+                            subject: str = None, source_type_override: str = None) -> dict:
+        source_type = source_type_override or self._determine_source_type(file_path)
         meta = {
             "source":      os.path.basename(file_path),
             "source_type": source_type,
-            "concept_id":  concept_id,
+            "concept_id":  concept_id or "",
+            "subject":     subject or "",
             "chunk_index": chunk_index,
         }
         if source_type == "PYQ":
@@ -130,7 +132,7 @@ class KnowledgeIngestor:
     # ------------------------------------------------------------------
     # Ingestion
     # ------------------------------------------------------------------
-    def ingest_file(self, file_path: str, concept_id: str):
+    def ingest_file(self, file_path: str, concept_id: str, subject: str = None):
         """Pipeline: Load → Chunk → Embed → Store (upsert, idempotent)."""
         try:
             with open(file_path, "r", encoding="utf-8") as f:
@@ -145,7 +147,7 @@ class KnowledgeIngestor:
             return
 
         metadata_list = [
-            self._generate_metadata(file_path, concept_id, i)
+            self._generate_metadata(file_path, concept_id, i, subject=subject)
             for i in range(len(chunks))
         ]
         ids = [str(uuid.uuid4()) for _ in chunks]
@@ -171,21 +173,68 @@ class KnowledgeIngestor:
             if metadata_list:
                 logger.info(f"[MOCK] Sample metadata: {metadata_list[0]}")
 
+    def ingest_text(self, text: str, source: str, concept_id: str = None,
+                     subject: str = None, source_type: str = "Personal") -> int:
+        """Chunk → Embed → Store raw text that has no file on disk (e.g. a
+        cleaned PYQ's question+explanation). Returns the number of chunks
+        ingested."""
+        chunks = self._split_text(text)
+        if not chunks:
+            return 0
+
+        metadata_list = [
+            self._generate_metadata(source, concept_id, i, subject=subject, source_type_override=source_type)
+            for i in range(len(chunks))
+        ]
+        ids = [str(uuid.uuid4()) for _ in chunks]
+
+        if self.collection and self.embedding_model:
+            embeddings = self._embed_documents(chunks)
+            self.collection.upsert(
+                documents=chunks,
+                embeddings=embeddings,
+                metadatas=metadata_list,
+                ids=ids,
+            )
+        else:
+            logger.info(f"[MOCK] Would ingest {len(chunks)} chunks from '{source}' (concept: {concept_id}).")
+        return len(chunks)
+
     # ------------------------------------------------------------------
     # Retrieval
     # ------------------------------------------------------------------
-    def query(self, query_text: str, concept_id: str = None, top_k: int = 5) -> list:
+    def query(self, query_text: str, concept_id: str = None, subject: str = None, top_k: int = 5) -> list:
         """
-        Retrieve relevant chunks for RAG.
-        Uses BGE query prefix for improved precision.
+        Retrieve relevant chunks for RAG, optionally filtered by concept_id
+        and/or subject. If a filtered query returns fewer than 2 chunks, it
+        retries unfiltered rather than starving the LLM of context.
         """
         if not self.collection or not self.embedding_model:
             logger.error("Collection or embedding model unavailable.")
             return []
 
         query_embedding = self._embed_query(query_text)
-        where_filter    = {"concept_id": concept_id} if concept_id else None
+        where_filter = self._build_where(concept_id, subject)
 
+        chunks = self._run_query(query_embedding, top_k, where_filter)
+        if len(chunks) < 2 and where_filter:
+            chunks = self._run_query(query_embedding, top_k, None)
+        return chunks
+
+    @staticmethod
+    def _build_where(concept_id: str = None, subject: str = None):
+        clauses = []
+        if concept_id:
+            clauses.append({"concept_id": concept_id})
+        if subject:
+            clauses.append({"subject": subject})
+        if not clauses:
+            return None
+        if len(clauses) == 1:
+            return clauses[0]
+        return {"$and": clauses}
+
+    def _run_query(self, query_embedding, top_k: int, where_filter) -> list:
         results = self.collection.query(
             query_embeddings=[query_embedding],
             n_results=top_k,

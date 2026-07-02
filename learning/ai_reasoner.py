@@ -35,6 +35,18 @@ def _resolve_model_file():
 
 MODEL_FILE = _resolve_model_file()
 
+# n_ctx=4096 with 512 tokens reserved for output — cap the retrieved context
+# and chat history fed into the prompt so it never gets silently truncated.
+MAX_CONTEXT_CHARS = 2800
+MAX_HISTORY_MESSAGES = 6
+
+
+def _truncate(text: str, max_chars: int) -> str:
+    if len(text) <= max_chars:
+        return text
+    return text[:max_chars].rsplit(" ", 1)[0] + "…"
+
+
 class AIReasoningEngine:
     """
     Local LLM-based component for explanations, summaries, and quiz generation.
@@ -158,10 +170,13 @@ class AIReasoningEngine:
                 for chunk in context_chunks
             ]
         )
+        # n_ctx=4096 with 512 reserved for output — cap context/history so the
+        # prompt never gets silently truncated by llama.cpp mid-context.
+        context_str = _truncate(context_str, MAX_CONTEXT_CHARS)
         user_prompt = f"Context:\n{context_str}\n\nQuestion: {query}" if context_chunks else query
 
         messages = [{"role": "system", "content": system_prompt}]
-        for msg in history:
+        for msg in history[-MAX_HISTORY_MESSAGES:]:
             messages.append({"role": msg.get("role", "user"), "content": msg.get("content", "")})
         messages.append({"role": "user", "content": user_prompt})
 

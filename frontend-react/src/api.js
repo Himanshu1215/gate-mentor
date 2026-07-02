@@ -41,8 +41,8 @@ async function request(path, { method = 'GET', body, params } = {}) {
 
 export const api = {
   // chat / tutor
-  chat: (query, sessionId, persona) =>
-    request('/api/chat', { method: 'POST', body: { session_id: sessionId, query, persona } }),
+  chat: (query, sessionId, persona, conceptId) =>
+    request('/api/chat', { method: 'POST', body: { session_id: sessionId, query, persona, concept_id: conceptId || undefined } }),
   getChatSessions: () => request('/api/chat/sessions'),
   getChatHistory: (sessionId) => request(`/api/chat/history/${sessionId}`),
 

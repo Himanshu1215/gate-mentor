@@ -42,6 +42,7 @@ class ChatRequest(BaseModel):
     session_id: str
     query: str
     persona: Optional[str] = "Professor"
+    concept_id: Optional[str] = None
 
 class ChatResponse(BaseModel):
     reply: str
@@ -218,7 +219,8 @@ async def chat_endpoint(request: ChatRequest, authorization: Optional[str] = Hea
         "context": [],
         "reply": "",
         "citations": [],
-        "next_node": ""
+        "next_node": "",
+        "concept_id": request.concept_id,
     }
 
     try:

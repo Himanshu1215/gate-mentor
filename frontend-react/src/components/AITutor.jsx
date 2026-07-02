@@ -17,6 +17,7 @@ export default function AITutor({ params }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const bottomRef = useRef(null);
   const prefilledRef = useRef(false);
+  const conceptId = params?.conceptId || null;
 
   useEffect(() => { bottomRef.current?.scrollIntoView({ behavior: 'smooth' }); }, [messages, loading]);
 
@@ -53,7 +54,7 @@ export default function AITutor({ params }) {
     setInput('');
     setLoading(true);
     try {
-      const data = await api.chat(trimmed, activeSession, persona);
+      const data = await api.chat(trimmed, activeSession, persona, conceptId);
       setMessages((m) => [...m, { role: 'ai', content: data.reply, citations: data.citations }]);
       api.getChatSessions().then(data => setSessions(data.sessions || [])).catch(console.error);
     } catch (e) {
