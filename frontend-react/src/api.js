@@ -52,6 +52,7 @@ export const api = {
   getConceptNotes: (conceptId) => request(`/api/concepts/${conceptId}/notes`),
   saveConceptNotes: (conceptId, content) =>
     request(`/api/concepts/${conceptId}/notes`, { method: 'PUT', body: { content } }),
+  getStudyNotes: (conceptId) => request(`/api/concepts/${conceptId}/study-notes`),
   getConceptFiles: (conceptId) => request(`/api/concepts/${conceptId}/files`),
   uploadConceptFile: async (conceptId, file) => {
     const form = new FormData();

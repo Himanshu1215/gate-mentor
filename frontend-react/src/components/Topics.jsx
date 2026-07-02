@@ -67,16 +67,16 @@ export default function Topics({ navigate }) {
   const [active, setActive] = useState(null);
   const [selectedId, setSelectedId] = useState(null);
   const [error, setError] = useState(null);
-  const [aiNotes, setAiNotes] = useState({});
-  const [aiLoading, setAiLoading] = useState(false);
-  const [aiError, setAiError] = useState(null);
+  const [studyNotes, setStudyNotes] = useState({});
+  const [studyNotesLoading, setStudyNotesLoading] = useState(false);
   const [selfNote, setSelfNote] = useState('');
   const [noteStatus, setNoteStatus] = useState('');
   const [files, setFiles] = useState([]);
   const [uploadStatus, setUploadStatus] = useState('');
   const [revisionStatus, setRevisionStatus] = useState('');
-  
+
   const [testQuestions, setTestQuestions] = useState({});
+  const [testLoading, setTestLoading] = useState(false);
   const [testAnswers, setTestAnswers] = useState({});
   const [testRevealed, setTestRevealed] = useState(new Set());
 
@@ -109,6 +109,14 @@ export default function Topics({ navigate }) {
         setSelfNote('');
         setFiles([]);
       });
+
+    if (!studyNotes[selectedId]) {
+      setStudyNotesLoading(true);
+      api.getStudyNotes(selectedId)
+        .then((d) => setStudyNotes((prev) => ({ ...prev, [selectedId]: d })))
+        .catch(() => setStudyNotes((prev) => ({ ...prev, [selectedId]: { available: false } })))
+        .finally(() => setStudyNotesLoading(false));
+    }
   }, [selectedId]);
 
   const selectConcept = (conceptId) => {
@@ -117,41 +125,21 @@ export default function Topics({ navigate }) {
     setSelectedId(conceptId);
   };
 
-  const generateAiNotes = async () => {
+  const practiceQuestions = async () => {
     if (!selected) return;
-    setAiLoading(true);
-    setAiError(null);
+    setTestLoading(true);
     try {
-      const prompt = `Create concise but complete GATE DA study notes for:
-Subject: ${selected.subject}
-Topic: ${selected.topic}
-Subtopic: ${selected.subtopic}
-
-Include:
-1. Core idea
-2. Important formulas
-3. Step-by-step example
-4. Common mistakes
-5. PYQ-style patterns
-6. What to practice next
-
-Keep it exam-focused.`;
-      const res = await api.chat(prompt, `syllabus-${selected.concept_id}`, 'Professor');
-      setAiNotes((prev) => ({ ...prev, [selected.concept_id]: res.reply }));
-      
+      const q1 = await api.quizNext({ mode: 'topic', concept_id: selected.concept_id, exclude: '' });
+      const qs = [q1];
       try {
-        const q1 = await api.quizNext('topic', selected.concept_id, '');
-        const qs = [q1];
-        try { 
-           const q2 = await api.quizNext('topic', selected.concept_id, q1.pyq_id); 
-           if (q2 && q2.pyq_id !== q1.pyq_id) qs.push(q2);
-        } catch(e) {}
-        setTestQuestions(p => ({...p, [selected.concept_id]: qs}));
-      } catch(e) {}
+        const q2 = await api.quizNext({ mode: 'topic', concept_id: selected.concept_id, exclude: q1.pyq_id });
+        if (q2 && q2.pyq_id !== q1.pyq_id) qs.push(q2);
+      } catch (e) {}
+      setTestQuestions((p) => ({ ...p, [selected.concept_id]: qs }));
     } catch (e) {
-      setAiError(e.message);
+      /* non-fatal — button stays available to retry */
     } finally {
-      setAiLoading(false);
+      setTestLoading(false);
     }
   };
 
@@ -198,7 +186,7 @@ Keep it exam-focused.`;
   if (!payload) return <div className="loading"><span className="spinner" /> Loading syllabus...</div>;
 
   if (selected) {
-    const notes = aiNotes[selected.concept_id];
+    const noteState = studyNotes[selected.concept_id];
     const prereqNames = (selected.blocked_by || []).map((id) => lookup[id]?.subtopic || id).join(', ');
     return (
       <div className="concept-detail">
@@ -244,15 +232,25 @@ Keep it exam-focused.`;
         <div className="detail-grid">
           <section className="card ai-notes-panel">
             <div className="panel-head">
-              <h2>AI study notes</h2>
-              <button className="chip" onClick={generateAiNotes} disabled={aiLoading}>{notes ? 'Regenerate' : 'Generate'}</button>
+              <h2>Study notes</h2>
+              <button className="chip" onClick={practiceQuestions} disabled={testLoading}>
+                {testLoading ? 'Loading…' : 'Practice 2 questions'}
+              </button>
             </div>
-            {aiLoading && <div className="loading"><span className="spinner" /> Generating notes...</div>}
-            {aiError && <div className="empty compact">AI notes failed: {aiError}</div>}
-            {!notes && !aiLoading && <p className="subtitle">Generate exam-focused notes for this topic using the tutor.</p>}
-            {notes && <div className="notes-output">{notes}</div>}
-            
-            {notes && testQuestions[selected.concept_id] && testQuestions[selected.concept_id].length > 0 && (
+            {studyNotesLoading && <div className="loading"><span className="spinner" /> Loading notes...</div>}
+            {!studyNotesLoading && noteState && !noteState.available && (
+              <div className="empty compact">
+                Notes not generated yet for this concept.
+                <div style={{ marginTop: '0.6rem' }}>
+                  <button className="btn-secondary" onClick={() => navigate('tutor', { prefill: `Explain ${selected.subtopic} from ${selected.subject} for GATE DA with examples.` })}>Ask tutor</button>
+                </div>
+              </div>
+            )}
+            {!studyNotesLoading && noteState?.available && (
+              <div className="notes-output" style={{ whiteSpace: 'pre-wrap' }}>{noteState.content}</div>
+            )}
+
+            {testQuestions[selected.concept_id] && testQuestions[selected.concept_id].length > 0 && (
               <div style={{ marginTop: '1.5rem', borderTop: '1px solid var(--border)', paddingTop: '1.5rem' }}>
                 <h3 style={{ marginBottom: '1rem' }}>Test Yourself</h3>
                 {testQuestions[selected.concept_id].map((q) => {

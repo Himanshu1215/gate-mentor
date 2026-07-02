@@ -3,6 +3,7 @@ import logging
 import os
 import tempfile
 import shutil
+from functools import lru_cache
 
 try:
     from contextlib import asynccontextmanager
@@ -739,6 +740,29 @@ async def put_concept_notes(concept_id: str, request: ConceptNoteRequest, author
     ).fetchone()
     conn.close()
     return {"concept_id": concept_id, "content": note["content"], "updated_at": note["updated_at"]}
+
+
+NOTES_DIR = os.path.join(os.path.dirname(__file__), "..", "knowledge", "notes")
+
+
+@lru_cache(maxsize=128)
+def _read_study_note(concept_id: str) -> Optional[str]:
+    path = os.path.join(NOTES_DIR, f"{concept_id}.md")
+    if not os.path.exists(path):
+        return None
+    with open(path, encoding="utf-8") as f:
+        return f.read()
+
+
+@app.get("/api/concepts/{concept_id}/study-notes")
+async def get_study_notes(concept_id: str, authorization: Optional[str] = Header(None)):
+    """Gemini-authored GATE study notes for this concept (knowledge/notes/{id}.md).
+    Distinct from /api/concepts/{id}/notes, which is the user's own self-notes."""
+    _auth(authorization)
+    content = _read_study_note(concept_id)
+    if content is None:
+        return {"available": False, "concept_id": concept_id}
+    return {"available": True, "concept_id": concept_id, "content": content}
 
 
 @app.get("/api/concepts/{concept_id}/files")
