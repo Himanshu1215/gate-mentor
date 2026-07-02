@@ -981,7 +981,7 @@ async def get_schedule_today(authorization: Optional[str] = Header(None)):
     conn.close()
     
     daily_goal = user["daily_goal"] if user and user["daily_goal"] else 10
-    minutes = daily_goal * 3  # estimate 3 mins per question mapped to time
+    minutes = max(daily_goal * 3, 120)  # ensure at least 120 mins so tasks fit
     
     plan = AdaptiveScheduler.generate_daily_schedule(minutes)
     return plan
